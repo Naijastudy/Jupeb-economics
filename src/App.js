@@ -248,6 +248,7 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
             <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>ECN001 · ECN002 · ECN003 · ECN004</div>
             <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>Full JUPEB Syllabus 📊</div>
             <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQCount} questions across 23 topics — CBT, Exam, Notes & Past Questions. 100% free.</div>
+<div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {homeCards.map(c => (

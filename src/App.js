@@ -200,7 +200,8 @@ export default function App() {
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => setCbtTime(prev => {
-      if (prev <= 1) { setCbtDone(true); setCbtRunning(false); return 0; }
+      if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
+if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); }
       return prev - 1;
     }), 1000);
     return () => clearInterval(timer);
@@ -209,7 +210,8 @@ export default function App() {
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => setExamTime(prev => {
-      if (prev <= 1) { setExamDone(true); setExamRunning(false); return 0; }
+      if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
+if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); }
       return prev - 1;
     }), 1000);
     return () => clearInterval(timer);

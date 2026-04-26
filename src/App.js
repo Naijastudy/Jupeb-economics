@@ -264,7 +264,6 @@ const [progress, setProgress] = useState(0);
     setScreen(prevScreen);
   };
 
-  useEffect(() => {
     useEffect(() => {
       const interval = setInterval(() => {
         setProgress(p => {
@@ -278,7 +277,8 @@ const [progress, setProgress] = useState(0);
       }, 40);
       return () => clearInterval(interval);
     }, []);
-    const handleBack = () => { goBack(); };
+    useEffect(() => {
+       const handleBack = () => { goBack(); };
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, [history]);
@@ -436,7 +436,8 @@ const [progress, setProgress] = useState(0);
         </div>
       </div>
     );
-  }if (screen === "home") {
+  }
+  if (screen === "home") {
     const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0);
     const homeCards = [
       { id: "cbt", icon: "⏱️", title: "CBT Practice", desc: "3 hours · All questions shuffled", color: "#0d9488" },

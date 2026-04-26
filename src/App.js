@@ -347,17 +347,10 @@ export default function App() {
         </div>
         <div style={{ padding: "16px" }}>
           <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
-<<<<<<< HEAD
             <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
             <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📊</div>
             <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQ} questions — CBT, Exam, Notes & Past Questions. 100% free.</div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
-=======
-            <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>ECN001 · ECN002 · ECN003 · ECN004</div>
-            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>Full JUPEB Syllabus 📊</div>
-            <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQCount} questions across 23 topics — CBT, Exam, Notes & Past Questions. 100% free.</div>
-<div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
->>>>>>> 5e202629d597c47b64ccb2abf0392f288460aee0
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {homeCards.map(c => (
@@ -372,9 +365,11 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 1.8 }}>
-            Built from official JUPEB syllabus<br />jupeb-economics-jade.vercel.app
-          </div>
+          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 2 }}>
+  Built from official JUPEB syllabus<br />
+  <a href="https://studynaija.vercel.app/" style={{ color: t.gold, textDecoration: "none" }}>studynaija.vercel.app</a><br />
+  © 2026 StudyNaija. All rights reserved.
+</div>
         </div>
       </div>
     );
@@ -639,7 +634,7 @@ export default function App() {
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Time Limit</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              {[30, 45, 60, 90, 120].map(m => (
+            {[5, 15, 25, 60].map(m => (
                 <button key={m} onClick={() => setExamMinutes(m)} style={{ padding: "12px 16px", borderRadius: 10, border: `2px solid ${examMinutes === m ? t.gold : t.border}`, background: examMinutes === m ? `${t.gold}22` : t.bgInner, color: examMinutes === m ? t.gold : t.textSub, fontSize: 14, fontWeight: "bold", cursor: "pointer" }}>
                   {m >= 60 ? `${m / 60}hr` : `${m}min`}
                 </button>

@@ -212,8 +212,6 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
 }
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
-const [progress, setProgress] = useState(0);
   const [themeKey, setThemeKey] = useState("dark");
   const t = themes[themeKey];
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
@@ -264,21 +262,8 @@ const [progress, setProgress] = useState(0);
     setScreen(prevScreen);
   };
 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setProgress(p => {
-          if (p >= 100) {
-            clearInterval(interval);
-            setTimeout(() => setShowSplash(false), 300);
-            return 100;
-          }
-          return p + 2;
-        });
-      }, 40);
-      return () => clearInterval(interval);
-    }, []);
-    useEffect(() => {
-       const handleBack = () => { goBack(); };
+  useEffect(() => {
+    const handleBack = () => { goBack(); };
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, [history]);
@@ -340,103 +325,6 @@ const [progress, setProgress] = useState(0);
   }
 
   // ── HOME ──────────────────────────────────────────────────────────────────
-  if (showSplash) {
-    return (
-      <div style={{
-        minHeight: "100vh",
-        background: "linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0d2b0d 100%)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "Georgia, serif",
-        padding: "40px 20px",
-      }}>
-        {/* Logo circle */}
-        <div style={{
-          width: 110,
-          height: 110,
-          borderRadius: "50%",
-          background: "linear-gradient(135deg, #1e4d1e, #2d6a2d)",
-          border: "3px solid #c8a84b",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: 24,
-          boxShadow: "0 0 30px #c8a84b44",
-        }}>
-          <span style={{ fontSize: 52 }}>📊</span>
-        </div>
-
-        {/* App name */}
-        <div style={{
-          fontSize: 32,
-          fontWeight: "bold",
-          color: "#f0ece0",
-          marginBottom: 6,
-          letterSpacing: 1,
-        }}>StudyNaija</div>
-
-        {/* Tagline */}
-        <div style={{
-          fontSize: 14,
-          color: "#c8a84b",
-          marginBottom: 6,
-          letterSpacing: 2,
-          textTransform: "uppercase",
-        }}>JUPEB Exam Prep</div>
-
-        <div style={{
-          fontSize: 12,
-          color: "#8a9a8a",
-          marginBottom: 48,
-        }}>Free · No Subscription</div>
-
-        {/* Progress bar */}
-        <div style={{
-          width: "60%",
-          maxWidth: 200,
-          height: 4,
-          background: "#1e2e1e",
-          borderRadius: 10,
-          overflow: "hidden",
-          marginBottom: 16,
-        }}>
-          <div style={{
-            height: "100%",
-            width: `${progress}%`,
-            background: "linear-gradient(90deg, #c8a84b, #f0d080)",
-            borderRadius: 10,
-            transition: "width 0.05s linear",
-          }} />
-        </div>
-
-        {/* Loading text */}
-        <div style={{
-          fontSize: 11,
-          color: "#666",
-          letterSpacing: 1,
-        }}>
-          {progress < 40 ? "Loading questions..." :
-           progress < 70 ? "Preparing study materials..." :
-           progress < 90 ? "Almost ready..." : "Welcome! 🎉"}
-        </div>
-
-        {/* Bottom credit */}
-        <div style={{
-          position: "absolute",
-          bottom: 30,
-          fontSize: 10,
-          color: "#444",
-          textAlign: "center",
-          lineHeight: 1.8,
-        }}>
-          studynaija.vercel.app<br />
-          © 2026 StudyNaija
-        </div>
-      </div>
-    );
-  }
   if (screen === "home") {
     const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0);
     const homeCards = [
@@ -467,7 +355,7 @@ const [progress, setProgress] = useState(0);
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {homeCards.map(c => (
               <button key={c.id} onClick={() => {
-                if (c.id === "") { goTo("grading"); }
+                if (c.id === "grading") { goTo("grading"); }
                 else if (c.id === "settings") { goTo("settings"); }
                 else { setPendingMode(c.id); goTo("subject_select"); }
               }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>
@@ -477,11 +365,9 @@ const [progress, setProgress] = useState(0);
               </button>
             ))}
           </div>
-          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 2 }}>
-  Built from official JUPEB syllabus<br />
-  <a href="https://studynaija.vercel.app/" style={{ color: t.gold, textDecoration: "none" }}>studynaija.vercel.app</a><br />
-  © 2026 StudyNaija. All rights reserved.
-</div>
+          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 1.8 }}>
+            Built from official JUPEB syllabus<br />jupeb-economics-jade.vercel.app
+          </div>
         </div>
       </div>
     );
@@ -746,7 +632,7 @@ const [progress, setProgress] = useState(0);
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Time Limit</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            {[5, 15, 25, 60].map(m => (
+              {[30, 45, 60, 90, 120].map(m => (
                 <button key={m} onClick={() => setExamMinutes(m)} style={{ padding: "12px 16px", borderRadius: 10, border: `2px solid ${examMinutes === m ? t.gold : t.border}`, background: examMinutes === m ? `${t.gold}22` : t.bgInner, color: examMinutes === m ? t.gold : t.textSub, fontSize: 14, fontWeight: "bold", cursor: "pointer" }}>
                   {m >= 60 ? `${m / 60}hr` : `${m}min`}
                 </button>

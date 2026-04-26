@@ -212,6 +212,8 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
 }
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [progress, setProgress] = useState(0);
   const [themeKey, setThemeKey] = useState("dark");
   const t = themes[themeKey];
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
@@ -261,7 +263,19 @@ export default function App() {
     setHistory(newHistory);
     setScreen(prevScreen);
   };
-
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress(p => {
+        if (p >= 100) {
+          clearInterval(interval);
+          setTimeout(() => setShowSplash(false), 300);
+          return 100;
+        }
+        return p + 2;
+      });
+    }, 40);
+    return () => clearInterval(interval);
+  }, []);
   useEffect(() => {
     const handleBack = () => { goBack(); };
     window.addEventListener("popstate", handleBack);

@@ -1,4 +1,4 @@
-const CACHE_NAME = "studynaija-v0.1";
+const CACHE_NAME = "studynaija-v1.1";
 
 const urlsToCache = [
   "/",

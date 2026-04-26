@@ -1,2 +1,2 @@
-# Jupeb-economics
-Jupeb Economics Study App
+# Jupeb
+Jupeb Study App

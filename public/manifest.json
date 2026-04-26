@@ -1,0 +1,24 @@
+{
+  "short_name": "StudyNaija",
+  "name": "StudyNaija - JUPEB Economics",
+  "description": "Free JUPEB Economics past questions, CBT practice and study notes",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0a0f0a",
+  "background_color": "#0a0f0a"
+}

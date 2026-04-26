@@ -347,10 +347,17 @@ export default function App() {
         </div>
         <div style={{ padding: "16px" }}>
           <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
+<<<<<<< HEAD
             <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
             <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📊</div>
             <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQ} questions — CBT, Exam, Notes & Past Questions. 100% free.</div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
+=======
+            <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>ECN001 · ECN002 · ECN003 · ECN004</div>
+            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>Full JUPEB Syllabus 📊</div>
+            <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQCount} questions across 23 topics — CBT, Exam, Notes & Past Questions. 100% free.</div>
+<div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
+>>>>>>> 5e202629d597c47b64ccb2abf0392f288460aee0
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {homeCards.map(c => (

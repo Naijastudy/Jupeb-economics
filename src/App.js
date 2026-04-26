@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
-import { courses } from "./data/economics";
+import { grading } from "./data/economics";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -466,7 +466,7 @@ const [progress, setProgress] = useState(0);
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {homeCards.map(c => (
               <button key={c.id} onClick={() => {
-                if (c.id === "grading") { goTo("grading"); }
+                if (c.id === "") { goTo("grading"); }
                 else if (c.id === "settings") { goTo("settings"); }
                 else { setPendingMode(c.id); goTo("subject_select"); }
               }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>

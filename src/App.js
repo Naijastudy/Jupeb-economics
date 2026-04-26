@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
-import { courses, notes, questions, grading } from "./data";
+import { subjects } from "./data/index";
+import { grading } from "./data/economics";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -18,9 +19,9 @@ function shuffleOptions(q) {
   return { ...q, options: relabeled, answer: newAnswer };
 }
 
-function getAllQuestions() {
+function getAllQuestions(data) {
   let all = [];
-  Object.entries(questions).forEach(([topicId, qs]) => {
+  Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach(q => all.push(shuffleOptions({ ...q, topicId })));
   });
   return shuffle(all);
@@ -39,7 +40,7 @@ function Header({ onBack, title, sub, t, onToggleTheme, right }) {
     <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 100 }}>
       {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#fff", fontSize: 22, cursor: "pointer", padding: 0 }}>←</button>}
       <div style={{ flex: 1 }}>
-        <div style={{ fontSize: 9, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija · JUPEB Economics</div>
+        <div style={{ fontSize: 9, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
         <div style={{ fontSize: 15, fontWeight: "bold", color: "#fff" }}>{title}</div>
         {sub && <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>{sub}</div>}
       </div>
@@ -103,7 +104,7 @@ function QuestionCard({ q, idx, answers, setAnswers, revealed, t, showResult }) 
   );
 }
 
-function ResultScreen({ qs, answers, t, onRetry, onHome, title }) {
+function ResultScreen({ qs, answers, t, onRetry, onHome }) {
   const correct = qs.filter((q, i) => answers[i] === q.answer).length;
   const skipped = qs.filter((_, i) => !answers[i]).length;
   const wrong = qs.length - correct - skipped;
@@ -133,7 +134,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, title }) {
           </div>
         </div>
       </div>
-
       <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Question Breakdown</div>
       {qs.map((q, i) => {
         const userAns = answers[i];
@@ -163,11 +163,62 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, title }) {
   );
 }
 
+// ── SUBJECT SELECTION SCREEN ─────────────────────────────────────────────────
+function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
+  const modeLabels = {
+    cbt: { title: "CBT Practice", sub: "Select a subject to start" },
+    exam: { title: "Exam Mode", sub: "Select a subject" },
+    notes: { title: "Study Notes", sub: "Select a subject" },
+    pastq: { title: "Past Questions", sub: "Select a subject" },
+  };
+  const label = modeLabels[mode];
+  return (
+    <div style={{ minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text }}>
+      <Header onBack={onBack} title={label.title} sub={label.sub} t={t} onToggleTheme={onToggleTheme} />
+      <div style={{ padding: "20px 16px" }}>
+        <div style={{ fontSize: 11, color: t.textMuted, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16 }}>Available Subjects</div>
+        {subjects.map(subject => (
+          <button key={subject.id} onClick={() => { if (subject.available) onSelect(subject); }}
+            style={{ background: subject.available ? t.bgCard : t.bgInner, border: `1px solid ${subject.available ? t.border : t.border}`, borderRadius: 16, padding: "20px 16px", display: "flex", alignItems: "center", gap: 16, cursor: subject.available ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 14, opacity: subject.available ? 1 : 0.7 }}
+            onMouseEnter={e => { if (subject.available) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
+            onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
+            <div style={{ width: 52, height: 52, borderRadius: 14, background: subject.available ? subject.color : "#444", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, flexShrink: 0 }}>
+              {subject.emoji}
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 16, fontWeight: "bold", color: subject.available ? t.heading : t.textMuted }}>{subject.name}</div>
+              {subject.available ? (
+                <div style={{ fontSize: 12, color: t.gold, marginTop: 4 }}>
+                  {Object.values(subject.data.questions).reduce((a, arr) => a + arr.length, 0)} questions · {Object.values(subject.data.notes).reduce((a, arr) => a + arr.length, 0)} notes
+                </div>
+              ) : (
+                <div style={{ fontSize: 12, marginTop: 4, display: "flex", alignItems: "center", gap: 6 }}>
+                  <span style={{ background: "#f59e0b", color: "#000", fontSize: 10, fontWeight: "bold", padding: "2px 8px", borderRadius: 20 }}>COMING SOON</span>
+                </div>
+              )}
+            </div>
+            {subject.available && <div style={{ color: t.gold, fontSize: 20 }}>›</div>}
+            {!subject.available && <div style={{ fontSize: 18 }}>🔒</div>}
+          </button>
+        ))}
+        <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: "14px 16px", marginTop: 8 }}>
+          <div style={{ fontSize: 13, color: t.keyText, lineHeight: 1.8 }}>
+            🔑 More subjects coming soon based on user feedback. Currently available: <strong>Economics</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [themeKey, setThemeKey] = useState("dark");
   const t = themes[themeKey];
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
   const [screen, setScreen] = useState("home");
+  const [history, setHistory] = useState(["home"]);
+  const [activeSubject, setActiveSubject] = useState(null);
+  const [pendingMode, setPendingMode] = useState(null);
 
   // Notes
   const [noteCourse, setNoteCourse] = useState(null);
@@ -197,11 +248,31 @@ export default function App() {
   const [examTime, setExamTime] = useState(3600);
   const [examRunning, setExamRunning] = useState(false);
 
+  const goTo = (newScreen) => {
+    window.history.pushState({}, "");
+    setHistory(h => [...h, newScreen]);
+    setScreen(newScreen);
+  };
+
+  const goBack = () => {
+    if (history.length <= 1) return;
+    const newHistory = history.slice(0, -1);
+    const prevScreen = newHistory[newHistory.length - 1];
+    setHistory(newHistory);
+    setScreen(prevScreen);
+  };
+
+  useEffect(() => {
+    const handleBack = () => { goBack(); };
+    window.addEventListener("popstate", handleBack);
+    return () => window.removeEventListener("popstate", handleBack);
+  }, [history]);
+
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => setCbtTime(prev => {
+      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
-if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); }
       return prev - 1;
     }), 1000);
     return () => clearInterval(timer);
@@ -210,26 +281,57 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => setExamTime(prev => {
+      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
-if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); }
       return prev - 1;
     }), 1000);
     return () => clearInterval(timer);
   }, [examRunning, examDone]);
 
+  const data = activeSubject ? activeSubject.data : null;
   const wrap = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
   const card = { background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 };
   const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
 
-  const totalQCount = Object.values(questions).reduce((a, arr) => a + arr.length, 0);
+  const startCbt = (subject) => {
+    const qs = getAllQuestions(subject.data);
+    setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false);
+    setCbtTime(3 * 60 * 60); setCbtRunning(true);
+    goTo("cbt_quiz");
+  };
+
+  const startExam = (subject) => {
+    let qs = getAllQuestions(subject.data);
+    if (qs.length > examCount) qs = qs.slice(0, examCount);
+    setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false);
+    setExamTime(examMinutes * 60); setExamRunning(true);
+    goTo("exam_quiz");
+  };
+
+  // ── SUBJECT SELECT ────────────────────────────────────────────────────────
+  if (screen === "subject_select") {
+    return (
+      <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack}
+        mode={pendingMode}
+        onSelect={(subject) => {
+          setActiveSubject(subject);
+          if (pendingMode === "cbt") { startCbt(subject); }
+          else if (pendingMode === "exam") { goTo("exam_setup"); }
+          else if (pendingMode === "notes") { goTo("notes"); }
+          else if (pendingMode === "pastq") { goTo("pastq_courses"); }
+        }}
+      />
+    );
+  }
 
   // ── HOME ──────────────────────────────────────────────────────────────────
   if (screen === "home") {
+    const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0);
     const homeCards = [
-      { id: "cbt_start", icon: "⏱️", title: "CBT Practice", desc: `3 hours · All ${totalQCount} questions shuffled`, color: "#0d9488" },
-      { id: "exam_setup", icon: "📝", title: "Exam Mode", desc: "Custom time & question count", color: "#2563eb" },
+      { id: "cbt", icon: "⏱️", title: "CBT Practice", desc: "3 hours · All questions shuffled", color: "#0d9488" },
+      { id: "exam", icon: "📝", title: "Exam Mode", desc: "Custom time & question count", color: "#2563eb" },
       { id: "notes", icon: "📖", title: "Study Notes", desc: "Key points & full explanations", color: "#16a34a" },
-      { id: "pastq_courses", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
+      { id: "pastq", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
       { id: "grading", icon: "🏆", title: "Grading System", desc: "JUPEB grade scale & points", color: "#7c3aed" },
       { id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
     ];
@@ -238,27 +340,24 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
         <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
-            <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Economics</div>
+            <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
           </div>
           <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
         </div>
         <div style={{ padding: "16px" }}>
           <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
-            <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>ECN001 · ECN002 · ECN003 · ECN004</div>
-            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>Full JUPEB Syllabus 📊</div>
-            <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQCount} questions across 23 topics — CBT, Exam, Notes & Past Questions. 100% free.</div>
+            <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
+            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📊</div>
+            <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQ} questions — CBT, Exam, Notes & Past Questions. 100% free.</div>
+            <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {homeCards.map(c => (
               <button key={c.id} onClick={() => {
-                if (c.id === "cbt_start") {
-                  const qs = getAllQuestions();
-                  setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false);
-                  setCbtTime(3 * 60 * 60); setCbtRunning(true); setScreen("cbt_quiz");
-                } else {
-                  setScreen(c.id);
-                }
+                if (c.id === "grading") { goTo("grading"); }
+                else if (c.id === "settings") { goTo("settings"); }
+                else { setPendingMode(c.id); goTo("subject_select"); }
               }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>
                 <div style={{ fontSize: 28 }}>{c.icon}</div>
                 <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.title}</div>
@@ -278,7 +377,7 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
   if (screen === "settings") {
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("home")} title="Settings" t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>
@@ -306,7 +405,7 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
   if (screen === "grading") {
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("home")} title="JUPEB Grading System" t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="JUPEB Grading System" t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           <div style={card}>
             <div style={{ fontSize: 13, color: t.noteText, lineHeight: 1.8, marginBottom: 16 }}>Maximum points = AAA + 1 bonus = <strong style={{ color: t.heading }}>16 points.</strong></div>
@@ -328,15 +427,15 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
   }
 
   // ── NOTES ─────────────────────────────────────────────────────────────────
-  if (screen === "notes") {
+  if (screen === "notes" && data) {
     const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("home")} title="Study Notes" t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="Study Notes" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {courses.map((c, ci) => (
-              <button key={c.id} onClick={() => { setNoteCourse(c); setScreen("notes_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
+            {data.courses.map((c, ci) => (
+              <button key={c.id} onClick={() => { setNoteCourse(c); goTo("notes_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
                 <div style={{ fontSize: 28, marginBottom: 8 }}>{c.emoji}</div>
                 <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.code}</div>
                 <div style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", marginTop: 4, lineHeight: 1.4 }}>{c.title}</div>
@@ -349,15 +448,15 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
     );
   }
 
-  if (screen === "notes_topics" && noteCourse) {
+  if (screen === "notes_topics" && noteCourse && data) {
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("notes")} title={noteCourse.title} sub={noteCourse.code} t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title={noteCourse.title} sub={noteCourse.code} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           {noteCourse.topics.map((tp, i) => {
-            const count = (notes[tp.id] || []).length;
+            const count = (data.notes[tp.id] || []).length;
             return (
-              <button key={tp.id} onClick={() => { if (count > 0) { setNoteTopic(tp); setScreen("notes_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: count > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: count > 0 ? 1 : 0.5 }}
+              <button key={tp.id} onClick={() => { if (count > 0) { setNoteTopic(tp); goTo("notes_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: count > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: count > 0 ? 1 : 0.5 }}
                 onMouseEnter={e => { if (count > 0) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
                 onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
                 <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
@@ -374,11 +473,11 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
     );
   }
 
-  if (screen === "notes_view" && noteTopic) {
-    const topicNotes = notes[noteTopic.id] || [];
+  if (screen === "notes_view" && noteTopic && data) {
+    const topicNotes = data.notes[noteTopic.id] || [];
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("notes_topics")} title={noteTopic.label} t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title={noteTopic.label} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           {topicNotes.map((n, i) => (
             <div key={i} style={card}>
@@ -402,17 +501,17 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
   }
 
   // ── PAST QUESTIONS ────────────────────────────────────────────────────────
-  if (screen === "pastq_courses") {
+  if (screen === "pastq_courses" && data) {
     const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("home")} title="Past Questions" sub="Study by topic with solutions" t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="Past Questions" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {courses.map((c, ci) => {
-              const qCount = c.topics.reduce((a, tp) => a + (questions[tp.id] || []).length, 0);
+            {data.courses.map((c, ci) => {
+              const qCount = c.topics.reduce((a, tp) => a + (data.questions[tp.id] || []).length, 0);
               return (
-                <button key={c.id} onClick={() => { setPqCourse(c); setScreen("pastq_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
+                <button key={c.id} onClick={() => { setPqCourse(c); goTo("pastq_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
                   <div style={{ fontSize: 28, marginBottom: 8 }}>{c.emoji}</div>
                   <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.code}</div>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", marginTop: 4, lineHeight: 1.4 }}>{c.title}</div>
@@ -426,15 +525,15 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
     );
   }
 
-  if (screen === "pastq_topics" && pqCourse) {
+  if (screen === "pastq_topics" && pqCourse && data) {
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("pastq_courses")} title={pqCourse.title} sub={pqCourse.code} t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title={pqCourse.title} sub={pqCourse.code} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           {pqCourse.topics.map((tp, i) => {
-            const qCount = (questions[tp.id] || []).length;
+            const qCount = (data.questions[tp.id] || []).length;
             return (
-              <button key={tp.id} onClick={() => { if (qCount > 0) { setPqTopic(tp); setPqRevealed({}); setPqSelected({}); setScreen("pastq_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: qCount > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: qCount > 0 ? 1 : 0.5 }}
+              <button key={tp.id} onClick={() => { if (qCount > 0) { setPqTopic(tp); setPqRevealed({}); setPqSelected({}); goTo("pastq_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: qCount > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: qCount > 0 ? 1 : 0.5 }}
                 onMouseEnter={e => { if (qCount > 0) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
                 onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
                 <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
@@ -451,11 +550,11 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
     );
   }
 
-  if (screen === "pastq_view" && pqTopic) {
-    const pqs = questions[pqTopic.id] || [];
+  if (screen === "pastq_view" && pqTopic && data) {
+    const pqs = data.questions[pqTopic.id] || [];
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("pastq_topics")} title={pqTopic.label} sub={`${pqs.length} past questions`} t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title={pqTopic.label} sub={`${pqs.length} past questions`} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           {pqs.map((q, qi) => (
             <div key={qi}>
@@ -477,21 +576,19 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
     if (cbtDone) {
       return (
         <div style={wrap}>
-          <Header onBack={() => setScreen("home")} title="CBT Results" t={t} onToggleTheme={toggleTheme} />
+          <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={cbtQs} answers={cbtAnswers} t={t}
-            onRetry={() => { const qs = getAllQuestions(); setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false); setCbtTime(3 * 60 * 60); setCbtRunning(true); setScreen("cbt_quiz"); }}
-            onHome={() => setScreen("home")} />
+            onRetry={() => { startCbt(activeSubject); }}
+            onHome={() => goTo("home")} />
         </div>
       );
     }
-
     const q = cbtQs[cbtIdx];
     if (!q) return null;
     const answered = Object.keys(cbtAnswers).length;
-
     return (
       <div style={wrap}>
-        <Header onBack={() => { setCbtRunning(false); setScreen("home"); }} title="CBT Practice" sub={`${answered}/${cbtQs.length} answered`} t={t} onToggleTheme={toggleTheme}
+        <Header onBack={() => { setCbtRunning(false); goTo("home"); }} title="CBT Practice" sub={`${activeSubject?.name} · ${answered}/${cbtQs.length} answered`} t={t} onToggleTheme={toggleTheme}
           right={<div style={{ background: cbtTime < 300 ? "#dc3545" : "#16a34a", borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: "#fff", marginRight: 8 }}>{formatTime(cbtTime)}</div>}
         />
         <div style={{ padding: "16px" }}>
@@ -513,17 +610,17 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
   }
 
   // ── EXAM SETUP ────────────────────────────────────────────────────────────
-  if (screen === "exam_setup") {
+  if (screen === "exam_setup" && data) {
+    const totalQCount = Object.values(data.questions).reduce((a, arr) => a + arr.length, 0);
     return (
       <div style={wrap}>
-        <Header onBack={() => setScreen("home")} title="Exam Mode" sub="Set your preferences" t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="Exam Mode" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
           <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px", marginBottom: 20 }}>
             <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.8 }}>
-              📝 Questions are randomly shuffled from ALL topics. Answer all questions first — results shown only after you submit.
+              📝 Questions are randomly shuffled. Answer all questions first — results shown only after you submit.
             </div>
           </div>
-
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Number of Questions</div>
             <div style={{ display: "flex", gap: 10 }}>
@@ -532,7 +629,6 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
               ))}
             </div>
           </div>
-
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Time Limit</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -543,17 +639,10 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
               ))}
             </div>
           </div>
-
           <div style={{ fontSize: 12, color: t.textSub, textAlign: "center", marginBottom: 16 }}>
-            {Math.min(examCount, totalQCount)} questions will be picked randomly from {totalQCount} available
+            {Math.min(examCount, totalQCount)} questions from {totalQCount} available
           </div>
-
-          <button onClick={() => {
-            let qs = getAllQuestions();
-            if (qs.length > examCount) qs = qs.slice(0, examCount);
-            setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false);
-            setExamTime(examMinutes * 60); setExamRunning(true); setScreen("exam_quiz");
-          }} style={goldBtn}>
+          <button onClick={() => startExam(activeSubject)} style={goldBtn}>
             ▶ Start Exam — {Math.min(examCount, totalQCount)} questions · {examMinutes >= 60 ? `${examMinutes / 60}hr` : `${examMinutes}min`}
           </button>
         </div>
@@ -566,21 +655,19 @@ if (prev === 300) { alert("⚠️ 5 minutes remaining! Finish up and submit."); 
     if (examDone) {
       return (
         <div style={wrap}>
-          <Header onBack={() => setScreen("home")} title="Exam Results" t={t} onToggleTheme={toggleTheme} />
+          <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={examQs} answers={examAnswers} t={t}
-            onRetry={() => { let qs = getAllQuestions(); if (qs.length > examCount) qs = qs.slice(0, examCount); setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false); setExamTime(examMinutes * 60); setExamRunning(true); setScreen("exam_quiz"); }}
-            onHome={() => setScreen("home")} />
+            onRetry={() => startExam(activeSubject)}
+            onHome={() => goTo("home")} />
         </div>
       );
     }
-
     const q = examQs[examIdx];
     if (!q) return null;
     const answered = Object.keys(examAnswers).length;
-
     return (
       <div style={wrap}>
-        <Header onBack={() => { setExamRunning(false); setScreen("exam_setup"); }} title="Exam Mode" sub={`${answered}/${examQs.length} answered`} t={t} onToggleTheme={toggleTheme}
+        <Header onBack={() => { setExamRunning(false); goTo("exam_setup"); }} title="Exam Mode" sub={`${activeSubject?.name} · ${answered}/${examQs.length} answered`} t={t} onToggleTheme={toggleTheme}
           right={<div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: examTime < 300 ? "#fff" : t.goldBtnText, marginRight: 8 }}>{formatTime(examTime)}</div>}
         />
         <div style={{ padding: "16px" }}>

@@ -366,7 +366,7 @@ export default function App() {
           marginBottom: 24,
           boxShadow: "0 0 30px #c8a84b44",
         }}>
-          <span style={{ fontSize: 52 }}>📊</span>
+          <span style={{ fontSize: 52 }}>🎓</span>
         </div>
 
         {/* App name */}
@@ -489,6 +489,59 @@ export default function App() {
   }
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
+
+if (screen === "settings") {
+return (
+      <div style={wrap}>
+        <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />
+        <div style={{ padding: "16px" }}>
+          <div style={card}>
+            <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>
+            <div style={{ display: "flex", gap: 12 }}>
+              {["dark", "light"].map(mode => (
+                <button key={mode} onClick={() => setThemeKey(mode)} style={{ flex: 1, padding: "20px 10px", borderRadius: 14, cursor: "pointer", textAlign: "center", background: themeKey === mode ? (mode === "dark" ? "#1a2a1a" : "#e8f0f8") : t.bgInner, border: themeKey === mode ? `2px solid ${t.gold}` : `1px solid ${t.border}`, color: t.text }}>
+                  <div style={{ fontSize: 28, marginBottom: 8 }}>{mode === "dark" ? "🌙" : "☀️"}</div>
+                  <div style={{ fontSize: 13, fontWeight: "bold" }}>{mode === "dark" ? "Night Mode" : "Day Mode"}</div>
+                  {themeKey === mode && <div style={{ fontSize: 10, color: t.gold, marginTop: 6 }}>✓ Active</div>}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div style={card}>
+            <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
+                <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>  📤 Send Feedback / Report Issue </button>
+            <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 8, padding: "10px 12px", marginBottom: 10, fontSize: 13, color: t.keyText }}>🔑 Key point — Yellow highlight</div>
+            <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── GRADING ───────────────────────────────────────────────────────────────
+  if (screen === "grading") {
+    return (
+      <div style={wrap}>
+        <Header onBack={goBack} title="JUPEB Grading System" t={t} onToggleTheme={toggleTheme} />
+        <div style={{ padding: "16px" }}>
+          <div style={card}>
+            <div style={{ fontSize: 13, color: t.noteText, lineHeight: 1.8, marginBottom: 16 }}>Maximum points = AAA + 1 bonus = <strong style={{ color: t.heading }}>16 points.</strong></div>
+            {grading.map(g => (
+              <div key={g.grade} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 0", borderBottom: `1px solid ${t.border}` }}>
+                <div style={{ fontSize: 22, fontWeight: "bold", color: t.gold, width: 32 }}>{g.grade}</div>
+                <div style={{ fontSize: 13, color: t.text }}>{g.marks}%</div>
+                <div style={{ fontSize: 13, color: t.textSub }}>{g.points} pts</div>
+                <div style={{ fontSize: 13, fontWeight: "bold", color: g.remark === "Fail" ? "#dc3545" : g.remark === "Excellent" ? "#5cb85c" : t.gold }}>{g.remark}</div>
+              </div>
+            ))}
+            <div style={{ marginTop: 16, background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 10, padding: "14px", fontSize: 13, color: t.keyText, lineHeight: 2 }}>
+              🔑 CCC = 3+3+3+1 = <strong>10 pts</strong> · AAA = 5+5+5+1 = <strong>16 pts</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 if (screen === "feedback") {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
@@ -571,60 +624,7 @@ if (screen === "feedback") {
         </div>
       </div>
     );
-                  }
-if (screen === "settings") {
-return (
-      <div style={wrap}>
-        <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          <div style={card}>
-            <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>
-            <div style={{ display: "flex", gap: 12 }}>
-              {["dark", "light"].map(mode => (
-                <button key={mode} onClick={() => setThemeKey(mode)} style={{ flex: 1, padding: "20px 10px", borderRadius: 14, cursor: "pointer", textAlign: "center", background: themeKey === mode ? (mode === "dark" ? "#1a2a1a" : "#e8f0f8") : t.bgInner, border: themeKey === mode ? `2px solid ${t.gold}` : `1px solid ${t.border}`, color: t.text }}>
-                  <div style={{ fontSize: 28, marginBottom: 8 }}>{mode === "dark" ? "🌙" : "☀️"}</div>
-                  <div style={{ fontSize: 13, fontWeight: "bold" }}>{mode === "dark" ? "Night Mode" : "Day Mode"}</div>
-                  {themeKey === mode && <div style={{ fontSize: 10, color: t.gold, marginTop: 6 }}>✓ Active</div>}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div style={card}>
-            <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
-                <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>  📤 Send Feedback / Report Issue </button>
-            <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 8, padding: "10px 12px", marginBottom: 10, fontSize: 13, color: t.keyText }}>🔑 Key point — Yellow highlight</div>
-            <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // ── GRADING ───────────────────────────────────────────────────────────────
-  if (screen === "grading") {
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title="JUPEB Grading System" t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          <div style={card}>
-            <div style={{ fontSize: 13, color: t.noteText, lineHeight: 1.8, marginBottom: 16 }}>Maximum points = AAA + 1 bonus = <strong style={{ color: t.heading }}>16 points.</strong></div>
-            {grading.map(g => (
-              <div key={g.grade} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 0", borderBottom: `1px solid ${t.border}` }}>
-                <div style={{ fontSize: 22, fontWeight: "bold", color: t.gold, width: 32 }}>{g.grade}</div>
-                <div style={{ fontSize: 13, color: t.text }}>{g.marks}%</div>
-                <div style={{ fontSize: 13, color: t.textSub }}>{g.points} pts</div>
-                <div style={{ fontSize: 13, fontWeight: "bold", color: g.remark === "Fail" ? "#dc3545" : g.remark === "Excellent" ? "#5cb85c" : t.gold }}>{g.remark}</div>
-              </div>
-            ))}
-            <div style={{ marginTop: 16, background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 10, padding: "14px", fontSize: 13, color: t.keyText, lineHeight: 2 }}>
-              🔑 CCC = 3+3+3+1 = <strong>10 pts</strong> · AAA = 5+5+5+1 = <strong>16 pts</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+            }
   // ── NOTES ─────────────────────────────────────────────────────────────────
   if (screen === "notes" && data) {
     const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];

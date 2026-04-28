@@ -1,4 +1,4 @@
-const CACHE_NAME = "studynaija-v1.1";
+const CACHE_NAME = "studynaija-v1.2";
 const STATIC_CACHE = "studynaija-static-v1.1";
 const DYNAMIC_CACHE = "studynaija-dynamic-v1.1";
 

@@ -489,14 +489,12 @@ export default function App() {
   }
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
-if (screen === "feedback") {
-    const [name, setName] = useState("");
+const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
     const [error, setError] = useState("");
-
-    const sendFeedback = async () => {
+const sendFeedback = async () => {
       if (!message.trim()) { setError("Please write a message first."); return; }
       setSending(true);
       setError("");
@@ -516,6 +514,7 @@ if (screen === "feedback") {
       setSending(false);
     };
 
+if (screen === "feedback") {
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="Send Feedback" sub="Help us improve" t={t} onToggleTheme={toggleTheme} />

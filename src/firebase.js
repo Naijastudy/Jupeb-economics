@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics, isSupported } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { getAnalytics, isSupported } from "firebase/analytics";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCl4-QWw8-_BgzxTD6fi9-CxsC78U7wywU",
   authDomain: "studynaija-8c01a.firebaseapp.com",
@@ -17,6 +18,7 @@ const app = initializeApp(firebaseConfig);
 // Firestore
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
 // Analytics (safe for web + avoids build errors)
 export const analytics = typeof window !== "undefined"
   ? await isSupported().then((yes) => yes ? getAnalytics(app) : null)

@@ -1,60 +1,73 @@
-const CACHE_NAME = "studynaija-v1";
+const CACHE_NAME = "studynaija-v1.1";
+const STATIC_CACHE = "studynaija-static-v1.1";
+const DYNAMIC_CACHE = "studynaija-dynamic-v1.1";
 
-const urlsToCache = [
+const STATIC_ASSETS = [
   "/",
   "/index.html",
-  "/static/js/main.chunk.js",
-  "/static/js/bundle.js",
-  "/static/js/vendors~main.chunk.js",
-  "/static/css/main.chunk.css",
+  "/manifest.json",
   "/android-chrome-192x192.png",
   "/android-chrome-512x512.png",
-  "/manifest.json"
 ];
 
-// Install — cache all files
+// Install
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
+    caches.open(STATIC_CACHE).then(cache => {
+      return cache.addAll(STATIC_ASSETS);
+    }).then(() => self.skipWaiting())
   );
-  self.skipWaiting();
 });
 
-// Activate — clean old caches
+// Activate
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(cacheNames =>
-      Promise.all(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
         cacheNames
-          .filter(name => name !== CACHE_NAME)
+          .filter(name => name !== STATIC_CACHE && name !== DYNAMIC_CACHE)
           .map(name => caches.delete(name))
-      )
-    )
+      );
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// Fetch — serve from cache, fall back to network
+// Fetch — Network first, fall back to cache
 self.addEventListener("fetch", event => {
+  const { request } = event;
+
+  // Skip non-GET requests
+  if (request.method !== "GET") return;
+
+  // Skip cross-origin requests
+  if (!request.url.startsWith(self.location.origin)) return;
+
   event.respondWith(
-    caches.match(event.request).then(response => {
-      if (response) return response;
-      return fetch(event.request).then(networkResponse => {
-        if (
-          !networkResponse ||
-          networkResponse.status !== 200 ||
-          networkResponse.type !== "basic"
-        ) {
-          return networkResponse;
-        }
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, responseToCache);
+    fetch(request)
+      .then(networkResponse => {
+        // Cache a copy of the response
+        const responseClone = networkResponse.clone();
+        caches.open(DYNAMIC_CACHE).then(cache => {
+          cache.put(request, responseClone);
         });
         return networkResponse;
-      }).catch(() => caches.match("/index.html"));
-    })
+      })
+      .catch(() => {
+        // Network failed — try cache
+        return caches.match(request).then(cachedResponse => {
+          if (cachedResponse) return cachedResponse;
+          // For navigation requests return index.html
+          if (request.mode === "navigate") {
+            return caches.match("/index.html");
+          }
+        });
+      })
   );
+});
+
+// Background sync — notify users of new content
+self.addEventListener("message", event => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });

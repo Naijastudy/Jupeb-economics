@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
-import { db } from "./firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db, auth, googleProvider } from "./firebase";
+import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy } from "firebase/firestore";
+import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { grading } from "./data/economics";
 
 function shuffle(arr) {
@@ -221,6 +222,9 @@ export default function App() {
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
+  const [user, setUser] = useState(null);
+const [userScores, setUserScores] = useState([]);
+const [showScores, setShowScores] = useState(false);
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
 
@@ -278,6 +282,68 @@ export default function App() {
     }, 40);
     return () => clearInterval(interval);
   }, []);
+  
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      if (currentUser) {
+        fetchUserScores(currentUser.uid);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const fetchUserScores = async (uid) => {
+    try {
+      const q = query(
+        collection(db, "scores"),
+        where("uid", "==", uid),
+        orderBy("timestamp", "desc")
+      );
+      const snapshot = await getDocs(q);
+      const scores = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setUserScores(scores);
+    } catch (e) {
+      console.log("Error fetching scores:", e);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (e) {
+      console.log("Login error:", e);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setUserScores([]);
+    } catch (e) {
+      console.log("Logout error:", e);
+    }
+  };
+
+  const saveScore = async (mode, subject, score, total, pct) => {
+    if (!user) return;
+    try {
+      await addDoc(collection(db, "scores"), {
+        uid: user.uid,
+        name: user.displayName,
+        email: user.email,
+        mode,
+        subject,
+        score,
+        total,
+        pct,
+        timestamp: serverTimestamp(),
+      });
+      fetchUserScores(user.uid);
+    } catch (e) {
+      console.log("Error saving score:", e);
+    }
+  };
   useEffect(() => {
     const handleBack = () => { goBack(); };
     window.addEventListener("popstate", handleBack);
@@ -446,17 +512,21 @@ export default function App() {
       { id: "notes", icon: "📖", title: "Study Notes", desc: "Key points & full explanations", color: "#16a34a" },
       { id: "pastq", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
       { id: "grading", icon: "🏆", title: "Grading System", desc: "JUPEB grade scale & points", color: "#7c3aed" },
-      { id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
+{ id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
+{ id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
     ];
     return (
       <div style={wrap}>
         <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
           <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
-            <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
-            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
-          </div>
-          <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
+  <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
+  <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
+  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
+</div>
+<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+  {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
+</button>
+<button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
         </div>
         <div style={{ padding: "16px" }}>
           <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
@@ -469,7 +539,8 @@ export default function App() {
             {homeCards.map(c => (
               <button key={c.id} onClick={() => {
                 if (c.id === "grading") { goTo("grading"); }
-                else if (c.id === "settings") { goTo("settings"); }
+else if (c.id === "settings") { goTo("settings"); }
+else if (c.id === "profile") { goTo("profile"); }
                 else { setPendingMode(c.id); goTo("subject_select"); }
               }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>
                 <div style={{ fontSize: 28 }}>{c.icon}</div>
@@ -490,6 +561,95 @@ export default function App() {
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
 
+if (screen === "profile") {
+    return (
+      <div style={wrap}>
+        <Header onBack={goBack} title="My Profile" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
+        <div style={{ padding: "16px" }}>
+          {!user ? (
+            <div style={{ ...card, textAlign: "center", padding: "40px 20px" }}>
+              <div style={{ fontSize: 52, marginBottom: 16 }}>👤</div>
+              <div style={{ fontSize: 18, fontWeight: "bold", color: t.heading, marginBottom: 8 }}>Sign In to Save Scores</div>
+              <div style={{ fontSize: 13, color: t.textSub, marginBottom: 24, lineHeight: 1.8 }}>
+                Log in with Google to save your quiz scores and track your progress over time.
+              </div>
+              <button onClick={handleGoogleLogin} style={{ ...goldBtn, display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
+                <span style={{ fontSize: 18 }}>🔵</span> Sign in with Google
+              </button>
+            </div>
+          ) : (
+            <>
+              {/* User info */}
+              <div style={{ ...card, display: "flex", alignItems: "center", gap: 16 }}>
+                <img src={user.photoURL} alt="profile" style={{ width: 56, height: 56, borderRadius: "50%", border: `2px solid ${t.gold}` }} />
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontSize: 16, fontWeight: "bold", color: t.heading }}>{user.displayName}</div>
+                  <div style={{ fontSize: 12, color: t.textSub, marginTop: 4 }}>{user.email}</div>
+                  <div style={{ fontSize: 11, color: t.gold, marginTop: 4 }}>{userScores.length} attempts recorded</div>
+                </div>
+              </div>
+
+              {/* Score stats */}
+              {userScores.length > 0 && (
+                <div style={{ display: "flex", gap: 10, marginBottom: 14 }}>
+                  <div style={{ flex: 1, background: t.correctBg, border: `1px solid ${t.correctBorder}`, borderRadius: 12, padding: "14px 10px", textAlign: "center" }}>
+                    <div style={{ fontSize: 22, fontWeight: "bold", color: t.correctBorder }}>
+                      {Math.round(userScores.reduce((a, s) => a + s.pct, 0) / userScores.length)}%
+                    </div>
+                    <div style={{ fontSize: 11, color: t.correctText }}>Average Score</div>
+                  </div>
+                  <div style={{ flex: 1, background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 12, padding: "14px 10px", textAlign: "center" }}>
+                    <div style={{ fontSize: 22, fontWeight: "bold", color: t.gold }}>
+                      {Math.max(...userScores.map(s => s.pct))}%
+                    </div>
+                    <div style={{ fontSize: 11, color: t.textMuted }}>Best Score</div>
+                  </div>
+                  <div style={{ flex: 1, background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 12, padding: "14px 10px", textAlign: "center" }}>
+                    <div style={{ fontSize: 22, fontWeight: "bold", color: t.gold }}>
+                      {userScores.length}
+                    </div>
+                    <div style={{ fontSize: 11, color: t.textMuted }}>Attempts</div>
+                  </div>
+                </div>
+              )}
+
+              {/* Score history */}
+              <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Score History</div>
+              {userScores.length === 0 ? (
+                <div style={{ ...card, textAlign: "center", color: t.textMuted, padding: "30px" }}>
+                  No scores yet. Take a CBT or Exam to record your first score!
+                </div>
+              ) : (
+                userScores.map((s, i) => (
+                  <div key={s.id} style={{ ...card, padding: "14px 16px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div>
+                        <div style={{ fontSize: 13, fontWeight: "bold", color: t.heading }}>{s.mode} — {s.subject}</div>
+                        <div style={{ fontSize: 11, color: t.textMuted, marginTop: 4 }}>
+                          {s.score}/{s.total} correct · {s.timestamp?.toDate().toLocaleDateString("en-NG") || "Recent"}
+                        </div>
+                      </div>
+                      <div style={{
+                        fontSize: 20, fontWeight: "bold",
+                        color: s.pct >= 70 ? t.correctBorder : s.pct >= 50 ? t.gold : t.wrongBorder
+                      }}>{s.pct}%</div>
+                    </div>
+                    <div style={{ background: t.progressBg, borderRadius: 6, height: 4, marginTop: 10 }}>
+                      <div style={{ background: s.pct >= 70 ? t.correctBorder : s.pct >= 50 ? t.gold : t.wrongBorder, height: 4, borderRadius: 6, width: `${s.pct}%` }} />
+                    </div>
+                  </div>
+                ))
+              )}
+
+              <button onClick={handleLogout} style={{ width: "100%", background: "transparent", border: `1px solid ${t.wrongBorder}`, borderRadius: 12, color: t.wrongBorder, fontSize: 13, fontWeight: "bold", padding: 14, cursor: "pointer", marginTop: 8 }}>
+                Sign Out
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    );
+                            }
 if (screen === "settings") {
 return (
       <div style={wrap}>
@@ -691,6 +851,9 @@ return (
   // ── CBT QUIZ ──────────────────────────────────────────────────────────────
   if (screen === "cbt_quiz") {
     if (cbtDone) {
+      const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
+      const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
+      if (user) saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct);
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
@@ -770,6 +933,9 @@ return (
   // ── EXAM QUIZ ─────────────────────────────────────────────────────────────
   if (screen === "exam_quiz") {
     if (examDone) {
+      const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
+      const pct = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;
+      if (user) saveScore("Exam", activeSubject?.name, correct, examQs.length, pct);
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />

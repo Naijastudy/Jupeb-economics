@@ -283,67 +283,7 @@ const [showScores, setShowScores] = useState(false);
     return () => clearInterval(interval);
   }, []);
   
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        fetchUserScores(currentUser.uid);
-      }
-    });
-    return () => unsubscribe();
-  }, []);
-
-  const fetchUserScores = async (uid) => {
-    try {
-      const q = query(
-        collection(db, "scores"),
-        where("uid", "==", uid),
-        orderBy("timestamp", "desc")
-      );
-      const snapshot = await getDocs(q);
-      const scores = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setUserScores(scores);
-    } catch (e) {
-      console.log("Error fetching scores:", e);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (e) {
-      console.log("Login error:", e);
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      setUserScores([]);
-    } catch (e) {
-      console.log("Logout error:", e);
-    }
-  };
-
-  const saveScore = async (mode, subject, score, total, pct) => {
-    if (!user) return;
-    try {
-      await addDoc(collection(db, "scores"), {
-        uid: user.uid,
-        name: user.displayName,
-        email: user.email,
-        mode,
-        subject,
-        score,
-        total,
-        pct,
-        timestamp: serverTimestamp(),
-      });
-      fetchUserScores(user.uid);
-    } catch (e) {
-      console.log("Error saving score:", e);
-    }
-  };
+  
   useEffect(() => {
     const handleBack = () => { goBack(); };
     window.addEventListener("popstate", handleBack);

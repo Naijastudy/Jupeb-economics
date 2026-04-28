@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
-import { db, auth, googleProvider } from "./firebase";
-import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy } from "firebase/firestore";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import { db } from "./firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { grading } from "./data/economics";
 
 function shuffle(arr) {
@@ -222,10 +221,7 @@ export default function App() {
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
-  const [user, setUser] = useState(null);
-const [userScores, setUserScores] = useState([]);
-const [showScores, setShowScores] = useState(false);
-  const [activeSubject, setActiveSubject] = useState(null);
+    const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
 
   // Notes

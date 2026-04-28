@@ -489,9 +489,7 @@ export default function App() {
   }
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
-
-if (screen === "settings") {
-  if (screen === "feedback") {
+if (screen === "feedback") {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
@@ -573,7 +571,8 @@ if (screen === "settings") {
         </div>
       </div>
     );
-    }
+                  }
+if (screen === "settings") {
 return (
       <div style={wrap}>
         <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />

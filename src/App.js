@@ -223,3 +223,198 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
     </div>
   );
                 }
+export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [themeKey, setThemeKey] = useState("dark");
+  const [screen, setScreen] = useState("home");
+  const [history, setHistory] = useState(["home"]);
+  const [user, setUser] = useState(null);
+  const [userScores, setUserScores] = useState([]);
+  const [firebaseQuestions, setFirebaseQuestions] = useState([]);
+  const [activeSubject, setActiveSubject] = useState(null);
+  const [pendingMode, setPendingMode] = useState(null);
+  const [noteCourse, setNoteCourse] = useState(null);
+  const [noteTopic, setNoteTopic] = useState(null);
+  const [pqCourse, setPqCourse] = useState(null);
+  const [pqTopic, setPqTopic] = useState(null);
+  const [pqRevealed, setPqRevealed] = useState({});
+  const [pqSelected, setPqSelected] = useState({});
+  const [cbtQs, setCbtQs] = useState([]);
+  const [cbtIdx, setCbtIdx] = useState(0);
+  const [cbtAnswers, setCbtAnswers] = useState({});
+  const [cbtDone, setCbtDone] = useState(false);
+  const [cbtTime, setCbtTime] = useState(3 * 60 * 60);
+  const [cbtRunning, setCbtRunning] = useState(false);
+  const [examCount, setExamCount] = useState(50);
+  const [examMinutes, setExamMinutes] = useState(60);
+  const [examQs, setExamQs] = useState([]);
+  const [examIdx, setExamIdx] = useState(0);
+  const [examAnswers, setExamAnswers] = useState({});
+  const [examDone, setExamDone] = useState(false);
+  const [examTime, setExamTime] = useState(3600);
+  const [examRunning, setExamRunning] = useState(false);
+  const [feedbackName, setFeedbackName] = useState("");
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [feedbackSending, setFeedbackSending] = useState(false);
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  const [feedbackError, setFeedbackError] = useState("");
+
+  const t = themes[themeKey];
+  const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
+
+  const goTo = (newScreen) => {
+    window.history.pushState({}, "");
+    setHistory(h => [...h, newScreen]);
+    setScreen(newScreen);
+  };
+
+  const goBack = () => {
+    if (history.length <= 1) return;
+    const newHistory = history.slice(0, -1);
+    const prevScreen = newHistory[newHistory.length - 1];
+    setHistory(newHistory);
+    setScreen(prevScreen);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress(p => {
+        if (p >= 100) { clearInterval(interval); setTimeout(() => setShowSplash(false), 300); return 100; }
+        return p + 2;
+      });
+    }, 40);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleBack = () => { goBack(); };
+    window.addEventListener("popstate", handleBack);
+    return () => window.removeEventListener("popstate", handleBack);
+  }, [history]);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      if (currentUser) fetchUserScores(currentUser.uid);
+    });
+    fetchFirebaseQuestions();
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (!cbtRunning || cbtDone) return;
+    const timer = setInterval(() => setCbtTime(prev => {
+      if (prev === 300) alert("⚠️ 5 minutes remaining!");
+      if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
+      return prev - 1;
+    }), 1000);
+    return () => clearInterval(timer);
+  }, [cbtRunning, cbtDone]);
+
+  useEffect(() => {
+    if (!examRunning || examDone) return;
+    const timer = setInterval(() => setExamTime(prev => {
+      if (prev === 300) alert("⚠️ 5 minutes remaining!");
+      if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
+      return prev - 1;
+    }), 1000);
+    return () => clearInterval(timer);
+  }, [examRunning, examDone]);
+
+  const fetchUserScores = async (uid) => {
+    try {
+      const q = query(collection(db, "scores"), where("uid", "==", uid), orderBy("timestamp", "desc"));
+      const snapshot = await getDocs(q);
+      setUserScores(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    } catch (e) { console.log("Error fetching scores:", e); }
+  };
+
+  const fetchFirebaseQuestions = async () => {
+    try {
+      const snapshot = await getDocs(collection(db, "questions"));
+      setFirebaseQuestions(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    } catch (e) { console.log("Error fetching Firebase questions:", e); }
+  };
+
+  const handleGoogleLogin = async () => {
+    try { await signInWithPopup(auth, googleProvider); }
+    catch (e) { console.log("Login error:", e); }
+  };
+
+  const handleLogout = async () => {
+    try { await signOut(auth); setUserScores([]); }
+    catch (e) { console.log("Logout error:", e); }
+  };
+
+  const saveScore = async (mode, subject, score, total, pct) => {
+    if (!user) return;
+    try {
+      await addDoc(collection(db, "scores"), {
+        uid: user.uid,
+        name: user.displayName,
+        email: user.email,
+        mode, subject, score, total, pct,
+        timestamp: serverTimestamp(),
+      });
+      fetchUserScores(user.uid);
+    } catch (e) { console.log("Error saving score:", e); }
+  };
+
+  const startCbt = (subject) => {
+    const qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+    setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false);
+    setCbtTime(3 * 60 * 60); setCbtRunning(true);
+    goTo("cbt_quiz");
+  };
+
+  const startExam = (subject) => {
+    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+    if (qs.length > examCount) qs = qs.slice(0, examCount);
+    setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false);
+    setExamTime(examMinutes * 60); setExamRunning(true);
+    goTo("exam_quiz");
+  };
+
+  const data = activeSubject ? activeSubject.data : null;
+  const wrap = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
+  const card = { background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 };
+  const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
+
+  // ── SPLASH ────────────────────────────────────────────────────────────────
+  if (showSplash) {
+    return (
+      <div style={{ minHeight: "100vh", background: themeKey === "dark" ? "linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0d2b0d 100%)" : "linear-gradient(135deg, #f0f4f8 0%, #e8f0e8 50%, #f5f0e8 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", padding: "40px 20px" }}>
+        <div style={{ width: 110, height: 110, borderRadius: "50%", background: themeKey === "dark" ? "linear-gradient(135deg, #1e4d1e, #2d6a2d)" : "linear-gradient(135deg, #1a3a5c, #0d2b4a)", border: `3px solid ${themeKey === "dark" ? "#c8a84b" : "#1a3a5c"}`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24, boxShadow: themeKey === "dark" ? "0 0 30px #c8a84b44" : "0 0 30px #1a3a5c44" }}>
+          <span style={{ fontSize: 52 }}>📊</span>
+        </div>
+        <div style={{ fontSize: 32, fontWeight: "bold", color: themeKey === "dark" ? "#f0ece0" : "#1a1a1a", marginBottom: 6, letterSpacing: 1 }}>StudyNaija</div>
+        <div style={{ fontSize: 14, color: themeKey === "dark" ? "#c8a84b" : "#1a3a5c", marginBottom: 6, letterSpacing: 2, textTransform: "uppercase" }}>JUPEB Exam Prep</div>
+        <div style={{ fontSize: 12, color: themeKey === "dark" ? "#8a9a8a" : "#666", marginBottom: 48 }}>Free · No Subscription</div>
+        <div style={{ width: "60%", maxWidth: 200, height: 4, background: themeKey === "dark" ? "#1e2e1e" : "#ddd8cc", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
+          <div style={{ height: "100%", width: `${progress}%`, background: themeKey === "dark" ? "linear-gradient(90deg, #c8a84b, #f0d080)" : "linear-gradient(90deg, #1a3a5c, #2563eb)", borderRadius: 10, transition: "width 0.05s linear" }} />
+        </div>
+        <div style={{ fontSize: 11, color: themeKey === "dark" ? "#666" : "#888", letterSpacing: 1 }}>
+          {progress < 40 ? "Loading questions..." : progress < 70 ? "Preparing study materials..." : progress < 90 ? "Almost ready..." : "Welcome! 🎉"}
+        </div>
+        <div style={{ position: "absolute", bottom: 30, fontSize: 10, color: themeKey === "dark" ? "#444" : "#999", textAlign: "center", lineHeight: 1.8 }}>
+          studynaija.vercel.app<br />© 2026 StudyNaija
+        </div>
+      </div>
+    );
+  }
+
+  // ── SUBJECT SELECT ────────────────────────────────────────────────────────
+  if (screen === "subject_select") {
+    return (
+      <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack} mode={pendingMode}
+        onSelect={(subject) => {
+          setActiveSubject(subject);
+          if (pendingMode === "cbt") startCbt(subject);
+          else if (pendingMode === "exam") goTo("exam_setup");
+          else if (pendingMode === "notes") goTo("notes");
+          else if (pendingMode === "pastq") goTo("pastq_courses");
+        }}
+      />
+    );
+    }

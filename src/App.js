@@ -394,7 +394,26 @@ if (showSplash) {
         }}>Free · No Subscription</div>
 
         {/* Progress bar */}
-        <div style={{
+<div style={{
+  width: "60%",
+  maxWidth: 200,
+  height: 6,
+  background: "#1e2e1e",
+  borderRadius: 20,
+  overflow: "hidden",
+  marginBottom: 16,
+  boxShadow: "inset 0 0 5px #000",
+}}>
+  <div style={{
+    height: "100%",
+    width: `${progress}%`,
+    background: "linear-gradient(90deg, #c8a84b, #f0d080)",
+    borderRadius: 20,
+    transition: "width 0.2s ease",
+    boxShadow: "0 0 10px #c8a84b, 0 0 20px #c8a84b66",
+  }} />
+</div>
+       /* <div style={{
           width: "60%",
           maxWidth: 200,
           height: 4,
@@ -410,7 +429,7 @@ if (showSplash) {
             borderRadius: 10,
             transition: "width 0.05s linear",
           }} />
-        </div>
+        </div>*/
 
         {/* Loading text */}
         <div style={{

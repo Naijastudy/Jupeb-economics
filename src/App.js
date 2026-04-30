@@ -493,7 +493,7 @@ if (showSplash) {
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
  
-/*if (screen === "feedback") {
+if (screen === "feedback") {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
@@ -575,7 +575,7 @@ if (showSplash) {
         </div>
       </div>
     );
-    }*/
+    }
 
 if (screen === "settings") {
     return (

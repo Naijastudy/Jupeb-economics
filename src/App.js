@@ -271,7 +271,7 @@ export default function App() {
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => setCbtTime(prev => {
-      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
+      if (prev === 300) alert("⚠️ 3 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -281,7 +281,7 @@ export default function App() {
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => setExamTime(prev => {
-      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
+      if (prev === 300) alert("⚠️ 3 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -365,9 +365,11 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 1.8 }}>
-            Built from official JUPEB syllabus<br />jupeb-economics-jade.vercel.app
-          </div>
+          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 2 }}>
+  Built from official JUPEB syllabus<br />
+  <a href="https://studynaija.vercel.app/" style={{ color: t.gold, textDecoration: "none" }}>studynaija.vercel.app</a><br />
+  © 2026 StudyNaija. All rights reserved.
+</div>
         </div>
       </div>
     );

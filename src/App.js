@@ -222,7 +222,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
       </div>
     </div>
   );
-            }
+                 }
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -417,7 +417,7 @@ export default function App() {
         }}
       />
     );
-              }
+}
 // ── PROFILE ───────────────────────────────────────────────────────────────
   if (screen === "profile") {
     return (
@@ -945,4 +945,4 @@ export default function App() {
       </div>
     </div>
   );
-}
+                      }

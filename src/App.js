@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function App() {
-  return <h1>Finally working!</h1>;
+  return <h1 style={{color: 'white', textAlign: 'center', marginTop: '50px'}}>Success!</h1>;
 }

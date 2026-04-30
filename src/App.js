@@ -224,6 +224,32 @@ const [progress, setProgress] = useState(0);
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
 
+  //Feedback
+  const [name, setFeedbackName] = useState("");
+    const [message, setFeedbackMessage] = useState("");
+    const [sending, setFeedbackSending] = useState(false);
+    const [sent, setFeedbackSent] = useState(false);
+    const [error, setFeedbackError] = useState("");
+  const sendFeedback = async () => {
+      if (!message.trim()) { setFeedbackError("Please write a message first."); return; }
+      setFeedbackSending(true);
+      setFeedbackError("");
+      try {
+        await addDoc(collection(db, "feedback"), {
+          name: name.trim() || "Anonymous",
+          message: message.trim(),
+          timestamp: serverTimestamp(),
+          subject: activeSubject?.name || "General",
+        });
+        setFeedbackSent(true);
+        setFeedbackName("");
+        setFeedbackMessage("");
+      } catch (e) {
+        setFeedbackError("Failed to send. Check your connection and try again.");
+      }
+      setFeedbackSending(false);
+    };
+
   // Notes
   const [noteCourse, setNoteCourse] = useState(null);
   const [noteTopic, setNoteTopic] = useState(null);
@@ -492,33 +518,12 @@ if (showSplash) {
   }
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
- 
-if (screen === "feedback") {
-    const [name, setName] = useState("");
+/* const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
-    const [error, setError] = useState("");
-
-    const sendFeedback = async () => {
-      if (!message.trim()) { setError("Please write a message first."); return; }
-      setSending(true);
-      setError("");
-      try {
-        await addDoc(collection(db, "feedback"), {
-          name: name.trim() || "Anonymous",
-          message: message.trim(),
-          timestamp: serverTimestamp(),
-          subject: activeSubject?.name || "General",
-        });
-        setSent(true);
-        setName("");
-        setMessage("");
-      } catch (e) {
-        setError("Failed to send. Check your connection and try again.");
-      }
-      setSending(false);
-    };
+    const [error, setError] = useState("");*/
+if (screen === "feedback") {
 
     return (
       <div style={wrap}>
@@ -529,7 +534,7 @@ if (screen === "feedback") {
               <div style={{ fontSize: 52, marginBottom: 16 }}>🎉</div>
               <div style={{ fontSize: 18, fontWeight: "bold", color: t.heading, marginBottom: 8 }}>Thank you!</div>
               <div style={{ fontSize: 13, color: t.textSub, marginBottom: 24, lineHeight: 1.8 }}>Your feedback has been received. We read every message and use it to improve StudyNaija.</div>
-              <button onClick={() => { setSent(false); }} style={goldBtn}>Send Another</button>
+              <button onClick={() => { setFeedbackSent(false); }} style={goldBtn}>Send Another</button>
               <button onClick={goBack} style={{ ...goldBtn, background: "transparent", border: `1px solid ${t.border}`, color: t.textSub }}>Back to Settings</button>
             </div>
           ) : (
@@ -544,7 +549,7 @@ if (screen === "feedback") {
                 <div style={{ fontSize: 13, color: t.textSub, marginBottom: 8 }}>Your Name (optional)</div>
                 <input
                   value={name}
-                  onChange={e => setName(e.target.value)}
+                  onChange={e => setFeedbackName(e.target.value)}
                   placeholder="e.g. Ayomide"
                   style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", boxSizing: "border-box" }}
                 />
@@ -554,7 +559,7 @@ if (screen === "feedback") {
                 <div style={{ fontSize: 13, color: t.textSub, marginBottom: 8 }}>Your Message *</div>
                 <textarea
                   value={message}
-                  onChange={e => setMessage(e.target.value)}
+                  onChange={e => setFeedbackMessage(e.target.value)}
                   placeholder="Type your feedback, suggestion or report here..."
                   rows={6}
                   style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "Georgia, serif" }}

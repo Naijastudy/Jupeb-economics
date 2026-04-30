@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
-/*import { db } from "./firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";*/
+import { db } from "./firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { grading } from "./data/economics";
 
 function shuffle(arr) {

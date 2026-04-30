@@ -1,4 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+export default function App() {
+  return (
+    <div style={{ background: "#0a0f0a", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ color: "#fff", fontSize: 20 }}>App is working ✅</div>
+    </div>
+  );
+}
+/*import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
 import { grading } from "./data/economics";
@@ -690,3 +699,4 @@ export default function App() {
 
   return null;
       }
+*/ 

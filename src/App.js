@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
 import { grading } from "./data/economics";
-import { db, auth, googleProvider } from "./firebase";
-import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy } from "firebase/firestore";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -22,22 +19,10 @@ function shuffleOptions(q) {
   return { ...q, options: relabeled, answer: newAnswer };
 }
 
-function getAllQuestions(data, fbQuestions = [], subjectId = "economics") {
+function getAllQuestions(data) {
   let all = [];
   Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach(q => all.push(shuffleOptions({ ...q, topicId })));
-  });
-  const fbFiltered = fbQuestions.filter(q => q.subject === subjectId);
-  fbFiltered.forEach(q => {
-    all.push(shuffleOptions({
-      year: q.year || "2024",
-      q: q.q,
-      options: q.options,
-      answer: q.answer,
-      exp: q.exp,
-      topicId: q.topic || "intro",
-      fromFirebase: true,
-    }));
   });
   return shuffle(all);
 }
@@ -126,6 +111,7 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
   const pct = qs.length > 0 ? Math.round((correct / qs.length) * 100) : 0;
   const gradeLabel = pct >= 70 ? "Excellent! Grade A 🎉" : pct >= 60 ? "Very Good! Grade B 💪" : pct >= 50 ? "Good! Grade C 📚" : pct >= 45 ? "Merit — Grade D" : pct >= 40 ? "Pass — Grade E" : "Fail — Keep Studying! 🔁";
   const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
+
   return (
     <div style={{ padding: "16px" }}>
       <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 20, textAlign: "center" }}>
@@ -177,6 +163,7 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
   );
 }
 
+// ── SUBJECT SELECTION SCREEN ─────────────────────────────────────────────────
 function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
   const modeLabels = {
     cbt: { title: "CBT Practice", sub: "Select a subject to start" },
@@ -192,7 +179,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
         <div style={{ fontSize: 11, color: t.textMuted, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16 }}>Available Subjects</div>
         {subjects.map(subject => (
           <button key={subject.id} onClick={() => { if (subject.available) onSelect(subject); }}
-            style={{ background: subject.available ? t.bgCard : t.bgInner, border: `1px solid ${t.border}`, borderRadius: 16, padding: "20px 16px", display: "flex", alignItems: "center", gap: 16, cursor: subject.available ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 14, opacity: subject.available ? 1 : 0.7 }}
+            style={{ background: subject.available ? t.bgCard : t.bgInner, border: `1px solid ${subject.available ? t.border : t.border}`, borderRadius: 16, padding: "20px 16px", display: "flex", alignItems: "center", gap: 16, cursor: subject.available ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 14, opacity: subject.available ? 1 : 0.7 }}
             onMouseEnter={e => { if (subject.available) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
             onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
             <div style={{ width: 52, height: 52, borderRadius: 14, background: subject.available ? subject.color : "#444", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, flexShrink: 0 }}>
@@ -205,7 +192,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
                   {Object.values(subject.data.questions).reduce((a, arr) => a + arr.length, 0)} questions · {Object.values(subject.data.notes).reduce((a, arr) => a + arr.length, 0)} notes
                 </div>
               ) : (
-                <div style={{ fontSize: 12, marginTop: 4 }}>
+                <div style={{ fontSize: 12, marginTop: 4, display: "flex", alignItems: "center", gap: 6 }}>
                   <span style={{ background: "#f59e0b", color: "#000", fontSize: 10, fontWeight: "bold", padding: "2px 8px", borderRadius: 20 }}>COMING SOON</span>
                 </div>
               )}
@@ -216,36 +203,42 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
         ))}
         <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: "14px 16px", marginTop: 8 }}>
           <div style={{ fontSize: 13, color: t.keyText, lineHeight: 1.8 }}>
-            🔑 More subjects coming soon based on user feedback.
+            🔑 More subjects coming soon based on user feedback. Currently available: <strong>Economics</strong>.
           </div>
         </div>
       </div>
     </div>
   );
-        }
+}
+
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
-  const [progress, setProgress] = useState(0);
   const [themeKey, setThemeKey] = useState("dark");
+  const t = themes[themeKey];
+  const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
-  const [user, setUser] = useState(null);
-  const [userScores, setUserScores] = useState([]);
-  const [firebaseQuestions, setFirebaseQuestions] = useState([]);
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
+
+  // Notes
   const [noteCourse, setNoteCourse] = useState(null);
   const [noteTopic, setNoteTopic] = useState(null);
+
+  // Past Questions
   const [pqCourse, setPqCourse] = useState(null);
   const [pqTopic, setPqTopic] = useState(null);
   const [pqRevealed, setPqRevealed] = useState({});
   const [pqSelected, setPqSelected] = useState({});
+
+  // CBT
   const [cbtQs, setCbtQs] = useState([]);
   const [cbtIdx, setCbtIdx] = useState(0);
   const [cbtAnswers, setCbtAnswers] = useState({});
   const [cbtDone, setCbtDone] = useState(false);
   const [cbtTime, setCbtTime] = useState(3 * 60 * 60);
   const [cbtRunning, setCbtRunning] = useState(false);
+
+  // Exam
   const [examCount, setExamCount] = useState(50);
   const [examMinutes, setExamMinutes] = useState(60);
   const [examQs, setExamQs] = useState([]);
@@ -254,17 +247,9 @@ export default function App() {
   const [examDone, setExamDone] = useState(false);
   const [examTime, setExamTime] = useState(3600);
   const [examRunning, setExamRunning] = useState(false);
-  const [feedbackName, setFeedbackName] = useState("");
-  const [feedbackMessage, setFeedbackMessage] = useState("");
-  const [feedbackSending, setFeedbackSending] = useState(false);
-  const [feedbackSent, setFeedbackSent] = useState(false);
-  const [feedbackError, setFeedbackError] = useState("");
-
-  const t = themes[themeKey];
-  const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
 
   const goTo = (newScreen) => {
-    window.history.pushState({}, "", "");
+    window.history.pushState({}, "");
     setHistory(h => [...h, newScreen]);
     setScreen(newScreen);
   };
@@ -278,34 +263,15 @@ export default function App() {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress(p => {
-        if (p >= 100) { clearInterval(interval); setTimeout(() => setShowSplash(false), 300); return 100; }
-        return p + 2;
-      });
-    }, 40);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
     const handleBack = () => { goBack(); };
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, [history]);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) fetchUserScores(currentUser.uid);
-    });
-    fetchFirebaseQuestions();
-    return () => unsubscribe();
-  }, []);
-
-  useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => setCbtTime(prev => {
-      if (prev === 300) alert("⚠️ 5 minutes remaining!");
+      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -315,254 +281,93 @@ export default function App() {
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => setExamTime(prev => {
-      if (prev === 300) alert("⚠️ 5 minutes remaining!");
+      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
       return prev - 1;
     }), 1000);
     return () => clearInterval(timer);
   }, [examRunning, examDone]);
 
-  const fetchUserScores = async (uid) => {
-    try {
-      const q = query(collection(db, "scores"), where("uid", "==", uid), orderBy("timestamp", "desc"));
-      const snapshot = await getDocs(q);
-      setUserScores(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    } catch (e) { console.log("Error fetching scores:", e); }
-  };
-
-  const fetchFirebaseQuestions = async () => {
-    try {
-      const snapshot = await getDocs(collection(db, "questions"));
-      setFirebaseQuestions(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    } catch (e) { console.log("Error fetching Firebase questions:", e); }
-  };
-
-  const handleGoogleLogin = async () => {
-    try { await signInWithPopup(auth, googleProvider); }
-    catch (e) { console.log("Login error:", e); }
-  };
-
-  const handleLogout = async () => {
-    try { await signOut(auth); setUserScores([]); }
-    catch (e) { console.log("Logout error:", e); }
-  };
-
-  const saveScore = async (mode, subject, score, total, pct) => {
-    if (!user) return;
-    try {
-      await addDoc(collection(db, "scores"), {
-        uid: user.uid,
-        name: user.displayName,
-        email: user.email,
-        mode, subject, score, total, pct,
-        timestamp: serverTimestamp(),
-      });
-      fetchUserScores(user.uid);
-    } catch (e) { console.log("Error saving score:", e); }
-  };
+  const data = activeSubject ? activeSubject.data : null;
+  const wrap = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
+  const card = { background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 };
+  const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
 
   const startCbt = (subject) => {
-    const qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+    const qs = getAllQuestions(subject.data);
     setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false);
     setCbtTime(3 * 60 * 60); setCbtRunning(true);
     goTo("cbt_quiz");
   };
 
   const startExam = (subject) => {
-    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+    let qs = getAllQuestions(subject.data);
     if (qs.length > examCount) qs = qs.slice(0, examCount);
     setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false);
     setExamTime(examMinutes * 60); setExamRunning(true);
     goTo("exam_quiz");
   };
 
-  const data = activeSubject ? activeSubject.data : null;
-  const wrap = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
-  const card = { background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 };
-  const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
-
-  // ── SPLASH ────────────────────────────────────────────────────────────────
-  if (showSplash) {
-    return (
-      <div style={{ minHeight: "100vh", background: themeKey === "dark" ? "linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0d2b0d 100%)" : "linear-gradient(135deg, #f0f4f8 0%, #e8f0e8 50%, #f5f0e8 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", padding: "40px 20px" }}>
-        <div style={{ width: 110, height: 110, borderRadius: "50%", background: themeKey === "dark" ? "linear-gradient(135deg, #1e4d1e, #2d6a2d)" : "linear-gradient(135deg, #1a3a5c, #0d2b4a)", border: `3px solid ${themeKey === "dark" ? "#c8a84b" : "#1a3a5c"}`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24, boxShadow: themeKey === "dark" ? "0 0 30px #c8a84b44" : "0 0 30px #1a3a5c44" }}>
-          <span style={{ fontSize: 52 }}>📊</span>
-        </div>
-        <div style={{ fontSize: 32, fontWeight: "bold", color: themeKey === "dark" ? "#f0ece0" : "#1a1a1a", marginBottom: 6, letterSpacing: 1 }}>StudyNaija</div>
-        <div style={{ fontSize: 14, color: themeKey === "dark" ? "#c8a84b" : "#1a3a5c", marginBottom: 6, letterSpacing: 2, textTransform: "uppercase" }}>JUPEB Exam Prep</div>
-        <div style={{ fontSize: 12, color: themeKey === "dark" ? "#8a9a8a" : "#666", marginBottom: 48 }}>Free · No Subscription</div>
-        <div style={{ width: "60%", maxWidth: 200, height: 4, background: themeKey === "dark" ? "#1e2e1e" : "#ddd8cc", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
-          <div style={{ height: "100%", width: `${progress}%`, background: themeKey === "dark" ? "linear-gradient(90deg, #c8a84b, #f0d080)" : "linear-gradient(90deg, #1a3a5c, #2563eb)", borderRadius: 10, transition: "width 0.05s linear" }} />
-        </div>
-        <div style={{ fontSize: 11, color: themeKey === "dark" ? "#666" : "#888", letterSpacing: 1 }}>
-          {progress < 40 ? "Loading questions..." : progress < 70 ? "Preparing study materials..." : progress < 90 ? "Almost ready..." : "Welcome! 🎉"}
-        </div>
-        <div style={{ position: "absolute", bottom: 30, fontSize: 10, color: themeKey === "dark" ? "#444" : "#999", textAlign: "center", lineHeight: 1.8 }}>
-          studynaija.vercel.app<br />© 2026 StudyNaija
-        </div>
-      </div>
-    );
-  }
-
   // ── SUBJECT SELECT ────────────────────────────────────────────────────────
   if (screen === "subject_select") {
     return (
-      <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack} mode={pendingMode}
+      <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack}
+        mode={pendingMode}
         onSelect={(subject) => {
           setActiveSubject(subject);
-          if (pendingMode === "cbt") startCbt(subject);
-          else if (pendingMode === "exam") goTo("exam_setup");
-          else if (pendingMode === "notes") goTo("notes");
-          else if (pendingMode === "pastq") goTo("pastq_courses");
+          if (pendingMode === "cbt") { startCbt(subject); }
+          else if (pendingMode === "exam") { goTo("exam_setup"); }
+          else if (pendingMode === "notes") { goTo("notes"); }
+          else if (pendingMode === "pastq") { goTo("pastq_courses"); }
         }}
       />
     );
-                          }
-// ── PROFILE ───────────────────────────────────────────────────────────────
-  if (screen === "profile") {
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title="My Profile" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          {!user ? (
-            <div style={{ ...card, textAlign: "center", padding: "40px 20px" }}>
-              <div style={{ fontSize: 52, marginBottom: 16 }}>👤</div>
-              <div style={{ fontSize: 18, fontWeight: "bold", color: t.heading, marginBottom: 8 }}>Sign In to Save Scores</div>
-              <div style={{ fontSize: 13, color: t.textSub, marginBottom: 24, lineHeight: 1.8 }}>
-                Log in with Google to save your quiz scores and track your progress over time.
-              </div>
-              <button onClick={handleGoogleLogin} style={{ ...goldBtn, display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
-                <span style={{ fontSize: 18 }}>🔵</span> Sign in with Google
-              </button>
-            </div>
-          ) : (
-            <>
-              <div style={{ ...card, display: "flex", alignItems: "center", gap: 16 }}>
-                <img
-  src={user.photoURL || "https://via.placeholder.com/56"}
-  alt="profile"
-  style={{ width: 56, height: 56, borderRadius: "50%" }}
-/>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 16, fontWeight: "bold", color: t.heading }}>{user.displayName}</div>
-                  <div style={{ fontSize: 12, color: t.textSub, marginTop: 4 }}>{user.email}</div>
-                  <div style={{ fontSize: 11, color: t.gold, marginTop: 4 }}>{userScores.length} attempts recorded</div>
-                </div>
-              </div>
-              {userScores.length > 0 && (
-                <div style={{ display: "flex", gap: 10, marginBottom: 14 }}>
-                  <div style={{ flex: 1, background: t.correctBg, border: `1px solid ${t.correctBorder}`, borderRadius: 12, padding: "14px 10px", textAlign: "center" }}>
-                    <div style={{ fontSize: 22, fontWeight: "bold", color: t.correctBorder }}>
-                      {Math.round(userScores.reduce((a, s) => a + s.pct, 0) / userScores.length)}%
-                    </div>
-                    <div style={{ fontSize: 11, color: t.correctText }}>Average</div>
-                  </div>
-                  <div style={{ flex: 1, background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 12, padding: "14px 10px", textAlign: "center" }}>
-                    <div style={{ fontSize: 22, fontWeight: "bold", color: t.gold }}>
-                      {Math.max(...userScores.map(s => s.pct))}%
-                    </div>
-                    <div style={{ fontSize: 11, color: t.textMuted }}>Best</div>
-                  </div>
-                  <div style={{ flex: 1, background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 12, padding: "14px 10px", textAlign: "center" }}>
-                    <div style={{ fontSize: 22, fontWeight: "bold", color: t.gold }}>{userScores.length}</div>
-                    <div style={{ fontSize: 11, color: t.textMuted }}>Attempts</div>
-                  </div>
-                </div>
-              )}
-              <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Score History</div>
-              {userScores.length === 0 ? (
-                <div style={{ ...card, textAlign: "center", color: t.textMuted, padding: "30px" }}>
-                  No scores yet. Take a CBT or Exam to record your first score!
-                </div>
-              ) : (
-                userScores.map((s) => (
-                  <div key={s.id} style={{ ...card, padding: "14px 16px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <div>
-                        <div style={{ fontSize: 13, fontWeight: "bold", color: t.heading }}>{s.mode} — {s.subject}</div>
-                        <div style={{ fontSize: 11, color: t.textMuted, marginTop: 4 }}>
-                          {s.score}/{s.total} correct · {s.timestamp?.toDate().toLocaleDateString("en-NG") || "Recent"}
-                        </div>
-                      </div>
-                      <div style={{ fontSize: 20, fontWeight: "bold", color: s.pct >= 70 ? t.correctBorder : s.pct >= 50 ? t.gold : t.wrongBorder }}>{s.pct}%</div>
-                    </div>
-                    <div style={{ background: t.progressBg, borderRadius: 6, height: 4, marginTop: 10 }}>
-                      <div style={{ background: s.pct >= 70 ? t.correctBorder : s.pct >= 50 ? t.gold : t.wrongBorder, height: 4, borderRadius: 6, width: `${s.pct}%` }} />
-                    </div>
-                  </div>
-                ))
-              )}
-              <button onClick={handleLogout} style={{ width: "100%", background: "transparent", border: `1px solid ${t.wrongBorder}`, borderRadius: 12, color: t.wrongBorder, fontSize: 13, fontWeight: "bold", padding: 14, cursor: "pointer", marginTop: 8 }}>
-                Sign Out
-              </button>
-            </>
-          )}
-        </div>
-      </div>
-    );
   }
 
-  // ── FEEDBACK ──────────────────────────────────────────────────────────────
-  if (screen === "feedback") {
-    const sendFeedback = async () => {
-      if (!feedbackMessage.trim()) { setFeedbackError("Please write a message first."); return; }
-      setFeedbackSending(true);
-      setFeedbackError("");
-      try {
-        await addDoc(collection(db, "feedback"), {
-          name: feedbackName.trim() || "Anonymous",
-          message: feedbackMessage.trim(),
-          timestamp: serverTimestamp(),
-          subject: activeSubject?.name || "General",
-        });
-        setFeedbackSent(true);
-        setFeedbackName("");
-        setFeedbackMessage("");
-      } catch (e) {
-        setFeedbackError("Failed to send. Check your connection and try again.");
-      }
-      setFeedbackSending(false);
-    };
-
+  // ── HOME ──────────────────────────────────────────────────────────────────
+  if (screen === "home") {
+    const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0);
+    const homeCards = [
+      { id: "cbt", icon: "⏱️", title: "CBT Practice", desc: "3 hours · All questions shuffled", color: "#0d9488" },
+      { id: "exam", icon: "📝", title: "Exam Mode", desc: "Custom time & question count", color: "#2563eb" },
+      { id: "notes", icon: "📖", title: "Study Notes", desc: "Key points & full explanations", color: "#16a34a" },
+      { id: "pastq", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
+      { id: "grading", icon: "🏆", title: "Grading System", desc: "JUPEB grade scale & points", color: "#7c3aed" },
+      { id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
+    ];
     return (
       <div style={wrap}>
-        <Header onBack={goBack} title="Send Feedback" sub="Help us improve" t={t} onToggleTheme={toggleTheme} />
+        <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
+            <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
+            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
+          </div>
+          <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
+        </div>
         <div style={{ padding: "16px" }}>
-          {feedbackSent ? (
-            <div style={{ ...card, textAlign: "center", padding: "40px 20px" }}>
-              <div style={{ fontSize: 52, marginBottom: 16 }}>🎉</div>
-              <div style={{ fontSize: 18, fontWeight: "bold", color: t.heading, marginBottom: 8 }}>Thank you!</div>
-              <div style={{ fontSize: 13, color: t.textSub, marginBottom: 24, lineHeight: 1.8 }}>Your feedback has been received. We read every message and use it to improve StudyNaija.</div>
-              <button onClick={() => setFeedbackSent(false)} style={goldBtn}>Send Another</button>
-              <button onClick={goBack} style={{ ...goldBtn, background: "transparent", border: `1px solid ${t.border}`, color: t.textSub }}>Back</button>
-            </div>
-          ) : (
-            <>
-              <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px", marginBottom: 20 }}>
-                <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.8 }}>
-                  📝 Found a wrong answer? Want a new subject? Have a suggestion? Let us know!
-                </div>
-              </div>
-              <div style={card}>
-                <div style={{ fontSize: 13, color: t.textSub, marginBottom: 8 }}>Your Name (optional)</div>
-                <input value={feedbackName} onChange={e => setFeedbackName(e.target.value)} placeholder="e.g. Ayomide"
-                  style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
-              </div>
-              <div style={card}>
-                <div style={{ fontSize: 13, color: t.textSub, marginBottom: 8 }}>Your Message *</div>
-                <textarea value={feedbackMessage} onChange={e => setFeedbackMessage(e.target.value)} placeholder="Type your feedback, suggestion or report here..." rows={6}
-                  style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "Georgia, serif" }} />
-              </div>
-              {feedbackError && (
-                <div style={{ background: t.wrongBg, border: `1px solid ${t.wrongBorder}`, borderRadius: 10, padding: "12px 14px", marginBottom: 14, fontSize: 13, color: t.wrongText }}>
-                  ⚠️ {feedbackError}
-                </div>
-              )}
-              <button onClick={sendFeedback} disabled={feedbackSending} style={{ ...goldBtn, opacity: feedbackSending ? 0.7 : 1 }}>
-                {feedbackSending ? "Sending..." : "Send Feedback 📤"}
+          <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
+            <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
+            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📊</div>
+            <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQ} questions — CBT, Exam, Notes & Past Questions. 100% free.</div>
+            <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+    {homeCards.map(c => (
+              <button key={c.id} onClick={() => {
+                if (c.id === "grading") { goTo("grading"); }
+                else if (c.id === "settings") { goTo("settings"); }
+                else { setPendingMode(c.id); goTo("subject_select"); }
+              }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>
+                <div style={{ fontSize: 28 }}>{c.icon}</div>
+                <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.title}</div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.75)", lineHeight: 1.4 }}>{c.desc}</div>
               </button>
-            </>
-          )}
+            ))}
+          </div>
+          <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 1.8 }}>
+            Built from official JUPEB syllabus<br />jupeb-economics-jade.vercel.app
+          </div>
         </div>
       </div>
     );
@@ -591,9 +396,6 @@ export default function App() {
             <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 8, padding: "10px 12px", marginBottom: 10, fontSize: 13, color: t.keyText }}>🔑 Key Point — Yellow highlight</div>
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
           </div>
-          <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
-            📤 Send Feedback / Report Issue
-          </button>
         </div>
       </div>
     );
@@ -622,8 +424,9 @@ export default function App() {
         </div>
       </div>
     );
-}
-// ── NOTES ─────────────────────────────────────────────────────────────────
+  }
+
+  // ── NOTES ─────────────────────────────────────────────────────────────────
   if (screen === "notes" && data) {
     const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
     return (
@@ -653,8 +456,7 @@ export default function App() {
           {noteCourse.topics.map((tp, i) => {
             const count = (data.notes[tp.id] || []).length;
             return (
-              <button key={tp.id} onClick={() => { if (count > 0) { setNoteTopic(tp); goTo("notes_view"); } }}
-                style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: count > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: count > 0 ? 1 : 0.5 }}
+              <button key={tp.id} onClick={() => { if (count > 0) { setNoteTopic(tp); goTo("notes_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: count > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: count > 0 ? 1 : 0.5 }}
                 onMouseEnter={e => { if (count > 0) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
                 onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
                 <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
@@ -709,8 +511,7 @@ export default function App() {
             {data.courses.map((c, ci) => {
               const qCount = c.topics.reduce((a, tp) => a + (data.questions[tp.id] || []).length, 0);
               return (
-                <button key={c.id} onClick={() => { setPqCourse(c); goTo("pastq_topics"); }}
-                  style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
+                <button key={c.id} onClick={() => { setPqCourse(c); goTo("pastq_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
                   <div style={{ fontSize: 28, marginBottom: 8 }}>{c.emoji}</div>
                   <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.code}</div>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", marginTop: 4, lineHeight: 1.4 }}>{c.title}</div>
@@ -732,8 +533,7 @@ export default function App() {
           {pqCourse.topics.map((tp, i) => {
             const qCount = (data.questions[tp.id] || []).length;
             return (
-              <button key={tp.id} onClick={() => { if (qCount > 0) { setPqTopic(tp); setPqRevealed({}); setPqSelected({}); goTo("pastq_view"); } }}
-                style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: qCount > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: qCount > 0 ? 1 : 0.5 }}
+              <button key={tp.id} onClick={() => { if (qCount > 0) { setPqTopic(tp); setPqRevealed({}); setPqSelected({}); goTo("pastq_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: qCount > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: qCount > 0 ? 1 : 0.5 }}
                 onMouseEnter={e => { if (qCount > 0) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
                 onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
                 <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
@@ -760,8 +560,7 @@ export default function App() {
             <div key={qi}>
               <QuestionCard q={q} idx={qi} answers={pqSelected} setAnswers={setPqSelected} revealed={pqRevealed[qi]} t={t} showResult={pqRevealed[qi]} />
               {!pqRevealed[qi] && (
-                <button onClick={() => setPqRevealed(r => ({ ...r, [qi]: true }))}
-                  style={{ marginTop: -6, marginBottom: 14, background: "transparent", border: `1px solid ${t.gold}`, borderRadius: 10, color: t.gold, fontSize: 13, padding: "10px 18px", cursor: "pointer", width: "100%", fontWeight: "bold" }}>
+                <button onClick={() => setPqRevealed(r => ({ ...r, [qi]: true }))} style={{ marginTop: -6, marginBottom: 14, background: "transparent", border: `1px solid ${t.gold}`, borderRadius: 10, color: t.gold, fontSize: 13, padding: "10px 18px", cursor: "pointer", width: "100%", fontWeight: "bold" }}>
                   Show Answer & Explanation
                 </button>
               )}
@@ -775,14 +574,11 @@ export default function App() {
   // ── CBT QUIZ ──────────────────────────────────────────────────────────────
   if (screen === "cbt_quiz") {
     if (cbtDone) {
-      const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
-      const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
-      if (user) saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct);
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={cbtQs} answers={cbtAnswers} t={t}
-            onRetry={() => startCbt(activeSubject)}
+            onRetry={() => { startCbt(activeSubject); }}
             onHome={() => goTo("home")} />
         </div>
       );
@@ -815,7 +611,7 @@ export default function App() {
 
   // ── EXAM SETUP ────────────────────────────────────────────────────────────
   if (screen === "exam_setup" && data) {
-    const totalQCount = Object.values(data.questions).reduce((a, arr) => a + arr.length, 0) + firebaseQuestions.filter(q => q.subject === activeSubject?.id).length;
+    const totalQCount = Object.values(data.questions).reduce((a, arr) => a + arr.length, 0);
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="Exam Mode" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
@@ -836,7 +632,7 @@ export default function App() {
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Time Limit</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              {[5, 15, 25, 60].map(m => (
+              {[30, 45, 60, 90, 120].map(m => (
                 <button key={m} onClick={() => setExamMinutes(m)} style={{ padding: "12px 16px", borderRadius: 10, border: `2px solid ${examMinutes === m ? t.gold : t.border}`, background: examMinutes === m ? `${t.gold}22` : t.bgInner, color: examMinutes === m ? t.gold : t.textSub, fontSize: 14, fontWeight: "bold", cursor: "pointer" }}>
                   {m >= 60 ? `${m / 60}hr` : `${m}min`}
                 </button>
@@ -857,9 +653,6 @@ export default function App() {
   // ── EXAM QUIZ ─────────────────────────────────────────────────────────────
   if (screen === "exam_quiz") {
     if (examDone) {
-      const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
-      const pct = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;
-      if (user) saveScore("Exam", activeSubject?.name, correct, examQs.length, pct);
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
@@ -895,64 +688,5 @@ export default function App() {
     );
   }
 
-  // ── HOME ──────────────────────────────────────────────────────────────────
-  const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0) + firebaseQuestions.length;
-  const homeCards = [
-    { id: "cbt", icon: "⏱️", title: "CBT Practice", desc: "3 hours · All questions shuffled", color: "#0d9488" },
-    { id: "exam", icon: "📝", title: "Exam Mode", desc: "Custom time & question count", color: "#2563eb" },
-    { id: "notes", icon: "📖", title: "Study Notes", desc: "Key points & full explanations", color: "#16a34a" },
-    { id: "pastq", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
-    { id: "grading", icon: "🏆", title: "Grading System", desc: "JUPEB grade scale & points", color: "#7c3aed" },
-    { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Hi ${user.displayName?.split(" ")[0]}! View your scores` : "Save your scores & progress", color: "#0f766e" },
-    { id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
-  ];
-
-  return (
-    <div style={wrap}>
-      <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
-          <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
-          <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
-        </div>
-        <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
-          {user ? (
-  <img
-    src={user.photoURL || "https://via.placeholder.com/24"}
-    alt="profile"
-    style={{ width: 24, height: 24, borderRadius: "50%" }}
-  />
-) : "👤"}
-        </button>
-        <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
-      </div>
-      <div style={{ padding: "16px" }}>
-        <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
-          <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
-          <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📊</div>
-          <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQ} questions — CBT, Exam, Notes & Past Questions. 100% free.</div>
-          <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-          {homeCards.map(c => (
-            <button key={c.id} onClick={() => {
-              if (c.id === "grading") goTo("grading");
-              else if (c.id === "settings") goTo("settings");
-              else if (c.id === "profile") goTo("profile");
-              else { setPendingMode(c.id); goTo("subject_select"); }
-            }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>
-              <div style={{ fontSize: 28 }}>{c.icon}</div>
-              <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.title}</div>
-              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.75)", lineHeight: 1.4 }}>{c.desc}</div>
-            </button>
-          ))}
-        </div>
-        <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 2 }}>
-          Built from official JUPEB syllabus<br />
-          <a href="https://studynaija.vercel.app/" style={{ color: t.gold, textDecoration: "none" }}>studynaija.vercel.app</a><br />
-          © 2026 StudyNaija. All rights reserved.
-        </div>
-      </div>
-    </div>
-  );
-            }
+  return null;
+      }

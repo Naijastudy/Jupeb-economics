@@ -1,3 +1,5 @@
+alert("App.js is loading!"); 
+/* ```
 import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
@@ -946,3 +948,6 @@ export default function App() {
     </div>
   );
                       }
+```javascript
+*/
+export default function App() { return <h1>Test</h1> }

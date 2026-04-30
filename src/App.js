@@ -394,21 +394,7 @@ if (showSplash) {
         }}>Free · No Subscription</div>
 
         {/* Progress bar */}
-<div style={{
-  display: "flex",
-  gap: 2,
-}}>
-  {Array.from({ length: 20 }).map((_, i) => (
-    <div key={i} style={{
-      flex: 1,
-      height: 6,
-      background: i < progress / 5 ? "#c8a84b" : "#1e2e1e",
-      borderRadius: 2,
-      transition: "background 0.2s",
-    }} />
-  ))}
-</div>
-       /* <div style={{
+ <div style={{
           width: "60%",
           maxWidth: 200,
           height: 4,
@@ -424,7 +410,7 @@ if (showSplash) {
             borderRadius: 10,
             transition: "width 0.05s linear",
           }} />
-        </div>*/
+        </div>
 
         {/* Loading text */}
         <div style={{

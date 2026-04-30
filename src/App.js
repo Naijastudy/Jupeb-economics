@@ -395,22 +395,18 @@ if (showSplash) {
 
         {/* Progress bar */}
 <div style={{
-  position: "relative",
-  height: "100%",
-  width: `${progress}%`,
-  background: "linear-gradient(90deg, #c8a84b, #f0d080)",
-  borderRadius: 20,
-  overflow: "hidden",
+  display: "flex",
+  gap: 2,
 }}>
-  <div style={{
-    position: "absolute",
-    top: 0,
-    left: "-50%",
-    width: "50%",
-    height: "100%",
-    background: "linear-gradient(120deg, transparent, #ffffff55, transparent)",
-    animation: "shine 1.2s infinite",
-  }} />
+  {Array.from({ length: 20 }).map((_, i) => (
+    <div key={i} style={{
+      flex: 1,
+      height: 6,
+      background: i < progress / 5 ? "#c8a84b" : "#1e2e1e",
+      borderRadius: 2,
+      transition: "background 0.2s",
+    }} />
+  ))}
 </div>
        /* <div style={{
           width: "60%",

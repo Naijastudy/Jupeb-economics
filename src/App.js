@@ -550,7 +550,7 @@ if (screen === "feedback") {
                 <input
                   value={name}
                   onChange={e => setFeedbackName(e.target.value)}
-                  placeholder="e.g. Ayomide"
+                  placeholder="e.g. Junior"
                   style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", boxSizing: "border-box" }}
                 />
               </div>

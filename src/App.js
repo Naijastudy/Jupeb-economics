@@ -845,6 +845,9 @@ if (screen === "settings") {
   // ── CBT QUIZ ──────────────────────────────────────────────────────────────
   if (screen === "cbt_quiz") {
     if (cbtDone) {
+      const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
+      const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
+      if (user) saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct);
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
@@ -924,6 +927,9 @@ if (screen === "settings") {
   // ── EXAM QUIZ ─────────────────────────────────────────────────────────────
   if (screen === "exam_quiz") {
     if (examDone) {
+      const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
+      const pct = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;
+      if (user) saveScore("Exam", activeSubject?.name, correct, examQs.length, pct);
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />

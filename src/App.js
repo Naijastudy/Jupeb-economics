@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
-import { db } from "./firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { grading } from "./data/economics";
+import { db, auth, googleProvider } from "./firebase";
+import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy } from "firebase/firestore";
+import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";import { grading } from "./data/economics";
 
 function shuffle(arr) {
   const a = [...arr];

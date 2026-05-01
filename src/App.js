@@ -224,6 +224,8 @@ const [progress, setProgress] = useState(0);
   const [user, setUser] = useState(null);
 const [userScores, setUserScores] = useState([]);
 const [showScores, setShowScores] = useState(false);
+  const [firebaseQuestions, setFirebaseQuestions] = useState([]);
+const [loadingFirebase, setLoadingFirebase] = useState(true);
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
 

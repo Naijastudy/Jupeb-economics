@@ -111,13 +111,13 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
   const skipped = qs.filter((_, i) => !answers[i]).length;
   const wrong = qs.length - correct - skipped;
   const pct = qs.length > 0 ? Math.round((correct / qs.length) * 100) : 0;
-  const gradeLabel = pct >= 70 ? "Excellent! Grade A 🎉" : pct >= 60 ? "Very Good! Grade B 💪" : pct >= 50 ? "Good! Grade C 📚" : pct >= 45 ? "Merit — Grade D" : pct >= 40 ? "Pass — Grade E" : "Fail — Keep Studying! 🔁";
+  const gradeLabel = pct >= 70 ? "Excellent! Grade A 🥳" : pct >= 60 ? "Very Good! Grade B 💪" : pct >= 50 ? "Good! Grade C 📚" : pct >= 45 ? "Merit — Grade D" : pct >= 40 ? "Pass — Grade E" : "Fail — Keep Studying! 🔁";
   const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
 
   return (
     <div style={{ padding: "16px" }}>
       <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 20, textAlign: "center" }}>
-        <div style={{ fontSize: 52 }}>📚📝</div>
+        <div style={{ fontSize: 52 }}>📝</div>
         <div style={{ fontSize: 38, fontWeight: "bold", color: t.gold, margin: "8px 0" }}>{pct}%</div>
         <div style={{ fontSize: 16, color: t.heading, fontWeight: "bold" }}>{correct} / {qs.length} correct</div>
         <div style={{ fontSize: 13, color: t.textSub, marginTop: 8 }}>{gradeLabel}</div>
@@ -465,7 +465,7 @@ if (showSplash) {
             ? "0 0 30px #c8a84b44"
             : "0 0 30px #1a3a5c44",
         }}>
-          <span style={{ fontSize: 52 }}>📊</span>
+          <span style={{ fontSize: 52 }}>🎓</span>
         </div>
 
         {/* App name */}
@@ -521,7 +521,7 @@ if (showSplash) {
         }}>
           {progress < 40 ? "Loading questions..." :
            progress < 70 ? "Preparing study materials..." :
-           progress < 90 ? "Almost ready..." : "Welcome! 🎉"}
+           progress < 90 ? "Almost ready..." : "Welcome! 🥳"}
         </div>
 
         {/* Bottom credit */}
@@ -566,7 +566,7 @@ if (showSplash) {
         <div style={{ padding: "16px" }}>
           <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
             <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
-            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📊</div>
+            <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📚📝</div>
             <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>{totalQ} questions — CBT, Exam, Notes & Past Questions. 100% free.</div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>💡 Tap ⋮ → "Add to Home Screen" to install as an app</div>
           </div>

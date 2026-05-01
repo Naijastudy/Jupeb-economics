@@ -336,6 +336,21 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
     }
   };
 
+  const fetchFirebaseQuestions = async () => {
+    try {
+      const q = query(collection(db, "questions"));
+      const snapshot = await getDocs(q);
+      const questions = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setFirebaseQuestions(questions);
+    } catch (e) {
+      console.log("Error fetching Firebase questions:", e);
+    }
+    setLoadingFirebase(false);
+  };
+  
   const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);

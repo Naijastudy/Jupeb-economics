@@ -221,6 +221,9 @@ const [progress, setProgress] = useState(0);
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
+  const [user, setUser] = useState(null);
+const [userScores, setUserScores] = useState([]);
+const [showScores, setShowScores] = useState(false);
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
 

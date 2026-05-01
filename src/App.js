@@ -575,7 +575,7 @@ if (showSplash) {
     );
   }  
   if (screen === "home") {
-    const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0);
+    const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0) + firebaseQuestions.length;
     const homeCards = [
       { id: "cbt", icon: "⏱️", title: "CBT Practice", desc: "3 hours · All questions shuffled", color: "#0d9488" },
       { id: "exam", icon: "📝", title: "Exam Mode", desc: "Custom time & question count", color: "#2563eb" },

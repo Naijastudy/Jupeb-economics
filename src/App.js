@@ -438,14 +438,14 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
   const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
 
   const startCbt = (subject) => {
-    const qs = getAllQuestions(subject.data);
+    const qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
     setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false);
     setCbtTime(3 * 60 * 60); setCbtRunning(true);
     goTo("cbt_quiz");
   };
 
   const startExam = (subject) => {
-    let qs = getAllQuestions(subject.data);
+    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
     if (qs.length > examCount) qs = qs.slice(0, examCount);
     setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false);
     setExamTime(examMinutes * 60); setExamRunning(true);

@@ -21,11 +21,28 @@ function shuffleOptions(q) {
   return { ...q, options: relabeled, answer: newAnswer };
 }
 
-function getAllQuestions(data) {
+function getAllQuestions(data, fbQuestions = [], subjectId = "economics") {
   let all = [];
+
+  // Local questions from data.js
   Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach(q => all.push(shuffleOptions({ ...q, topicId })));
   });
+
+  // Firebase questions for this subject
+  const fbFiltered = fbQuestions.filter(q => q.subject === subjectId);
+  fbFiltered.forEach(q => {
+    all.push(shuffleOptions({
+      year: q.year || "2025",
+      q: q.q,
+      options: q.options,
+      answer: q.answer,
+      exp: q.exp,
+      topicId: q.topic || "intro",
+      fromFirebase: true,
+    }));
+  });
+
   return shuffle(all);
 }
 
@@ -318,6 +335,7 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
         fetchUserScores(currentUser.uid);
       }
     });
+    fetchFirebaseQuestions();
     return () => unsubscribe();
   }, []);
 

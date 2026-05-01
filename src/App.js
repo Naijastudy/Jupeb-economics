@@ -117,7 +117,7 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
   return (
     <div style={{ padding: "16px" }}>
       <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 20, textAlign: "center" }}>
-        <div style={{ fontSize: 52 }}>📊</div>
+        <div style={{ fontSize: 52 }}>📚📝</div>
         <div style={{ fontSize: 38, fontWeight: "bold", color: t.gold, margin: "8px 0" }}>{pct}%</div>
         <div style={{ fontSize: 16, color: t.heading, fontWeight: "bold" }}>{correct} / {qs.length} correct</div>
         <div style={{ fontSize: 13, color: t.textSub, marginTop: 8 }}>{gradeLabel}</div>
@@ -438,7 +438,9 @@ if (showSplash) {
     return (
       <div style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0d2b0d 100%)",
+        background: themeKey === "dark"
+          ? "linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0d2b0d 100%)"
+          : "linear-gradient(135deg, #f0f4f8 0%, #e8f0e8 50%, #f5f0e8 100%)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -451,22 +453,26 @@ if (showSplash) {
           width: 110,
           height: 110,
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #1e4d1e, #2d6a2d)",
-          border: "3px solid #c8a84b",
+          background: themeKey === "dark"
+            ? "linear-gradient(135deg, #1e4d1e, #2d6a2d)"
+            : "linear-gradient(135deg, #1a3a5c, #0d2b4a)",
+          border: `3px solid ${themeKey === "dark" ? "#c8a84b" : "#1a3a5c"}`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           marginBottom: 24,
-          boxShadow: "0 0 30px #c8a84b44",
+          boxShadow: themeKey === "dark"
+            ? "0 0 30px #c8a84b44"
+            : "0 0 30px #1a3a5c44",
         }}>
-          <span style={{ fontSize: 52 }}>🎓</span>
+          <span style={{ fontSize: 52 }}>📊</span>
         </div>
 
         {/* App name */}
         <div style={{
           fontSize: 32,
           fontWeight: "bold",
-          color: "#f0ece0",
+          color: themeKey === "dark" ? "#f0ece0" : "#1a1a1a",
           marginBottom: 6,
           letterSpacing: 1,
         }}>StudyNaija</div>
@@ -474,7 +480,7 @@ if (showSplash) {
         {/* Tagline */}
         <div style={{
           fontSize: 14,
-          color: "#c8a84b",
+          color: themeKey === "dark" ? "#c8a84b" : "#1a3a5c",
           marginBottom: 6,
           letterSpacing: 2,
           textTransform: "uppercase",
@@ -482,16 +488,16 @@ if (showSplash) {
 
         <div style={{
           fontSize: 12,
-          color: "#8a9a8a",
+          color: themeKey === "dark" ? "#8a9a8a" : "#666",
           marginBottom: 48,
         }}>Free · No Subscription</div>
 
         {/* Progress bar */}
- <div style={{
+        <div style={{
           width: "60%",
           maxWidth: 200,
           height: 4,
-          background: "#1e2e1e",
+          background: themeKey === "dark" ? "#1e2e1e" : "#ddd8cc",
           borderRadius: 10,
           overflow: "hidden",
           marginBottom: 16,
@@ -499,7 +505,9 @@ if (showSplash) {
           <div style={{
             height: "100%",
             width: `${progress}%`,
-            background: "linear-gradient(90deg, #c8a84b, #f0d080)",
+            background: themeKey === "dark"
+              ? "linear-gradient(90deg, #c8a84b, #f0d080)"
+              : "linear-gradient(90deg, #1a3a5c, #2563eb)",
             borderRadius: 10,
             transition: "width 0.05s linear",
           }} />
@@ -508,12 +516,12 @@ if (showSplash) {
         {/* Loading text */}
         <div style={{
           fontSize: 11,
-          color: "#666",
+          color: themeKey === "dark" ? "#666" : "#888",
           letterSpacing: 1,
         }}>
           {progress < 40 ? "Loading questions..." :
            progress < 70 ? "Preparing study materials..." :
-           progress < 90 ? "Almost ready..." : "Welcome! 🥳"}
+           progress < 90 ? "Almost ready..." : "Welcome! 🎉"}
         </div>
 
         {/* Bottom credit */}
@@ -521,7 +529,7 @@ if (showSplash) {
           position: "absolute",
           bottom: 30,
           fontSize: 10,
-          color: "#444",
+          color: themeKey === "dark" ? "#444" : "#999",
           textAlign: "center",
           lineHeight: 1.8,
         }}>
@@ -530,8 +538,7 @@ if (showSplash) {
         </div>
       </div>
     );
-          }
-  
+  }  
   if (screen === "home") {
     const totalQ = subjects.reduce((a, s) => a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0);
     const homeCards = [

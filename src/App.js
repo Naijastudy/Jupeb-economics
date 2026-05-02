@@ -321,6 +321,16 @@ const [pendingAction, setPendingAction] = useState(null);
 
   const goBack = () => {
     if (history.length <= 1) return;
+
+    // Warn if quiz is active
+    if ((screen === "cbt_quiz" && !cbtDone && Object.keys(cbtAnswers).length > 0) ||
+        (screen === "exam_quiz" && !examDone && Object.keys(examAnswers).length > 0)) {
+      const confirm = window.confirm("⚠️ Are you sure you want to quit?\n\nYour progress will be lost!");
+      if (!confirm) return;
+      setCbtRunning(false);
+      setExamRunning(false);
+    }
+
     const newHistory = history.slice(0, -1);
     const prevScreen = newHistory[newHistory.length - 1];
     setHistory(newHistory);

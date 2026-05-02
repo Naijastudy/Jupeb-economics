@@ -6,38 +6,37 @@ const themes = {
 
     bgHeader: "linear-gradient(135deg,#1a3a1a,#0d2b0d)",
     border: "#2a3a2a",
-    borderHover: "#c8a84b",
 
-    text: "#f0ece0",
-    textSub: "#9aa89a",
-    textMuted: "#6b7a6b",
+    text: "#f5f2e8",
+    textSub: "#c7c2b0",
+    textMuted: "#9a9688",
 
-    heading: "#e6e1d3",
+    heading: "#f0ece0",
 
     accent: "#c8a84b",
     goldBtn: "#c8a84b",
     goldBtnText: "#0a0f0a",
 
     optionBg: "#1b241b",
-    optionText: "#d8d4c0",
+    optionText: "#f0ece0",
 
     correctBg: "#1f4a2a",
     correctBorder: "#5cb85c",
-    correctText: "#a6f3b0",
+    correctText: "#b8f5c2",
 
     wrongBg: "#4a1e1e",
     wrongBorder: "#dc3545",
-    wrongText: "#ffb3b3",
+    wrongText: "#ffd1d1",
 
     selectedBg: "#24301f",
     selectedBorder: "#c8a84b",
-    selectedText: "#f0ece0",
+    selectedText: "#f5f2e8",
 
     expBg: "#0f2415",
     expBorder: "#5cb85c44",
-    expText: "#9ad1a0",
+    expText: "#b8f5c2",
 
-    noteText: "#b5c2b5",
+    noteText: "#e6e1d3",
     tagColor: "#c8a84b",
 
     progressBg: "#1b241b",
@@ -45,7 +44,7 @@ const themes = {
 
     heroBg: "linear-gradient(135deg,#1e4d1e,#2d6a2d)",
     heroBorder: "#3a7a3a",
-    heroText: "#cfd8cf",
+    heroText: "#f5f2e8",
 
     statBg: "#121a12",
     statBorder: "#2a3a2a",
@@ -55,7 +54,7 @@ const themes = {
     keyBorder: "#c8a84b44",
 
     exBg: "#0f2415",
-    exText: "#9ad1a0",
+    exText: "#b8f5c2",
     exBorder: "#5cb85c44",
 
     toggleIcon: "🌙",
@@ -69,11 +68,10 @@ const themes = {
 
     bgHeader: "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
     border: "#e5e0d6",
-    borderHover: "#1a3a5c",
 
     text: "#1a1a1a",
-    textSub: "#555",
-    textMuted: "#888",
+    textSub: "#444",
+    textMuted: "#777",
 
     heading: "#1a3a5c",
 
@@ -82,7 +80,7 @@ const themes = {
     goldBtnText: "#ffffff",
 
     optionBg: "#f8f4ec",
-    optionText: "#333",
+    optionText: "#1a1a1a",
 
     correctBg: "#d4edda",
     correctBorder: "#28a745",
@@ -100,7 +98,7 @@ const themes = {
     expBorder: "#28a745",
     expText: "#155724",
 
-    noteText: "#444",
+    noteText: "#1a1a1a",
     tagColor: "#1a3a5c",
 
     progressBg: "#e6e0d6",
@@ -108,7 +106,7 @@ const themes = {
 
     heroBg: "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
     heroBorder: "#0d2b4a",
-    heroText: "#c8e0f0",
+    heroText: "#ffffff",
 
     statBg: "#ffffff",
     statBorder: "#e5e0d6",

@@ -130,11 +130,11 @@ export const courses = [
   export const questions = {
     intro: [
         {
-  "year": "2025",
-  "q": "Liquidity trap implies that:",
-  "options": ["A. increasing the money stock might not decrease zero-bound interest rates", "B. people would be less liquid when interest rates are very low", "C. demand for money is perfectly inelastic at ultra-low interest rates", "D. interest rates cannot be pegged by the central bank"],
-  "answer": "A",
-  "exp": "A liquidity trap occurs when interest rates are so low that monetary policy becomes ineffective; people prefer to hold cash rather than invest, meaning increasing the money supply fails to lower interest rates further."
+  year: "2025",
+  q: "Liquidity trap implies that:",
+  options: ["A. increasing the money stock might not decrease zero-bound interest rates", "B. people would be less liquid when interest rates are very low", "C. demand for money is perfectly inelastic at ultra-low interest rates", "D. interest rates cannot be pegged by the central bank"],
+  answer: "A",
+  exp: "A liquidity trap occurs when interest rates are so low that monetary policy becomes ineffective; people prefer to hold cash rather than invest, meaning increasing the money supply fails to lower interest rates further."
 },
 {
   "year": "2025",
@@ -282,7 +282,7 @@ export const courses = [
   "options": ["A. investment", "B. government purchase on goods and services", "C. net exports", "D. personal income taxes paid"],
   "answer": "D",
   "exp": "Aggregate Expenditure is calculated as AE = C + I + G + (X - M). Personal income taxes are a leakage from the circular flow, not a component of final expenditure."
-            }
+            },
             
       { year: "2023", q: "Which economist defined economics as 'the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses'?", options: ["A. Adam Smith", "B. Alfred Marshall", "C. Lionel Robbins", "D. John Maynard Keynes"], answer: "C", exp: "Lionel Robbins gave this famous scarcity-based definition in his 1932 essay. It is the most widely accepted modern definition of economics." },
       { year: "2023", q: "Which of the following is a POSITIVE economic statement?", options: ["A. The government should reduce poverty", "B. Income should be equally distributed", "C. A rise in price leads to a fall in quantity demanded", "D. Nigeria should produce more food"], answer: "C", exp: "Positive statements are factual and testable (what IS). Options A, B, and D are normative — they express value judgements about what SHOULD be." },

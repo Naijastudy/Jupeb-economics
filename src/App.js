@@ -893,6 +893,19 @@ if (screen === "settings") {
         <div style={{ padding: "16px" }}>
           {topicNotes.map((n, i) => (
             <div key={i} style={card}>
+            {n.title === "Production Possibility Curve (PPC) graphical explanation" && (
+  <img
+    src="/image/ppc.png"
+    alt="PPC"
+    style={{
+      width: "100%",
+      maxHeight: 180,
+      objectFit: "contain",
+      marginBottom: 12,
+      borderRadius: 10
+    }}
+  />
+)}
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
                 <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
                 <div style={{ fontSize: 15, fontWeight: "bold", color: t.heading }}>{n.title}</div>

@@ -41,7 +41,93 @@ export const courses = [
   ];
   
   export const notes = {
-    intro: [
+intro: [
+      { title: "Definition of Economics", key: "Economics is the study of how individuals, businesses, and governments allocate scarce resources to satisfy unlimited wants and needs.", body: "It involves analyzing choices and trade-offs. Key concepts include scarcity, choice, and opportunity cost. Economics is a social science because it applies scientific methods to study human behavior and social interactions across individuals, firms, and governments." },
+      { title: "Micro vs Macroeconomics", key: "Microeconomics focuses on individual agents (consumers, firms); Macroeconomics examines the economy as a whole (aggregate variables).", body: "Micro deals with supply/demand in specific markets, consumer choice, and market structures. Macro explores national GDP, inflation, unemployment, fiscal and monetary policies, and the overall health of the national economy." },
+      { title: "Nature of Economic Problems", key: "Fundamental questions: What to produce? How to produce? For whom to produce?", body: "These arise because resources are limited while wants are unlimited. 'What' concerns resource allocation to industries; 'How' involves production methods and efficiency; 'For whom' relates to income distribution and social welfare." },
+      { title: "Positive vs Normative Statements", key: "Positive = objective/factual (what IS). Normative = subjective/value judgements (what SHOULD BE).", body: "Positive statements can be tested or rejected by evidence (e.g., 'The current interest rate is 12%'). Normative statements are based on opinions about what is fair or better for society (e.g., 'The government should provide free healthcare')." },
+      ],
+    basic: [
+      { title: "Scarcity & Opportunity Cost", key: "Opportunity cost is the value of the next best alternative forgone when a choice is made.", body: "Scarcity forces individuals and nations to make choices. Rational decision-making involves marginal analysis—comparing marginal benefits against marginal costs. For example, if a firm spends capital on machinery, the opportunity cost is the investment in labor or training given up." },
+      { title: "Production Possibility Curve (PPC)", key: "A graphical representation showing the maximum combinations of two goods an economy can produce with fixed resources.", body: "Points ON the curve represent efficiency; INSIDE represent underutilization (inefficiency); OUTSIDE are unattainable. The curve shifts outward with technological progress or an increase in the factors of production." },
+      { title: "Economic Systems", key: "Frameworks like Traditional, Command, Market, and Mixed systems determine how resources are allocated.", body: "Command economies rely on central planning and state ownership. Market economies use the price mechanism and private ownership. Mixed economies (most modern nations) combine private enterprise with government regulation to address market failures and provide public goods." },
+      { title: "Factors of Production", key: "Resources used to create goods: Land (Rent), Labour (Wages), Capital (Interest), and Enterprise (Profit).", body: "Enterprise involves the risk-taking and organization required to combine the other three factors. Division of labour and specialization increase productivity but can lead to worker monotony and loss of flexibility." },
+    ],
+    tools: [
+      { title: "Functional Relationships", key: "Mathematical models (e.g., Qd = f(P)) used to simplify and analyze economic relationships.", body: "Endogenous variables are determined within the system (price), while exogenous variables (policy, weather) are external. Models rely on the 'ceteris paribus' assumption—holding all other factors constant to isolate a specific relationship." },
+      { title: "Methods of Economic Analysis", key: "Deductive (general theory to specific) and Inductive (specific observation to general theory).", body: "Economists use statistical data from sources like the NBS or Central Bank to test theories. While mathematical tools provide precision, they can sometimes oversimplify the complexity of human behavior and social shifts." },
+    ],
+    price: [
+      { title: "Law of Demand", key: "Inverse relationship: as price rises, quantity demanded falls (ceteris paribus).", body: "The demand curve slopes downward due to the income and substitution effects. A change in price causes a movement ALONG the curve; a change in non-price factors (income, tastes) causes a SHIFT of the curve." },
+      { title: "Elasticity of Demand", key: "PED = % change in Qd / % change in P. Measures responsiveness of consumers to price changes.", body: "Price elasticity varies from perfectly inelastic to perfectly elastic. Cross-price elasticity (XED) identifies substitutes (positive) and complements (negative). Income elasticity (YED) distinguishes normal goods from inferior goods." },
+      { title: "Supply & Equilibrium", key: "Law of Supply: direct relationship between price and quantity supplied. Equilibrium is where Qd = Qs.", body: "Supply is influenced by production costs, technology, and taxes. Market equilibrium settles at a price where there is neither a surplus nor a shortage. Government interventions include price ceilings (shortage) and price floors (surplus)." },
+    ],
+    consumer: [
+      { title: "Utility Theory (Cardinal)", key: "Utility is the satisfaction derived from consumption. Law of Diminishing Marginal Utility states satisfaction drops per extra unit.", body: "Total Utility (TU) increases at a decreasing rate until Marginal Utility (MU) reaches zero. Consumer equilibrium is achieved when the marginal utility per dollar spent is equal across all goods consumed (MUx/Px = MUy/Py)." },
+      { title: "Indifference Curves (Ordinal)", key: "Combinations of goods providing equal satisfaction; curves are convex to the origin.", body: "The slope represents the Marginal Rate of Substitution (MRS). Equilibrium occurs where the highest possible indifference curve is tangent to the budget line. This explains how consumers maximize utility within income constraints." },
+    ],
+    firm: [
+      { title: "Production & Costs", key: "In the short run, at least one factor is fixed; the Law of Diminishing Returns applies.", body: "Total, Average, and Marginal products determine production stages. Costs are split into Fixed (FC) and Variable (VC). Marginal Cost (MC) eventually rises, cutting Average Total Cost (ATC) at its minimum point." },
+      { title: "Long Run & Revenue", key: "In the long run, all factors are variable; economies of scale lead to lower unit costs.", body: "Internal economies (technical, financial) come from firm growth. External economies come from industry growth. Profits are maximized where MC = MR. Firms earn supernormal, normal, or subnormal profits based on the gap between Price and ATC." },
+    ],
+    market: [
+      { title: "Perfect Competition & Monopoly", key: "Perfect Competition (Price Takers, many firms); Monopoly (Price Maker, single firm).", body: "Perfectly competitive firms only earn normal profit in the long run. Monopolies can earn supernormal profit due to high barriers to entry. Monopolies may practice price discrimination—charging different prices to different segments to maximize revenue." },
+      { title: "Monopolistic Competition & Oligopoly", key: "Monopolistic Competition (differentiated products); Oligopoly (few dominant, interdependent firms).", body: "Oligopolies often feature price rigidity (kinked demand curve) and may engage in collusion or non-price competition (branding). Monopolistic competition relies on heavy advertising and product differentiation to maintain market share." },
+    ],
+    income_dist: [
+      { title: "Labour Market", key: "Demand for labour is a derived demand, depending on the demand for the product being produced.", body: "Wages are determined by the intersection of labour demand (MRP) and labour supply. Differences in wages arise from skill levels, education, risk, and the presence of trade unions or professional associations." },
+      { title: "Economic Rent & Wages", key: "Economic rent is the payment to a factor above its transfer earnings.", body: "Transfer earnings are the minimum payment required to keep a factor in its current use. Trade unions aim to improve wages and conditions, though they can sometimes cause unemployment if they force wages above the equilibrium level." },
+    ],
+    govt: [
+      { title: "Market Failure & Externalities", key: "Failure occurs when the market does not allocate resources efficiently (e.g., externalities, public goods).", body: "Negative externalities (pollution) lead to overproduction; positive externalities (education) lead to underconsumption. Governments use Pigovian taxes or subsidies to internalize these external costs and benefits." },
+      { title: "Public, Merit & Demerit Goods", key: "Public goods (non-rival, non-excludable); Merit goods (subsidized); Demerit goods (taxed).", body: "Public goods suffer from the 'free-rider' problem, requiring government funding. Merit goods provide higher social than private benefits, while demerit goods are over-consumed because consumers ignore their long-term harmful effects." },
+    ],
+    circular: [
+      { title: "Circular Flow of Income", key: "Flow of resources and money between households, firms, and the government.", body: "Injections (Investment, Govt spending, Exports) increase national income. Withdrawals (Savings, Taxes, Imports) decrease it. Equilibrium exists when total injections equal total withdrawals (I+G+X = S+T+M)." },
+      { title: "MPC, MPS & Multiplier", key: "The multiplier effect shows that an initial change in spending leads to a larger change in national income.", body: "The size of the multiplier depends on the Marginal Propensity to Consume (MPC). A higher MPC results in a larger multiplier ($K = 1 / (1 - MPC)$). This concept is vital for Keynesian fiscal policy management." },
+    ],
+    national_acc: [
+      { title: "National Income Concepts", key: "Measures of economic activity: GDP, GNP, and NNP.", body: "GDP measures output within a country; GNP includes net income from abroad. Methods include the Output, Income, and Expenditure approaches. Difficulties include accounting for the informal sector, non-marketed activities, and inflation adjustments (Real vs Nominal GDP)." },
+    ],
+    national_det: [
+      { title: "Keynesian Theory & Gaps", key: "Equilibrium output is determined by Aggregate Demand (AD).", body: "An inflationary gap occurs when AD exceeds full-employment output, leading to price rises. A deflationary (recessionary) gap occurs when AD is insufficient to reach full employment, leading to unemployment and idle resources." },
+    ],
+    money: [
+      { title: "Money, Banking & Monetary Policy", key: "Central Bank manages money supply and interest rates to achieve economic stability.", body: "Commercial banks create credit through the fractional reserve system. Monetary policy tools include Open Market Operations (OMO), Reserve Requirements, and the Discount Rate (MPR). The Quantity Theory of Money (MV=PT) relates money supply to price levels." },
+    ],
+    inflation: [
+      { title: "Inflation & Unemployment", key: "Inflation is a persistent rise in price levels; Unemployment is the percentage of the workforce without jobs.", body: "Types of inflation include Demand-Pull and Cost-Push. Unemployment can be frictional, structural, or cyclical. The Phillips Curve illustrates the short-run inverse relationship between the rate of inflation and the rate of unemployment." },
+    ],
+    public: [
+      { title: "Public Finance", key: "Government revenue (taxation) and expenditure (budgeting) policies.", body: "Taxes can be direct (income) or indirect (VAT). Budgets can be balanced, surplus, or deficit. Public finance aims to redistribute income, stabilize the economy, and provide essential services that the private market ignores." },
+    ],
+    west_africa: [
+      { title: "Economic Structure of West Africa", key: "Characterized by primary product exports, underdeveloped manufacturing, and rising service sectors.", body: "Many West African nations depend heavily on agriculture and minerals (e.g., Nigeria's oil, Ghana's cocoa). Challenges include poor infrastructure, high debt, and the need for regional integration via bodies like ECOWAS." },
+    ],
+    growth: [
+      { title: "Growth, Development & Population", key: "Economic growth (quantitative increase in GDP); Development (qualitative improvement in living standards).", body: "Development includes improvements in literacy, health, and poverty reduction. Population growth can be a 'double-edged sword'—providing a large market and labour force, but straining resources if growth outpaces productivity." },
+    ],
+    agric: [
+      { title: "Industrialisation in West Africa", key: "Strategies to move from agrarian economies to industrial production.", body: "Import Substitution Industrialisation (ISI) aims to replace imports with domestic goods. Export-Led Growth focuses on manufacturing for world markets. Bottlenecks include inadequate power supply, limited capital, and low technological transfer." },
+    ],
+    intl_trade: [
+      { title: "International Trade Theory", key: "Absolute Advantage (Smith) and Comparative Advantage (Ricardo).", body: "Countries benefit by specializing in goods where they have the lowest opportunity cost. Protectionism (tariffs, quotas) is often used to protect 'infant industries' despite the benefits of free trade. The Balance of Payments (BOP) records all international transactions." },
+    ],
+    macro_meas: [
+      { title: "Macroeconomic Measurement", key: "Using indicators like GDP per capita and PPP to compare standards of living.", body: "Purchasing Power Parity (PPP) adjusts for cost-of-living differences. While GDP is a common measure, it is often criticized for excluding environmental quality, leisure time, and income inequality (Gini coefficient)." },
+    ],
+    labour: [
+      { title: "Labour Economics in Nigeria", key: "Focuses on the dynamics of the Nigerian workforce, youth unemployment, and productivity.", body: "The Nigerian labour market faces a structural mismatch between graduate skills and industry needs. Underemployment remains high. Government initiatives often focus on vocational training and SME support to bridge the employment gap." },
+    ],
+    stabilize: [
+      { title: "Stabilization Policies", key: "Coordination of fiscal and monetary policies to manage economic cycles.", body: "Expansionary policies are used during recessions to boost AD; contractionary policies are used to curb inflation. Policy lags and political interference often complicate the effective implementation of these stabilization measures." },
+    ],
+    intl_inst: [
+      { title: "International Economic Institutions", key: "Global and regional bodies like the IMF, World Bank, WTO, and ECOWAS.", body: "The IMF provides short-term financial stability and BOP support. The World Bank focuses on long-term development projects. Regional integration through ECOWAS aims to create a common market and eventually a single currency in West Africa." },
+    ],
+  };
+
+   /*intro: [
       { title: "Definition of Economics", key: "Lionel Robbins' definition (most accepted): 'Economics is the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses.'", body: "Other definitions: Adam Smith — 'Science of wealth.' Alfred Marshall — 'Study of mankind in the ordinary business of life.' Economics is a SOCIAL science — it studies human behaviour and social interactions, unlike natural sciences (physics, chemistry) which study the physical world." },
       { title: "Micro vs Macroeconomics", key: "Microeconomics = individual units. Macroeconomics = the whole economy.", body: "Microeconomic variables: price of garri, wage of a single worker, output of one factory. Macroeconomic variables: national GDP, inflation rate, total unemployment, money supply. Both are needed to understand the full picture of an economy like Nigeria." },
       { title: "Nature of Economic Problems", key: "Every economy must answer: WHAT to produce? HOW to produce? FOR WHOM to produce?", body: "These questions arise because of scarcity — unlimited wants vs limited resources. Every household, firm, and government faces these questions daily. The answers depend on the type of economic system in place." },
@@ -113,7 +199,7 @@ export const courses = [
     intl_trade: [
       { title: "International Trade Theory", key: "Absolute advantage (Adam Smith): export where you produce most efficiently. Comparative advantage (Ricardo): specialise where opportunity cost is LOWEST.", body: "Protectionism methods: tariff (import tax), quota (quantity limit), embargo (ban), subsidies. Arguments for protection: infant industry, employment, strategic industries. Arguments against: inefficiency, retaliation, higher consumer prices. Balance of Payments: Current account (goods, services, income), Capital account, Financial account. Favourable BOP: exports > imports." },
     ],
-    macro_meas: [
+    macro_meas: [*//*
       { title: "Macroeconomic Measurement", key: "PPP (Purchasing Power Parity) adjusts GDP for price differences between countries — fairer comparison of living standards.", body: "Keynesian view: AD determines output; fiscal policy most effective. Monetarist view: money supply is key; monetary policy most effective. Supply-side: improve productive capacity (education, deregulation, infrastructure). AE = C + I + G + (X-M). Inflationary gap: AE > Yf. Deflationary gap: AE < Yf. Yf = full employment income." },
     ],
     labour: [
@@ -126,6 +212,7 @@ export const courses = [
       { title: "International Economic Institutions", key: "ECOWAS: West African regional integration. OPEC: oil cartel (Nigeria is member). IMF: short-term BOP support. World Bank: long-term development finance.", body: "ADB: African Development Bank — funds African development projects. Globalisation: integration of world economies through trade, investment, movement of people. FDI (Foreign Direct Investment): productive assets investment — provides capital, jobs, technology. Portfolio investment: financial assets — more volatile. Economic integration stages: Free Trade Area, Customs Union, Common Market, Economic Union, Monetary Union." },
     ],
   };
+  */
   
   export const questions = {
     intro: [

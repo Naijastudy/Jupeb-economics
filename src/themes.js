@@ -1,65 +1,31 @@
-const themes = {
+const cbtTheme = {
   dark: {
-    bg: "#111714",
-    bgCard: "#182218",
-    bgInner: "#101810",
+    bg: "#0f1410",
+    bgCard: "#151b15",
+    bgInner: "#0c110d",
 
-    bgHeader: "linear-gradient(135deg,#1a3a1a,#0d2b0d)",
-    border: "#2a3a2a",
-    borderHover: "#c8a84b",
+    text: "#f5f5f5",
+    textSub: "#cfcfcf",
+    textMuted: "#9aa09a",
 
-    text: "#f0ece0",
-    textSub: "#cfd8cf",
-    textMuted: "#a8b3a8",
+    heading: "#ffffff",
 
-    heading: "#f0ece0",
+    accent: "#c8a84b",
 
-    gold: "#c8a84b",
-    goldBtn: "#c8a84b",
-    goldBtnText: "#0a0f0a",
+    border: "#2a332a",
 
-    optionBg: "#1e2e1e",
-    optionText: "#f0ece0",
+    optionBg: "#182018",
+    optionHover: "#1f2a1f",
 
-    correctBg: "#1e4a1e",
-    correctBorder: "#5cb85c",
-    correctText: "#90ee90",
+    correct: "#2e7d32",
+    wrong: "#c62828",
+    selected: "#c8a84b",
 
-    wrongBg: "#4a1e1e",
-    wrongBorder: "#dc3545",
-    wrongText: "#ff9999",
+    buttonPrimary: "#c8a84b",
+    buttonText: "#0a0f0a",
 
-    selectedBg: "#2a3a1e",
-    selectedBorder: "#c8a84b",
-    selectedText: "#f0ece0",
-
-    expBg: "#0d2b0d",
-    expBorder: "#5cb85c",
-    expText: "#90c890",
-
-    noteText: "#d8d2c0",
-    tagColor: "#c8a84b",
-
-    progressBg: "#1e2e1e",
+    progressBg: "#1a221a",
     progressFill: "#c8a84b",
-
-    heroBg: "linear-gradient(135deg,#1e4d1e,#2d6a2d)",
-    heroBorder: "#3a7a3a",
-    heroText: "#f0ece0",
-
-    statBg: "#141f14",
-    statBorder: "#2a3a2a",
-
-    keyBg: "#2a2a00",
-    keyText: "#ffe066",
-    keyBorder: "#c8a84b44",
-
-    exBg: "#0a2a0a",
-    exText: "#90c890",
-    exBorder: "#5cb85c44",
-
-    toggleIcon: "🌙",
-    toggleLabel: "Dark Mode",
   },
 
   light: {
@@ -67,63 +33,29 @@ const themes = {
     bgCard: "#ffffff",
     bgInner: "#f0ebe0",
 
-    bgHeader: "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
-    border: "#ddd8cc",
-    borderHover: "#1a3a5c",
-
     text: "#1a1a1a",
     textSub: "#555",
-    textMuted: "#888",
+    textMuted: "#777",
 
-    heading: "#1a3a5c",
+    heading: "#1a1a1a",
 
-    gold: "#1a3a5c",
-    goldBtn: "#1a3a5c",
-    goldBtnText: "#ffffff",
+    accent: "#1a3a5c",
 
-    optionBg: "#f8f4ec",
-    optionText: "#333",
+    border: "#e5e0d6",
 
-    correctBg: "#d4edda",
-    correctBorder: "#28a745",
-    correctText: "#155724",
+    optionBg: "#f8f8f8",
+    optionHover: "#e9eef5",
 
-    wrongBg: "#f8d7da",
-    wrongBorder: "#dc3545",
-    wrongText: "#721c24",
+    correct: "#2e7d32",
+    wrong: "#c62828",
+    selected: "#1a3a5c",
 
-    selectedBg: "#d6eaf8",
-    selectedBorder: "#1a3a5c",
-    selectedText: "#1a1a1a",
+    buttonPrimary: "#1a3a5c",
+    buttonText: "#ffffff",
 
-    expBg: "#d4edda",
-    expBorder: "#28a745",
-    expText: "#155724",
-
-    noteText: "#444",
-    tagColor: "#1a3a5c",
-
-    progressBg: "#ddd8cc",
+    progressBg: "#e6e0d6",
     progressFill: "#1a3a5c",
-
-    heroBg: "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
-    heroBorder: "#0d2b4a",
-    heroText: "#c8e0f0",
-
-    statBg: "#ffffff",
-    statBorder: "#ddd8cc",
-
-    keyBg: "#fff9cc",
-    keyText: "#7a6000",
-    keyBorder: "#ffe06688",
-
-    exBg: "#d4edda",
-    exText: "#155724",
-    exBorder: "#28a74588",
-
-    toggleIcon: "☀️",
-    toggleLabel: "Light Mode",
   },
 };
 
-export default themes;
+export default cbtTheme;

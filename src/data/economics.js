@@ -129,6 +129,161 @@ export const courses = [
   
   export const questions = {
     intro: [
+        {
+  "year": "2025",
+  "q": "Liquidity trap implies that:",
+  "options": ["A. increasing the money stock might not decrease zero-bound interest rates", "B. people would be less liquid when interest rates are very low", "C. demand for money is perfectly inelastic at ultra-low interest rates", "D. interest rates cannot be pegged by the central bank"],
+  "answer": "A",
+  "exp": "A liquidity trap occurs when interest rates are so low that monetary policy becomes ineffective; people prefer to hold cash rather than invest, meaning increasing the money supply fails to lower interest rates further."
+},
+{
+  "year": "2025",
+  "q": "Monthly stipend of a boarding school girl is classified as ________ consumption.",
+  "options": ["A. person", "B. daily", "C. autonomous", "D. induced"],
+  "answer": "C",
+  "exp": "A student's stipend is usually a fixed amount provided regardless of their level of earned income, making it autonomous consumption."
+},
+{
+  "year": "2025",
+  "q": "The ratio of the change in the equilibrium level of income to a change in some autonomous increase in spending is the:",
+  "options": ["A. elasticity coefficient", "B. multiplier", "C. automatic stabilizer", "D. marginal propensity of the autonomous variable"],
+  "answer": "B",
+  "exp": "The multiplier effect measures how much an initial change in spending (like investment or government spending) leads to a larger final increase in national income."
+},
+{
+  "year": "2025",
+  "q": "To increase the volume of credit in the economy, the central bank: I. increases cash reserve ratio II. increases expansionary monetary policy III. Purchases stocks and government bonds IV. Embarks on ease monetary policy programme",
+  "options": ["A. I, II and III only", "B. II, III and IV only", "C. I, III and IV only", "D. II and III only"],
+  "answer": "B",
+  "exp": "To increase credit, the bank uses expansionary tools (II), buys bonds to pump cash into banks (III), and uses 'easy' monetary policies (IV). Increasing the reserve ratio (I) would actually decrease credit."
+},
+{
+  "year": "2025",
+  "q": "Monetary contraction makes:",
+  "options": ["A. interest rate to fall and quantity of money to rise", "B. interest rate to fall and quantity of monetary of fall", "C. interest rate to rise and quantity of money to rise", "D. interest rate to rise and quantity of money to fall"],
+  "answer": "D",
+  "exp": "A monetary contraction (reducing money supply) creates scarcity of money, which drives up the price of borrowing (interest rates) and reduces the total amount of money in circulation."
+},
+{
+  "year": "2025",
+  "q": "Keynes in 1936 argued that the global recession was due primarily to a/an:",
+  "options": ["A. fall in aggregate demand", "B. increase in aggregate demand", "C. fall in aggregate supply", "D. increase in aggregate supply"],
+  "answer": "A",
+  "exp": "Keynesian economics is built on the premise that recessions are caused by a deficiency in aggregate demand; firms stop producing because people stop buying."
+},
+{
+  "year": "2025",
+  "q": "During the business cycle, an economic expansion occurs:",
+  "options": ["A. at the peak of the business cycle", "B. at the trough of a business cycle", "C. in between the peak and trough", "D. in between the trough and peak"],
+  "answer": "D",
+  "exp": "The expansion phase is the period where the economy is growing, moving upward from the lowest point (trough) toward the highest point (peak)."
+},
+{
+  "year": "2025",
+  "q": "Expansionary monetary policy increases the real output by:",
+  "options": ["A. increasing the demand for money", "B. increasing the currency ratio", "C. increasing the rate of interest", "D. reducing the level of money stock"],
+  "answer": "A",
+  "exp": "Note: This question's options in the image are slightly tricky. Typically, expansionary policy increases the *supply* of money to lower interest rates and boost demand. However, based on the provided list, 'A' is the only logical goal leading to increased output via investment stimulation."
+},
+{
+  "year": "2025",
+  "q": "Economic growth means which of the following?",
+  "options": ["A. the growth of opportunities to satisfy economic want", "B. the growth of challenges to satisfy economic wants", "C. the growth of opportunities to satisfy economic challenges", "D. the growth of opportunities to satisfy economic needs"],
+  "answer": "A",
+  "exp": "Economic growth is the increase in the capacity of an economy to produce goods and services, compared from one period of time to another, to satisfy human wants."
+},
+{
+  "year": "2025",
+  "q": "Which of the following is NOT an important indicator of economic development?",
+  "options": ["A. economic growth", "B. social amenities", "C. employment creation and high standard of living", "D. high mass consumption"],
+  "answer": "D",
+  "exp": "Economic development focuses on structural changes and quality of life. 'High mass consumption' is a stage of growth in Rostow's model, but not necessarily a core indicator of development like health, education, or employment."
+},
+{
+  "year": "2025",
+  "q": "Which of the following does NOT involve raising the level of standard of living of the people?",
+  "options": ["A. increase in per capita income", "B. equitable distribution of income", "C. high rate of population growth", "D. provision of social infrastructure"],
+  "answer": "C",
+  "exp": "Rapid population growth often outpaces economic resources, potentially leading to a decrease in the standard of living rather than an increase."
+}
+        {
+  "year": "2025",
+  "q": "Shifts in the consumption curve are caused by all of the following EXCEPT changes in:",
+  "options": ["A. interest rates", "B. income", "C. price level expectations", "D. credit availability"],
+  "answer": "B",
+  "exp": "A change in income causes a movement ALONG the existing consumption curve (the MPC). Shifts (upward or downward) are caused by non-income factors like changes in wealth, interest rates, or consumer expectations."
+},
+{
+  "year": "2025",
+  "q": "In the theory of income determination, ________ is not exogenously determined.",
+  "options": ["A. government expenditure", "B. output", "C. income", "D. consumption expenditure"],
+  "answer": "D",
+  "exp": "Consumption is 'endogenous' because its value is determined within the model based on income (C = a + bY). Government spending (G) is usually considered exogenous (fixed by policy)."
+},
+{
+  "year": "2025",
+  "q": "Milton Friedman proposed the:",
+  "options": ["A. permanent income hypothesis", "B. life cycle hypothesis", "C. absolute income hypothesis", "D. relative income hypothesis"],
+  "answer": "A",
+  "exp": "Friedman's Permanent Income Hypothesis argues that people base their consumption on their long-term average expected income, rather than their current transitory income."
+},
+{
+  "year": "2025",
+  "q": "The popular book written by Keynes in 1936 is referred to as:",
+  "options": ["A. introduction to employment theory", "B. the general theory of employment, interest and money", "C. the general theory of employment, growth and money", "D. the general theory of unemployment, interest and money"],
+  "answer": "B",
+  "exp": "Keynes' landmark work, 'The General Theory of Employment, Interest and Money,' challenged classical economics and laid the foundation for modern macroeconomics."
+},
+{
+  "year": "2025",
+  "q": "An open economy is that which:",
+  "options": ["A. produces goods and services with imported materials", "B. employs both nationals and foreigners to produce goods to aggregate investment", "C. trades with the rest of the world", "D. attends international meetings regularly"],
+  "answer": "C",
+  "exp": "An open economy interacts with other countries through the exchange of goods and services (exports/imports) and financial capital."
+},
+{
+  "year": "2025",
+  "q": "Real GDP is said to be at equilibrium when:",
+  "options": ["A. actual output is equal to aggregate investment", "B. aggregate saving is equal to aggregate spending", "C. aggregate demand is equal to aggregate expenditure", "D. total planned injection are equal to total planned leakages"],
+  "answer": "D",
+  "exp": "Equilibrium occurs when the circular flow of income is balanced; specifically, when planned injections (Investment, Govt spending, Exports) equal planned leakages (Savings, Taxes, Imports)."
+},
+{
+  "year": "2025",
+  "q": "The monetary authority in charge of managing inflation in Nigeria is the:",
+  "options": ["A. ministry of finance", "B. federal executive council", "C. national bureau of statistics", "D. central bank of Nigeria"],
+  "answer": "D",
+  "exp": "The Central Bank of Nigeria (CBN) is the sole authority responsible for monetary policy and maintaining price stability through inflation targeting."
+},
+{
+  "year": "2025",
+  "q": "Which of the following is involuntary unemployment?",
+  "options": ["A. frictional unemployment", "B. structural unemployment", "C. cyclical unemployment", "D. seasonal unemployment"],
+  "answer": "C",
+  "exp": "Cyclical unemployment is involuntary because it is caused by a lack of aggregate demand during a recession; workers are willing to work at the going wage but cannot find jobs."
+},
+{
+  "year": "2025",
+  "q": "Autonomous consumption refers to:",
+  "options": ["A. marginal propensity to consume that is less than one", "B. marginal propensity to consume that is greater than one", "C. consumption that is independent of the level of income", "D. permanent consumption associated with Friedman's permanent income hypothesis"],
+  "answer": "C",
+  "exp": "Autonomous consumption is the baseline spending required for necessities (food, shelter) that occurs even if a person's disposable income is zero."
+},
+{
+  "year": "2025",
+  "q": "The theory of consumption which argues that consumption is based on a household's long run estimate of their income is called the ________",
+  "options": ["A. relative income hypothesis", "B. duesenberry theory", "C. permanent income hypothesis", "D. life cycle hypothesis"],
+  "answer": "C",
+  "exp": "This is another description of Friedman's theory, emphasizing that consumption is smoothed over a lifetime based on long-term income expectations."
+},
+{
+  "year": "2025",
+  "q": "Which of the following is NOT a component of aggregate expenditure?",
+  "options": ["A. investment", "B. government purchase on goods and services", "C. net exports", "D. personal income taxes paid"],
+  "answer": "D",
+  "exp": "Aggregate Expenditure is calculated as AE = C + I + G + (X - M). Personal income taxes are a leakage from the circular flow, not a component of final expenditure."
+            }
+            
       { year: "2023", q: "Which economist defined economics as 'the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses'?", options: ["A. Adam Smith", "B. Alfred Marshall", "C. Lionel Robbins", "D. John Maynard Keynes"], answer: "C", exp: "Lionel Robbins gave this famous scarcity-based definition in his 1932 essay. It is the most widely accepted modern definition of economics." },
       { year: "2023", q: "Which of the following is a POSITIVE economic statement?", options: ["A. The government should reduce poverty", "B. Income should be equally distributed", "C. A rise in price leads to a fall in quantity demanded", "D. Nigeria should produce more food"], answer: "C", exp: "Positive statements are factual and testable (what IS). Options A, B, and D are normative — they express value judgements about what SHOULD be." },
       { year: "2022", q: "The basic economic problem arises because:", options: ["A. Governments fail to plan properly", "B. Human wants are unlimited while resources are scarce", "C. Technology is insufficient", "D. People are greedy"], answer: "B", exp: "Scarcity — the gap between unlimited wants and limited resources — is the fundamental economic problem that forces all economies to make choices." },

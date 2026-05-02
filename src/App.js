@@ -1135,12 +1135,31 @@ if (screen === "settings") {
     bottom: 20,
     right: 20,
     zIndex: 1000,
-    background: "#fff",
-    padding: 10,
-    borderRadius: 12,
-    boxShadow: "0 4px 20px rgba(0,0,0,0.2)"
+    width: 260,               
+    background: "#111",     
+    padding: 15,
+    borderRadius: 16,
+    boxShadow: "0 8px 30px rgba(0,0,0,0.4)"
   }}>
+    
+    {/* CLOSE BUTTON */}
+    <div style={{ textAlign: "right", marginBottom: 6 }}>
+      <button 
+        onClick={() => setShowCalc(false)}
+        style={{
+          background: "transparent",
+          border: "none",
+          color: "#fff",
+          fontSize: 16,
+          cursor: "pointer"
+        }}
+      >
+        ✕
+      </button>
+    </div>
+
     <Calculator />
+
   </div>
 )}
 

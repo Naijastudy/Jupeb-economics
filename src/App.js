@@ -4,6 +4,7 @@ import { subjects } from "./data/index";
 import { db, auth, googleProvider } from "./firebase";
 import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy, onSnapshot } from "firebase/firestore";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";import { grading } from "./data/economics";
+import Calculator from "./Calculator";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -301,6 +302,13 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
   const [examDone, setExamDone] = useState(false);
   const [examTime, setExamTime] = useState(3600);
   const [examRunning, setExamRunning] = useState(false);
+  const [showCalc, setShowCalc] = useState(false);
+
+<button onClick={() => setShowCalc(!showCalc)}>
+  {showCalc ? "Hide Calculator" : "Show Calculator"}
+</button>
+
+{showCalc && <Calculator />};
 
   const goTo = (newScreen) => {
     window.history.pushState({}, "");
@@ -1102,6 +1110,40 @@ if (screen === "settings") {
           right={<div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: examTime < 300 ? "#fff" : t.goldBtnText, marginRight: 8 }}>{formatTime(examTime)}</div>}
         />
         <div style={{ padding: "16px" }}>
+
+            {/* 🧮 CALCULATOR BUTTON */}
+  <button
+    onClick={() => setShowCalc(!showCalc)}
+    style={{
+      marginBottom: 10,
+      background: t.goldBtn,
+      border: "none",
+      borderRadius: 10,
+      padding: "8px 12px",
+      color: t.goldBtnText,
+      fontWeight: "bold",
+      cursor: "pointer"
+    }}
+  >
+    {showCalc ? "Close Calculator" : "Open Calculator"}
+  </button>
+
+  {/* 🧮 CALCULATOR */}
+{showCalc && (
+  <div style={{
+    position: "fixed",
+    bottom: 20,
+    right: 20,
+    zIndex: 1000,
+    background: "#fff",
+    padding: 10,
+    borderRadius: 12,
+    boxShadow: "0 4px 20px rgba(0,0,0,0.2)"
+  }}>
+    <Calculator />
+  </div>
+)}
+
           <div style={{ background: t.progressBg, borderRadius: 6, height: 5, marginBottom: 14 }}>
             <div style={{ background: t.progressFill, height: 5, borderRadius: 6, width: `${(answered / examQs.length) * 100}%`, transition: "width 0.3s" }} />
           </div>

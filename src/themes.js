@@ -1,6 +1,103 @@
 const themes = {
   dark: {
     bg: "#111714",
+    bgCard: "#1a2a1a",
+    bgInner: "#0d1a0d",
+    bgHeader: "linear-gradient(135deg, #1a3a1a, #0d2b0d)",
+    border: "#2a3a2a",
+    borderHover: "#c8a84b",
+    text: "#f0ece0",
+    textSub: "#a8b8a8", // Improved contrast
+    textMuted: "#7a8a7a", // Tinted to match theme
+    heading: "#7eb8e8",
+    gold: "#c8a84b",
+    goldBtn: "#c8a84b",
+    goldBtnText: "#0a0f0a",
+    optionBg: "#1e2e1e",
+    optionText: "#c8c4b0",
+    correctBg: "#163a16", // Slightly deeper
+    correctBorder: "#5cb85c",
+    correctText: "#a3ffa3", // Brighter for readability
+    wrongBg: "#3a1616", 
+    wrongBorder: "#dc3545",
+    wrongText: "#ffb3b3", // Softer on the eyes
+    selectedBg: "#2a3a1e",
+    selectedBorder: "#c8a84b",
+    selectedText: "#f0ece0",
+    expBg: "#0d2b0d",
+    expBorder: "#5cb85c",
+    expText: "#90c890",
+    noteText: "#a8b8a8",
+    tagColor: "#c8a84b",
+    progressBg: "#1e2e1e",
+    progressFill: "#c8a84b",
+    heroBg: "linear-gradient(135deg, #1e4d1e, #2d6a2d)",
+    heroBorder: "#3a7a3a",
+    heroText: "#b0c8b0",
+    statBg: "#141f14",
+    statBorder: "#2a3a2a",
+    keyBg: "#2a2a00",
+    keyText: "#ffe066",
+    keyBorder: "#c8a84b44",
+    exBg: "#0a2a0a",
+    exText: "#90c890",
+    exBorder: "#5cb85c44",
+    toggleIcon: "🌙",
+    toggleLabel: "Dark Mode",
+  },
+  light: {
+    bg: "#fcfaf7", // Brightened for better card separation
+    bgCard: "#ffffff",
+    bgInner: "#f2ede4", // More distinct from bg
+    bgHeader: "linear-gradient(135deg, #1a3a5c, #0d2b4a)",
+    border: "#e0dbcf",
+    borderHover: "#1a3a5c",
+    text: "#1a1a1a",
+    textSub: "#4a4a4a", // Darkened for accessibility
+    textMuted: "#757575",
+    heading: "#1a3a5c",
+    gold: "#1a3a5c", 
+    goldBtn: "#1a3a5c",
+    goldBtnText: "#ffffff",
+    optionBg: "#f8f4ec",
+    optionText: "#333",
+    correctBg: "#d4edda",
+    correctBorder: "#28a745",
+    correctText: "#155724",
+    wrongBg: "#f8d7da",
+    wrongBorder: "#dc3545",
+    wrongText: "#721c24",
+    selectedBg: "#e3f2fd", // Softer blue
+    selectedBorder: "#1a3a5c",
+    selectedText: "#1a1a1a",
+    expBg: "#e8f5e9",
+    expBorder: "#28a745",
+    expText: "#1b5e20",
+    noteText: "#444",
+    tagColor: "#1a3a5c",
+    progressBg: "#e0dbcf",
+    progressFill: "#1a3a5c",
+    heroBg: "linear-gradient(135deg, #1a3a5c, #0d2b4a)",
+    heroBorder: "#0d2b4a",
+    heroText: "#ffffff", // Pure white for better legibility on dark blue
+    statBg: "#ffffff",
+    statBorder: "#e0dbcf",
+    keyBg: "#fff9cc",
+    keyText: "#7a6000",
+    keyBorder: "#ffe06688",
+    exBg: "#e8f5e9",
+    exText: "#1b5e20",
+    exBorder: "#28a74588",
+    toggleIcon: "☀️",
+    toggleLabel: "Light Mode",
+  },
+};
+
+export default themes;
+
+/*const themes = {
+  dark: {
+    bg: "#111714",
     bgCard: "#182218",
     bgInner: "#101810",
 

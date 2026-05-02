@@ -453,45 +453,7 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
     setExamTime(examMinutes * 60); setExamRunning(true);
     goTo("exam_quiz");
   };
-  export default function EconomicsList({ basic }) {
-  return (
-    <div>
-      {basic.map((item, index) => (
-        <div
-          key={index}
-          style={{
-            display: "flex",
-            gap: "12px",
-            padding: "12px",
-            marginBottom: "16px",
-            border: "1px solid #ddd",
-            borderRadius: "10px"
-          }}
-        >
-          {/* IMAGE ONLY IF EXISTS */}
-          {item.image && (
-            <img
-              src={item.image}
-              alt={item.title}
-              style={{
-                width: 80,
-                height: 80,
-                objectFit: "contain"
-              }}
-            />
-          )}
-
-          {/* TEXT */}
-          <div>
-            <h3>{item.title}</h3>
-            <p style={{ fontWeight: "bold" }}>{item.key}</p>
-            <p>{item.body}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-            };
+  
 
   // ── SUBJECT SELECT ────────────────────────────────────────────────────────
   if (screen === "subject_select") {

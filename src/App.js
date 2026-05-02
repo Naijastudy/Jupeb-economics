@@ -1274,7 +1274,7 @@ if (screen === "settings") {
     left: 0,
     right: 0,
     bottom: 0,
-    background: "rgba(0,0,0,0.5)",
+    background: "rgba(0,0,0,0.6)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -1282,33 +1282,64 @@ if (screen === "settings") {
   }}>
     
     <div style={{
-      background: "#fff",
+      background: t.bgCard,
       padding: 20,
       borderRadius: 12,
       width: 280,
-      textAlign: "center"
+      textAlign: "center",
+      border: `1px solid ${t.border}`,
+      boxShadow: "0 8px 30px rgba(0,0,0,0.3)"
     }}>
       
-      <p style={{ fontWeight: "bold" }}>
+      <p style={{
+        fontWeight: "bold",
+        color: t.heading
+      }}>
         Are you sure you want to submit your exam?
       </p>
 
-      <div style={{ display: "flex", gap: 10, marginTop: 15 }}>
+      <div style={{
+        display: "flex",
+        gap: 10,
+        marginTop: 15
+      }}>
+        
         <button
           onClick={() => {
             setExamRunning(false);
             setExamDone(true);
             setShowConfirm(false);
           }}
+          style={{
+            flex: 1,
+            padding: 10,
+            borderRadius: 8,
+            border: "none",
+            background: "#16a34a",
+            color: "#fff",
+            fontWeight: "bold"
+          }}
         >
           Yes
         </button>
 
-        <button onClick={() => setShowConfirm(false)}>
+        <button
+          onClick={() => setShowConfirm(false)}
+          style={{
+            flex: 1,
+            padding: 10,
+            borderRadius: 8,
+            border: "none",
+            background: t.bg,
+            color: t.textSub,
+            fontWeight: "bold",
+            border: `1px solid ${t.border}`
+          }}
+        >
           No
         </button>
-      </div>
 
+      </div>
     </div>
   </div>
 )}

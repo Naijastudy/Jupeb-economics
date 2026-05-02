@@ -222,7 +222,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
         ))}
         <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: "14px 16px", marginTop: 8 }}>
           <div style={{ fontSize: 13, color: t.keyText, lineHeight: 1.8 }}>
-            🔑 More subjects coming soon based on user feedback. Currently available: <strong>Economics</strong>.
+            🔑 More subjects coming soon based on user feedback. Currently available: <strong>Economics, Government</strong>.
           </div>
         </div>
       </div>

@@ -18,4 +18,12 @@ export const subjects = [
     available: true,
     data: government,
   },
+  {
+    id: "business_studies",
+    name: "Business studies",
+    emoji: "🏛️",
+    color: "#6b95f1",
+    available: false,
+    data: business_studies,
+  },
 ];

@@ -1184,7 +1184,7 @@ if (screen === "settings") {
       cursor: "pointer"
     }}
   >
-    {showCalc ? "Close Calculator" : "Open Calculator"}
+    {showCalc ? "🧮" : "📟"}
   </button>
 
   {/* 🧮 CALCULATOR */}
@@ -1209,7 +1209,7 @@ if (screen === "settings") {
     }}>
       
       <span style={{ color: t.heading, fontWeight: "bold" }}>
-        🧮
+        📟
       </span>
 
       <div>

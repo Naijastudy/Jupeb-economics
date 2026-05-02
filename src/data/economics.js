@@ -205,7 +205,7 @@ export const courses = [
   "options": ["A. increase in per capita income", "B. equitable distribution of income", "C. high rate of population growth", "D. provision of social infrastructure"],
   "answer": "C",
   "exp": "Rapid population growth often outpaces economic resources, potentially leading to a decrease in the standard of living rather than an increase."
-}
+},
         {
   "year": "2025",
   "q": "Shifts in the consumption curve are caused by all of the following EXCEPT changes in:",

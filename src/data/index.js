@@ -15,7 +15,7 @@ export const subjects = [
     name: "Government",
     emoji: "🏛️",
     color: "#2563eb",
-    available: false,
+    available: true,
     data: government,
   },
 ];

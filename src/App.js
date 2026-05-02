@@ -310,6 +310,8 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
 
 {showCalc && <Calculator />};
 const [minimized, setMinimized] = useState(false);
+const [showConfirm, setShowConfirm] = useState(false);
+const [pendingAction, setPendingAction] = useState(null);
 
   const goTo = (newScreen) => {
     window.history.pushState({}, "");
@@ -1238,10 +1240,78 @@ if (screen === "settings") {
             <button onClick={() => setExamIdx(i => Math.max(0, i - 1))} disabled={examIdx === 0} style={{ flex: 1, background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 10, color: t.textSub, fontSize: 13, padding: 12, cursor: examIdx === 0 ? "default" : "pointer", opacity: examIdx === 0 ? 0.4 : 1 }}>← Prev</button>
             <button onClick={() => setExamIdx(i => Math.min(examQs.length - 1, i + 1))} disabled={examIdx === examQs.length - 1} style={{ flex: 1, background: t.goldBtn, border: "none", borderRadius: 10, color: t.goldBtnText, fontSize: 13, fontWeight: "bold", padding: 12, cursor: examIdx === examQs.length - 1 ? "default" : "pointer", opacity: examIdx === examQs.length - 1 ? 0.4 : 1 }}>Next →</button>
           </div>
-          <button onClick={() => { setExamRunning(false); setExamDone(true); }} style={{ width: "100%", background: answered === examQs.length ? "#16a34a" : "#6b7280", border: "none", borderRadius: 12, color: "#fff", fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer" }}>
-            {answered === examQs.length ? "Submit Exam ✓" : `Submit (${examQs.length - answered} unanswered)`}
-          </button>
+          <button
+  onClick={() => {
+    if (answered > 0) {
+      setPendingAction("submit");
+      setShowConfirm(true);
+    } else {
+      setExamRunning(false);
+      setExamDone(true);
+    }
+  }}
+  style={{
+    width: "100%",
+    background: answered === examQs.length ? "#16a34a" : "#6b7280",
+    border: "none",
+    borderRadius: 12,
+    color: "#fff",
+    fontSize: 14,
+    fontWeight: "bold",
+    padding: 14,
+    cursor: "pointer"
+  }}
+>
+  {answered === examQs.length
+    ? "Submit Exam ✓"
+    : `Submit (${examQs.length - answered} unanswered)`}
+</button>
         </div>
+  {showConfirm && (
+  <div style={{
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: "rgba(0,0,0,0.5)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 2000
+  }}>
+    
+    <div style={{
+      background: "#fff",
+      padding: 20,
+      borderRadius: 12,
+      width: 280,
+      textAlign: "center"
+    }}>
+      
+      <p style={{ fontWeight: "bold" }}>
+        Are you sure you want to submit your exam?
+      </p>
+
+      <div style={{ display: "flex", gap: 10, marginTop: 15 }}>
+        <button
+          onClick={() => {
+            setExamRunning(false);
+            setExamDone(true);
+            setShowConfirm(false);
+          }}
+        >
+          Yes
+        </button>
+
+        <button onClick={() => setShowConfirm(false)}>
+          No
+        </button>
+      </div>
+
+    </div>
+  </div>
+)}
       </div>
     );
   }

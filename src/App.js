@@ -895,7 +895,7 @@ if (screen === "settings") {
             <div key={i} style={card}>
             {n.title === "Production Possibility Curve (PPC) graphical explanation" && (
   <img
-  src="/image/ppc.png"
+  src="/image/PPC.png"
   alt="PPC Graph"
   style={{
     width: "100%",

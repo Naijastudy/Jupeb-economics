@@ -127,6 +127,7 @@ const themes = {
 };
 
 export default themes;
+
 /*const themes = {
 dark: {
 bg: "#111714",
@@ -222,4 +223,4 @@ toggleLabel: "Light Mode",
 },
 };
 
-export default themes;
+export default themes;*/

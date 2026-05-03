@@ -826,7 +826,59 @@ if (screen === "settings") {
           </div>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
-             
+             <div
+  onClick={() => goTo("profile")}
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: 12,
+    padding: "12px 14px",
+    borderRadius: 12,
+    border: `1px solid ${t.gold}44`,
+    background: "transparent",
+    cursor: "pointer",
+    marginRight: 8,
+    transition: "0.2s ease",
+  }}
+>
+  {/* Avatar */}
+  <div
+    style={{
+      width: 42,
+      height: 42,
+      borderRadius: "50%",
+      background: t.bgCard,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      overflow: "hidden",
+      fontSize: 18,
+      color: t.gold,
+    }}
+  >
+    {user ? (
+      <img
+        src={user.photoURL}
+        alt="profile"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    ) : (
+      "👤"
+    )}
+  </div>
+
+  {/* Text section */}
+  <div style={{ display: "flex", flexDirection: "column" }}>
+    <span style={{ fontSize: 13, color: t.text }}>
+      {user ? "My Profile" : "Guest User"}
+    </span>
+
+    <span style={{ fontSize: 11, color: t.textMuted }}>
+      {user ? "Tap to view account" : "Sign in available"}
+    </span>
+  </div>
+</div>
+                
                 <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
   📤 Send Feedback / Report Issue
 </button>

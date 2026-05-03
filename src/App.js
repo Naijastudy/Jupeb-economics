@@ -831,11 +831,11 @@ if (screen === "settings") {
           </div>
         </div>
       </div>
-/* <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
   {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
-</button>*/
+</button>
     
-    <View style={{ marginTop: 30, paddingHorizontal: 10 }}>
+   /* <View style={{ marginTop: 30, paddingHorizontal: 10 }}>
   <Text style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: 18 }}>
     © 2026 StudyNaija. All rights reserved.
   </Text>
@@ -848,7 +848,7 @@ if (screen === "settings") {
   <Text style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
     All trademarks and names belong to their respective owners.
   </Text>
-</View> 
+</View> */
       );
   }
 

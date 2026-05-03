@@ -606,8 +606,8 @@ if (showSplash) {
       { id: "notes", icon: "📖", title: "Study Notes", desc: "Key points & full explanations", color: "#16a34a" },
       { id: "pastq", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
      { id: "grading", icon: "🏆", title: "Grading System", desc: "JUPEB grade scale & points", color: "#7c3aed" },
-/*{ id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
-*/{ id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
+     { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
+     { id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
     ];
     return (
       <div style={wrap}>
@@ -633,8 +633,8 @@ if (showSplash) {
     {homeCards.map(c => (
               <button key={c.id} onClick={() => {
                 if (c.id === "grading") { goTo("grading"); }
-else if (c.id === "settings") { goTo("settings"); }
-else if (c.id === "profile") { goTo("profile"); }
+                else if (c.id === "settings") { goTo("settings"); }
+                else if (c.id === "profile") { goTo("profile"); }
                 else { setPendingMode(c.id); goTo("subject_select"); }
               }} style={{ background: c.color, border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left", display: "flex", flexDirection: "column", gap: 6, minHeight: 120 }}>
                 <div style={{ fontSize: 28 }}>{c.icon}</div>
@@ -823,6 +823,12 @@ if (screen === "settings") {
           </div>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
+                <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
+         <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+  {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
+</button></div>
+
+  
                 <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
   📤 Send Feedback / Report Issue
 </button>
@@ -830,10 +836,7 @@ if (screen === "settings") {
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
           </div>
         </div>
-      <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
-  {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
-</button>
-    
+     
     <div style={{ marginTop: 30, padding: "0 10px" }}>
   <p style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: "18px" }}>
     © 2026 StudyNaija. All rights reserved.

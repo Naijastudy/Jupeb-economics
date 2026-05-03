@@ -672,7 +672,7 @@ if (screen === "profile") {
               </button>
             </div>
           ) : (
-            
+            <>
               {/* User info */}
               <div style={{ ...card, display: "flex", alignItems: "center", gap: 16 }}>
                 <img src={user.photoURL} alt="profile" style={{ width: 56, height: 56, borderRadius: "50%", border: `2px solid ${t.gold}` }} />
@@ -967,7 +967,7 @@ if (screen === "settings") {
             <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 8, padding: "10px 12px", marginBottom: 10, fontSize: 13, color: t.keyText }}>🔑 Key Point — Yellow highlight</div>
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
           </div>
-      
+                </div>
         </div>
       );
   }

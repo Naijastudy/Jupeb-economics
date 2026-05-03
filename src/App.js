@@ -831,10 +831,6 @@ if (screen === "settings") {
           </div>
         </div>
       </div>
-/*<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
-  {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
-</button>*/
-    
     <div style={{ marginTop: 30, padding: "0 10px" }}>
   <p style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: "18px" }}>
     © 2026 StudyNaija. All rights reserved.

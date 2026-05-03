@@ -803,11 +803,11 @@ if (screen === "feedback") {
       </div>
     );
     }
-if (screen === "profile") {
+if (screen === "about") {
   
     return (
       <div style={wrap}>
-        <Header onBack={goBack} title="My Profile" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="About Studynaija" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
   
     <div style={{ marginTop: 30, padding: "0 10px" }}>
@@ -861,7 +861,7 @@ if (screen === "settings") {
         height: 42,
         borderRadius: "50%",
         overflow: "hidden",
-        background: "#222",
+        background: t.exBg,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -876,7 +876,7 @@ if (screen === "settings") {
     </div>
 
     <div>
-      <div style={{ color: "#fff", fontSize: 14 }}>
+      <div style={{ color: t.heading, fontSize: 14 }}>
         {user ? "My Account" : "Guest User"}
       </div>
       <div style={{ color: "#aaa", fontSize: 11 }}>
@@ -888,13 +888,13 @@ if (screen === "settings") {
   {/* ACCOUNT */}
   <div
     style={{
-      background: "#1a2a1a",
+      background: t.exBg,
       borderRadius: 12,
       padding: 12,
       marginBottom: 12,
     }}
   >
-    <div style={{ color: "#aaa", fontSize: 11, marginBottom: 8 }}>
+    <div style={{ color: t.heading, fontSize: 11, marginBottom: 8 }}>
       ACCOUNT
     </div>
 
@@ -909,13 +909,13 @@ if (screen === "settings") {
   {/* SUPPORT */}
   <div
     style={{
-      background: "#1a2a1a",
+      background: t.exBg,
       borderRadius: 12,
       padding: 12,
       marginBottom: 12,
     }}
   >
-    <div style={{ color: "#aaa", fontSize: 11, marginBottom: 8 }}>
+    <div style={{ color: t.heading, fontSize: 11, marginBottom: 8 }}>
       SUPPORT
     </div>
 
@@ -932,12 +932,12 @@ if (screen === "settings") {
   {/* ABOUT */}
   <div
     style={{
-      background: "#1a2a1a",
+      background: t.exBg,
       borderRadius: 12,
       padding: 12,
     }}
   >
-    <div style={{ color: "#aaa", fontSize: 11, marginBottom: 8 }}>
+    <div style={{ color: t.heading, fontSize: 11, marginBottom: 8 }}>
       ABOUT
     </div>
 
@@ -950,7 +950,7 @@ if (screen === "settings") {
   </div>
 
 </div>
-      /* <div style={{ padding: "16px" }}>
+      
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>
             <div style={{ display: "flex", gap: 12 }}>
@@ -965,7 +965,7 @@ if (screen === "settings") {
           </div>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
-             <div
+            /* <div
   onClick={() => goTo("profile")}
   style={{
     display: "flex",
@@ -980,7 +980,7 @@ if (screen === "settings") {
     transition: "0.2s ease",
   }}
 >
-  {/* Avatar */}
+ /* {/* Avatar */}
  /* <div
     style={{
       width: 42,

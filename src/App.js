@@ -655,7 +655,7 @@ if (showSplash) {
   // ── SETTINGS ─────────────────────────────────────────────────────────────
 
 if (screen === "profile") {
-  const homeCards = [ 
+  const settingsCards = [ 
     { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
      ]
     return (
@@ -825,8 +825,7 @@ if (screen === "settings") {
           </div>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
-             const homeCards = [   { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
-     ]
+             
                 <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
   📤 Send Feedback / Report Issue
 </button>

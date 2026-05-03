@@ -904,7 +904,87 @@ if (screen === "settings") {
   <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
     All trademarks and names belong to their respective owners.
   </p>
-</div> </div>
+</div> 
+      <div style={{ padding: 16 }}>
+
+  {/* PROFILE CARD */}
+  <div
+    onClick={() => goTo("profile")}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 12,
+      padding: 14,
+      borderRadius: 12,
+      border: `1px solid ${t.gold}44`,
+      marginBottom: 16,
+      cursor: "pointer",
+    }}
+  >
+    <div
+      style={{
+        width: 42,
+        height: 42,
+        borderRadius: "50%",
+        overflow: "hidden",
+        background: t.bgInner,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {user ? (
+        <img src={user.photoURL} style={{ width: "100%", height: "100%" }} />
+      ) : (
+        "👤"
+      )}
+    </div>
+
+    <div>
+      <div style={{ color: t.text, fontSize: 14 }}>
+        {user ? "My Account" : "Guest User"}
+      </div>
+      <div style={{ color: t.textMuted, fontSize: 11 }}>
+        Tap to view profile
+      </div>
+    </div>
+  </div>
+
+  {/* ACCOUNT SECTION */}
+  <div style={sectionCard}>
+    <div style={{ color: t.textMuted, fontSize: 11, marginBottom: 8 }}>
+      ACCOUNT
+    </div>
+
+    <div onClick={() => goTo("login")} style={itemStyle}>
+      Log in
+    </div>
+  </div>
+
+  {/* SUPPORT SECTION */}
+  <div style={sectionCard}>
+    <div style={{ color: t.textMuted, fontSize: 11, marginBottom: 8 }}>
+      SUPPORT
+    </div>
+
+    <div onClick={() => goTo("feedback")} style={itemStyle}>
+      Feedback
+    </div>
+  </div>
+
+  {/* ABOUT SECTION */}
+  <div style={sectionCard}>
+    <div style={{ color: t.textMuted, fontSize: 11, marginBottom: 8 }}>
+      ABOUT
+    </div>
+
+    <div onClick={() => goTo("about")} style={itemStyle}>
+      About StudyNaija
+    </div>
+  </div>
+
+</div>
+        </div>
       );
   }
 

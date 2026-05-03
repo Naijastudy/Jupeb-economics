@@ -803,7 +803,31 @@ if (screen === "feedback") {
       </div>
     );
     }
+if (screen === "profile") {
+  
+    return (
+      <div style={wrap}>
+        <Header onBack={goBack} title="My Profile" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
+        <div style={{ padding: "16px" }}>
+  
+    <div style={{ marginTop: 30, padding: "0 10px" }}>
+  <p style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: "18px" }}>
+    © 2026 StudyNaija. All rights reserved.
+  </p>
 
+  <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
+    StudyNaija is an independent educational platform and is not affiliated with,
+    endorsed by, or associated with JUPEB or any official examination body.
+  </p>
+
+  <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
+    All trademarks and names belong to their respective owners.
+  </p>
+</div>
+   </div> 
+  </div>
+);
+}
 if (screen === "settings") {
   const sectionCard = {
   background: t.bgCard,
@@ -899,7 +923,9 @@ if (screen === "settings") {
       onClick={() => goTo("feedback")}
       style={{ padding: 10, color: "#fff", cursor: "pointer" }}
     >
-      Feedback
+       <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
+  📤 Send Feedback / Report Issue
+</button>
     </div>
   </div>
 
@@ -992,28 +1018,12 @@ if (screen === "settings") {
   </div>
 </div>
                 
-                <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
-  📤 Send Feedback / Report Issue
-</button>
+               
             <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 8, padding: "10px 12px", marginBottom: 10, fontSize: 13, color: t.keyText }}>🔑 Key Point — Yellow highlight</div>
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
           </div>
         </div>
-     
-    <div style={{ marginTop: 30, padding: "0 10px" }}>
-  <p style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: "18px" }}>
-    © 2026 StudyNaija. All rights reserved.
-  </p>
-
-  <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
-    StudyNaija is an independent educational platform and is not affiliated with,
-    endorsed by, or associated with JUPEB or any official examination body.
-  </p>
-
-  <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
-    All trademarks and names belong to their respective owners.
-  </p>
-</div> */
+      */
       
         </div>
       );

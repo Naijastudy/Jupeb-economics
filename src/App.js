@@ -606,7 +606,6 @@ if (showSplash) {
       { id: "notes", icon: "📖", title: "Study Notes", desc: "Key points & full explanations", color: "#16a34a" },
       { id: "pastq", icon: "🗂️", title: "Past Questions", desc: "Study by topic with solutions", color: "#ea580c" },
      { id: "grading", icon: "🏆", title: "Grading System", desc: "JUPEB grade scale & points", color: "#7c3aed" },
-     { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
      { id: "settings", icon: "⚙️", title: "Settings", desc: "Day / Night display mode", color: "#374151" },
     ];
     return (
@@ -617,9 +616,9 @@ if (showSplash) {
   <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
 </div>
-/*<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
   {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
-</button>*/
+</button>
 <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
         </div>
         <div style={{ padding: "16px" }}>
@@ -823,12 +822,8 @@ if (screen === "settings") {
           </div>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Theme Preview</div>
-                <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
-         <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
-  {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
-</button></div>
-
-  
+                { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
+     
                 <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
   📤 Send Feedback / Report Issue
 </button>

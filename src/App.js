@@ -672,7 +672,7 @@ if (screen === "profile") {
               </button>
             </div>
           ) : (
-            <>
+            
               {/* User info */}
               <div style={{ ...card, display: "flex", alignItems: "center", gap: 16 }}>
                 <img src={user.photoURL} alt="profile" style={{ width: 56, height: 56, borderRadius: "50%", border: `2px solid ${t.gold}` }} />

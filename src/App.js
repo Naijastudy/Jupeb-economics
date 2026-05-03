@@ -674,8 +674,16 @@ if (screen === "profile") {
           ) : (
             <>
               {/* User info */}
-              <div style={{ ...card, display: "flex", alignItems: "center", gap: 16 }}>
-                <img src={user.photoURL} alt="profile" style={{ width: 56, height: 56, borderRadius: "50%", border: `2px solid ${t.gold}` }} />
+              <div style={{
+  background: t.bgCard,
+  border: `1px solid ${t.border}`,
+  borderRadius: 12,
+  padding: 12,
+  marginBottom: 12,
+  display: "flex",
+  alignItems: "center",
+  gap: 16
+}}>  <img src={user.photoURL} alt="profile" style={{ width: 56, height: 56, borderRadius: "50%", border: `2px solid ${t.gold}` }} />
                 <div style={{ flex: 1 }}>
                   <div style={{ fontSize: 16, fontWeight: "bold", color: t.heading }}>{user.displayName}</div>
                   <div style={{ fontSize: 12, color: t.textSub, marginTop: 4 }}>{user.email}</div>
@@ -807,7 +815,7 @@ if (screen === "about") {
   
     return (
       <div style={wrap}>
-        <Header onBack={goBack} title="About Studynaija" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
+        <Header onBack={goBack} title="About Studynaija" t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
   
     <div style={{ margin: 30, padding: "0 10px" }}>

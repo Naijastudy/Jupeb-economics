@@ -805,9 +805,13 @@ if (screen === "feedback") {
     }
 
 if (screen === "settings") {
-  const settingsCards = [ 
-    { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
-     ]
+  const sectionCard = {
+  background: t.bgCard,
+  border: `1px solid ${t.border}`,
+  borderRadius: 12,
+  padding: 12,
+  marginBottom: 12,
+};
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />

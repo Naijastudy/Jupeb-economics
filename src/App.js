@@ -810,17 +810,17 @@ if (screen === "about") {
         <Header onBack={goBack} title="About Studynaija" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
         <div style={{ padding: "16px" }}>
   
-    <div style={{ marginTop: 30, padding: "0 10px" }}>
-  <p style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: "18px" }}>
+    <div style={{ margin: 30, padding: "0 10px" }}>
+  <p style={{ fontSize: 16, color: t.textSub, textAlign: "center", lineHeight: "18px" }}>
     © 2026 StudyNaija. All rights reserved.
   </p>
 
-  <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
+  <p style={{ fontSize: 15, color: t.textSub, textAlign: "center", marginTop: 6 }}>
     StudyNaija is an independent educational platform and is not affiliated with,
-    endorsed by, or associated with JUPEB or any official examination body.
+    endorsed by, or associated with <strong>JUPEB</strong> or any official examination body.
   </p>
 
-  <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
+  <p style={{ fontSize: 15, color: t.textSub, textAlign: "center", marginTop: 6 }}>
     All trademarks and names belong to their respective owners.
   </p>
 </div>
@@ -865,7 +865,7 @@ if (screen === "settings") {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#c8a84b",
+        color: t.keyText,
       }}
     >
       {user ? (
@@ -876,10 +876,10 @@ if (screen === "settings") {
     </div>
 
     <div>
-      <div style={{ color: t.heading, fontSize: 14 }}>
+      <div style={{ color: t.heading, fontSize: 17 }}>
         {user ? "My Account" : "Guest User"}
       </div>
-      <div style={{ color: "#aaa", fontSize: 11 }}>
+      <div style={{ color: t.text, fontSize: 13 }}>
         Tap to view profile
       </div>
     </div>
@@ -894,13 +894,13 @@ if (screen === "settings") {
       marginBottom: 12,
     }}
   >
-    <div style={{ color: t.heading, fontSize: 11, marginBottom: 8 }}>
+    <div style={{ color: t.heading, fontSize: 15, marginBottom: 8 }}>
       ACCOUNT
     </div>
 
     <div
       onClick={() => goTo("login")}
-      style={{ padding: 10, color: "#fff", cursor: "pointer" }}
+      style={{ padding: 10, color: t.text, cursor: "pointer", fontSize: 13}}
     >
       Log in
     </div>
@@ -915,13 +915,13 @@ if (screen === "settings") {
       marginBottom: 12,
     }}
   >
-    <div style={{ color: t.heading, fontSize: 11, marginBottom: 8 }}>
+    <div style={{ color: t.heading, fontSize: 15, marginBottom: 8 }}>
       SUPPORT
     </div>
 
     <div
       onClick={() => goTo("feedback")}
-      style={{ padding: 10, color: "#fff", cursor: "pointer" }}
+      style={{ padding: 10, color: t.text, cursor: "pointer" }}
     >
        <button onClick={() => goTo("feedback")} style={{ ...goldBtn, marginTop: 8 }}>
   📤 Send Feedback / Report Issue
@@ -935,15 +935,16 @@ if (screen === "settings") {
       background: t.exBg,
       borderRadius: 12,
       padding: 12,
+      marginBottom: 16,
     }}
   >
-    <div style={{ color: t.heading, fontSize: 11, marginBottom: 8 }}>
+    <div style={{ color: t.heading, fontSize: 13, marginBottom: 8 }}>
       ABOUT
     </div>
 
     <div
       onClick={() => goTo("about")}
-      style={{ padding: 10, color: "#fff", cursor: "pointer" }}
+      style={{ padding: 10, color: t.text, cursor: "pointer", fontSize: 13, }}
     >
       About StudyNaija
     </div>
@@ -954,7 +955,7 @@ if (screen === "settings") {
             <div style={{ display: "flex", gap: 12 }}>
               {["dark", "light"].map(mode => (
                 <button key={mode} onClick={() => setThemeKey(mode)} style={{ flex: 1, padding: "20px 10px", borderRadius: 14, cursor: "pointer", textAlign: "center", background: themeKey === mode ? (mode === "dark" ? "#1a2a1a" : "#e8f0f8") : t.bgInner, border: themeKey === mode ? `2px solid ${t.gold}` : `1px solid ${t.border}`, color: t.text }}>
-                  <div style={{ fontSize: 28, marginBottom: 8 }}>{mode === "dark" ? "🌙" : "☀️"}</div>
+                  <div style={{ fontSize: 30, marginBottom: 8 }}>{mode === "dark" ? "🌙" : "☀️"}</div>
                   <div style={{ fontSize: 13, fontWeight: "bold" }}>{mode === "dark" ? "Night Mode" : "Day Mode"}</div>
                   {themeKey === mode && <div style={{ fontSize: 10, color: t.gold, marginTop: 6 }}>✓ Active</div>}
                 </button>
@@ -966,63 +967,6 @@ if (screen === "settings") {
             <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 8, padding: "10px 12px", marginBottom: 10, fontSize: 13, color: t.keyText }}>🔑 Key Point — Yellow highlight</div>
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
           </div>
-/* <div
-  onClick={() => goTo("profile")}
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: 12,
-    padding: "12px 14px",
-    borderRadius: 12,
-    border: `1px solid ${t.gold}44`,
-    background: "transparent",
-    cursor: "pointer",
-    marginRight: 8,
-    transition: "0.2s ease",
-  }}
->
- /* {/* Avatar */}
- /* <div
-    style={{
-      width: 42,
-      height: 42,
-      borderRadius: "50%",
-      background: t.bgCard,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      overflow: "hidden",
-      fontSize: 18,
-      color: t.gold,
-    }}
-  >
-    {user ? (
-      <img
-        src={user.photoURL}
-        alt="profile"
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
-    ) : (
-      "👤"
-    )}
-  </div>
-
-  {/* Text section */}
- /* <div style={{ display: "flex", flexDirection: "column" }}>
-    <span style={{ fontSize: 13, color: t.text }}>
-      {user ? "My Profile" : "Guest User"}
-    </span>
-
-    <span style={{ fontSize: 11, color: t.textMuted }}>
-      {user ? "Tap to view account" : "Sign in available"}
-    </span>
-  </div>
-</div>
-                
-               
-           
-        </div>
-      */
       
         </div>
       );

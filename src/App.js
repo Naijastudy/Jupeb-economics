@@ -617,9 +617,9 @@ if (showSplash) {
   <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
 </div>
-<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+/*<button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
   {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
-</button>
+</button>*/
 <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
         </div>
         <div style={{ padding: "16px" }}>
@@ -644,7 +644,7 @@ else if (c.id === "profile") { goTo("profile"); }
             ))}
           </div>
           <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 2 }}>
-  Built from official JUPEB syllabus<br />
+  Based on JUPEB syllabus topics ✔<br />
   <a href="https://studynaija.vercel.app/" style={{ color: t.gold, textDecoration: "none" }}>studynaija.vercel.app</a><br />
   © 2026 StudyNaija. All rights reserved.
 </div>
@@ -831,7 +831,25 @@ if (screen === "settings") {
           </div>
         </div>
       </div>
-    );
+ <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+  {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
+</button>
+    
+    <View style={{ marginTop: 30, paddingHorizontal: 10 }}>
+  <Text style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: 18 }}>
+    © 2026 StudyNaija. All rights reserved.
+  </Text>
+
+  <Text style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
+    StudyNaija is an independent educational platform and is not affiliated with,
+    endorsed by, or associated with JUPEB or any official examination body.
+  </Text>
+
+  <Text style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
+    All trademarks and names belong to their respective owners.
+  </Text>
+</View> 
+      );
   }
 
   // ── GRADING ───────────────────────────────────────────────────────────────

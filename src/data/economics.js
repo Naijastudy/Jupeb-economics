@@ -135,7 +135,7 @@ intro: [
     ],
   };
 
-   /
+   /*
     price: [
       { title: "Law of Demand", key: "Ceteris paribus: as price rises, quantity demanded falls (inverse relationship). Exceptions: Giffen goods, Veblen goods, speculation.", body: "Movement ALONG the curve = price change. SHIFT of the curve = change in any other determinant (income, taste, related goods prices, population, expectations). Rightward shift = increase in demand. Leftward shift = decrease in demand." },
       { title: "Elasticity of Demand", key: "PED = % change in Qd divided by % change in P. Greater than 1 is elastic, less than 1 is inelastic, equal to 1 is unit elastic.", body: "YED (income elasticity): positive = normal good, negative = inferior good, greater than 1 = luxury. XED (cross elasticity): positive = substitutes (Pepsi/Coke), negative = complements (car/fuel). Factors affecting PED: substitutes available, necessity vs luxury, proportion of income, time period, habit." },

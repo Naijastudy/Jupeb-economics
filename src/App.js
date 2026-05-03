@@ -948,8 +948,6 @@ if (screen === "settings") {
       About StudyNaija
     </div>
   </div>
-
-</div>
       
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>

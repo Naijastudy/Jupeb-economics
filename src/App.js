@@ -830,7 +830,7 @@ if (screen === "settings") {
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 8, padding: "10px 12px", fontSize: 13, color: t.exText }}>📝 Explanation — Green highlight</div>
           </div>
         </div>
-      </div>
+      
     <div style={{ marginTop: 30, padding: "0 10px" }}>
   <p style={{ fontSize: 12, color: t.textMuted, textAlign: "center", lineHeight: "18px" }}>
     © 2026 StudyNaija. All rights reserved.
@@ -844,7 +844,7 @@ if (screen === "settings") {
   <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
     All trademarks and names belong to their respective owners.
   </p>
-</div>
+</div> </div>
       );
   }
 

@@ -815,7 +815,116 @@ if (screen === "settings") {
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />
-       /* <div style={{ padding: "16px" }}>
+    <div style={{ padding: 16 }}>
+
+  {/* PROFILE CARD */}
+  <div
+    onClick={() => goTo("profile")}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 12,
+      padding: 14,
+      borderRadius: 12,
+      border: "1px solid #c8a84b44",
+      marginBottom: 16,
+      cursor: "pointer",
+    }}
+  >
+    <div
+      style={{
+        width: 42,
+        height: 42,
+        borderRadius: "50%",
+        overflow: "hidden",
+        background: "#222",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#c8a84b",
+      }}
+    >
+      {user ? (
+        <img src={user.photoURL} style={{ width: "100%", height: "100%" }} />
+      ) : (
+        "👤"
+      )}
+    </div>
+
+    <div>
+      <div style={{ color: "#fff", fontSize: 14 }}>
+        {user ? "My Account" : "Guest User"}
+      </div>
+      <div style={{ color: "#aaa", fontSize: 11 }}>
+        Tap to view profile
+      </div>
+    </div>
+  </div>
+
+  {/* ACCOUNT */}
+  <div
+    style={{
+      background: "#1a2a1a",
+      borderRadius: 12,
+      padding: 12,
+      marginBottom: 12,
+    }}
+  >
+    <div style={{ color: "#aaa", fontSize: 11, marginBottom: 8 }}>
+      ACCOUNT
+    </div>
+
+    <div
+      onClick={() => goTo("login")}
+      style={{ padding: 10, color: "#fff", cursor: "pointer" }}
+    >
+      Log in
+    </div>
+  </div>
+
+  {/* SUPPORT */}
+  <div
+    style={{
+      background: "#1a2a1a",
+      borderRadius: 12,
+      padding: 12,
+      marginBottom: 12,
+    }}
+  >
+    <div style={{ color: "#aaa", fontSize: 11, marginBottom: 8 }}>
+      SUPPORT
+    </div>
+
+    <div
+      onClick={() => goTo("feedback")}
+      style={{ padding: 10, color: "#fff", cursor: "pointer" }}
+    >
+      Feedback
+    </div>
+  </div>
+
+  {/* ABOUT */}
+  <div
+    style={{
+      background: "#1a2a1a",
+      borderRadius: 12,
+      padding: 12,
+    }}
+  >
+    <div style={{ color: "#aaa", fontSize: 11, marginBottom: 8 }}>
+      ABOUT
+    </div>
+
+    <div
+      onClick={() => goTo("about")}
+      style={{ padding: 10, color: "#fff", cursor: "pointer" }}
+    >
+      About StudyNaija
+    </div>
+  </div>
+
+</div>
+      /* <div style={{ padding: "16px" }}>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>
             <div style={{ display: "flex", gap: 12 }}>
@@ -905,85 +1014,7 @@ if (screen === "settings") {
     All trademarks and names belong to their respective owners.
   </p>
 </div> */
-      <div style={{ padding: 16 }}>
-
-  {/* PROFILE CARD */}
-  <div
-    onClick={() => goTo("profile")}
-    style={{
-      display: "flex",
-      alignItems: "center",
-      gap: 12,
-      padding: 14,
-      borderRadius: 12,
-      border: `1px solid ${t.gold}44`,
-      marginBottom: 16,
-      cursor: "pointer",
-    }}
-  >
-    <div
-      style={{
-        width: 42,
-        height: 42,
-        borderRadius: "50%",
-        overflow: "hidden",
-        background: t.bgInner,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      {user ? (
-        <img src={user.photoURL} style={{ width: "100%", height: "100%" }} />
-      ) : (
-        "👤"
-      )}
-    </div>
-
-    <div>
-      <div style={{ color: t.text, fontSize: 14 }}>
-        {user ? "My Account" : "Guest User"}
-      </div>
-      <div style={{ color: t.textMuted, fontSize: 11 }}>
-        Tap to view profile
-      </div>
-    </div>
-  </div>
-
-  {/* ACCOUNT SECTION */}
-  <div style={sectionCard}>
-    <div style={{ color: t.textMuted, fontSize: 11, marginBottom: 8 }}>
-      ACCOUNT
-    </div>
-
-    <div onClick={() => goTo("login")} style={itemStyle}>
-      Log in
-    </div>
-  </div>
-
-  {/* SUPPORT SECTION */}
-  <div style={sectionCard}>
-    <div style={{ color: t.textMuted, fontSize: 11, marginBottom: 8 }}>
-      SUPPORT
-    </div>
-
-    <div onClick={() => goTo("feedback")} style={itemStyle}>
-      Feedback
-    </div>
-  </div>
-
-  {/* ABOUT SECTION */}
-  <div style={sectionCard}>
-    <div style={{ color: t.textMuted, fontSize: 11, marginBottom: 8 }}>
-      ABOUT
-    </div>
-
-    <div onClick={() => goTo("about")} style={itemStyle}>
-      About StudyNaija
-    </div>
-  </div>
-
-</div>
+      
         </div>
       );
   }

@@ -655,9 +655,7 @@ if (showSplash) {
   // ── SETTINGS ─────────────────────────────────────────────────────────────
 
 if (screen === "profile") {
-  const settingsCards = [ 
-    { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
-     ]
+  
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="My Profile" sub={user ? user.displayName : "Not logged in"} t={t} onToggleTheme={toggleTheme} />
@@ -807,6 +805,9 @@ if (screen === "feedback") {
     }
 
 if (screen === "settings") {
+  const settingsCards = [ 
+    { id: "profile", icon: "👤", title: user ? "My Profile" : "Sign In", desc: user ? `Signed in as ${user.displayName?.split(" ")[0]}` : "Save your scores & progress", color: "#0f766e" },
+     ]
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />

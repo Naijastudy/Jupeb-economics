@@ -815,7 +815,7 @@ if (screen === "settings") {
     return (
       <div style={wrap}>
         <Header onBack={goBack} title="Settings" t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
+       /* <div style={{ padding: "16px" }}>
           <div style={card}>
             <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>Display Mode</div>
             <div style={{ display: "flex", gap: 12 }}>
@@ -846,7 +846,7 @@ if (screen === "settings") {
   }}
 >
   {/* Avatar */}
-  <div
+ /* <div
     style={{
       width: 42,
       height: 42,
@@ -872,7 +872,7 @@ if (screen === "settings") {
   </div>
 
   {/* Text section */}
-  <div style={{ display: "flex", flexDirection: "column" }}>
+ /* <div style={{ display: "flex", flexDirection: "column" }}>
     <span style={{ fontSize: 13, color: t.text }}>
       {user ? "My Profile" : "Guest User"}
     </span>
@@ -904,7 +904,7 @@ if (screen === "settings") {
   <p style={{ fontSize: 11, color: t.textMuted, textAlign: "center", marginTop: 6 }}>
     All trademarks and names belong to their respective owners.
   </p>
-</div> 
+</div> */
       <div style={{ padding: 16 }}>
 
   {/* PROFILE CARD */}

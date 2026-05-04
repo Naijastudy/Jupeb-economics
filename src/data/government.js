@@ -421,15 +421,412 @@ democracy_africa: [
 ],
 };
 export const questions = {
-    intro: [
-        {
+    nature: [
+{
   year: "2025",
-  q: "Liquidity trap implies that:",
-  options: ["A. increasing the money stock might not decrease zero-bound interest rates", "B. people would be less liquid when interest rates are very low", "C. demand for money is perfectly inelastic at ultra-low interest rates", "D. interest rates cannot be pegged by the central bank"],
-  answer: "A",
-  exp: "A liquidity trap occurs when interest rates are so low that monetary policy becomes ineffective; people prefer to hold cash rather than invest, meaning increasing the money supply fails to lower interest rates further."
-},
+  q: "Government is best described as:",
+  options: [
+    "A. an institution for making and enforcing laws",
+    "B. a group of traders",
+    "C. a religious organization",
+    "D. a social club"
   ],
+  answer: "A",
+  exp: "Government refers to the organized system or body through which a state manages its affairs. It is responsible for making laws (legislation), implementing them (execution), and interpreting them (judiciary). Without government, there would be no order, law enforcement, or coordination of national activities. Options B, C, and D are incorrect because they do not perform these comprehensive political functions."
+},
+{
+  year: "2025",
+  q: "Politics is mainly concerned with:",
+  options: [
+    "A. economic production",
+    "B. struggle for power",
+    "C. education system",
+    "D. religion"
+  ],
+  answer: "B",
+  exp: "Politics involves the processes through which individuals and groups seek to gain, use, and maintain power in society. It includes decision-making, governance, and distribution of resources. While economics, education, and religion may interact with politics, they are not its primary focus. The central theme of politics is power — who gets it, how it is used, and for what purpose."
+},
+{
+  year: "2025",
+  q: "The behavioural approach studies government through:",
+  options: [
+    "A. historical records",
+    "B. observable behaviour",
+    "C. philosophy",
+    "D. laws only"
+  ],
+  answer: "B",
+  exp: "The behavioural approach emphasizes the study of actual political behaviour of individuals and groups using scientific methods such as observation, surveys, and data analysis. It focuses on how people vote, participate, and react politically, rather than just studying institutions or legal frameworks. This makes it more practical and evidence-based compared to purely theoretical approaches."
+}
+],
+
+concepts: [
+{
+  year: "2025",
+  q: "Power refers to:",
+  options: [
+    "A. voting right",
+    "B. ability to influence others",
+    "C. law-making process",
+    "D. political office"
+  ],
+  answer: "B",
+  exp: "Power is the capacity or ability of an individual or group to influence or control the behaviour of others, even against their will. It can be exercised through force, persuasion, or authority. Power is central to politics because it determines who makes decisions and whose interests are prioritized. The other options are either specific rights or institutions, not the broad concept of power."
+},
+{
+  year: "2025",
+  q: "Authority is:",
+  options: [
+    "A. illegal power",
+    "B. accepted power",
+    "C. temporary power",
+    "D. forced control"
+  ],
+  answer: "B",
+  exp: "Authority is power that is recognized as legitimate and accepted by the people. Unlike raw power (which may involve coercion), authority is obeyed willingly because it is seen as rightful. For example, a democratically elected leader has authority because citizens accept their leadership. Authority is essential for stability because it reduces resistance and conflict."
+},
+{
+  year: "2025",
+  q: "Sovereignty means:",
+  options: [
+    "A. shared power",
+    "B. supreme authority",
+    "C. weak leadership",
+    "D. foreign rule"
+  ],
+  answer: "B",
+  exp: "Sovereignty refers to the ultimate and final authority within a state. It means the state has full control over its internal affairs (internal sovereignty) and is independent from external control (external sovereignty). A sovereign state can make laws, enforce them, and conduct foreign relations without interference. Options A, C, and D contradict this idea."
+}
+],
+
+state: [
+{
+  year: "2025",
+  q: "Which is NOT an element of a state?",
+  options: [
+    "A. Population",
+    "B. Territory",
+    "C. Religion",
+    "D. Government"
+  ],
+  answer: "C",
+  exp: "A state is defined by four essential elements: population (people), territory (land), government (authority structure), and sovereignty (supreme power). Religion is not a compulsory component because a state can exist with multiple religions or none at all. Therefore, option C is correct as it is not a defining feature of a state."
+},
+{
+  year: "2025",
+  q: "A federal system is characterized by:",
+  options: [
+    "A. central authority only",
+    "B. division of powers",
+    "C. military control",
+    "D. monarchy"
+  ],
+  answer: "B",
+  exp: "A federal system involves the constitutional division of powers between a central (national) government and regional (state) governments. Each level has its own authority and responsibilities. This system promotes decentralization and allows regions to manage their own affairs while still being part of a unified state. Nigeria is an example of a federal system."
+},
+{
+  year: "2025",
+  q: "The arm of government that interprets laws is:",
+  options: [
+    "A. Executive",
+    "B. Legislature",
+    "C. Judiciary",
+    "D. Cabinet"
+  ],
+  answer: "C",
+  exp: "The judiciary is responsible for interpreting laws and ensuring justice. It resolves disputes, determines the meaning of laws, and checks whether actions of government comply with the constitution. This role is crucial for maintaining the rule of law and protecting citizens' rights."
+}
+],
+
+constitution: [
+{
+  year: "2025",
+  q: "A constitution is:",
+  options: [
+    "A. a political party",
+    "B. supreme law of the land",
+    "C. electoral process",
+    "D. judicial system"
+  ],
+  answer: "B",
+  exp: "A constitution is the highest legal document in a country. It defines the structure of government, outlines powers of different institutions, and protects the rights of citizens. All other laws must conform to it, making it the foundation of governance and political order."
+},
+{
+  year: "2025",
+  q: "Rule of law implies:",
+  options: [
+    "A. leaders above law",
+    "B. equality before law",
+    "C. military rule",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "The rule of law means that everyone, including leaders, is subject to the law. It ensures fairness, justice, and accountability. No individual is above the law, and legal processes must be followed in all cases. This principle is essential for democracy and protection of rights."
+},
+{
+  year: "2025",
+  q: "Separation of powers ensures:",
+  options: [
+    "A. dictatorship",
+    "B. concentration of power",
+    "C. checks and balances",
+    "D. monarchy"
+  ],
+  answer: "C",
+  exp: "Separation of powers divides government into three branches: executive, legislature, and judiciary. Each branch has distinct functions and can check the others. This system prevents abuse of power and promotes accountability, ensuring that no single branch dominates the government."
+}
+],
+  nature: [
+{
+  year: "2024",
+  q: "Which of the following best explains the scientific nature of politics?",
+  options: [
+    "A. It relies solely on moral judgments",
+    "B. It uses systematic observation and analysis of political behaviour",
+    "C. It focuses only on historical events",
+    "D. It is based on religious beliefs"
+  ],
+  answer: "B",
+  exp: "Politics is considered scientific when it applies systematic methods such as observation, hypothesis testing, and data analysis to study political behaviour. The behavioural approach strengthened this by emphasizing empirical evidence rather than mere philosophical speculation. While politics involves values, its scientific aspect lies in its ability to analyze patterns and predict behaviour."
+},
+{
+  year: "2024",
+  q: "The main criticism of the institutional approach is that it:",
+  options: [
+    "A. ignores political behaviour",
+    "B. overemphasizes individuals",
+    "C. focuses too much on economic factors",
+    "D. rejects historical analysis"
+  ],
+  answer: "A",
+  exp: "The institutional approach concentrates on formal structures like the legislature, executive, and judiciary, often ignoring how individuals actually behave within those institutions. This limitation led to the development of the behavioural approach, which studies real political actions and interactions."
+}
+],
+
+concepts: [
+{
+  year: "2024",
+  q: "Which concept explains why citizens obey laws even without coercion?",
+  options: [
+    "A. Power",
+    "B. Authority",
+    "C. Legitimacy",
+    "D. Sovereignty"
+  ],
+  answer: "C",
+  exp: "Legitimacy refers to the acceptance of a government's authority by the people. When a government is seen as legitimate, citizens obey laws willingly, not because of fear but because they believe the authority is rightful. This is essential for political stability."
+},
+{
+  year: "2024",
+  q: "A state that cannot control its internal affairs lacks:",
+  options: [
+    "A. population",
+    "B. legitimacy",
+    "C. internal sovereignty",
+    "D. authority"
+  ],
+  answer: "C",
+  exp: "Internal sovereignty refers to a state's ability to exercise authority within its territory. If a state cannot maintain law and order or enforce decisions internally, it lacks internal sovereignty, even if it is recognized internationally."
+}
+],
+
+state: [
+{
+  year: "2024",
+  q: "A confederal system differs from a federal system because it:",
+  options: [
+    "A. centralizes power",
+    "B. gives more power to the central government",
+    "C. allows member states to retain sovereignty",
+    "D. abolishes regional governments"
+  ],
+  answer: "C",
+  exp: "In a confederation, the component states retain their sovereignty and delegate only limited powers to the central authority. This contrasts with a federation where sovereignty is constitutionally shared. Confederations are usually weak and may dissolve easily."
+},
+{
+  year: "2024",
+  q: "Which condition is necessary for the effective operation of separation of powers?",
+  options: [
+    "A. fusion of powers",
+    "B. independence of the judiciary",
+    "C. military intervention",
+    "D. one-party system"
+  ],
+  answer: "B",
+  exp: "For separation of powers to work effectively, each arm must operate independently, especially the judiciary. Judicial independence ensures laws are interpreted fairly without interference, maintaining balance among the branches."
+}
+],
+
+constitution: [
+{
+  year: "2024",
+  q: "A rigid constitution is one that:",
+  options: [
+    "A. cannot be amended",
+    "B. is difficult to amend",
+    "C. changes frequently",
+    "D. is unwritten"
+  ],
+  answer: "B",
+  exp: "A rigid constitution requires special procedures for amendment, such as supermajority votes or referendums. This makes it stable and protects it from frequent changes, unlike flexible constitutions which are easier to amend."
+},
+{
+  year: "2024",
+  q: "Which principle ensures that no arm of government becomes too powerful?",
+  options: [
+    "A. Rule of law",
+    "B. Judicial review",
+    "C. Checks and balances",
+    "D. Federalism"
+  ],
+  answer: "C",
+  exp: "Checks and balances allow each arm of government to limit the powers of the others. For example, the legislature can impeach the executive, while the judiciary can declare laws unconstitutional. This prevents abuse of power."
+}
+],
+
+governance: [
+{
+  year: "2024",
+  q: "Good governance is best characterized by:",
+  options: [
+    "A. secrecy and control",
+    "B. accountability and transparency",
+    "C. military authority",
+    "D. centralized power"
+  ],
+  answer: "B",
+  exp: "Good governance involves accountability, transparency, rule of law, and responsiveness to citizens' needs. It ensures that public resources are used efficiently and that leaders are answerable to the people."
+},
+{
+  year: "2024",
+  q: "A major difference between government and governance is that governance:",
+  options: [
+    "A. excludes institutions",
+    "B. focuses only on elections",
+    "C. involves processes and outcomes",
+    "D. ignores citizens"
+  ],
+  answer: "C",
+  exp: "Government refers to formal institutions, while governance includes the processes, interactions, and outcomes of decision-making. It involves both state and non-state actors working together."
+}
+],
+
+ideas: [
+{
+  year: "2024",
+  q: "Which ideology supports abolition of the state?",
+  options: [
+    "A. Socialism",
+    "B. Capitalism",
+    "C. Anarchism",
+    "D. Fascism"
+  ],
+  answer: "C",
+  exp: "Anarchism advocates for a society without government or authority, believing that individuals can organize themselves voluntarily. It rejects the necessity of the state entirely."
+},
+{
+  year: "2024",
+  q: "The main goal of socialism is:",
+  options: [
+    "A. profit maximization",
+    "B. equality of wealth",
+    "C. private ownership",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "Socialism aims to reduce inequality by promoting collective or state ownership of resources. It seeks fair distribution of wealth and social welfare rather than profit-driven systems."
+}
+],
+
+parties: [
+{
+  year: "2024",
+  q: "A dominant-party system is one where:",
+  options: [
+    "A. only one party exists",
+    "B. one party consistently wins elections",
+    "C. no party participates",
+    "D. military controls parties"
+  ],
+  answer: "B",
+  exp: "In a dominant-party system, multiple parties may exist, but one party remains in power for a long time due to popularity or control of political structures."
+}
+],
+
+opinion: [
+{
+  year: "2024",
+  q: "Which method is most reliable for measuring public opinion?",
+  options: [
+    "A. rumours",
+    "B. opinion polls",
+    "C. propaganda",
+    "D. protests"
+  ],
+  answer: "B",
+  exp: "Opinion polls use scientific sampling methods to gather data on public views. They are more reliable than informal methods like rumours or assumptions."
+}
+],
+
+elections: [
+{
+  year: "2024",
+  q: "Proportional representation ensures that:",
+  options: [
+    "A. majority wins all seats",
+    "B. seats reflect votes received",
+    "C. only two parties exist",
+    "D. elections are unnecessary"
+  ],
+  answer: "B",
+  exp: "Proportional representation allocates seats based on the percentage of votes each party receives, ensuring fair representation of different groups."
+}
+],
+
+change: [
+{
+  year: "2024",
+  q: "A reformative change is characterized by:",
+  options: [
+    "A. violence",
+    "B. gradual improvement",
+    "C. sudden overthrow",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "Reformative change involves gradual modifications to improve existing systems without completely overthrowing them."
+}
+],
+
+admin: [
+{
+  year: "2024",
+  q: "One major weakness of bureaucracy is:",
+  options: [
+    "A. efficiency",
+    "B. flexibility",
+    "C. red-tapism",
+    "D. accountability"
+  ],
+  answer: "C",
+  exp: "Red-tapism refers to excessive procedures and delays in decision-making, which reduces efficiency in bureaucracy."
+}
+],
+
+intl: [
+{
+  year: "2024",
+  q: "A key determinant of foreign policy is:",
+  options: [
+    "A. weather",
+    "B. national interest",
+    "C. religion only",
+    "D. population size only"
+  ],
+  answer: "B",
+  exp: "National interest is the primary factor guiding a country's foreign policy decisions, including security, economic growth, and global influence."
+}
+],
 };
 
 export const grading = [

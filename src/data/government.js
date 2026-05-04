@@ -1,17 +1,49 @@
 export const courses = [
-    { id: "ecn001", code: "ECN001", title: "Principles of Economics I", semester: "First Semester", emoji: "📘",
-      topics: [
-        { id: "intro", label: "Introduction to Economics" },
-        { id: "basic", label: "Basic Economic Principles" },
-        { id: "tools", label: "Tools & Methods of Analysis" },
-        { id: "price", label: "The Price System" },
-        { id: "consumer", label: "Theory of Consumer Behaviour" },
-        { id: "firm", label: "Theory of the Firm" },
-        { id: "market", label: "Market Structure" },
-        { id: "income_dist", label: "Theory of Income Distribution" },
-        { id: "govt", label: "Government Intervention" },
-      ],
-    },
+   
+       { id: "gov001", code: "GOV 001", title: "Elements of Government", semester: "First Semester", emoji: "🏛️",
+    topics: [
+      { id: "nature", label: "Nature of Government and Politics" },
+      { id: "basic_concepts", label: "Basic Concepts of Government" },
+      { id: "state_structure", label: "The State, Structure and Types of Government" },
+      { id: "constitution", label: "Constitution and Constitutionalism" },
+      { id: "governance", label: "Governance and Citizenship" },
+    ],
+  },
+  { 
+    id: "gov002", code: "GOV 002", title: "Fundamentals of Government", semester: "First Semester", emoji: "⚖️",
+    topics: [
+      { id: "political_ideas", label: "Political Ideas and Thoughts" },
+      { id: "parties_groups", label: "Political Parties, Party System and Pressure Groups" },
+      { id: "opinion_propaganda", label: "Public Opinion and Propaganda" },
+      { id: "elections", label: "Elections and Electoral System" },
+      { id: "social_change", label: "Political and Social Change" },
+      { id: "public_admin", label: "Public Administration" },
+      { id: "intl_relations", label: "International Relations" },
+    ],
+  },
+  { 
+    id: "gov003", code: "GOV 003", title: "Nigerian Government and Politics", semester: "Second Semester", emoji: "🇳🇬",
+    topics: [
+      { id: "pre_colonial", label: "Pre-Colonial Systems of Government in Nigeria" },
+      { id: "colonial_admin", label: "Colonial Administration in Nigeria" },
+      { id: "party_dev", label: "Development of Political Parties in Nigeria" },
+      { id: "electoral_process", label: "Elections and Electoral Process in Nigeria" },
+      { id: "political_crisis", label: "Major Political Crisis in Nigeria" },
+      { id: "military_rule", label: "Military Rule and Coup d'état in Nigeria" },
+      { id: "foreign_policy", label: "Nigerian Foreign Policy" },
+    ],
+  },
+  { 
+    id: "gov004", code: "GOV 004", title: "African Government and Politics", semester: "Second Semester", emoji: "🌍",
+    topics: [
+      { id: "pre_invasion", label: "Africa Before European Invasion" },
+      { id: "colonial_africa", label: "Colonial Systems of Administration in Africa" },
+      { id: "west_africa_const", label: "Constitutional Development of Selected West African Countries" },
+      { id: "nationalist_move", label: "The Nationalist Movement in West Africa" },
+      { id: "military_africa", label: "Military Intervention in Africa" },
+      { id: "democratization", label: "Democratization and Political Process in Africa" },
+    ],
+  },
 ];
 export const notes = {
     intro: [

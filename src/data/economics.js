@@ -105,28 +105,35 @@ intro: [
     ],
     national_acc: [
       { title: "National Income Concepts", key: "Measures of economic activity: GDP, GNP, and NNP.", body: "GDP measures output within a country; GNP includes net income from abroad. Methods include the Output, Income, and Expenditure approaches. Difficulties include accounting for the informal sector, non-marketed activities, and inflation adjustments (Real vs Nominal GDP)." },
-    ],
+      { title: "National Income Accounting", key: "GDP = total output within borders. GNP = GDP + net income from abroad. NNP = GNP - depreciation.", body: "Expenditure method: GDP = C + I + G + (X-M). Income method: sum of wages, rent, interest, profit. Output method: sum of value added (avoids double counting). Problems: informal economy (huge in Nigeria), subsistence farming, data inaccuracy, excludes quality of life." },
+     ],
     national_det: [
-      { title: "Keynesian Theory & Gaps", key: "Equilibrium output is determined by Aggregate Demand (AD).", body: "An inflationary gap occurs when AD exceeds full-employment output, leading to price rises. A deflationary (recessionary) gap occurs when AD is insufficient to reach full employment, leading to unemployment and idle resources." },
-    ],
+      { title: "Keynesian Theory", key: "Equilibrium output is determined by Aggregate Demand (AD).", body: "An inflationary gap occurs when AD exceeds full-employment output, leading to price rises. A deflationary (recessionary) gap occurs when AD is insufficient to reach full employment, leading to unemployment and idle resources." },
+      { title: "Gaps", key: "Inflationary gap: AD > full employment output, causes demand-pull inflation. Deflationary gap: AD < full employment, causes unemployment.", body: "Keynesian consumption function: C = a + bY. Equilibrium: AD = Y (output). Policy responses: Inflationary gap, reduce AD (raise taxes, cut spending, raise interest rates). Deflationary gap, increase AD (cut taxes, raise spending, lower interest rates). Keynes showed economy can be stuck below full employment — justifying government intervention." },
+     ],
     money: [
-      { title: "Money, Banking & Monetary Policy", key: "Central Bank manages money supply and interest rates to achieve economic stability.", body: "Commercial banks create credit through the fractional reserve system. Monetary policy tools include Open Market Operations (OMO), Reserve Requirements, and the Discount Rate (MPR). The Quantity Theory of Money (MV=PT) relates money supply to price levels." },
-    ],
+      { title: "Money & Monetary Policy", key: "Central Bank manages money supply and interest rates to achieve economic stability.", body: "Commercial banks create credit through the fractional reserve system. Monetary policy tools include Open Market Operations (OMO), Reserve Requirements, and the Discount Rate (MPR). The Quantity Theory of Money (MV=PT) relates money supply to price levels." },
+      { title: "Banking", key: "Functions of money: medium of exchange, store of value, unit of account, standard of deferred payment.", body: "Properties: durable, portable, divisible, scarce, acceptable. Quantity Theory: MV = PT. More money leads to higher prices (inflation) if V and T constant. CBN tools: MPR (benchmark rate), CRR (cash reserve ratio), Open Market Operations. Expansionary policy: cut MPR leads to more spending. Contractionary: raise MPR leads to less spending and reduces inflation." },
+     ],
     inflation: [
-      { title: "Inflation & Unemployment", key: "Inflation is a persistent rise in price levels; Unemployment is the percentage of the workforce without jobs.", body: "Types of inflation include Demand-Pull and Cost-Push. Unemployment can be frictional, structural, or cyclical. The Phillips Curve illustrates the short-run inverse relationship between the rate of inflation and the rate of unemployment." },
-    ],
+      { title: "Inflation vs. Unemployment", key: "Inflation is a persistent rise in price levels; Unemployment is the percentage of the workforce without jobs.", body: "Types of inflation include Demand-Pull and Cost-Push. Unemployment can be frictional, structural, or cyclical. The Phillips Curve illustrates the short-run inverse relationship between the rate of inflation and the rate of unemployment." },
+      { title: "Inflation & Unemployment", key: "Demand-pull: too much money chasing too few goods. Cost-push: rising production costs. Phillips Curve: inverse relationship between inflation and unemployment.", body: "Stagflation (simultaneous inflation + unemployment) breaks the Phillips Curve relationship. Nigeria's inflation: driven by fuel prices, exchange rate depreciation, food supply shocks. Types of unemployment: frictional (between jobs), structural (skills mismatch), cyclical (low AD), seasonal. Nigeria: youth unemployment is a major structural problem." },
+     ],
     public: [
-      { title: "Public Finance", key: "Government revenue (taxation) and expenditure (budgeting) policies.", body: "Taxes can be direct (income) or indirect (VAT). Budgets can be balanced, surplus, or deficit. Public finance aims to redistribute income, stabilize the economy, and provide essential services that the private market ignores." },
-    ],
+      { title: "Public Finance", key: "Government revenue (taxation) and expenditure (budgeting) policies. Direct taxes: income tax, company tax. Indirect taxes: VAT, customs duties. Progressive tax: rate rises with income.", body: "Taxes can be direct (income) or indirect (VAT). Budgets can be balanced, surplus, or deficit. Public finance aims to redistribute income, stabilize the economy, and provide essential services that the private market ignores. Canons of taxation (Adam Smith): Equity, Certainty, Convenience, Economy. Budget deficit (most common in Nigeria): government spends more than it earns — financed by borrowing. Wagner's Law: government spending rises as economy develops. Revenue allocation in Nigeria: RMAFC formula distributes oil revenue between federal, state, and local governments." },
+      ],
     west_africa: [
       { title: "Economic Structure of West Africa", key: "Characterized by primary product exports, underdeveloped manufacturing, and rising service sectors.", body: "Many West African nations depend heavily on agriculture and minerals (e.g., Nigeria's oil, Ghana's cocoa). Challenges include poor infrastructure, high debt, and the need for regional integration via bodies like ECOWAS." },
-    ],
+      { title: "Economic Growth & Development in West Africa", key: "Primary sector: agriculture, mining. Secondary: manufacturing (underdeveloped). Tertiary: services (growing).", body: "Nigeria: oil dominates exports and government revenue. Agriculture employs about 35% of workforce but GDP share has fallen. Cash crops: cocoa (SW), groundnuts (N), palm oil (S), cotton (N). Problems: low technology, land tenure issues, poor infrastructure, rural-urban migration. Other West African economies: Ghana (cocoa, gold), Cote d'Ivoire (cocoa)." },
+     ],
     growth: [
-      { title: "Growth, Development & Population", key: "Economic growth (quantitative increase in GDP); Development (qualitative improvement in living standards).", body: "Development includes improvements in literacy, health, and poverty reduction. Population growth can be a 'double-edged sword'—providing a large market and labour force, but straining resources if growth outpaces productivity." },
+      { title: "Growth & Population", key: "Economic growth (quantitative increase in GDP); Development (qualitative improvement in living standards).", body: "Development includes improvements in literacy, health, and poverty reduction. Population growth can be a 'double-edged sword'—providing a large market and labour force, but straining resources if growth outpaces productivity." },
+      { title: "Growth vs. Development", key: "Growth = rising real GDP (quantitative). Development = improved quality of life, reduced poverty, structural change (qualitative).", body: "HDI measures: life expectancy, education, GNI per capita. Gini coefficient measures inequality (0 = perfect equality, 1 = perfect inequality). Nigeria: lower-middle income, large population around 220 million, rapid growth rate around 2.5% per annum strains resources. HIV/AIDS reduces labour force productivity. Women's empowerment significantly boosts economic growth." },
     ],
     agric: [
       { title: "Industrialisation in West Africa", key: "Strategies to move from agrarian economies to industrial production.", body: "Import Substitution Industrialisation (ISI) aims to replace imports with domestic goods. Export-Led Growth focuses on manufacturing for world markets. Bottlenecks include inadequate power supply, limited capital, and low technological transfer." },
-    ],
+      { title: "Industrialisation in West Africa", key: "Import Substitution Industrialisation (ISI): produce domestically what was previously imported.", body: "Nigeria tried ISI in 1970s-80s (vehicle assembly, textiles) — largely failed due to inefficiency and import-dependent inputs. Asia succeeded through export-led growth. Nigeria's industrial challenges: poor power supply, weak infrastructure, competition from cheap imports, limited capital. Current policy: diversification away from oil dependence." },
+     ],
     intl_trade: [
       { title: "International Trade", key: "Absolute Advantage (Smith) and Comparative Advantage (Ricardo).", body: "Countries benefit by specializing in goods where they have the lowest opportunity cost. Protectionism (tariffs, quotas) is often used to protect 'infant industries' despite the benefits of free trade. The Balance of Payments (BOP) records all international transactions." },
       { title: "International Trade Theory", key: "Absolute advantage (Adam Smith): export where you produce most efficiently. Comparative advantage (Ricardo): specialise where opportunity cost is LOWEST.", body: "Protectionism methods: tariff (import tax), quota (quantity limit), embargo (ban), subsidies. Arguments for protection: infant industry, employment, strategic industries. Arguments against: inefficiency, retaliation, higher consumer prices. Balance of Payments: Current account (goods, services, income), Capital account, Financial account. Favourable BOP: exports > imports." },
@@ -149,49 +156,7 @@ intro: [
      ],
   };
 
-   /*
-     ],
-    govt: [
-      ],
-    circular: [
-      ],
-    national_acc: [
-      { title: "National Income Concepts", key: "GDP = total output within borders. GNP = GDP + net income from abroad. NNP = GNP - depreciation.", body: "Expenditure method: GDP = C + I + G + (X-M). Income method: sum of wages, rent, interest, profit. Output method: sum of value added (avoids double counting). Problems: informal economy (huge in Nigeria), subsistence farming, data inaccuracy, excludes quality of life." },
-    ],
-    national_det: [
-      { title: "Keynesian Theory & Gaps", key: "Inflationary gap: AD > full employment output, causes demand-pull inflation. Deflationary gap: AD < full employment, causes unemployment.", body: "Keynesian consumption function: C = a + bY. Equilibrium: AD = Y (output). Policy responses: Inflationary gap, reduce AD (raise taxes, cut spending, raise interest rates). Deflationary gap, increase AD (cut taxes, raise spending, lower interest rates). Keynes showed economy can be stuck below full employment — justifying government intervention." },
-    ],
-    money: [
-      { title: "Money, Banking & Monetary Policy", key: "Functions of money: medium of exchange, store of value, unit of account, standard of deferred payment.", body: "Properties: durable, portable, divisible, scarce, acceptable. Quantity Theory: MV = PT. More money leads to higher prices (inflation) if V and T constant. CBN tools: MPR (benchmark rate), CRR (cash reserve ratio), Open Market Operations. Expansionary policy: cut MPR leads to more spending. Contractionary: raise MPR leads to less spending and reduces inflation." },
-    ],
-    inflation: [
-      { title: "Inflation & Unemployment", key: "Demand-pull: too much money chasing too few goods. Cost-push: rising production costs. Phillips Curve: inverse relationship between inflation and unemployment.", body: "Stagflation (simultaneous inflation + unemployment) breaks the Phillips Curve relationship. Nigeria's inflation: driven by fuel prices, exchange rate depreciation, food supply shocks. Types of unemployment: frictional (between jobs), structural (skills mismatch), cyclical (low AD), seasonal. Nigeria: youth unemployment is a major structural problem." },
-    ],
-    public: [
-      { title: "Public Finance", key: "Direct taxes: income tax, company tax. Indirect taxes: VAT, customs duties. Progressive tax: rate rises with income.", body: "Canons of taxation (Adam Smith): Equity, Certainty, Convenience, Economy. Budget deficit (most common in Nigeria): government spends more than it earns — financed by borrowing. Wagner's Law: government spending rises as economy develops. Revenue allocation in Nigeria: RMAFC formula distributes oil revenue between federal, state, and local governments." },
-    ],
-    west_africa: [
-      { title: "Economic Structure of West Africa", key: "Primary sector: agriculture, mining. Secondary: manufacturing (underdeveloped). Tertiary: services (growing).", body: "Nigeria: oil dominates exports and government revenue. Agriculture employs about 35% of workforce but GDP share has fallen. Cash crops: cocoa (SW), groundnuts (N), palm oil (S), cotton (N). Problems: low technology, land tenure issues, poor infrastructure, rural-urban migration. Other West African economies: Ghana (cocoa, gold), Cote d'Ivoire (cocoa)." },
-    ],
-    growth: [
-      { title: "Growth, Development & Population", key: "Growth = rising real GDP (quantitative). Development = improved quality of life, reduced poverty, structural change (qualitative).", body: "HDI measures: life expectancy, education, GNI per capita. Gini coefficient measures inequality (0 = perfect equality, 1 = perfect inequality). Nigeria: lower-middle income, large population around 220 million, rapid growth rate around 2.5% per annum strains resources. HIV/AIDS reduces labour force productivity. Women's empowerment significantly boosts economic growth." },
-    ],
-    agric: [
-      { title: "Industrialisation in West Africa", key: "Import Substitution Industrialisation (ISI): produce domestically what was previously imported.", body: "Nigeria tried ISI in 1970s-80s (vehicle assembly, textiles) — largely failed due to inefficiency and import-dependent inputs. Asia succeeded through export-led growth. Nigeria's industrial challenges: poor power supply, weak infrastructure, competition from cheap imports, limited capital. Current policy: diversification away from oil dependence." },
-    ],
-    intl_trade: [
-     ],
-    macro_meas: [*//*
-      ],
-    labour: [
-     ],
-    stabilize: [
-     ],
-    intl_inst: [
-      ],
-  };
-  */
-  
+     
   export const questions = {
     intro: [
         {

@@ -165,7 +165,7 @@ governance: [
     key: "Citizenship is the legal relationship between an individual and a state.",
     body: "Citizens have rights such as freedom of speech and duties like obeying laws and paying taxes. Citizenship can be acquired by birth, registration, or naturalization. Active citizenship is essential for democracy and national development."
   }
-]
+],
 ideas: [
   {
     title: "Meaning of Political Ideology",
@@ -300,7 +300,7 @@ intl: [
     key: "International organizations are bodies formed by countries to promote cooperation.",
     body: "Examples include the United Nations (UN), African Union (AU), ECOWAS, IMF, and World Bank. They address global issues like peace, development, and economic stability."
   }
-]
+],
 precolonial: [
   {
     title: "Pre-Colonial Systems of Government in Nigeria",
@@ -418,8 +418,7 @@ democracy_africa: [
     key: "Democratization is the process of transitioning from authoritarian rule to democratic governance.",
     body: "African countries have gradually adopted democratic systems with elections and constitutions. However, challenges like corruption, weak institutions, and electoral violence persist. Despite this, democracy continues to develop across the continent."
   }
-]
-
+],
 };
 export const questions = {
     intro: [
@@ -430,8 +429,9 @@ export const questions = {
   answer: "A",
   exp: "A liquidity trap occurs when interest rates are so low that monetary policy becomes ineffective; people prefer to hold cash rather than invest, meaning increasing the money supply fails to lower interest rates further."
 },
-    ],
+  ],
 };
+
 export const grading = [
     { marks: "70-100", grade: "A", points: 5, remark: "Excellent" },
     { marks: "60-69", grade: "B", points: 4, remark: "Very Good" },

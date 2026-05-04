@@ -421,6 +421,257 @@ democracy_africa: [
 ],
 };
 export const questions = {
+  nature: [
+{
+  year: "2024",
+  q: "Which of the following best explains the scientific nature of politics?",
+  options: [
+    "A. It relies solely on moral judgments",
+    "B. It uses systematic observation and analysis of political behaviour",
+    "C. It focuses only on historical events",
+    "D. It is based on religious beliefs"
+  ],
+  answer: "B",
+  exp: "Politics is considered scientific when it applies systematic methods such as observation, hypothesis testing, and data analysis to study political behaviour. The behavioural approach strengthened this by emphasizing empirical evidence rather than mere philosophical speculation. While politics involves values, its scientific aspect lies in its ability to analyze patterns and predict behaviour."
+},
+{
+  year: "2024",
+  q: "The main criticism of the institutional approach is that it:",
+  options: [
+    "A. ignores political behaviour",
+    "B. overemphasizes individuals",
+    "C. focuses too much on economic factors",
+    "D. rejects historical analysis"
+  ],
+  answer: "A",
+  exp: "The institutional approach concentrates on formal structures like the legislature, executive, and judiciary, often ignoring how individuals actually behave within those institutions. This limitation led to the development of the behavioural approach, which studies real political actions and interactions."
+}
+],
+
+concepts: [
+{
+  year: "2024",
+  q: "Which concept explains why citizens obey laws even without coercion?",
+  options: [
+    "A. Power",
+    "B. Authority",
+    "C. Legitimacy",
+    "D. Sovereignty"
+  ],
+  answer: "C",
+  exp: "Legitimacy refers to the acceptance of a government's authority by the people. When a government is seen as legitimate, citizens obey laws willingly, not because of fear but because they believe the authority is rightful. This is essential for political stability."
+},
+{
+  year: "2024",
+  q: "A state that cannot control its internal affairs lacks:",
+  options: [
+    "A. population",
+    "B. legitimacy",
+    "C. internal sovereignty",
+    "D. authority"
+  ],
+  answer: "C",
+  exp: "Internal sovereignty refers to a state's ability to exercise authority within its territory. If a state cannot maintain law and order or enforce decisions internally, it lacks internal sovereignty, even if it is recognized internationally."
+}
+],
+
+state: [
+{
+  year: "2024",
+  q: "A confederal system differs from a federal system because it:",
+  options: [
+    "A. centralizes power",
+    "B. gives more power to the central government",
+    "C. allows member states to retain sovereignty",
+    "D. abolishes regional governments"
+  ],
+  answer: "C",
+  exp: "In a confederation, the component states retain their sovereignty and delegate only limited powers to the central authority. This contrasts with a federation where sovereignty is constitutionally shared. Confederations are usually weak and may dissolve easily."
+},
+{
+  year: "2024",
+  q: "Which condition is necessary for the effective operation of separation of powers?",
+  options: [
+    "A. fusion of powers",
+    "B. independence of the judiciary",
+    "C. military intervention",
+    "D. one-party system"
+  ],
+  answer: "B",
+  exp: "For separation of powers to work effectively, each arm must operate independently, especially the judiciary. Judicial independence ensures laws are interpreted fairly without interference, maintaining balance among the branches."
+}
+],
+
+constitution: [
+{
+  year: "2024",
+  q: "A rigid constitution is one that:",
+  options: [
+    "A. cannot be amended",
+    "B. is difficult to amend",
+    "C. changes frequently",
+    "D. is unwritten"
+  ],
+  answer: "B",
+  exp: "A rigid constitution requires special procedures for amendment, such as supermajority votes or referendums. This makes it stable and protects it from frequent changes, unlike flexible constitutions which are easier to amend."
+},
+{
+  year: "2024",
+  q: "Which principle ensures that no arm of government becomes too powerful?",
+  options: [
+    "A. Rule of law",
+    "B. Judicial review",
+    "C. Checks and balances",
+    "D. Federalism"
+  ],
+  answer: "C",
+  exp: "Checks and balances allow each arm of government to limit the powers of the others. For example, the legislature can impeach the executive, while the judiciary can declare laws unconstitutional. This prevents abuse of power."
+}
+],
+
+governance: [
+{
+  year: "2024",
+  q: "Good governance is best characterized by:",
+  options: [
+    "A. secrecy and control",
+    "B. accountability and transparency",
+    "C. military authority",
+    "D. centralized power"
+  ],
+  answer: "B",
+  exp: "Good governance involves accountability, transparency, rule of law, and responsiveness to citizens' needs. It ensures that public resources are used efficiently and that leaders are answerable to the people."
+},
+{
+  year: "2024",
+  q: "A major difference between government and governance is that governance:",
+  options: [
+    "A. excludes institutions",
+    "B. focuses only on elections",
+    "C. involves processes and outcomes",
+    "D. ignores citizens"
+  ],
+  answer: "C",
+  exp: "Government refers to formal institutions, while governance includes the processes, interactions, and outcomes of decision-making. It involves both state and non-state actors working together."
+}
+],
+
+ideas: [
+{
+  year: "2024",
+  q: "Which ideology supports abolition of the state?",
+  options: [
+    "A. Socialism",
+    "B. Capitalism",
+    "C. Anarchism",
+    "D. Fascism"
+  ],
+  answer: "C",
+  exp: "Anarchism advocates for a society without government or authority, believing that individuals can organize themselves voluntarily. It rejects the necessity of the state entirely."
+},
+{
+  year: "2024",
+  q: "The main goal of socialism is:",
+  options: [
+    "A. profit maximization",
+    "B. equality of wealth",
+    "C. private ownership",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "Socialism aims to reduce inequality by promoting collective or state ownership of resources. It seeks fair distribution of wealth and social welfare rather than profit-driven systems."
+}
+],
+
+parties: [
+{
+  year: "2024",
+  q: "A dominant-party system is one where:",
+  options: [
+    "A. only one party exists",
+    "B. one party consistently wins elections",
+    "C. no party participates",
+    "D. military controls parties"
+  ],
+  answer: "B",
+  exp: "In a dominant-party system, multiple parties may exist, but one party remains in power for a long time due to popularity or control of political structures."
+}
+],
+
+opinion: [
+{
+  year: "2024",
+  q: "Which method is most reliable for measuring public opinion?",
+  options: [
+    "A. rumours",
+    "B. opinion polls",
+    "C. propaganda",
+    "D. protests"
+  ],
+  answer: "B",
+  exp: "Opinion polls use scientific sampling methods to gather data on public views. They are more reliable than informal methods like rumours or assumptions."
+}
+],
+
+elections: [
+{
+  year: "2024",
+  q: "Proportional representation ensures that:",
+  options: [
+    "A. majority wins all seats",
+    "B. seats reflect votes received",
+    "C. only two parties exist",
+    "D. elections are unnecessary"
+  ],
+  answer: "B",
+  exp: "Proportional representation allocates seats based on the percentage of votes each party receives, ensuring fair representation of different groups."
+}
+],
+
+change: [
+{
+  year: "2024",
+  q: "A reformative change is characterized by:",
+  options: [
+    "A. violence",
+    "B. gradual improvement",
+    "C. sudden overthrow",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "Reformative change involves gradual modifications to improve existing systems without completely overthrowing them."
+}
+],
+
+admin: [
+{
+  year: "2024",
+  q: "One major weakness of bureaucracy is:",
+  options: [
+    "A. efficiency",
+    "B. flexibility",
+    "C. red-tapism",
+    "D. accountability"
+  ],
+  answer: "C",
+  exp: "Red-tapism refers to excessive procedures and delays in decision-making, which reduces efficiency in bureaucracy."
+}
+],
+
+intl: [
+{
+  year: "2024",
+  q: "A key determinant of foreign policy is:",
+  options: [
+    "A. weather",
+    "B. national interest",
+    "C. religion only",
+    "D. population size only"
+  ],
+  answer: "B",
+  exp: "National interest is the primary factor guiding a country's foreign policy decisions, including security, economic growth, and global influence."
+}
+],
   
  };
 

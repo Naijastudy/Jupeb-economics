@@ -422,33 +422,339 @@ democracy_africa: [
 };
 export const questions = {
   nature: [
+    
 {
   year: "2024",
-  q: "Which of the following best explains the scientific nature of politics?",
+  q: "Which of the following best explains why politics is regarded as a social science?",
   options: [
-    "A. It relies solely on moral judgments",
-    "B. It uses systematic observation and analysis of political behaviour",
-    "C. It focuses only on historical events",
-    "D. It is based on religious beliefs"
+    "A. It studies only government institutions",
+    "B. It applies scientific methods to human political behaviour",
+    "C. It is based purely on moral philosophy",
+    "D. It focuses only on past events"
   ],
   answer: "B",
-  exp: "Politics is considered scientific when it applies systematic methods such as observation, hypothesis testing, and data analysis to study political behaviour. The behavioural approach strengthened this by emphasizing empirical evidence rather than mere philosophical speculation. While politics involves values, its scientific aspect lies in its ability to analyze patterns and predict behaviour."
+  exp: "Politics is classified as a social science because it applies systematic and scientific methods—such as observation, hypothesis testing, and data analysis—to study human behaviour in relation to power and governance. Unlike natural sciences, it deals with human interactions, making it both analytical and interpretative."
 },
 {
   year: "2024",
-  q: "The main criticism of the institutional approach is that it:",
+  q: "The main limitation of the philosophical approach to the study of government is that it:",
   options: [
-    "A. ignores political behaviour",
-    "B. overemphasizes individuals",
-    "C. focuses too much on economic factors",
-    "D. rejects historical analysis"
+    "A. ignores moral values",
+    "B. lacks empirical verification",
+    "C. focuses on behaviour",
+    "D. is too scientific"
   ],
-  answer: "A",
-  exp: "The institutional approach concentrates on formal structures like the legislature, executive, and judiciary, often ignoring how individuals actually behave within those institutions. This limitation led to the development of the behavioural approach, which studies real political actions and interactions."
-}
-],
+  answer: "B",
+  exp: "The philosophical approach emphasizes ideals such as justice, liberty, and equality, but it lacks empirical (data-based) verification. This makes it less practical for analyzing real-world political behaviour compared to modern scientific approaches."
+},
+{
+  year: "2024",
+  q: "Which of the following best distinguishes politics from government?",
+  options: [
+    "A. Politics is institutional, government is behavioural",
+    "B. Government is activity, politics is structure",
+    "C. Politics is process, government is machinery",
+    "D. Both are identical concepts"
+  ],
+  answer: "C",
+  exp: "Politics refers to the processes of acquiring and exercising power, while government refers to the institutional structure through which that power is exercised. In simple terms, politics is the activity, while government is the system."
+},
+{
+  year: "2024",
+  q: "The behavioural revolution in political science emphasized:",
+  options: [
+    "A. legal institutions",
+    "B. observable human actions",
+    "C. historical analysis",
+    "D. moral philosophy"
+  ],
+  answer: "B",
+  exp: "The behavioural revolution shifted focus from institutions and laws to the actual behaviour of individuals and groups in politics. It introduced scientific methods such as surveys and statistical analysis."
+},
+{
+  year: "2024",
+  q: "Which approach focuses on comparing political systems across countries?",
+  options: [
+    "A. Historical",
+    "B. Comparative",
+    "C. Institutional",
+    "D. Normative"
+  ],
+  answer: "B",
+  exp: "The comparative approach examines similarities and differences between political systems to understand patterns and improve governance."
+},
 
+{
+  year: "2024",
+  q: "The study of government is important primarily because it:",
+  options: [
+    "A. promotes only political careers",
+    "B. enhances understanding of rights and responsibilities",
+    "C. focuses only on elections",
+    "D. replaces economic studies"
+  ],
+  answer: "B",
+  exp: "Studying government helps citizens understand their rights, duties, and how political systems operate. It promotes civic awareness, participation, and informed decision-making."
+},
+{
+  year: "2024",
+  q: "Which of the following best describes politics as 'who gets what, when, and how'?",
+  options: [
+    "A. David Easton",
+    "B. Harold Lasswell",
+    "C. Aristotle",
+    "D. Karl Marx"
+  ],
+  answer: "B",
+  exp: "Harold Lasswell defined politics as 'who gets what, when, and how,' emphasizing distribution of resources and power in society."
+},
+{
+  year: "2024",
+  q: "A major advantage of the empirical approach is that it:",
+  options: [
+    "A. ignores facts",
+    "B. is based on observation and evidence",
+    "C. focuses on values",
+    "D. rejects data"
+  ],
+  answer: "B",
+  exp: "The empirical approach relies on observable data and evidence, making it more objective and scientific in analyzing political phenomena."
+},
+
+{
+  year: "2024",
+  q: "The relationship between government and economics is best seen in:",
+  options: [
+    "A. religious policies",
+    "B. resource allocation",
+    "C. cultural practices",
+    "D. language development"
+  ],
+  answer: "B",
+  exp: "Government plays a key role in allocating resources through policies such as taxation, budgeting, and public spending, linking it closely with economics."
+},
+{
+  year: "2024",
+  q: "Which discipline helps explain voting behaviour and leadership traits?",
+  options: [
+    "A. Geography",
+    "B. Psychology",
+    "C. Biology",
+    "D. Chemistry"
+  ],
+  answer: "B",
+  exp: "Psychology helps explain how individuals think, behave, and make political decisions, including voting patterns and leadership qualities."
+},
+],
 concepts: [
+  
+{
+  year: "2024",
+  q: "Which of the following best distinguishes authority from power?",
+  options: [
+    "A. Authority is coercive while power is legitimate",
+    "B. Power is always legal while authority is illegal",
+    "C. Authority is power that is recognized as rightful",
+    "D. Power is exercised only by government"
+  ],
+  answer: "C",
+  exp: "Power is the ability to influence or control others, whether accepted or not. Authority, however, is power that is regarded as legitimate and is therefore willingly obeyed. The key distinction is legitimacy—authority is accepted, while power may rely on force or coercion."
+},
+{
+  year: "2024",
+  q: "A government that relies heavily on force rather than consent lacks:",
+  options: [
+    "A. sovereignty",
+    "B. authority",
+    "C. legitimacy",
+    "D. power"
+  ],
+  answer: "C",
+  exp: "Legitimacy refers to the acceptance of authority by the people. When a government relies mainly on force, it suggests that citizens do not recognize its rule as rightful. Such a government may still have power, but it lacks legitimacy, which can lead to instability."
+},
+{
+  year: "2024",
+  q: "Internal sovereignty refers to:",
+  options: [
+    "A. independence from foreign control",
+    "B. recognition by international organizations",
+    "C. supreme authority within a state",
+    "D. military strength of a nation"
+  ],
+  answer: "C",
+  exp: "Internal sovereignty is the ability of a state to exercise ultimate authority within its territory without internal challenges. It includes maintaining law and order and enforcing decisions. External sovereignty, on the other hand, relates to independence from foreign interference."
+},
+{
+  year: "2024",
+  q: "Which thinker classified authority into traditional, charismatic, and legal-rational?",
+  options: [
+    "A. Karl Marx",
+    "B. Max Weber",
+    "C. John Locke",
+    "D. Aristotle"
+  ],
+  answer: "B",
+  exp: "Max Weber identified three types of authority: traditional (based on customs), charismatic (based on personal qualities), and legal-rational (based on laws and rules). This classification helps explain how different systems gain obedience."
+},
+{
+  year: "2024",
+  q: "Political culture is best defined as:",
+  options: [
+    "A. economic practices of a society",
+    "B. shared beliefs and attitudes about politics",
+    "C. legal framework of a state",
+    "D. electoral system"
+  ],
+  answer: "B",
+  exp: "Political culture refers to the collective attitudes, values, beliefs, and orientations of citizens toward politics and the political system. It influences political participation, stability, and governance."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is NOT an agent of political socialization?",
+  options: [
+    "A. Family",
+    "B. School",
+    "C. Judiciary",
+    "D. Media"
+  ],
+  answer: "C",
+  exp: "Agents of political socialization include family, school, media, religion, and peer groups. These shape political attitudes and beliefs. The judiciary is an institution of government, not a socializing agent."
+},
+{
+  year: "2024",
+  q: "A citizen obeys laws because they believe in the system; this reflects:",
+  options: [
+    "A. coercion",
+    "B. legitimacy",
+    "C. dictatorship",
+    "D. sovereignty"
+  ],
+  answer: "B",
+  exp: "When citizens obey laws voluntarily due to belief in the system’s fairness and rightfulness, it indicates legitimacy. This is crucial for stable governance, as it reduces reliance on force."
+},
+{
+  year: "2024",
+  q: "Which concept explains the right of a state to control its natural resources?",
+  options: [
+    "A. Authority",
+    "B. Sovereignty",
+    "C. Legitimacy",
+    "D. Power"
+  ],
+  answer: "B",
+  exp: "Sovereignty includes control over resources within a state's territory. It ensures that the state has the ultimate authority to decide how its resources are used without external interference."
+},
+{
+  year: "2024",
+  q: "A society where citizens actively participate in politics is said to have:",
+  options: [
+    "A. parochial culture",
+    "B. subject culture",
+    "C. participant culture",
+    "D. passive culture"
+  ],
+  answer: "C",
+  exp: "Participant political culture involves active citizen involvement in political processes such as voting, discussions, and civic engagement. It is essential for democratic systems."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains coercive power?",
+  options: [
+    "A. power based on respect",
+    "B. power based on force or threat",
+    "C. power based on law",
+    "D. power based on tradition"
+  ],
+  answer: "B",
+  exp: "Coercive power involves the use of force, threats, or punishment to influence behaviour. It is often used when authority is weak or legitimacy is lacking."
+},
+
+{
+  year: "2024",
+  q: "Charismatic authority is most likely to decline when:",
+  options: [
+    "A. laws are enforced",
+    "B. the leader loses personal appeal",
+    "C. elections are conducted",
+    "D. bureaucracy expands"
+  ],
+  answer: "B",
+  exp: "Charismatic authority depends on the personal qualities of a leader. If the leader loses influence, credibility, or dies, the authority weakens because it is not based on institutions or laws."
+},
+{
+  year: "2024",
+  q: "Which type of political culture is characterized by limited awareness of political systems?",
+  options: [
+    "A. Participant",
+    "B. Subject",
+    "C. Parochial",
+    "D. Democratic"
+  ],
+  answer: "C",
+  exp: "Parochial political culture exists in traditional societies where citizens have little knowledge or interest in politics. Participation is minimal or nonexistent."
+},
+{
+  year: "2024",
+  q: "The ability of a state to act independently in international relations is known as:",
+  options: [
+    "A. internal sovereignty",
+    "B. external sovereignty",
+    "C. authority",
+    "D. legitimacy"
+  ],
+  answer: "B",
+  exp: "External sovereignty refers to a state's independence from external control. It allows the state to conduct foreign policy and international relations freely."
+},
+{
+  year: "2024",
+  q: "Which concept ensures stability in a political system by securing citizens' acceptance?",
+  options: [
+    "A. Power",
+    "B. Authority",
+    "C. Legitimacy",
+    "D. Force"
+  ],
+  answer: "C",
+  exp: "Legitimacy ensures that people accept and support the government, leading to stability. Without legitimacy, governments may face resistance or rebellion."
+},
+{
+  year: "2024",
+  q: "The process by which individuals acquire political beliefs is known as:",
+  options: [
+    "A. political recruitment",
+    "B. political socialization",
+    "C. political participation",
+    "D. political change"
+  ],
+  answer: "B",
+  exp: "Political socialization is the lifelong process through which individuals learn political values, beliefs, and behaviours from various agents such as family and media."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains the relationship between authority and legitimacy?",
+  options: [
+    "A. Authority exists without legitimacy",
+    "B. Legitimacy strengthens authority",
+    "C. Authority weakens legitimacy",
+    "D. They are unrelated"
+  ],
+  answer: "B",
+  exp: "Legitimacy provides the moral justification for authority, making it more effective and stable. When authority is seen as legitimate, compliance is voluntary rather than forced."
+},
+{
+  year: "2024",
+  q: "A decline in political trust among citizens indicates:",
+  options: [
+    "A. increased authority",
+    "B. loss of legitimacy",
+    "C. stronger sovereignty",
+    "D. stable governance"
+  ],
+  answer: "B",
+  exp: "When citizens lose trust in government, its legitimacy declines. This can lead to protests, instability, and challenges to authority."
+},
 {
   year: "2024",
   q: "Which concept explains why citizens obey laws even without coercion?",
@@ -476,6 +782,213 @@ concepts: [
 ],
 
 state: [
+  
+{
+  year: "2024",
+  q: "Which of the following best explains why sovereignty is considered the most essential element of a state?",
+  options: [
+    "A. It determines population size",
+    "B. It ensures economic development",
+    "C. It establishes supreme authority within the state",
+    "D. It defines territorial boundaries"
+  ],
+  answer: "C",
+  exp: "Sovereignty is regarded as the most essential element because it represents the ultimate authority of a state to govern itself without internal or external interference. Without sovereignty, other elements like population, territory, and government cannot function effectively since there would be no final authority to enforce decisions."
+},
+{
+  year: "2024",
+  q: "A political community that lacks defined territory cannot be classified as a state because:",
+  options: [
+    "A. it cannot conduct elections",
+    "B. it lacks sovereignty",
+    "C. territory is required for jurisdiction",
+    "D. it cannot form a government"
+  ],
+  answer: "C",
+  exp: "Territory is a fundamental element of a state because it provides a physical space where laws apply and authority is exercised. Without defined boundaries, a political community cannot effectively enforce laws or maintain jurisdiction."
+},
+{
+  year: "2024",
+  q: "Which of the following best distinguishes a nation from a state?",
+  options: [
+    "A. A nation has territory, a state does not",
+    "B. A nation is based on shared identity, a state is political organization",
+    "C. A state lacks sovereignty",
+    "D. A nation is always larger than a state"
+  ],
+  answer: "B",
+  exp: "A nation is a group of people with shared culture, language, or identity, while a state is a political entity with defined territory, government, and sovereignty. A nation may exist without a state, and a state may contain multiple nations."
+},
+{
+  year: "2024",
+  q: "A major feature of a federal system is that it:",
+  options: [
+    "A. concentrates power at the center",
+    "B. abolishes regional governments",
+    "C. constitutionally divides powers between levels of government",
+    "D. operates without a constitution"
+  ],
+  answer: "C",
+  exp: "Federalism involves a constitutional division of powers between central and regional governments, each operating independently within its sphere. This ensures decentralization and prevents concentration of power."
+},
+{
+  year: "2024",
+  q: "Which of the following is a key weakness of a confederal system?",
+  options: [
+    "A. excessive central control",
+    "B. weak central authority",
+    "C. lack of regional governments",
+    "D. absence of sovereignty"
+  ],
+  answer: "B",
+  exp: "In a confederation, the central government is weak because member states retain most of the powers and sovereignty. This often leads to inefficiency and instability, as the central authority cannot enforce decisions effectively."
+},
+
+{
+  year: "2024",
+  q: "The principle of separation of powers is primarily designed to:",
+  options: [
+    "A. promote dictatorship",
+    "B. concentrate authority",
+    "C. prevent abuse of power",
+    "D. eliminate political parties"
+  ],
+  answer: "C",
+  exp: "Separation of powers divides government into executive, legislature, and judiciary to ensure no single body dominates. Each branch performs specific functions and checks the others, reducing the risk of abuse of power."
+},
+{
+  year: "2024",
+  q: "In a presidential system, the executive is:",
+  options: [
+    "A. responsible to parliament",
+    "B. independent of legislature",
+    "C. selected by judiciary",
+    "D. controlled by military"
+  ],
+  answer: "B",
+  exp: "In a presidential system, the executive (president) is elected separately and operates independently of the legislature. This contrasts with a parliamentary system where the executive is drawn from the legislature."
+},
+{
+  year: "2024",
+  q: "Which of the following is a defining feature of a parliamentary system?",
+  options: [
+    "A. separation of executive and legislature",
+    "B. fusion of executive and legislature",
+    "C. military dominance",
+    "D. fixed tenure of executive"
+  ],
+  answer: "B",
+  exp: "In a parliamentary system, the executive is part of the legislature, creating a fusion of powers. The executive depends on the confidence of the legislature to remain in office."
+},
+{
+  year: "2024",
+  q: "A system of government where power is concentrated in a single central authority is known as:",
+  options: [
+    "A. federal system",
+    "B. confederal system",
+    "C. unitary system",
+    "D. presidential system"
+  ],
+  answer: "C",
+  exp: "A unitary system centralizes power in the national government, with little or no autonomy for regional authorities. It promotes uniformity but may reduce local independence."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains checks and balances?",
+  options: [
+    "A. equality among citizens",
+    "B. control of one branch over others",
+    "C. cooperation between branches",
+    "D. independence without control"
+  ],
+  answer: "B",
+  exp: "Checks and balances allow each branch of government to limit the powers of the others. For example, the judiciary can declare laws unconstitutional, ensuring that no branch becomes too powerful."
+},
+
+{
+  year: "2024",
+  q: "A monarchy where the ruler has absolute power is known as:",
+  options: [
+    "A. constitutional monarchy",
+    "B. absolute monarchy",
+    "C. federal monarchy",
+    "D. parliamentary monarchy"
+  ],
+  answer: "B",
+  exp: "An absolute monarchy is a system where the ruler has unrestricted power and is not bound by a constitution or laws. This contrasts with constitutional monarchy where the monarch's powers are limited."
+},
+{
+  year: "2024",
+  q: "Which of the following is NOT a function of the executive?",
+  options: [
+    "A. implementation of laws",
+    "B. policy formulation",
+    "C. interpretation of laws",
+    "D. administration of government"
+  ],
+  answer: "C",
+  exp: "The executive implements laws and policies, while the judiciary is responsible for interpreting laws. This distinction is essential for maintaining separation of powers."
+},
+{
+  year: "2024",
+  q: "The legislature performs which primary function?",
+  options: [
+    "A. enforcing laws",
+    "B. interpreting laws",
+    "C. making laws",
+    "D. executing policies"
+  ],
+  answer: "C",
+  exp: "The legislature is responsible for law-making, representing the people, and overseeing the executive. It plays a central role in democratic governance."
+},
+{
+  year: "2024",
+  q: "Judicial independence is important because it:",
+  options: [
+    "A. promotes dictatorship",
+    "B. ensures fairness and justice",
+    "C. weakens government",
+    "D. controls elections"
+  ],
+  answer: "B",
+  exp: "Judicial independence allows courts to make decisions free from external influence, ensuring justice, fairness, and protection of rights."
+},
+{
+  year: "2024",
+  q: "A bicameral legislature consists of:",
+  options: [
+    "A. one chamber",
+    "B. two chambers",
+    "C. three chambers",
+    "D. no chambers"
+  ],
+  answer: "B",
+  exp: "A bicameral legislature has two houses, usually an upper and lower chamber. This structure promotes checks within the legislative process and improves law-making quality."
+},
+{
+  year: "2024",
+  q: "Which factor is essential for the success of federalism?",
+  options: [
+    "A. weak constitution",
+    "B. strong centralization",
+    "C. clear division of powers",
+    "D. absence of judiciary"
+  ],
+  answer: "C",
+  exp: "Federalism requires a clear constitutional division of powers to avoid conflicts between central and regional governments. Without this clarity, governance becomes inefficient."
+},
+{
+  year: "2024",
+  q: "A state with multiple ethnic groups but one government is called:",
+  options: [
+    "A. nation-state",
+    "B. multinational state",
+    "C. unitary nation",
+    "D. sovereign nation"
+  ],
+  answer: "B",
+  exp: "A multinational state contains different ethnic or cultural groups within one political system. Nigeria is an example, with diverse ethnic groups under one government."
+},
 {
   year: "2024",
   q: "A confederal system differs from a federal system because it:",
@@ -503,6 +1016,189 @@ state: [
 ],
 
 constitution: [
+  
+{
+  year: "2024",
+  q: "Which of the following best explains the concept of constitutional supremacy in a federal state?",
+  options: [
+    "A. The legislature has final authority",
+    "B. The constitution overrides all levels of government",
+    "C. The executive controls constitutional interpretation",
+    "D. States can ignore federal laws"
+  ],
+  answer: "B",
+  exp: "In a federal system, constitutional supremacy means that the constitution is binding on both central and regional governments. Any law or action that conflicts with it is invalid. This ensures uniformity and prevents abuse of power at any level."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major feature of constitutionalism?",
+  options: [
+    "A. concentration of power",
+    "B. limitation of government powers",
+    "C. absence of judiciary",
+    "D. military dominance"
+  ],
+  answer: "B",
+  exp: "Constitutionalism emphasizes limiting government powers through legal frameworks. It ensures that authority is exercised within defined boundaries to prevent tyranny and protect citizens' rights."
+},
+{
+  year: "2024",
+  q: "The inclusion of fundamental human rights in a constitution is meant to:",
+  options: [
+    "A. strengthen government power",
+    "B. protect citizens from abuse",
+    "C. limit judicial authority",
+    "D. promote political parties"
+  ],
+  answer: "B",
+  exp: "Fundamental rights protect individuals from arbitrary actions of the state. They guarantee freedoms such as speech, movement, and association, ensuring dignity and justice."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains constitutional rigidity?",
+  options: [
+    "A. constitution cannot be changed at all",
+    "B. amendment requires complex procedures",
+    "C. laws are flexible",
+    "D. judiciary controls amendments"
+  ],
+  answer: "B",
+  exp: "Constitutional rigidity refers to the difficulty of amending the constitution due to strict procedures such as referendums or supermajority votes. This protects it from frequent or arbitrary changes."
+},
+{
+  year: "2024",
+  q: "A constitution that derives its authority from the people is said to be:",
+  options: [
+    "A. imposed constitution",
+    "B. autochthonous constitution",
+    "C. rigid constitution",
+    "D. flexible constitution"
+  ],
+  answer: "B",
+  exp: "An autochthonous constitution is one that originates from the people of a country rather than being imposed by external forces such as colonial powers. It reflects popular sovereignty."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a disadvantage of an unwritten constitution?",
+  options: [
+    "A. clarity of laws",
+    "B. flexibility",
+    "C. uncertainty and ambiguity",
+    "D. adaptability"
+  ],
+  answer: "C",
+  exp: "An unwritten constitution may lead to ambiguity because its rules are scattered across conventions, customs, and judicial decisions. This can create uncertainty in interpretation."
+},
+{
+  year: "2024",
+  q: "Which of the following ensures that government actions conform to constitutional provisions?",
+  options: [
+    "A. sovereignty",
+    "B. judicial review",
+    "C. federalism",
+    "D. monarchy"
+  ],
+  answer: "B",
+  exp: "Judicial review allows courts to examine whether government actions are consistent with the constitution. If not, such actions can be declared unconstitutional."
+},
+{
+  year: "2024",
+  q: "The doctrine of separation of powers is ineffective without:",
+  options: [
+    "A. monarchy",
+    "B. checks and balances",
+    "C. federalism",
+    "D. sovereignty"
+  ],
+  answer: "B",
+  exp: "Separation of powers alone is not enough; checks and balances ensure that each branch can limit the others, preventing abuse and maintaining balance."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains a constitutional government?",
+  options: [
+    "A. government without laws",
+    "B. government guided by constitution",
+    "C. military government",
+    "D. traditional system"
+  ],
+  answer: "B",
+  exp: "A constitutional government operates strictly within the framework of the constitution, ensuring accountability, legality, and protection of rights."
+},
+{
+  year: "2024",
+  q: "A referendum is used primarily to:",
+  options: [
+    "A. elect leaders",
+    "B. amend constitution",
+    "C. enforce laws",
+    "D. interpret laws"
+  ],
+  answer: "B",
+  exp: "A referendum allows citizens to directly vote on important issues, especially constitutional amendments. It reflects direct democracy."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains the principle of popular sovereignty?",
+  options: [
+    "A. government controls people",
+    "B. people are the source of authority",
+    "C. judiciary dominates",
+    "D. military rules"
+  ],
+  answer: "B",
+  exp: "Popular sovereignty means that ultimate political power resides with the people. Governments derive their legitimacy from the consent of the governed."
+},
+{
+  year: "2024",
+  q: "A constitution imposed by colonial rulers is known as:",
+  options: [
+    "A. autochthonous constitution",
+    "B. rigid constitution",
+    "C. imposed constitution",
+    "D. flexible constitution"
+  ],
+  answer: "C",
+  exp: "An imposed constitution is created by an external authority, often without the full participation of the people it governs."
+},
+{
+  year: "2024",
+  q: "Which feature of a constitution ensures stability?",
+  options: [
+    "A. flexibility only",
+    "B. rigidity only",
+    "C. balance of rigidity and flexibility",
+    "D. absence of amendment"
+  ],
+  answer: "C",
+  exp: "A good constitution balances rigidity (to maintain stability) and flexibility (to allow adaptation). Too much of either can be problematic."
+},
+{
+  year: "2024",
+  q: "The main purpose of entrenched clauses is to:",
+  options: [
+    "A. weaken constitution",
+    "B. protect important provisions",
+    "C. simplify amendment",
+    "D. promote dictatorship"
+  ],
+  answer: "B",
+  exp: "Entrenched clauses protect critical parts of the constitution, such as fundamental rights, by making them difficult to amend."
+},
+{
+  year: "2024",
+  q: "Which of the following is a key function of a constitution?",
+  options: [
+    "A. promote trade",
+    "B. define structure of government",
+    "C. control religion",
+    "D. eliminate opposition"
+  ],
+  answer: "B",
+  exp: "A constitution outlines the framework of government, including roles, powers, and responsibilities of institutions."
+},
 {
   year: "2024",
   q: "A rigid constitution is one that:",
@@ -530,6 +1226,226 @@ constitution: [
 ],
 
 governance: [
+  
+{
+  year: "2024",
+  q: "Which of the following best defines governance?",
+  options: [
+    "A. activities of political parties only",
+    "B. the process of exercising political authority and managing resources",
+    "C. conduct of elections",
+    "D. activities of the legislature"
+  ],
+  answer: "B",
+  exp: "Governance refers to the processes, systems, and institutions through which authority is exercised in a state. It includes decision-making, policy implementation, and management of public resources. It goes beyond government institutions to include how power is actually used."
+},
+{
+  year: "2024",
+  q: "Good governance is primarily characterized by:",
+  options: [
+    "A. secrecy and centralization",
+    "B. accountability and transparency",
+    "C. military dominance",
+    "D. absence of opposition"
+  ],
+  answer: "B",
+  exp: "Good governance emphasizes accountability, transparency, rule of law, participation, and responsiveness. These principles ensure that leaders are answerable to the people and that decisions are made openly and fairly."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains accountability in governance?",
+  options: [
+    "A. leaders act independently",
+    "B. leaders are answerable for their actions",
+    "C. citizens control judiciary",
+    "D. government ignores opposition"
+  ],
+  answer: "B",
+  exp: "Accountability means that public officials are responsible for their actions and decisions. They must explain and justify their conduct to the public or relevant institutions, ensuring transparency and preventing abuse of power."
+},
+{
+  year: "2024",
+  q: "Transparency in governance implies that:",
+  options: [
+    "A. decisions are secret",
+    "B. government actions are open and accessible",
+    "C. only leaders have information",
+    "D. judiciary controls information"
+  ],
+  answer: "B",
+  exp: "Transparency means openness in government operations, allowing citizens access to information about decisions and policies. This builds trust and reduces corruption."
+},
+{
+  year: "2024",
+  q: "Citizenship is best defined as:",
+  options: [
+    "A. residence in a country",
+    "B. legal membership of a state with rights and duties",
+    "C. voting only",
+    "D. payment of taxes only"
+  ],
+  answer: "B",
+  exp: "Citizenship refers to the legal status of belonging to a state, which entitles individuals to certain rights and imposes responsibilities such as obeying laws and paying taxes."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is NOT a method of acquiring citizenship?",
+  options: [
+    "A. birth",
+    "B. naturalization",
+    "C. registration",
+    "D. election"
+  ],
+  answer: "D",
+  exp: "Citizenship can be acquired by birth, descent, registration, or naturalization. Election is a political process, not a method of acquiring citizenship."
+},
+{
+  year: "2024",
+  q: "Fundamental human rights are primarily intended to:",
+  options: [
+    "A. strengthen government power",
+    "B. protect individuals from abuse",
+    "C. limit judiciary",
+    "D. promote political parties"
+  ],
+  answer: "B",
+  exp: "Fundamental rights protect individuals from arbitrary actions of the state. They include rights such as freedom of speech, movement, and association, ensuring dignity and liberty."
+},
+{
+  year: "2024",
+  q: "Which of the following is a civic responsibility of a citizen?",
+  options: [
+    "A. ignoring laws",
+    "B. paying taxes",
+    "C. overthrowing government",
+    "D. controlling judiciary"
+  ],
+  answer: "B",
+  exp: "Civic responsibilities include obeying laws, paying taxes, voting, and participating in national development. These duties ensure the smooth functioning of the state."
+},
+{
+  year: "2024",
+  q: "Political participation refers to:",
+  options: [
+    "A. only voting",
+    "B. involvement in political processes",
+    "C. only protesting",
+    "D. government decisions"
+  ],
+  answer: "B",
+  exp: "Political participation includes voting, campaigning, protesting, and engaging in political discussions. It allows citizens to influence governance and policy-making."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains legitimacy in governance?",
+  options: [
+    "A. use of force",
+    "B. acceptance of authority by citizens",
+    "C. military control",
+    "D. economic strength"
+  ],
+  answer: "B",
+  exp: "Legitimacy refers to the acceptance of government authority by the people. When a government is seen as legitimate, citizens are more likely to obey laws voluntarily."
+},
+
+{
+  year: "2024",
+  q: "Rule of law contributes to governance by:",
+  options: [
+    "A. promoting dictatorship",
+    "B. ensuring equality before the law",
+    "C. weakening institutions",
+    "D. limiting citizens"
+  ],
+  answer: "B",
+  exp: "Rule of law ensures that all individuals and institutions, including government officials, are subject to the law. This promotes fairness, justice, and accountability."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major challenge to good governance?",
+  options: [
+    "A. transparency",
+    "B. accountability",
+    "C. corruption",
+    "D. participation"
+  ],
+  answer: "C",
+  exp: "Corruption undermines governance by diverting resources, weakening institutions, and reducing public trust. It is a major obstacle to development and stability."
+},
+{
+  year: "2024",
+  q: "The concept of responsiveness in governance implies that government:",
+  options: [
+    "A. ignores citizens",
+    "B. reacts to citizens' needs",
+    "C. controls judiciary",
+    "D. promotes secrecy"
+  ],
+  answer: "B",
+  exp: "Responsiveness means that government listens to and addresses the needs and concerns of citizens. It ensures policies reflect public interest."
+},
+{
+  year: "2024",
+  q: "Which of the following ensures citizen participation in governance?",
+  options: [
+    "A. dictatorship",
+    "B. elections",
+    "C. military rule",
+    "D. monarchy"
+  ],
+  answer: "B",
+  exp: "Elections provide citizens the opportunity to choose leaders and influence policies, making them a key tool for participation in governance."
+},
+{
+  year: "2024",
+  q: "A responsible government is one that:",
+  options: [
+    "A. ignores opposition",
+    "B. is accountable to the people",
+    "C. controls judiciary",
+    "D. suppresses rights"
+  ],
+  answer: "B",
+  exp: "A responsible government is accountable to the people and operates transparently, ensuring that decisions reflect public interest."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains the role of civil society in governance?",
+  options: [
+    "A. enforcing laws",
+    "B. monitoring government actions",
+    "C. making laws",
+    "D. conducting elections"
+  ],
+  answer: "B",
+  exp: "Civil society organizations play a key role in promoting accountability by monitoring government actions, advocating for citizens, and ensuring transparency."
+},
+{
+  year: "2024",
+  q: "A decline in public trust in government indicates:",
+  options: [
+    "A. strong legitimacy",
+    "B. weak legitimacy",
+    "C. stable governance",
+    "D. effective policies"
+  ],
+  answer: "B",
+  exp: "When citizens lose trust in government, its legitimacy weakens. This can lead to instability, protests, and reduced cooperation with authorities."
+},
+{
+  year: "2024",
+  q: "Which of the following promotes transparency in governance?",
+  options: [
+    "A. secrecy",
+    "B. access to information",
+    "C. censorship",
+    "D. military control"
+  ],
+  answer: "B",
+  exp: "Access to information allows citizens to know how decisions are made and resources are used, promoting openness and reducing corruption."
+},
 {
   year: "2024",
   q: "Good governance is best characterized by:",

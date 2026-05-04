@@ -1,49 +1,69 @@
 export const courses = [
-   
-       { id: "gov001", code: "GOV 001", title: "Elements of Government", semester: "First Semester", emoji: "🏛️",
+  {
+    id: "gov001",
+    code: "GOV001",
+    title: "Elements of Government",
+    semester: "First Semester",
+    emoji: "🏛️",
     topics: [
       { id: "nature", label: "Nature of Government and Politics" },
-      { id: "basic_concepts", label: "Basic Concepts of Government" },
-      { id: "state_structure", label: "The State, Structure and Types of Government" },
+      { id: "concepts", label: "Basic Concepts of Government" },
+      { id: "state", label: "The State, Structure and Types of Government" },
       { id: "constitution", label: "Constitution and Constitutionalism" },
       { id: "governance", label: "Governance and Citizenship" },
     ],
   },
-  { 
-    id: "gov002", code: "GOV 002", title: "Fundamentals of Government", semester: "First Semester", emoji: "⚖️",
+
+  {
+    id: "gov002",
+    code: "GOV002",
+    title: "Fundamentals of Government",
+    semester: "First Semester",
+    emoji: "⚖️",
     topics: [
-      { id: "political_ideas", label: "Political Ideas and Thoughts" },
-      { id: "parties_groups", label: "Political Parties, Party System and Pressure Groups" },
-      { id: "opinion_propaganda", label: "Public Opinion and Propaganda" },
-      { id: "elections", label: "Elections and Electoral System" },
-      { id: "social_change", label: "Political and Social Change" },
-      { id: "public_admin", label: "Public Administration" },
-      { id: "intl_relations", label: "International Relations" },
+      { id: "ideas", label: "Political Ideas and Thoughts" },
+      { id: "parties", label: "Political Parties, Party Systems and Pressure Groups" },
+      { id: "opinion", label: "Public Opinion and Propaganda" },
+      { id: "elections", label: "Elections and Electoral Systems" },
+      { id: "change", label: "Political and Social Change" },
+      { id: "admin", label: "Public Administration" },
+      { id: "intl", label: "International Relations" },
     ],
   },
-  { 
-    id: "gov003", code: "GOV 003", title: "Nigerian Government and Politics", semester: "Second Semester", emoji: "🇳🇬",
+
+  {
+    id: "gov003",
+    code: "GOV003",
+    title: "Nigerian Government and Politics",
+    semester: "Second Semester",
+    emoji: "🇳🇬",
     topics: [
-      { id: "pre_colonial", label: "Pre-Colonial Systems of Government in Nigeria" },
-      { id: "colonial_admin", label: "Colonial Administration in Nigeria" },
+      { id: "precolonial", label: "Pre-Colonial Systems of Government in Nigeria" },
+      { id: "colonial", label: "Colonial Administration in Nigeria" },
       { id: "party_dev", label: "Development of Political Parties in Nigeria" },
-      { id: "electoral_process", label: "Elections and Electoral Process in Nigeria" },
-      { id: "political_crisis", label: "Major Political Crisis in Nigeria" },
-      { id: "military_rule", label: "Military Rule and Coup d'état in Nigeria" },
-      { id: "foreign_policy", label: "Nigerian Foreign Policy" },
+      { id: "electoral_ng", label: "Elections and Electoral Process in Nigeria" },
+      { id: "crisis", label: "Major Political Crises in Nigeria" },
+      { id: "military", label: "Military Rule in Nigeria" },
+      { id: "foreign", label: "Nigerian Foreign Policy" },
     ],
   },
-  { 
-    id: "gov004", code: "GOV 004", title: "African Government and Politics", semester: "Second Semester", emoji: "🌍",
+
+  {
+    id: "gov004",
+    code: "GOV004",
+    title: "African Government and Politics",
+    semester: "Second Semester",
+    emoji: "🌍",
     topics: [
-      { id: "pre_invasion", label: "Africa Before European Invasion" },
+      { id: "africa_pre", label: "Africa Before European Invasion" },
       { id: "colonial_africa", label: "Colonial Systems of Administration in Africa" },
-      { id: "west_africa_const", label: "Constitutional Development of Selected West African Countries" },
-      { id: "nationalist_move", label: "The Nationalist Movement in West Africa" },
+      { id: "constitution_africa", label: "Constitutional Development of Selected West African Countries" },
+      { id: "nationalism", label: "Nationalist Movements in West Africa" },
       { id: "military_africa", label: "Military Intervention in Africa" },
-      { id: "democratization", label: "Democratization and Political Process in Africa" },
+      { id: "democracy_africa", label: "Democratization and Political Processes in Africa" },
     ],
   },
+
 ];
 export const notes = {
     

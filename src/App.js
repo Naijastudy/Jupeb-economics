@@ -1065,7 +1065,7 @@ if (screen === "settings") {
                 <div style={{ fontSize: 15, fontWeight: "bold", color: t.heading }}>{n.title}</div>
               </div>
               <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: "14px 16px", marginBottom: 12 }}>
-                <div style={{ fontSize: 11, color: t.keyText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>🔑 Key Point</div>
+                <div style={{ fontSize: 11, color: t.keyText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>🖥️ Key Point</div>
                 <div style={{ fontSize: 13, color: t.keyText, lineHeight: 1.8 }}>{n.key}</div>
               </div>
             {n.title === "Production Possibility Curve (PPC) graphical explanation" && (
@@ -1081,8 +1081,50 @@ if (screen === "settings") {
   }}
 />
 )}
+
+    {n.title === "Elasticity of Demand" && (
+  <img
+  src="/image/approach.png"
+  alt="Elastic of demand"
+  style={{
+    width: "100%",
+    maxHeight: "300px",
+    objectFit: "contain",
+    margin: "10px 0",
+    borderRadius: "10px"
+  }}
+/>
+)}
+
+    {n.title === "Supply & Equilibrium" && (
+  <img
+  src="/image/equilibrium.png"
+  alt="Equilibrium"
+  style={{
+    width: "100%",
+    maxHeight: "300px",
+    objectFit: "contain",
+    margin: "10px 0",
+    borderRadius: "10px"
+  }}
+/>
+)}
+
+    {n.title === "Elasticity of Demand curve" && (
+  <img
+  src="/image/ped.png"
+  alt="Demand Curve"
+  style={{
+    width: "100%",
+    maxHeight: "300px",
+    objectFit: "contain",
+    margin: "10px 0",
+    borderRadius: "10px"
+  }}
+/>
+)}
               <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px" }}>
-                <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📝 Full Explanation</div>
+                <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📜 Full Explanation</div>
                 <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>{n.body}</div>
               </div>
             </div>

@@ -1,61 +1,86 @@
-export default function Header({ onBack, title, sub, t, onToggleTheme }) {
+export default function Header({
+  onBack,
+  title,
+  sub,
+  t,
+  onToggleTheme,
+  right
+}) {
   return (
     <div
       style={{
-        padding: "14px 16px",
         background: t.bgHeader,
-        borderBottom: `1px solid ${t.border}`,
+        borderBottom: `2px solid ${t.gold}`,
+        padding: "14px 16px",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        gap: 10,
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
       }}
     >
-      {/* LEFT: BACK BUTTON */}
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-        {onBack && (
-          <button
-            onClick={onBack}
-            style={{
-              border: "none",
-              background: "transparent",
-              fontSize: 18,
-              cursor: "pointer",
-              color: t.text,
-            }}
-          >
-            ←
-          </button>
-        )}
+      {/* BACK BUTTON */}
+      {onBack && (
+        <button
+          onClick={onBack}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#fff",
+            fontSize: 22,
+            cursor: "pointer",
+            padding: 0,
+          }}
+        >
+          ←
+        </button>
+      )}
 
-        <div>
-          <div style={{ fontSize: 16, fontWeight: "bold", color: t.heading }}>
-            {title}
-          </div>
-          {sub && (
-            <div style={{ fontSize: 11, color: t.textSub }}>
-              {sub}
-            </div>
-          )}
+      {/* TITLE */}
+      <div style={{ flex: 1 }}>
+        <div
+          style={{
+            fontSize: 9,
+            color: t.gold,
+            letterSpacing: 3,
+            textTransform: "uppercase",
+          }}
+        >
+          StudyNaija
         </div>
+
+        <div style={{ fontSize: 15, fontWeight: "bold", color: "#fff" }}>
+          {title}
+        </div>
+
+        {sub && (
+          <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>
+            {sub}
+          </div>
+        )}
       </div>
 
-      {/* RIGHT: THEME TOGGLE (optional) */}
+      {/* RIGHT SLOT (optional custom UI) */}
+      {right && <div>{right}</div>}
+
+      {/* THEME TOGGLE (ONLY shows if provided) */}
       {onToggleTheme && (
         <button
           onClick={onToggleTheme}
           style={{
-            border: `1px solid ${t.border}`,
-            background: t.bgCard,
+            background: "none",
+            border: `1px solid ${t.gold}44`,
             borderRadius: 8,
-            padding: "6px 10px",
+            color: t.gold,
+            fontSize: 16,
             cursor: "pointer",
-            fontSize: 12,
-            color: t.text,
+            padding: "6px 10px",
           }}
         >
-          🌓
+          {t.toggleIcon || "🌓"}
         </button>
       )}
     </div>
   );
-                      }
+}

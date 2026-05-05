@@ -132,47 +132,47 @@ Current: <span style={{ color: t.gold }}>
 </span></div> 
           <div style={{ display: "flex", gap: 12 }}>
             {["system", "dark", "light"].map(mode => (
-              <button
-              
-                key={mode}
-                onClick={() => setThemeKey(mode)}
-                style={{
-                  flex: 1,
-                  padding: "20px 10px",
-                  borderRadius: 14,
-                  cursor: "pointer",
-                  textAlign: "center",
-                  background:
-                    
-                    themeKey === mode
-                      ? mode === "dark"
-                        ? "#1a2a1a"
-                        : "#e8f0f8"
-                      : t.bgInner,
-                  border:
-                    themeKey === mode
-                      ? `2px solid ${t.gold}`
-                      : `1px solid ${t.border}`,
-                  color: t.text,
-                }}
-              >
-                <div style={{ fontSize: 30, marginBottom: 8 }}>
-                 {mode === "system" ? "📱" : mode === "dark" ? "🌙" : "☀️"}</div>
-                <div style={{ fontSize: 13, fontWeight: "bold" }}>
-                  {mode === "dark" ? "Night Mode" : "Day Mode"}
-                </div>
-                {themeKey === mode && (
-                  <div style={{ fontSize: 10, color: t.gold, marginTop: 6 }}>
-                    ✓ Active
-                  </div>
-                )}
-                  {mode === "system"
-  ? "Auto (System)"
-  : mode === "dark"
-  ? "Night Mode"
-  : "Day Mode"}
-              </button>
-            ))}
+             <button
+  key={mode}
+  onClick={() => setThemeKey(mode)}
+  style={{
+    flex: 1,
+    padding: "20px 10px",
+    borderRadius: 14,
+    cursor: "pointer",
+    textAlign: "center",
+    background:
+      themeKey === mode
+        ? mode === "dark"
+          ? "#1a2a1a"
+          : "#e8f0f8"
+        : t.bgInner,
+    border:
+      themeKey === mode
+        ? `2px solid ${t.gold}`
+        : `1px solid ${t.border}`,
+    color: t.text,
+  }}
+>
+  <div style={{ fontSize: 30, marginBottom: 8 }}>
+    {mode === "system" ? "📱" : mode === "dark" ? "🌙" : "☀️"}
+  </div>
+
+  <div style={{ fontSize: 13, fontWeight: "bold" }}>
+    {mode === "system"
+      ? "Auto (System)"
+      : mode === "dark"
+      ? "Night Mode"
+      : "Day Mode"}
+  </div>
+
+  {themeKey === mode && (
+    <div style={{ fontSize: 10, color: t.gold, marginTop: 6 }}>
+      ✓ Active
+    </div>
+  )}
+</button>
+    ))}
           </div>
         </div>
 

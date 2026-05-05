@@ -1179,7 +1179,9 @@ return (
 {Math.min(examCount, totalQCount)} questions from {totalQCount} available
 </div>
 <button onClick={() => startExam(activeSubject)} style={goldBtn}>
-▶ Start Exam — {Math.min(examCount, totalQCount)} questions · {examMinutes >= 60 ? ${examMinutes / 60}hr : ${examMinutes}min}
+▶ Start Exam — {Math.min(examCount, totalQCount)} questions · {examMinutes >= 60
+  ? `${Math.floor(examMinutes / 60)}hr`
+  : `${examMinutes}min`}
 </button>
 </div>
 </div>
@@ -1206,7 +1208,7 @@ if (!q) return null;
 const answered = Object.keys(examAnswers).length;
 return (
 <div style={wrap}>
-<Header onBack={() => { setExamRunning(false); goTo("exam_setup"); }} title="Exam Mode" sub={${activeSubject?.name} · ${answered}/${examQs.length} answered} t={t} onToggleTheme={toggleTheme}
+<Header onBack={() => { setExamRunning(false); goTo("exam_setup"); }} title="Exam Mode" sub={`${activeSubject?.name} · ${answered}/${examQs.length} answered`} t={t} onToggleTheme={toggleTheme}
 right={<div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: examTime < 300 ? "#fff" : t.goldBtnText, marginRight: 8 }}>{formatTime(examTime)}</div>}
 />
 <div style={{ padding: "16px" }}>
@@ -1305,7 +1307,7 @@ cursor: "pointer"
 
 {answered === examQs.length
 ? "Submit Exam ✓"
-: Submit (${examQs.length - answered} unanswered)}
+: 'Submit (${examQs.length - answered} unanswered)'}
 </button>
 </div>
 {showConfirm && (

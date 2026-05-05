@@ -1166,9 +1166,12 @@ return (
     cursor: "pointer",
   }}
 >
-  {m}
+  {
+  m >= 60
+    ? `${Math.floor(m / 60)}hr ${m % 60 ? `${m % 60}min` : ""}`
+    : `${m}min`
+  }
 </button>
-  {m >= 60 ? `${m / 60}hr` : `${m}min`}</button>
 ))}
 </div>
 </div>

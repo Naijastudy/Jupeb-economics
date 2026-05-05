@@ -126,10 +126,12 @@ export default function Settings({
         <div style={card}>
           <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 16 }}>
             Display Mode
-          </div>
-
+          </div> <div style={{ fontSize: 12, color: t.textSub, marginBottom: 12 }}>
+Current: <span style={{ color: t.gold }}>
+  {themeKey === "system" ? "Auto" : themeKey}
+</span></div> 
           <div style={{ display: "flex", gap: 12 }}>
-            {["dark", "light"].map(mode => (
+            {["system", "dark", "light"].map(mode => (
               <button
                 key={mode}
                 onClick={() => setThemeKey(mode)}
@@ -140,6 +142,11 @@ export default function Settings({
                   cursor: "pointer",
                   textAlign: "center",
                   background:
+                    {mode === "system"
+  ? "Auto (System)"
+  : mode === "dark"
+  ? "Night Mode"
+  : "Day Mode"}
                     themeKey === mode
                       ? mode === "dark"
                         ? "#1a2a1a"
@@ -153,8 +160,7 @@ export default function Settings({
                 }}
               >
                 <div style={{ fontSize: 30, marginBottom: 8 }}>
-                  {mode === "dark" ? "🌙" : "☀️"}
-                </div>
+                 {mode === "system" ? "📱" : mode === "dark" ? "🌙" : "☀️"}</div>
                 <div style={{ fontSize: 13, fontWeight: "bold" }}>
                   {mode === "dark" ? "Night Mode" : "Day Mode"}
                 </div>

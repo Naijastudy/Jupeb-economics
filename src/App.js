@@ -1151,9 +1151,24 @@ return (
 <div style={card}>
 <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Time Limit</div>
 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-{[15, 30, 45, 60].map(m => (
-<button key={m} onClick={() => setExamMinutes(m)} style={{ padding: "12px 16px", borderRadius: 10, border: 2px solid ${examMinutes === m ? t.gold : t.border}, background: examMinutes === m ? ${t.gold}22 : t.bgInner, color: examMinutes === m ? t.gold : t.textSub, fontSize: 14, fontWeight: "bold", cursor: "pointer" }}>
-{m >= 60 ? ${m / 60}hr : ${m}min}
+{[5, 15, 30, 45, 60].map(m => (
+<button
+  key={m}
+  onClick={() => setExamMinutes(m)}
+  style={{
+    padding: "12px 16px",
+    borderRadius: 10,
+    border: `2px solid ${examMinutes === m ? t.gold : t.border}`,
+    background: examMinutes === m ? `${t.gold}22` : t.bgInner,
+    color: examMinutes === m ? t.gold : t.textSub,
+    fontSize: 14,
+    fontWeight: "bold",
+    cursor: "pointer",
+  }}
+>
+  {m}
+</button>
+  {m >= 60 ? ${m / 60}hr : ${m}min}
 </button>
 ))}
 </div>

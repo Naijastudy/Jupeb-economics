@@ -3809,7 +3809,7 @@ nationalism: [
   exp: "Independence marks the end of colonial rule and the beginning of self-governance."
 }
 ],
-  constitutional_africa: [
+  constitution_africa: [
 {
   year: "2024",
   q: "The Clifford Constitution of 1922 introduced:",

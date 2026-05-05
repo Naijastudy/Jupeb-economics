@@ -8,6 +8,8 @@ import Calculator from "./Calculator";
 import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
+import ExamSetup from "./screens/ExamSetup";
+import ExamQuiz from "./screens/ExamQuiz";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -1114,6 +1116,45 @@ if (screen === "settings") {
   }
 
   // ── EXAM SETUP ────────────────────────────────────────────────────────────
- 
+ if (screen === "exam_setup" && data) {
+  return (
+    <ExamSetup
+      t={t}
+      goBack={goBack}
+      activeSubject={activeSubject}
+      data={data}
+      examCount={examCount}
+      setExamCount={setExamCount}
+      examMinutes={examMinutes}
+      setExamMinutes={setExamMinutes}
+      startExam={startExam}
+      goldBtn={goldBtn}
+      toggleTheme={toggleTheme}
+    />
+  );
+}
+
+if (screen === "exam_quiz") {
+  return (
+    <ExamQuiz
+      t={t}
+      goTo={goTo}
+      activeSubject={activeSubject}
+      examQs={examQs}
+      examIdx={examIdx}
+      setExamIdx={setExamIdx}
+      examAnswers={examAnswers}
+      setExamAnswers={setExamAnswers}
+      examDone={examDone}
+      setExamDone={setExamDone}
+      setExamRunning={setExamRunning}
+      examTime={examTime}
+      setExamTime={setExamTime}
+      formatTime={formatTime}
+      user={user}
+      saveScore={saveScore}
+    />
+  );
+            }
   return null;
       }

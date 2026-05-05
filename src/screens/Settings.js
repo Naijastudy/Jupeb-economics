@@ -146,7 +146,7 @@ Current: <span style={{ color: t.gold }}>
   ? "Auto (System)"
   : mode === "dark"
   ? "Night Mode"
-  : "Day Mode"}
+  : "Day Mode"},
                     themeKey === mode
                       ? mode === "dark"
                         ? "#1a2a1a"

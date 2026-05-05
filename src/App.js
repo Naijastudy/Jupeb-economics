@@ -223,8 +223,18 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
 const [progress, setProgress] = useState(0);
-  const [themeKey, setThemeKey] = useState("dark");
-  const t = themes[themeKey];
+  const getSystemTheme = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const [themeKey, setThemeKey] = useState(() => {
+  return localStorage.getItem("theme") || "system";
+});
+  const actualTheme =
+  themeKey === "system" ? getSystemTheme() : themeKey;
+  const t = themes[actualTheme];
   const toggleTheme = () => setThemeKey(k => k === "dark" ? "light" : "dark");
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
@@ -350,7 +360,9 @@ const [pendingAction, setPendingAction] = useState(null);
     fetchFirebaseQuestions();
     return () => unsubscribe();
   }, []);
-
+useEffect(() => {
+  localStorage.setItem("theme", themeKey);
+}, [themeKey]);
   const fetchUserScores = async (uid) => {
     try {
       const q = query(
@@ -365,7 +377,19 @@ const [pendingAction, setPendingAction] = useState(null);
       console.log("Error fetching scores:", e);
     }
   };
+useEffect(() => {
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
 
+  const listener = () => {
+    if (themeKey === "system") {
+      setThemeKey("system"); // trigger re-render
+    }
+  };
+
+  media.addEventListener("change", listener);
+
+  return () => media.removeEventListener("change", listener);
+}, [themeKey]);
   const fetchFirebaseQuestions = async () => {
     try {
       const q = query(collection(db, "questions"));

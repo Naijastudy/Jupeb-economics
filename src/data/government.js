@@ -1473,6 +1473,228 @@ governance: [
 ],
 
 ideas: [
+  
+{
+  year: "2024",
+  q: "Which of the following best explains liberalism as a political ideology?",
+  options: [
+    "A. emphasis on state control of all resources",
+    "B. promotion of individual freedom and limited government",
+    "C. rejection of private property",
+    "D. support for absolute monarchy"
+  ],
+  answer: "B",
+  exp: "Liberalism emphasizes individual liberty, rule of law, and limited government intervention. It supports private property, free markets, and protection of civil rights. The core idea is that individuals should be free to pursue their interests with minimal interference."
+},
+{
+  year: "2024",
+  q: "The main objective of socialism is to:",
+  options: [
+    "A. promote inequality",
+    "B. ensure collective ownership of resources",
+    "C. strengthen monarchy",
+    "D. eliminate government"
+  ],
+  answer: "B",
+  exp: "Socialism advocates collective or state ownership of the means of production to ensure equitable distribution of wealth. It aims to reduce inequality and provide social welfare."
+},
+{
+  year: "2024",
+  q: "Karl Marx is most closely associated with:",
+  options: [
+    "A. liberalism",
+    "B. capitalism",
+    "C. communism",
+    "D. conservatism"
+  ],
+  answer: "C",
+  exp: "Karl Marx developed the theory of communism, which advocates a classless society where all property is collectively owned. He criticized capitalism for exploiting workers and creating class divisions."
+},
+{
+  year: "2024",
+  q: "Which ideology emphasizes tradition and gradual change?",
+  options: [
+    "A. liberalism",
+    "B. socialism",
+    "C. conservatism",
+    "D. communism"
+  ],
+  answer: "C",
+  exp: "Conservatism values tradition, stability, and gradual change. It resists radical reforms and supports existing institutions and practices."
+},
+{
+  year: "2024",
+  q: "The concept of 'class struggle' is central to:",
+  options: [
+    "A. liberalism",
+    "B. socialism",
+    "C. Marxism",
+    "D. conservatism"
+  ],
+  answer: "C",
+  exp: "Marxism emphasizes the conflict between different social classes, particularly between the bourgeoisie (owners of production) and proletariat (workers). This struggle drives social and economic change."
+},
+
+{
+  year: "2024",
+  q: "Which philosopher is associated with the idea of the social contract?",
+  options: [
+    "A. Aristotle",
+    "B. Thomas Hobbes",
+    "C. Karl Marx",
+    "D. Montesquieu"
+  ],
+  answer: "B",
+  exp: "Thomas Hobbes proposed the social contract theory, arguing that individuals give up some freedoms to a sovereign authority in exchange for security and order."
+},
+{
+  year: "2024",
+  q: "John Locke's contribution to political thought includes:",
+  options: [
+    "A. absolute monarchy",
+    "B. natural rights and limited government",
+    "C. communism",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "John Locke argued that individuals have natural rights to life, liberty, and property. He believed government should protect these rights and remain limited."
+},
+{
+  year: "2024",
+  q: "Jean-Jacques Rousseau emphasized:",
+  options: [
+    "A. divine right of kings",
+    "B. general will and popular sovereignty",
+    "C. capitalism",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "Rousseau introduced the concept of the 'general will,' representing the collective interest of the people. He emphasized popular sovereignty and direct democracy."
+},
+{
+  year: "2024",
+  q: "Which of the following best defines democracy?",
+  options: [
+    "A. rule by one person",
+    "B. rule by a few elites",
+    "C. government by the people",
+    "D. military government"
+  ],
+  answer: "C",
+  exp: "Democracy is a system of government in which power resides with the people, either directly or through elected representatives. It promotes participation, equality, and accountability."
+},
+{
+  year: "2024",
+  q: "Equality in political theory primarily refers to:",
+  options: [
+    "A. equal wealth",
+    "B. equal political rights",
+    "C. equal intelligence",
+    "D. equal culture"
+  ],
+  answer: "B",
+  exp: "Political equality means that all citizens have equal rights and opportunities to participate in governance, such as voting and contesting elections."
+},
+
+{
+  year: "2024",
+  q: "Liberty is best described as:",
+  options: [
+    "A. absence of law",
+    "B. freedom within the law",
+    "C. total independence",
+    "D. government control"
+  ],
+  answer: "B",
+  exp: "Liberty refers to the freedom of individuals to act within the limits of the law. Absolute freedom is not possible, as laws are needed to protect others' rights."
+},
+{
+  year: "2024",
+  q: "Which ideology advocates the abolition of private property?",
+  options: [
+    "A. liberalism",
+    "B. socialism",
+    "C. communism",
+    "D. conservatism"
+  ],
+  answer: "C",
+  exp: "Communism seeks to abolish private ownership of the means of production and establish collective ownership to eliminate class differences."
+},
+{
+  year: "2024",
+  q: "The theory that government authority comes from God is known as:",
+  options: [
+    "A. social contract",
+    "B. divine right theory",
+    "C. Marxism",
+    "D. democracy"
+  ],
+  answer: "B",
+  exp: "The divine right theory claims that rulers derive authority directly from God and are accountable only to Him, not the people."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains capitalism?",
+  options: [
+    "A. state ownership of resources",
+    "B. private ownership and profit motive",
+    "C. communal ownership",
+    "D. absence of markets"
+  ],
+  answer: "B",
+  exp: "Capitalism is an economic system based on private ownership of resources, market competition, and profit-making. It promotes efficiency but may lead to inequality."
+},
+{
+  year: "2024",
+  q: "Which concept emphasizes fairness in distribution of resources?",
+  options: [
+    "A. liberty",
+    "B. justice",
+    "C. authority",
+    "D. sovereignty"
+  ],
+  answer: "B",
+  exp: "Justice involves fairness in the distribution of resources, opportunities, and rights within society. It ensures equity and social balance."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following thinkers advocated separation of powers?",
+  options: [
+    "A. Hobbes",
+    "B. Locke",
+    "C. Montesquieu",
+    "D. Marx"
+  ],
+  answer: "C",
+  exp: "Montesquieu proposed separation of powers as a way to prevent tyranny by dividing government authority among different branches."
+},
+{
+  year: "2024",
+  q: "Which ideology is most closely associated with free market economy?",
+  options: [
+    "A. socialism",
+    "B. communism",
+    "C. liberalism",
+    "D. conservatism"
+  ],
+  answer: "C",
+  exp: "Liberalism supports free market economy with minimal government intervention, encouraging competition and individual enterprise."
+},
+{
+  year: "2024",
+  q: "A system where leaders are chosen by citizens through elections is:",
+  options: [
+    "A. monarchy",
+    "B. democracy",
+    "C. dictatorship",
+    "D. oligarchy"
+  ],
+  answer: "B",
+  exp: "Democracy allows citizens to choose leaders through elections, ensuring representation and accountability."
+},
 {
   year: "2024",
   q: "Which ideology supports abolition of the state?",
@@ -1500,6 +1722,228 @@ ideas: [
 ],
 
 parties: [
+  
+{
+  year: "2024",
+  q: "Which of the following best defines a political party?",
+  options: [
+    "A. a group of individuals seeking social change only",
+    "B. an organized group seeking to control government through elections",
+    "C. a group formed to oppose government policies",
+    "D. an association of workers for economic benefits"
+  ],
+  answer: "B",
+  exp: "A political party is an organized group of people with similar political ideologies who aim to capture and control government power through elections. Unlike pressure groups, their primary objective is to form government."
+},
+{
+  year: "2024",
+  q: "The main objective of a political party is to:",
+  options: [
+    "A. influence policy indirectly",
+    "B. educate citizens only",
+    "C. capture political power",
+    "D. provide employment"
+  ],
+  answer: "C",
+  exp: "Political parties are primarily formed to gain political power and control government. While they may educate and mobilize citizens, their ultimate aim is to govern."
+},
+{
+  year: "2024",
+  q: "Which of the following distinguishes a political party from a pressure group?",
+  options: [
+    "A. parties are informal, pressure groups are formal",
+    "B. parties contest elections, pressure groups do not",
+    "C. pressure groups form government",
+    "D. both are identical"
+  ],
+  answer: "B",
+  exp: "Political parties contest elections to form government, while pressure groups do not seek political power directly. Instead, they influence government policies."
+},
+{
+  year: "2024",
+  q: "A one-party system is often associated with:",
+  options: [
+    "A. liberal democracy",
+    "B. authoritarian regimes",
+    "C. federalism",
+    "D. separation of powers"
+  ],
+  answer: "B",
+  exp: "A one-party system is commonly found in authoritarian states where political competition is restricted. It limits political pluralism and often suppresses opposition."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of a two-party system?",
+  options: [
+    "A. multiple parties share power",
+    "B. dominance of two major parties",
+    "C. absence of opposition",
+    "D. coalition governments only"
+  ],
+  answer: "B",
+  exp: "A two-party system is characterized by two dominant political parties that alternate in power. Smaller parties may exist but rarely win major elections."
+},
+
+{
+  year: "2024",
+  q: "Which party system is most likely to produce coalition governments?",
+  options: [
+    "A. one-party system",
+    "B. two-party system",
+    "C. multi-party system",
+    "D. military system"
+  ],
+  answer: "C",
+  exp: "In a multi-party system, no single party usually gains absolute majority, leading to coalition governments where parties collaborate to form government."
+},
+{
+  year: "2024",
+  q: "Which of the following is NOT a function of political parties?",
+  options: [
+    "A. political education",
+    "B. recruitment of leaders",
+    "C. adjudication of disputes",
+    "D. aggregation of interests"
+  ],
+  answer: "C",
+  exp: "Political parties educate citizens, recruit leaders, and aggregate interests. However, adjudication of disputes is primarily a function of the judiciary."
+},
+{
+  year: "2024",
+  q: "Pressure groups differ from political parties in that they:",
+  options: [
+    "A. contest elections",
+    "B. aim to control government",
+    "C. influence policies without seeking power",
+    "D. represent citizens in parliament"
+  ],
+  answer: "C",
+  exp: "Pressure groups focus on influencing government decisions and policies without directly seeking to form government or contest elections."
+},
+{
+  year: "2024",
+  q: "Which of the following is a sectional pressure group?",
+  options: [
+    "A. trade union",
+    "B. environmental group",
+    "C. human rights organization",
+    "D. religious reform group"
+  ],
+  answer: "A",
+  exp: "Sectional pressure groups represent specific interests of a particular group, such as workers (trade unions) or professionals."
+},
+{
+  year: "2024",
+  q: "Promotional pressure groups aim to:",
+  options: [
+    "A. promote specific causes",
+    "B. protect members only",
+    "C. control government",
+    "D. contest elections"
+  ],
+  answer: "A",
+  exp: "Promotional groups advocate for broader causes such as environmental protection or human rights, rather than representing a specific group."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains party ideology?",
+  options: [
+    "A. leadership structure",
+    "B. guiding principles and beliefs",
+    "C. campaign strategy",
+    "D. election process"
+  ],
+  answer: "B",
+  exp: "Party ideology refers to the set of beliefs and principles that guide a political party's policies and actions."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major advantage of a two-party system?",
+  options: [
+    "A. political instability",
+    "B. clear choice for voters",
+    "C. weak opposition",
+    "D. coalition dominance"
+  ],
+  answer: "B",
+  exp: "A two-party system provides voters with clear alternatives and often leads to stable governments."
+},
+{
+  year: "2024",
+  q: "A major disadvantage of a multi-party system is:",
+  options: [
+    "A. lack of representation",
+    "B. political instability",
+    "C. absence of opposition",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "Multi-party systems often lead to unstable coalition governments, as parties may disagree on policies."
+},
+{
+  year: "2024",
+  q: "Which method do pressure groups commonly use to influence government?",
+  options: [
+    "A. elections",
+    "B. lobbying",
+    "C. legislation",
+    "D. adjudication"
+  ],
+  answer: "B",
+  exp: "Lobbying involves persuading government officials to adopt certain policies. It is a key method used by pressure groups."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains interest aggregation?",
+  options: [
+    "A. combining different interests into policies",
+    "B. selecting candidates",
+    "C. conducting elections",
+    "D. enforcing laws"
+  ],
+  answer: "A",
+  exp: "Interest aggregation involves combining diverse demands from society into coherent policies, a key function of political parties."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following ensures internal democracy within parties?",
+  options: [
+    "A. appointment of leaders",
+    "B. regular party elections",
+    "C. military control",
+    "D. government interference"
+  ],
+  answer: "B",
+  exp: "Internal democracy ensures that party members can participate in decision-making through transparent elections and processes."
+},
+{
+  year: "2024",
+  q: "Which of the following is a key role of opposition parties?",
+  options: [
+    "A. enforce laws",
+    "B. criticize government policies",
+    "C. control judiciary",
+    "D. conduct elections"
+  ],
+  answer: "B",
+  exp: "Opposition parties provide checks on the ruling party by criticizing policies and offering alternatives, strengthening democracy."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains political pluralism?",
+  options: [
+    "A. one-party dominance",
+    "B. existence of multiple parties and groups",
+    "C. absence of opposition",
+    "D. military governance"
+  ],
+  answer: "B",
+  exp: "Political pluralism allows multiple parties and interest groups to coexist, promoting diversity and competition in politics."
+},
 {
   year: "2024",
   q: "A dominant-party system is one where:",
@@ -1515,6 +1959,228 @@ parties: [
 ],
 
 opinion: [
+  
+{
+  year: "2024",
+  q: "Public opinion is best defined as:",
+  options: [
+    "A. views of government officials",
+    "B. collective views of citizens on public issues",
+    "C. opinions of political parties only",
+    "D. decisions made by the judiciary"
+  ],
+  answer: "B",
+  exp: "Public opinion refers to the aggregate views, beliefs, and attitudes of citizens on political and social issues. It plays a crucial role in shaping government policies and democratic processes."
+},
+{
+  year: "2024",
+  q: "Which of the following is the most influential agent in shaping public opinion?",
+  options: [
+    "A. judiciary",
+    "B. media",
+    "C. military",
+    "D. legislature"
+  ],
+  answer: "B",
+  exp: "The media is a powerful agent of opinion formation because it disseminates information widely and influences how people perceive political events and issues."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains propaganda?",
+  options: [
+    "A. objective presentation of facts",
+    "B. biased information aimed at influencing opinion",
+    "C. academic research",
+    "D. legal interpretation"
+  ],
+  answer: "B",
+  exp: "Propaganda involves the deliberate use of biased or misleading information to shape public opinion and promote a particular agenda. It often appeals to emotions rather than logic."
+},
+{
+  year: "2024",
+  q: "Which propaganda technique involves using respected personalities to endorse an idea?",
+  options: [
+    "A. bandwagon",
+    "B. testimonial",
+    "C. name-calling",
+    "D. card stacking"
+  ],
+  answer: "B",
+  exp: "The testimonial technique uses endorsements from influential or respected figures to persuade people to accept a message or idea."
+},
+{
+  year: "2024",
+  q: "Bandwagon propaganda appeals to:",
+  options: [
+    "A. fear",
+    "B. authority",
+    "C. desire to follow the majority",
+    "D. logic"
+  ],
+  answer: "C",
+  exp: "Bandwagon appeals encourage people to adopt an idea because 'everyone else is doing it,' creating pressure to conform."
+},
+
+{
+  year: "2024",
+  q: "Which technique involves presenting only one side of an argument?",
+  options: [
+    "A. testimonial",
+    "B. card stacking",
+    "C. glittering generalities",
+    "D. transfer"
+  ],
+  answer: "B",
+  exp: "Card stacking involves selectively presenting facts or arguments that support a particular viewpoint while ignoring opposing evidence."
+},
+{
+  year: "2024",
+  q: "Public opinion can be measured through:",
+  options: [
+    "A. elections only",
+    "B. opinion polls",
+    "C. court rulings",
+    "D. military actions"
+  ],
+  answer: "B",
+  exp: "Opinion polls are scientific methods used to measure public opinion by sampling the views of a population."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains the role of education in opinion formation?",
+  options: [
+    "A. it restricts thinking",
+    "B. it shapes critical reasoning",
+    "C. it enforces government views",
+    "D. it eliminates bias"
+  ],
+  answer: "B",
+  exp: "Education equips individuals with analytical skills, enabling them to evaluate information critically and form independent opinions."
+},
+{
+  year: "2024",
+  q: "Which propaganda technique uses vague but positive statements?",
+  options: [
+    "A. name-calling",
+    "B. glittering generalities",
+    "C. bandwagon",
+    "D. testimonial"
+  ],
+  answer: "B",
+  exp: "Glittering generalities use emotionally appealing but vague terms (e.g., 'freedom', 'justice') to persuade without providing concrete evidence."
+},
+{
+  year: "2024",
+  q: "Which factor most strongly affects public opinion in rural areas?",
+  options: [
+    "A. social media",
+    "B. traditional leaders",
+    "C. international news",
+    "D. judiciary"
+  ],
+  answer: "B",
+  exp: "In rural areas, traditional leaders and community influencers often play a major role in shaping opinions due to strong cultural ties."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains name-calling propaganda?",
+  options: [
+    "A. praising ideas",
+    "B. attaching negative labels to opponents",
+    "C. presenting facts objectively",
+    "D. encouraging debate"
+  ],
+  answer: "B",
+  exp: "Name-calling involves labeling opponents with negative terms to discredit them without addressing their arguments."
+},
+{
+  year: "2024",
+  q: "The role of the press in democracy is to:",
+  options: [
+    "A. control government",
+    "B. inform and educate the public",
+    "C. enforce laws",
+    "D. conduct elections"
+  ],
+  answer: "B",
+  exp: "The press provides information, educates citizens, and acts as a watchdog over government actions, promoting accountability."
+},
+{
+  year: "2024",
+  q: "Which of the following weakens public opinion?",
+  options: [
+    "A. access to information",
+    "B. censorship",
+    "C. education",
+    "D. participation"
+  ],
+  answer: "B",
+  exp: "Censorship restricts access to information, preventing citizens from forming informed opinions."
+},
+{
+  year: "2024",
+  q: "Which method ensures scientific measurement of opinion?",
+  options: [
+    "A. propaganda",
+    "B. opinion polls",
+    "C. speeches",
+    "D. protests"
+  ],
+  answer: "B",
+  exp: "Opinion polls use statistical methods to accurately reflect public views, making them reliable tools for measuring opinion."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains political socialization in relation to opinion?",
+  options: [
+    "A. formation of laws",
+    "B. acquisition of political beliefs",
+    "C. election process",
+    "D. judicial decisions"
+  ],
+  answer: "B",
+  exp: "Political socialization is the process through which individuals acquire political beliefs and attitudes, influencing public opinion."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following ensures freedom of opinion?",
+  options: [
+    "A. censorship",
+    "B. rule of law",
+    "C. dictatorship",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "Rule of law protects freedoms, including freedom of expression, allowing citizens to form and express opinions without fear."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains media bias?",
+  options: [
+    "A. objective reporting",
+    "B. selective presentation of information",
+    "C. legal interpretation",
+    "D. public participation"
+  ],
+  answer: "B",
+  exp: "Media bias occurs when information is presented in a way that favors a particular perspective, influencing public perception."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major danger of propaganda?",
+  options: [
+    "A. promotes truth",
+    "B. misleads the public",
+    "C. encourages debate",
+    "D. increases awareness"
+  ],
+  answer: "B",
+  exp: "Propaganda can distort facts and manipulate emotions, leading to misinformation and poor decision-making."
+},
 {
   year: "2024",
   q: "Which method is most reliable for measuring public opinion?",
@@ -1530,6 +2196,228 @@ opinion: [
 ],
 
 elections: [
+  
+{
+  year: "2024",
+  q: "Which of the following best defines an election?",
+  options: [
+    "A. appointment of leaders",
+    "B. process of selecting leaders through voting",
+    "C. judicial decision-making",
+    "D. legislative debate"
+  ],
+  answer: "B",
+  exp: "An election is the formal process through which citizens choose their representatives or leaders by casting votes. It is a key feature of democratic governance."
+},
+{
+  year: "2024",
+  q: "Universal adult suffrage implies that:",
+  options: [
+    "A. only educated citizens can vote",
+    "B. all adults have the right to vote",
+    "C. only men can vote",
+    "D. only taxpayers can vote"
+  ],
+  answer: "B",
+  exp: "Universal adult suffrage means that all adult citizens, regardless of gender, race, or status, have the right to vote, ensuring equality in political participation."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains a secret ballot?",
+  options: [
+    "A. open voting system",
+    "B. voting conducted in private",
+    "C. voting by representatives",
+    "D. public declaration of votes"
+  ],
+  answer: "B",
+  exp: "A secret ballot ensures that voters cast their votes privately, preventing intimidation, coercion, or undue influence."
+},
+{
+  year: "2024",
+  q: "The simple majority system is also known as:",
+  options: [
+    "A. proportional representation",
+    "B. first-past-the-post",
+    "C. electoral college",
+    "D. indirect voting"
+  ],
+  answer: "B",
+  exp: "First-past-the-post (FPTP) is a system where the candidate with the highest number of votes wins, even if they do not have an absolute majority."
+},
+{
+  year: "2024",
+  q: "A major disadvantage of the first-past-the-post system is that it:",
+  options: [
+    "A. promotes fairness",
+    "B. wastes votes",
+    "C. encourages representation",
+    "D. eliminates opposition"
+  ],
+  answer: "B",
+  exp: "In FPTP, votes cast for losing candidates are wasted, and even the winner may not represent the majority, leading to unfair representation."
+},
+
+{
+  year: "2024",
+  q: "Which electoral system aims to reflect the proportion of votes received by parties?",
+  options: [
+    "A. plurality system",
+    "B. proportional representation",
+    "C. indirect election",
+    "D. majority system"
+  ],
+  answer: "B",
+  exp: "Proportional representation allocates seats based on the percentage of votes received, ensuring fair representation of different groups."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of proportional representation?",
+  options: [
+    "A. single-member constituencies",
+    "B. fair representation of minority parties",
+    "C. winner takes all",
+    "D. limited participation"
+  ],
+  answer: "B",
+  exp: "Proportional representation ensures that minority parties gain representation in proportion to their support, promoting inclusiveness."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains indirect elections?",
+  options: [
+    "A. citizens vote directly",
+    "B. representatives vote on behalf of citizens",
+    "C. voting is compulsory",
+    "D. election is conducted secretly"
+  ],
+  answer: "B",
+  exp: "In indirect elections, citizens elect representatives who then choose leaders on their behalf, such as in electoral college systems."
+},
+{
+  year: "2024",
+  q: "The body responsible for conducting elections is known as:",
+  options: [
+    "A. judiciary",
+    "B. electoral commission",
+    "C. legislature",
+    "D. executive"
+  ],
+  answer: "B",
+  exp: "The electoral commission is an independent body responsible for organizing and supervising elections to ensure fairness and credibility."
+},
+{
+  year: "2024",
+  q: "Which of the following ensures credibility of elections?",
+  options: [
+    "A. secrecy",
+    "B. transparency",
+    "C. manipulation",
+    "D. coercion"
+  ],
+  answer: "B",
+  exp: "Transparency ensures that the electoral process is open and verifiable, building trust among voters and stakeholders."
+},
+
+{
+  year: "2024",
+  q: "Electoral malpractice includes:",
+  options: [
+    "A. free voting",
+    "B. ballot stuffing",
+    "C. secret ballot",
+    "D. fair counting"
+  ],
+  answer: "B",
+  exp: "Ballot stuffing involves illegally adding votes to favor a candidate, undermining the credibility of elections."
+},
+{
+  year: "2024",
+  q: "Which of the following is a stage in the electoral process?",
+  options: [
+    "A. adjudication",
+    "B. voter registration",
+    "C. legislation",
+    "D. taxation"
+  ],
+  answer: "B",
+  exp: "Voter registration is a key stage where eligible citizens are recorded to participate in elections."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains voter apathy?",
+  options: [
+    "A. high participation",
+    "B. lack of interest in voting",
+    "C. fair elections",
+    "D. strong democracy"
+  ],
+  answer: "B",
+  exp: "Voter apathy refers to a lack of interest or motivation among citizens to participate in elections, which weakens democracy."
+},
+{
+  year: "2024",
+  q: "Which factor most encourages voter participation?",
+  options: [
+    "A. fear",
+    "B. trust in electoral process",
+    "C. coercion",
+    "D. violence"
+  ],
+  answer: "B",
+  exp: "When citizens trust that elections are free and fair, they are more likely to participate actively."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains electoral violence?",
+  options: [
+    "A. peaceful voting",
+    "B. use of force during elections",
+    "C. legal disputes",
+    "D. campaigning"
+  ],
+  answer: "B",
+  exp: "Electoral violence involves the use of force or intimidation before, during, or after elections, undermining democracy."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following ensures equal voting rights?",
+  options: [
+    "A. dictatorship",
+    "B. universal suffrage",
+    "C. monarchy",
+    "D. oligarchy"
+  ],
+  answer: "B",
+  exp: "Universal suffrage guarantees that all adult citizens have equal rights to vote, promoting fairness in elections."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major function of elections in democracy?",
+  options: [
+    "A. enforcing laws",
+    "B. legitimizing government",
+    "C. controlling judiciary",
+    "D. promoting dictatorship"
+  ],
+  answer: "B",
+  exp: "Elections legitimize governments by providing them with authority derived from the consent of the people."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains electoral fairness?",
+  options: [
+    "A. manipulation of votes",
+    "B. equal opportunity for candidates",
+    "C. military control",
+    "D. restricted voting"
+  ],
+  answer: "B",
+  exp: "Electoral fairness ensures that all candidates have equal opportunities and that the process is free from bias or manipulation."
+},
 {
   year: "2024",
   q: "Proportional representation ensures that:",
@@ -1545,6 +2433,228 @@ elections: [
 ],
 
 change: [
+  
+{
+  year: "2024",
+  q: "Political change is best defined as:",
+  options: [
+    "A. change in economic policy only",
+    "B. alteration in political structure or leadership",
+    "C. change in culture",
+    "D. judicial decisions"
+  ],
+  answer: "B",
+  exp: "Political change refers to any transformation in the structure, leadership, or functioning of a political system. It may occur through peaceful or violent means and can affect governance, institutions, and policies."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains revolution?",
+  options: [
+    "A. gradual change",
+    "B. sudden and violent overthrow of government",
+    "C. peaceful reform",
+    "D. judicial review"
+  ],
+  answer: "B",
+  exp: "Revolution is a rapid and often violent change in political power and structure. It usually occurs when existing systems fail to address societal needs, leading to mass uprising."
+},
+{
+  year: "2024",
+  q: "A coup d’état is characterized by:",
+  options: [
+    "A. popular uprising",
+    "B. military takeover of government",
+    "C. constitutional amendment",
+    "D. peaceful transition"
+  ],
+  answer: "B",
+  exp: "A coup d’état is the sudden and illegal seizure of power, typically by the military or a small group. It does not usually involve mass public participation like a revolution."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains reform?",
+  options: [
+    "A. violent overthrow",
+    "B. gradual and peaceful change",
+    "C. military intervention",
+    "D. judicial decision"
+  ],
+  answer: "B",
+  exp: "Reform involves gradual and peaceful changes within an existing system to improve it without overthrowing it. It is often achieved through legislation or policy adjustments."
+},
+{
+  year: "2024",
+  q: "Evolution in political change refers to:",
+  options: [
+    "A. sudden transformation",
+    "B. gradual and continuous development",
+    "C. violent revolution",
+    "D. military takeover"
+  ],
+  answer: "B",
+  exp: "Evolution describes slow and continuous change over time. It allows institutions to adapt gradually without causing instability."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a major cause of revolution?",
+  options: [
+    "A. political stability",
+    "B. economic inequality",
+    "C. effective governance",
+    "D. strong institutions"
+  ],
+  answer: "B",
+  exp: "Economic inequality often leads to dissatisfaction among citizens, creating conditions for revolution as people seek to change the system."
+},
+{
+  year: "2024",
+  q: "A key difference between coup d’état and revolution is that:",
+  options: [
+    "A. coup is violent, revolution is peaceful",
+    "B. revolution involves mass participation",
+    "C. coup is legal",
+    "D. revolution is military-led only"
+  ],
+  answer: "B",
+  exp: "Revolutions typically involve widespread public participation, while coups are usually carried out by a small group, often the military."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains political instability?",
+  options: [
+    "A. stable leadership",
+    "B. frequent changes in government",
+    "C. effective policies",
+    "D. strong institutions"
+  ],
+  answer: "B",
+  exp: "Political instability occurs when there are frequent changes in leadership or governance structures, often leading to uncertainty and weakened institutions."
+},
+{
+  year: "2024",
+  q: "Which factor most likely leads to a coup d’état?",
+  options: [
+    "A. strong democratic institutions",
+    "B. weak governance and corruption",
+    "C. effective leadership",
+    "D. economic growth"
+  ],
+  answer: "B",
+  exp: "Weak governance, corruption, and lack of legitimacy create opportunities for the military or elites to seize power through a coup."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains peaceful political change?",
+  options: [
+    "A. revolution",
+    "B. reform",
+    "C. coup",
+    "D. conflict"
+  ],
+  answer: "B",
+  exp: "Peaceful political change occurs through reform, where policies and institutions are improved without violence or disruption."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a consequence of political instability?",
+  options: [
+    "A. economic growth",
+    "B. investor confidence",
+    "C. economic decline",
+    "D. social harmony"
+  ],
+  answer: "C",
+  exp: "Political instability discourages investment, disrupts economic activities, and often leads to economic decline."
+},
+{
+  year: "2024",
+  q: "Which of the following distinguishes reform from revolution?",
+  options: [
+    "A. reform is violent",
+    "B. revolution is gradual",
+    "C. reform is peaceful and gradual",
+    "D. both are identical"
+  ],
+  answer: "C",
+  exp: "Reform is gradual and peaceful, while revolution is usually sudden and violent, involving fundamental changes."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of revolution?",
+  options: [
+    "A. stability",
+    "B. gradual change",
+    "C. radical transformation",
+    "D. legal process"
+  ],
+  answer: "C",
+  exp: "Revolutions bring radical and fundamental changes to political systems, often replacing existing structures entirely."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains legitimacy in relation to political change?",
+  options: [
+    "A. use of force",
+    "B. acceptance of authority",
+    "C. military control",
+    "D. economic power"
+  ],
+  answer: "B",
+  exp: "Legitimacy refers to the acceptance of authority by the people. Lack of legitimacy often leads to political change."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains counter-revolution?",
+  options: [
+    "A. support for change",
+    "B. attempt to reverse a revolution",
+    "C. peaceful reform",
+    "D. military takeover"
+  ],
+  answer: "B",
+  exp: "A counter-revolution is an effort to reverse the changes brought by a revolution and restore the previous system."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following best explains political reform?",
+  options: [
+    "A. violent overthrow",
+    "B. improvement within system",
+    "C. military takeover",
+    "D. judicial ruling"
+  ],
+  answer: "B",
+  exp: "Political reform focuses on improving existing systems without destroying them, ensuring stability and continuity."
+},
+{
+  year: "2024",
+  q: "Which of the following promotes political stability?",
+  options: [
+    "A. corruption",
+    "B. strong institutions",
+    "C. frequent coups",
+    "D. violence"
+  ],
+  answer: "B",
+  exp: "Strong institutions ensure continuity, accountability, and effective governance, promoting stability."
+},
+{
+  year: "2024",
+  q: "Which of the following is a long-term effect of revolution?",
+  options: [
+    "A. immediate stability",
+    "B. institutional restructuring",
+    "C. no change",
+    "D. legal continuity"
+  ],
+  answer: "B",
+  exp: "Revolutions often lead to major restructuring of political institutions and systems over the long term."
+},
 {
   year: "2024",
   q: "A reformative change is characterized by:",
@@ -1560,6 +2670,228 @@ change: [
 ],
 
 admin: [
+  
+{
+  year: "2024",
+  q: "Public administration is best defined as:",
+  options: [
+    "A. making laws",
+    "B. implementation of government policies",
+    "C. conducting elections",
+    "D. interpreting laws"
+  ],
+  answer: "B",
+  exp: "Public administration deals with the execution and implementation of government policies and decisions. While politicians formulate policies, administrators ensure they are carried out efficiently."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains civil service?",
+  options: [
+    "A. elected officials",
+    "B. permanent government employees",
+    "C. political party members",
+    "D. military officers"
+  ],
+  answer: "B",
+  exp: "The civil service consists of permanent, professional government employees who assist in policy implementation regardless of changes in political leadership."
+},
+{
+  year: "2024",
+  q: "A key feature of civil service is:",
+  options: [
+    "A. political neutrality",
+    "B. partisanship",
+    "C. temporary employment",
+    "D. military control"
+  ],
+  answer: "A",
+  exp: "Civil servants are expected to remain politically neutral, serving any government in power without bias or political involvement."
+},
+{
+  year: "2024",
+  q: "Which principle ensures that civil servants are selected based on competence?",
+  options: [
+    "A. federal character",
+    "B. merit system",
+    "C. quota system",
+    "D. seniority rule"
+  ],
+  answer: "B",
+  exp: "The merit system ensures that recruitment and promotion in the civil service are based on qualifications, skills, and performance rather than favoritism."
+},
+{
+  year: "2024",
+  q: "Bureaucracy is best described as:",
+  options: [
+    "A. political leadership",
+    "B. structured administrative system",
+    "C. military organization",
+    "D. legislative process"
+  ],
+  answer: "B",
+  exp: "Bureaucracy refers to a hierarchical and organized system of administration with clear rules, procedures, and authority structures."
+},
+
+{
+  year: "2024",
+  q: "Max Weber is associated with the concept of:",
+  options: [
+    "A. democracy",
+    "B. bureaucracy",
+    "C. socialism",
+    "D. federalism"
+  ],
+  answer: "B",
+  exp: "Max Weber developed the theory of bureaucracy, emphasizing hierarchy, specialization, and formal rules as essential for efficient administration."
+},
+{
+  year: "2024",
+  q: "Which of the following is a function of public administration?",
+  options: [
+    "A. making laws",
+    "B. implementing policies",
+    "C. conducting elections only",
+    "D. interpreting laws"
+  ],
+  answer: "B",
+  exp: "Public administration focuses on implementing government policies and ensuring efficient service delivery."
+},
+{
+  year: "2024",
+  q: "Which of the following ensures continuity in government?",
+  options: [
+    "A. legislature",
+    "B. civil service",
+    "C. judiciary",
+    "D. executive"
+  ],
+  answer: "B",
+  exp: "Civil servants remain in office despite changes in political leadership, ensuring continuity in administration."
+},
+{
+  year: "2024",
+  q: "Which of the following is NOT a feature of bureaucracy?",
+  options: [
+    "A. hierarchy",
+    "B. specialization",
+    "C. informality",
+    "D. rules and regulations"
+  ],
+  answer: "C",
+  exp: "Bureaucracy is characterized by formal rules, hierarchy, and specialization, not informality."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains red-tapism?",
+  options: [
+    "A. efficiency",
+    "B. excessive adherence to rules",
+    "C. flexibility",
+    "D. innovation"
+  ],
+  answer: "B",
+  exp: "Red-tapism refers to excessive bureaucracy and rigid adherence to procedures, causing delays and inefficiency."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a major problem of public administration?",
+  options: [
+    "A. efficiency",
+    "B. corruption",
+    "C. transparency",
+    "D. accountability"
+  ],
+  answer: "B",
+  exp: "Corruption undermines public administration by diverting resources, reducing efficiency, and eroding public trust."
+},
+{
+  year: "2024",
+  q: "Which of the following promotes efficiency in administration?",
+  options: [
+    "A. corruption",
+    "B. training of personnel",
+    "C. favoritism",
+    "D. secrecy"
+  ],
+  answer: "B",
+  exp: "Training improves skills and competence of civil servants, leading to more effective service delivery."
+},
+{
+  year: "2024",
+  q: "Which of the following ensures accountability in public administration?",
+  options: [
+    "A. secrecy",
+    "B. audit and oversight",
+    "C. dictatorship",
+    "D. military control"
+  ],
+  answer: "B",
+  exp: "Auditing and oversight mechanisms ensure that public officials are accountable for their actions and use of resources."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains decentralization?",
+  options: [
+    "A. concentration of power",
+    "B. distribution of authority",
+    "C. military control",
+    "D. judicial dominance"
+  ],
+  answer: "B",
+  exp: "Decentralization involves distributing authority to lower levels of government to improve efficiency and responsiveness."
+},
+{
+  year: "2024",
+  q: "Which of the following is a merit of bureaucracy?",
+  options: [
+    "A. rigidity",
+    "B. inefficiency",
+    "C. predictability",
+    "D. corruption"
+  ],
+  answer: "C",
+  exp: "Bureaucracy provides predictability through established rules and procedures, ensuring consistency in decision-making."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following is a demerit of bureaucracy?",
+  options: [
+    "A. specialization",
+    "B. hierarchy",
+    "C. delay in decision-making",
+    "D. professionalism"
+  ],
+  answer: "C",
+  exp: "Bureaucratic procedures can be slow, leading to delays in decision-making and service delivery."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains administrative reform?",
+  options: [
+    "A. maintaining status quo",
+    "B. improving administrative efficiency",
+    "C. military takeover",
+    "D. judicial decision"
+  ],
+  answer: "B",
+  exp: "Administrative reform aims to improve efficiency, transparency, and accountability in public administration."
+},
+{
+  year: "2024",
+  q: "Which of the following promotes neutrality in civil service?",
+  options: [
+    "A. political involvement",
+    "B. professionalism",
+    "C. favoritism",
+    "D. corruption"
+  ],
+  answer: "B",
+  exp: "Professionalism ensures that civil servants perform their duties objectively without political bias."
+},
 {
   year: "2024",
   q: "One major weakness of bureaucracy is:",
@@ -1575,6 +2907,228 @@ admin: [
 ],
 
 intl: [
+  
+{
+  year: "2024",
+  q: "International relations is best defined as:",
+  options: [
+    "A. relations within a country",
+    "B. interactions among sovereign states",
+    "C. activities of political parties",
+    "D. judicial cooperation"
+  ],
+  answer: "B",
+  exp: "International relations deals with interactions among states, including diplomacy, trade, conflict, and cooperation. It focuses on how countries relate with one another in the global system."
+},
+{
+  year: "2024",
+  q: "Foreign policy refers to:",
+  options: [
+    "A. domestic policies",
+    "B. relations between government branches",
+    "C. a country's approach to external affairs",
+    "D. judicial decisions"
+  ],
+  answer: "C",
+  exp: "Foreign policy is the set of strategies and decisions a country adopts in dealing with other nations to protect its national interest."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains diplomacy?",
+  options: [
+    "A. use of force",
+    "B. negotiation between states",
+    "C. military conflict",
+    "D. economic policy"
+  ],
+  answer: "B",
+  exp: "Diplomacy involves negotiation, dialogue, and peaceful engagement between states to resolve conflicts and promote cooperation."
+},
+{
+  year: "2024",
+  q: "The primary aim of foreign policy is to:",
+  options: [
+    "A. promote war",
+    "B. protect national interest",
+    "C. control judiciary",
+    "D. enforce laws"
+  ],
+  answer: "B",
+  exp: "Foreign policy is designed to protect and promote a country's national interest, including security, economic growth, and international influence."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major actor in international relations?",
+  options: [
+    "A. individuals only",
+    "B. states",
+    "C. families",
+    "D. villages"
+  ],
+  answer: "B",
+  exp: "Sovereign states are the primary actors in international relations, though organizations and multinational corporations also play roles."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains national interest?",
+  options: [
+    "A. personal interest",
+    "B. goals a nation seeks to achieve internationally",
+    "C. party ideology",
+    "D. judicial power"
+  ],
+  answer: "B",
+  exp: "National interest refers to the objectives a country pursues in its foreign relations, such as security, economic prosperity, and global influence."
+},
+{
+  year: "2024",
+  q: "The United Nations was established to:",
+  options: [
+    "A. promote war",
+    "B. maintain international peace and security",
+    "C. control economies",
+    "D. enforce national laws"
+  ],
+  answer: "B",
+  exp: "The UN was created after World War II to prevent conflicts, promote peace, and foster international cooperation."
+},
+{
+  year: "2024",
+  q: "Which organ of the UN is responsible for maintaining peace?",
+  options: [
+    "A. General Assembly",
+    "B. Security Council",
+    "C. Secretariat",
+    "D. ICJ"
+  ],
+  answer: "B",
+  exp: "The Security Council has the primary responsibility for maintaining international peace and security, including authorizing peacekeeping missions."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains sovereignty?",
+  options: [
+    "A. dependence on other states",
+    "B. supreme authority within a territory",
+    "C. military power",
+    "D. economic strength"
+  ],
+  answer: "B",
+  exp: "Sovereignty refers to a state's supreme authority within its territory, free from external interference."
+},
+{
+  year: "2024",
+  q: "Which of the following is a method of peaceful conflict resolution?",
+  options: [
+    "A. war",
+    "B. diplomacy",
+    "C. sanctions",
+    "D. invasion"
+  ],
+  answer: "B",
+  exp: "Diplomacy involves negotiation and dialogue, making it a peaceful method of resolving disputes between states."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains international organization?",
+  options: [
+    "A. national institution",
+    "B. body formed by states for cooperation",
+    "C. political party",
+    "D. judiciary"
+  ],
+  answer: "B",
+  exp: "International organizations are institutions created by states to promote cooperation on global issues such as peace, trade, and development."
+},
+{
+  year: "2024",
+  q: "Which of the following is a regional organization in Africa?",
+  options: [
+    "A. UN",
+    "B. EU",
+    "C. African Union",
+    "D. NATO"
+  ],
+  answer: "C",
+  exp: "The African Union is a regional organization that promotes unity, development, and cooperation among African countries."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains collective security?",
+  options: [
+    "A. individual defense",
+    "B. joint action against aggression",
+    "C. military dictatorship",
+    "D. economic policy"
+  ],
+  answer: "B",
+  exp: "Collective security is a system where states agree to defend each other against aggression, ensuring global peace."
+},
+{
+  year: "2024",
+  q: "Which of the following is a form of economic diplomacy?",
+  options: [
+    "A. war",
+    "B. trade agreements",
+    "C. military alliance",
+    "D. invasion"
+  ],
+  answer: "B",
+  exp: "Economic diplomacy involves using trade agreements and economic cooperation to strengthen relations between countries."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains non-alignment?",
+  options: [
+    "A. joining alliances",
+    "B. avoiding alignment with major powers",
+    "C. military cooperation",
+    "D. economic isolation"
+  ],
+  answer: "B",
+  exp: "Non-alignment is a policy where a country avoids taking sides in major global conflicts, maintaining independence."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following best explains sanctions?",
+  options: [
+    "A. military attack",
+    "B. economic penalties",
+    "C. diplomatic praise",
+    "D. legal decisions"
+  ],
+  answer: "B",
+  exp: "Sanctions are economic or political penalties imposed to influence a country's behavior without resorting to war."
+},
+{
+  year: "2024",
+  q: "Which of the following is a challenge to international cooperation?",
+  options: [
+    "A. trust",
+    "B. conflicting national interests",
+    "C. diplomacy",
+    "D. agreements"
+  ],
+  answer: "B",
+  exp: "Conflicting national interests often hinder cooperation, as countries prioritize their own goals over collective ones."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains globalization?",
+  options: [
+    "A. isolation of countries",
+    "B. increased global interconnectedness",
+    "C. military expansion",
+    "D. political independence"
+  ],
+  answer: "B",
+  exp: "Globalization refers to the growing interconnectedness of countries through trade, communication, and cultural exchange."
+},
 {
   year: "2024",
   q: "A key determinant of foreign policy is:",
@@ -1586,6 +3140,896 @@ intl: [
   ],
   answer: "B",
   exp: "National interest is the primary factor guiding a country's foreign policy decisions, including security, economic growth, and global influence."
+}
+],
+  precolonial: [
+{
+  year: "2024",
+  q: "Which of the following best describes the political system of the Hausa-Fulani?",
+  options: [
+    "A. decentralized system",
+    "B. centralized theocratic monarchy",
+    "C. democratic system",
+    "D. confederation"
+  ],
+  answer: "B",
+  exp: "The Hausa-Fulani political system was highly centralized and theocratic. The Emir held both political and religious authority, ruling in accordance with Islamic law (Sharia). Authority flowed from the top, making it a strong centralized system."
+},
+{
+  year: "2024",
+  q: "The Emir in the Hausa-Fulani system derived authority primarily from:",
+  options: [
+    "A. the people",
+    "B. divine and Islamic law",
+    "C. the military",
+    "D. the council of elders"
+  ],
+  answer: "B",
+  exp: "The Emir's authority was rooted in religion, particularly Islam. He was seen as both a political leader and a religious figure, enforcing Sharia law."
+},
+{
+  year: "2024",
+  q: "Which institution assisted the Emir in administration?",
+  options: [
+    "A. Ogboni",
+    "B. Emirate council",
+    "C. age grades",
+    "D. village assembly"
+  ],
+  answer: "B",
+  exp: "The Emirate council consisted of advisers and officials who assisted the Emir in governance, including administration, taxation, and justice."
+},
+{
+  year: "2024",
+  q: "The Yoruba political system was characterized by:",
+  options: [
+    "A. absolute monarchy",
+    "B. centralized monarchy with checks",
+    "C. stateless society",
+    "D. military dictatorship"
+  ],
+  answer: "B",
+  exp: "The Yoruba system was centralized under the Oba, but his powers were checked by councils such as the Oyo Mesi, preventing absolute rule."
+},
+{
+  year: "2024",
+  q: "Which body could check the power of the Alaafin in Oyo?",
+  options: [
+    "A. Emirate council",
+    "B. Oyo Mesi",
+    "C. age grades",
+    "D. village heads"
+  ],
+  answer: "B",
+  exp: "The Oyo Mesi was a council of chiefs that acted as a check on the Alaafin. They could even compel him to abdicate if he ruled unjustly."
+},
+
+{
+  year: "2024",
+  q: "The Ogboni society in Yoruba land was responsible for:",
+  options: [
+    "A. military defense",
+    "B. judicial and religious functions",
+    "C. tax collection",
+    "D. election of kings only"
+  ],
+  answer: "B",
+  exp: "The Ogboni society played important judicial and religious roles, ensuring that laws were respected and traditions upheld."
+},
+{
+  year: "2024",
+  q: "The Igbo political system is best described as:",
+  options: [
+    "A. centralized monarchy",
+    "B. decentralized system",
+    "C. theocratic system",
+    "D. military system"
+  ],
+  answer: "B",
+  exp: "The Igbo political system was decentralized, with no central authority. Power was distributed among village assemblies, elders, and age grades."
+},
+{
+  year: "2024",
+  q: "Which institution was most important in Igbo governance?",
+  options: [
+    "A. Emirate council",
+    "B. village assembly",
+    "C. Oyo Mesi",
+    "D. military council"
+  ],
+  answer: "B",
+  exp: "The village assembly was the highest decision-making body in Igbo society, where all adult males could participate in governance."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of Igbo political system?",
+  options: [
+    "A. hereditary kingship",
+    "B. absence of centralized authority",
+    "C. military rule",
+    "D. religious monarchy"
+  ],
+  answer: "B",
+  exp: "Igbo society lacked centralized authority. Decisions were made collectively, making it highly participatory and democratic in nature."
+},
+{
+  year: "2024",
+  q: "Age grades in Igbo society were responsible for:",
+  options: [
+    "A. ruling the state",
+    "B. performing communal duties",
+    "C. collecting taxes only",
+    "D. making laws"
+  ],
+  answer: "B",
+  exp: "Age grades performed social and administrative duties such as maintaining order, building infrastructure, and enforcing community decisions."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains checks and balances in Yoruba system?",
+  options: [
+    "A. absence of authority",
+    "B. restriction of Oba’s power",
+    "C. military dominance",
+    "D. judicial control"
+  ],
+  answer: "B",
+  exp: "Checks and balances in Yoruba land ensured that the Oba did not rule absolutely. Councils like Oyo Mesi limited his powers."
+},
+{
+  year: "2024",
+  q: "Which system allowed direct participation of citizens in governance?",
+  options: [
+    "A. Hausa-Fulani",
+    "B. Yoruba",
+    "C. Igbo",
+    "D. all equally"
+  ],
+  answer: "C",
+  exp: "The Igbo system allowed direct participation through village assemblies, where decisions were made collectively."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains legitimacy in Hausa-Fulani system?",
+  options: [
+    "A. popular vote",
+    "B. religious authority",
+    "C. military power",
+    "D. economic strength"
+  ],
+  answer: "B",
+  exp: "Legitimacy in the Hausa-Fulani system was derived from religion, particularly Islam, which justified the authority of the Emir."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major weakness of the Igbo system?",
+  options: [
+    "A. lack of participation",
+    "B. slow decision-making",
+    "C. dictatorship",
+    "D. military control"
+  ],
+  answer: "B",
+  exp: "Because decisions were made collectively, the process could be slow and inefficient, especially in urgent situations."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains centralized political system?",
+  options: [
+    "A. power is shared equally",
+    "B. authority is concentrated",
+    "C. no leadership",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "A centralized system concentrates power in a central authority, such as a king or emir, enabling quicker decision-making but risking abuse of power."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a similarity between Yoruba and Hausa-Fulani systems?",
+  options: [
+    "A. decentralization",
+    "B. centralized authority",
+    "C. absence of kings",
+    "D. direct democracy"
+  ],
+  answer: "B",
+  exp: "Both systems were centralized, with authority concentrated in rulers (Emir and Oba), although Yoruba had more checks."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains traditional political systems?",
+  options: [
+    "A. modern democracy",
+    "B. indigenous governance structures",
+    "C. military systems",
+    "D. colonial systems"
+  ],
+  answer: "B",
+  exp: "Traditional political systems refer to indigenous forms of governance that existed before colonial rule, shaped by culture and customs."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains political participation in Igbo society?",
+  options: [
+    "A. restricted to elites",
+    "B. open to adult males",
+    "C. limited to rulers",
+    "D. controlled by military"
+  ],
+  answer: "B",
+  exp: "Participation in Igbo society was open to adult males, who took part in decision-making through assemblies."
+}
+],
+  colonial: [
+{
+  year: "2024",
+  q: "Colonial administration in Nigeria refers to:",
+  options: [
+    "A. indigenous rule",
+    "B. foreign control over Nigerian territories",
+    "C. military government",
+    "D. democratic governance"
+  ],
+  answer: "B",
+  exp: "Colonial administration refers to the system where Britain governed Nigeria and controlled its political, economic, and social structures. Authority was exercised by colonial officials rather than indigenous leaders."
+},
+{
+  year: "2024",
+  q: "The British policy of ruling through local authorities is known as:",
+  options: [
+    "A. direct rule",
+    "B. indirect rule",
+    "C. federalism",
+    "D. assimilation"
+  ],
+  answer: "B",
+  exp: "Indirect rule was a system introduced by the British where traditional rulers were used to administer local areas on behalf of the colonial government, reducing administrative costs."
+},
+{
+  year: "2024",
+  q: "Lord Lugard is associated with the introduction of:",
+  options: [
+    "A. direct rule",
+    "B. indirect rule",
+    "C. assimilation",
+    "D. apartheid"
+  ],
+  answer: "B",
+  exp: "Lord Lugard introduced indirect rule in Nigeria, especially in the North, where existing centralized systems made it effective."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains indirect rule?",
+  options: [
+    "A. direct governance by British officials",
+    "B. governance through traditional rulers",
+    "C. military administration",
+    "D. democratic elections"
+  ],
+  answer: "B",
+  exp: "Indirect rule involved governing through indigenous authorities, allowing traditional rulers to maintain their positions while serving colonial interests."
+},
+{
+  year: "2024",
+  q: "Indirect rule was most successful in:",
+  options: [
+    "A. Eastern Nigeria",
+    "B. Western Nigeria",
+    "C. Northern Nigeria",
+    "D. all regions equally"
+  ],
+  answer: "C",
+  exp: "Indirect rule worked best in Northern Nigeria because of the existing centralized political system under the Emirate structure."
+},
+
+{
+  year: "2024",
+  q: "Which factor contributed to the success of indirect rule in the North?",
+  options: [
+    "A. decentralized system",
+    "B. strong traditional authority",
+    "C. absence of rulers",
+    "D. democratic system"
+  ],
+  answer: "B",
+  exp: "The presence of strong centralized authority (Emirs) made it easier for the British to govern through existing structures."
+},
+{
+  year: "2024",
+  q: "Indirect rule failed in Eastern Nigeria mainly because:",
+  options: [
+    "A. strong monarchy existed",
+    "B. absence of centralized authority",
+    "C. military resistance",
+    "D. economic problems"
+  ],
+  answer: "B",
+  exp: "The Igbo political system was decentralized, lacking central rulers, making it difficult for the British to implement indirect rule effectively."
+},
+{
+  year: "2024",
+  q: "The introduction of warrant chiefs in Eastern Nigeria led to:",
+  options: [
+    "A. stability",
+    "B. resistance and unrest",
+    "C. economic growth",
+    "D. political unity"
+  ],
+  answer: "B",
+  exp: "Warrant chiefs were imposed leaders who lacked legitimacy, leading to resistance such as the Aba Women's Riot of 1929."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains direct rule?",
+  options: [
+    "A. governance through traditional rulers",
+    "B. governance by colonial officials",
+    "C. democratic governance",
+    "D. military system"
+  ],
+  answer: "B",
+  exp: "Direct rule involves colonial officials directly administering territories without relying on indigenous institutions."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of indirect rule?",
+  options: [
+    "A. abolition of traditional rulers",
+    "B. use of existing institutions",
+    "C. military dominance",
+    "D. democratic elections"
+  ],
+  answer: "B",
+  exp: "Indirect rule relied on existing traditional institutions, allowing rulers to maintain authority while serving colonial administration."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a major advantage of indirect rule?",
+  options: [
+    "A. high cost",
+    "B. administrative convenience",
+    "C. political instability",
+    "D. resistance"
+  ],
+  answer: "B",
+  exp: "Indirect rule reduced administrative costs and allowed easier governance by using existing structures."
+},
+{
+  year: "2024",
+  q: "Which of the following is a disadvantage of indirect rule?",
+  options: [
+    "A. efficiency",
+    "B. distortion of traditional systems",
+    "C. stability",
+    "D. cooperation"
+  ],
+  answer: "B",
+  exp: "Indirect rule sometimes distorted traditional authority, especially where rulers were imposed or given excessive powers."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains colonial exploitation?",
+  options: [
+    "A. economic development",
+    "B. extraction of resources for colonial benefit",
+    "C. democratic governance",
+    "D. cultural exchange"
+  ],
+  answer: "B",
+  exp: "Colonial powers exploited resources and labor primarily for their own economic benefit, often neglecting local development."
+},
+{
+  year: "2024",
+  q: "The amalgamation of Nigeria in 1914 was carried out by:",
+  options: [
+    "A. Lord Lugard",
+    "B. Macpherson",
+    "C. Clifford",
+    "D. Richards"
+  ],
+  answer: "A",
+  exp: "Lord Lugard amalgamated Northern and Southern Nigeria in 1914 to improve administrative efficiency and economic viability."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains the purpose of amalgamation?",
+  options: [
+    "A. promote democracy",
+    "B. administrative convenience",
+    "C. cultural unity",
+    "D. political independence"
+  ],
+  answer: "B",
+  exp: "The amalgamation aimed to reduce administrative costs and merge resources, particularly using Southern revenue to support the North."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following was a result of colonial rule?",
+  options: [
+    "A. political independence",
+    "B. economic exploitation",
+    "C. cultural isolation",
+    "D. military stability"
+  ],
+  answer: "B",
+  exp: "Colonial rule often resulted in economic exploitation, where resources were extracted for the benefit of the colonizers."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains dual mandate?",
+  options: [
+    "A. two governments",
+    "B. benefiting both colonizer and colony",
+    "C. military control",
+    "D. democratic governance"
+  ],
+  answer: "B",
+  exp: "The dual mandate theory by Lugard justified colonialism as beneficial to both Britain and its colonies, though in practice it favored the colonizers."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains colonial legacy?",
+  options: [
+    "A. absence of impact",
+    "B. lasting effects of colonial rule",
+    "C. military system",
+    "D. traditional governance"
+  ],
+  answer: "B",
+  exp: "Colonial legacy refers to the long-term effects of colonial rule on political, economic, and social structures."
+}
+],
+nationalism: [
+{
+  year: "2024",
+  q: "Nationalism is best defined as:",
+  options: [
+    "A. loyalty to colonial rulers",
+    "B. desire for independence and self-rule",
+    "C. military governance",
+    "D. economic policy"
+  ],
+  answer: "B",
+  exp: "Nationalism refers to the strong desire of a people to achieve self-government and independence from foreign domination. In Nigeria, it involved resistance to colonial rule and demand for political autonomy."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains Nigerian nationalism?",
+  options: [
+    "A. support for colonial rule",
+    "B. struggle against British domination",
+    "C. economic development",
+    "D. military expansion"
+  ],
+  answer: "B",
+  exp: "Nigerian nationalism was the organized effort by Nigerians to end colonial rule and achieve independence through political activism and resistance."
+},
+{
+  year: "2024",
+  q: "Which factor contributed most to the rise of nationalism in Nigeria?",
+  options: [
+    "A. colonial support",
+    "B. western education",
+    "C. military rule",
+    "D. isolation"
+  ],
+  answer: "B",
+  exp: "Western education exposed Nigerians to ideas of freedom, equality, and self-determination, inspiring nationalist movements."
+},
+{
+  year: "2024",
+  q: "Which of the following played a key role in spreading nationalist ideas?",
+  options: [
+    "A. judiciary",
+    "B. press",
+    "C. military",
+    "D. police"
+  ],
+  answer: "B",
+  exp: "Newspapers and the press were crucial in spreading nationalist ideas, criticizing colonial policies, and mobilizing public support."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains the role of elites in nationalism?",
+  options: [
+    "A. suppression of ideas",
+    "B. leadership and mobilization",
+    "C. military control",
+    "D. economic exploitation"
+  ],
+  answer: "B",
+  exp: "Educated elites led nationalist movements by organizing political groups, writing, and advocating for independence."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a method used by nationalists?",
+  options: [
+    "A. cooperation with colonial rulers",
+    "B. protests and petitions",
+    "C. military dictatorship",
+    "D. judicial rulings"
+  ],
+  answer: "B",
+  exp: "Nationalists used peaceful methods such as protests, petitions, and negotiations to demand reforms and independence."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains militant nationalism?",
+  options: [
+    "A. peaceful protests",
+    "B. aggressive resistance",
+    "C. judicial action",
+    "D. economic policy"
+  ],
+  answer: "B",
+  exp: "Militant nationalism involves more aggressive tactics such as strikes, boycotts, and sometimes violence to achieve independence."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains moderate nationalism?",
+  options: [
+    "A. violent resistance",
+    "B. peaceful negotiation",
+    "C. military takeover",
+    "D. economic control"
+  ],
+  answer: "B",
+  exp: "Moderate nationalists preferred peaceful methods like dialogue, constitutional reforms, and negotiations with colonial authorities."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major objective of nationalism?",
+  options: [
+    "A. economic exploitation",
+    "B. political independence",
+    "C. military expansion",
+    "D. judicial dominance"
+  ],
+  answer: "B",
+  exp: "The primary goal of nationalism was to achieve political independence and self-governance."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains self-government?",
+  options: [
+    "A. foreign control",
+    "B. internal autonomy",
+    "C. military rule",
+    "D. judicial independence"
+  ],
+  answer: "B",
+  exp: "Self-government refers to a nation's ability to govern itself without external interference, a key demand of nationalists."
+},
+
+{
+  year: "2024",
+  q: "Which of the following was a result of nationalism?",
+  options: [
+    "A. colonial expansion",
+    "B. independence",
+    "C. economic decline",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "Nationalist movements ultimately led to independence, ending colonial rule and establishing self-governance."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains political parties in nationalism?",
+  options: [
+    "A. suppression",
+    "B. mobilization of support",
+    "C. military control",
+    "D. judicial influence"
+  ],
+  answer: "B",
+  exp: "Political parties were used by nationalists to mobilize support, organize activities, and present demands to colonial authorities."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains the role of trade unions?",
+  options: [
+    "A. suppression of nationalism",
+    "B. support through strikes",
+    "C. military control",
+    "D. judicial decisions"
+  ],
+  answer: "B",
+  exp: "Trade unions supported nationalist movements by organizing strikes and protests, putting pressure on colonial authorities."
+},
+{
+  year: "2024",
+  q: "Which of the following is a challenge faced by nationalists?",
+  options: [
+    "A. unity",
+    "B. colonial repression",
+    "C. cooperation",
+    "D. support"
+  ],
+  answer: "B",
+  exp: "Colonial authorities often suppressed nationalist activities through arrests, censorship, and restrictions."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains Pan-Africanism?",
+  options: [
+    "A. isolation",
+    "B. unity of African peoples",
+    "C. colonial rule",
+    "D. military alliance"
+  ],
+  answer: "B",
+  exp: "Pan-Africanism promoted unity and solidarity among African people worldwide, influencing nationalist movements in Nigeria."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which of the following best explains nationalist leaders?",
+  options: [
+    "A. colonial officers",
+    "B. individuals leading independence struggle",
+    "C. military rulers",
+    "D. judges"
+  ],
+  answer: "B",
+  exp: "Nationalist leaders were individuals who spearheaded the struggle for independence through political activism and organization."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains colonial response to nationalism?",
+  options: [
+    "A. support",
+    "B. repression and reforms",
+    "C. neutrality",
+    "D. withdrawal"
+  ],
+  answer: "B",
+  exp: "Colonial authorities responded with both repression (arrests, censorship) and reforms (constitutional changes) to manage nationalist pressure."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains independence?",
+  options: [
+    "A. foreign rule",
+    "B. self-rule",
+    "C. military control",
+    "D. judicial power"
+  ],
+  answer: "B",
+  exp: "Independence marks the end of colonial rule and the beginning of self-governance."
+}
+],
+  constitutional_dev: [
+{
+  year: "2024",
+  q: "The Clifford Constitution of 1922 introduced:",
+  options: [
+    "A. federalism",
+    "B. elective principle",
+    "C. regional autonomy",
+    "D. universal suffrage"
+  ],
+  answer: "B",
+  exp: "The Clifford Constitution marked a major turning point by introducing the elective principle in Nigeria. For the first time, some Nigerians could vote and be elected into the Legislative Council, although it was limited to Lagos and Calabar."
+},
+{
+  year: "2024",
+  q: "A major limitation of the Clifford Constitution was that it:",
+  options: [
+    "A. introduced federalism",
+    "B. excluded Northern Nigeria from elections",
+    "C. granted full independence",
+    "D. allowed universal suffrage"
+  ],
+  answer: "B",
+  exp: "The Clifford Constitution excluded Northern Nigeria from the Legislative Council, reinforcing regional imbalance and limiting national unity."
+},
+{
+  year: "2024",
+  q: "The Richards Constitution of 1946 aimed to:",
+  options: [
+    "A. grant independence",
+    "B. promote unity and regional development",
+    "C. abolish traditional rulers",
+    "D. introduce military rule"
+  ],
+  answer: "B",
+  exp: "The Richards Constitution sought to promote unity while recognizing regional differences, leading to the creation of three regions: North, West, and East."
+},
+{
+  year: "2024",
+  q: "A major criticism of the Richards Constitution was that it:",
+  options: [
+    "A. encouraged participation",
+    "B. lacked Nigerian consultation",
+    "C. introduced federalism",
+    "D. granted autonomy"
+  ],
+  answer: "B",
+  exp: "The Richards Constitution was criticized because Nigerians were not adequately consulted during its drafting, making it appear imposed by colonial authorities."
+},
+{
+  year: "2024",
+  q: "The Macpherson Constitution of 1951 is notable for:",
+  options: [
+    "A. lack of consultation",
+    "B. extensive Nigerian participation",
+    "C. abolition of regions",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "The Macpherson Constitution involved widespread consultation with Nigerians at village, district, and regional levels, making it more representative."
+},
+
+{
+  year: "2024",
+  q: "Which constitution introduced regional legislatures?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "B",
+  exp: "The Richards Constitution introduced regional legislatures, marking the beginning of regionalism in Nigeria."
+},
+{
+  year: "2024",
+  q: "A major weakness of the Macpherson Constitution was:",
+  options: [
+    "A. lack of participation",
+    "B. excessive regionalism",
+    "C. military control",
+    "D. absence of elections"
+  ],
+  answer: "B",
+  exp: "Although participatory, the Macpherson Constitution strengthened regional divisions, leading to political crises."
+},
+{
+  year: "2024",
+  q: "The Lyttleton Constitution of 1954 introduced:",
+  options: [
+    "A. unitary system",
+    "B. federal system",
+    "C. military rule",
+    "D. indirect rule"
+  ],
+  answer: "B",
+  exp: "The Lyttleton Constitution established a federal system in Nigeria, granting significant autonomy to regions."
+},
+{
+  year: "2024",
+  q: "Which constitution is regarded as the true beginning of federalism in Nigeria?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "D",
+  exp: "The Lyttleton Constitution formalized federalism by clearly dividing powers between the central and regional governments."
+},
+{
+  year: "2024",
+  q: "Which constitution first introduced Nigerians into legislative councils?",
+  options: [
+    "A. Richards",
+    "B. Clifford",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "B",
+  exp: "The Clifford Constitution introduced the elective principle, allowing Nigerians to participate in legislative councils."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains federalism under Lyttleton?",
+  options: [
+    "A. central control",
+    "B. division of powers",
+    "C. military dominance",
+    "D. judicial supremacy"
+  ],
+  answer: "B",
+  exp: "Federalism involves dividing powers between central and regional governments, allowing autonomy while maintaining unity."
+},
+{
+  year: "2024",
+  q: "Which constitution strengthened regional autonomy?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Lyttleton",
+    "D. all equally"
+  ],
+  answer: "C",
+  exp: "The Lyttleton Constitution gave regions significant autonomy, including control over internal affairs."
+},
+{
+  year: "2024",
+  q: "Which constitution is associated with imposed governance?",
+  options: [
+    "A. Macpherson",
+    "B. Richards",
+    "C. Lyttleton",
+    "D. none"
+  ],
+  answer: "B",
+  exp: "The Richards Constitution was largely imposed without adequate consultation, leading to widespread criticism."
+},
+{
+  year: "2024",
+  q: "Which constitution attempted to balance unity and diversity?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "B",
+  exp: "The Richards Constitution aimed to promote unity while recognizing Nigeria’s diverse regions."
+},
+{
+  year: "2024",
+  q: "Which constitution had the widest consultation process?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "C",
+  exp: "The Macpherson Constitution involved consultations at multiple levels, making it more inclusive than earlier constitutions."
+},
+
+
+
+{
+  year: "2024",
+  q: "Which constitution laid the foundation for independence?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "D",
+  exp: "The Lyttleton Constitution established federalism and regional autonomy, paving the way for Nigeria’s independence in 1960."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains constitutional development?",
+  options: [
+    "A. military rule",
+    "B. gradual evolution of governance structures",
+    "C. economic policy",
+    "D. judicial system"
+  ],
+  answer: "B",
+  exp: "Constitutional development refers to the gradual evolution of governance structures through successive constitutional changes."
+},
+{
+  year: "2024",
+  q: "Which constitution is most democratic in terms of participation?",
+  options: [
+    "A. Clifford",
+    "B. Richards",
+    "C. Macpherson",
+    "D. Lyttleton"
+  ],
+  answer: "C",
+  exp: "The Macpherson Constitution was the most democratic due to its wide consultation and representation."
 }
 ],
   

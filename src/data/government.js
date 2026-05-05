@@ -422,6 +422,1042 @@ democracy_africa: [
 };
 export const questions = {
   nature: [
+{
+year: "2023",
+q: "Government differs from governance in that government refers to:",
+options: [
+"A. the process of ruling",
+"B. institutions through which authority is exercised",
+"C. public opinion",
+"D. political culture"
+],
+answer: "B",
+exp: "Government refers to the formal institutions (executive, legislature, judiciary) through which authority is exercised, while governance is the broader process of managing public affairs."
+}
+],
+
+concepts: [
+{
+year: "2023",
+q: "Which of the following best explains political socialization?",
+options: [
+"A. economic development",
+"B. process of acquiring political values",
+"C. military training",
+"D. judicial process"
+],
+answer: "B",
+exp: "Political socialization is the process by which individuals acquire political beliefs, values, and attitudes from agents like family, media, and schools."
+},
+{
+year: "2023",
+q: "Power without legitimacy is often associated with:",
+options: [
+"A. democracy",
+"B. authority",
+"C. coercion",
+"D. sovereignty"
+],
+answer: "C",
+exp: "When power lacks legitimacy, it is often enforced through coercion or force rather than acceptance by the people."
+}
+],
+
+state: [
+{
+year: "2023",
+q: "Which of the following best explains sovereignty in a modern state?",
+options: [
+"A. shared authority with citizens",
+"B. supreme power within territory",
+"C. military dominance",
+"D. judicial supremacy"
+],
+answer: "B",
+exp: "Sovereignty means the state has ultimate authority within its territory and is independent of external control."
+}
+],
+
+constitution: [
+{
+year: "2023",
+q: "Judicial review refers to the power of courts to:",
+options: [
+"A. make laws",
+"B. interpret and invalidate laws",
+"C. enforce policies",
+"D. conduct elections"
+],
+answer: "B",
+exp: "Judicial review allows courts to interpret the constitution and declare laws invalid if they conflict with it."
+}
+],
+
+governance: [
+{
+year: "2023",
+q: "Transparency in governance implies:",
+options: [
+"A. secrecy",
+"B. openness in decision-making",
+"C. military rule",
+"D. judicial control"
+],
+answer: "B",
+exp: "Transparency ensures that government actions are open and accessible to the public, promoting trust and accountability."
+}
+],
+
+ideas: [
+{
+year: "2023",
+q: "The principle of rule of law was popularized by:",
+options: [
+"A. Dicey",
+"B. Marx",
+"C. Lenin",
+"D. Hobbes"
+],
+answer: "A",
+exp: "A.V. Dicey developed the concept of rule of law, emphasizing equality before the law and supremacy of law over arbitrary power."
+}
+],
+
+parties: [
+{
+year: "2023",
+q: "Which of the following is a feature of a two-party system?",
+options: [
+"A. many parties",
+"B. dominance of two major parties",
+"C. absence of elections",
+"D. military rule"
+],
+answer: "B",
+exp: "A two-party system is characterized by the dominance of two major political parties, although other minor parties may exist."
+}
+],
+
+opinion: [
+{
+year: "2023",
+q: "Which of the following is NOT a method of measuring public opinion?",
+options: [
+"A. opinion polls",
+"B. referenda",
+"C. elections",
+"D. military decree"
+],
+answer: "D",
+exp: "Public opinion is measured through polls, elections, and referenda, not military decrees."
+}
+],
+
+elections: [
+{
+year: "2023",
+q: "Which of the following best explains free and fair elections?",
+options: [
+"A. manipulation",
+"B. absence of fraud and intimidation",
+"C. military control",
+"D. judicial dominance"
+],
+answer: "B",
+exp: "Free and fair elections are conducted without fraud, coercion, or manipulation, ensuring that results reflect the will of the people."
+}
+],
+
+change: [
+{
+year: "2023",
+q: "Which of the following is an example of constitutional change?",
+options: [
+"A. coup d’état",
+"B. amendment",
+"C. revolution",
+"D. protest"
+],
+answer: "B",
+exp: "Constitutional change refers to formal modifications of the constitution through amendment processes."
+}
+],
+
+admin: [
+{
+year: "2023",
+q: "Bureaucracy is best described as:",
+options: [
+"A. political party",
+"B. administrative machinery of government",
+"C. judicial body",
+"D. military institution"
+],
+answer: "B",
+exp: "Bureaucracy refers to the administrative structure responsible for implementing government policies."
+}
+],
+
+intl: [
+{
+year: "2023",
+q: "Which of the following is an instrument of foreign policy?",
+options: [
+"A. diplomacy",
+"B. military force",
+"C. economic aid",
+"D. all of the above"
+],
+answer: "D",
+exp: "Foreign policy tools include diplomacy, military power, and economic aid, all used to achieve national objectives."
+}
+],
+
+precolonial: [
+{
+year: "2023",
+q: "Which institution checked the powers of the Alaafin of Oyo?",
+options: [
+"A. Emirate council",
+"B. Oyo Mesi",
+"C. age grades",
+"D. village assembly"
+],
+answer: "B",
+exp: "The Oyo Mesi was a council of chiefs that acted as a check on the Alaafin’s authority."
+}
+],
+
+colonial: [
+{
+year: "2023",
+q: "The major aim of indirect rule was to:",
+options: [
+"A. promote democracy",
+"B. reduce administrative cost",
+"C. grant independence",
+"D. abolish traditions"
+],
+answer: "B",
+exp: "Indirect rule was designed to reduce administrative costs by governing through existing traditional rulers."
+}
+],
+
+party_dev: [
+{
+year: "2023",
+q: "Early political parties in Nigeria were largely:",
+options: [
+"A. national",
+"B. regional",
+"C. military",
+"D. religious"
+],
+answer: "B",
+exp: "Early Nigerian political parties were regionally based, reflecting ethnic and regional divisions."
+}
+],
+
+electoral_ng: [
+{
+year: "2023",
+q: "Which electoral system is commonly used in Nigeria?",
+options: [
+"A. proportional representation",
+"B. simple majority",
+"C. referendum",
+"D. indirect voting"
+],
+answer: "B",
+exp: "Nigeria mainly uses the simple majority (first-past-the-post) system where the candidate with the highest votes wins."
+}
+],
+
+crisis: [
+{
+year: "2023",
+q: "Which of the following contributed to the Nigerian Civil War?",
+options: [
+"A. unity",
+"B. ethnic tensions",
+"C. stability",
+"D. cooperation"
+],
+answer: "B",
+exp: "Ethnic tensions, political instability, and the secession of the Eastern Region contributed to the Civil War."
+}
+],
+
+military: [
+{
+year: "2023",
+q: "A coup d’état is:",
+options: [
+"A. election process",
+"B. sudden overthrow of government",
+"C. judicial decision",
+"D. constitutional amendment"
+],
+answer: "B",
+exp: "A coup d’état is the illegal and sudden removal of a government, usually by the military."
+}
+],
+
+foreign: [
+{
+year: "2023",
+q: "Non-alignment in foreign policy means:",
+options: [
+"A. joining alliances",
+"B. neutrality between power blocs",
+"C. military dominance",
+"D. economic isolation"
+],
+answer: "B",
+exp: "Non-alignment involves avoiding alignment with major power blocs, maintaining independence in foreign policy decisions."
+}
+],
+
+africa_pre: [
+{
+year: "2023",
+q: "Pre-colonial African political systems were mostly:",
+options: [
+"A. democratic",
+"B. diverse",
+"C. centralized only",
+"D. military"
+],
+answer: "B",
+exp: "African political systems before colonial rule were diverse, ranging from centralized kingdoms to decentralized societies."
+}
+],
+
+colonial_africa: [
+{
+year: "2023",
+q: "Indirect rule in Africa relied on:",
+options: [
+"A. foreign officials only",
+"B. traditional rulers",
+"C. military leaders",
+"D. elected leaders"
+],
+answer: "B",
+exp: "Indirect rule depended on traditional rulers to administer colonies on behalf of colonial powers."
+}
+],
+
+constitution_africa: [],
+nationalism: [
+{
+year: "2023",
+q: "Which group led nationalist movements in Africa?",
+options: [
+"A. colonial masters",
+"B. educated elites",
+"C. military",
+"D. judiciary"
+],
+answer: "B",
+exp: "Educated elites played a major role in leading nationalist movements through political activism and advocacy."
+}
+],
+
+military_africa: [
+{
+year: "2023",
+q: "Military rule in Africa often results in:",
+options: [
+"A. democracy",
+"B. suspension of constitution",
+"C. free elections",
+"D. separation of powers"
+],
+answer: "B",
+exp: "Military regimes typically suspend constitutions and rule by decrees."
+}
+],
+
+democracy_africa: [
+{
+year: "2023",
+q: "A major challenge to democracy in Africa is:",
+options: [
+"A. stability",
+"B. electoral malpractice",
+"C. unity",
+"D. participation"
+],
+answer: "B",
+exp: "Electoral malpractice undermines democratic processes and reduces public trust in governance."
+}
+],
+  constitution: [
+{
+  year: "2024",
+  q: "A constitution is best defined as:",
+  options: [
+    "A. laws made by judges",
+    "B. body of fundamental principles guiding a state",
+    "C. military rules",
+    "D. party manifesto"
+  ],
+  answer: "B",
+  exp: "A constitution is the supreme set of rules and principles that define how a state is governed, including the structure of government, powers of institutions, and rights of citizens."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains a written constitution?",
+  options: [
+    "A. based on customs",
+    "B. codified in a single document",
+    "C. flexible laws",
+    "D. judicial decisions"
+  ],
+  answer: "B",
+  exp: "A written constitution is codified and contained in a single formal document, making it clear and accessible."
+},
+{
+  year: "2024",
+  q: "An unwritten constitution is based mainly on:",
+  options: [
+    "A. formal documents",
+    "B. customs and conventions",
+    "C. military laws",
+    "D. statutes only"
+  ],
+  answer: "B",
+  exp: "An unwritten constitution evolves from customs, conventions, judicial precedents, and statutes rather than a single codified document."
+},
+{
+  year: "2024",
+  q: "A rigid constitution is one that:",
+  options: [
+    "A. can be easily amended",
+    "B. requires special procedure for amendment",
+    "C. is unwritten",
+    "D. is temporary"
+  ],
+  answer: "B",
+  exp: "A rigid constitution requires complex procedures, such as supermajority votes or referendums, to be amended, ensuring stability."
+},
+{
+  year: "2024",
+  q: "A flexible constitution is characterized by:",
+  options: [
+    "A. difficulty in amendment",
+    "B. ease of amendment",
+    "C. codification",
+    "D. military control"
+  ],
+  answer: "B",
+  exp: "A flexible constitution can be easily amended through ordinary legislative procedures, allowing adaptability."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains constitutional supremacy?",
+  options: [
+    "A. legislature is supreme",
+    "B. constitution is the highest law",
+    "C. judiciary dominates",
+    "D. executive controls"
+  ],
+  answer: "B",
+  exp: "Constitutional supremacy means that the constitution is the highest law, and all other laws must conform to it."
+},
+{
+  year: "2024",
+  q: "Which of the following ensures that laws conform to the constitution?",
+  options: [
+    "A. legislature",
+    "B. executive",
+    "C. judiciary",
+    "D. military"
+  ],
+  answer: "C",
+  exp: "The judiciary interprets the constitution and can declare laws invalid if they conflict with constitutional provisions."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains rule of law?",
+  options: [
+    "A. rule by military",
+    "B. supremacy of law over individuals",
+    "C. dictatorship",
+    "D. executive dominance"
+  ],
+  answer: "B",
+  exp: "Rule of law means that everyone, including government officials, is subject to the law, ensuring fairness and justice."
+},
+{
+  year: "2024",
+  q: "Which of the following is a function of a constitution?",
+  options: [
+    "A. promoting dictatorship",
+    "B. defining structure of government",
+    "C. enforcing military rule",
+    "D. controlling economy"
+  ],
+  answer: "B",
+  exp: "A constitution defines the structure, powers, and functions of government institutions."
+},
+{
+  year: "2024",
+  q: "Which of the following protects citizens’ rights?",
+  options: [
+    "A. judiciary",
+    "B. constitution",
+    "C. executive",
+    "D. legislature"
+  ],
+  answer: "B",
+  exp: "The constitution guarantees fundamental rights and freedoms, protecting citizens from abuse of power."
+},
+
+{
+  year: "2024",
+  q: "Which of the following best explains constitutionalism?",
+  options: [
+    "A. arbitrary rule",
+    "B. government limited by constitution",
+    "C. military rule",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "Constitutionalism ensures that government operates within the limits set by the constitution, preventing abuse of power."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of a good constitution?",
+  options: [
+    "A. ambiguity",
+    "B. clarity",
+    "C. rigidity only",
+    "D. secrecy"
+  ],
+  answer: "B",
+  exp: "A good constitution should be clear and understandable to avoid misinterpretation and ensure effective governance."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains amendment?",
+  options: [
+    "A. enforcement",
+    "B. modification of constitution",
+    "C. judicial ruling",
+    "D. legislation"
+  ],
+  answer: "B",
+  exp: "Amendment refers to the process of changing or updating the constitution to reflect new realities."
+},
+{
+  year: "2024",
+  q: "Which of the following is a disadvantage of rigid constitution?",
+  options: [
+    "A. stability",
+    "B. inflexibility",
+    "C. clarity",
+    "D. supremacy"
+  ],
+  answer: "B",
+  exp: "Rigid constitutions are difficult to amend, making it hard to adapt to changing circumstances."
+},
+{
+  year: "2024",
+  q: "Which of the following is a merit of flexible constitution?",
+  options: [
+    "A. instability",
+    "B. adaptability",
+    "C. rigidity",
+    "D. complexity"
+  ],
+  answer: "B",
+  exp: "Flexible constitutions can easily adapt to changing conditions, making governance more responsive."
+},
+
+// Final stretch
+
+{
+  year: "2024",
+  q: "Which of the following best explains supremacy of parliament?",
+  options: [
+    "A. constitution dominates",
+    "B. legislature is highest authority",
+    "C. judiciary dominates",
+    "D. executive controls"
+  ],
+  answer: "B",
+  exp: "Parliamentary supremacy means that the legislature has ultimate authority to make or unmake laws."
+},
+{
+  year: "2024",
+  q: "Which of the following distinguishes rigid from flexible constitution?",
+  options: [
+    "A. content",
+    "B. amendment process",
+    "C. structure",
+    "D. judiciary"
+  ],
+  answer: "B",
+  exp: "The key difference lies in the amendment process—rigid constitutions require special procedures, while flexible ones do not."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains constitutional development?",
+  options: [
+    "A. static system",
+    "B. evolution of constitutional rules",
+    "C. military rule",
+    "D. judicial dominance"
+  ],
+  answer: "B",
+  exp: "Constitutional development refers to the gradual evolution and modification of constitutional principles over time."
+}
+],
+constitution: [
+{
+  year: "2024",
+  q: "Nigeria gained independence in:",
+  options: [
+    "A. 1957",
+    "B. 1960",
+    "C. 1963",
+    "D. 1979"
+  ],
+  answer: "B",
+  exp: "Nigeria gained independence from Britain on October 1, 1960, becoming a sovereign state with full control over its internal and external affairs."
+},
+{
+  year: "2024",
+  q: "Nigeria became a republic in:",
+  options: [
+    "A. 1960",
+    "B. 1963",
+    "C. 1966",
+    "D. 1979"
+  ],
+  answer: "B",
+  exp: "In 1963, Nigeria became a republic, replacing the British monarch with a Nigerian President as the head of state."
+},
+{
+  year: "2024",
+  q: "The First Republic in Nigeria ended in:",
+  options: [
+    "A. 1963",
+    "B. 1966",
+    "C. 1979",
+    "D. 1983"
+  ],
+  answer: "B",
+  exp: "The First Republic collapsed in 1966 following a military coup, marking the beginning of military intervention in Nigerian politics."
+},
+{
+  year: "2024",
+  q: "The first military coup in Nigeria occurred in:",
+  options: [
+    "A. 1960",
+    "B. 1963",
+    "C. 1966",
+    "D. 1970"
+  ],
+  answer: "C",
+  exp: "The first military coup took place in January 1966, led by young military officers, which overthrew the civilian government."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains military rule?",
+  options: [
+    "A. democratic governance",
+    "B. rule by armed forces",
+    "C. judicial control",
+    "D. legislative supremacy"
+  ],
+  answer: "B",
+  exp: "Military rule refers to governance by the armed forces, usually after a coup, where democratic institutions are suspended."
+},
+
+{
+  year: "2024",
+  q: "A major cause of the 1966 coup was:",
+  options: [
+    "A. economic growth",
+    "B. political instability and corruption",
+    "C. unity",
+    "D. strong institutions"
+  ],
+  answer: "B",
+  exp: "The coup was largely triggered by political instability, electoral malpractice, corruption, and regional tensions."
+},
+{
+  year: "2024",
+  q: "The Nigerian Civil War lasted from:",
+  options: [
+    "A. 1960–1963",
+    "B. 1966–1970",
+    "C. 1967–1970",
+    "D. 1970–1975"
+  ],
+  answer: "C",
+  exp: "The Civil War (1967–1970) occurred after the Eastern Region attempted to secede as the Republic of Biafra."
+},
+{
+  year: "2024",
+  q: "The immediate cause of the Civil War was:",
+  options: [
+    "A. independence",
+    "B. secession of Eastern Region",
+    "C. economic policy",
+    "D. military reform"
+  ],
+  answer: "B",
+  exp: "The declaration of Biafra by the Eastern Region led to the Civil War as the federal government sought to maintain unity."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains secession?",
+  options: [
+    "A. unity",
+    "B. withdrawal from a state",
+    "C. military rule",
+    "D. economic reform"
+  ],
+  answer: "B",
+  exp: "Secession is the act of a region breaking away from a country to form an independent state."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of military rule?",
+  options: [
+    "A. rule of law",
+    "B. suspension of constitution",
+    "C. democratic elections",
+    "D. separation of powers"
+  ],
+  answer: "B",
+  exp: "Military regimes often suspend the constitution and rule by decrees, concentrating power in the executive."
+},
+
+{
+  year: "2024",
+  q: "Nigeria returned to civilian rule in:",
+  options: [
+    "A. 1970",
+    "B. 1979",
+    "C. 1983",
+    "D. 1999"
+  ],
+  answer: "B",
+  exp: "Nigeria returned to civilian rule in 1979, marking the beginning of the Second Republic."
+},
+{
+  year: "2024",
+  q: "The Second Republic ended in:",
+  options: [
+    "A. 1979",
+    "B. 1983",
+    "C. 1993",
+    "D. 1999"
+  ],
+  answer: "B",
+  exp: "The Second Republic collapsed in 1983 following another military coup due to corruption and electoral malpractice."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains democratic governance?",
+  options: [
+    "A. military rule",
+    "B. government by elected representatives",
+    "C. rule by decree",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "Democracy involves governance by elected representatives, with emphasis on participation, accountability, and rule of law."
+},
+{
+  year: "2024",
+  q: "Which of the following is a cause of military intervention?",
+  options: [
+    "A. stability",
+    "B. corruption and mismanagement",
+    "C. unity",
+    "D. strong institutions"
+  ],
+  answer: "B",
+  exp: "Military intervention often occurs due to perceived failure of civilian governments, including corruption and instability."
+},
+{
+  year: "2024",
+  q: "Nigeria’s current democratic era began in:",
+  options: [
+    "A. 1979",
+    "B. 1983",
+    "C. 1999",
+    "D. 2007"
+  ],
+  answer: "C",
+  exp: "Nigeria returned to democratic governance in 1999, marking the beginning of the Fourth Republic."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains transition to civil rule?",
+  options: [
+    "A. military takeover",
+    "B. shift from military to democratic government",
+    "C. judicial reform",
+    "D. economic policy"
+  ],
+  answer: "B",
+  exp: "Transition to civil rule refers to the process of moving from military governance to democratic civilian administration."
+},
+{
+  year: "2024",
+  q: "Which of the following is a major challenge of post-independence Nigeria?",
+  options: [
+    "A. unity",
+    "B. political instability",
+    "C. strong institutions",
+    "D. economic growth"
+  ],
+  answer: "B",
+  exp: "Post-independence Nigeria faced challenges such as political instability, coups, corruption, and ethnic tensions."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains republic?",
+  options: [
+    "A. monarchy",
+    "B. system without a monarch",
+    "C. military rule",
+    "D. colonial system"
+  ],
+  answer: "B",
+  exp: "A republic is a system where the head of state is elected or appointed, not a hereditary monarch."
+}
+],
+  systems: [
+{
+  year: "2024",
+  q: "A unitary system of government is characterized by:",
+  options: [
+    "A. division of powers between levels",
+    "B. concentration of power at the center",
+    "C. military control",
+    "D. judicial supremacy"
+  ],
+  answer: "B",
+  exp: "In a unitary system, all political power is concentrated in a central authority. Subnational units derive their powers from the central government and can be altered or abolished."
+},
+{
+  year: "2024",
+  q: "A federal system of government involves:",
+  options: [
+    "A. centralized authority",
+    "B. division of powers between central and regional governments",
+    "C. military rule",
+    "D. absence of constitution"
+  ],
+  answer: "B",
+  exp: "Federalism involves a constitutional division of powers between central and regional governments, each operating independently within its sphere."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains a confederation?",
+  options: [
+    "A. strong central government",
+    "B. loose association of sovereign states",
+    "C. military system",
+    "D. unitary structure"
+  ],
+  answer: "B",
+  exp: "A confederation is a union of independent states that delegate limited powers to a central body, retaining most sovereignty."
+},
+{
+  year: "2024",
+  q: "Which system is Nigeria currently practicing?",
+  options: [
+    "A. unitary",
+    "B. federal",
+    "C. confederal",
+    "D. monarchical"
+  ],
+  answer: "B",
+  exp: "Nigeria operates a federal system where power is shared between the central government and the states."
+},
+{
+  year: "2024",
+  q: "A major advantage of federalism is:",
+  options: [
+    "A. concentration of power",
+    "B. promotion of unity in diversity",
+    "C. military control",
+    "D. dictatorship"
+  ],
+  answer: "B",
+  exp: "Federalism allows different regions to maintain their identity while remaining united, promoting political stability in diverse societies."
+},
+
+{
+  year: "2024",
+  q: "A presidential system is characterized by:",
+  options: [
+    "A. fusion of powers",
+    "B. separation of powers",
+    "C. monarchy",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "The presidential system is based on separation of powers among executive, legislature, and judiciary, each functioning independently."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of parliamentary system?",
+  options: [
+    "A. separation of powers",
+    "B. fusion of executive and legislature",
+    "C. military control",
+    "D. judicial dominance"
+  ],
+  answer: "B",
+  exp: "In a parliamentary system, the executive is drawn from the legislature, leading to a fusion of powers."
+},
+{
+  year: "2024",
+  q: "In a parliamentary system, the head of government is:",
+  options: [
+    "A. president",
+    "B. prime minister",
+    "C. monarch",
+    "D. judge"
+  ],
+  answer: "B",
+  exp: "The prime minister is the head of government, responsible for running the executive branch in a parliamentary system."
+},
+{
+  year: "2024",
+  q: "In a presidential system, the head of state is:",
+  options: [
+    "A. monarch",
+    "B. president",
+    "C. prime minister",
+    "D. speaker"
+  ],
+  answer: "B",
+  exp: "The president serves as both head of state and head of government in a presidential system."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains separation of powers?",
+  options: [
+    "A. concentration of authority",
+    "B. division of government functions",
+    "C. military control",
+    "D. judicial dominance"
+  ],
+  answer: "B",
+  exp: "Separation of powers divides government responsibilities among branches to prevent abuse of power."
+},
+
+{
+  year: "2024",
+  q: "Which of the following is a disadvantage of federalism?",
+  options: [
+    "A. unity",
+    "B. duplication of functions",
+    "C. diversity",
+    "D. autonomy"
+  ],
+  answer: "B",
+  exp: "Federal systems often lead to duplication of administrative functions, increasing costs and inefficiency."
+},
+{
+  year: "2024",
+  q: "Which of the following is a feature of unitary system?",
+  options: [
+    "A. autonomy of regions",
+    "B. central supremacy",
+    "C. division of powers",
+    "D. federal constitution"
+  ],
+  answer: "B",
+  exp: "In a unitary system, the central government is supreme, and all powers flow from it."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains checks and balances?",
+  options: [
+    "A. dominance of one branch",
+    "B. mutual control among branches",
+    "C. military control",
+    "D. judicial supremacy"
+  ],
+  answer: "B",
+  exp: "Checks and balances ensure that each branch of government can limit the powers of the others, preventing abuse."
+},
+{
+  year: "2024",
+  q: "Which system promotes quick decision-making?",
+  options: [
+    "A. federal",
+    "B. unitary",
+    "C. confederal",
+    "D. parliamentary"
+  ],
+  answer: "B",
+  exp: "Unitary systems allow quick decisions because authority is centralized, reducing bureaucratic delays."
+},
+{
+  year: "2024",
+  q: "Which system best accommodates diversity?",
+  options: [
+    "A. unitary",
+    "B. federal",
+    "C. confederal",
+    "D. military"
+  ],
+  answer: "B",
+  exp: "Federalism accommodates diversity by allowing regions to govern themselves while remaining united."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains political system?",
+  options: [
+    "A. economic policy",
+    "B. structure of governance",
+    "C. judicial system",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "A political system refers to the structure and organization of government and how power is exercised."
+},
+{
+  year: "2024",
+  q: "Which of the following best explains fusion of powers?",
+  options: [
+    "A. separation of branches",
+    "B. overlap of executive and legislature",
+    "C. judicial independence",
+    "D. military control"
+  ],
+  answer: "B",
+  exp: "Fusion of powers occurs when executive and legislative functions are combined, as seen in parliamentary systems."
+},
+{
+  year: "2024",
+  q: "Which of the following is a key advantage of parliamentary system?",
+  options: [
+    "A. rigidity",
+    "B. flexibility",
+    "C. dictatorship",
+    "D. military rule"
+  ],
+  answer: "B",
+  exp: "Parliamentary systems are flexible because the government can be easily changed without major constitutional crises."
+}
+],
+  
+  nature: [
     
 {
   year: "2024",

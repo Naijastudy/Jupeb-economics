@@ -295,25 +295,14 @@ const [loadingFirebase, setLoadingFirebase] = useState(true);
   const [cbtRunning, setCbtRunning] = useState(false);
 
   // Exam
-  const [examCount, setExamCount] = useState(50);
-  const [examMinutes, setExamMinutes] = useState(60);
-  const [examQs, setExamQs] = useState([]);
-  const [examIdx, setExamIdx] = useState(0);
-  const [examAnswers, setExamAnswers] = useState({});
-  const [examDone, setExamDone] = useState(false);
-  const [examTime, setExamTime] = useState(3600);
-  const [examRunning, setExamRunning] = useState(false);
-  const [showCalc, setShowCalc] = useState(false);
- 
-<button onClick={() => setShowCalc(!showCalc)}>
-  {showCalc ? "Hide Calculator" : "Show Calculator"}
-</button>
-
-{showCalc && <Calculator />};
-const [minimized, setMinimized] = useState(false);
-const [showConfirm, setShowConfirm] = useState(false);
-const [pendingAction, setPendingAction] = useState(null);
-
+const [examCount, setExamCount] = useState(50);
+const [examMinutes, setExamMinutes] = useState(60);
+const [examQs, setExamQs] = useState([]);
+const [examIdx, setExamIdx] = useState(0);
+const [examAnswers, setExamAnswers] = useState({});
+const [examDone, setExamDone] = useState(false);
+const [examTime, setExamTime] = useState(3600);
+const [examRunning, setExamRunning] = useState(false);
   const goTo = (newScreen) => {
     window.history.pushState({}, "");
     setHistory(h => [...h, newScreen]);

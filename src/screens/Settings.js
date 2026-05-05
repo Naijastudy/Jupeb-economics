@@ -133,6 +133,11 @@ Current: <span style={{ color: t.gold }}>
           <div style={{ display: "flex", gap: 12 }}>
             {["system", "dark", "light"].map(mode => (
               <button
+              {mode === "system"
+  ? "Auto (System)"
+  : mode === "dark"
+  ? "Night Mode"
+  : "Day Mode"},
                 key={mode}
                 onClick={() => setThemeKey(mode)}
                 style={{
@@ -142,11 +147,7 @@ Current: <span style={{ color: t.gold }}>
                   cursor: "pointer",
                   textAlign: "center",
                   background:
-                    {mode === "system"
-  ? "Auto (System)"
-  : mode === "dark"
-  ? "Night Mode"
-  : "Day Mode"},
+                    
                     themeKey === mode
                       ? mode === "dark"
                         ? "#1a2a1a"

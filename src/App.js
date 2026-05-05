@@ -1109,6 +1109,19 @@ if (screen === "settings") {
   }}
 />
 )}
+{n.title === "Law of Demand" && (
+  <img
+  src="/image/qd_q.png"
+  alt="Demand Curve"
+  style={{
+    width: "100%",
+    maxHeight: "300px",
+    objectFit: "contain",
+    margin: "10px 0",
+    borderRadius: "10px"
+  }}
+/>
+)}
 
     {n.title === "Elasticity of Demand curve" && (
   <img

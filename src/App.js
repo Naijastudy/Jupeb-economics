@@ -1168,8 +1168,7 @@ return (
 >
   {m}
 </button>
-  {m >= 60 ? ${m / 60}hr : ${m}min}
-</button>
+  {m >= 60 ? `${m / 60}hr` : `${m}min`}</button>
 ))}
 </div>
 </div>

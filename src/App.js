@@ -1129,8 +1129,23 @@ return (
 <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 14 }}>Number of Questions</div>
 <div style={{ display: "flex", gap: 10 }}>
 {[15, 30, 40, 50].map(n => (
-<button key={n} onClick={() => setExamCount(n)} style={{ flex: 1, padding: "14px 6px", borderRadius: 10, border: 2px solid ${examCount === n ? t.gold : t.border}, background: examCount === n ? ${t.gold}22 : t.bgInner, color: examCount === n ? t.gold : t.textSub, fontSize: 16, fontWeight: "bold", cursor: "pointer" }}>{n}</button>
-))}
+<button
+  key={n}
+  onClick={() => setExamCount(n)}
+  style={{
+    flex: 1,
+    padding: "14px 6px",
+    borderRadius: 10,
+    border: `2px solid ${examCount === n ? t.gold : t.border}`,
+    background: examCount === n ? `${t.gold}22` : t.bgInner,
+    color: examCount === n ? t.gold : t.textSub,
+    fontSize: 16,
+    fontWeight: "bold",
+    cursor: "pointer",
+  }}
+>
+  {n}
+</button>))}
 </div>
 </div>
 <div style={card}>

@@ -8,6 +8,7 @@ export default function Settings({
   themeKey,
   setThemeKey,
   goldBtn,
+  toggleTheme,
 }) {
 
   const wrap = {

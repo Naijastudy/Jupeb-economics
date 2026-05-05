@@ -1120,7 +1120,7 @@ return (
 <div style={wrap}>
 <Header onBack={goBack} title="Exam Mode" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
 <div style={{ padding: "16px" }}>
-<div style={{ background: t.exBg, border: 1px solid ${t.exBorder}, borderRadius: 12, padding: "14px 16px", marginBottom: 20 }}>
+<div style={{ background: t.exBg, border: '1px solid ${t.exBorder}', borderRadius: 12, padding: "14px 16px", marginBottom: 20 }}>
 <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.8 }}>
 📝 Questions are randomly shuffled. Answer all questions first — results shown only after you submit.
 </div>

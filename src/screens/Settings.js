@@ -27,8 +27,12 @@ export default function Settings({
 
   return (
     <div style={wrap}>
-      <Header onBack={goBack} title="Settings" t={t} />
-
+      <Header
+  onBack={goBack}
+  title="Settings"
+  t={t}
+  onToggleTheme={toggleTheme}
+/>
       <div style={{ padding: 16 }}>
 
         {/* PROFILE CARD */}

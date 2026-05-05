@@ -7,6 +7,7 @@ import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";imp
 import Calculator from "./Calculator";
 import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
+import Header from "./components/Header";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -57,7 +58,7 @@ function formatTime(seconds) {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-function Header({ onBack, title, sub, t, onToggleTheme, right }) {
+/*function Header({ onBack, title, sub, t, onToggleTheme, right }) {
   return (
     <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 100 }}>
       {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#fff", fontSize: 22, cursor: "pointer", padding: 0 }}>←</button>}
@@ -70,7 +71,7 @@ function Header({ onBack, title, sub, t, onToggleTheme, right }) {
       <button onClick={onToggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 16, cursor: "pointer", padding: "6px 10px" }}>{t.toggleIcon}</button>
     </div>
   );
-}
+}*/
 
 function RadioDot({ selected, color }) {
   return (

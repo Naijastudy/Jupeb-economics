@@ -39,8 +39,13 @@ export default function Profile({
 
   return (
     <div style={wrap}>
-      <Header onBack={goBack} title="My Profile" sub={user ? user.displayName : "Not logged in"} t={t} />
-
+     <Header
+  onBack={goBack}
+  title="My Profile"
+  sub={user?.displayName}
+  t={t}
+  right={<span style={{ color: t.gold }}>⭐</span>}
+/>
       <div style={{ padding: 16 }}>
 
         {/* NOT LOGGED IN */}

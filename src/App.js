@@ -761,7 +761,6 @@ if (screen === "settings") {
       themeKey={themeKey}
       setThemeKey={setThemeKey}
       goldBtn={goldBtn}
-      Header={Header}
     />
   );
 }      

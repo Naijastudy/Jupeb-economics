@@ -83,7 +83,7 @@ export default function ExamQuiz({
   style={{
     position: "fixed",
     top: 70,
-    right: 20,
+    right: 50,
     zIndex: 1000,
     background: t.goldBtn,
     border: "none",

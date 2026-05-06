@@ -79,63 +79,7 @@ export default function ExamQuiz({
       </div>
 
       <div style={{ padding: "16px" }}>
-                {/* 🧮 CALCULATOR BUTTON */}
-<button
-  onClick={() => setShowCalc(!showCalc)}
-  style={{
-    position: "fixed",
-    bottom: 90,
-    right: 20,
-    zIndex: 1000,
-    background: t.goldBtn,
-    border: "none",
-    borderRadius: 10,
-    padding: "8px 12px",
-    color: t.goldBtnText,
-    fontWeight: "bold",
-    cursor: "pointer"
-  }}
->
-  {showCalc ? "🧮" : "📟"}
-</button>
-
-{/* 🧮 CALCULATOR PANEL */}
-{showCalc && (
-  <div style={{
-    position: "fixed",
-    bottom: 20,
-    right: 20,
-    zIndex: 1000,
-    width: minimized ? 120 : 280,
-    background: t.bgCard,
-    padding: 10,
-    borderRadius: 16,
-    boxShadow: "0 8px 30px rgba(0,0,0,0.3)"
-  }}>
-    
-    {/* HEADER */}
-    <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      marginBottom: 6
-    }}>
-      <span style={{ color: t.heading, fontWeight: "bold" }}>📟</span>
-
-      <div>
-        <button onClick={() => setMinimized(!minimized)}>
-          {minimized ? "⬆" : "⬇"}
-        </button>
-
-        <button onClick={() => setShowCalc(false)}>
-          ✕
-        </button>
-      </div>
-    </div>
-
-    {/* BODY */}
-    {!minimized && <Calculator t={t} />}
-  </div>
-)}
+               
         {/* Progress bar */}
         <div style={{ background: t.progressBg, borderRadius: 6, height: 5, marginBottom: 14 }}>
           <div style={{ background: t.progressFill, height: 5, borderRadius: 6, width: `${(answered / examQs.length) * 100}%`, transition: "width 0.3s" }} />
@@ -196,6 +140,64 @@ export default function ExamQuiz({
             : `Submit (${examQs.length - answered} unanswered)`}
         </button>
       </div>
+
+ {/* 🧮 CALCULATOR BUTTON */}
+<button
+  onClick={() => setShowCalc(!showCalc)}
+  style={{
+    position: "fixed",
+    bottom: 90,
+    right: 20,
+    zIndex: 1000,
+    background: t.goldBtn,
+    border: "none",
+    borderRadius: 10,
+    padding: "8px 12px",
+    color: t.goldBtnText,
+    fontWeight: "bold",
+    cursor: "pointer"
+  }}
+>
+  {showCalc ? "🧮" : "📟"}
+</button>
+
+{/* 🧮 CALCULATOR PANEL */}
+{true && (
+  <div style={{
+    position: "fixed",
+    bottom: 20,
+    right: 20,
+    zIndex: 1000,
+    width: minimized ? 120 : 280,
+    background: t.bgCard,
+    padding: 10,
+    borderRadius: 16,
+    boxShadow: "0 8px 30px rgba(0,0,0,0.3)"
+  }}>
+    
+    {/* HEADER */}
+    <div style={{
+      display: "flex",
+      justifyContent: "space-between",
+      marginBottom: 6
+    }}>
+      <span style={{ color: t.heading, fontWeight: "bold" }}>📟</span>
+
+      <div>
+        <button onClick={() => setMinimized(!minimized)}>
+          {minimized ? "⬆" : "⬇"}
+        </button>
+
+        <button onClick={() => setShowCalc(false)}>
+          ✕
+        </button>
+      </div>
+    </div>
+
+    {/* BODY */}
+    {!minimized && <Calculator t={t} />}
+  </div>
+)}
 
       {/* Confirmation Modal */}
       {showConfirm && (

@@ -9,6 +9,9 @@ import ExamQuiz from "./screens/ExamQuiz";
 import CbtQuiz from "./screens/CbtQuiz";
 import Calculator from "./Calculator";
 import Profile from "./screens/Profile";
+import Feedback from "./screens/Feedback";
+import { NotesCourses, NotesTopics, NotesView } from "./components/Notes";
+import { PastQCourses, PastQTopics, PastQView }
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
 
@@ -665,76 +668,36 @@ if (showSplash) {
 
   // ── SETTINGS ─────────────────────────────────────────────────────────────
 if (screen === "profile") {
-  return (
-    <Profile
-      t={t}
-      goBack={goBack}
-      user={user}
-      userScores={userScores}
-      handleGoogleLogin={handleGoogleLogin}
-      handleLogout={handleLogout}
-    />
-  );
-}
+    return <Profile t={t} user={user} userScores={userScores} onLogin={handleGoogleLogin} onLogout={handleLogout} onBack={goBack} goldBtn={goldBtn} card={card} />;
+  }
 
 if (screen === "feedback") {
-
+    const sendFeedback = async () => {
+      if (!feedbackMessage.trim()) { setFeedbackError("Please write a message first."); return; }
+      setFeedbackSending(true);
+      setFeedbackError("");
+      try {
+        await addDoc(collection(db, "feedback"), {
+          name: feedbackName.trim() || "Anonymous",
+          message: feedbackMessage.trim(),
+          timestamp: serverTimestamp(),
+          subject: activeSubject?.name || "General",
+        });
+        setFeedbackSent(true);
+        setFeedbackName("");
+        setFeedbackMessage("");
+      } catch (e) { setFeedbackError("Failed to send. Check your connection and try again."); }
+      setFeedbackSending(false);
+    };
     return (
-      <div style={wrap}>
-        <Header onBack={goBack} title="Send Feedback" sub="Help us improve" t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          {sent ? (
-            <div style={{ ...card, textAlign: "center", padding: "40px 20px" }}>
-              <div style={{ fontSize: 52, marginBottom: 16 }}>🎉</div>
-              <div style={{ fontSize: 18, fontWeight: "bold", color: t.heading, marginBottom: 8 }}>Thank you!</div>
-              <div style={{ fontSize: 13, color: t.textSub, marginBottom: 24, lineHeight: 1.8 }}>Your feedback has been received. We read every message and use it to improve StudyNaija.</div>
-              <button onClick={() => { setFeedbackSent(false); }} style={goldBtn}>Send Another</button>
-              <button onClick={goBack} style={{ ...goldBtn, background: "transparent", border: `1px solid ${t.border}`, color: t.textSub }}>Back to Settings</button>
-            </div>
-          ) : (
-            <>
-              <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px", marginBottom: 20 }}>
-                <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.8 }}>
-                  📝 Found a wrong answer? Want a new subject? Have a suggestion? Let us know!
-                </div>
-              </div>
-
-              <div style={card}>
-                <div style={{ fontSize: 13, color: t.textSub, marginBottom: 8 }}>Your Name (optional)</div>
-                <input
-                  value={name}
-                  onChange={e => setFeedbackName(e.target.value)}
-                  placeholder="e.g. Junior"
-                  style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", boxSizing: "border-box" }}
-                />
-              </div>
-
-              <div style={card}>
-                <div style={{ fontSize: 13, color: t.textSub, marginBottom: 8 }}>Your Message *</div>
-                <textarea
-                  value={message}
-                  onChange={e => setFeedbackMessage(e.target.value)}
-                  placeholder="Type your feedback, suggestion or report here..."
-                  rows={6}
-                  style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `1px solid ${t.border}`, background: t.bgInner, color: t.text, fontSize: 14, outline: "none", resize: "none", boxSizing: "border-box", fontFamily: "Georgia, serif" }}
-                />
-              </div>
-
-              {error && (
-                <div style={{ background: t.wrongBg, border: `1px solid ${t.wrongBorder}`, borderRadius: 10, padding: "12px 14px", marginBottom: 14, fontSize: 13, color: t.wrongText }}>
-                  ⚠️ {error}
-                </div>
-              )}
-
-              <button onClick={sendFeedback} disabled={sending} style={{ ...goldBtn, opacity: sending ? 0.7 : 1 }}>
-                {sending ? "Sending..." : "Send Feedback 📤"}
-              </button>
-            </>
-          )}
-        </div>
-      </div>
+      <Feedback t={t} feedbackName={feedbackName} setFeedbackName={setFeedbackName}
+        feedbackMessage={feedbackMessage} setFeedbackMessage={setFeedbackMessage}
+        feedbackSending={feedbackSending} feedbackSent={feedbackSent}
+        setFeedbackSent={setFeedbackSent} feedbackError={feedbackError}
+        onSend={sendFeedback} onBack={goBack} goldBtn={goldBtn} card={card} />
     );
-    }
+  }
+
 if (screen === "about") {
   
     return (
@@ -760,6 +723,7 @@ if (screen === "about") {
   </div>
 );
 }
+
 if (screen === "settings") {
   return (
     <Settings

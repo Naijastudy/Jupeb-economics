@@ -306,11 +306,6 @@ const [examTime, setExamTime] = useState(3600);
 const [examRunning, setExamRunning] = useState(false);
 const [showCalc, setShowCalc] = useState(false);
 
-<button onClick={() => setShowCalc(!showCalc)}>
-{showCalc ? "Hide Calculator" : "Show Calculator"}
-</button>
-
-{showCalc && <Calculator />};
 const [minimized, setMinimized] = useState(false);
 const [showConfirm, setShowConfirm] = useState(false);
 const [pendingAction, setPendingAction] = useState(null);
@@ -1083,7 +1078,10 @@ if (screen === "exam_setup" && data) {
         examAnswers={examAnswers} setExamAnswers={setExamAnswers}
         examTime={examTime} examDone={examDone}
         setExamDone={setExamDone} setExamRunning={setExamRunning}
-        activeSubject={activeSubject} 
+        activeSubject={activeSubject} showCalc={showCalc}
+  setShowCalc={setShowCalc}
+  minimized={minimized}
+  setMinimized={setMinimized}
 
         onBack={() => {
           if (Object.keys(examAnswers).length > 0) {

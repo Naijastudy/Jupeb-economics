@@ -1083,7 +1083,8 @@ if (screen === "exam_setup" && data) {
         examAnswers={examAnswers} setExamAnswers={setExamAnswers}
         examTime={examTime} examDone={examDone}
         setExamDone={setExamDone} setExamRunning={setExamRunning}
-        activeSubject={activeSubject}
+        activeSubject={activeSubject} Header={Header} Calculator={Calculator}
+
         onBack={() => {
           if (Object.keys(examAnswers).length > 0) {
             const confirm = window.confirm("⚠️ Are you sure you want to quit?\n\nYour progress will be lost!");

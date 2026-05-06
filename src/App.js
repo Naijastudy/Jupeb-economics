@@ -1015,7 +1015,7 @@ if (screen === "settings") {
   }
 
   // ── CBT QUIZ ──────────────────────────────────────────────────────────────
-  if (screen === "cbt_quiz") {
+  /*if (screen === "cbt_quiz") {
     if (cbtDone) {
       const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
       const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
@@ -1055,7 +1055,7 @@ if (screen === "settings") {
   </button>
 
   {/* 🧮 CALCULATOR */}
-{showCalc && (
+/*{showCalc && (
   <div style={{
     position: "fixed",
     bottom: 20,
@@ -1069,7 +1069,7 @@ if (screen === "settings") {
   }}>
 
     {/* HEADER */}
-    <div style={{
+   /* <div style={{
       display: "flex",
       justifyContent: "space-between",
       marginBottom: 6
@@ -1091,7 +1091,7 @@ if (screen === "settings") {
     </div>
 
     {/* BODY */}
-    {!minimized && <Calculator t={t} />}
+  /*  {!minimized && <Calculator t={t} />}
 
   </div>
 )}
@@ -1215,7 +1215,7 @@ right={<div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderR
 
 {/* 🧮 CALCULATOR BUTTON */}
 
-<button
+/*<button
 onClick={() => setShowCalc(!showCalc)}
 style={{
 marginBottom: 10,
@@ -1233,7 +1233,7 @@ cursor: "pointer"
 {showCalc ? "🧮" : "📟"}
 
   </button>  {/* 🧮 CALCULATOR */}
-{showCalc && (
+/*{showCalc && (
 
   <div style={{  
     position: "fixed",  
@@ -1246,7 +1246,7 @@ cursor: "pointer"
     borderRadius: 16,  
     boxShadow: "0 8px 30px rgba(0,0,0,0.3)"  
   }}>  {/* HEADER */}  
-<div style={{  
+/*<div style={{  
   display: "flex",  
   justifyContent: "space-between",  
   marginBottom: 6  
@@ -1268,7 +1268,7 @@ cursor: "pointer"
 </div>  
 
 {/* BODY */}  
-{!minimized && <Calculator t={t} />}
+/*{!minimized && <Calculator t={t} />}
 
   </div>  
 )}  <div style={{ background: t.progressBg, borderRadius: 6, height: 5, marginBottom: 14 }}>  
@@ -1388,7 +1388,7 @@ cursor: "pointer"
 )}  
       </div>  
     );  
-        }
+        }*/
 
 return null;
       

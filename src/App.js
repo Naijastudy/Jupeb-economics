@@ -454,7 +454,7 @@ useEffect(() => {
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => setCbtTime(prev => {
-      if (prev === 300) alert("⚠️ 3 minutes remaining! Finish up and submit.");
+      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -464,7 +464,7 @@ useEffect(() => {
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => setExamTime(prev => {
-      if (prev === 300) alert("⚠️ 3 minutes remaining! Finish up and submit.");
+      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -1119,64 +1119,8 @@ if (screen === "exam_setup" && data) {
           right={<div style={{ background: cbtTime < 300 ? "#dc3545" : "#16a34a", borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: "#fff", marginRight: 8 }}>{formatTime(cbtTime)}</div>}
         />
         <div style={{ padding: "16px" }}>
-              <button
-    onClick={() => setShowCalc(!showCalc)}
-    style={{
-      marginBottom: 10,
-      background: t.goldBtn,
-      border: "none",
-      borderRadius: 10,
-      padding: "8px 12px",
-      color: t.goldBtnText,
-      fontWeight: "bold",
-      cursor: "pointer"
-    }}
-  >
-    {showCalc ? "Close Calculator" : "Open Calculator"}
-  </button>
-
-  {/* 🧮 CALCULATOR *//*}
-/*{showCalc && (
-  <div style={{
-    position: "fixed",
-    bottom: 20,
-    right: 20,
-    zIndex: 1000,
-    width: minimized ? 120 : 280,
-    background: t.bgCard,
-    padding: 10,
-    borderRadius: 16,
-    boxShadow: "0 8px 30px rgba(0,0,0,0.3)"
-  }}>
-
-    {/* HEADER *//*}
-   /* <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      marginBottom: 6
-    }}>
-      
-      <span style={{ color: t.heading, fontWeight: "bold" }}>
-        🧮
-      </span>
-
-      <div>
-        <button onClick={() => setMinimized(!minimized)}>
-          {minimized ? "⬆" : "⬇"}
-        </button>
-
-        <button onClick={() => setShowCalc(false)}>
-          ✕
-        </button>
-      </div>
-    </div>
-
-    {/* BODY *//*}
-  /*  {!minimized && <Calculator t={t} />}
-
-  </div>
-)}
-
+              
+   
           <div style={{ background: t.progressBg, borderRadius: 6, height: 5, marginBottom: 14 }}>
             <div style={{ background: t.progressFill, height: 5, borderRadius: 6, width: `${(answered / cbtQs.length) * 100}%`, transition: "width 0.3s" }} />
           </div>

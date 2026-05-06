@@ -110,7 +110,8 @@ onClick={() => {
 if (answered > 0) {
 setPendingAction("submit");
 setShowConfirm(true);
-} else {
+} 
+else {
 setExamRunning(false);
 setExamDone(true);
 }
@@ -208,5 +209,5 @@ cursor: "pointer"
   </div>  
 </div>
         </div> 
-  );
+  );}
         }

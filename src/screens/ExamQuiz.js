@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../components/Header";
 
 function RadioDot({ selected, color }) {
   return (
@@ -42,7 +43,7 @@ export default function ExamQuiz({
   t, examQs, examIdx, setExamIdx,
   examAnswers, setExamAnswers, examTime,
   examDone, setExamDone, setExamRunning,
-  activeSubject, onBack, card, goldBtn,
+  activeSubject, onBack, card, goldBtn,Header, Calculator,
 }) {
   const [showConfirm, setShowConfirm] = useState(false);
   

@@ -30,7 +30,7 @@ export default function Profile({
             <div style={{ ...card, display: "flex", alignItems: "center", gap: 16 }}>
               <img src={user.photoURL} alt="profile" style={{ width: 56, height: 56, borderRadius: "50%", border: `2px solid ${t.gold}` }} />
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: 16, fontWeight: "bold", color: t.heading }}>{user.displayName}right={<span style={{ color: t.gold }}>⭐</span></div>
+                <div style={{ fontSize: 16, fontWeight: "bold", color: t.heading }}>{user.displayName}</div>
                 <div style={{ fontSize: 12, color: t.textSub, marginTop: 4 }}>{user.email}</div>
                 <div style={{ fontSize: 11, color: t.gold, marginTop: 4 }}>{userScores.length} attempts recorded</div>
               </div>

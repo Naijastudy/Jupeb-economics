@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function RadioDot({ selected, color }) {
   return (
@@ -44,9 +44,21 @@ export default function ExamQuiz({
   examDone, setExamDone, setExamRunning,
   activeSubject, onBack, card, goldBtn,
 }) {
+  const [showConfirm, setShowConfirm] = useState(false);
+  
   const q = examQs[examIdx];
   if (!q) return null;
   const answered = Object.keys(examAnswers).length;
+
+  const handleSubmitClick = () => {
+    if (answered > 0) {
+      setShowConfirm(true);
+    } else {
+      // If nothing answered, maybe just exit or show a different warning
+      setExamRunning(false);
+      setExamDone(true);
+    }
+  };
 
   return (
     <div style={{ minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text }}>
@@ -72,13 +84,14 @@ export default function ExamQuiz({
         {/* Question pills */}
         <QuizPills total={examQs.length} current={examIdx} answers={examAnswers} onSelect={setExamIdx} t={t} />
 
-        {/* Question */}
-        <div style={{ ...card }}>
+        {/* Question Card */}
+        <div style={{ ...card, marginBottom: 16 }}>
           <div style={{ fontSize: 10, color: t.tagColor, letterSpacing: 2, marginBottom: 10 }}>Question {examIdx + 1} · JUPEB {q.year}</div>
           <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: 16 }}>{q.q}</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {q.options.map(opt => {
-              const l = opt[0], isSel = examAnswers[examIdx] === l;
+              const l = opt[0];
+              const isSel = examAnswers[examIdx] === l;
               return (
                 <button key={opt} onClick={() => setExamAnswers(a => ({ ...a, [examIdx]: l }))} style={{
                   background: isSel ? t.selectedBg : t.optionBg,
@@ -95,7 +108,7 @@ export default function ExamQuiz({
           </div>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation Buttons */}
         <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
           <button onClick={() => setExamIdx(i => Math.max(0, i - 1))} disabled={examIdx === 0}
             style={{ flex: 1, background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 10, color: t.textSub, fontSize: 13, padding: 12, cursor: examIdx === 0 ? "default" : "pointer", opacity: examIdx === 0 ? 0.4 : 1 }}>← Prev</button>
@@ -103,114 +116,64 @@ export default function ExamQuiz({
             style={{ flex: 1, background: t.goldBtn, border: "none", borderRadius: 10, color: t.goldBtnText, fontSize: 13, fontWeight: "bold", padding: 12, cursor: examIdx === examQs.length - 1 ? "default" : "pointer", opacity: examIdx === examQs.length - 1 ? 0.4 : 1 }}>Next →</button>
         </div>
 
-        {/* Submit */}
-       <button
+        {/* Submit Button */}
+        <button
+          onClick={handleSubmitClick}
+          style={{
+            width: "100%",
+            background: answered === examQs.length ? "#16a34a" : "#6b7280",
+            border: "none",
+            borderRadius: 12,
+            color: "#fff",
+            fontSize: 14,
+            fontWeight: "bold",
+            padding: 14,
+            cursor: "pointer"
+          }}
+        >
+          {answered === examQs.length
+            ? "Submit Exam ✓"
+            : `Submit (${examQs.length - answered} unanswered)`}
+        </button>
+      </div>
 
-onClick={() => {
-if (answered > 0) {
-setPendingAction("submit");
-setShowConfirm(true);
-} 
-else {
-setExamRunning(false);
-setExamDone(true);
-}
-}}
-style={{
-width: "100%",
-background: answered === examQs.length ? "#16a34a" : "#6b7280",
-border: "none",
-borderRadius: 12,
-color: "#fff",
-fontSize: 14,
-fontWeight: "bold",
-padding: 14,
-cursor: "pointer"
-}}
-
-> 
-
-{answered === examQs.length
-? "Submit Exam ✓"
-: 'Submit (${examQs.length - answered} unanswered)'}
-</button>
-</div>
-{showConfirm && (
-
-  <div style={{  
-    position: "fixed",  
-    top: 0,  
-    left: 0,  
-    right: 0,  
-    bottom: 0,  
-    background: "rgba(0,0,0,0.6)",  
-    display: "flex",  
-    alignItems: "center",  
-    justifyContent: "center",  
-    zIndex: 2000  
-  }}>  <div style={{  
-  background: t.bgCard,  
-  padding: 20,  
-  borderRadius: 12,  
-  width: 280,  
-  textAlign: "center",  
-  border: `1px solid ${t.border}`,  
-  boxShadow: "0 8px 30px rgba(0,0,0,0.3)"  
-}}>  
-    
-  <p style={{  
-    fontWeight: "bold",  
-    color: t.heading  
-  }}>  
-    Are you sure you want to submit your exam?  
-  </p>  
-
-  <div style={{  
-    display: "flex",  
-    gap: 10,  
-    marginTop: 15  
-  }}>  
-      
-    <button  
-      onClick={() => {  
-        setExamRunning(false);  
-        setExamDone(true);  
-        setShowConfirm(false);  
-      }}  
-      style={{  
-        flex: 1,  
-        padding: 10,  
-        borderRadius: 8,  
-        border: "none",  
-        background: "#16a34a",  
-        color: "#fff",  
-        fontWeight: "bold"  
-      }}  
-    >  
-      Yes  
-    </button>  
-
-    <button  
-      onClick={() => setShowConfirm(false)}  
-      style={{  
-        flex: 1,  
-        padding: 10,  
-        borderRadius: 8,  
-        border: "none",  
-        background: t.bg,  
-        color: t.textSub,  
-        fontWeight: "bold",  
-        border: `1px solid ${t.border}`  
-      }}  
-    >  
-      No  
-    </button>  
-
-  </div>  
-</div>
-        </div> 
-)}
-</div> 
+      {/* Confirmation Modal */}
+      {showConfirm && (
+        <div style={{
+          position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
+          background: "rgba(0,0,0,0.6)", display: "flex", alignItems: "center",
+          justifyContent: "center", zIndex: 2000
+        }}>
+          <div style={{
+            background: t.bgCard, padding: 20, borderRadius: 12,
+            width: 280, textAlign: "center", border: `1px solid ${t.border}`,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)"
+          }}>
+            <p style={{ fontWeight: "bold", color: t.heading, marginBottom: 20 }}>
+              Are you sure you want to submit your exam?
+            </p>
+            <div style={{ display: "flex", gap: 10 }}>
+              <button
+                onClick={() => {
+                  setExamRunning(false);
+                  setExamDone(true);
+                  setShowConfirm(false);
+                }}
+                style={{ flex: 1, padding: 10, borderRadius: 8, border: "none", background: "#16a34a", color: "#fff", fontWeight: "bold", cursor: "pointer" }}
+              >
+                Yes
+              </button>
+              <button
+                onClick={() => setShowConfirm(false)}
+                style={{ flex: 1, padding: 10, borderRadius: 8, background: t.bg, color: t.textSub, fontWeight: "bold", border: `1px solid ${t.border}`, cursor: "pointer" }}
+              >
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
-
-        }
+}
+  

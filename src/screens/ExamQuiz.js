@@ -101,7 +101,7 @@ export default function ExamQuiz({
 {showCalc && (
   <div style={{
     position: "fixed",
-    top: 70,
+    bottom: 70,
     right: 20,
     zIndex: 1000,
     width: minimized ? 120 : 280,

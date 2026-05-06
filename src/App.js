@@ -11,7 +11,7 @@ import Calculator from "./Calculator";
 import Profile from "./screens/Profile";
 import Feedback from "./screens/Feedback";
 import { NotesCourses, NotesTopics, NotesView } from "./components/Notes";
-import { PastQCourses, PastQTopics, PastQView }
+import { PastQCourses, PastQTopics, PastQView };
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
 

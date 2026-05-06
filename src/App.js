@@ -452,7 +452,7 @@ useEffect(() => {
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => setCbtTime(prev => {
-      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
+      if (prev === 180) alert("Gentle reminder ⚠️ 3 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -462,7 +462,7 @@ useEffect(() => {
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => setExamTime(prev => {
-      if (prev === 300) alert("⚠️ 5 minutes remaining! Finish up and submit.");
+      if (prev === 180) alert("Gentle reminder⚠️ 3 minutes remaining! Finish up and submit.");
       if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
       return prev - 1;
     }), 1000);
@@ -755,7 +755,7 @@ if (screen === "settings") {
               </div>
             ))}
             <div style={{ marginTop: 16, background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 10, padding: "14px", fontSize: 13, color: t.keyText, lineHeight: 2 }}>
-              🔑 CCC = 3+3+3+1 = <strong>10 pts</strong> · AAA = 5+5+5+1 = <strong>16 pts</strong>
+              🏆 CCC = 3+3+3+1 = <strong>10 pts</strong> · AAA = 5+5+5+1 = <strong>16 pts</strong>
             </div>
           </div>
         </div>
@@ -765,149 +765,29 @@ if (screen === "settings") {
 
   // ── NOTES ─────────────────────────────────────────────────────────────────
   if (screen === "notes" && data) {
-    const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title="Study Notes" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {data.courses.map((c, ci) => (
-              <button key={c.id} onClick={() => { setNoteCourse(c); goTo("notes_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
-                <div style={{ fontSize: 28, marginBottom: 8 }}>{c.emoji}</div>
-                <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.code}</div>
-                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", marginTop: 4, lineHeight: 1.4 }}>{c.title}</div>
-                <div style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", marginTop: 6 }}>{c.topics.length} topics</div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
+    return <NotesCourses t={t} data={data} activeSubject={activeSubject} onSelectCourse={(c) => { setNoteCourse(c); goTo("notes_topics"); }} onBack={goBack} />;
   }
 
   if (screen === "notes_topics" && noteCourse && data) {
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title={noteCourse.title} sub={noteCourse.code} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          {noteCourse.topics.map((tp, i) => {
-            const count = (data.notes[tp.id] || []).length;
-            return (
-              <button key={tp.id} onClick={() => { if (count > 0) { setNoteTopic(tp); goTo("notes_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: count > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: count > 0 ? 1 : 0.5 }}
-                onMouseEnter={e => { if (count > 0) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
-                onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
-                <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading }}>{tp.label}</div>
-                  <div style={{ fontSize: 11, color: t.textMuted, marginTop: 3 }}>{count > 0 ? `${count} notes` : "Coming soon"}</div>
-                </div>
-                <div style={{ color: t.gold, fontSize: 18 }}>›</div>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-    );
+    return <NotesTopics t={t} data={data} noteCourse={noteCourse} onSelectTopic={(tp) => { setNoteTopic(tp); goTo("notes_view"); }} onBack={goBack} />;
   }
 
   if (screen === "notes_view" && noteTopic && data) {
-    const topicNotes = data.notes[noteTopic.id] || [];
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title={noteTopic.label} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          {topicNotes.map((n, i) => (
-            <div key={i} style={card}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
-                <div style={{ fontSize: 15, fontWeight: "bold", color: t.heading }}>{n.title}</div>
-              </div>
-              <div style={{ background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: "14px 16px", marginBottom: 12 }}>
-                <div style={{ fontSize: 11, color: t.keyText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>🖥️ Key Point</div>
-                <div style={{ fontSize: 13, color: t.keyText, lineHeight: 1.8 }}>{n.key}</div>
-              </div>
-            
-              <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px" }}>
-                <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📜 Full Explanation</div>
-                <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>{n.body}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
+    return <NotesView t={t} data={data} noteTopic={noteTopic} onBack={goBack} card={card} />;
+    }
 
   // ── PAST QUESTIONS ────────────────────────────────────────────────────────
   if (screen === "pastq_courses" && data) {
-    const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title="Past Questions" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {data.courses.map((c, ci) => {
-              const qCount = c.topics.reduce((a, tp) => a + (data.questions[tp.id] || []).length, 0);
-              return (
-                <button key={c.id} onClick={() => { setPqCourse(c); goTo("pastq_topics"); }} style={{ background: noteColors[ci % noteColors.length], border: "none", borderRadius: 16, padding: "20px 14px", cursor: "pointer", textAlign: "left" }}>
-                  <div style={{ fontSize: 28, marginBottom: 8 }}>{c.emoji}</div>
-                  <div style={{ fontSize: 14, fontWeight: "bold", color: "#fff" }}>{c.code}</div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", marginTop: 4, lineHeight: 1.4 }}>{c.title}</div>
-                  <div style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", marginTop: 6 }}>{qCount} questions</div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    );
+    return <PastQCourses t={t} data={data} activeSubject={activeSubject} onSelectCourse={(c) => { setPqCourse(c); goTo("pastq_topics"); }} onBack={goBack} />;
   }
 
   if (screen === "pastq_topics" && pqCourse && data) {
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title={pqCourse.title} sub={pqCourse.code} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          {pqCourse.topics.map((tp, i) => {
-            const qCount = (data.questions[tp.id] || []).length;
-            return (
-              <button key={tp.id} onClick={() => { if (qCount > 0) { setPqTopic(tp); setPqRevealed({}); setPqSelected({}); goTo("pastq_view"); } }} style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 14, cursor: qCount > 0 ? "pointer" : "default", width: "100%", textAlign: "left", marginBottom: 10, opacity: qCount > 0 ? 1 : 0.5 }}
-                onMouseEnter={e => { if (qCount > 0) e.currentTarget.style.border = `1px solid ${t.borderHover}`; }}
-                onMouseLeave={e => e.currentTarget.style.border = `1px solid ${t.border}`}>
-                <div style={{ width: 34, height: 34, borderRadius: 10, background: `${t.gold}22`, border: `1px solid ${t.gold}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: t.gold, fontWeight: "bold" }}>{i + 1}</div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading }}>{tp.label}</div>
-                  <div style={{ fontSize: 11, color: t.textMuted, marginTop: 3 }}>{qCount > 0 ? `${qCount} questions` : "Coming soon"}</div>
-                </div>
-                <div style={{ color: t.gold, fontSize: 18 }}>›</div>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-    );
+    return <PastQTopics t={t} data={data} pqCourse={pqCourse} onSelectTopic={(tp) => { setPqTopic(tp); goTo("pastq_view"); }} onBack={goBack} />;
   }
 
   if (screen === "pastq_view" && pqTopic && data) {
-    const pqs = data.questions[pqTopic.id] || [];
-    return (
-      <div style={wrap}>
-        <Header onBack={goBack} title={pqTopic.label} sub={`${pqs.length} past questions`} t={t} onToggleTheme={toggleTheme} />
-        <div style={{ padding: "16px" }}>
-          {pqs.map((q, qi) => (
-            <div key={qi}>
-              <QuestionCard q={q} idx={qi} answers={pqSelected} setAnswers={setPqSelected} revealed={pqRevealed[qi]} t={t} showResult={pqRevealed[qi]} />
-              {!pqRevealed[qi] && (
-                <button onClick={() => setPqRevealed(r => ({ ...r, [qi]: true }))} style={{ marginTop: -6, marginBottom: 14, background: "transparent", border: `1px solid ${t.gold}`, borderRadius: 10, color: t.gold, fontSize: 13, padding: "10px 18px", cursor: "pointer", width: "100%", fontWeight: "bold" }}>
-                  Show Answer & Explanation
-                </button>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
+    return <PastQView t={t} data={data} pqTopic={pqTopic} onBack={goBack} card={card} />;
+            }
 
   // ── CBT QUIZ ──────────────────────────────────────────────────────────────
 if (screen === "cbt_quiz") {

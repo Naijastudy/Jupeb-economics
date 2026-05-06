@@ -206,6 +206,7 @@ cursor: "pointer"
     </button>  
 
   </div>  
-
+</div>
+        </div> 
   );
         }

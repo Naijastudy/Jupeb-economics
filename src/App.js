@@ -1054,7 +1054,7 @@ if (screen === "settings") {
     {showCalc ? "Close Calculator" : "Open Calculator"}
   </button>
 
-  {/* 🧮 CALCULATOR */}
+  {/* 🧮 CALCULATOR *//*}
 /*{showCalc && (
   <div style={{
     position: "fixed",
@@ -1068,7 +1068,7 @@ if (screen === "settings") {
     boxShadow: "0 8px 30px rgba(0,0,0,0.3)"
   }}>
 
-    {/* HEADER */}
+    {/* HEADER *//*}
    /* <div style={{
       display: "flex",
       justifyContent: "space-between",
@@ -1090,7 +1090,7 @@ if (screen === "settings") {
       </div>
     </div>
 
-    {/* BODY */}
+    {/* BODY *//*}
   /*  {!minimized && <Calculator t={t} />}
 
   </div>
@@ -1213,7 +1213,7 @@ right={<div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderR
 />
 <div style={{ padding: "16px" }}>
 
-{/* 🧮 CALCULATOR BUTTON */}
+{/* 🧮 CALCULATOR BUTTON *//*}
 
 /*<button
 onClick={() => setShowCalc(!showCalc)}
@@ -1232,7 +1232,7 @@ cursor: "pointer"
 
 {showCalc ? "🧮" : "📟"}
 
-  </button>  {/* 🧮 CALCULATOR */}
+  </button>  {/* 🧮 CALCULATOR *//*}
 /*{showCalc && (
 
   <div style={{  
@@ -1245,7 +1245,7 @@ cursor: "pointer"
     padding: 10,  
     borderRadius: 16,  
     boxShadow: "0 8px 30px rgba(0,0,0,0.3)"  
-  }}>  {/* HEADER */}  
+  }}>  {/* HEADER *//*}  
 /*<div style={{  
   display: "flex",  
   justifyContent: "space-between",  
@@ -1267,7 +1267,7 @@ cursor: "pointer"
   </div>  
 </div>  
 
-{/* BODY */}  
+{/* BODY *//*}
 /*{!minimized && <Calculator t={t} />}
 
   </div>  

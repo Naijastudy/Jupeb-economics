@@ -103,7 +103,7 @@ export default function Settings({
           </div>
 
           <button
-            onClick={() => goTo("feedback")}
+            onClick={onFeedback}
             style={{ ...goldBtn, marginTop: 8 }}
           >
             📤 Send Feedback / Report Issue

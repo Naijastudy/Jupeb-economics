@@ -10,8 +10,8 @@ import CbtQuiz from "./screens/CbtQuiz";
 import Calculator from "./Calculator";
 import Profile from "./screens/Profile";
 import Feedback from "./screens/Feedback";
-import { NotesCourses, NotesTopics, NotesView } from "./components/Notes";
-import { PastQCourses, PastQTopics, PastQView };
+import { NotesCourses, NotesTopics, NotesView } from "./screens/Notes";
+import { PastQCourses, PastQTopics, PastQView } from "./screens/PastQuestions";
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
 

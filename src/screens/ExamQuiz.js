@@ -82,7 +82,7 @@ export default function ExamQuiz({
   onClick={() => setShowCalc(!showCalc)}
   style={{
     position: "fixed",
-    bottom: 90,
+    top: 70,
     right: 20,
     zIndex: 1000,
     background: t.goldBtn,
@@ -98,7 +98,7 @@ export default function ExamQuiz({
 </button>
 
 {/* 🧮 CALCULATOR PANEL */}
-{true && (
+{showCalc && (
   <div style={{
     position: "fixed",
     top: 70,

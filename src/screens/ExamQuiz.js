@@ -101,7 +101,7 @@ export default function ExamQuiz({
 {true && (
   <div style={{
     position: "fixed",
-    bottom: 20,
+    top: 70,
     right: 20,
     zIndex: 1000,
     width: minimized ? 120 : 280,

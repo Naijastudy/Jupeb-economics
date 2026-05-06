@@ -1,5 +1,5 @@
 import React  from "react";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import Feedback from "./screens/Feedback";
 
 export default function Settings({

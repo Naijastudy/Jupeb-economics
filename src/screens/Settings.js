@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../components/Header"; // adjust path if needed
 
 export default function Settings({
@@ -9,6 +10,7 @@ export default function Settings({
   setThemeKey,
   goldBtn,
   toggleTheme,
+  onFeedback,
 }) {
 
   const wrap = {

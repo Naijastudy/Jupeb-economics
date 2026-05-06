@@ -4,6 +4,9 @@ import { subjects } from "./data/index";
 import { db, auth, googleProvider } from "./firebase";
 import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy, onSnapshot } from "firebase/firestore";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";import { grading } from "./data/economics";
+import ExamSetup from "./components/ExamSetup";
+import ExamQuiz from "./components/ExamQuiz";
+import CbtQuiz from "./components/CbtQuiz";
 import Calculator from "./Calculator";
 import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
@@ -1015,7 +1018,85 @@ if (screen === "settings") {
   }
 
   // ── CBT QUIZ ──────────────────────────────────────────────────────────────
-  /*if (screen === "cbt_quiz") {
+if (screen === "cbt_quiz") {
+    if (cbtDone) {
+      const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
+      const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
+      if (user) saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct);
+      return (
+        <div style={wrap}>
+          <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
+          <ResultScreen qs={cbtQs} answers={cbtAnswers} t={t}
+            onRetry={() => startCbt(activeSubject)}
+            onHome={() => goTo("home")} />
+        </div>
+      );
+    }
+    return (
+      <CbtQuiz
+        t={t} cbtQs={cbtQs} cbtIdx={cbtIdx} setCbtIdx={setCbtIdx}
+        cbtAnswers={cbtAnswers} setCbtAnswers={setCbtAnswers}
+        cbtTime={cbtTime} cbtDone={cbtDone}
+        setCbtDone={setCbtDone} setCbtRunning={setCbtRunning}
+        activeSubject={activeSubject}
+        onBack={() => {
+          if (Object.keys(cbtAnswers).length > 0) {
+            const confirm = window.confirm("⚠️ Are you sure you want to quit?\n\nYour progress will be lost!");
+            if (!confirm) return;
+            setCbtRunning(false);
+          }
+          goTo("home");
+        }}
+        card={card} goldBtn={goldBtn}
+      />
+    );
+}
+if (screen === "exam_setup" && data) {
+    return (
+      <ExamSetup
+        t={t} data={data} activeSubject={activeSubject}
+        firebaseQuestions={firebaseQuestions}
+        examCount={examCount} setExamCount={setExamCount}
+        examMinutes={examMinutes} setExamMinutes={setExamMinutes}
+        onStart={() => startExam(activeSubject)}
+        onBack={goBack} goldBtn={goldBtn} card={card}
+      />
+    );
+}
+  if (screen === "exam_quiz") {
+    if (examDone) {
+      const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
+      const pct = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;
+      if (user) saveScore("Exam", activeSubject?.name, correct, examQs.length, pct);
+      return (
+        <div style={wrap}>
+          <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
+          <ResultScreen qs={examQs} answers={examAnswers} t={t}
+            onRetry={() => startExam(activeSubject)}
+            onHome={() => goTo("home")} />
+        </div>
+      );
+    }
+    return (
+      <ExamQuiz
+        t={t} examQs={examQs} examIdx={examIdx} setExamIdx={setExamIdx}
+        examAnswers={examAnswers} setExamAnswers={setExamAnswers}
+        examTime={examTime} examDone={examDone}
+        setExamDone={setExamDone} setExamRunning={setExamRunning}
+        activeSubject={activeSubject}
+        onBack={() => {
+          if (Object.keys(examAnswers).length > 0) {
+            const confirm = window.confirm("⚠️ Are you sure you want to quit?\n\nYour progress will be lost!");
+            if (!confirm) return;
+            setExamRunning(false);
+          }
+          goTo("exam_setup");
+        }}
+        card={card} goldBtn={goldBtn}
+      />
+    );
+          }
+/*if (screen === "cbt_quiz") {
     if (cbtDone) {
       const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
       const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;

@@ -735,6 +735,7 @@ if (screen === "settings") {
       setThemeKey={setThemeKey}
       goldBtn={goldBtn}
         toggleTheme={toggleTheme}
+          onFeedback={() => goTo("feedback")}
     />
   );
 }      

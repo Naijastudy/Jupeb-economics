@@ -73,10 +73,7 @@ export default function ExamQuiz({
           <div style={{ fontSize: 15, fontWeight: "bold", color: "#fff" }}>Exam Mode</div>
           <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>{activeSubject?.name} · {answered}/{examQs.length} answered</div>
         </div>
-        <div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: examTime < 300 ? "#fff" : t.goldBtnText }}>
-          {formatTime(examTime)}
-        </div>
-      </div>
+        
  {/* 🧮 CALCULATOR BUTTON */}
 <button
   onClick={() => setShowCalc(!showCalc)}
@@ -136,6 +133,10 @@ export default function ExamQuiz({
     {!minimized && <Calculator t={t} />}
   </div>
 )}
+        <div style={{ background: examTime < 300 ? "#dc3545" : t.goldBtn, borderRadius: 20, padding: "6px 14px", fontSize: 13, fontWeight: "bold", color: examTime < 300 ? "#fff" : t.goldBtnText }}>
+          {formatTime(examTime)}
+        </div>
+      </div>
 
       <div style={{ padding: "16px" }}>
                

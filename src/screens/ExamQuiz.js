@@ -81,17 +81,19 @@ export default function ExamQuiz({
 <button
   onClick={() => setShowCalc(!showCalc)}
   style={{
-    position: "fixed",
-    top: 70,
-    right: 50,
+    
+    position: "relative", 
     zIndex: 1000,
     background: t.goldBtn,
     border: "none",
     borderRadius: 10,
-    padding: "8px 12px",
+    padding: "6px 10px", 
     color: t.goldBtnText,
     fontWeight: "bold",
-    cursor: "pointer"
+    cursor: "pointer",
+    
+    marginRight: "12px",
+    verticalAlign: "middle" 
   }}
 >
   {showCalc ? "🧮" : "📟"}

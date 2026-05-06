@@ -104,11 +104,108 @@ export default function ExamQuiz({
         </div>
 
         {/* Submit */}
-        <button onClick={() => { setExamRunning(false); setExamDone(true); }}
-          style={{ width: "100%", background: answered === examQs.length ? "#16a34a" : "#6b7280", border: "none", borderRadius: 12, color: "#fff", fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer" }}>
-          {answered === examQs.length ? "Submit Exam ✓" : `Submit (${examQs.length - answered} unanswered)`}
-        </button>
-      </div>
-    </div>
+       <button
+
+onClick={() => {
+if (answered > 0) {
+setPendingAction("submit");
+setShowConfirm(true);
+} else {
+setExamRunning(false);
+setExamDone(true);
+}
+}}
+style={{
+width: "100%",
+background: answered === examQs.length ? "#16a34a" : "#6b7280",
+border: "none",
+borderRadius: 12,
+color: "#fff",
+fontSize: 14,
+fontWeight: "bold",
+padding: 14,
+cursor: "pointer"
+}}
+
+> 
+
+{answered === examQs.length
+? "Submit Exam ✓"
+: 'Submit (${examQs.length - answered} unanswered)'}
+</button>
+</div>
+{showConfirm && (
+
+  <div style={{  
+    position: "fixed",  
+    top: 0,  
+    left: 0,  
+    right: 0,  
+    bottom: 0,  
+    background: "rgba(0,0,0,0.6)",  
+    display: "flex",  
+    alignItems: "center",  
+    justifyContent: "center",  
+    zIndex: 2000  
+  }}>  <div style={{  
+  background: t.bgCard,  
+  padding: 20,  
+  borderRadius: 12,  
+  width: 280,  
+  textAlign: "center",  
+  border: `1px solid ${t.border}`,  
+  boxShadow: "0 8px 30px rgba(0,0,0,0.3)"  
+}}>  
+    
+  <p style={{  
+    fontWeight: "bold",  
+    color: t.heading  
+  }}>  
+    Are you sure you want to submit your exam?  
+  </p>  
+
+  <div style={{  
+    display: "flex",  
+    gap: 10,  
+    marginTop: 15  
+  }}>  
+      
+    <button  
+      onClick={() => {  
+        setExamRunning(false);  
+        setExamDone(true);  
+        setShowConfirm(false);  
+      }}  
+      style={{  
+        flex: 1,  
+        padding: 10,  
+        borderRadius: 8,  
+        border: "none",  
+        background: "#16a34a",  
+        color: "#fff",  
+        fontWeight: "bold"  
+      }}  
+    >  
+      Yes  
+    </button>  
+
+    <button  
+      onClick={() => setShowConfirm(false)}  
+      style={{  
+        flex: 1,  
+        padding: 10,  
+        borderRadius: 8,  
+        border: "none",  
+        background: t.bg,  
+        color: t.textSub,  
+        fontWeight: "bold",  
+        border: `1px solid ${t.border}`  
+      }}  
+    >  
+      No  
+    </button>  
+
+  </div>  
+</div>
   );
         }

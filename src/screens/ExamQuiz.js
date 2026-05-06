@@ -209,5 +209,8 @@ cursor: "pointer"
   </div>  
 </div>
         </div> 
-  )}
+)}
+</div> 
+  );
+
         }

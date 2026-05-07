@@ -204,14 +204,25 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
             </div>
             <div style={{ flex: 1 }}>
              {subject.available ? (
-                <div style={{ fontSize: 12, color: t.gold, marginTop: 4 }}>
-                  {Object.values(subject.data.questions).reduce((a, arr) => a + arr.length, 0)} questions · {Object.values(subject.data.notes).reduce((a, arr) => a + arr.length, 0)} notes
-                </div>
-              ) : (
-                <div style={{ fontSize: 12, marginTop: 4, display: "flex", alignItems: "center", gap: 6 }}>
-                  <span style={{ background: "#f59e0b", color: "#000", fontSize: 10, fontWeight: "bold", padding: "2px 8px", borderRadius: 20 }}>COMING SOON</span>
-                </div>
-              )}
+  <div style={{ fontSize: 12, color: t.gold, marginTop: 4 }}>
+    Tap to continue
+  </div>
+) : (
+  <div style={{ fontSize: 12, marginTop: 4, display: "flex", alignItems: "center", gap: 6 }}>
+    <span
+      style={{
+        background: "#f59e0b",
+        color: "#000",
+        fontSize: 10,
+        fontWeight: "bold",
+        padding: "2px 8px",
+        borderRadius: 20
+      }}
+    >
+      COMING SOON
+    </span>
+  </div>
+)}
             </div>
             {subject.available && <div style={{ color: t.gold, fontSize: 20 }}>›</div>}
             {!subject.available && <div style={{ fontSize: 18 }}>🔒</div>}

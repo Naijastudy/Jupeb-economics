@@ -5959,6 +5959,266 @@ options: [
 ],
 answer: "A",
 exp: "Democracy encourages citizens to participate in governance through voting and representation."
+},
+		
+{
+year: "2015",
+q: "Sovereignty can best be defined as the ______ authority of the state.",
+options: [
+"A. Temporary",
+"B. Delegated",
+"C. Supreme",
+"D. Religious"
+],
+answer: "C",
+exp: "Sovereignty means the state possesses supreme authority within its territory without external control."
+},
+
+{
+year: "2015",
+q: "Which of the following is a major feature of democracy?",
+options: [
+"A. Military rule",
+"B. Free and fair elections",
+"C. One-party system",
+"D. Dictatorship"
+],
+answer: "B",
+exp: "Democracy depends on regular free and fair elections where citizens choose their leaders."
+},
+
+{
+year: "2015",
+q: "The arm of government responsible for making laws is the ______.",
+options: [
+"A. Executive",
+"B. Judiciary",
+"C. Legislature",
+"D. Civil service"
+],
+answer: "C",
+exp: "The legislature is the law-making organ of government."
+},
+
+{
+year: "2015",
+q: "A written constitution is one that is ______.",
+options: [
+"A. Based mainly on customs",
+"B. Not officially documented",
+"C. Contained in formal legal documents",
+"D. Created by judges only"
+],
+answer: "C",
+exp: "A written constitution is formally documented in official legal texts."
+},
+
+{
+year: "2015",
+q: "Which of the following is a duty of a citizen?",
+options: [
+"A. Refusing to obey laws",
+"B. Paying taxes",
+"C. Overthrowing government",
+"D. Avoiding elections"
+],
+answer: "B",
+exp: "Citizens are expected to pay taxes to support government activities and development."
+},
+
+{
+year: "2015",
+q: "Rule of law implies that ______.",
+options: [
+"A. Leaders are above the law",
+"B. Only judges obey the law",
+"C. Everyone is equal before the law",
+"D. Laws apply only to citizens"
+],
+answer: "C",
+exp: "Rule of law means nobody is above the law, including government officials."
+},
+
+{
+year: "2015",
+q: "Which of the following can serve as a source of constitution?",
+options: [
+"A. Coup d'etat",
+"B. Customs and traditions",
+"C. Pressure groups",
+"D. Political violence"
+],
+answer: "B",
+exp: "Customs and traditions are important historical sources of constitutions."
+},
+
+{
+year: "2015",
+q: "One important function of political parties is to ______.",
+options: [
+"A. Interpret laws",
+"B. Conduct population census",
+"C. Contest elections",
+"D. Control the military"
+],
+answer: "C",
+exp: "Political parties participate in elections to gain political power."
+},
+
+{
+year: "2015",
+q: "Citizenship refers to the ______ relationship between an individual and a state.",
+options: [
+"A. Religious",
+"B. Economic",
+"C. Legal",
+"D. Temporary"
+],
+answer: "C",
+exp: "Citizenship is a legal relationship that gives rights and responsibilities."
+},
+
+{
+year: "2015",
+q: "Which of the following is a factor that determines foreign policy?",
+options: [
+"A. School timetable",
+"B. National interest",
+"C. Weather condition",
+"D. Population census"
+],
+answer: "B",
+exp: "Foreign policy is mainly guided by the national interest of a country."
+},
+		
+{
+year: "2015",
+q: "The process through which a bill becomes law is known as ______.",
+options: [
+"A. Impeachment",
+"B. Legislation",
+"C. Adjudication",
+"D. Ratification"
+],
+answer: "B",
+exp: "Legislation refers to the law-making process carried out by the legislature."
+},
+
+{
+year: "2015",
+q: "A government headed by the military after overthrowing a civilian government is called a ______ government.",
+options: [
+"A. Democratic",
+"B. Parliamentary",
+"C. Military",
+"D. Monarchical"
+],
+answer: "C",
+exp: "A military government comes to power mainly through force or coup d'etat."
+},
+
+{
+year: "2015",
+q: "The right of citizens to vote and be voted for is called ______.",
+options: [
+"A. Franchise",
+"B. Referendum",
+"C. Recall",
+"D. Impeachment"
+],
+answer: "A",
+exp: "Franchise means the legal right to participate in elections either as a voter or candidate."
+},
+
+{
+year: "2015",
+q: "The organ of government responsible for implementing laws is the ______.",
+options: [
+"A. Judiciary",
+"B. Executive",
+"C. Legislature",
+"D. Electoral commission"
+],
+answer: "B",
+exp: "The executive arm implements and enforces laws and government policies."
+},
+
+{
+year: "2015",
+q: "A constitution that is contained in a single written document is known as a ______ constitution.",
+options: [
+"A. Flexible",
+"B. Written",
+"C. Unwritten",
+"D. Federal"
+],
+answer: "B",
+exp: "A written constitution is formally documented in one or more legal texts."
+},
+
+{
+year: "2015",
+q: "One feature of democracy is the existence of ______.",
+options: [
+"A. One-party system",
+"B. Free and fair elections",
+"C. Absolute monarchy",
+"D. Military rule"
+],
+answer: "B",
+exp: "Democracy requires periodic free and fair elections where citizens choose leaders."
+},
+
+{
+year: "2015",
+q: "The principle of separation of powers was developed to prevent ______.",
+options: [
+"A. Economic growth",
+"B. Abuse of power",
+"C. Political participation",
+"D. Constitutional amendment"
+],
+answer: "B",
+exp: "Separation of powers prevents concentration of authority in one arm of government."
+},
+
+{
+year: "2015",
+q: "An electoral system in which the candidate with the highest votes wins is called ______.",
+options: [
+"A. Proportional representation",
+"B. Absolute majority",
+"C. First-past-the-post",
+"D. Option A4"
+],
+answer: "C",
+exp: "First-past-the-post means the candidate with the most votes wins even without absolute majority."
+},
+
+{
+year: "2015",
+q: "The term sovereignty refers to the ______ power of the state.",
+options: [
+"A. Weak",
+"B. Delegated",
+"C. Supreme",
+"D. Temporary"
+],
+answer: "C",
+exp: "Sovereignty means the state possesses supreme authority within its territory."
+},
+
+{
+year: "2015",
+q: "The local government system is established mainly to ______.",
+options: [
+"A. Reduce population",
+"B. Bring government closer to the people",
+"C. Control the judiciary",
+"D. Conduct foreign policy"
+],
+answer: "B",
+exp: "Local governments help deliver governance and development at the grassroots level."
 }
 ]
   

@@ -3957,7 +3957,7 @@ intl: [
   exp: "International relations deals with interactions among states, including diplomacy, trade, conflict, and cooperation. It focuses on how countries relate with one another in the global system."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Foreign policy refers to:",
   options: [
     "A. domestic policies",
@@ -3969,7 +3969,7 @@ intl: [
   exp: "Foreign policy is the set of strategies and decisions a country adopts in dealing with other nations to protect its national interest."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains diplomacy?",
   options: [
     "A. use of force",
@@ -3981,7 +3981,7 @@ intl: [
   exp: "Diplomacy involves negotiation, dialogue, and peaceful engagement between states to resolve conflicts and promote cooperation."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The primary aim of foreign policy is to:",
   options: [
     "A. promote war",
@@ -3993,7 +3993,7 @@ intl: [
   exp: "Foreign policy is designed to protect and promote a country's national interest, including security, economic growth, and international influence."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a major actor in international relations?",
   options: [
     "A. individuals only",
@@ -4006,7 +4006,7 @@ intl: [
 },
 
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains national interest?",
   options: [
     "A. personal interest",
@@ -4018,7 +4018,7 @@ intl: [
   exp: "National interest refers to the objectives a country pursues in its foreign relations, such as security, economic prosperity, and global influence."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The United Nations was established to:",
   options: [
     "A. promote war",
@@ -4030,7 +4030,7 @@ intl: [
   exp: "The UN was created after World War II to prevent conflicts, promote peace, and foster international cooperation."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which organ of the UN is responsible for maintaining peace?",
   options: [
     "A. General Assembly",
@@ -4042,7 +4042,7 @@ intl: [
   exp: "The Security Council has the primary responsibility for maintaining international peace and security, including authorizing peacekeeping missions."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains sovereignty?",
   options: [
     "A. dependence on other states",
@@ -4054,7 +4054,7 @@ intl: [
   exp: "Sovereignty refers to a state's supreme authority within its territory, free from external interference."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a method of peaceful conflict resolution?",
   options: [
     "A. war",
@@ -4067,7 +4067,7 @@ intl: [
 },
 
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains international organization?",
   options: [
     "A. national institution",
@@ -4079,7 +4079,7 @@ intl: [
   exp: "International organizations are institutions created by states to promote cooperation on global issues such as peace, trade, and development."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which of the following is a regional organization in Africa?",
   options: [
     "A. UN",
@@ -4091,7 +4091,7 @@ intl: [
   exp: "The African Union is a regional organization that promotes unity, development, and cooperation among African countries."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains collective security?",
   options: [
     "A. individual defense",
@@ -4103,7 +4103,7 @@ intl: [
   exp: "Collective security is a system where states agree to defend each other against aggression, ensuring global peace."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is a form of economic diplomacy?",
   options: [
     "A. war",
@@ -4115,7 +4115,7 @@ intl: [
   exp: "Economic diplomacy involves using trade agreements and economic cooperation to strengthen relations between countries."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains non-alignment?",
   options: [
     "A. joining alliances",
@@ -4130,7 +4130,7 @@ intl: [
 
 
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains sanctions?",
   options: [
     "A. military attack",
@@ -4141,8 +4141,8 @@ intl: [
   answer: "B",
   exp: "Sanctions are economic or political penalties imposed to influence a country's behavior without resorting to war."
 },
-{
-  year: "2024",
+	{
+  year: "2022",
   q: "Which of the following is a challenge to international cooperation?",
   options: [
     "A. trust",
@@ -4154,7 +4154,7 @@ intl: [
   exp: "Conflicting national interests often hinder cooperation, as countries prioritize their own goals over collective ones."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains globalization?",
   options: [
     "A. isolation of countries",
@@ -4166,7 +4166,7 @@ intl: [
   exp: "Globalization refers to the growing interconnectedness of countries through trade, communication, and cultural exchange."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "A key determinant of foreign policy is:",
   options: [
     "A. weather",
@@ -4180,7 +4180,7 @@ intl: [
 ],
   precolonial: [
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best describes the political system of the Hausa-Fulani?",
   options: [
     "A. decentralized system",
@@ -4192,7 +4192,7 @@ intl: [
   exp: "The Hausa-Fulani political system was highly centralized and theocratic. The Emir held both political and religious authority, ruling in accordance with Islamic law (Sharia). Authority flowed from the top, making it a strong centralized system."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The Emir in the Hausa-Fulani system derived authority primarily from:",
   options: [
     "A. the people",
@@ -4204,7 +4204,7 @@ intl: [
   exp: "The Emir's authority was rooted in religion, particularly Islam. He was seen as both a political leader and a religious figure, enforcing Sharia law."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which institution assisted the Emir in administration?",
   options: [
     "A. Ogboni",
@@ -4216,7 +4216,7 @@ intl: [
   exp: "The Emirate council consisted of advisers and officials who assisted the Emir in governance, including administration, taxation, and justice."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "The Yoruba political system was characterized by:",
   options: [
     "A. absolute monarchy",
@@ -4228,7 +4228,7 @@ intl: [
   exp: "The Yoruba system was centralized under the Oba, but his powers were checked by councils such as the Oyo Mesi, preventing absolute rule."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which body could check the power of the Alaafin in Oyo?",
   options: [
     "A. Emirate council",
@@ -4241,7 +4241,7 @@ intl: [
 },
 
 {
-  year: "2024",
+  year: "2023",
   q: "The Ogboni society in Yoruba land was responsible for:",
   options: [
     "A. military defense",
@@ -4253,7 +4253,7 @@ intl: [
   exp: "The Ogboni society played important judicial and religious roles, ensuring that laws were respected and traditions upheld."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "The Igbo political system is best described as:",
   options: [
     "A. centralized monarchy",
@@ -4265,7 +4265,7 @@ intl: [
   exp: "The Igbo political system was decentralized, with no central authority. Power was distributed among village assemblies, elders, and age grades."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which institution was most important in Igbo governance?",
   options: [
     "A. Emirate council",
@@ -4277,7 +4277,7 @@ intl: [
   exp: "The village assembly was the highest decision-making body in Igbo society, where all adult males could participate in governance."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a feature of Igbo political system?",
   options: [
     "A. hereditary kingship",
@@ -4289,7 +4289,7 @@ intl: [
   exp: "Igbo society lacked centralized authority. Decisions were made collectively, making it highly participatory and democratic in nature."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Age grades in Igbo society were responsible for:",
   options: [
     "A. ruling the state",
@@ -4302,7 +4302,7 @@ intl: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains checks and balances in Yoruba system?",
   options: [
     "A. absence of authority",
@@ -4314,7 +4314,7 @@ intl: [
   exp: "Checks and balances in Yoruba land ensured that the Oba did not rule absolutely. Councils like Oyo Mesi limited his powers."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which system allowed direct participation of citizens in governance?",
   options: [
     "A. Hausa-Fulani",
@@ -4326,7 +4326,7 @@ intl: [
   exp: "The Igbo system allowed direct participation through village assemblies, where decisions were made collectively."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains legitimacy in Hausa-Fulani system?",
   options: [
     "A. popular vote",
@@ -4338,7 +4338,7 @@ intl: [
   exp: "Legitimacy in the Hausa-Fulani system was derived from religion, particularly Islam, which justified the authority of the Emir."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a major weakness of the Igbo system?",
   options: [
     "A. lack of participation",
@@ -4523,7 +4523,7 @@ intl: [
 },
 
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a major advantage of indirect rule?",
   options: [
     "A. high cost",
@@ -4535,7 +4535,7 @@ intl: [
   exp: "Indirect rule reduced administrative costs and allowed easier governance by using existing structures."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a disadvantage of indirect rule?",
   options: [
     "A. efficiency",
@@ -4547,7 +4547,7 @@ intl: [
   exp: "Indirect rule sometimes distorted traditional authority, especially where rulers were imposed or given excessive powers."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains colonial exploitation?",
   options: [
     "A. economic development",
@@ -4559,7 +4559,7 @@ intl: [
   exp: "Colonial powers exploited resources and labor primarily for their own economic benefit, often neglecting local development."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The amalgamation of Nigeria in 1914 was carried out by:",
   options: [
     "A. Lord Lugard",
@@ -4571,7 +4571,7 @@ intl: [
   exp: "Lord Lugard amalgamated Northern and Southern Nigeria in 1914 to improve administrative efficiency and economic viability."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which of the following best explains the purpose of amalgamation?",
   options: [
     "A. promote democracy",
@@ -4586,7 +4586,7 @@ intl: [
 
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following was a result of colonial rule?",
   options: [
     "A. political independence",
@@ -4598,7 +4598,7 @@ intl: [
   exp: "Colonial rule often resulted in economic exploitation, where resources were extracted for the benefit of the colonizers."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains dual mandate?",
   options: [
     "A. two governments",
@@ -4610,7 +4610,7 @@ intl: [
   exp: "The dual mandate theory by Lugard justified colonialism as beneficial to both Britain and its colonies, though in practice it favored the colonizers."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains colonial legacy?",
   options: [
     "A. absence of impact",
@@ -4624,7 +4624,7 @@ intl: [
 ],
 nationalism: [
 {
-  year: "2024",
+  year: "2021",
   q: "Nationalism is best defined as:",
   options: [
     "A. loyalty to colonial rulers",
@@ -4636,7 +4636,7 @@ nationalism: [
   exp: "Nationalism refers to the strong desire of a people to achieve self-government and independence from foreign domination. In Nigeria, it involved resistance to colonial rule and demand for political autonomy."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains Nigerian nationalism?",
   options: [
     "A. support for colonial rule",
@@ -4648,7 +4648,7 @@ nationalism: [
   exp: "Nigerian nationalism was the organized effort by Nigerians to end colonial rule and achieve independence through political activism and resistance."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which factor contributed most to the rise of nationalism in Nigeria?",
   options: [
     "A. colonial support",
@@ -4660,7 +4660,7 @@ nationalism: [
   exp: "Western education exposed Nigerians to ideas of freedom, equality, and self-determination, inspiring nationalist movements."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following played a key role in spreading nationalist ideas?",
   options: [
     "A. judiciary",
@@ -4672,7 +4672,7 @@ nationalism: [
   exp: "Newspapers and the press were crucial in spreading nationalist ideas, criticizing colonial policies, and mobilizing public support."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains the role of elites in nationalism?",
   options: [
     "A. suppression of ideas",
@@ -4685,7 +4685,7 @@ nationalism: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is a method used by nationalists?",
   options: [
     "A. cooperation with colonial rulers",
@@ -4697,7 +4697,7 @@ nationalism: [
   exp: "Nationalists used peaceful methods such as protests, petitions, and negotiations to demand reforms and independence."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains militant nationalism?",
   options: [
     "A. peaceful protests",
@@ -4709,7 +4709,7 @@ nationalism: [
   exp: "Militant nationalism involves more aggressive tactics such as strikes, boycotts, and sometimes violence to achieve independence."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains moderate nationalism?",
   options: [
     "A. violent resistance",
@@ -4721,7 +4721,7 @@ nationalism: [
   exp: "Moderate nationalists preferred peaceful methods like dialogue, constitutional reforms, and negotiations with colonial authorities."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a major objective of nationalism?",
   options: [
     "A. economic exploitation",
@@ -4733,7 +4733,7 @@ nationalism: [
   exp: "The primary goal of nationalism was to achieve political independence and self-governance."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains self-government?",
   options: [
     "A. foreign control",
@@ -4746,7 +4746,7 @@ nationalism: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following was a result of nationalism?",
   options: [
     "A. colonial expansion",
@@ -4758,7 +4758,7 @@ nationalism: [
   exp: "Nationalist movements ultimately led to independence, ending colonial rule and establishing self-governance."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains political parties in nationalism?",
   options: [
     "A. suppression",
@@ -4770,7 +4770,7 @@ nationalism: [
   exp: "Political parties were used by nationalists to mobilize support, organize activities, and present demands to colonial authorities."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains the role of trade unions?",
   options: [
     "A. suppression of nationalism",
@@ -4782,7 +4782,7 @@ nationalism: [
   exp: "Trade unions supported nationalist movements by organizing strikes and protests, putting pressure on colonial authorities."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a challenge faced by nationalists?",
   options: [
     "A. unity",
@@ -4794,7 +4794,7 @@ nationalism: [
   exp: "Colonial authorities often suppressed nationalist activities through arrests, censorship, and restrictions."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains Pan-Africanism?",
   options: [
     "A. isolation",
@@ -4809,7 +4809,7 @@ nationalism: [
 
 
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains nationalist leaders?",
   options: [
     "A. colonial officers",
@@ -4821,7 +4821,7 @@ nationalism: [
   exp: "Nationalist leaders were individuals who spearheaded the struggle for independence through political activism and organization."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains colonial response to nationalism?",
   options: [
     "A. support",
@@ -4833,7 +4833,7 @@ nationalism: [
   exp: "Colonial authorities responded with both repression (arrests, censorship) and reforms (constitutional changes) to manage nationalist pressure."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains independence?",
   options: [
     "A. foreign rule",
@@ -4847,7 +4847,7 @@ nationalism: [
 ],
   constitution_africa: [
 {
-  year: "2024",
+  year: "2022",
   q: "The Clifford Constitution of 1922 introduced:",
   options: [
     "A. federalism",
@@ -4859,7 +4859,7 @@ nationalism: [
   exp: "The Clifford Constitution marked a major turning point by introducing the elective principle in Nigeria. For the first time, some Nigerians could vote and be elected into the Legislative Council, although it was limited to Lagos and Calabar."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "A major limitation of the Clifford Constitution was that it:",
   options: [
     "A. introduced federalism",
@@ -4871,7 +4871,7 @@ nationalism: [
   exp: "The Clifford Constitution excluded Northern Nigeria from the Legislative Council, reinforcing regional imbalance and limiting national unity."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "The Richards Constitution of 1946 aimed to:",
   options: [
     "A. grant independence",
@@ -4883,7 +4883,7 @@ nationalism: [
   exp: "The Richards Constitution sought to promote unity while recognizing regional differences, leading to the creation of three regions: North, West, and East."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "A major criticism of the Richards Constitution was that it:",
   options: [
     "A. encouraged participation",
@@ -4932,7 +4932,7 @@ nationalism: [
   exp: "Although participatory, the Macpherson Constitution strengthened regional divisions, leading to political crises."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "The Lyttleton Constitution of 1954 introduced:",
   options: [
     "A. unitary system",
@@ -4944,7 +4944,7 @@ nationalism: [
   exp: "The Lyttleton Constitution established a federal system in Nigeria, granting significant autonomy to regions."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which constitution is regarded as the true beginning of federalism in Nigeria?",
   options: [
     "A. Clifford",
@@ -4956,7 +4956,7 @@ nationalism: [
   exp: "The Lyttleton Constitution formalized federalism by clearly dividing powers between the central and regional governments."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which constitution first introduced Nigerians into legislative councils?",
   options: [
     "A. Richards",
@@ -4969,7 +4969,7 @@ nationalism: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains federalism under Lyttleton?",
   options: [
     "A. central control",
@@ -4981,7 +4981,7 @@ nationalism: [
   exp: "Federalism involves dividing powers between central and regional governments, allowing autonomy while maintaining unity."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which constitution strengthened regional autonomy?",
   options: [
     "A. Clifford",
@@ -4993,7 +4993,7 @@ nationalism: [
   exp: "The Lyttleton Constitution gave regions significant autonomy, including control over internal affairs."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which constitution is associated with imposed governance?",
   options: [
     "A. Macpherson",
@@ -5005,7 +5005,7 @@ nationalism: [
   exp: "The Richards Constitution was largely imposed without adequate consultation, leading to widespread criticism."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which constitution attempted to balance unity and diversity?",
   options: [
     "A. Clifford",
@@ -5032,7 +5032,7 @@ nationalism: [
 
 
 {
-  year: "2024",
+  year: "2020",
   q: "Which constitution laid the foundation for independence?",
   options: [
     "A. Clifford",
@@ -5044,7 +5044,7 @@ nationalism: [
   exp: "The Lyttleton Constitution established federalism and regional autonomy, paving the way for Nigeria’s independence in 1960."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains constitutional development?",
   options: [
     "A. military rule",

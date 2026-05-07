@@ -510,7 +510,7 @@ exp: "Transparency ensures that government actions are open and accessible to th
 
 ideas: [
 {
-year: "2022",
+year: "2023",
 q: "The principle of rule of law was popularized by:",
 options: [
 "A. Dicey",
@@ -615,7 +615,7 @@ exp: "Foreign policy tools include diplomacy, military power, and economic aid, 
 
 precolonial: [
 {
-year: "2022",
+year: "2023",
 q: "Which institution checked the powers of the Alaafin of Oyo?",
 options: [
 "A. Emirate council",
@@ -843,7 +843,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "A rigid constitution requires complex procedures, such as supermajority votes or referendums, to be amended, ensuring stability."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "A flexible constitution is characterized by:",
   options: [
     "A. difficulty in amendment",
@@ -1942,7 +1942,7 @@ state: [
 },
 
 {
-  year: "2024",
+  year: "2021",
   q: "A monarchy where the ruler has absolute power is known as:",
   options: [
     "A. constitutional monarchy",
@@ -1954,7 +1954,7 @@ state: [
   exp: "An absolute monarchy is a system where the ruler has unrestricted power and is not bound by a constitution or laws. This contrasts with constitutional monarchy where the monarch's powers are limited."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is NOT a function of the executive?",
   options: [
     "A. implementation of laws",
@@ -1966,7 +1966,7 @@ state: [
   exp: "The executive implements laws and policies, while the judiciary is responsible for interpreting laws. This distinction is essential for maintaining separation of powers."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The legislature performs which primary function?",
   options: [
     "A. enforcing laws",
@@ -1978,7 +1978,7 @@ state: [
   exp: "The legislature is responsible for law-making, representing the people, and overseeing the executive. It plays a central role in democratic governance."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Judicial independence is important because it:",
   options: [
     "A. promotes dictatorship",
@@ -1990,7 +1990,7 @@ state: [
   exp: "Judicial independence allows courts to make decisions free from external influence, ensuring justice, fairness, and protection of rights."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "A bicameral legislature consists of:",
   options: [
     "A. one chamber",
@@ -2002,7 +2002,7 @@ state: [
   exp: "A bicameral legislature has two houses, usually an upper and lower chamber. This structure promotes checks within the legislative process and improves law-making quality."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which factor is essential for the success of federalism?",
   options: [
     "A. weak constitution",
@@ -2014,7 +2014,7 @@ state: [
   exp: "Federalism requires a clear constitutional division of powers to avoid conflicts between central and regional governments. Without this clarity, governance becomes inefficient."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "A state with multiple ethnic groups but one government is called:",
   options: [
     "A. nation-state",
@@ -2026,7 +2026,7 @@ state: [
   exp: "A multinational state contains different ethnic or cultural groups within one political system. Nigeria is an example, with diverse ethnic groups under one government."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "A confederal system differs from a federal system because it:",
   options: [
     "A. centralizes power",
@@ -2038,7 +2038,7 @@ state: [
   exp: "In a confederation, the component states retain their sovereignty and delegate only limited powers to the central authority. This contrasts with a federation where sovereignty is constitutionally shared. Confederations are usually weak and may dissolve easily."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which condition is necessary for the effective operation of separation of powers?",
   options: [
     "A. fusion of powers",
@@ -2054,7 +2054,7 @@ state: [
 constitution: [
   
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains the concept of constitutional supremacy in a federal state?",
   options: [
     "A. The legislature has final authority",
@@ -2066,7 +2066,7 @@ constitution: [
   exp: "In a federal system, constitutional supremacy means that the constitution is binding on both central and regional governments. Any law or action that conflicts with it is invalid. This ensures uniformity and prevents abuse of power at any level."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is a major feature of constitutionalism?",
   options: [
     "A. concentration of power",
@@ -2078,7 +2078,7 @@ constitution: [
   exp: "Constitutionalism emphasizes limiting government powers through legal frameworks. It ensures that authority is exercised within defined boundaries to prevent tyranny and protect citizens' rights."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "The inclusion of fundamental human rights in a constitution is meant to:",
   options: [
     "A. strengthen government power",
@@ -2090,7 +2090,7 @@ constitution: [
   exp: "Fundamental rights protect individuals from arbitrary actions of the state. They guarantee freedoms such as speech, movement, and association, ensuring dignity and justice."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains constitutional rigidity?",
   options: [
     "A. constitution cannot be changed at all",
@@ -2102,7 +2102,7 @@ constitution: [
   exp: "Constitutional rigidity refers to the difficulty of amending the constitution due to strict procedures such as referendums or supermajority votes. This protects it from frequent or arbitrary changes."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "A constitution that derives its authority from the people is said to be:",
   options: [
     "A. imposed constitution",
@@ -2115,7 +2115,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a disadvantage of an unwritten constitution?",
   options: [
     "A. clarity of laws",
@@ -2127,7 +2127,7 @@ constitution: [
   exp: "An unwritten constitution may lead to ambiguity because its rules are scattered across conventions, customs, and judicial decisions. This can create uncertainty in interpretation."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following ensures that government actions conform to constitutional provisions?",
   options: [
     "A. sovereignty",
@@ -2139,7 +2139,7 @@ constitution: [
   exp: "Judicial review allows courts to examine whether government actions are consistent with the constitution. If not, such actions can be declared unconstitutional."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The doctrine of separation of powers is ineffective without:",
   options: [
     "A. monarchy",
@@ -2151,7 +2151,7 @@ constitution: [
   exp: "Separation of powers alone is not enough; checks and balances ensure that each branch can limit the others, preventing abuse and maintaining balance."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains a constitutional government?",
   options: [
     "A. government without laws",
@@ -2163,7 +2163,7 @@ constitution: [
   exp: "A constitutional government operates strictly within the framework of the constitution, ensuring accountability, legality, and protection of rights."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "A referendum is used primarily to:",
   options: [
     "A. elect leaders",
@@ -2176,7 +2176,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains the principle of popular sovereignty?",
   options: [
     "A. government controls people",
@@ -2188,7 +2188,7 @@ constitution: [
   exp: "Popular sovereignty means that ultimate political power resides with the people. Governments derive their legitimacy from the consent of the governed."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "A constitution imposed by colonial rulers is known as:",
   options: [
     "A. autochthonous constitution",
@@ -2200,7 +2200,7 @@ constitution: [
   exp: "An imposed constitution is created by an external authority, often without the full participation of the people it governs."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which feature of a constitution ensures stability?",
   options: [
     "A. flexibility only",
@@ -2212,7 +2212,7 @@ constitution: [
   exp: "A good constitution balances rigidity (to maintain stability) and flexibility (to allow adaptation). Too much of either can be problematic."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The main purpose of entrenched clauses is to:",
   options: [
     "A. weaken constitution",
@@ -2224,7 +2224,7 @@ constitution: [
   exp: "Entrenched clauses protect critical parts of the constitution, such as fundamental rights, by making them difficult to amend."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a key function of a constitution?",
   options: [
     "A. promote trade",

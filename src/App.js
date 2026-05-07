@@ -672,14 +672,14 @@ if (screen === "profile") {
   }
 
 if (screen === "feedback") {
-    const sendFeedback = async () => {
-      if (!feedbackMessage.trim()) { setFeedbackError("Please write a message first."); return; }
+    const handleSendFeedback = async () => {
+      if (!message.trim()) { setFeedbackError("Please write a message first."); return; }
       setFeedbackSending(true);
       setFeedbackError("");
       try {
         await addDoc(collection(db, "feedback"), {
-          name: feedbackName.trim() || "Anonymous",
-          message: feedbackMessage.trim(),
+          name: name.trim() || "Anonymous",
+          message: message.trim(),
           timestamp: serverTimestamp(),
           subject: activeSubject?.name || "General",
         });
@@ -690,11 +690,11 @@ if (screen === "feedback") {
       setFeedbackSending(false);
     };
     return (
-      <Feedback t={t} feedbackName={feedbackName} setFeedbackName={setFeedbackName}
-        feedbackMessage={feedbackMessage} setFeedbackMessage={setFeedbackMessage}
-        feedbackSending={feedbackSending} feedbackSent={feedbackSent}
-        setFeedbackSent={setFeedbackSent} feedbackError={feedbackError}
-        onSend={sendFeedback} onBack={goBack} goldBtn={goldBtn} card={card} />
+      <Feedback t={t} feedbackName={name} setFeedbackName={setFeedbackName}
+        feedbackMessage={message} setFeedbackMessage={setFeedbackMessage}
+        feedbackSending={sending} feedbackSent={sent}
+        setFeedbackSent={setFeedbackSent} feedbackError={error}
+        onSend={handleSendFeedback} onBack={goBack} goldBtn={goldBtn} card={card} />
     );
   }
 

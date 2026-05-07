@@ -203,6 +203,9 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
               {subject.emoji}
             </div>
             <div style={{ flex: 1 }}>
+ <div style={{ fontSize: 18, fontWeight: "bold" }}>
+    {subject.name}
+  </div>
              {subject.available ? (
   <div style={{ fontSize: 12, color: t.gold, marginTop: 4 }}>
     Tap to continue

@@ -428,25 +428,30 @@ useEffect(() => {
     }
   };
 
-  const saveScore = async (mode, subject, score, total, pct) => {
+ const saveScore = async (mode, subject, score, total, pct, qs, answers) => {
     if (!user) return;
     try {
+      const breakdown = qs.map((q, i) => ({
+        q: q.q,
+        year: q.year,
+        answer: q.answer,
+        userAnswer: answers[i] || null,
+        correct: answers[i] === q.answer,
+        exp: q.exp,
+        options: q.options,
+      }));
       await addDoc(collection(db, "scores"), {
         uid: user.uid,
         name: user.displayName,
         email: user.email,
-        mode,
-        subject,
-        score,
-        total,
-        pct,
+        mode, subject, score, total, pct,
+        breakdown,
         timestamp: serverTimestamp(),
       });
       fetchUserScores(user.uid);
-    } catch (e) {
-      console.log("Error saving score:", e);
-    }
+    } catch (e) { console.log("Error saving score:", e); }
   };
+  
   
   useEffect(() => {
     const handleBack = () => { goBack(); };
@@ -815,7 +820,7 @@ if (screen === "cbt_quiz") {
       const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
       const pct = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
       if (user && !cbtScoreSaved) {
-  saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct);
+  saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct, cbtQs, cbtAnswers);
   setCbtScoreSaved(true);
 }
       return (
@@ -866,7 +871,7 @@ if (screen === "exam_quiz") {
       const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
       const pct = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;
       if (user && !examScoreSaved) {
-  saveScore("Exam", activeSubject?.name, correct, examQs.length, pct);
+  saveScore("Exam", activeSubject?.name, correct, examQs.length, pct, examQs, examAnswers);
   setExamScoreSaved(true);
 }
       return (

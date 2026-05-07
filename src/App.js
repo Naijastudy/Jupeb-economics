@@ -206,7 +206,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
               <div style={{ fontSize: 16, fontWeight: "bold", color: subject.available ? t.heading : t.textMuted }}>{subject.name}</div>
               {subject.available ? (
                 <div style={{ fontSize: 12, color: t.gold, marginTop: 4 }}>
-                  {Object.values(subject.data.puestions).reduce((a, arr) => a + arr.length, 0)} {Object.values(subject.data.nqtes).reduce((a, arr) => a + arr.length, 0)}
+                  {Object.values(subject.data.questions).reduce((a, arr) => a + arr.length, 0)} Questions • {Object.values(subject.data.notes).reduce((a, arr) => a + arr.length, 0) Notes}
                 </div>
               ) : (
                 <div style={{ fontSize: 12, marginTop: 4, display: "flex", alignItems: "center", gap: 6 }}>

@@ -5699,8 +5699,268 @@ options: [
 ],
 answer: "B",
 exp: "An unwritten constitution combines written laws with customs, traditions and conventions."
-}
+},
+
+{
+year: "2017",
+q: "Citizenship acquired by a person because his or her parents are citizens of a country is known as citizenship by ______.",
+options: [
+"A. Registration",
+"B. Naturalization",
+"C. Birth",
+"D. Honorary award"
 ],
+answer: "C",
+exp: "Citizenship by birth is obtained automatically when a person is born to citizens of a country."
+},
+
+{
+year: "2017",
+q: "A system of government in which powers are concentrated in one central authority is known as ______.",
+options: [
+"A. Federal system",
+"B. Unitary system",
+"C. Confederal system",
+"D. Parliamentary system"
+],
+answer: "B",
+exp: "In a unitary system, the central government holds most of the political powers."
+},
+
+{
+year: "2017",
+q: "The primary duty of the judiciary is to ______.",
+options: [
+"A. Execute laws",
+"B. Interpret laws",
+"C. Make laws",
+"D. Conduct elections"
+],
+answer: "B",
+exp: "The judiciary interprets laws and ensures justice is maintained in the state."
+},
+
+{
+year: "2017",
+q: "The principle of checks and balances is important because it ______.",
+options: [
+"A. Gives more power to the executive",
+"B. Prevents abuse of power",
+"C. Delays decision making",
+"D. Weakens democracy"
+],
+answer: "B",
+exp: "Checks and balances prevent any arm of government from becoming too powerful."
+},
+
+{
+year: "2017",
+q: "An election conducted to decide an important political issue directly by voters is called ______.",
+options: [
+"A. Recall",
+"B. Referendum",
+"C. Impeachment",
+"D. Census"
+],
+answer: "B",
+exp: "A referendum allows citizens to vote directly on an important public issue."
+},
+
+{
+year: "2017",
+q: "The process through which people acquire political values is called ______.",
+options: [
+"A. Political culture",
+"B. Political socialization",
+"C. Political integration",
+"D. Political transition"
+],
+answer: "B",
+exp: "Political socialization is how citizens learn political beliefs, attitudes and values."
+},
+
+{
+year: "2017",
+q: "The legislature in a presidential system is usually ______ from the executive.",
+options: [
+"A. Controlled",
+"B. Independent",
+"C. Appointed",
+"D. Subordinate"
+],
+answer: "B",
+exp: "In a presidential system, the legislature and executive are constitutionally separated."
+},
+
+{
+year: "2017",
+q: "The head of state in a constitutional monarchy is usually a ______.",
+options: [
+"A. Prime Minister",
+"B. President",
+"C. Monarch",
+"D. Governor"
+],
+answer: "C",
+exp: "A constitutional monarchy retains a king or queen as ceremonial head of state."
+},
+
+{
+year: "2018",
+q: "One major function of political parties is to ______.",
+options: [
+"A. Interpret the constitution",
+"B. Educate and mobilize voters",
+"C. Conduct population census",
+"D. Control the judiciary"
+],
+answer: "B",
+exp: "Political parties educate citizens and mobilize support during elections."
+},
+
+{
+year: "2018",
+q: "The freedom of citizens to express opinions without fear is known as ______.",
+options: [
+"A. Freedom of movement",
+"B. Freedom of worship",
+"C. Freedom of expression",
+"D. Freedom of association"
+],
+answer: "C",
+exp: "Freedom of expression allows citizens to speak and share opinions freely."
+},
+
+{
+year: "2018",
+q: "A government ruled by a few wealthy people is called ______.",
+options: [
+"A. Democracy",
+"B. Aristocracy",
+"C. Oligarchy",
+"D. Monarchy"
+],
+answer: "C",
+exp: "Oligarchy is a system where power belongs to a small group of wealthy or influential people."
+},
+
+{
+year: "2018",
+q: "The 1979 Constitution introduced ______ system of government in Nigeria.",
+options: [
+"A. Parliamentary",
+"B. Military",
+"C. Presidential",
+"D. Monarchical"
+],
+answer: "C",
+exp: "Nigeria adopted the presidential system under the 1979 Constitution."
+},
+
+{
+year: "2018",
+q: "An organized association that seeks to influence government policies is known as a ______.",
+options: [
+"A. Political party",
+"B. Pressure group",
+"C. Electoral body",
+"D. Cabinet"
+],
+answer: "B",
+exp: "Pressure groups influence government decisions without seeking political office."
+},
+
+{
+year: "2018",
+q: "The conduct of free and fair elections in Nigeria is the responsibility of ______.",
+options: [
+"A. Supreme Court",
+"B. National Assembly",
+"C. INEC",
+"D. Police"
+],
+answer: "C",
+exp: "INEC organizes and supervises elections in Nigeria."
+},
+
+{
+year: "2018",
+q: "A constitution that can be amended easily is said to be ______.",
+options: [
+"A. Flexible",
+"B. Rigid",
+"C. Federal",
+"D. Written"
+],
+answer: "A",
+exp: "Flexible constitutions can be amended through simple procedures."
+},
+
+{
+year: "2018",
+q: "The major aim of the rule of law is to ______.",
+options: [
+"A. Protect individual rights",
+"B. Promote dictatorship",
+"C. Empower rulers only",
+"D. Abolish courts"
+],
+answer: "A",
+exp: "Rule of law protects citizens from arbitrary actions of government."
+},
+
+{
+year: "2018",
+q: "A country with many political parties is said to practice a ______ system.",
+options: [
+"A. One-party",
+"B. Two-party",
+"C. Multi-party",
+"D. Military"
+],
+answer: "C",
+exp: "A multi-party system allows several political parties to compete in elections."
+},
+
+{
+year: "2018",
+q: "The highest court in Nigeria is the ______.",
+options: [
+"A. Court of Appeal",
+"B. Federal High Court",
+"C. Supreme Court",
+"D. Sharia Court"
+],
+answer: "C",
+exp: "The Supreme Court is the final court of appeal in Nigeria."
+},
+
+{
+year: "2018",
+q: "The civil service is mainly responsible for ______.",
+options: [
+"A. Making laws",
+"B. Implementing government policies",
+"C. Conducting elections",
+"D. Interpreting laws"
+],
+answer: "B",
+exp: "Civil servants assist in implementing policies and running government administration."
+},
+
+{
+year: "2018",
+q: "One advantage of democracy is that it ______.",
+options: [
+"A. Encourages participation",
+"B. Promotes dictatorship",
+"C. Prevents elections",
+"D. Eliminates opposition"
+],
+answer: "A",
+exp: "Democracy encourages citizens to participate in governance through voting and representation."
+}
+]
   
  };
 

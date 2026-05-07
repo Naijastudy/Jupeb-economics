@@ -2997,7 +2997,7 @@ parties: [
 opinion: [
   
 {
-  year: "2024",
+  year: "2021",
   q: "Public opinion is best defined as:",
   options: [
     "A. views of government officials",
@@ -3009,7 +3009,7 @@ opinion: [
   exp: "Public opinion refers to the aggregate views, beliefs, and attitudes of citizens on political and social issues. It plays a crucial role in shaping government policies and democratic processes."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is the most influential agent in shaping public opinion?",
   options: [
     "A. judiciary",
@@ -3021,7 +3021,7 @@ opinion: [
   exp: "The media is a powerful agent of opinion formation because it disseminates information widely and influences how people perceive political events and issues."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains propaganda?",
   options: [
     "A. objective presentation of facts",
@@ -3033,7 +3033,7 @@ opinion: [
   exp: "Propaganda involves the deliberate use of biased or misleading information to shape public opinion and promote a particular agenda. It often appeals to emotions rather than logic."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which propaganda technique involves using respected personalities to endorse an idea?",
   options: [
     "A. bandwagon",
@@ -3045,7 +3045,7 @@ opinion: [
   exp: "The testimonial technique uses endorsements from influential or respected figures to persuade people to accept a message or idea."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Bandwagon propaganda appeals to:",
   options: [
     "A. fear",
@@ -3058,7 +3058,7 @@ opinion: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which technique involves presenting only one side of an argument?",
   options: [
     "A. testimonial",
@@ -3070,7 +3070,7 @@ opinion: [
   exp: "Card stacking involves selectively presenting facts or arguments that support a particular viewpoint while ignoring opposing evidence."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Public opinion can be measured through:",
   options: [
     "A. elections only",
@@ -3082,7 +3082,7 @@ opinion: [
   exp: "Opinion polls are scientific methods used to measure public opinion by sampling the views of a population."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains the role of education in opinion formation?",
   options: [
     "A. it restricts thinking",
@@ -3094,7 +3094,7 @@ opinion: [
   exp: "Education equips individuals with analytical skills, enabling them to evaluate information critically and form independent opinions."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which propaganda technique uses vague but positive statements?",
   options: [
     "A. name-calling",
@@ -3106,7 +3106,7 @@ opinion: [
   exp: "Glittering generalities use emotionally appealing but vague terms (e.g., 'freedom', 'justice') to persuade without providing concrete evidence."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which factor most strongly affects public opinion in rural areas?",
   options: [
     "A. social media",
@@ -3119,7 +3119,7 @@ opinion: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains name-calling propaganda?",
   options: [
     "A. praising ideas",
@@ -3131,7 +3131,7 @@ opinion: [
   exp: "Name-calling involves labeling opponents with negative terms to discredit them without addressing their arguments."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "The role of the press in democracy is to:",
   options: [
     "A. control government",
@@ -3143,7 +3143,7 @@ opinion: [
   exp: "The press provides information, educates citizens, and acts as a watchdog over government actions, promoting accountability."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following weakens public opinion?",
   options: [
     "A. access to information",
@@ -3155,7 +3155,7 @@ opinion: [
   exp: "Censorship restricts access to information, preventing citizens from forming informed opinions."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which method ensures scientific measurement of opinion?",
   options: [
     "A. propaganda",
@@ -3167,7 +3167,7 @@ opinion: [
   exp: "Opinion polls use statistical methods to accurately reflect public views, making them reliable tools for measuring opinion."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains political socialization in relation to opinion?",
   options: [
     "A. formation of laws",
@@ -3182,7 +3182,7 @@ opinion: [
 
 
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following ensures freedom of opinion?",
   options: [
     "A. censorship",
@@ -3194,7 +3194,7 @@ opinion: [
   exp: "Rule of law protects freedoms, including freedom of expression, allowing citizens to form and express opinions without fear."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains media bias?",
   options: [
     "A. objective reporting",
@@ -3206,7 +3206,7 @@ opinion: [
   exp: "Media bias occurs when information is presented in a way that favors a particular perspective, influencing public perception."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a major danger of propaganda?",
   options: [
     "A. promotes truth",
@@ -3218,7 +3218,7 @@ opinion: [
   exp: "Propaganda can distort facts and manipulate emotions, leading to misinformation and poor decision-making."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which method is most reliable for measuring public opinion?",
   options: [
     "A. rumours",
@@ -3234,7 +3234,7 @@ opinion: [
 elections: [
   
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best defines an election?",
   options: [
     "A. appointment of leaders",
@@ -3246,7 +3246,7 @@ elections: [
   exp: "An election is the formal process through which citizens choose their representatives or leaders by casting votes. It is a key feature of democratic governance."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Universal adult suffrage implies that:",
   options: [
     "A. only educated citizens can vote",
@@ -3258,7 +3258,7 @@ elections: [
   exp: "Universal adult suffrage means that all adult citizens, regardless of gender, race, or status, have the right to vote, ensuring equality in political participation."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains a secret ballot?",
   options: [
     "A. open voting system",
@@ -3270,7 +3270,7 @@ elections: [
   exp: "A secret ballot ensures that voters cast their votes privately, preventing intimidation, coercion, or undue influence."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The simple majority system is also known as:",
   options: [
     "A. proportional representation",
@@ -3282,7 +3282,7 @@ elections: [
   exp: "First-past-the-post (FPTP) is a system where the candidate with the highest number of votes wins, even if they do not have an absolute majority."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "A major disadvantage of the first-past-the-post system is that it:",
   options: [
     "A. promotes fairness",
@@ -3295,7 +3295,7 @@ elections: [
 },
 
 {
-  year: "2024",
+  year: "2020",
   q: "Which electoral system aims to reflect the proportion of votes received by parties?",
   options: [
     "A. plurality system",
@@ -3307,7 +3307,7 @@ elections: [
   exp: "Proportional representation allocates seats based on the percentage of votes received, ensuring fair representation of different groups."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a feature of proportional representation?",
   options: [
     "A. single-member constituencies",
@@ -3319,7 +3319,7 @@ elections: [
   exp: "Proportional representation ensures that minority parties gain representation in proportion to their support, promoting inclusiveness."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains indirect elections?",
   options: [
     "A. citizens vote directly",
@@ -3331,7 +3331,7 @@ elections: [
   exp: "In indirect elections, citizens elect representatives who then choose leaders on their behalf, such as in electoral college systems."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "The body responsible for conducting elections is known as:",
   options: [
     "A. judiciary",
@@ -3343,7 +3343,7 @@ elections: [
   exp: "The electoral commission is an independent body responsible for organizing and supervising elections to ensure fairness and credibility."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following ensures credibility of elections?",
   options: [
     "A. secrecy",
@@ -3356,7 +3356,7 @@ elections: [
 },
 
 {
-  year: "2024",
+  year: "2020",
   q: "Electoral malpractice includes:",
   options: [
     "A. free voting",
@@ -3368,7 +3368,7 @@ elections: [
   exp: "Ballot stuffing involves illegally adding votes to favor a candidate, undermining the credibility of elections."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a stage in the electoral process?",
   options: [
     "A. adjudication",
@@ -3380,7 +3380,7 @@ elections: [
   exp: "Voter registration is a key stage where eligible citizens are recorded to participate in elections."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains voter apathy?",
   options: [
     "A. high participation",
@@ -3392,7 +3392,7 @@ elections: [
   exp: "Voter apathy refers to a lack of interest or motivation among citizens to participate in elections, which weakens democracy."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which factor most encourages voter participation?",
   options: [
     "A. fear",
@@ -3404,7 +3404,7 @@ elections: [
   exp: "When citizens trust that elections are free and fair, they are more likely to participate actively."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains electoral violence?",
   options: [
     "A. peaceful voting",
@@ -3419,7 +3419,7 @@ elections: [
 
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following ensures equal voting rights?",
   options: [
     "A. dictatorship",
@@ -3431,7 +3431,7 @@ elections: [
   exp: "Universal suffrage guarantees that all adult citizens have equal rights to vote, promoting fairness in elections."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a major function of elections in democracy?",
   options: [
     "A. enforcing laws",
@@ -3443,7 +3443,7 @@ elections: [
   exp: "Elections legitimize governments by providing them with authority derived from the consent of the people."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains electoral fairness?",
   options: [
     "A. manipulation of votes",
@@ -3455,7 +3455,7 @@ elections: [
   exp: "Electoral fairness ensures that all candidates have equal opportunities and that the process is free from bias or manipulation."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Proportional representation ensures that:",
   options: [
     "A. majority wins all seats",
@@ -3471,7 +3471,7 @@ elections: [
 change: [
   
 {
-  year: "2024",
+  year: "2022",
   q: "Political change is best defined as:",
   options: [
     "A. change in economic policy only",
@@ -3483,7 +3483,7 @@ change: [
   exp: "Political change refers to any transformation in the structure, leadership, or functioning of a political system. It may occur through peaceful or violent means and can affect governance, institutions, and policies."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains revolution?",
   options: [
     "A. gradual change",
@@ -3495,7 +3495,7 @@ change: [
   exp: "Revolution is a rapid and often violent change in political power and structure. It usually occurs when existing systems fail to address societal needs, leading to mass uprising."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "A coup d’état is characterized by:",
   options: [
     "A. popular uprising",
@@ -3507,7 +3507,7 @@ change: [
   exp: "A coup d’état is the sudden and illegal seizure of power, typically by the military or a small group. It does not usually involve mass public participation like a revolution."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains reform?",
   options: [
     "A. violent overthrow",
@@ -3519,7 +3519,7 @@ change: [
   exp: "Reform involves gradual and peaceful changes within an existing system to improve it without overthrowing it. It is often achieved through legislation or policy adjustments."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Evolution in political change refers to:",
   options: [
     "A. sudden transformation",
@@ -3532,7 +3532,7 @@ change: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is a major cause of revolution?",
   options: [
     "A. political stability",
@@ -3544,7 +3544,7 @@ change: [
   exp: "Economic inequality often leads to dissatisfaction among citizens, creating conditions for revolution as people seek to change the system."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "A key difference between coup d’état and revolution is that:",
   options: [
     "A. coup is violent, revolution is peaceful",
@@ -3556,7 +3556,7 @@ change: [
   exp: "Revolutions typically involve widespread public participation, while coups are usually carried out by a small group, often the military."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains political instability?",
   options: [
     "A. stable leadership",
@@ -3568,7 +3568,7 @@ change: [
   exp: "Political instability occurs when there are frequent changes in leadership or governance structures, often leading to uncertainty and weakened institutions."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which factor most likely leads to a coup d’état?",
   options: [
     "A. strong democratic institutions",
@@ -3580,7 +3580,7 @@ change: [
   exp: "Weak governance, corruption, and lack of legitimacy create opportunities for the military or elites to seize power through a coup."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains peaceful political change?",
   options: [
     "A. revolution",
@@ -3593,7 +3593,7 @@ change: [
 },
 
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a consequence of political instability?",
   options: [
     "A. economic growth",
@@ -3605,7 +3605,7 @@ change: [
   exp: "Political instability discourages investment, disrupts economic activities, and often leads to economic decline."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following distinguishes reform from revolution?",
   options: [
     "A. reform is violent",
@@ -3617,7 +3617,7 @@ change: [
   exp: "Reform is gradual and peaceful, while revolution is usually sudden and violent, involving fundamental changes."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a feature of revolution?",
   options: [
     "A. stability",
@@ -3629,7 +3629,7 @@ change: [
   exp: "Revolutions bring radical and fundamental changes to political systems, often replacing existing structures entirely."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains legitimacy in relation to political change?",
   options: [
     "A. use of force",
@@ -3641,7 +3641,7 @@ change: [
   exp: "Legitimacy refers to the acceptance of authority by the people. Lack of legitimacy often leads to political change."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains counter-revolution?",
   options: [
     "A. support for change",
@@ -3656,7 +3656,7 @@ change: [
 
 
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains political reform?",
   options: [
     "A. violent overthrow",
@@ -3668,7 +3668,7 @@ change: [
   exp: "Political reform focuses on improving existing systems without destroying them, ensuring stability and continuity."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following promotes political stability?",
   options: [
     "A. corruption",
@@ -3680,7 +3680,7 @@ change: [
   exp: "Strong institutions ensure continuity, accountability, and effective governance, promoting stability."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a long-term effect of revolution?",
   options: [
     "A. immediate stability",
@@ -3692,7 +3692,7 @@ change: [
   exp: "Revolutions often lead to major restructuring of political institutions and systems over the long term."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "A reformative change is characterized by:",
   options: [
     "A. violence",
@@ -3708,7 +3708,7 @@ change: [
 admin: [
   
 {
-  year: "2024",
+  year: "2020",
   q: "Public administration is best defined as:",
   options: [
     "A. making laws",
@@ -3720,7 +3720,7 @@ admin: [
   exp: "Public administration deals with the execution and implementation of government policies and decisions. While politicians formulate policies, administrators ensure they are carried out efficiently."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains civil service?",
   options: [
     "A. elected officials",
@@ -3732,7 +3732,7 @@ admin: [
   exp: "The civil service consists of permanent, professional government employees who assist in policy implementation regardless of changes in political leadership."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "A key feature of civil service is:",
   options: [
     "A. political neutrality",
@@ -3744,7 +3744,7 @@ admin: [
   exp: "Civil servants are expected to remain politically neutral, serving any government in power without bias or political involvement."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which principle ensures that civil servants are selected based on competence?",
   options: [
     "A. federal character",
@@ -3756,7 +3756,7 @@ admin: [
   exp: "The merit system ensures that recruitment and promotion in the civil service are based on qualifications, skills, and performance rather than favoritism."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Bureaucracy is best described as:",
   options: [
     "A. political leadership",
@@ -3769,7 +3769,7 @@ admin: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Max Weber is associated with the concept of:",
   options: [
     "A. democracy",
@@ -3781,7 +3781,7 @@ admin: [
   exp: "Max Weber developed the theory of bureaucracy, emphasizing hierarchy, specialization, and formal rules as essential for efficient administration."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a function of public administration?",
   options: [
     "A. making laws",
@@ -3793,7 +3793,7 @@ admin: [
   exp: "Public administration focuses on implementing government policies and ensuring efficient service delivery."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following ensures continuity in government?",
   options: [
     "A. legislature",
@@ -3817,7 +3817,7 @@ admin: [
   exp: "Bureaucracy is characterized by formal rules, hierarchy, and specialization, not informality."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains red-tapism?",
   options: [
     "A. efficiency",
@@ -3830,7 +3830,7 @@ admin: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is a major problem of public administration?",
   options: [
     "A. efficiency",
@@ -3842,7 +3842,7 @@ admin: [
   exp: "Corruption undermines public administration by diverting resources, reducing efficiency, and eroding public trust."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following promotes efficiency in administration?",
   options: [
     "A. corruption",
@@ -3854,7 +3854,7 @@ admin: [
   exp: "Training improves skills and competence of civil servants, leading to more effective service delivery."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following ensures accountability in public administration?",
   options: [
     "A. secrecy",
@@ -3866,7 +3866,7 @@ admin: [
   exp: "Auditing and oversight mechanisms ensure that public officials are accountable for their actions and use of resources."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains decentralization?",
   options: [
     "A. concentration of power",
@@ -3878,7 +3878,7 @@ admin: [
   exp: "Decentralization involves distributing authority to lower levels of government to improve efficiency and responsiveness."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is a merit of bureaucracy?",
   options: [
     "A. rigidity",
@@ -3893,7 +3893,7 @@ admin: [
 
 
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a demerit of bureaucracy?",
   options: [
     "A. specialization",
@@ -3905,7 +3905,7 @@ admin: [
   exp: "Bureaucratic procedures can be slow, leading to delays in decision-making and service delivery."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains administrative reform?",
   options: [
     "A. maintaining status quo",
@@ -3917,7 +3917,7 @@ admin: [
   exp: "Administrative reform aims to improve efficiency, transparency, and accountability in public administration."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following promotes neutrality in civil service?",
   options: [
     "A. political involvement",
@@ -3929,7 +3929,7 @@ admin: [
   exp: "Professionalism ensures that civil servants perform their duties objectively without political bias."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "One major weakness of bureaucracy is:",
   options: [
     "A. efficiency",

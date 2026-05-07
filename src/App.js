@@ -5,6 +5,7 @@ import { db, auth, googleProvider } from "./firebase";
 import { collection, addDoc, serverTimestamp, query, where, getDocs, orderBy, onSnapshot } from "firebase/firestore";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";import { grading } from "./data/economics";
 import ExamSetup from "./screens/ExamSetup";
+import YearSelect from "./screens/YearSelect";
 import ExamQuiz from "./screens/ExamQuiz";
 import CbtQuiz from "./screens/CbtQuiz";
 import Calculator from "./Calculator";
@@ -31,16 +32,18 @@ function shuffleOptions(q) {
   return { ...q, options: relabeled, answer: newAnswer };
 }
 
-function getAllQuestions(data, fbQuestions = [], subjectId = "economics") {
+function getAllQuestions(data, fbQuestions = [], subjectId = "economics", year = null) {
   let all = [];
-
-  // Local questions from data.js
   Object.entries(data.questions).forEach(([topicId, qs]) => {
-    qs.forEach(q => all.push(shuffleOptions({ ...q, topicId })));
+    qs.forEach(q => {
+      if (!year || q.year === year) {
+        all.push(shuffleOptions({ ...q, topicId }));
+      }
+    });
   });
-
-  // Firebase questions for this subject
-  const fbFiltered = fbQuestions.filter(q => q.subject === subjectId);
+  const fbFiltered = fbQuestions.filter(q =>
+    q.subject === subjectId && (!year || q.year === year)
+  );
   fbFiltered.forEach(q => {
     all.push(shuffleOptions({
       year: q.year || "2025",
@@ -52,7 +55,6 @@ function getAllQuestions(data, fbQuestions = [], subjectId = "economics") {
       fromFirebase: true,
     }));
   });
-
   return shuffle(all);
 }
 
@@ -251,6 +253,7 @@ const [showScores, setShowScores] = useState(false);
 const [loadingFirebase, setLoadingFirebase] = useState(true);
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
+  const [selectedYear, setSelectedYear] = useState(null);
 
   //Feedback
   const [name, setFeedbackName] = useState("");
@@ -474,38 +477,52 @@ useEffect(() => {
   const card = { background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 };
   const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
 
-  const startCbt = (subject) => {
-    const qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+const startCbt = (subject) => {
+    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+    if (qs.length > 50) qs = qs.slice(0, 50);
     setCbtQs(qs); setCbtIdx(0); setCbtAnswers({}); setCbtDone(false);
-    setCbtTime(3 * 60 * 60); setCbtRunning(true);
+    setCbtTime(60 * 60); setCbtRunning(true);
     goTo("cbt_quiz");
   };
-
-  const startExam = (subject) => {
-    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
+  
+const startExam = (subject, year = null) => {
+    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id, year);
     if (qs.length > examCount) qs = qs.slice(0, examCount);
     setExamQs(qs); setExamIdx(0); setExamAnswers({}); setExamDone(false);
     setExamTime(examMinutes * 60); setExamRunning(true);
     goTo("exam_quiz");
-  };
-  
+  };  
 
   // ── SUBJECT SELECT ────────────────────────────────────────────────────────
-  if (screen === "subject_select") {
+ if (screen === "subject_select") {
     return (
-      <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack}
-        mode={pendingMode}
+      <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack} mode={pendingMode}
         onSelect={(subject) => {
           setActiveSubject(subject);
-          if (pendingMode === "cbt") { startCbt(subject); }
-          else if (pendingMode === "exam") { goTo("exam_setup"); }
-          else if (pendingMode === "notes") { goTo("notes"); }
-          else if (pendingMode === "pastq") { goTo("pastq_courses"); }
+          if (pendingMode === "cbt") startCbt(subject);
+          else if (pendingMode === "exam") goTo("year_select");
+          else if (pendingMode === "notes") goTo("notes");
+          else if (pendingMode === "pastq") goTo("pastq_courses");
         }}
       />
     );
   }
 
+  if (screen === "year_select" && activeSubject) {
+    return (
+      <YearSelect
+        t={t}
+        data={activeSubject.data}
+        firebaseQuestions={firebaseQuestions}
+        subjectId={activeSubject.id}
+        onBack={goBack}
+        onSelectYear={(year) => {
+          setSelectedYear(year);
+          goTo("exam_setup");
+        }}
+      />
+    );
+  }
   // ── HOME ──────────────────────────────────────────────────────────────────
 if (showSplash) {
     return (
@@ -824,19 +841,22 @@ if (screen === "cbt_quiz") {
       />
     );
 }
+
 if (screen === "exam_setup" && data) {
     return (
       <ExamSetup
         t={t} data={data} activeSubject={activeSubject}
         firebaseQuestions={firebaseQuestions}
+        selectedYear={selectedYear}
         examCount={examCount} setExamCount={setExamCount}
         examMinutes={examMinutes} setExamMinutes={setExamMinutes}
-        onStart={() => startExam(activeSubject)}
+        onStart={() => startExam(activeSubject, selectedYear)}
         onBack={goBack} goldBtn={goldBtn} card={card}
       />
     );
-}
-  if (screen === "exam_quiz") {
+  }
+
+if (screen === "exam_quiz") {
     if (examDone) {
       const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
       const pct = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;

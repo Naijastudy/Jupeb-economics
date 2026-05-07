@@ -1,13 +1,17 @@
 import React from "react";
 
 export default function ExamSetup({
-  t, data, activeSubject, firebaseQuestions,
+  t, data, activeSubject, firebaseQuestions, selectedYear,
   examCount, setExamCount, examMinutes, setExamMinutes,
   onStart, onBack, goldBtn, card,
 }) {
-  const totalQCount = Object.values(data.questions).reduce((a, arr) => a + arr.length, 0) +
-    firebaseQuestions.filter(q => q.subject === activeSubject?.id).length;
-
+  const totalQCount = Object.values(data.questions)
+    .flat()
+    .filter(q => !selectedYear || q.year === selectedYear).length +
+    firebaseQuestions.filter(q =>
+      q.subject === activeSubject?.id && (!selectedYear || q.year === selectedYear)
+    ).length;
+  
   return (
     <div style={{ minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text }}>
       <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 100 }}>
@@ -21,10 +25,10 @@ export default function ExamSetup({
 
       <div style={{ padding: "16px" }}>
         <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px", marginBottom: 20 }}>
-          <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.8 }}>
-            📝 Questions are randomly shuffled. Answer all questions first — results shown only after you submit.
-          </div>
-        </div>
+  <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.8 }}>
+    📝 Questions are randomly shuffled from <strong>{selectedYear || "all years"}</strong>. Answer all questions first — results shown only after you submit.
+  </div>
+</div>
 
         {/* Question Count */}
         <div style={{ ...card }}>

@@ -423,7 +423,7 @@ democracy_africa: [
 export const questions = {
   nature: [
 {
-year: "2023",
+year: "2015",
 q: "Government differs from governance in that government refers to:",
 options: [
 "A. the process of ruling",
@@ -438,7 +438,7 @@ exp: "Government refers to the formal institutions (executive, legislature, judi
 
 concepts: [
 {
-year: "2023",
+year: "2016",
 q: "Which of the following best explains political socialization?",
 options: [
 "A. economic development",
@@ -450,7 +450,7 @@ answer: "B",
 exp: "Political socialization is the process by which individuals acquire political beliefs, values, and attitudes from agents like family, media, and schools."
 },
 {
-year: "2023",
+year: "2017",
 q: "Power without legitimacy is often associated with:",
 options: [
 "A. democracy",
@@ -465,7 +465,7 @@ exp: "When power lacks legitimacy, it is often enforced through coercion or forc
 
 state: [
 {
-year: "2023",
+year: "2018",
 q: "Which of the following best explains sovereignty in a modern state?",
 options: [
 "A. shared authority with citizens",
@@ -480,7 +480,7 @@ exp: "Sovereignty means the state has ultimate authority within its territory an
 
 constitution: [
 {
-year: "2023",
+year: "2019",
 q: "Judicial review refers to the power of courts to:",
 options: [
 "A. make laws",
@@ -495,7 +495,7 @@ exp: "Judicial review allows courts to interpret the constitution and declare la
 
 governance: [
 {
-year: "2023",
+year: "2020",
 q: "Transparency in governance implies:",
 options: [
 "A. secrecy",
@@ -510,7 +510,7 @@ exp: "Transparency ensures that government actions are open and accessible to th
 
 ideas: [
 {
-year: "2023",
+year: "2022",
 q: "The principle of rule of law was popularized by:",
 options: [
 "A. Dicey",
@@ -540,7 +540,7 @@ exp: "A two-party system is characterized by the dominance of two major politica
 
 opinion: [
 {
-year: "2023",
+year: "2024",
 q: "Which of the following is NOT a method of measuring public opinion?",
 options: [
 "A. opinion polls",
@@ -555,7 +555,7 @@ exp: "Public opinion is measured through polls, elections, and referenda, not mi
 
 elections: [
 {
-year: "2023",
+year: "2025",
 q: "Which of the following best explains free and fair elections?",
 options: [
 "A. manipulation",
@@ -570,7 +570,7 @@ exp: "Free and fair elections are conducted without fraud, coercion, or manipula
 
 change: [
 {
-year: "2023",
+year: "2025",
 q: "Which of the following is an example of constitutional change?",
 options: [
 "A. coup d’état",
@@ -585,7 +585,7 @@ exp: "Constitutional change refers to formal modifications of the constitution t
 
 admin: [
 {
-year: "2023",
+year: "2024",
 q: "Bureaucracy is best described as:",
 options: [
 "A. political party",
@@ -615,7 +615,7 @@ exp: "Foreign policy tools include diplomacy, military power, and economic aid, 
 
 precolonial: [
 {
-year: "2023",
+year: "2022",
 q: "Which institution checked the powers of the Alaafin of Oyo?",
 options: [
 "A. Emirate council",
@@ -630,7 +630,7 @@ exp: "The Oyo Mesi was a council of chiefs that acted as a check on the Alaafin�
 
 colonial: [
 {
-year: "2023",
+year: "2021",
 q: "The major aim of indirect rule was to:",
 options: [
 "A. promote democracy",
@@ -645,7 +645,7 @@ exp: "Indirect rule was designed to reduce administrative costs by governing thr
 
 party_dev: [
 {
-year: "2023",
+year: "2020",
 q: "Early political parties in Nigeria were largely:",
 options: [
 "A. national",
@@ -660,7 +660,7 @@ exp: "Early Nigerian political parties were regionally based, reflecting ethnic 
 
 electoral_ng: [
 {
-year: "2023",
+year: "2019",
 q: "Which electoral system is commonly used in Nigeria?",
 options: [
 "A. proportional representation",
@@ -675,7 +675,7 @@ exp: "Nigeria mainly uses the simple majority (first-past-the-post) system where
 
 crisis: [
 {
-year: "2023",
+year: "2018",
 q: "Which of the following contributed to the Nigerian Civil War?",
 options: [
 "A. unity",
@@ -690,7 +690,7 @@ exp: "Ethnic tensions, political instability, and the secession of the Eastern R
 
 military: [
 {
-year: "2023",
+year: "2017",
 q: "A coup d’état is:",
 options: [
 "A. election process",
@@ -705,7 +705,7 @@ exp: "A coup d’état is the illegal and sudden removal of a government, usuall
 
 foreign: [
 {
-year: "2023",
+year: "2016",
 q: "Non-alignment in foreign policy means:",
 options: [
 "A. joining alliances",
@@ -720,7 +720,7 @@ exp: "Non-alignment involves avoiding alignment with major power blocs, maintain
 
 africa_pre: [
 {
-year: "2023",
+year: "2015",
 q: "Pre-colonial African political systems were mostly:",
 options: [
 "A. democratic",
@@ -735,7 +735,7 @@ exp: "African political systems before colonial rule were diverse, ranging from 
 
 colonial_africa: [
 {
-year: "2023",
+year: "2015",
 q: "Indirect rule in Africa relied on:",
 options: [
 "A. foreign officials only",
@@ -751,7 +751,7 @@ exp: "Indirect rule depended on traditional rulers to administer colonies on beh
 constitution_africa: [],
 nationalism: [
 {
-year: "2023",
+year: "2016",
 q: "Which group led nationalist movements in Africa?",
 options: [
 "A. colonial masters",
@@ -766,7 +766,7 @@ exp: "Educated elites played a major role in leading nationalist movements throu
 
 military_africa: [
 {
-year: "2023",
+year: "2017",
 q: "Military rule in Africa often results in:",
 options: [
 "A. democracy",
@@ -781,7 +781,7 @@ exp: "Military regimes typically suspend constitutions and rule by decrees."
 
 democracy_africa: [
 {
-year: "2023",
+year: "2018",
 q: "A major challenge to democracy in Africa is:",
 options: [
 "A. stability",
@@ -795,7 +795,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
 ],
   constitution: [
 {
-  year: "2024",
+  year: "2019",
   q: "A constitution is best defined as:",
   options: [
     "A. laws made by judges",
@@ -819,7 +819,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "A written constitution is codified and contained in a single formal document, making it clear and accessible."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "An unwritten constitution is based mainly on:",
   options: [
     "A. formal documents",
@@ -831,7 +831,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "An unwritten constitution evolves from customs, conventions, judicial precedents, and statutes rather than a single codified document."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "A rigid constitution is one that:",
   options: [
     "A. can be easily amended",
@@ -843,7 +843,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "A rigid constitution requires complex procedures, such as supermajority votes or referendums, to be amended, ensuring stability."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "A flexible constitution is characterized by:",
   options: [
     "A. difficulty in amendment",
@@ -856,7 +856,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
 },
 
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains constitutional supremacy?",
   options: [
     "A. legislature is supreme",
@@ -868,7 +868,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Constitutional supremacy means that the constitution is the highest law, and all other laws must conform to it."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which of the following ensures that laws conform to the constitution?",
   options: [
     "A. legislature",
@@ -892,7 +892,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Rule of law means that everyone, including government officials, is subject to the law, ensuring fairness and justice."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which of the following is a function of a constitution?",
   options: [
     "A. promoting dictatorship",
@@ -904,7 +904,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "A constitution defines the structure, powers, and functions of government institutions."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following protects citizens’ rights?",
   options: [
     "A. judiciary",
@@ -917,7 +917,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains constitutionalism?",
   options: [
     "A. arbitrary rule",
@@ -929,7 +929,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Constitutionalism ensures that government operates within the limits set by the constitution, preventing abuse of power."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a feature of a good constitution?",
   options: [
     "A. ambiguity",
@@ -941,7 +941,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "A good constitution should be clear and understandable to avoid misinterpretation and ensure effective governance."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains amendment?",
   options: [
     "A. enforcement",
@@ -953,7 +953,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Amendment refers to the process of changing or updating the constitution to reflect new realities."
 },
 {
-  year: "2024",
+  year: "2015",
   q: "Which of the following is a disadvantage of rigid constitution?",
   options: [
     "A. stability",
@@ -965,7 +965,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Rigid constitutions are difficult to amend, making it hard to adapt to changing circumstances."
 },
 {
-  year: "2024",
+  year: "2016",
   q: "Which of the following is a merit of flexible constitution?",
   options: [
     "A. instability",
@@ -977,10 +977,10 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Flexible constitutions can easily adapt to changing conditions, making governance more responsive."
 },
 
-// Final stretch
+
 
 {
-  year: "2024",
+  year: "2017",
   q: "Which of the following best explains supremacy of parliament?",
   options: [
     "A. constitution dominates",
@@ -992,7 +992,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "Parliamentary supremacy means that the legislature has ultimate authority to make or unmake laws."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "Which of the following distinguishes rigid from flexible constitution?",
   options: [
     "A. content",
@@ -1004,7 +1004,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
   exp: "The key difference lies in the amendment process—rigid constitutions require special procedures, while flexible ones do not."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following best explains constitutional development?",
   options: [
     "A. static system",
@@ -1018,7 +1018,7 @@ exp: "Electoral malpractice undermines democratic processes and reduces public t
 ],
 constitution: [
 {
-  year: "2024",
+  year: "2015",
   q: "Nigeria gained independence in:",
   options: [
     "A. 1957",
@@ -1030,7 +1030,7 @@ constitution: [
   exp: "Nigeria gained independence from Britain on October 1, 1960, becoming a sovereign state with full control over its internal and external affairs."
 },
 {
-  year: "2024",
+  year: "2016",
   q: "Nigeria became a republic in:",
   options: [
     "A. 1960",
@@ -1042,7 +1042,7 @@ constitution: [
   exp: "In 1963, Nigeria became a republic, replacing the British monarch with a Nigerian President as the head of state."
 },
 {
-  year: "2024",
+  year: "2017",
   q: "The First Republic in Nigeria ended in:",
   options: [
     "A. 1963",
@@ -1054,7 +1054,7 @@ constitution: [
   exp: "The First Republic collapsed in 1966 following a military coup, marking the beginning of military intervention in Nigerian politics."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "The first military coup in Nigeria occurred in:",
   options: [
     "A. 1960",
@@ -1066,7 +1066,7 @@ constitution: [
   exp: "The first military coup took place in January 1966, led by young military officers, which overthrew the civilian government."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following best explains military rule?",
   options: [
     "A. democratic governance",
@@ -1079,7 +1079,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2020",
   q: "A major cause of the 1966 coup was:",
   options: [
     "A. economic growth",
@@ -1091,7 +1091,7 @@ constitution: [
   exp: "The coup was largely triggered by political instability, electoral malpractice, corruption, and regional tensions."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "The Nigerian Civil War lasted from:",
   options: [
     "A. 1960–1963",
@@ -1103,7 +1103,7 @@ constitution: [
   exp: "The Civil War (1967–1970) occurred after the Eastern Region attempted to secede as the Republic of Biafra."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "The immediate cause of the Civil War was:",
   options: [
     "A. independence",
@@ -1115,7 +1115,7 @@ constitution: [
   exp: "The declaration of Biafra by the Eastern Region led to the Civil War as the federal government sought to maintain unity."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains secession?",
   options: [
     "A. unity",
@@ -1140,7 +1140,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2025",
   q: "Nigeria returned to civilian rule in:",
   options: [
     "A. 1970",
@@ -1152,7 +1152,7 @@ constitution: [
   exp: "Nigeria returned to civilian rule in 1979, marking the beginning of the Second Republic."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "The Second Republic ended in:",
   options: [
     "A. 1979",
@@ -1176,7 +1176,7 @@ constitution: [
   exp: "Democracy involves governance by elected representatives, with emphasis on participation, accountability, and rule of law."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a cause of military intervention?",
   options: [
     "A. stability",
@@ -1188,7 +1188,7 @@ constitution: [
   exp: "Military intervention often occurs due to perceived failure of civilian governments, including corruption and instability."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Nigeria’s current democratic era began in:",
   options: [
     "A. 1979",
@@ -1200,7 +1200,7 @@ constitution: [
   exp: "Nigeria returned to democratic governance in 1999, marking the beginning of the Fourth Republic."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains transition to civil rule?",
   options: [
     "A. military takeover",
@@ -1212,7 +1212,7 @@ constitution: [
   exp: "Transition to civil rule refers to the process of moving from military governance to democratic civilian administration."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a major challenge of post-independence Nigeria?",
   options: [
     "A. unity",
@@ -1224,7 +1224,7 @@ constitution: [
   exp: "Post-independence Nigeria faced challenges such as political instability, coups, corruption, and ethnic tensions."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following best explains republic?",
   options: [
     "A. monarchy",
@@ -1238,7 +1238,7 @@ constitution: [
 ],
   systems: [
 {
-  year: "2024",
+  year: "2018",
   q: "A unitary system of government is characterized by:",
   options: [
     "A. division of powers between levels",
@@ -1250,7 +1250,7 @@ constitution: [
   exp: "In a unitary system, all political power is concentrated in a central authority. Subnational units derive their powers from the central government and can be altered or abolished."
 },
 {
-  year: "2024",
+  year: "2017",
   q: "A federal system of government involves:",
   options: [
     "A. centralized authority",
@@ -1262,7 +1262,7 @@ constitution: [
   exp: "Federalism involves a constitutional division of powers between central and regional governments, each operating independently within its sphere."
 },
 {
-  year: "2024",
+  year: "2016",
   q: "Which of the following best explains a confederation?",
   options: [
     "A. strong central government",
@@ -1274,7 +1274,7 @@ constitution: [
   exp: "A confederation is a union of independent states that delegate limited powers to a central body, retaining most sovereignty."
 },
 {
-  year: "2024",
+  year: "2015",
   q: "Which system is Nigeria currently practicing?",
   options: [
     "A. unitary",
@@ -1286,7 +1286,7 @@ constitution: [
   exp: "Nigeria operates a federal system where power is shared between the central government and the states."
 },
 {
-  year: "2024",
+  year: "2015",
   q: "A major advantage of federalism is:",
   options: [
     "A. concentration of power",
@@ -1299,7 +1299,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2016",
   q: "A presidential system is characterized by:",
   options: [
     "A. fusion of powers",
@@ -1311,7 +1311,7 @@ constitution: [
   exp: "The presidential system is based on separation of powers among executive, legislature, and judiciary, each functioning independently."
 },
 {
-  year: "2024",
+  year: "2017",
   q: "Which of the following is a feature of parliamentary system?",
   options: [
     "A. separation of powers",
@@ -1323,7 +1323,7 @@ constitution: [
   exp: "In a parliamentary system, the executive is drawn from the legislature, leading to a fusion of powers."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "In a parliamentary system, the head of government is:",
   options: [
     "A. president",
@@ -1335,7 +1335,7 @@ constitution: [
   exp: "The prime minister is the head of government, responsible for running the executive branch in a parliamentary system."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "In a presidential system, the head of state is:",
   options: [
     "A. monarch",
@@ -1347,7 +1347,7 @@ constitution: [
   exp: "The president serves as both head of state and head of government in a presidential system."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains separation of powers?",
   options: [
     "A. concentration of authority",
@@ -1372,7 +1372,7 @@ constitution: [
   exp: "Federal systems often lead to duplication of administrative functions, increasing costs and inefficiency."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following is a feature of unitary system?",
   options: [
     "A. autonomy of regions",
@@ -1396,7 +1396,7 @@ constitution: [
   exp: "Checks and balances ensure that each branch of government can limit the powers of the others, preventing abuse."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which system promotes quick decision-making?",
   options: [
     "A. federal",
@@ -1408,7 +1408,7 @@ constitution: [
   exp: "Unitary systems allow quick decisions because authority is centralized, reducing bureaucratic delays."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which system best accommodates diversity?",
   options: [
     "A. unitary",
@@ -1420,7 +1420,7 @@ constitution: [
   exp: "Federalism accommodates diversity by allowing regions to govern themselves while remaining united."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains political system?",
   options: [
     "A. economic policy",
@@ -1432,7 +1432,7 @@ constitution: [
   exp: "A political system refers to the structure and organization of government and how power is exercised."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which of the following best explains fusion of powers?",
   options: [
     "A. separation of branches",
@@ -1444,7 +1444,7 @@ constitution: [
   exp: "Fusion of powers occurs when executive and legislative functions are combined, as seen in parliamentary systems."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a key advantage of parliamentary system?",
   options: [
     "A. rigidity",
@@ -1460,7 +1460,7 @@ constitution: [
   nature: [
     
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains why politics is regarded as a social science?",
   options: [
     "A. It studies only government institutions",
@@ -1472,7 +1472,7 @@ constitution: [
   exp: "Politics is classified as a social science because it applies systematic and scientific methods—such as observation, hypothesis testing, and data analysis—to study human behaviour in relation to power and governance. Unlike natural sciences, it deals with human interactions, making it both analytical and interpretative."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "The main limitation of the philosophical approach to the study of government is that it:",
   options: [
     "A. ignores moral values",
@@ -1484,7 +1484,7 @@ constitution: [
   exp: "The philosophical approach emphasizes ideals such as justice, liberty, and equality, but it lacks empirical (data-based) verification. This makes it less practical for analyzing real-world political behaviour compared to modern scientific approaches."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best distinguishes politics from government?",
   options: [
     "A. Politics is institutional, government is behavioural",
@@ -1496,7 +1496,7 @@ constitution: [
   exp: "Politics refers to the processes of acquiring and exercising power, while government refers to the institutional structure through which that power is exercised. In simple terms, politics is the activity, while government is the system."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "The behavioural revolution in political science emphasized:",
   options: [
     "A. legal institutions",
@@ -1508,7 +1508,7 @@ constitution: [
   exp: "The behavioural revolution shifted focus from institutions and laws to the actual behaviour of individuals and groups in politics. It introduced scientific methods such as surveys and statistical analysis."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "Which approach focuses on comparing political systems across countries?",
   options: [
     "A. Historical",
@@ -1521,7 +1521,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2017",
   q: "The study of government is important primarily because it:",
   options: [
     "A. promotes only political careers",
@@ -1533,7 +1533,7 @@ constitution: [
   exp: "Studying government helps citizens understand their rights, duties, and how political systems operate. It promotes civic awareness, participation, and informed decision-making."
 },
 {
-  year: "2024",
+  year: "2016",
   q: "Which of the following best describes politics as 'who gets what, when, and how'?",
   options: [
     "A. David Easton",
@@ -1545,7 +1545,7 @@ constitution: [
   exp: "Harold Lasswell defined politics as 'who gets what, when, and how,' emphasizing distribution of resources and power in society."
 },
 {
-  year: "2024",
+  year: "2015",
   q: "A major advantage of the empirical approach is that it:",
   options: [
     "A. ignores facts",
@@ -1558,7 +1558,7 @@ constitution: [
 },
 
 {
-  year: "2024",
+  year: "2015",
   q: "The relationship between government and economics is best seen in:",
   options: [
     "A. religious policies",
@@ -1570,7 +1570,7 @@ constitution: [
   exp: "Government plays a key role in allocating resources through policies such as taxation, budgeting, and public spending, linking it closely with economics."
 },
 {
-  year: "2024",
+  year: "2016",
   q: "Which discipline helps explain voting behaviour and leadership traits?",
   options: [
     "A. Geography",
@@ -1585,7 +1585,7 @@ constitution: [
 concepts: [
   
 {
-  year: "2024",
+  year: "2017",
   q: "Which of the following best distinguishes authority from power?",
   options: [
     "A. Authority is coercive while power is legitimate",
@@ -1597,7 +1597,7 @@ concepts: [
   exp: "Power is the ability to influence or control others, whether accepted or not. Authority, however, is power that is regarded as legitimate and is therefore willingly obeyed. The key distinction is legitimacy—authority is accepted, while power may rely on force or coercion."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "A government that relies heavily on force rather than consent lacks:",
   options: [
     "A. sovereignty",
@@ -1609,7 +1609,7 @@ concepts: [
   exp: "Legitimacy refers to the acceptance of authority by the people. When a government relies mainly on force, it suggests that citizens do not recognize its rule as rightful. Such a government may still have power, but it lacks legitimacy, which can lead to instability."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Internal sovereignty refers to:",
   options: [
     "A. independence from foreign control",
@@ -1621,7 +1621,7 @@ concepts: [
   exp: "Internal sovereignty is the ability of a state to exercise ultimate authority within its territory without internal challenges. It includes maintaining law and order and enforcing decisions. External sovereignty, on the other hand, relates to independence from foreign interference."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which thinker classified authority into traditional, charismatic, and legal-rational?",
   options: [
     "A. Karl Marx",
@@ -1633,7 +1633,7 @@ concepts: [
   exp: "Max Weber identified three types of authority: traditional (based on customs), charismatic (based on personal qualities), and legal-rational (based on laws and rules). This classification helps explain how different systems gain obedience."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Political culture is best defined as:",
   options: [
     "A. economic practices of a society",
@@ -1646,7 +1646,7 @@ concepts: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following is NOT an agent of political socialization?",
   options: [
     "A. Family",
@@ -1658,7 +1658,7 @@ concepts: [
   exp: "Agents of political socialization include family, school, media, religion, and peer groups. These shape political attitudes and beliefs. The judiciary is an institution of government, not a socializing agent."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "A citizen obeys laws because they believe in the system; this reflects:",
   options: [
     "A. coercion",
@@ -1682,7 +1682,7 @@ concepts: [
   exp: "Sovereignty includes control over resources within a state's territory. It ensures that the state has the ultimate authority to decide how its resources are used without external interference."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "A society where citizens actively participate in politics is said to have:",
   options: [
     "A. parochial culture",
@@ -1694,7 +1694,7 @@ concepts: [
   exp: "Participant political culture involves active citizen involvement in political processes such as voting, discussions, and civic engagement. It is essential for democratic systems."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains coercive power?",
   options: [
     "A. power based on respect",
@@ -1719,7 +1719,7 @@ concepts: [
   exp: "Charismatic authority depends on the personal qualities of a leader. If the leader loses influence, credibility, or dies, the authority weakens because it is not based on institutions or laws."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which type of political culture is characterized by limited awareness of political systems?",
   options: [
     "A. Participant",
@@ -1731,7 +1731,7 @@ concepts: [
   exp: "Parochial political culture exists in traditional societies where citizens have little knowledge or interest in politics. Participation is minimal or nonexistent."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "The ability of a state to act independently in international relations is known as:",
   options: [
     "A. internal sovereignty",
@@ -1743,7 +1743,7 @@ concepts: [
   exp: "External sovereignty refers to a state's independence from external control. It allows the state to conduct foreign policy and international relations freely."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which concept ensures stability in a political system by securing citizens' acceptance?",
   options: [
     "A. Power",
@@ -1755,7 +1755,7 @@ concepts: [
   exp: "Legitimacy ensures that people accept and support the government, leading to stability. Without legitimacy, governments may face resistance or rebellion."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "The process by which individuals acquire political beliefs is known as:",
   options: [
     "A. political recruitment",
@@ -1768,7 +1768,7 @@ concepts: [
 },
 
 {
-  year: "2024",
+  year: "2017",
   q: "Which of the following best explains the relationship between authority and legitimacy?",
   options: [
     "A. Authority exists without legitimacy",
@@ -1780,7 +1780,7 @@ concepts: [
   exp: "Legitimacy provides the moral justification for authority, making it more effective and stable. When authority is seen as legitimate, compliance is voluntary rather than forced."
 },
 {
-  year: "2024",
+  year: "2016",
   q: "A decline in political trust among citizens indicates:",
   options: [
     "A. increased authority",
@@ -1792,7 +1792,7 @@ concepts: [
   exp: "When citizens lose trust in government, its legitimacy declines. This can lead to protests, instability, and challenges to authority."
 },
 {
-  year: "2024",
+  year: "2015",
   q: "Which concept explains why citizens obey laws even without coercion?",
   options: [
     "A. Power",
@@ -1804,7 +1804,7 @@ concepts: [
   exp: "Legitimacy refers to the acceptance of a government's authority by the people. When a government is seen as legitimate, citizens obey laws willingly, not because of fear but because they believe the authority is rightful. This is essential for political stability."
 },
 {
-  year: "2024",
+  year: "2015",
   q: "A state that cannot control its internal affairs lacks:",
   options: [
     "A. population",
@@ -1820,7 +1820,7 @@ concepts: [
 state: [
   
 {
-  year: "2024",
+  year: "2016",
   q: "Which of the following best explains why sovereignty is considered the most essential element of a state?",
   options: [
     "A. It determines population size",
@@ -1832,7 +1832,7 @@ state: [
   exp: "Sovereignty is regarded as the most essential element because it represents the ultimate authority of a state to govern itself without internal or external interference. Without sovereignty, other elements like population, territory, and government cannot function effectively since there would be no final authority to enforce decisions."
 },
 {
-  year: "2024",
+  year: "2017",
   q: "A political community that lacks defined territory cannot be classified as a state because:",
   options: [
     "A. it cannot conduct elections",
@@ -1844,7 +1844,7 @@ state: [
   exp: "Territory is a fundamental element of a state because it provides a physical space where laws apply and authority is exercised. Without defined boundaries, a political community cannot effectively enforce laws or maintain jurisdiction."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "Which of the following best distinguishes a nation from a state?",
   options: [
     "A. A nation has territory, a state does not",
@@ -1856,7 +1856,7 @@ state: [
   exp: "A nation is a group of people with shared culture, language, or identity, while a state is a political entity with defined territory, government, and sovereignty. A nation may exist without a state, and a state may contain multiple nations."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "A major feature of a federal system is that it:",
   options: [
     "A. concentrates power at the center",
@@ -1868,7 +1868,7 @@ state: [
   exp: "Federalism involves a constitutional division of powers between central and regional governments, each operating independently within its sphere. This ensures decentralization and prevents concentration of power."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following is a key weakness of a confederal system?",
   options: [
     "A. excessive central control",
@@ -1881,7 +1881,7 @@ state: [
 },
 
 {
-  year: "2024",
+  year: "2021",
   q: "The principle of separation of powers is primarily designed to:",
   options: [
     "A. promote dictatorship",
@@ -1893,7 +1893,7 @@ state: [
   exp: "Separation of powers divides government into executive, legislature, and judiciary to ensure no single body dominates. Each branch performs specific functions and checks the others, reducing the risk of abuse of power."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "In a presidential system, the executive is:",
   options: [
     "A. responsible to parliament",
@@ -1905,7 +1905,7 @@ state: [
   exp: "In a presidential system, the executive (president) is elected separately and operates independently of the legislature. This contrasts with a parliamentary system where the executive is drawn from the legislature."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a defining feature of a parliamentary system?",
   options: [
     "A. separation of executive and legislature",
@@ -1929,7 +1929,7 @@ state: [
   exp: "A unitary system centralizes power in the national government, with little or no autonomy for regional authorities. It promotes uniformity but may reduce local independence."
 },
 {
-  year: "2024",
+  year: "2025",
   q: "Which of the following best explains checks and balances?",
   options: [
     "A. equality among citizens",
@@ -4375,7 +4375,7 @@ intl: [
   exp: "Both systems were centralized, with authority concentrated in rulers (Emir and Oba), although Yoruba had more checks."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Which of the following best explains traditional political systems?",
   options: [
     "A. modern democracy",
@@ -4387,7 +4387,7 @@ intl: [
   exp: "Traditional political systems refer to indigenous forms of governance that existed before colonial rule, shaped by culture and customs."
 },
 {
-  year: "2024",
+  year: "2021",
   q: "Which of the following best explains political participation in Igbo society?",
   options: [
     "A. restricted to elites",
@@ -4401,7 +4401,7 @@ intl: [
 ],
   colonial: [
 {
-  year: "2024",
+  year: "2022",
   q: "Colonial administration in Nigeria refers to:",
   options: [
     "A. indigenous rule",
@@ -4413,7 +4413,7 @@ intl: [
   exp: "Colonial administration refers to the system where Britain governed Nigeria and controlled its political, economic, and social structures. Authority was exercised by colonial officials rather than indigenous leaders."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "The British policy of ruling through local authorities is known as:",
   options: [
     "A. direct rule",
@@ -4425,7 +4425,7 @@ intl: [
   exp: "Indirect rule was a system introduced by the British where traditional rulers were used to administer local areas on behalf of the colonial government, reducing administrative costs."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Lord Lugard is associated with the introduction of:",
   options: [
     "A. direct rule",
@@ -4437,7 +4437,7 @@ intl: [
   exp: "Lord Lugard introduced indirect rule in Nigeria, especially in the North, where existing centralized systems made it effective."
 },
 {
-  year: "2024",
+  year: "2020",
   q: "Which of the following best explains indirect rule?",
   options: [
     "A. direct governance by British officials",
@@ -4449,7 +4449,7 @@ intl: [
   exp: "Indirect rule involved governing through indigenous authorities, allowing traditional rulers to maintain their positions while serving colonial interests."
 },
 {
-  year: "2024",
+  year: "2022",
   q: "Indirect rule was most successful in:",
   options: [
     "A. Eastern Nigeria",
@@ -4462,7 +4462,7 @@ intl: [
 },
 
 {
-  year: "2024",
+  year: "2022",
   q: "Which factor contributed to the success of indirect rule in the North?",
   options: [
     "A. decentralized system",
@@ -4474,7 +4474,7 @@ intl: [
   exp: "The presence of strong centralized authority (Emirs) made it easier for the British to govern through existing structures."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Indirect rule failed in Eastern Nigeria mainly because:",
   options: [
     "A. strong monarchy existed",
@@ -4486,7 +4486,7 @@ intl: [
   exp: "The Igbo political system was decentralized, lacking central rulers, making it difficult for the British to implement indirect rule effectively."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "The introduction of warrant chiefs in Eastern Nigeria led to:",
   options: [
     "A. stability",
@@ -4498,7 +4498,7 @@ intl: [
   exp: "Warrant chiefs were imposed leaders who lacked legitimacy, leading to resistance such as the Aba Women's Riot of 1929."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following best explains direct rule?",
   options: [
     "A. governance through traditional rulers",
@@ -4510,7 +4510,7 @@ intl: [
   exp: "Direct rule involves colonial officials directly administering territories without relying on indigenous institutions."
 },
 {
-  year: "2024",
+  year: "2023",
   q: "Which of the following is a feature of indirect rule?",
   options: [
     "A. abolition of traditional rulers",

@@ -5068,6 +5068,639 @@ nationalism: [
   exp: "The Macpherson Constitution was the most democratic due to its wide consultation and representation."
 }
 ],
+	Nature: [
+{
+year: "2019",
+q: "The approach that focuses on the use of logic in political analysis is the ______ approach.",
+options: [
+"A. Institutional",
+"B. Legal",
+"C. Philosophical",
+"D. Historical"
+],
+answer: "C",
+exp: "The philosophical approach uses logic and reasoning in analysing political ideas and concepts."
+},
+{
+year: "2019",
+q: "Quantitative data in political analysis refers to the use of ______.",
+options: [
+"A. Expressions",
+"B. Inference",
+"C. Words",
+"D. Numeric values"
+],
+answer: "D",
+exp: "Quantitative data deals with numbers, statistics and measurable values."
+},
+{
+year: "2019",
+q: "Which of the following is NOT a source of political power in a state?",
+options: [
+"A. Wealth",
+"B. Popular support",
+"C. Knowledge",
+"D. Religion"
+],
+answer: "D",
+exp: "Wealth, support and knowledge are major sources of political power."
+},
+{
+year: "2019",
+q: "According to Aristotle, the purpose of the state is to ______.",
+options: [
+"A. Promote the interest of rulers",
+"B. Promote the interest of oligarchs",
+"C. Promote the interest of aristocrats",
+"D. Promote good life"
+],
+answer: "D",
+exp: "Aristotle believed the state exists to help citizens achieve the good life."
+},
+{
+year: "2019",
+q: "Which of the following is NOT an example of an informal institution of government?",
+options: [
+"A. Political parties",
+"B. Pressure groups",
+"C. National Assembly",
+"D. Interest groups"
+],
+answer: "C",
+exp: "The National Assembly is a formal institution created by the constitution."
+},
+{
+year: "2019",
+q: "Politics is described as a behavioural science because ______.",
+options: [
+"A. Its object of study is human behaviour",
+"B. It makes use of explanatory method",
+"C. Its premises are uncertain",
+"D. Human behaviour is important"
+],
+answer: "A",
+exp: "Political science studies human political behaviour and interactions."
+},
+{
+year: "2019",
+q: "The traditional approach to the study of politics has been described as non-scientific because the ______.",
+options: [
+"A. Approach is utopian and idealistic",
+"B. Findings are based on facts",
+"C. Method is based on empirical observation",
+"D. Approach is authentic"
+],
+answer: "A",
+exp: "The traditional approach relied more on ideals and philosophy than scientific testing."
+},
+{
+year: "2019",
+q: "The exercise of the sovereign power of a state cannot be hindered by ______.",
+options: [
+"A. International law",
+"B. Membership of international organisations",
+"C. Constitution",
+"D. Political party manifesto"
+],
+answer: "D",
+exp: "A party manifesto does not have constitutional authority over the state."
+},
+{
+year: "2019",
+q: "The authority of the Emir of Kano is an example of ______.",
+options: [
+"A. Constitutional authority",
+"B. Charismatic authority",
+"C. Traditional authority",
+"D. Legal-rational authority"
+],
+answer: "C",
+exp: "Traditional rulers derive authority from customs and traditions."
+},
+{
+year: "2019",
+q: "In Nigeria, public expenditure is controlled by the ______.",
+options: [
+"A. Courts",
+"B. National Assembly",
+"C. Federal Executive Council",
+"D. Electorate"
+],
+answer: "B",
+exp: "The legislature supervises and approves government spending."
+},
+{
+year: "2019",
+q: "The rationale for dividing the functions of government into different arms is to ______.",
+options: [
+"A. Make governance complex",
+"B. Increase efficiency and accountability",
+"C. Create more jobs",
+"D. Enrich office holders"
+],
+answer: "B",
+exp: "Separation of powers prevents abuse and promotes accountability."
+},
+{
+year: "2019",
+q: "Sociology is significant to the study of politics because it helps to understand ______.",
+options: [
+"A. Functions of government organs",
+"B. How groups make political decisions",
+"C. Reasons for individual decisions",
+"D. Power relations in government"
+],
+answer: "B",
+exp: "Sociology studies group behaviour and social interactions."
+},
+{
+year: "2019",
+q: "A government that acquires power constitutionally and acts according to accepted norms is called a ______ government.",
+options: [
+"A. Totalitarian",
+"B. Legal",
+"C. Legalized",
+"D. Legitimate"
+],
+answer: "D",
+exp: "Legitimacy means the government is accepted as rightful by the people."
+},
+{
+year: "2019",
+q: "Public corporations are financed by ______.",
+options: [
+"A. Revenue from taxes",
+"B. Private funds",
+"C. Entrepreneurial funds",
+"D. Political parties"
+],
+answer: "A",
+exp: "Public corporations are mostly funded through public revenue."
+},
+{
+year: "2019",
+q: "Which of the following is NOT a source of internally generated revenue for a local government?",
+options: [
+"A. Licence",
+"B. Market levy",
+"C. Local rates",
+"D. Grants"
+],
+answer: "D",
+exp: "Grants come from external sources and are not internally generated."
+},
+{
+year: "2019",
+q: "A major factor which determines a country's foreign policy is ______.",
+options: [
+"A. National interest",
+"B. Leadership preference",
+"C. World peace",
+"D. Governance process"
+],
+answer: "A",
+exp: "Foreign policy is mainly designed to protect national interest."
+},
+{
+year: "2019",
+q: "The Social Contract theory argues that the state is a product of ______.",
+options: [
+"A. Natural evolution",
+"B. Agreement between man and nature",
+"C. Agreement among men without previous government",
+"D. Agreement between God and man"
+],
+answer: "C",
+exp: "The theory says people voluntarily formed government through agreement."
+},
+{
+year: "2019",
+q: "The first African civilization was the ______ civilization.",
+options: [
+"A. Nubian",
+"B. Egyptian",
+"C. Carthage",
+"D. Kongo"
+],
+answer: "B",
+exp: "Ancient Egypt is regarded as the earliest African civilization."
+},
+{
+year: "2019",
+q: "One negative effect of excluding educated elites from British colonial policy was that it ______.",
+options: [
+"A. Increased traditional rulers' power",
+"B. Led to constant violence",
+"C. Slowed constitutional and economic development",
+"D. Encouraged political participation"
+],
+answer: "C",
+exp: "Educated elites were important for modernization and constitutional growth."
+},
+{
+year: "2019",
+q: "Which of the following was NOT part of British colonial administrative divisions?",
+options: [
+"A. Native administration",
+"B. Native treasury",
+"C. Central administration",
+"D. Indigenat court"
+],
+answer: "D",
+exp: "Indigenat court was associated with French colonial administration."
+},
+
+
+{
+year: "2019",
+q: "The fascist government in Italy in the 1930s was headed by ______.",
+options: [
+"A. Adolf Hitler",
+"B. Joseph Stalin",
+"C. Benito Mussolini",
+"D. Winston Churchill"
+],
+answer: "C",
+exp: "Benito Mussolini was the leader of the Fascist Party in Italy. Fascism emphasized dictatorship, nationalism and military strength."
+},
+
+{
+year: "2019",
+q: "Europeans needed African markets during colonialism because ______.",
+options: [
+"A. European buyers were stingy",
+"B. Africans had more money",
+"C. European market was not profitable",
+"D. Manufacturers engaged in excess production"
+],
+answer: "D",
+exp: "The Industrial Revolution increased production in Europe. European industries produced more goods than Europeans could consume, so Africa became a market for these goods."
+},
+
+{
+year: "2019",
+q: "Resistance to colonial invasion in Africa can best be described as ______.",
+options: [
+"A. Violent and aggressive",
+"B. Violent and non-violent",
+"C. Violent and combative",
+"D. Violent, non-violent and complex"
+],
+answer: "D",
+exp: "Africans resisted colonial rule in different ways. Some used wars and armed struggle while others used diplomacy, negotiation and passive resistance."
+},
+
+{
+year: "2018",
+q: "The Hausa society in pre-colonial West Africa was an example of a ______ society.",
+options: [
+"A. Decentralized",
+"B. Centralized",
+"C. Militarized",
+"D. Federalized"
+],
+answer: "B",
+exp: "The Hausa states had centralized political systems headed by Emirs who exercised authority over the people."
+},
+
+{
+year: "2018",
+q: "Apartheid as an official policy was introduced in South Africa in ______.",
+options: [
+"A. 1942",
+"B. 1944",
+"C. 1946",
+"D. 1948"
+],
+answer: "D",
+exp: "Apartheid was officially introduced in 1948 by the National Party government in South Africa to enforce racial segregation."
+},
+
+{
+year: "2018",
+q: "British colonial policy succeeded in Hausa/Fulani society mainly because ______.",
+options: [
+"A. Northerners admired the British",
+"B. British easily subjugated them",
+"C. There was an existing centralized authority",
+"D. The people lacked resistance"
+],
+answer: "C",
+exp: "Indirect rule worked well in Northern Nigeria because the Emirate system already had organized leadership and administrative structures."
+},
+
+{
+year: "2018",
+q: "The Clifford Constitution of 1922 introduced ______ into Nigerian politics.",
+options: [
+"A. Republicanism",
+"B. Elective principle",
+"C. Federalism",
+"D. Judicial review"
+],
+answer: "B",
+exp: "The Clifford Constitution introduced elections into Nigeria for the first time, especially in Lagos and Calabar."
+},
+
+{
+year: "2018",
+q: "The major objective of the United Nations Organization is to ______.",
+options: [
+"A. Promote colonialism",
+"B. Maintain international peace and security",
+"C. Control world trade",
+"D. Encourage military alliances"
+],
+answer: "B",
+exp: "The UN was created after World War II mainly to prevent future wars and maintain peace among nations."
+},
+
+{
+year: "2018",
+q: "Nigeria became a republic in ______.",
+options: [
+"A. 1957",
+"B. 1960",
+"C. 1963",
+"D. 1966"
+],
+answer: "C",
+exp: "Nigeria became a republic on October 1, 1963, removing the British monarch as Head of State."
+},
+
+{
+year: "2018",
+q: "The head of government in a parliamentary system is the ______.",
+options: [
+"A. President",
+"B. Prime Minister",
+"C. Speaker",
+"D. Chief Justice"
+],
+answer: "B",
+exp: "In a parliamentary system, the Prime Minister leads the government while the President or Monarch may serve as ceremonial Head of State."
+},
+
+{
+year: "2018",
+q: "One major feature of a confederal system is that ______.",
+options: [
+"A. The central government is supreme",
+"B. States are subordinate",
+"C. Component units retain sovereignty",
+"D. There is only one legislature"
+],
+answer: "C",
+exp: "In a confederation, the member states remain sovereign and the central authority is weak."
+},
+
+{
+year: "2018",
+q: "The rule of law implies that ______.",
+options: [
+"A. Government officials are above the law",
+"B. The law applies equally to all",
+"C. Judges can rule arbitrarily",
+"D. Only rulers interpret the law"
+],
+answer: "B",
+exp: "Rule of law means everybody, including leaders and citizens, is equal before the law."
+},
+
+{
+year: "2018",
+q: "A pressure group differs from a political party because it ______.",
+options: [
+"A. Seeks political power",
+"B. Contests elections",
+"C. Promotes specific interests",
+"D. Forms government"
+],
+answer: "C",
+exp: "Pressure groups influence government decisions but do not aim to form government."
+},
+
+{
+year: "2018",
+q: "Universal adult suffrage means ______.",
+options: [
+"A. Only educated people can vote",
+"B. All adults have the right to vote",
+"C. Only men can vote",
+"D. Voting is compulsory"
+],
+answer: "B",
+exp: "Universal adult suffrage gives voting rights to all qualified adults regardless of gender or status."
+},
+
+{
+year: "2018",
+q: "The judiciary performs the function of ______.",
+options: [
+"A. Making laws",
+"B. Executing laws",
+"C. Interpreting laws",
+"D. Amending laws"
+],
+answer: "C",
+exp: "The judiciary interprets laws and settles disputes according to the constitution."
+},
+
+{
+year: "2018",
+q: "Checks and balances are designed to ______.",
+options: [
+"A. Promote dictatorship",
+"B. Prevent abuse of power",
+"C. Strengthen one arm of government",
+"D. Delay governance"
+],
+answer: "B",
+exp: "Checks and balances ensure that no arm of government becomes too powerful."
+},
+
+{
+year: "2018",
+q: "A constitution is said to be rigid when it ______.",
+options: [
+"A. Cannot be interpreted",
+"B. Cannot be amended",
+"C. Requires special procedure for amendment",
+"D. Is unwritten"
+],
+answer: "C",
+exp: "Rigid constitutions can only be amended through special and difficult procedures."
+},
+
+{
+year: "2018",
+q: "The executive arm of government is primarily responsible for ______.",
+options: [
+"A. Law making",
+"B. Law interpretation",
+"C. Law implementation",
+"D. Judicial review"
+],
+answer: "C",
+exp: "The executive carries out and enforces laws made by the legislature."
+},
+
+{
+year: "2018",
+q: "The process by which citizens learn political values is called ______.",
+options: [
+"A. Political integration",
+"B. Political participation",
+"C. Political socialization",
+"D. Political orientation"
+],
+answer: "C",
+exp: "Political socialization is the process through which people acquire political beliefs and attitudes."
+},
+
+{
+year: "2018",
+q: "Democracy is best defined as government of the people, by the people and for the people by ______.",
+options: [
+"A. Aristotle",
+"B. John Locke",
+"C. Abraham Lincoln",
+"D. Karl Marx"
+],
+answer: "C",
+exp: "Abraham Lincoln gave the popular definition of democracy during the Gettysburg Address."
+},
+
+{
+year: "2018",
+q: "The military takes over government mainly through a ______.",
+options: [
+"A. Referendum",
+"B. Plebiscite",
+"C. Coup d'etat",
+"D. Recall"
+],
+answer: "C",
+exp: "A coup d'etat is the forceful overthrow of a government by the military."
+},
+
+{
+year: "2018",
+q: "The main function of political parties is to ______.",
+options: [
+"A. Interpret laws",
+"B. Contest elections and form government",
+"C. Control the judiciary",
+"D. Organize trade unions"
+],
+answer: "B",
+exp: "Political parties seek political power through elections in order to govern."
+},
+
+{
+year: "2018",
+q: "A bicameral legislature consists of ______.",
+options: [
+"A. Two chambers",
+"B. Three chambers",
+"C. One chamber",
+"D. Executive and legislature"
+],
+answer: "A",
+exp: "A bicameral legislature has two houses, such as the Senate and House of Representatives."
+},
+
+{
+year: "2018",
+q: "The concept of separation of powers was popularized by ______.",
+options: [
+"A. Jean Bodin",
+"B. Montesquieu",
+"C. Thomas Hobbes",
+"D. Rousseau"
+],
+answer: "B",
+exp: "Montesquieu argued that government powers should be separated among different arms to avoid tyranny."
+},
+
+{
+year: "2018",
+q: "The agent through which the state acts is called the ______.",
+options: [
+"A. Government",
+"B. Society",
+"C. Nation",
+"D. Community"
+],
+answer: "A",
+exp: "Government is the machinery through which the state carries out its functions."
+},
+
+{
+year: "2018",
+q: "One advantage of federalism is that it ______.",
+options: [
+"A. Encourages dictatorship",
+"B. Promotes local autonomy",
+"C. Weakens unity",
+"D. Eliminates diversity"
+],
+answer: "B",
+exp: "Federalism allows states or regions to control their local affairs while remaining part of one country."
+},
+
+{
+year: "2018",
+q: "The first military coup in Nigeria occurred in ______.",
+options: [
+"A. 1960",
+"B. 1963",
+"C. 1966",
+"D. 1975"
+],
+answer: "C",
+exp: "Nigeria experienced its first military coup on January 15, 1966."
+},
+
+{
+year: "2018",
+q: "Public opinion can best be described as the ______.",
+options: [
+"A. View of government officials",
+"B. Opinion of pressure groups",
+"C. Aggregate views of the people on issues",
+"D. Decision of judges"
+],
+answer: "C",
+exp: "Public opinion refers to the collective attitude or views of citizens on public matters."
+},
+
+{
+year: "2018",
+q: "The doctrine of sovereignty implies that the state is ______.",
+options: [
+"A. Dependent on others",
+"B. Supreme within its territory",
+"C. Controlled by citizens",
+"D. Subject to foreign rule"
+],
+answer: "B",
+exp: "Sovereignty means the state has supreme authority within its own territory."
+},
+
+{
+year: "2018",
+q: "An unwritten constitution is best described as one that is ______.",
+options: [
+"A. Not documented at all",
+"B. Partly written and based on conventions",
+"C. Unknown to citizens",
+"D. Made only by judges"
+],
+answer: "B",
+exp: "An unwritten constitution combines written laws with customs, traditions and conventions."
+}
+],
   
  };
 

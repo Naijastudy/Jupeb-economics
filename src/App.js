@@ -205,7 +205,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
             <div style={{ flex: 1 }}>
              {subject.available ? (
                 <div style={{ fontSize: 12, color: t.gold, marginTop: 4 }}>
-                  Tap to continue
+                  {Object.values(subject.data.questions).reduce((a, arr) => a + arr.length, 0)} questions · {Object.values(subject.data.notes).reduce((a, arr) => a + arr.length, 0)} notes
                 </div>
               ) : (
                 <div style={{ fontSize: 12, marginTop: 4, display: "flex", alignItems: "center", gap: 6 }}>

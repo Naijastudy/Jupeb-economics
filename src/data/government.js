@@ -6219,6 +6219,267 @@ options: [
 ],
 answer: "B",
 exp: "Local governments help deliver governance and development at the grassroots level."
+},
+
+		
+{
+year: "2015",
+q: "The doctrine that explains that governmental power should be shared among different arms is known as ______.",
+options: [
+"A. Federalism",
+"B. Separation of powers",
+"C. Rule of law",
+"D. Checks and balances"
+],
+answer: "B",
+exp: "Separation of powers divides government into legislature, executive and judiciary to prevent abuse of power."
+},
+
+{
+year: "2015",
+q: "The system of government in which power is shared between central and regional governments is called ______.",
+options: [
+"A. Unitary system",
+"B. Federal system",
+"C. Monarchy",
+"D. Dictatorship"
+],
+answer: "B",
+exp: "Federalism allows both central and regional governments to share political powers."
+},
+
+{
+year: "2015",
+q: "Fundamental human rights are best described as ______.",
+options: [
+"A. Privileges granted by government",
+"B. Rights enjoyed only by leaders",
+"C. Inalienable rights of citizens",
+"D. Temporary benefits"
+],
+answer: "C",
+exp: "Fundamental human rights are basic rights every citizen is entitled to by law."
+},
+
+{
+year: "2015",
+q: "Which of the following is NOT a fundamental human right?",
+options: [
+"A. Right to life",
+"B. Right to education",
+"C. Right to dignity of human person",
+"D. Right to vote"
+],
+answer: "D",
+exp: "Voting is a political right, not classified as a fundamental human right in most constitutions."
+},
+
+{
+year: "2015",
+q: "An electoral system where the winner is decided by the highest number of votes is called ______.",
+options: [
+"A. Proportional representation",
+"B. First-past-the-post",
+"C. Electoral college",
+"D. Run-off system"
+],
+answer: "B",
+exp: "First-past-the-post means the candidate with the highest votes wins the election."
+},
+
+{
+year: "2015",
+q: "A pressure group differs from a political party because it ______.",
+options: [
+"A. Seeks to form government",
+"B. Contests elections",
+"C. Influences government policies",
+"D. Writes constitution"
+],
+answer: "C",
+exp: "Pressure groups do not contest elections; they influence government decisions."
+},
+
+{
+year: "2015",
+q: "Public opinion refers to the ______.",
+options: [
+"A. Views of judges",
+"B. Views of government officials",
+"C. Collective views of citizens",
+"D. Opinions of soldiers"
+],
+answer: "C",
+exp: "Public opinion is the general attitude of citizens on issues affecting society."
+},
+
+{
+year: "2015",
+q: "Local government is established mainly to ______.",
+options: [
+"A. Replace federal government",
+"B. Bring government closer to the people",
+"C. Control judiciary",
+"D. Conduct foreign affairs"
+],
+answer: "B",
+exp: "Local government ensures grassroots participation in governance."
+},
+
+{
+year: "2015",
+q: "Colonial administration in Nigeria was mainly based on ______.",
+options: [
+"A. Direct democracy",
+"B. Indirect rule",
+"C. Military rule",
+"D. Federalism"
+],
+answer: "B",
+exp: "The British used indirect rule to govern through traditional rulers."
+},
+
+{
+year: "2015",
+q: "The United Nations Organization was established mainly to ______.",
+options: [
+"A. Promote trade only",
+"B. Maintain world peace",
+"C. Control elections",
+"D. Promote colonialism"
+],
+answer: "B",
+exp: "The UN was created to promote peace and prevent global conflicts."
+},
+
+{
+year: "2015",
+q: "Nationalism refers to ______.",
+options: [
+"A. Love for foreign countries",
+"B. Struggle for independence",
+"C. Military occupation",
+"D. Economic domination"
+],
+answer: "B",
+exp: "Nationalism is the desire of people to gain independence and self-rule."
+},
+
+{
+year: "2015",
+q: "The executive arm of government is responsible for ______.",
+options: [
+"A. Law making",
+"B. Law interpretation",
+"C. Law implementation",
+"D. Constitutional amendment"
+],
+answer: "C",
+exp: "The executive enforces and implements laws made by the legislature."
+},
+
+{
+year: "2015",
+q: "The judiciary is mainly responsible for ______.",
+options: [
+"A. Law making",
+"B. Law enforcement",
+"C. Interpretation of laws",
+"D. Election conduct"
+],
+answer: "C",
+exp: "The judiciary interprets laws and settles disputes."
+},
+
+{
+year: "2015",
+q: "One function of political parties is to ______.",
+options: [
+"A. Conduct census",
+"B. Contest elections",
+"C. Control judiciary",
+"D. Write laws"
+],
+answer: "B",
+exp: "Political parties participate in elections to gain political power."
+},
+
+{
+year: "2015",
+q: "Checks and balances are designed to ______.",
+options: [
+"A. Strengthen dictatorship",
+"B. Prevent abuse of power",
+"C. Remove elections",
+"D. Eliminate judiciary"
+],
+answer: "B",
+exp: "Checks and balances ensure no arm of government becomes too powerful."
+},
+
+{
+year: "2015",
+q: "The constitution of a country can best be described as ______.",
+options: [
+"A. A political party manifesto",
+"B. A supreme law of the state",
+"C. A military decree only",
+"D. A religious document"
+],
+answer: "B",
+exp: "A constitution is the highest law that governs a country."
+},
+
+{
+year: "2015",
+q: "One feature of a democratic system is ______.",
+options: [
+"A. Dictatorship",
+"B. Free elections",
+"C. Military rule",
+"D. One-party system"
+],
+answer: "B",
+exp: "Democracy requires free and fair elections."
+},
+
+{
+year: "2015",
+q: "Foreign policy is mainly influenced by ______.",
+options: [
+"A. School system",
+"B. National interest",
+"C. Weather condition",
+"D. Sports activities"
+],
+answer: "B",
+exp: "Countries design foreign policy based on their national interest."
+},
+
+{
+year: "2015",
+q: "ECOWAS was established mainly to promote ______.",
+options: [
+"A. War among countries",
+"B. Economic integration in West Africa",
+"C. Military rule",
+"D. Colonialism"
+],
+answer: "B",
+exp: "ECOWAS promotes economic cooperation and integration among West African states."
+},
+
+{
+year: "2015",
+q: "One advantage of democracy is that it ______.",
+options: [
+"A. Suppresses opposition",
+"B. Encourages participation",
+"C. Removes elections",
+"D. Promotes dictatorship"
+],
+answer: "B",
+exp: "Democracy allows citizens to actively participate in governance."
 }
 ]
   

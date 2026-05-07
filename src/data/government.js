@@ -2535,7 +2535,7 @@ ideas: [
   exp: "Socialism advocates collective or state ownership of the means of production to ensure equitable distribution of wealth. It aims to reduce inequality and provide social welfare."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Karl Marx is most closely associated with:",
   options: [
     "A. liberalism",
@@ -2547,7 +2547,7 @@ ideas: [
   exp: "Karl Marx developed the theory of communism, which advocates a classless society where all property is collectively owned. He criticized capitalism for exploiting workers and creating class divisions."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which ideology emphasizes tradition and gradual change?",
   options: [
     "A. liberalism",
@@ -2559,7 +2559,7 @@ ideas: [
   exp: "Conservatism values tradition, stability, and gradual change. It resists radical reforms and supports existing institutions and practices."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "The concept of 'class struggle' is central to:",
   options: [
     "A. liberalism",
@@ -2572,7 +2572,7 @@ ideas: [
 },
 
 {
-  year: "2024",
+  year: "2019",
   q: "Which philosopher is associated with the idea of the social contract?",
   options: [
     "A. Aristotle",
@@ -2584,7 +2584,7 @@ ideas: [
   exp: "Thomas Hobbes proposed the social contract theory, arguing that individuals give up some freedoms to a sovereign authority in exchange for security and order."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "John Locke's contribution to political thought includes:",
   options: [
     "A. absolute monarchy",
@@ -2596,7 +2596,7 @@ ideas: [
   exp: "John Locke argued that individuals have natural rights to life, liberty, and property. He believed government should protect these rights and remain limited."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Jean-Jacques Rousseau emphasized:",
   options: [
     "A. divine right of kings",
@@ -2882,7 +2882,7 @@ parties: [
 },
 
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following best explains party ideology?",
   options: [
     "A. leadership structure",

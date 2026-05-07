@@ -2657,7 +2657,7 @@ ideas: [
   exp: "Communism seeks to abolish private ownership of the means of production and establish collective ownership to eliminate class differences."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "The theory that government authority comes from God is known as:",
   options: [
     "A. social contract",
@@ -2669,7 +2669,7 @@ ideas: [
   exp: "The divine right theory claims that rulers derive authority directly from God and are accountable only to Him, not the people."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following best explains capitalism?",
   options: [
     "A. state ownership of resources",
@@ -2681,7 +2681,7 @@ ideas: [
   exp: "Capitalism is an economic system based on private ownership of resources, market competition, and profit-making. It promotes efficiency but may lead to inequality."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which concept emphasizes fairness in distribution of resources?",
   options: [
     "A. liberty",
@@ -2696,7 +2696,7 @@ ideas: [
 
 
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following thinkers advocated separation of powers?",
   options: [
     "A. Hobbes",
@@ -2708,7 +2708,7 @@ ideas: [
   exp: "Montesquieu proposed separation of powers as a way to prevent tyranny by dividing government authority among different branches."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which ideology is most closely associated with free market economy?",
   options: [
     "A. socialism",
@@ -2720,7 +2720,7 @@ ideas: [
   exp: "Liberalism supports free market economy with minimal government intervention, encouraging competition and individual enterprise."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "A system where leaders are chosen by citizens through elections is:",
   options: [
     "A. monarchy",
@@ -2732,7 +2732,7 @@ ideas: [
   exp: "Democracy allows citizens to choose leaders through elections, ensuring representation and accountability."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which ideology supports abolition of the state?",
   options: [
     "A. Socialism",
@@ -2744,7 +2744,7 @@ ideas: [
   exp: "Anarchism advocates for a society without government or authority, believing that individuals can organize themselves voluntarily. It rejects the necessity of the state entirely."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "The main goal of socialism is:",
   options: [
     "A. profit maximization",
@@ -2760,7 +2760,7 @@ ideas: [
 parties: [
   
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following best defines a political party?",
   options: [
     "A. a group of individuals seeking social change only",
@@ -2772,7 +2772,7 @@ parties: [
   exp: "A political party is an organized group of people with similar political ideologies who aim to capture and control government power through elections. Unlike pressure groups, their primary objective is to form government."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "The main objective of a political party is to:",
   options: [
     "A. influence policy indirectly",
@@ -2784,7 +2784,7 @@ parties: [
   exp: "Political parties are primarily formed to gain political power and control government. While they may educate and mobilize citizens, their ultimate aim is to govern."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "Which of the following distinguishes a political party from a pressure group?",
   options: [
     "A. parties are informal, pressure groups are formal",
@@ -2796,7 +2796,7 @@ parties: [
   exp: "Political parties contest elections to form government, while pressure groups do not seek political power directly. Instead, they influence government policies."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "A one-party system is often associated with:",
   options: [
     "A. liberal democracy",
@@ -2808,7 +2808,7 @@ parties: [
   exp: "A one-party system is commonly found in authoritarian states where political competition is restricted. It limits political pluralism and often suppresses opposition."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following is a feature of a two-party system?",
   options: [
     "A. multiple parties share power",
@@ -2821,7 +2821,7 @@ parties: [
 },
 
 {
-  year: "2024",
+  year: "2019",
   q: "Which party system is most likely to produce coalition governments?",
   options: [
     "A. one-party system",
@@ -2833,7 +2833,7 @@ parties: [
   exp: "In a multi-party system, no single party usually gains absolute majority, leading to coalition governments where parties collaborate to form government."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Which of the following is NOT a function of political parties?",
   options: [
     "A. political education",
@@ -2845,7 +2845,7 @@ parties: [
   exp: "Political parties educate citizens, recruit leaders, and aggregate interests. However, adjudication of disputes is primarily a function of the judiciary."
 },
 {
-  year: "2024",
+  year: "2017",
   q: "Pressure groups differ from political parties in that they:",
   options: [
     "A. contest elections",
@@ -2857,7 +2857,7 @@ parties: [
   exp: "Pressure groups focus on influencing government decisions and policies without directly seeking to form government or contest elections."
 },
 {
-  year: "2024",
+  year: "2018",
   q: "Which of the following is a sectional pressure group?",
   options: [
     "A. trade union",
@@ -2869,7 +2869,7 @@ parties: [
   exp: "Sectional pressure groups represent specific interests of a particular group, such as workers (trade unions) or professionals."
 },
 {
-  year: "2024",
+  year: "2019",
   q: "Promotional pressure groups aim to:",
   options: [
     "A. promote specific causes",
@@ -4586,7 +4586,7 @@ intl: [
 
 
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following was a result of colonial rule?",
   options: [
     "A. political independence",
@@ -4648,7 +4648,7 @@ nationalism: [
   exp: "Nigerian nationalism was the organized effort by Nigerians to end colonial rule and achieve independence through political activism and resistance."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "Which factor contributed most to the rise of nationalism in Nigeria?",
   options: [
     "A. colonial support",
@@ -4685,7 +4685,7 @@ nationalism: [
 },
 
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following is a method used by nationalists?",
   options: [
     "A. cooperation with colonial rulers",
@@ -4709,7 +4709,7 @@ nationalism: [
   exp: "Militant nationalism involves more aggressive tactics such as strikes, boycotts, and sometimes violence to achieve independence."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following best explains moderate nationalism?",
   options: [
     "A. violent resistance",
@@ -4746,7 +4746,7 @@ nationalism: [
 },
 
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following was a result of nationalism?",
   options: [
     "A. colonial expansion",
@@ -4770,7 +4770,7 @@ nationalism: [
   exp: "Political parties were used by nationalists to mobilize support, organize activities, and present demands to colonial authorities."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following best explains the role of trade unions?",
   options: [
     "A. suppression of nationalism",
@@ -4794,7 +4794,7 @@ nationalism: [
   exp: "Colonial authorities often suppressed nationalist activities through arrests, censorship, and restrictions."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following best explains Pan-Africanism?",
   options: [
     "A. isolation",
@@ -4847,7 +4847,7 @@ nationalism: [
 ],
   constitution_africa: [
 {
-  year: "2022",
+  year: "2023",
   q: "The Clifford Constitution of 1922 introduced:",
   options: [
     "A. federalism",
@@ -4944,7 +4944,7 @@ nationalism: [
   exp: "The Lyttleton Constitution established a federal system in Nigeria, granting significant autonomy to regions."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "Which constitution is regarded as the true beginning of federalism in Nigeria?",
   options: [
     "A. Clifford",
@@ -4969,7 +4969,7 @@ nationalism: [
 },
 
 {
-  year: "2022",
+  year: "2023",
   q: "Which of the following best explains federalism under Lyttleton?",
   options: [
     "A. central control",
@@ -5005,7 +5005,7 @@ nationalism: [
   exp: "The Richards Constitution was largely imposed without adequate consultation, leading to widespread criticism."
 },
 {
-  year: "2022",
+  year: "2023",
   q: "Which constitution attempted to balance unity and diversity?",
   options: [
     "A. Clifford",

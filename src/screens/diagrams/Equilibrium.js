@@ -64,7 +64,7 @@ export default function EquilibriumDiagram({ t }) {
               fontSize: 12,
               fontWeight: "bold",
               cursor: "pointer",
-              background: mode === btn.id ? btn.color : t.bgInner,
+              background: mode === btn.id ? btn.color : t.bgCard,
               color: mode === btn.id ? "#fff" : t.textSub,
               border: `2px solid ${
                 mode === btn.id ? btn.color : t.border

@@ -114,11 +114,11 @@ export default function PPCDiagram({ t }) {
       </div>
 
       {/* Active point info */}
-      <div style={{ marginTop: 14, background: showPoint === "D" ? "#fff8e1" : showPoint === "E" ? "#fdecea" : t.exBg, border: `1px solid ${showPoint === "D" ? "#f59e0b" : showPoint === "E" ? "#dc3545" : t.exBorder}`, borderRadius: 12, padding: "12px 14px" }}>
-        <div style={{ fontSize: 13, fontWeight: "bold", color: showPoint === "D" ? "#f59e0b" : showPoint === "E" ? "#dc3545" : t.correctBorder, marginBottom: 6 }}>
+      <div style={{ marginTop: 14, background: showPoint === "D" ? "#f59e0b" : showPoint === "E" ? "#dc3545" : t.exBg, border: `1px solid ${showPoint === "D" ? "#f59e0b" : showPoint === "E" ? "#dc3545" : t.exBorder}`, borderRadius: 12, padding: "12px 14px" }}>
+        <div style={{ fontSize: 13, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>
           📍 Point {showPoint}
         </div>
-        <div style={{ fontSize: 13, color: t.text, lineHeight: 1.7 }}>{active.desc}</div>
+        <div style={{ fontSize: 13, color: "#fff", lineHeight: 1.7 }}>{active.desc}</div>
       </div>
 
       {/* Point selector buttons */}

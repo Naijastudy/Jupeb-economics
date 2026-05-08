@@ -53,43 +53,43 @@ export default function PPCDiagram({ t }) {
 
         {/* Point A — on curve top left */}
         <circle cx="40" cy="40" r={showPoint === "A" ? 9 : 6}
-          fill={showPoint === "A" ? "#16a34a" : t.bgCard}
+          fill={showPoint === "A" ? "#16a34a" : t.bgInner}
           stroke="#16a34a" strokeWidth="2"
           style={{ cursor: "pointer" }}
           onClick={() => setShowPoint("A")} />
-        <text x="50" y="36" fill={t.text} fontSize="11" fontWeight="bold">A</text>
+       <text x="50" y="36" fill={showPoint === "A" ? "#16a34a" : t.text} fontSize="11" fontWeight="bold">A</text>
 
         {/* Point B — on curve middle */}
         <circle cx="160" cy="118" r={showPoint === "B" ? 9 : 6}
-          fill={showPoint === "B" ? "#16a34a" : t.bgCard}
+          fill={showPoint === "B" ? "#16a34a" : t.bgInner}
           stroke="#16a34a" strokeWidth="2"
           style={{ cursor: "pointer" }}
           onClick={() => setShowPoint("B")} />
-        <text x="170" y="114" fill={t.text} fontSize="11" fontWeight="bold">B</text>
+        <text x="170" y="114" fill={showPoint === "B" ? "#16a34a" : t.text} fontSize="11" fontWeight="bold">B</text>
 
         {/* Point C — on curve bottom right */}
         <circle cx="300" cy="240" r={showPoint === "C" ? 9 : 6}
-          fill={showPoint === "C" ? "#16a34a" : t.bgCard}
+          fill={showPoint === "C" ? "#16a34a" : t.bgInner}
           stroke="#16a34a" strokeWidth="2"
           style={{ cursor: "pointer" }}
           onClick={() => setShowPoint("C")} />
-        <text x="286" y="236" fill={t.text} fontSize="11" fontWeight="bold">C</text>
+        <text x="286" y="236" fill={showPoint === "C" ? "#16a34a" : t.text} fontSize="11" fontWeight="bold">C</text>
 
         {/* Point D — inside curve (inefficient) */}
         <circle cx="160" cy="180" r={showPoint === "D" ? 9 : 6}
-          fill={showPoint === "D" ? "#f59e0b" : t.bgCard}
+          fill={showPoint === "D" ? "#f59e0b" : t.bgInner}
           stroke="#f59e0b" strokeWidth="2"
           style={{ cursor: "pointer" }}
           onClick={() => setShowPoint("D")} />
-        <text x="170" y="176" fill="#f59e0b" fontSize="11" fontWeight="bold">D</text>
+        <text x="170" y="176" fill={showPoint === "D" ? "#f59e0b" : t.text} fontSize="11" fontWeight="bold">D</text>
 
         {/* Point E — outside curve (unattainable) */}
         <circle cx="240" cy="50" r={showPoint === "E" ? 9 : 6}
-          fill={showPoint === "E" ? "#dc3545" : t.bgCard}
+          fill={showPoint === "E" ? "#dc3545" : t.bgInner}
           stroke="#dc3545" strokeWidth="2"
           style={{ cursor: "pointer" }}
           onClick={() => setShowPoint("E")} />
-        <text x="250" y="46" fill="#dc3545" fontSize="11" fontWeight="bold">E</text>
+        <text x="250" y="46" fill={showPoint === "E" ? "#dc3545" : t.text} fontSize="11" fontWeight="bold">E</text>
 
         {/* Labels for regions */}
         <text x="200" y="150" fill="#16a34a" fontSize="9" fillOpacity="0.6">Attainable</text>

@@ -5,6 +5,8 @@ import PriceElasticityDiagram from "./diagrams/PricElasticity";
 import LawOfDemandDiagram from "./diagrams/LawOfDemand";
 import EquilibriumDiagram from "./diagrams/Equilibrium";
 import UtilityDiagram from "./diagrams/Utility";
+import IndifferenceDiagram from "./diagrams/Indifference";
+
 
 const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
 
@@ -105,6 +107,7 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
 {n.diagram === "law_demand" && <LawOfDemandDiagram t={t} />}
   {n.diagram === "equilibrium" && <EquilibriumDiagram t={t} />}
     {n.diagram === "utility" && <UtilityDiagram t={t} />}
+  {n.diagram === "indifference" && <IndifferenceDiagram t={t} />}
   
             </div>
           </div>

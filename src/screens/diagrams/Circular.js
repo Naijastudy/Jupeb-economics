@@ -1,47 +1,38 @@
 import React, { useState, useEffect } from "react";
 
-export default function CircularFlowAdvanced({ t }) {
+export default function CircularFlow4Sector({ t }) {
   const [step, setStep] = useState(1);
-
-  // Simulation controls
-  const [tax, setTax] = useState(20);
-  const [savings, setSavings] = useState(15);
-  const [imports, setImports] = useState(10);
-
-  const [investment, setInvestment] = useState(25);
-  const [govSpending, setGovSpending] = useState(30);
-  const [exports, setExports] = useState(20);
-
   const [flow, setFlow] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFlow(f => !f);
-    }, 1200); // creates flowing animation pulse
-    return () => clearInterval(interval);
+    const id = setInterval(() => setFlow(f => !f), 1200);
+    return () => clearInterval(id);
   }, []);
-
-  const leakages = tax + savings + imports;
-  const injections = investment + govSpending + exports;
 
   const steps = [
     {
       id: 1,
-      label: "Basic Flow",
+      label: "Basic Economy",
       color: "#2563eb",
-      desc: "Households and firms interact through goods and factor markets.",
+      desc: "Households and firms interact through product and factor markets.",
     },
     {
       id: 2,
-      label: "Money Flow Animation",
+      label: "Government Added",
       color: "#f59e0b",
-      desc: "Money continuously flows between households and firms.",
+      desc: "Government collects taxes and provides public goods and services.",
     },
     {
       id: 3,
-      label: "Leakages & Injections",
+      label: "Foreign Sector Added",
       color: "#16a34a",
-      desc: "Leakages withdraw money from circular flow. Injections add money into it.",
+      desc: "Exports bring money into economy, imports take money out.",
+    },
+    {
+      id: 4,
+      label: "Full Circular Flow",
+      color: "#dc3545",
+      desc: "All sectors interact with flows of income, spending, taxes, trade.",
     },
   ];
 
@@ -51,137 +42,95 @@ export default function CircularFlowAdvanced({ t }) {
     <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: 16 }}>
 
       <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading }}>
-        Circular Flow of Income (Advanced Simulator)
+        Circular Flow of Income (4-Sector Economy)
       </div>
 
       <div style={{ fontSize: 11, color: t.textMuted, marginBottom: 12 }}>
-        With animation, leakage vs injection, and economic balance
+        Households, Firms, Government, Foreign Sector
       </div>
 
-      {/* ================= SVG DIAGRAM ================= */}
-      <svg viewBox="0 0 360 300" style={{ width: "100%", background: t.bgInner, borderRadius: 12, border: `1px solid ${t.border}` }}>
+      <svg viewBox="0 0 380 300" style={{ width: "100%", background: t.bgInner, borderRadius: 12, border: `1px solid ${t.border}` }}>
 
-        {/* HOUSEHOLDS */}
+        {/* ================= HOUSEHOLDS ================= */}
         <rect x="40" y="120" width="100" height="60" stroke="#2563eb" fill="none" strokeWidth="2" />
-        <text x="90" y="150" textAnchor="middle" fill="#2563eb" fontSize="11">Households</text>
+        <text x="90" y="145" textAnchor="middle" fill="#2563eb" fontSize="11">Households</text>
 
-        {/* FIRMS */}
-        <rect x="220" y="120" width="100" height="60" stroke="#16a34a" fill="none" strokeWidth="2" />
-        <text x="270" y="150" textAnchor="middle" fill="#16a34a" fontSize="11">Firms</text>
+        {/* GIVE: Factors */}
+        <text x="20" y="110" fill="#2563eb" fontSize="9">Give: Labour, Land, Capital</text>
+        <text x="20" y="195" fill="#2563eb" fontSize="9">Receive: Income</text>
 
-        {/* ================= FLOW ANIMATION ================= */}
+        {/* ================= FIRMS ================= */}
+        <rect x="240" y="120" width="100" height="60" stroke="#16a34a" fill="none" strokeWidth="2" />
+        <text x="290" y="145" textAnchor="middle" fill="#16a34a" fontSize="11">Firms</text>
 
-        {/* Goods flow */}
+        <text x="240" y="110" fill="#16a34a" fontSize="9">Give: Goods & Services</text>
+        <text x="240" y="195" fill="#16a34a" fontSize="9">Receive: Revenue</text>
+
+        {/* ================= MONEY FLOW ================= */}
         <path
-          d="M 140 130 Q 180 80 220 130"
-          stroke="#2563eb"
+          d="M 140 140 Q 190 80 240 140"
+          stroke="#f59e0b"
           strokeWidth="3"
           fill="none"
           opacity={flow ? 1 : 0.4}
         />
-        <text x="180" y="75" fill="#2563eb" fontSize="10" textAnchor="middle">
-          Goods & Services →
+        <text x="190" y="75" fill="#f59e0b" fontSize="9" textAnchor="middle">
+          Income / Spending →
         </text>
 
-        {/* Factor flow */}
         <path
-          d="M 220 170 Q 180 220 140 170"
-          stroke="#16a34a"
+          d="M 240 160 Q 190 220 140 160"
+          stroke="#f59e0b"
           strokeWidth="3"
           fill="none"
-          opacity={flow ? 1 : 0.4}
+          opacity={!flow ? 1 : 0.4}
         />
-        <text x="180" y="235" fill="#16a34a" fontSize="10" textAnchor="middle">
-          Factors ←
+        <text x="190" y="235" fill="#f59e0b" fontSize="9" textAnchor="middle">
+          Goods & Services ←
         </text>
 
-        {/* Money flow */}
-        {(step >= 2) && (
+        {/* ================= GOVERNMENT ================= */}
+        {step >= 2 && (
           <>
-            <path
-              d="M 140 150 Q 90 90 220 150"
-              stroke="#f59e0b"
-              strokeWidth="3"
-              fill="none"
-              opacity={flow ? 1 : 0.4}
-            />
-            <path
-              d="M 220 150 Q 270 210 140 150"
-              stroke="#f59e0b"
-              strokeWidth="3"
-              fill="none"
-              opacity={!flow ? 1 : 0.4}
-            />
+            <rect x="40" y="20" width="90" height="50" stroke="#dc3545" fill="none" strokeWidth="2" />
+            <text x="85" y="50" textAnchor="middle" fill="#dc3545" fontSize="10">Government</text>
+
+            <text x="10" y="20" fill="#dc3545" fontSize="9">Give: Public Goods</text>
+            <text x="10" y="75" fill="#dc3545" fontSize="9">Receive: Taxes</text>
+
+            {/* Taxes */}
+            <path d="M 90 70 Q 110 100 140 140" stroke="#dc3545" strokeWidth="2" fill="none" />
+            <text x="105" y="95" fill="#dc3545" fontSize="9">Taxes</text>
+
+            {/* Government spending */}
+            <path d="M 140 160 Q 110 90 90 70" stroke="#dc3545" strokeWidth="2" fill="none" />
+            <text x="110" y="175" fill="#dc3545" fontSize="9">G Spending</text>
           </>
         )}
 
-        {/* ================= LEAKAGES ================= */}
-        {step === 3 && (
+        {/* ================= FOREIGN SECTOR ================= */}
+        {step >= 3 && (
           <>
-            <text x="20" y="40" fill="#dc3545" fontSize="10">Leakages</text>
+            <rect x="240" y="20" width="110" height="50" stroke="#16a34a" fill="none" strokeWidth="2" />
+            <text x="295" y="50" textAnchor="middle" fill="#16a34a" fontSize="10">Foreign Sector</text>
 
-            <text x="20" y="60" fill="#dc3545" fontSize="9">S (Savings): {savings}</text>
-            <text x="20" y="75" fill="#dc3545" fontSize="9">T (Tax): {tax}</text>
-            <text x="20" y="90" fill="#dc3545" fontSize="9">M (Imports): {imports}</text>
+            <text x="235" y="20" fill="#16a34a" fontSize="9">Exports (X)</text>
+            <text x="235" y="75" fill="#16a34a" fontSize="9">Imports (M)</text>
+
+            {/* Exports */}
+            <path d="M 295 70 Q 270 100 240 140" stroke="#16a34a" strokeWidth="2" fill="none" />
+            <text x="275" y="95" fill="#16a34a" fontSize="9">Exports</text>
+
+            {/* Imports */}
+            <path d="M 240 160 Q 270 210 295 70" stroke="#16a34a" strokeWidth="2" fill="none" />
+            <text x="275" y="190" fill="#16a34a" fontSize="9">Imports</text>
           </>
         )}
 
-        {/* ================= INJECTIONS ================= */}
-        {step === 3 && (
-          <>
-            <text x="250" y="40" fill="#16a34a" fontSize="10">Injections</text>
-
-            <text x="250" y="60" fill="#16a34a" fontSize="9">I (Investment): {investment}</text>
-            <text x="250" y="75" fill="#16a34a" fontSize="9">G (Govt): {govSpending}</text>
-            <text x="250" y="90" fill="#16a34a" fontSize="9">X (Exports): {exports}</text>
-          </>
-        )}
-
-        {/* EQUILIBRIUM CONDITION */}
-        {step === 3 && (
-          <text x="180" y="20" textAnchor="middle" fill={injections >= leakages ? "#16a34a" : "#dc3545"} fontSize="11">
-            {injections >= leakages ? "Injection ≥ Leakages (Expansion)" : "Leakages > Injections (Contraction)"}
-          </text>
-        )}
+        {/* ================= FLOW INDICATOR ================= */}
+        <circle cx="190" cy="140" r={flow ? 6 : 3} fill="#f59e0b" />
 
       </svg>
-
-      {/* ================= CONTROLS ================= */}
-      {step === 3 && (
-        <div style={{ marginTop: 12, display: "grid", gap: 8 }}>
-
-          <div>
-            Savings: {savings}
-            <input type="range" min="0" max="50" value={savings} onChange={e => setSavings(+e.target.value)} />
-          </div>
-
-          <div>
-            Tax: {tax}
-            <input type="range" min="0" max="50" value={tax} onChange={e => setTax(+e.target.value)} />
-          </div>
-
-          <div>
-            Imports: {imports}
-            <input type="range" min="0" max="50" value={imports} onChange={e => setImports(+e.target.value)} />
-          </div>
-
-          <div>
-            Investment: {investment}
-            <input type="range" min="0" max="60" value={investment} onChange={e => setInvestment(+e.target.value)} />
-          </div>
-
-          <div>
-            Government Spending: {govSpending}
-            <input type="range" min="0" max="60" value={govSpending} onChange={e => setGovSpending(+e.target.value)} />
-          </div>
-
-          <div>
-            Exports: {exports}
-            <input type="range" min="0" max="60" value={exports} onChange={e => setExports(+e.target.value)} />
-          </div>
-
-        </div>
-      )}
 
       {/* ================= STEP BUTTONS ================= */}
       <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
@@ -215,18 +164,16 @@ export default function CircularFlowAdvanced({ t }) {
         </div>
       </div>
 
-      {/* SUMMARY */}
-      {step === 3 && (
-        <div style={{ marginTop: 10, background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: 12 }}>
-          <div style={{ fontSize: 12, fontWeight: "bold", color: t.keyText }}>
-            🔑 Economic Balance
-          </div>
-          <div style={{ fontSize: 13, color: t.keyText }}>
-            Injections = Leakages for equilibrium (I + G + X = S + T + M)
-          </div>
+      {/* KEY SUMMARY */}
+      <div style={{ marginTop: 10, background: t.keyBg, border: `1px solid ${t.keyBorder}`, borderRadius: 12, padding: 12 }}>
+        <div style={{ fontSize: 12, fontWeight: "bold", color: t.keyText }}>
+          🔑 Economic Identity
         </div>
-      )}
+        <div style={{ fontSize: 13, color: t.keyText }}>
+          Y = C + I + G + (X − M)
+        </div>
+      </div>
 
     </div>
   );
-    }
+          }

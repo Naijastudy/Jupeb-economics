@@ -64,7 +64,7 @@ export default function EquilibriumDiagram({ t }) {
               fontSize: 12,
               fontWeight: "bold",
               cursor: "pointer",
-              background: mode === btn.id ? btn.color : t.bgCard,
+              background: mode === btn.id ? btn.color : t.bgInner,
               color: mode === btn.id ? "#fff" : t.textSub,
               border: `2px solid ${
                 mode === btn.id ? btn.color : t.border
@@ -381,34 +381,28 @@ export default function EquilibriumDiagram({ t }) {
       </svg>
 
       {/* Info Box */}
-     <div
+    <div
   style={{
     marginTop: 14,
     background:
       mode === "equilibrium"
         ? t.exBg
         : mode === "shortage"
-        ? t.mode === "dark"
-          ? "rgba(220,53,69,0.18)"
-          : "#fff4f4"
-        : t.mode === "dark"
-        ? "rgba(22,163,74,0.18)"
-        : "#f0fdf4",
+        ? "rgba(220,53,69,0.12)"
+        : "rgba(22,163,74,0.12)",
 
     border: `1px solid ${
       mode === "equilibrium"
         ? t.exBorder
         : mode === "shortage"
-        ? t.mode === "dark"
-          ? "rgba(220,53,69,0.45)"
-          : "#f5c2c7"
-        : t.mode === "dark"
-        ? "rgba(22,163,74,0.45)"
-        : "#bbf7d0"
+        ? "rgba(220,53,69,0.4)"
+        : "rgba(22,163,74,0.4)"
     }`,
 
     borderRadius: 12,
     padding: "12px 14px",
+
+    backdropFilter: "blur(4px)",
   }}
 >
         {mode === "equilibrium" && (

@@ -127,8 +127,8 @@ export default function PPCDiagram({ t }) {
           <button key={p} onClick={() => setShowPoint(p)} style={{
             width: 36, height: 36, borderRadius: "50%",
             border: `2px solid ${showPoint === p ? (p === "D" ? "#f59e0b" : p === "E" ? "#dc3545" : "#16a34a") : t.border}`,
-            background: showPoint === p ? (p === "D" ? "#f59e0b" : p === "E" ? "#dc3545" : "#16a34a") : t.bgCard,
-            color: showPoint === p ? "#fff" : t.text,
+            background: showPoint === p ? (p === "D" ? "#f59e0b" : p === "E" ? "#dc3545" : "#16a34a") : t.bgInner,
+            color: showPoint === p ? "#fff" : t.heading,
             fontSize: 13, fontWeight: "bold", cursor: "pointer"
           }}>{p}</button>
         ))}

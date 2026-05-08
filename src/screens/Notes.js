@@ -7,6 +7,7 @@ import EquilibriumDiagram from "./diagrams/Equilibrium";
 import UtilityDiagram from "./diagrams/Utility";
 import IndifferenceDiagram from "./diagrams/Indifference";
 import CostDiagram from "./diagrams/Cost";
+import CircularDiagram from "./diagrams/Circular";
 
 
 const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
@@ -110,6 +111,7 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
     {n.diagram === "utility" && <UtilityDiagram t={t} />}
   {n.diagram === "indifference" && <IndifferenceDiagram t={t} />}
    {n.diagram === "cost" && <CostDiagram t={t} />}
+  {n.diagram === "circular" && <CircularDiagram t={t} />}
  
             </div>
           </div>

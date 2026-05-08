@@ -3,6 +3,7 @@ import PPCDiagram from "./diagrams/PPC";
 import DemandCurveDiagram from "./diagrams/DemandCurve";
 import PriceElasticityDiagram from "./diagrams/PricElasticity";
 import LawOfDemandDiagram from "./diagrams/LawOfDemand";
+import ElasticityDiagram from "./diagrams/Elasticity";
 
 const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
 
@@ -101,6 +102,7 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
   {n.diagram === "demand" && <DemandCurveDiagram t={t} />}
     {n.diagram === "ped" && <PriceElasticityDiagram t={t} />}
 {n.diagram === "law_demand" && <LawOfDemandDiagram t={t} />}
+  {n.diagram === "elasticity" && <ElasticityDiagram t={t} />}
             </div>
           </div>
         ))}

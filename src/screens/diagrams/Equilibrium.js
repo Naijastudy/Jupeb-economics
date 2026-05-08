@@ -381,26 +381,36 @@ export default function EquilibriumDiagram({ t }) {
       </svg>
 
       {/* Info Box */}
-      <div
-        style={{
-          marginTop: 14,
-          background:
-            mode === "equilibrium"
-              ? t.exBg
-              : mode === "shortage"
-              ? "#fff4f4"
-              : "#f0fdf4",
-          border: `1px solid ${
-            mode === "equilibrium"
-              ? t.exBorder
-              : mode === "shortage"
-              ? "#f5c2c7"
-              : "#bbf7d0"
-          }`,
-          borderRadius: 12,
-          padding: "12px 14px",
-        }}
-      >
+     <div
+  style={{
+    marginTop: 14,
+    background:
+      mode === "equilibrium"
+        ? t.exBg
+        : mode === "shortage"
+        ? t.mode === "dark"
+          ? "rgba(220,53,69,0.18)"
+          : "#fff4f4"
+        : t.mode === "dark"
+        ? "rgba(22,163,74,0.18)"
+        : "#f0fdf4",
+
+    border: `1px solid ${
+      mode === "equilibrium"
+        ? t.exBorder
+        : mode === "shortage"
+        ? t.mode === "dark"
+          ? "rgba(220,53,69,0.45)"
+          : "#f5c2c7"
+        : t.mode === "dark"
+        ? "rgba(22,163,74,0.45)"
+        : "#bbf7d0"
+    }`,
+
+    borderRadius: 12,
+    padding: "12px 14px",
+  }}
+>
         {mode === "equilibrium" && (
           <>
             <div

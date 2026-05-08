@@ -1,4 +1,5 @@
 import React from "react";
+import PPCDiagram from "./diagrams/PPC";
 
 const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
 
@@ -88,74 +89,12 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px" }}>
               <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📝 Full Explanation</div>
               <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>{n.body}</div>
-             {n.title === "Production Possibility Curve (PPC) graphical explanation" && (
-  <img
-  src="/image/PPC.png"
-  alt="PPC Graph"
-  style={{
-    width: "100%",
-    maxHeight: "300px",
-    objectFit: "contain",
-    margin: "10px 0",
-    borderRadius: "10px"
-  }}
-/>
+            {n.image && (
+  <img src={n.image} alt={n.title}
+    style={{ width: "100%", borderRadius: 10, marginTop: 14, border: `1px solid ${t.border}` }}
+    onError={e => e.target.style.display = "none"} />
 )}
-
-    {n.title === "Elasticity of Demand" && (
-  <img
-  src="/image/approach.png"
-  alt="Elastic of demand"
-  style={{
-    width: "100%",
-    maxHeight: "300px",
-    objectFit: "contain",
-    margin: "10px 0",
-    borderRadius: "10px"
-  }}
-/>
-)}
-
-    {n.title === "Supply & Equilibrium" && (
-  <img
-  src="/image/equilibrium.png"
-  alt="Equilibrium"
-  style={{
-    width: "100%",
-    maxHeight: "300px",
-    objectFit: "contain",
-    margin: "10px 0",
-    borderRadius: "10px"
-  }}
-/>
-)}
-{n.title === "Law of Demand" && (
-  <img
-  src="/image/qd_q.png"
-  alt="Demand Curve"
-  style={{
-    width: "100%",
-    maxHeight: "300px",
-    objectFit: "contain",
-    margin: "10px 0",
-    borderRadius: "10px"
-  }}
-/>
-)}
-
-    {n.title === "Elasticity of Demand curve" && (
-  <img
-  src="/image/ped.png"
-  alt="Demand Curve"
-  style={{
-    width: "100%",
-    maxHeight: "300px",
-    objectFit: "contain",
-    margin: "10px 0",
-    borderRadius: "10px"
-  }}
-/>
-)}
+{n.diagram === "ppc" && <PPCDiagram t={t} />}
             </div>
           </div>
         ))}

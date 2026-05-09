@@ -144,9 +144,7 @@ function QuestionMiniDiagram({ type, t }) {
           <text x="44" y="80" fill={t.text} fontSize="9">A</text>
           <text x="153" y="192" fill={t.text} fontSize="9">F</text>
         </svg>
-        <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
-          🟢 On curve = Efficient · 🟡 Inside (E) = Inefficient · 🔴 Outside = Unattainable
-        </div>
+       
       </div>
     );
   }

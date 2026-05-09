@@ -120,28 +120,59 @@ export function PastQView({ t, data, pqTopic, onBack, card }) {
     </table>
   </div>
 )}
-{q.questionDiagram === "ppc" && (
+{q.questionDiagram && (
   <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
-    <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
-      <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
-      <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
-      <polygon points="40,4 36,14 44,14" fill={t.text} />
-      <polygon points="316,180 306,176 306,184" fill={t.text} />
-      <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Capital goods</text>
-      <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Consumer goods</text>
-      <path d="M 40 20 Q 180 60 300 170" fill="none" stroke="#16a34a" strokeWidth="2.5" />
-      <text x="44" y="22" fill={t.text} fontSize="10" fontWeight="bold">B</text>
-      <circle cx="155" cy="58" r="4" fill="#16a34a" />
-      <text x="160" y="54" fill={t.text} fontSize="10" fontWeight="bold">C</text>
-      <circle cx="155" cy="110" r="4" fill="#f59e0b" />
-      <text x="160" y="106" fill="#f59e0b" fontSize="10" fontWeight="bold">E</text>
-      <text x="295" y="174" fill={t.text} fontSize="10" fontWeight="bold">D</text>
-    </svg>
+    {q.questionDiagram === "ppc" && (
+      <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
+        <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
+        <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
+        <polygon points="40,4 36,14 44,14" fill={t.text} />
+        <polygon points="316,180 306,176 306,184" fill={t.text} />
+        <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Capital goods</text>
+        <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Consumer goods</text>
+        <path d="M 40 20 Q 180 80 300 170" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+        <text x="44" y="22" fill={t.text} fontSize="10" fontWeight="bold">B</text>
+        <circle cx="160" cy="76" r="5" fill="#16a34a" />
+        <text x="166" y="72" fill={t.text} fontSize="10" fontWeight="bold">C</text>
+        <circle cx="160" cy="120" r="5" fill="#f59e0b" />
+        <text x="166" y="116" fill="#f59e0b" fontSize="10" fontWeight="bold">E</text>
+        <circle cx="240" cy="45" r="5" fill="#dc3545" />
+        <text x="246" y="41" fill="#dc3545" fontSize="9">Unattainable</text>
+        <text x="295" y="174" fill={t.text} fontSize="10" fontWeight="bold">D</text>
+      </svg>
+    )}
+    {q.questionDiagram === "demand" && (
+      <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
+        <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
+        <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
+        <polygon points="40,4 36,14 44,14" fill={t.text} />
+        <polygon points="316,180 306,176 306,184" fill={t.text} />
+        <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Price (P)</text>
+        <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Quantity (Q)</text>
+        <path d="M 60 20 L 290 170" fill="none" stroke="#2563eb" strokeWidth="2.5" />
+        <text x="294" y="168" fill="#2563eb" fontSize="12" fontWeight="bold">D</text>
+      </svg>
+    )}
+    {q.questionDiagram === "supply" && (
+      <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
+        <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
+        <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
+        <polygon points="40,4 36,14 44,14" fill={t.text} />
+        <polygon points="316,180 306,176 306,184" fill={t.text} />
+        <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Price (P)</text>
+        <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Quantity (Q)</text>
+        <path d="M 60 170 L 290 20" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+        <text x="294" y="18" fill="#16a34a" fontSize="12" fontWeight="bold">S</text>
+      </svg>
+    )}
     <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
-      🟢 On curve = Efficient · 🟡 Inside = Inefficient · 🔴 Outside = Unattainable
+      {q.questionDiagram === "ppc" ? "🟢 On curve = Efficient · 🟡 Inside = Inefficient · 🔴 Outside = Unattainable" :
+       q.questionDiagram === "demand" ? "Demand Curve — slopes downward from left to right" :
+       "Supply Curve — slopes upward from left to right"}
     </div>
   </div>
 )}
+
   <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {q.options.map(opt => {
                     const l = opt[0], isSel = userAns === l, isRight = l === q.answer;

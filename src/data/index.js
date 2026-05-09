@@ -8,7 +8,7 @@ export const subjects = [
     name: "Economics",
     emoji: "📊",
     color: "#6b95f1",
-    available: false,
+    available: true,
     data: economics,
   },
   {

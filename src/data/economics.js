@@ -397,6 +397,27 @@ intro: [
   options: ["A. Productive efficiency", "B. Allocative efficiency", "C. Product inefficiency", "D. Product efficiency"],
   answer: "C",
   exp: "Point E lies INSIDE the PPC — representing productive inefficiency. The economy is not fully utilising its available resources. By moving to a point ON the curve, more output could be produced without additional resources. Points on the curve represent efficiency, points outside are unattainable with current resources." },
+     {
+  year: "2026",
+  q: "Given the table below, what will happen to marginal productivity of labour?",
+  table: {
+    headers: ["Labour", "Total Output"],
+    rows: [
+      ["8", "1,700"],
+      ["9", "2,400"],
+      ["10", "2,750"]
+    ]
+  },
+  options: ["A. increase", "B. decrease", "C. negative", "D. constant"],
+  answer: "B"
+     },
+        {
+  year: "2026",
+  q: "Which point on the PPC represents inefficiency?",
+  questionDiagram: "ppc",
+  options: ["A. B", "B. C", "C. E", "D. D"],
+  answer: "C"
+        },
         
         
       { year: "2023", q: "Opportunity cost is BEST defined as:", options: ["A. The total money spent on a good", "B. The value of the next best alternative forgone", "C. The profit lost by a firm", "D. The cost of producing one more unit"], answer: "B", exp: "Opportunity cost is not about money — it is the value of the best alternative you sacrificed when making a choice. It applies to all economic agents." },

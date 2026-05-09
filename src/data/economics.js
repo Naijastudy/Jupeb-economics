@@ -618,7 +618,7 @@ intro: [
   exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity. Y = (34-30) ÷ 1 = 4. This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
    
           {
-  year: "2022",
+  year: "2021",
   q: "Which point on the PPC represents inefficiency?",
   questionDiagram: "ppc",
   options: [

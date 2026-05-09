@@ -116,6 +116,81 @@ function QuestionTable({ table, t }) {
   );
 }
 
+function QuestionMiniDiagram({ type, t }) {
+  if (type === "ppc") {
+    return (
+      <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
+        <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
+          <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
+          <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
+          <polygon points="40,4 36,14 44,14" fill={t.text} />
+          <polygon points="316,180 306,176 306,184" fill={t.text} />
+          <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Capital goods</text>
+          <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Consumer goods</text>
+          <text x="44" y="16" fill={t.textSub} fontSize="9">Y</text>
+          <text x="312" y="184" fill={t.textSub} fontSize="9">X</text>
+          <path d="M 40 20 Q 180 80 300 170" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+          <path d="M 40 20 Q 180 80 300 170 L 300 180 L 40 180 Z" fill="#16a34a" fillOpacity="0.08" />
+          <text x="44" y="22" fill={t.text} fontSize="10" fontWeight="bold">B</text>
+          <circle cx="160" cy="76" r="5" fill="#16a34a" />
+          <text x="166" y="72" fill={t.text} fontSize="10" fontWeight="bold">C</text>
+          <circle cx="160" cy="120" r="5" fill="#f59e0b" />
+          <text x="166" y="116" fill="#f59e0b" fontSize="10" fontWeight="bold">E</text>
+          <circle cx="240" cy="45" r="5" fill="#dc3545" />
+          <text x="246" y="41" fill="#dc3545" fontSize="9" fontWeight="bold">Unattainable</text>
+          <text x="295" y="174" fill={t.text} fontSize="10" fontWeight="bold">D</text>
+          <line x1="40" y1="76" x2="160" y2="76" stroke={t.border} strokeWidth="1" strokeDasharray="3,3" />
+          <line x1="160" y1="76" x2="160" y2="180" stroke={t.border} strokeWidth="1" strokeDasharray="3,3" />
+          <text x="44" y="80" fill={t.text} fontSize="9">A</text>
+          <text x="153" y="192" fill={t.text} fontSize="9">F</text>
+        </svg>
+        <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
+          🟢 On curve = Efficient · 🟡 Inside (E) = Inefficient · 🔴 Outside = Unattainable
+        </div>
+      </div>
+    );
+  }
+  if (type === "demand") {
+    return (
+      <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
+        <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
+          <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
+          <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
+          <polygon points="40,4 36,14 44,14" fill={t.text} />
+          <polygon points="316,180 306,176 306,184" fill={t.text} />
+          <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Price (P)</text>
+          <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Quantity (Q)</text>
+          <path d="M 60 20 L 290 170" fill="none" stroke="#2563eb" strokeWidth="2.5" />
+          <text x="294" y="168" fill="#2563eb" fontSize="12" fontWeight="bold">D</text>
+        </svg>
+        <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
+          Demand Curve — slopes downward from left to right
+        </div>
+      </div>
+    );
+  }
+  if (type === "supply") {
+    return (
+      <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
+        <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
+          <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
+          <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
+          <polygon points="40,4 36,14 44,14" fill={t.text} />
+          <polygon points="316,180 306,176 306,184" fill={t.text} />
+          <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Price (P)</text>
+          <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Quantity (Q)</text>
+          <path d="M 60 170 L 290 20" fill="none" stroke="#16a34a" strokeWidth="2.5" />
+          <text x="294" y="18" fill="#16a34a" fontSize="12" fontWeight="bold">S</text>
+        </svg>
+        <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
+          Supply Curve — slopes upward from left to right
+        </div>
+      </div>
+    );
+  }
+  return null;
+}
+
 function QuestionCard({ q, idx, answers, setAnswers, revealed, t, showResult }) {
   const userAns = answers[idx];
   return (
@@ -123,71 +198,8 @@ function QuestionCard({ q, idx, answers, setAnswers, revealed, t, showResult }) 
       <div style={{ fontSize: 10, color: t.tagColor, letterSpacing: 2, marginBottom: 10 }}>JUPEB {q.year}</div>
       <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: q.table || q.questionDiagram ? 10 : 16 }}>{q.q}</div>
       {q.table && <QuestionTable table={q.table} t={t} />}
-      {q.questionDiagram === "ppc" && (
-        <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
-          <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
-            <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
-            <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
-            <polygon points="40,4 36,14 44,14" fill={t.text} />
-            <polygon points="316,180 306,176 306,184" fill={t.text} />
-            <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Capital goods</text>
-            <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Consumer goods</text>
-            <text x="44" y="16" fill={t.textSub} fontSize="9">Y</text>
-            <text x="312" y="184" fill={t.textSub} fontSize="9">X</text>
-            <path d="M 40 20 Q 180 60 300 170" fill="none" stroke="#16a34a" strokeWidth="2.5" />
-            <text x="44" y="22" fill={t.text} fontSize="10" fontWeight="bold">B</text>
-            <circle cx="155" cy="58" r="4" fill="#16a34a" />
-            <text x="160" y="54" fill={t.text} fontSize="10" fontWeight="bold">C</text>
-            <circle cx="155" cy="110" r="4" fill="#f59e0b" />
-            <text x="160" y="106" fill="#f59e0b" fontSize="10" fontWeight="bold">E</text>
-            <circle cx="240" cy="40" r="4" fill="#dc3545" />
-            <text x="245" y="36" fill="#dc3545" fontSize="10" fontWeight="bold">Unattainable</text>
-            <text x="295" y="174" fill={t.text} fontSize="10" fontWeight="bold">D</text>
-            <line x1="40" y1="58" x2="155" y2="58" stroke={t.border} strokeWidth="1" strokeDasharray="3,3" />
-            <line x1="155" y1="58" x2="155" y2="180" stroke={t.border} strokeWidth="1" strokeDasharray="3,3" />
-            <text x="44" y="62" fill={t.text} fontSize="9">A</text>
-            <text x="148" y="192" fill={t.text} fontSize="9">F</text>
-          </svg>
-          <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
-            🟢 On curve = Efficient · 🟡 Inside = Inefficient · 🔴 Outside = Unattainable
-          </div>
-        </div>
-      )}
-      {q.questionDiagram === "demand" && (
-        <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
-          <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
-            <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
-            <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
-            <polygon points="40,4 36,14 44,14" fill={t.text} />
-            <polygon points="316,180 306,176 306,184" fill={t.text} />
-            <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Price (P)</text>
-            <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Quantity (Q)</text>
-            <path d="M 60 20 L 290 170" fill="none" stroke="#2563eb" strokeWidth="2.5" />
-            <text x="294" y="168" fill="#2563eb" fontSize="12" fontWeight="bold">D</text>
-          </svg>
-          <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
-            Demand Curve — slopes downward left to right
-          </div>
-        </div>
-      )}
-      {q.questionDiagram === "supply" && (
-        <div style={{ background: t.bgInner, border: `1px solid ${t.border}`, borderRadius: 12, padding: 10, marginBottom: 16 }}>
-          <svg viewBox="0 0 340 200" style={{ width: "100%" }}>
-            <line x1="40" y1="10" x2="40" y2="180" stroke={t.text} strokeWidth="2" />
-            <line x1="40" y1="180" x2="310" y2="180" stroke={t.text} strokeWidth="2" />
-            <polygon points="40,4 36,14 44,14" fill={t.text} />
-            <polygon points="316,180 306,176 306,184" fill={t.text} />
-            <text x="12" y="100" fill={t.textSub} fontSize="9" textAnchor="middle" transform="rotate(-90,12,100)">Price (P)</text>
-            <text x="175" y="196" fill={t.textSub} fontSize="9" textAnchor="middle">Quantity (Q)</text>
-            <path d="M 60 170 L 290 20" fill="none" stroke="#16a34a" strokeWidth="2.5" />
-            <text x="294" y="18" fill="#16a34a" fontSize="12" fontWeight="bold">S</text>
-          </svg>
-          <div style={{ fontSize: 10, color: t.textMuted, textAlign: "center", marginTop: 4 }}>
-            Supply Curve — slopes upward left to right
-          </div>
-        </div>
-      )}
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      {q.questionDiagram && <QuestionMiniDiagram type={q.questionDiagram} t={t} />}
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {q.options.map(opt => {
           const l = opt[0], isSel = userAns === l, isRight = l === q.answer;
           let bg = t.optionBg, border = t.border, col = t.optionText, dotColor = "#888";
@@ -195,7 +207,8 @@ function QuestionCard({ q, idx, answers, setAnswers, revealed, t, showResult }) 
           else if (showResult && isSel && !isRight) { bg = t.wrongBg; border = t.wrongBorder; col = t.wrongText; dotColor = t.wrongBorder; }
           else if (!showResult && isSel) { bg = t.selectedBg; border = t.selectedBorder; col = t.selectedText; dotColor = t.selectedBorder; }
           return (
-            <button key={opt} onClick={() => { if (!showResult) setAnswers(a => ({ ...a, [idx]: l })); }} style={{ background: bg, border: `1px solid ${border}`, borderRadius: 10, padding: "12px 14px", textAlign: "left", color: col, fontSize: 13, cursor: showResult ? "default" : "pointer", display: "flex", alignItems: "center", gap: 12 }}>
+            <button key={opt} onClick={() => { if (!showResult) setAnswers(a => ({ ...a, [idx]: l })); }}
+              style={{ background: bg, border: `1px solid ${border}`, borderRadius: 10, padding: "12px 14px", textAlign: "left", color: col, fontSize: 13, cursor: showResult ? "default" : "pointer", display: "flex", alignItems: "center", gap: 12 }}>
               <RadioDot selected={isSel || (showResult && isRight)} color={dotColor} />
               {opt}
             </button>

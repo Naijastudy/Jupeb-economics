@@ -1,4 +1,5 @@
 import React from "react";
+import QuestionCard from "./QuestionCard";
 
 function RadioDot({ selected, color }) {
   return (
@@ -74,27 +75,12 @@ export default function CbtQuiz({
         <QuizPills total={cbtQs.length} current={cbtIdx} answers={cbtAnswers} onSelect={setCbtIdx} t={t} />
 
         {/* Question */}
-        <div style={{ ...card }}>
-          <div style={{ fontSize: 10, color: t.tagColor, letterSpacing: 2, marginBottom: 10 }}>JUPEB {q.year}</div>
-          <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: 16 }}>{q.q}</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {q.options.map(opt => {
-              const l = opt[0], isSel = cbtAnswers[cbtIdx] === l;
-              return (
-                <button key={opt} onClick={() => setCbtAnswers(a => ({ ...a, [cbtIdx]: l }))} style={{
-                  background: isSel ? t.selectedBg : t.optionBg,
-                  border: `2px solid ${isSel ? t.selectedBorder : t.border}`,
-                  borderRadius: 10, padding: "12px 14px", textAlign: "left",
-                  color: isSel ? t.selectedText : t.optionText,
-                  fontSize: 13, cursor: "pointer", display: "flex", alignItems: "center", gap: 12
-                }}>
-                  <RadioDot selected={isSel} color={t.selectedBorder} />
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+      {/* Question */}
+        <QuestionCard
+          q={q} idx={cbtIdx}
+          answers={cbtAnswers} setAnswers={setCbtAnswers}
+          revealed={false} t={t} showResult={false}
+        />
 
         {/* Navigation */}
         <div style={{ display: "flex", gap: 10 }}>

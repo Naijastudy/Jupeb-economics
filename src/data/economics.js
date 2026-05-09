@@ -295,6 +295,9 @@ basic:[
     answer: "D",
     exp: "Tertiary production is the third stage of production that involves the provision of services to businesses and final consumers. This includes professional services like transport, education, banking, and trade.",
   },
+    { year: "2023", q: "Which factor of production earns wages?", options: ["A. Land", "B. Labour", "C. Capital", "D. Enterprise"], answer: "B", exp: "Labour refers to human effort and earns wages as its reward in production." },
+{ year: "2021", q: "The reward for LAND as a factor of production is:", options: ["A. Wages", "B. Interest", "C. Profit", "D. Rent"], answer: "D", exp: "The four factors and their rewards: Land = Rent, Labour = Wages, Capital = Interest, Enterprise = Profit." },
+    
           
           ],  
 tools:[
@@ -346,7 +349,9 @@ tools:[
     answer: "D",
     exp: "Supply is determined by things that affect the producer, such as the cost of raw materials (A) or the market price (B). 'Income of the consumer' is a determinant of demand, as it affects how much a buyer can afford, not how much a seller can produce.",
   },
-          
+{ year: "2018", q: "A perfectly inelastic supply curve is:", options: ["A. a vertical line", "B. a straight horizontal line", "C. an upward sloping line", "D. a downward sloping line"], answer: "A", exp: "Perfectly inelastic means that no matter how much the price changes, the quantity supplied stays exactly the same. On a graph, this is represented by a vertical line, showing that the quantity is 'fixed' at one point on the horizontal axis." },
+{ year: "2018", q: "Given a simple linear demand and supply function: Qd = 6.5 - 0.5P; Qs = 3.5 + 0.5P. Calculate the equilibrium price and quantity respectively.", options: ["A. P = 3; Q = 5", "B. P = 5; Q = 3", "C. P = 3.5; Q = 5", "D. P = 5; Q = 3.5"], answer: "A", exp: "Equilibrium occurs where Qd = Qs. So, 6.5 - 0.5P = 3.5 + 0.5P. Solving for P: 6.5 - 3.5 = 0.5P + 0.5P, which means 3 = 1P. So, Price (P) is 3. To find Quantity (Q), substitute 3 into either equation: 6.5 - 0.5(3) = 5. Thus, P=3 and Q=5." },
+    
           ],  
 price:[
             {
@@ -409,6 +414,10 @@ price:[
     answer: "B",
     exp: "Joint demand (or complementary goods) means the items are used together. If the price of bread rises, people buy less bread. Because they have less bread, their need for the 'partner' good (water) also decreases, causing the demand for water to fall.",
   },
+    { year: "2018", q: "When an increase in consumers' income leads to an increase in the quantity demanded of a good, then the good is:", options: ["A. a normal good", "B. a necessity", "C. an inferior good", "D. a giffen good"], answer: "A", exp: "By definition, a 'normal good' has a positive income elasticity. This means as people get richer, they buy more of it. If they bought less of it as their income rose (like cheap instant noodles), it would be called an 'inferior good.'" },
+{ year: "2024", q: "The law of demand states that", options: ["A. price and quantity demanded are directly related.", "B. price and quantity demanded are inversely related.", "C. price and quantity demanded are not related.", "D. price and quantity demanded are positively related."], answer: "B", exp: "The law of demand describes an 'inverse' (opposite) relationship. This means that as the price of a good goes up, the quantity people want to buy goes down, and as the price goes down, the quantity demanded goes up." },
+{ year: "2024", q: "The law of supply states that", options: ["A. price and quantity supplied are inversely related.", "B. price and quantity supplied are not related.", "C. price and quantity supplied are directly related.", "D. price and quantity supplied are negatively related."], answer: "C", exp: "The law of supply describes a 'direct' relationship. Unlike consumers, producers want to sell more when the price is high to make more profit. So, as price increases, the quantity supplied also increases." },
+{ year: "2024", q: "Which of the following is not a determinant of demand?", options: ["A. Price of the commodity", "B. Price of related goods", "C. Income of the consumer", "D. Cost of production"], answer: "D", exp: "Determinants of demand are things that make a consumer want to buy more or less. 'Cost of production' (how much it costs to make the item) is a determinant of supply, because it affects the producer's side, not the buyer's side." },
           
           ],  
 consumer:[

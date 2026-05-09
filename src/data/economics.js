@@ -1,35 +1,4 @@
-export const courses = [];
-export const notes = {
-  intro: [],
-  basic: [],
-  tools: [],
-  price: [],
-  consumer: [],
-  firm: [],
-  market: [],
-  income_dist: [],
-  govt: [],
-  circular: [],
-  national_acc: [],
-  national_det: [],
-  money: [],
-  inflation: [],
-  public: [],
-  west_africa: [],
-  growth: [],
-  agric: [],
-  intl_trade: [],
-  macro_meas: [],
-  labour: [],
-  stabilize: [],
-  intl_inst: [],
-};
-export const questions = {
-  intro: [],
-};
-export const grading = [];
-
-/*export const courses = [
+export const courses = [
     { id: "ecn001", code: "ECN001", title: "Principles of Economics I", semester: "First Semester", emoji: "📘",
       topics: [
         { id: "intro", label: "Introduction to Economics" },
@@ -1114,7 +1083,7 @@ intl_inst:[
       { year: "2016", q: "Globalization benefits developing countries through all EXCEPT:", options: ["A. Access to foreign capital", "B. Technology transfer", "C. Guaranteed protection of domestic industries", "D. Access to larger export markets"], answer: "C", exp: "Globalization actually REDUCES protection for domestic industries by exposing them to international competition. While it brings capital, technology, and market access, it can harm infant industries that cannot yet compete globally." },
        { year: "2015", q: "One of the potential problems with the European Union is that:", options: ["A. Unregulated free flow of labour may reduce productivity", "B. Economies of large-scale production may increase consumer prices", "C. Tariffs may reduce trade with non-member nations", "D. Government may have difficulty covering shortfall from elimination of duties and taxes"], answer: "D", exp: "When countries join a customs union like the EU, they eliminate internal tariffs. This reduces government revenue from import duties, creating a fiscal shortfall that must be covered by other means." },
       { year: "2015", q: "Currency devaluation differs from currency depreciation in that devaluation:", options: ["A. Occurs under a floating exchange rate system", "B. Is a deliberate reduction of a fixed exchange rate by the government", "C. Is caused by market forces of supply and demand", "D. Always leads to appreciation of the currency later"], answer: "B", exp: "Devaluation is a deliberate government/central bank decision to lower the official fixed exchange rate value of a currency. Depreciation happens automatically under floating rates due to market forces." },
-    ],
+    ],*/
   
   
   export const grading = [
@@ -1124,4 +1093,4 @@ intl_inst:[
     { marks: "45-49", grade: "D", points: 2, remark: "Merit" },
     { marks: "40-44", grade: "E", points: 1, remark: "Pass" },
     { marks: "0-39",  grade: "F", points: 0, remark: "Fail" },
-  ];*/
+  ];

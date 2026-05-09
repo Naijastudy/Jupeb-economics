@@ -742,7 +742,7 @@ labour:[
     exp: "Using the equation 20 = 4L + 8, subtract 8 from both sides to get 12 = 4L. Divide both sides by 4, and you get L = 3. This represents the quantity of labor supplied at that specific wage level.",
   },
            
-          ],  
+          ],  /*
 stabilize:[
            {
     year: "2018",
@@ -758,7 +758,7 @@ stabilize:[
   },
            
           ],  
-/*intl_inst:[
+intl_inst:[
           ],  */
 };
 

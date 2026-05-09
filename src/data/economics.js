@@ -378,7 +378,7 @@ intro: [
  
       basic: [
           {
-  year: "2026",
+  year: "2020",
   q: "Using the table below, determine the type of demand elasticity.",
   table: {
     headers: ["Price (₦)", "Quantity Demanded"],
@@ -398,7 +398,7 @@ intro: [
   exp: "Check total revenue:\nP1: 10×100 = 1000\nP2: 12×80 = 960\nP3: 15×50 = 750\n\nTR falls as price rises, and quantity falls more than proportionally → demand is elastic."
           },
           {
-  year: "2026",
+  year: "2021",
   q: "From the table below, what type of demand elasticity is shown?",
   table: {
     headers: ["Price (₦)", "Quantity Demanded", "Total Revenue"],
@@ -417,7 +417,7 @@ intro: [
   exp: "Total revenue remains constant (1000 → 1000) despite price increase. This is the defining condition of unit elasticity."
           },
           {
-  year: "2026",
+  year: "2023",
   q: "Using the table below, determine what happens to total revenue when price increases from ₦10 to ₦12.",
   table: {
     headers: ["Price (₦)", "Quantity Demanded"],
@@ -437,7 +437,7 @@ intro: [
           },
           
           {
-  year: "2026",
+  year: "2022",
   q: "Using the table below, determine the output level at which the firm begins to make losses.",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
@@ -454,7 +454,7 @@ intro: [
   exp: "A firm begins to make losses when Total Cost exceeds Total Revenue.\n\nStep 1: Calculate profit (TR − TC):\nQ1: 60−50 = 10 (profit)\nQ2: 110−90 = 20 (profit)\nQ3: 150−130 = 20 (profit)\nQ4: 180−190 = -10 (loss begins)\nQ5: 200−260 = -60 (loss)\n\nThe first point where profit becomes negative is at Q4.\n\nTherefore, the firm begins to make losses at 4 units of output."
           },
           {
-  year: "2026",
+  year: "2024",
   q: "Using the table below, determine the missing value X.",
   table: {
     headers: ["Output (Q)", "Total Cost (TC)", "Marginal Cost (MC)"],
@@ -470,7 +470,7 @@ intro: [
   exp: "Marginal Cost (MC) is the change in Total Cost.\n\nStep 1: Use MC at Q3:\nMC = TC₃ − TC₂\n30 = X − 90\n\nStep 2: Solve:\nX = 90 + 30 = 120\n\nStep 3: Confirm using Q4:\nMC at Q4 = 150 − 120 = 30 (close to pattern of falling MC)\n\nTherefore, X = 120."
           },
           {
-  year: "2026",
+  year: "2025",
   q: "Using the table below, calculate the price elasticity of demand between Price ₦20 and ₦30 using the midpoint formula.",
   table: {
     headers: ["Price (₦)", "Quantity Demanded"],
@@ -484,7 +484,7 @@ intro: [
   exp: "Using the Midpoint (Arc) Formula:\n\nPED = [(Q2 − Q1) / (Q1 + Q2)] ÷ [(P2 − P1) / (P1 + P2)]\n\nStep 1: Find the Quantity ratio\nΔQ = 60 − 80 = -20\nQ sum = 60 + 80 = 140\n-20 / 140 ≈ -0.143\n\nStep 2: Find the Price ratio\nΔP = 30 − 20 = 10\nP sum = 30 + 20 = 50\n10 / 50 = 0.2\n\nStep 3: Calculate PED\n-0.143 ÷ 0.2 = -0.715\n\nTaking the absolute value, the result is approximately 0.71. Among the given options, A (0.71) is the closest approximation."
           },
           {
-  year: "2026",
+  year: "2020",
   q: "From the table below, at what level of output does the firm break even?",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
@@ -500,7 +500,7 @@ intro: [
   exp: "Break-even occurs where TR = TC.\n\nAt Q3: TR = 150 and TC = 150.\n\nTherefore, the firm breaks even at 3 units."
        },
           {
-  year: "2026",
+  year: "2021",
   q: "Using the table below, determine the level of output where profit is highest.",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
@@ -517,7 +517,7 @@ intro: [
   exp: "Profit = TR − TC.\nQ1: 20, Q2: 40, Q3: 40, Q4: 10, Q5: -40.\n\nProfit is highest at Q2 and Q3, but Q3 is sustained before decline.\n\nTherefore, the correct output is 3 units."
        },
           {
-  year: "2026",
+  year: "2022",
   q: "Using the table below, determine the output level where marginal revenue equals marginal cost.",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
@@ -534,7 +534,7 @@ intro: [
   exp: "MR = change in TR, MC = change in TC.\n\nMR: 40, 30, 20, 10\nMC: 30, 30, 50, 60\n\nMR = MC at Q3.\n\nTherefore, output level is 3 units."
           },
           {
-  year: "2026",
+  year: "2023",
   q: "From the table below, determine the output level where the firm should stop production in the short run.",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
@@ -551,7 +551,7 @@ intro: [
           },
           
           {
-  year: "2026",
+  year: "2024",
   q: "Using the table below, determine the values of X and Y.",
   table: {
     headers: ["Output (Q)", "Total Cost (TC)", "Marginal Cost (MC)"],
@@ -567,7 +567,7 @@ intro: [
   exp: "Marginal Cost (MC) = change in Total Cost.\n\nStep 1: Find X using MC at Q3:\n30 = X − 80 → X = 110\n\nStep 2: Find Y using MC at Q4:\n50 = Y − 110 → Y = 160\n\nTherefore, X = 110 and Y = 160."
        },
         {
-  year: "2026",
+  year: "2025",
   q: "Using the table below, determine the profit-maximizing level of output for the firm.",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],

@@ -159,46 +159,606 @@ intro: [
      
   export const questions = {
       intro:[
+          {
+    year: "2025",
+    q: "The economic concept that emphasizes the prioritization of human wants is referred to as",
+    options: [
+      "A. choice",
+      "B. need",
+      "C. opportunity cost",
+      "D. scale of preference",
+    ],
+    answer: "D",
+    exp: "A scale of preference is a list of unsatisfied wants arranged in order of priority or importance. It allows a consumer to decide which needs to satisfy first with their limited resources.",
+  },
+  {
+    year: "2025",
+    q: "The basic economic problems of a society include the following EXCEPT",
+    options: [
+      "A. efficient use of resources",
+      "B. for whom to produce",
+      "C. how to produce",
+      "D. how to maximize inflation",
+    ],
+    answer: "D",
+    exp: "Fundamental economic problems focus on what to produce, how to produce it, and for whom it should be produced. Maximizing inflation is a negative economic outcome and is never an objective or a basic problem of resource allocation.",
+  },
+  {
+    year: "2025",
+    q: "In Economics, the 'how to produce' question refers to",
+    options: [
+      "A. the problem of allocating scarce resources",
+      "B. the way in which factors of production are combined",
+      "C. deciding the profit-maximizing rate of output",
+      "D. determining the price of the final product",
+    ],
+    answer: "B",
+    exp: "The 'how' question is concerned with the technique of production. It involves deciding whether to use labor-intensive methods (more people) or capital-intensive methods (more machinery) to produce goods.",
+  },
+  {
+    year: "2018",
+    q: "A closed economy is a national economy that",
+    options: [
+      "A. does not interact economically with the rest of the world",
+      "B. has a stock market that is not open to traders from outside the country",
+      "C. has extensive trading and financial relationships with other national economies",
+      "D. is a member of a trade bloc",
+    ],
+    answer: "A",
+    exp: "An 'autarky' or closed economy is one that is self-sufficient. It does not engage in international trade (imports or exports) and has no financial movements across its borders with other countries.",
+  },
+  {
+    year: "2018",
+    q: "In a mixed economy like Nigeria, variation in income distribution is a result of",
+    options: [
+      "A. political instability",
+      "B. free market mechanism rewarding merit and productivity",
+      "C. too much money in the economy",
+      "D. one's academic achievement",
+    ],
+    answer: "B",
+    exp: "In a mixed economy, the market mechanism plays a major role. Income inequality often arises because the market pays more to those with high-demand skills, higher productivity, or ownership of capital, while those with fewer resources or lower productivity earn less.",
+  },
+          { year: "2024", q: "Economic goods are termed 'scarce goods' due to:", options: ["A. their high quality and non-availability", "B. unavailability in sufficient quantities to satisfy the effective demand for them", "C. availability in sufficient quantities to satisfy the effective demand for them", "D. their primary importance in satisfying the needs of a society"], answer: "B", exp: "In economics, a good is scarce when people want more of it than is available for free. Because the supply cannot satisfy everyone's total demand, the good carries a price. This is what makes it an 'economic good' rather than a 'free good' like air." },
+{ year: "2024", q: "Scale of preference is:", options: ["A. budget preparation without due regard to proper priorities", "B. a list of goods and services to be purchased in order of priority", "C. consumers' preference for luxurious goods", "D. a list of all goods and services to be purchased"], answer: "B", exp: "Since resources are limited, a rational person cannot buy everything they want. A scale of preference is a list where you rank your needs from the most important to the least important, helping you decide what to buy first with the money you have." },
+{ year: "2024", q: "One of the following describes the existence of an economic problem.", options: ["A. There are no buyers.", "B. All raw materials are imported.", "C. There is scarcity and choice.", "D. There are too many sellers."], answer: "C", exp: "The fundamental economic problem is that human wants are unlimited while resources are limited (scarcity). This forces us to make a 'choice'—deciding which wants to satisfy and which to leave for later." },
+{ year: "2024", q: "In pure capitalism, the role of government is best described as", options: ["A. non existent", "B. significant", "C. extensive", "D. limited"], answer: "D", exp: "In a pure capitalist (free market) system, the government does not interfere with businesses or prices. Its role is 'limited' to providing basic infrastructure, maintaining law and order, and protecting property rights so the market can run smoothly." },
+     { year: "2025", q: "The popular book written by Keynes in 1936 is referred to as:", options: ["A. introduction to employment theory", "B. the general theory of employment, interest and money", "C. the general theory of employment, growth and money", "D. the general theory of unemployment, interest and money"], answer: "B", exp: "Keynes' landmark work, 'The General Theory of Employment, Interest and Money,' challenged classical economics and laid the foundation for modern macroeconomics." },
+{ year: "2025", q: "An open economy is that which:", options: ["A. produces goods and services with imported materials", "B. employs both nationals and foreigners to produce goods to aggregate investment", "C. trades with the rest of the world", "D. attends international meetings regularly"], answer: "C", exp: "An open economy interacts with other countries through the exchange of goods and services (exports/imports) and financial capital." },
+{ year: "2025", q: "Keynes in 1936 argued that the global recession was due primarily to a/an:", options: ["A. fall in aggregate demand", "B. increase in aggregate demand", "C. fall in aggregate supply", "D. increase in aggregate supply"], answer: "A", exp: "Keynesian economics is built on the premise that recessions are caused by a deficiency in aggregate demand; firms stop producing because people stop buying." },
+{ year: "2021", q: "Mr. Oke works in a private firm, he earns a salary of N100,000 with additional benefits of N20,000 for accommodation and N10,000 for transport. Given that Mr. Oke could have worked as a teacher with a salary of N110,000; calculate the opportunity cost for Mr. Oke working in a private firm.", options: ["A. N20,000", "B. N30,000", "C. N130,000", "D. N110,000"], answer: "D", exp: "Opportunity cost is the value of the next best alternative foregone. Since the alternative to his current job was working as a teacher for N110,000, that specific foregone salary represents his opportunity cost." },
+{ year: "2017", q: "Which of the following economic systems is in operation in West Africa?", options: ["A. Mixed economy.", "B. Socialist economy.", "C. Efficiency wage.", "D. Nominal wage."], answer: "A", exp: "Most West African nations, including Nigeria and Ghana, operate a mixed economic system where both the private sector and the government direct the economy, balancing market forces with public regulation and services." },
+      { year: "2017", q: "What constitute mixed economic system is:", options: ["A. Socialist and communist economic systems.", "B. Socialist and planned economic systems.", "C. Market and capitalist economic systems.", "D. Capitalist and socialist economic systems."], answer: "D", exp: "A mixed economy combines elements of capitalism (private enterprise and market markets) and socialism (government intervention and public welfare)." },
+{ year: "2017", q: "Choice became inevitable as a result of", options: ["A. opportunity cost.", "B. scarcity of resources.", "C. scale of preference.", "D. consumers' want."], answer: "B", exp: "Scarcity is the fundamental economic problem. Because resources are limited (scarce) while human wants are infinite, individuals and societies are forced to make choices about how to allocate those resources." },
+{ year: "2017", q: "Exogenous variable is a variable whose value is", options: ["A. determined outside the model.", "B. determined inside the model.", "C. not included in the model.", "D. changing along with other variables."], answer: "A", exp: "In economic modeling, an exogenous variable is one whose value is taken as given and determined by factors outside the specific model being studied, unlike endogenous variables which are solved for within the model." },
+{ year: "2017", q: "Economics is often described as a science because it:", options: ["A. Employs the use of laboratory experiments", "B. Engages accurate prediction of human beings", "C. Makes use of controlled experiments", "D. Uses scientific methods to explain observed phenomena"], answer: "D", exp: "Economics is a social science because it uses scientific methods — observation, hypothesis formation, testing, and analysis — to explain economic phenomena. Unlike natural sciences, economics cannot conduct controlled laboratory experiments because human behaviour is complex and unpredictable." },
+{ year: "2017", q: "When a generalization is made based on observed facts, it is:", options: ["A. Normative reasoning", "B. Theoretical reasoning", "C. Inductive reasoning", "D. Deductive reasoning"], answer: "C", exp: "Inductive reasoning moves from SPECIFIC observations to GENERAL conclusions. Deductive reasoning works the opposite way — from general principles to specific predictions." },
+{ year: "2023", q: "Which economist defined economics as 'the science which studies human behaviour as a relationship between ends and scarce means which have alternative uses'?", options: ["A. Adam Smith", "B. Alfred Marshall", "C. Lionel Robbins", "D. John Maynard Keynes"], answer: "C", exp: "Lionel Robbins gave this famous scarcity-based definition in his 1932 essay. It is the most widely accepted modern definition of economics." },
+{ year: "2023", q: "Which of the following is a POSITIVE economic statement?", options: ["A. The government should reduce poverty", "B. Income should be equally distributed", "C. A rise in price leads to a fall in quantity demanded", "D. Nigeria should produce more food"], answer: "C", exp: "Positive statements are factual and testable (what IS). Options A, B, and D are normative — they express value judgements about what SHOULD be." },
+{ year: "2022", q: "The basic economic problem arises because:", options: ["A. Governments fail to plan properly", "B. Human wants are unlimited while resources are scarce", "C. Technology is insufficient", "D. People are greedy"], answer: "B", exp: "Scarcity — the gap between unlimited wants and limited resources — is the fundamental economic problem that forces all economies to make choices." },
+{ year: "2021", q: "Which of the following is a MACROECONOMIC variable?", options: ["A. The price of garri in Kano market", "B. The output of a Dangote cement factory", "C. The national unemployment rate", "D. The wage of a teacher in Lagos"], answer: "C", exp: "National unemployment rate is an aggregate variable covering the entire economy. The other options are microeconomic (individual prices, outputs, wages)." },
+{ year: "2019", q: "Economics is often described as a science because it:", options: ["A. Employs the use of laboratory experiments", "B. Engages accurate prediction of human beings", "C. Makes use of controlled experiments", "D. Uses scientific methods to explain observed phenomena"], answer: "D", exp: "Economics is a social science because it applies scientific methods — observation, hypothesis, testing — to explain economic phenomena, even though it cannot conduct controlled laboratory experiments like natural sciences." },
+{ year: "2019", q: "When a generalization is made based on observed facts, it is:", options: ["A. Normative reasoning", "B. Theoretical reasoning", "C. Inductive reasoning", "D. Deductive reasoning"], answer: "C", exp: "Inductive reasoning moves from specific observations to general conclusions. Deductive reasoning moves from general principles to specific predictions. Observing facts and generalising from them is inductive." },
+{ year: "2019", q: "Endogenous variable is:", options: ["A. A variable that is determined inside the model", "B. A variable that is determined outside the model", "C. A variable that is not in the model", "D. A variable that is not part of the theory"], answer: "A", exp: "Endogenous variables are determined within the economic model itself (e.g. price and quantity in a demand-supply model). Exogenous variables are determined outside the model (e.g. government policy, weather)." },
+{ year: "2019", q: "Macroeconomics focuses on the following units in an aggregative manner:", options: ["A. Individual consumers, individual firms, government and external sector", "B. Government, household firms, individual consumers and external sector", "C. Household, firms, government and external sector", "D. Individual consumer, household firms and manufacturing sector"], answer: "C", exp: "Macroeconomics studies the economy in aggregate — it focuses on households, firms, government, and the external sector as groups, not as individual units. Microeconomics studies individual consumers and firms." },
+{ year: "2019", q: "Which of the following is a positive economic statement?", options: ["A. The government should reduce unemployment", "B. Nigeria ought to diversify its economy", "C. An increase in money supply leads to inflation", "D. Income should be distributed equally"], answer: "C", exp: "Positive statements are factual and testable — they describe what IS. 'An increase in money supply leads to inflation' is testable using data. The others express value judgements (normative statements)." },
+{ year: "2019", q: "Which of the following best describes the scope of microeconomics?", options: ["A. The study of aggregate national output", "B. The study of individual markets, firms and consumers", "C. The study of national inflation and unemployment", "D. The study of money supply and interest rates"], answer: "B", exp: "Microeconomics examines individual economic units — specific markets, individual consumers, and individual firms. It studies price determination, consumer behaviour, and firm production decisions at the individual level." },
+{ year: "2015", q: "Which of the following is not concerned with macroeconomics?", options: ["A. Aggregate level of outputs", "B. General level of prices", "C. Growth of real output", "D. Price of a commodity"], answer: "D", exp: "Price of a specific commodity is a microeconomic variable. Macroeconomics deals with aggregate variables like total output, general price level, and overall growth." },
+{ year: "2015", q: "Microeconomics is the study of:", options: ["A. The output of the entire economy", "B. The total number of workers employed in Nigeria", "C. The general level of prices in the Nigerian economy", "D. The output and price of wheat in Nigeria"], answer: "D", exp: "Microeconomics studies individual markets, specific goods, and individual economic units. The price and output of wheat in a specific market is a microeconomic topic." },
+{ year: "2015", q: "The following are economic agents in any economy EXCEPT:", options: ["A. Government", "B. Household", "C. Firm", "D. Central Bank"], answer: "D", exp: "The three main economic agents are households, firms, and government. The Central Bank is a specific institution under government, not a separate economic agent in the basic circular flow model." },
+{ year: "2015", q: "Which of the following is not referring to the word 'economic'?", options: ["A. Is scarce", "B. Is limited", "C. Commands a price", "D. Unlimited"], answer: "D", exp: "Economic goods are scarce, limited, and command a price. Unlimited availability describes free goods (like air), not economic goods." },
+         { year: "2023", q: "Opportunity cost is best defined as:", options: ["A. Total cost of production", "B. Monetary cost only", "C. Next best alternative forgone", "D. Fixed cost"], answer: "C", exp: "Opportunity cost is the value of the next best alternative sacrificed when a choice is made due to scarcity." },
+{ year: "2023", q: "Opportunity cost is BEST defined as:", options: ["A. The total money spent on a good", "B. The value of the next best alternative forgone", "C. The profit lost by a firm", "D. The cost of producing one more unit"], answer: "B", exp: "Opportunity cost is not about money — it is the value of the best alternative you sacrificed when making a choice. It applies to all economic agents." },
+{ year: "2023", q: "A point INSIDE the Production Possibility Curve (PPC) represents:", options: ["A. Full employment of resources", "B. An unattainable level of output", "C. Productive inefficiency", "D. Technological advancement"], answer: "C", exp: "Inside the PPC means resources are not fully utilised — some are idle or misallocated. This is productive inefficiency. Points on the curve represent efficiency." },
+{ year: "2022", q: "The PPC shifts OUTWARD when there is:", options: ["A. A rise in consumer demand", "B. Technological advancement", "C. A fall in the price level", "D. Increased government spending"], answer: "B", exp: "The PPC shifts outward when the economy's productive capacity increases — through better technology, discovery of new resources, or improvement in education and skills." },
+{ year: "2022", q: "In a mixed economy like Nigeria:", options: ["A. Only private firms produce goods", "B. The government controls all resources", "C. Both government and private sector allocate resources", "D. Resources are allocated by tradition and custom"], answer: "C", exp: "Nigeria is a mixed economy — the private sector operates freely in most markets while the government controls key sectors (e.g. NNPC, infrastructure) and provides public goods." },
+{ year: "2019", q: "From a PPC graph, a point inside the curve shows:", options: ["A. Productive efficiency", "B. Allocative efficiency", "C. Product inefficiency", "D. Product efficiency"], answer: "C", exp: "A point inside (below) the PPC represents productive inefficiency — resources are not being fully or optimally used. The economy could produce more of both goods by moving to the curve." },
+{ year: "2019", q: "Which of the following best illustrates the concept of opportunity cost?", options: ["A. A student spends ₦5,000 on a textbook", "B. A student chooses to study instead of watching a football match", "C. A government increases its budget", "D. A firm increases its output"], answer: "B", exp: "Opportunity cost is the value of the next best alternative forgone. By choosing to study, the student forgoes the enjoyment of watching the football match — that enjoyment is the opportunity cost of studying." },
+{ year: "2019", q: "Classical models of economic growth based their analysis on the assumption that:", options: ["A. There is full employment of resources", "B. There is partial utilization of capital", "C. Prices and wages are rigid downward", "D. The saving ratio is low"], answer: "A", exp: "Classical economists assumed that markets always clear and the economy operate at full employment in the long run. This contrasts with Keynesian theory, which showed that economies can be stuck below full employment." },
+{ year: "2017", q: "Suppose public expenditure as a percentage of GDP is 40-50% in several countries. Which type of economy exists in these countries?", options: ["A. Mixed", "B. Planned", "C. Pure market", "D. Traditional"], answer: "A", exp: "When government spends 33-50% of GDP, the economy has significant public sector involvement alongside private sector activity — this is characteristic of a mixed economy. A pure market economy would have minimal government spending." },
+{ year: "2016", q: "The decision to consume more of one product under normal circumstances will imply:", options: ["A. More of another product will be consumed", "B. Less of the product will be consumed", "C. No other products will be consumed", "D. Less of another product will be consumed"], answer: "D", exp: "This reflects the concept of opportunity cost and scarcity — with a limited budget, consuming more of one good means consuming less of another. This is the basis of the downward-sloping budget line." },
+{ year: "2015", q: "The fundamental problem of economics is:", options: ["A. Establishment of a political framework for production", "B. To establish equitable distribution of income", "C. The scarcity of productive resources relative to society's unlimited wants", "D. Finding determinants between forces of supply and demand"], answer: "C", exp: "The fundamental economic problem is scarcity — productive resources are limited while human wants are unlimited. This forces all societies to make choices about allocation." },
+{ year: "2015", q: "Economic problem occurs when:", options: ["A. There is scarcity relative to demand", "B. There are no buyers for goods", "C. Many people are out of work", "D. All raw materials are imported"], answer: "A", exp: "Economic problems arise from scarcity — when available resources are insufficient relative to demand. This forces choices and trade-offs." },
+{ year: "2015", q: "Economic goods are termed scarce goods when they are:", options: ["A. Not available in sufficient quantities to satisfy effective demand", "B. Not produced in sufficient quantities to satisfy effective demand", "C. Of high quality", "D. Of primary importance in satisfying the needs of a society"], answer: "B", exp: "Goods are scarce when production is insufficient to satisfy effective demand at zero price — forcing a price to be charged to ration limited supply." },
+{ year: "2015", q: "Which of the following is an example of a free good?", options: ["A. Dinner you did not pay for", "B. Your rented apartment", "C. Free education", "D. Water in the ocean"], answer: "D", exp: "A free good has no opportunity cost and is available in unlimited supply. Water in the ocean is not scarce — no one has to give up anything to obtain it. Free education and unpaid dinners still have resource costs." },
+{ year: "2015", q: "A major factor contributing to productivity is:", options: ["A. The labour force", "B. The rate of GDP per year", "C. The baby boom generation", "D. Immigration of young workers"], answer: "A", exp: "The labour force — its size, skills, education, and health — is the most direct factor contributing to productivity. Human capital improvements drive output per worker." },
+{ year: "2015", q: "The development of an economic hypothesis through intuition, insight, or logic is associated with:", options: ["A. Induction", "B. Deduction", "C. Policy economics", "D. Normative economics"], answer: "B", exp: "Deduction starts from general principles or theory and derives specific conclusions through logic. Induction works in the opposite direction — from specific observations to general conclusions." },
+       { year: "2021", q: "Which of the following is a normative economic statement?", options: ["A. The inflation rate is 12%", "B. Unemployment rate is 8%", "C. Government should reduce unemployment", "D. GDP growth rate is 3%"], answer: "C", exp: "Normative economics deals with value judgments and 'what ought to be.' Statements containing the word 'should' are normative, whereas the other options are positive statements based on facts." },
+{ year: "2023", q: "The production possibility curve that shows increasing opportunity cost is:", options: ["A. convex to the origin", "B. concave to the origin", "C. a straight line", "D. semi-circular"], answer: "B", exp: "A concave (bowed-out) PPC reflects the Law of Increasing Opportunity Cost, which states that as you produce more of one good, the opportunity cost of producing it increases." },
+{ year: "2016", q: "In economics, the mathematical expression between two or more variables is known as:", options: ["A. Equality", "B. Identity", "C. Equation", "D. Variables"], answer: "C", exp: "An equation expresses a mathematical relationship between two or more variables. In economics, equations like Qd = 100 - 5P express how variables are related. An identity is always true (like MPC + MPS = 1), while an equation holds only under specific conditions." },
+{ year: "2016", q: "The statement 'All Chinese are racists, Dr. Yeung is Chinese, therefore he is a racist' is an example of:", options: ["A. Inductive reasoning", "B. Deductive reasoning", "C. Positive statement", "D. Normative statement"], answer: "B", exp: "Deductive reasoning applies a general principle to a specific case to reach a conclusion. Starting from a general premise and applying it to a specific case is deductive." },
+{ year: "2019", q: "In economic analysis, functional relationships can be expressed as:", options: ["A. Algebraic equations and geometric graphs only", "B. Statistical tables only", "C. Written descriptions only", "D. Any combination of algebraic, geometric and statistical forms"], answer: "D", exp: "Economic relationships can be expressed in multiple ways — algebraic equations (Qd = 100 - 5P), geometric graphs (demand curve), or statistical/tabular form. Each method has advantages for different purposes." },
+          
           ], 
-      basic:[
+basic:[
+          {
+    year: "2025",
+    q: "The reward for capital as a factor of production is",
+    options: [
+      "A. commission",
+      "B. interest",
+      "C. profit",
+      "D. rent",
+    ],
+    answer: "B",
+    exp: "In economics, each factor of production has a specific reward: land earns rent, labor earns wages, entrepreneurship earns profit, and capital (machinery or money used for investment) earns interest.",
+  },
+  {
+    year: "2025",
+    q: "A form of production that deals with the provision of general services like banking and insurance is",
+    options: [
+      "A. direct production",
+      "B. primary production",
+      "C. secondary production",
+      "D. tertiary production",
+    ],
+    answer: "D",
+    exp: "Tertiary production is the third stage of production that involves the provision of services to businesses and final consumers. This includes professional services like transport, education, banking, and trade.",
+  },
+          
           ],  
-      tools:[
+tools:[
+          {
+    year: "2018",
+    q: "Given a simple linear demand and supply function: Qd = 6 - 0.5P; Qs = 4 + 1.5P. Calculate the equilibrium price and quantity respectively.",
+    options: [
+      "A. P = 3; Q = 5",
+      "B. P = 5; Q = 3",
+      "C. P = 1; Q = 5.5",
+      "D. P = 1; Q = 4.5",
+    ],
+    answer: "C",
+    exp: "To find equilibrium, set Qd = Qs: 6 - 0.5P = 4 + 1.5P. Add 0.5P to both sides and subtract 4 from both sides: 2 = 2P, so P = 1. Plug P = 1 into Qd: 6 - 0.5(1) = 5.5. Therefore, Price is 1 and Quantity is 5.5.",
+  },
+  {
+    year: "2018",
+    q: "An abnormal supply curve is also known as",
+    options: [
+      "A. downward sloping supply curve",
+      "B. linear supply curve",
+      "C. regressive supply curve",
+      "D. upward sloping curve",
+    ],
+    answer: "A",
+    exp: "A normal supply curve slopes upward, meaning more is supplied at higher prices. An 'abnormal' or regressive supply curve (like the labor supply curve) can slope downwards or bend backwards, where less is supplied even as the price or wage increases.",
+  },
+  {
+    year: "2018",
+    q: "The Average Fixed Cost (AFC) curve falls continuously with increasing output but does not touch the X-axis. This means that the AFC curve is",
+    options: [
+      "A. U-shaped",
+      "B. upward sloping",
+      "C. asymptotic to the origin",
+      "D. fixed or horizontal",
+    ],
+    answer: "C",
+    exp: "Average Fixed Cost is calculated as Total Fixed Cost divided by Output. As output grows, the fixed cost is spread over more units, making the value smaller and smaller (approaching zero) but it can never actually reach zero because the total cost is a positive number.",
+  },
+  {
+    year: "2018",
+    q: "Which of the following is not a determinant of supply?",
+    options: [
+      "A. Cost of production",
+      "B. Price of the commodity",
+      "C. Price of related goods",
+      "D. Income of the consumer",
+    ],
+    answer: "D",
+    exp: "Supply is determined by things that affect the producer, such as the cost of raw materials (A) or the market price (B). 'Income of the consumer' is a determinant of demand, as it affects how much a buyer can afford, not how much a seller can produce.",
+  },
+          
           ],  
-      price:[
+price:[
+            {
+    year: "2025",
+    q: "Luxury goods are typically characterized by",
+    options: [
+      "A. low income elasticity of demand",
+      "B. high income elasticity of demand",
+      "C. negative income elasticity of demand",
+      "D. perfectly inelastic demand",
+    ],
+    answer: "B",
+    exp: "Luxury goods have a high income elasticity, meaning that as a consumer's income increases, the demand for these goods rises by a greater percentage than the increase in income.",
+  },
+  {
+    year: "2018",
+    q: "When a fall in the price of a commodity leaves the quantity demanded unchanged, demand is said to be",
+    options: [
+      "A. fairly elastic",
+      "B. fairly inelastic",
+      "C. perfect elastic",
+      "D. perfectly inelastic",
+    ],
+    answer: "D",
+    exp: "Perfectly inelastic demand occurs when consumers buy the exact same amount regardless of the price. In this case, even though the price fell, the quantity didn't change at all, giving it an elasticity coefficient of zero.",
+  },
+  {
+    year: "2018",
+    q: "A change in demand for a normal good implies that there is a",
+    options: [
+      "A. change in quantity demanded as price changes",
+      "B. shift in the demand curve",
+      "C. movement along a given demand curve",
+      "D. change in the price elasticity of demand",
+    ],
+    answer: "B",
+    exp: "In economics, a 'change in demand' refers to a shift of the entire curve, caused by factors other than price (like income or tastes). A 'change in quantity demanded' (Option A) is just a movement along the same curve caused strictly by a change in the product's own price.",
+  },
+  {
+    year: "2018",
+    q: "Combined positive demand and negative supply shock of the same magnitude will",
+    options: [
+      "A. raise equilibrium price and quantity",
+      "B. raise equilibrium quantity and leave price unaffected",
+      "C. raise equilibrium price but leave equilibrium quantity unaffected",
+      "D. reduce equilibrium price and quantity",
+    ],
+    answer: "C",
+    exp: "A positive demand shock pushes the price and quantity up. A negative supply shock pushes the price up but quantity down. If the magnitudes are the same, the upward and downward pressures on quantity cancel each other out, while both forces work together to push the price significantly higher.",
+  },
+  {
+    year: "2018",
+    q: "Bread and water are said to be jointly demanded if increase in price of bread makes the",
+    options: [
+      "A. quantity demanded for water to rise",
+      "B. quantity demanded for water to fall",
+      "C. price of water to rise",
+      "D. price of water to fall",
+    ],
+    answer: "B",
+    exp: "Joint demand (or complementary goods) means the items are used together. If the price of bread rises, people buy less bread. Because they have less bread, their need for the 'partner' good (water) also decreases, causing the demand for water to fall.",
+  },
+          
           ],  
-       consumer:[
+consumer:[
+           {
+    year: "2025",
+    q: "The law of diminishing marginal utility states that",
+    options: [
+      "A. the supply curve always slopes downward",
+      "B. utility grows at a slower rate as you consume more units of a good",
+      "C. the elasticity of demand is always infinite",
+      "D. total utility decreases as consumption begins",
+    ],
+    answer: "B",
+    exp: "This law states that as a consumer increases the consumption of a specific good, the additional satisfaction (marginal utility) derived from each extra unit eventually begins to decrease.",
+  },
+           
           ],  
-       firm:[
+firm:[
+    {
+    year: "2018",
+    q: "At the point of profit maximization, MR = MC where",
+    options: [
+      "A. MR is falling",
+      "B. MR is maximum",
+      "C. MC is falling below MR",
+      "D. MC cuts MR from below",
+    ],
+    answer: "D",
+    exp: "The golden rule for profit maximization is that Marginal Revenue (MR) must equal Marginal Cost (MC). However, for this to be a stable maximum, the MC curve must be rising as it crosses the MR curve, effectively 'cutting it from below.'",
+  },
+  {
+    year: "2018",
+    q: "The equilibrium of a profit-maximizing competitive firm is given by the point where",
+    options: [
+      "A. MC = AR",
+      "B. MC = AC",
+      "C. MC = MR = AR = P",
+      "D. MC = AR = D",
+    ],
+    answer: "C",
+    exp: "In a perfectly competitive market, the firm is a price taker, meaning the Price (P) is equal to its Average Revenue (AR) and Marginal Revenue (MR). Therefore, the profit-maximizing point (MC=MR) expands to include all these variables being equal.",
+  },
+    
           ],  
-       market:[
+market:[
+    {
+    year: "2018",
+    q: "Which of the following is the International Cartel formed to stabilize the world oil market?",
+    options: [
+      "A. Economic Commission for Africa",
+      "B. International Monetary Fund",
+      "C. Organization of Petroleum Exporting Countries",
+      "D. Organization of Petroleum Importing Countries",
+    ],
+    answer: "C",
+    exp: "OPEC (Organization of Petroleum Exporting Countries) is a classic example of an international cartel. Its member countries coordinate their oil production levels to influence world oil prices and ensure a stable return for their exports.",
+  },
+    
           ],  
-       income_dist:[
+income_dist:[
+           
           ],  
-       govt, circular:[
+govt, circular:[
           ],  
-       national_acc:[
+national_acc:[
+    {
+    year: "2025",
+    q: "Determine the total tonnes of cocoa produced from 2001 to 2004 if the annual outputs were 20, 40, 50, and 70 tonnes respectively.",
+    options: [
+      "A. 60",
+      "B. 80",
+      "C. 150",
+      "D. 180",
+    ],
+    answer: "D",
+    exp: "To find the total production over the four-year period, you simply sum the individual annual outputs: 20 + 40 + 50 + 70 = 180 tonnes.",
+  },
+  {
+    year: "2018",
+    q: "Calculate the equilibrium level of national income (Y) where Y = C + I + G; C = 100 + 0.75Y; I = 50; and G = 200",
+    options: [
+      "A. 100",
+      "B. 1400",
+      "C. 1500",
+      "D. 2000",
+    ],
+    answer: "B",
+    exp: "Substitute the values into the equation: Y = (100 + 0.75Y) + 50 + 200. This simplifies to Y = 350 + 0.75Y. Subtract 0.75Y from Y to get 0.25Y = 350. Dividing 350 by 0.25 gives Y = 1400.",
+  },
+    
           ],  
-       national_det:[
+national_det:[
+    {
+    year: "2018",
+    q: "A country's national income is affected positively by one of the following factors EXCEPT",
+    options: [
+      "A. availability of natural resources.",
+      "B. number and quality of labour force.",
+      "C. state of technical knowledge.",
+      "D. quantity and quality of water resources",
+    ],
+    answer: "D",
+    exp: "While water is important, 'quantity and quality of water resources' is generally considered a subset of natural resources (Option A). In standard economic growth models, the primary drivers are Land (Resources), Labor, Capital, and Technology. Option D is the least distinct factor in broad national income accounting.",
+  },
+    
           ],  
-       money:[
+money:[
+    {
+    year: "2018",
+    q: "Institutions serving as links between surplus and deficit units can be identified as",
+    options: [
+      "A. financial intermediates.",
+      "B. Demand pull inflation.",
+      "C. acceptance houses.",
+      "D. pension offices.",
+    ],
+    answer: "A",
+    exp: "Financial intermediaries (like banks or insurance companies) take funds from 'surplus units' (people who save money) and lend them to 'deficit units' (people or businesses who need to borrow money to invest or spend).",
+  },
+  {
+    year: "2018",
+    q: "The demand for money will fall off if:",
+    options: [
+      "A. real GDP rises",
+      "B. real interest rates rise",
+      "C. the GDP deflator rises",
+      "D. people expect deflation",
+    ],
+    answer: "B",
+    exp: "The interest rate is the 'opportunity cost' of holding cash. If interest rates rise, you lose more potential profit by keeping cash in your pocket instead of in a savings account or investment. Therefore, people demand less liquid money and prefer to invest it.",
+  },
+  {
+    year: "2018",
+    q: "If Mr. Young obtains a N50,000 loan from a bank for the purpose of providing household needs, this demand for money is said to be",
+    options: [
+      "A. transactionary and speculative",
+      "B. transactionary",
+      "C. speculative",
+      "D. precautionary and speculative",
+    ],
+    answer: "B",
+    exp: "The transactionary motive for holding money is for the purpose of funding daily or regular expenditures. Since Mr. Young is using the loan for 'household needs' (buying groceries, paying bills, etc.), it falls directly under the transactionary motive.",
+  },
+    
           ],  
-       inflation:[
+inflation:[
+    {
+    year: "2018",
+    q: "A persistent rise in the prices of inputs will lead to",
+    options: [
+      "A. hyperinflation.",
+      "B. stagflation.",
+      "C. cost push inflation.",
+      "D. demand pull inflation.",
+    ],
+    answer: "C",
+    exp: "When the cost of raw materials or wages (inputs) increases, producers pass these costs onto consumers by raising the prices of finished goods. This specific type of price increase is known as cost-push inflation.",
+  },
+  {
+    year: "2018",
+    q: "Which of the following will cause an increase in cost of production?",
+    options: [
+      "A. Hyper-inflation.",
+      "B. Demand pull inflation.",
+      "C. Cost push inflation.",
+      "D. Structural inflation.",
+    ],
+    answer: "C",
+    exp: "Cost-push inflation is essentially caused by the rising cost of production. As it becomes more expensive for firms to create goods, the overall price level in the economy is 'pushed' upward.",
+  },
+    
           ],  
-       public:[
+public:[
           ],  
-       west_africa:[
+west_africa:[
+     {
+    year: "2018",
+    q: "The economies of West African Countries depend mostly on ___________",
+    options: [
+      "A. primary product.",
+      "B. secondary product.",
+      "C. tertiary product.",
+      "D. manufacturing product.",
+    ],
+    answer: "A",
+    exp: "Most West African economies are agrarian or resource-based, meaning they rely on the extraction and export of raw materials like cocoa, crude oil, and minerals. These are classified as 'primary products' because they have not yet been processed into finished goods.",
+  },
+  {
+    year: "2018",
+    q: "Which of the following is NOT a member of ECOWAS?",
+    options: [
+      "A. Niger",
+      "B. Nigeria",
+      "C. Ghana",
+      "D. Tunisia",
+    ],
+    answer: "D",
+    exp: "ECOWAS is a regional group of fifteen countries located in West Africa. Tunisia is located in North Africa and is therefore not a member of this specific West African economic union.",
+  },
+    
           ],  
-       growth, agric:[
+growth:[
+    {
+    year: "2018",
+    q: "Which of the following relationships is the concern of Malthusian theory?",
+    options: [
+      "A. Population growth rates of the rich and poor nations",
+      "B. Population density and national income",
+      "C. Population growth rate and natural resources",
+      "D. Age distribution of population",
+    ],
+    answer: "C",
+    exp: "Thomas Malthus argued that population grows geometrically (2, 4, 8...) while food supply/natural resources grow only arithmetically (1, 2, 3...). His core concern was that population would eventually outpace the Earth's resources, leading to famine or poverty.",
+  },
+    ],
+agric:[
           ],  
-       intl_trade:[
+intl_trade:[
+    {
+    year: "2018",
+    q: "What is the mercantilist view on trade?",
+    options: [
+      "A. Maximizing militarism",
+      "B. Positive balance of trade and balance of payment.",
+      "C. That agriculture is the main stay of the economy.",
+      "D. Encourages crude oil exploitation",
+    ],
+    answer: "B",
+    exp: "Mercantilism was an economic theory that held that a nation's wealth was measured by its gold and silver. To gain more, they believed a country must export more than it imports, thereby maintaining a positive balance of trade.",
+  },
+  {
+    year: "2018",
+    q: "Which of the following will occur if Nigeria devalues her currency?",
+    options: [
+      "A. Increasing population",
+      "B. Increasing import",
+      "C. Reduced export",
+      "D. Cheaper export",
+    ],
+    answer: "D",
+    exp: "Devaluation makes a country's currency weaker compared to others. This means that foreign buyers find Nigerian goods cheaper in their own currency, which usually leads to an increase in exports because they have become more competitive on the global market.",
+  },
+  {
+    year: "2018",
+    q: "Two distinctive characteristics of free trade are:",
+    options: [
+      "A. trade restriction and trade recreation",
+      "B. trade diffusion and trade creation",
+      "C. trade diversion and trade barriers",
+      "D. none of the above",
+    ],
+    answer: "B",
+    exp: "Free trade is designed to remove 'barriers' and 'restrictions.' Its primary benefits are trade creation (where lower prices allow for more trade between members) and trade diffusion (the spread of goods, services, and ideas across borders without government interference).",
+  },
           ],  
-       macro_meas:[
+macro_meas:[
+    {
+    year: "2025",
+    q: "The difference between the birth rate and death rate in a country is known as the",
+    options: [
+      "A. fertility rate",
+      "B. infant mortality",
+      "C. natural growth rate",
+      "D. population density",
+    ],
+    answer: "C",
+    exp: "The natural growth rate of a population is calculated by subtracting the crude death rate from the crude birth rate. It represents how much the population increases naturally before accounting for migration.",
+  },
+  {
+    year: "2018",
+    q: "Population density refers to",
+    options: [
+      "A. densely populated urban centres",
+      "B. the total area divided by the total population",
+      "C. the total population divided by the total area",
+      "D. densely populated rural areas",
+    ],
+    answer: "C",
+    exp: "Population density is a measurement of how 'crowded' a place is. It is calculated by taking the total number of people living in a region and dividing it by the land area (usually per square kilometer).",
+  },
+    
           ],  
-       labour:[
+    
+labour:[
+           {
+    year: "2025",
+    q: "If a bank cashier is promoted to the rank of bank manager, this is called _______ mobility of labour.",
+    options: [
+      "A. geographical",
+      "B. horizontal",
+      "C. occupational",
+      "D. vertical",
+    ],
+    answer: "D",
+    exp: "Vertical mobility occurs when a worker moves to a higher or lower rank within the same professional field. In this case, moving from cashier to manager represents an upward move in the organizational hierarchy.",
+  },
+  {
+    year: "2018",
+    q: "The rate of output per worker (or group of workers) per unit time is called",
+    options: [
+      "A. labour productivity.",
+      "B. total output.",
+      "C. work done.",
+      "D. individual output.",
+    ],
+    answer: "A",
+    exp: "Labour productivity measures the efficiency of the workforce. It is calculated by dividing the total output produced by the number of workers or the hours worked. It shows how much 'value' each worker adds within a specific timeframe.",
+  },
+  {
+    year: "2018",
+    q: "Which of the following Age group belongs to active Labour force?",
+    options: [
+      "A. 0-17yrs.",
+      "B. 15-25yrs.",
+      "C. 65yrs and above.",
+      "D. 18-64yrs.",
+    ],
+    answer: "D",
+    exp: "The active labor force (or working-age population) generally includes individuals who are old enough to work and have not yet reached retirement age. While some regions start at 15, the standard economic definition for an adult labor force in this context is 18 to 64 years.",
+  },
+  {
+    year: "2018",
+    q: "If the supply curve of labour market is given as S = 4L + 8. What is L when S = 20?",
+    options: [
+      "A. 3",
+      "B. 2",
+      "C. 4",
+      "D. 5",
+    ],
+    answer: "A",
+    exp: "Using the equation 20 = 4L + 8, subtract 8 from both sides to get 12 = 4L. Divide both sides by 4, and you get L = 3. This represents the quantity of labor supplied at that specific wage level.",
+  },
+           
           ],  
-       stabilize:[
+stabilize:[
+           {
+    year: "2018",
+    q: "Which of the following is an automatic stabilizer?",
+    options: [
+      "A. Military spending",
+      "B. Spending on public schools",
+      "C. Unemployment benefit",
+      "D. Increased exchange rate",
+    ],
+    answer: "C",
+    exp: "Automatic stabilizers are economic policies that trigger automatically without new government action. When the economy slows down, more people qualify for unemployment benefits, which puts money back into the economy to support demand without waiting for a new law to be passed.",
+  },
+           
           ],  
-       intl_inst:[
+intl_inst:[
           ],  
       
       mixed: [
@@ -427,7 +987,10 @@ intro: [
 { year: "2017", q: "Per Capita Income is calculated as:", options: ["A. gross national product/population.", "B. gross national product/price index.", "C. value of national budget/population.", "D. net national product/depreciation."], answer: "A", exp: "Per Capita Income is a measure of the amount of money earned per person in a nation. It is derived by dividing the total national income (GNP or GDP) by the total population." },
 { year: "2017", q: "The theory of consumption which argues that consumption is based on a household long run estimate of their income is called:", options: ["A. Life Cycle Hypothesis.", "B. Relative Income Hypothesis.", "C. Permanent Income Hypothesis.", "D. Absolute Income Hypothesis."], answer: "C", exp: "Milton Friedman's Permanent Income Hypothesis posits that people's consumption habits are determined by their expected long-term average income rather than their current daily or yearly income." },
 { year: "2017", q: "The measurement of an economy in terms of its capita income alone can be linked to which of the following?", options: ["A. Economic growth.", "B. Sustainable development.", "C. Economic development.", "D. Economic boom."], answer: "A", exp: "Economic growth refers specifically to an increase in the capacity of an economy to produce goods and services, compared from one period of time to another, often measured solely by increases in GDP or Per Capita Income." },
-{ year: "2017", q: "The exchange rate regime with no government intervention is known as:", options: ["A. Fixed exchange rate.", "B. Laissez faire regime.", "C. Nominal exchange rate.", "D. Floating regime."], answer: "D", exp: "In a floating (or flexible) exchange rate regime, the value of the currency is determined solely by the foreign exchange market through supply and demand without government or central bank interference." },
+
+        /*stop4*/
+        
+        { year: "2017", q: "The exchange rate regime with no government intervention is known as:", options: ["A. Fixed exchange rate.", "B. Laissez faire regime.", "C. Nominal exchange rate.", "D. Floating regime."], answer: "D", exp: "In a floating (or flexible) exchange rate regime, the value of the currency is determined solely by the foreign exchange market through supply and demand without government or central bank interference." },
 { year: "2017", q: "The implication of a perfectly elastic demand in a given market is that:", options: ["A. The firm will make normal profit selling a limited amount of goods.", "B. an infinite amount of goods can be sold at the prevailing market price.", "C. a limited amount of the goods can be sold at the prevailing market price.", "D. no quantity will be sold at the prevailing market price."], answer: "B", exp: "Perfectly elastic demand (a horizontal demand curve) means consumers are willing to buy any quantity at a specific price, but will buy nothing if the price rises even slightly." },
 { year: "2017", q: "All the following are forms of indirect taxes EXCEPT:", options: ["A. capital gains tax.", "B. company tax.", "C. value added tax.", "D. sales tax."], answer: "B", exp: "Company tax (or Corporate tax) is a direct tax because it is levied directly on the profits of the entity. Indirect taxes like VAT or Sales tax are levied on goods and services and passed on to the consumer." },
 { year: "2017", q: "Relationship between life expectancy and mortality rate is:", options: ["A. positive.", "B. direct.", "C. inverse.", "D. proportional."], answer: "C", exp: "There is an inverse relationship because as the mortality rate (death rate) decreases, the average life expectancy of the population typically increases." },
@@ -464,7 +1027,9 @@ intro: [
     { year: "2017", q: "When a generalization is made based on observed facts, it is:", options: ["A. Normative reasoning", "B. Theoretical reasoning", "C. Inductive reasoning", "D. Deductive reasoning"], answer: "C", exp: "Inductive reasoning moves from SPECIFIC observations to GENERAL conclusions. For example: observing that prices rose after money supply increased several times → concluding that money supply growth causes inflation. Deductive reasoning works the opposite way — from general principles to specific predictions." },
         { year: "2017", q: "Given the law of diminishing marginal utility table, when 2 oranges are consumed with Total Utility of 16 and when 1 orange gives TU of 9, the Marginal Utility X equals:", options: ["A. 0", "B. 0.5", "C. 7", "D. 8"], answer: "C", exp: "Marginal Utility = Change in Total Utility ÷ Change in Quantity. MU of 2nd orange = (TU at 2 - TU at 1) ÷ 1 = (16 - 9) ÷ 1 = 7. So X = 7. This demonstrates the law of diminishing marginal utility — as more units are consumed, each additional unit gives less extra satisfaction." },
     { year: "2017", q: "The decision to consume more of one product under normal circumstances will imply:", options: ["A. More of another product will be consumed", "B. Less of the product will be consumed", "C. No other products will be consumed", "D. Less of another product will be consumed"], answer: "D", exp: "With a limited budget (scarcity), consuming more of one good means you have less money for other goods — so less of another product will be consumed. This reflects the concept of opportunity cost and the downward sloping budget line." },
-        { year: "2017", q: "Institutions serving as links between surplus and deficit units can be identified as:", options: ["A. Financial intermediaries", "B. Tax officers", "C. Acceptance houses", "D. Pension offices"], answer: "A", exp: "Financial intermediaries (commercial banks, insurance companies, investment funds) channel funds FROM surplus units (savers who have excess funds) TO deficit units (borrowers who need funds). They reduce transaction costs, manage risk, and make financial markets more efficient. Examples in Nigeria: First Bank, GTBank, UBA." },{
+        { year: "2017", q: "Institutions serving as links between surplus and deficit units can be identified as:", options: ["A. Financial intermediaries", "B. Tax officers", "C. Acceptance houses", "D. Pension offices"], answer: "A", exp: "Financial intermediaries (commercial banks, insurance companies, investment funds) channel funds FROM surplus units (savers who have excess funds) TO deficit units (borrowers who need funds). They reduce transaction costs, manage risk, and make financial markets more efficient. Examples in Nigeria: First Bank, GTBank, UBA." },
+        
+        {
   "year": "2025",
   "q": "The monetary authority in charge of managing inflation in Nigeria is the:",
   "options": ["A. ministry of finance", "B. federal executive council", "C. national bureau of statistics", "D. central bank of Nigeria"],
@@ -622,6 +1187,8 @@ intro: [
   answer: "A",
   exp: "Using the Midpoint (Arc) Formula:\n\nPED = [(Q2 − Q1) / (Q1 + Q2)] ÷ [(P2 − P1) / (P1 + P2)]\n\nStep 1: Find the Quantity ratio\nΔQ = 60 − 80 = -20\nQ sum = 60 + 80 = 140\n-20 / 140 ≈ -0.143\n\nStep 2: Find the Price ratio\nΔP = 30 − 20 = 10\nP sum = 30 + 20 = 50\n10 / 50 = 0.2\n\nStep 3: Calculate PED\n-0.143 ÷ 0.2 = -0.715\n\nTaking the absolute value, the result is approximately 0.71. Among the given options, A (0.71) is the closest approximation."
           },
+
+          
           {
   year: "2020",
   q: "From the table below, at what level of output does the firm break even?",
@@ -821,7 +1388,7 @@ intro: [
   answer: "B",
   exp: "Moving from inside to the curve means the economy is now using its resources more efficiently without necessarily increasing resources."
 },
-          
+          /*stop5*/
       {
   year: "2021",
   q: "Given the table below, what will happen to marginal productivity of labour?",
@@ -1170,7 +1737,12 @@ intro: [
       { year: "2016", q: "The law of supply states that, other things being constant, as price increases:", options: ["A. Supply increases", "B. Supply decreases", "C. Quantity supplied increases", "D. Quantity supplied decreases"], answer: "C", exp: "An important distinction: price changes cause movement ALONG the supply curve (change in quantity supplied), not a shift of the entire supply curve (change in supply)." },
       { year: "2016", q: "A tariff is a tax imposed on:", options: ["A. Imported goods", "B. Exported goods", "C. Domestic goods", "D. Consumer goods"], answer: "A", exp: "A tariff is specifically a tax on imported goods. It raises the price of imports, making domestic alternatives relatively cheaper and protecting local industries." },
       { year: "2016", q: "When the government introduces an indirect tax on a good, which of the following best describes the effect?", options: ["A. Producers bear the full burden of the tax", "B. Consumers bear the full burden of the tax", "C. The tax burden is shared between consumers and producers", "D. The price falls and quantity rises"], answer: "C", exp: "An indirect tax shifts the supply curve left, raising price and reducing quantity. The burden is shared — consumers pay a higher price and producers receive a lower price net of tax. The exact split depends on elasticity." }, ],
-    consumer: [
+   
+      
+      
+      
+      /*stop6*/
+      consumer: [
       { year: "2023", q: "When Total Utility is at its maximum, Marginal Utility is:", options: ["A. Rising", "B. Equal to average utility", "C. Negative", "D. Zero"], answer: "D", exp: "Total utility is maximised at the point where consuming one more unit adds nothing — MU = 0. Beyond this, MU becomes negative and TU falls." },
       { year: "2024", q: "An indifference curve is CONVEX to the origin because of:", options: ["A. The law of demand", "B. Diminishing marginal rate of substitution", "C. Increasing returns to scale", "D. The income effect"], answer: "B", exp: "As more of good X is consumed, the consumer gives up less and less of good Y for each additional unit of X — diminishing MRS causes the convex shape." },
       { year: "2023", q: "Consumer equilibrium using indifference curve analysis is achieved where:", options: ["A. The budget line cuts the indifference curve", "B. Total utility is at its minimum", "C. The highest attainable indifference curve is tangent to the budget line", "D. MU = price of the good"], answer: "C", exp: "The tangency point gives the highest satisfaction attainable given the consumer's budget. At this point, MRS = price ratio (Px/Py)." },

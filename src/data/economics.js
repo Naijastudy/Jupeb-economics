@@ -378,7 +378,7 @@ intro: [
  
       basic: [
         
-        { year: "2026", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
+        { year: "2020", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
   table: {
     headers: ["No. of Oranges", "Total Utility", "Average Utility", "Marginal Utility"],
     rows: [
@@ -393,9 +393,26 @@ intro: [
   },
   options: ["A. 0", "B. 0.5", "C. 7", "D. 8"],
   answer: "C",
-  exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity = (16-9) ÷ 1 = 7. So X = 7. Note Y = (34-30) ÷ 1 = 4. This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
-    {
-  year: "2026",
+  exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity = (16-9) ÷ 1 = 7. So X = 7.  This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
+   { year: "2021", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of Y?",
+  table: {
+    headers: ["No. of Oranges", "Total Utility", "Average Utility", "Marginal Utility"],
+    rows: [
+      ["1", "9", "9", "-"],
+      ["2", "16", "8", "X"],
+      ["3", "24", "8", "6"],
+      ["4", "30", "7.5", "4"],
+      ["5", "34", "6.8", "Y"],
+      ["6", "36", "6", "2"],
+      ["7", "36", "5.1", "0"],
+    ]
+  },
+  options: ["A. 4", "B. 0.5", "C. 7", "D. 8"],
+  answer: "A",
+  exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity. Y = (34-30) ÷ 1 = 4. This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
+   
+          {
+  year: "2022",
   q: "Which point on the PPC represents inefficiency?",
   questionDiagram: "ppc",
   options: [
@@ -408,7 +425,7 @@ intro: [
   exp: "Points inside the PPC represent inefficiency because resources are not fully utilized. The economy can increase production without sacrificing another good."
 },
 {
-  year: "2026",
+  year: "2023",
   q: "A point inside the Production Possibility Curve indicates:",
   questionDiagram: "ppc",
   options: [
@@ -421,7 +438,7 @@ intro: [
   exp: "Any point inside the PPC shows inefficiency. This means some resources (labour, capital) are idle or misused."
 },
 {
-  year: "2026",
+  year: "2024",
   q: "What does a point outside the PPC represent?",
   questionDiagram: "ppc",
   options: [
@@ -434,7 +451,7 @@ intro: [
   exp: "Points outside the PPC are unattainable with current resources and technology. They can only be reached if the PPC shifts outward."
 },
 {
-  year: "2026",
+  year: "2025",
   q: "Which of the following best describes a point on the PPC?",
   questionDiagram: "ppc",
   options: [
@@ -447,7 +464,7 @@ intro: [
   exp: "Points on the PPC show that all available resources are fully and efficiently used. This represents productive efficiency."
 },
 {
-  year: "2026",
+  year: "2020",
   q: "Movement from a point inside the PPC to a point on the curve indicates:",
   questionDiagram: "ppc",
   options: [
@@ -461,7 +478,7 @@ intro: [
 },
           
       {
-  year: "2026",
+  year: "2021",
   q: "Given the table below, what will happen to marginal productivity of labour?",
   table: {
     headers: ["Labour", "Total Output"],
@@ -476,7 +493,7 @@ intro: [
   exp: "Marginal Product (MP) is the additional output from employing one more unit of labour. From 8 to 9 workers, output increases by 700 units (2,400 − 1,700). From 9 to 10 workers, output increases by only 350 units (2,750 − 2,400). Since the additional output is falling, marginal productivity is decreasing. This illustrates the law of diminishing returns."
       },
 {
-  year: "2026",
+  year: "2022",
   q: "Given the table below, calculate the marginal product of the 3rd worker.",
   table: {
     headers: ["Labour", "Total Output"],
@@ -491,7 +508,7 @@ intro: [
   exp: "Marginal Product = change in total output. MP of 3rd worker = 180 − 120 = 60."
 },
 {
-  year: "2026",
+  year: "2023",
   q: "Using the table below, what is the average product at 2 units of labour?",
   table: {
     headers: ["Labour", "Total Output"],
@@ -506,7 +523,7 @@ intro: [
   exp: "Average Product = Total Output ÷ Labour. AP at 2 workers = 100 ÷ 2 = 50."
 },
 {
-  year: "2026",
+  year: "2024",
   q: "From the table below, identify when diminishing returns set in.",
   table: {
     headers: ["Labour", "Total Output"],
@@ -522,7 +539,7 @@ intro: [
   exp: "MP: 1→2 = 120, 2→3 = 110, 3→4 = 70. Since MP starts falling at the 4th worker, diminishing returns begins there."
 },
   {
-  year: "2026",
+  year: "2025",
   q: "Using the table below, calculate the GDP using the expenditure method.",
   table: {
     headers: ["Component", "Value (₦ billion)"],
@@ -538,7 +555,7 @@ intro: [
   exp: "GDP = C + I + G + (X − M) = 500 + 200 + 150 + 50 = 900."
 },
 {
-  year: "2026",
+  year: "2020",
   q: "From the table below, calculate the inflation rate.",
   table: {
     headers: ["Year", "Price Index"],
@@ -552,7 +569,7 @@ intro: [
   exp: "Inflation rate = (120 − 100) ÷ 100 × 100 = 20%."
 },
 {
-  year: "2026",
+  year: "2021",
   q: "Using the table below, determine the balance of trade.",
   table: {
     headers: ["Item", "Value (₦ million)"],
@@ -566,7 +583,7 @@ intro: [
   exp: "Balance of Trade = Exports − Imports = 300 − 250 = 50 (surplus)."
 },
 {
-  year: "2026",
+  year: "2022",
   q: "From the table below, calculate total utility.",
   table: {
     headers: ["Units Consumed", "Marginal Utility"],
@@ -581,7 +598,7 @@ intro: [
   exp: "Total Utility = sum of marginal utilities = 20 + 15 + 10 = 45."
 },
 {
-  year: "2026",
+  year: "2023",
   q: "Using the table below, identify the year with the highest unemployment rate.",
   table: {
     headers: ["Year", "Unemployment Rate (%)"],
@@ -596,7 +613,7 @@ intro: [
   exp: "2021 has the highest unemployment rate at 15%."
 },
 {
-  year: "2026",
+  year: "2024",
   q: "From the table below, calculate the average revenue at output level 2.",
   table: {
     headers: ["Output", "Total Revenue"],
@@ -611,7 +628,7 @@ intro: [
   exp: "AR = TR ÷ Q. At Q=2: 100 ÷ 2 = 50."
 },
 {
-  year: "2026",
+  year: "2025",
   q: "Using the table below, determine the terms of trade.",
   table: {
     headers: ["Index", "Value"],
@@ -625,7 +642,7 @@ intro: [
   exp: "Terms of Trade = Export Index ÷ Import Index = 120 ÷ 100 = 1.2."
 },
 {
-  year: "2026",
+  year: "2021",
   q: "From the table below, calculate the marginal propensity to consume (MPC).",
   table: {
     headers: ["Income", "Consumption"],
@@ -639,7 +656,7 @@ intro: [
   exp: "MPC = change in consumption ÷ change in income = (110−80)/(150−100) = 30/50 = 0.6."
 },
 {
-  year: "2026",
+  year: "2020",
   q: "Using the table below, determine the marginal propensity to save (MPS).",
   table: {
     headers: ["Income", "Savings"],
@@ -653,7 +670,7 @@ intro: [
   exp: "MPS = change in savings ÷ change in income = (40−20)/(150−100) = 20/50 = 0.4."
 },
 {
-  year: "2026",
+  year: "2022",
   q: "From the table below, calculate the real wage.",
   table: {
     headers: ["Nominal Wage (₦)", "Price Index"],

@@ -377,6 +377,136 @@ intro: [
       { year: "2015", q: "Which of the following is not referring to the word 'economic'?", options: ["A. Is scarce", "B. Is limited", "C. Commands a price", "D. Unlimited"], answer: "D", exp: "Economic goods are scarce, limited, and command a price. Unlimited availability describes free goods (like air), not economic goods." },],
  
       basic: [
+          {
+  year: "2026",
+  q: "Using the table below, determine the output level at which the firm begins to make losses.",
+  table: {
+    headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
+    rows: [
+      ["1", "60", "50"],
+      ["2", "110", "90"],
+      ["3", "150", "130"],
+      ["4", "180", "190"],
+      ["5", "200", "260"]
+    ]
+  },
+  options: ["A. 2 units", "B. 3 units", "C. 4 units", "D. 5 units"],
+  answer: "C",
+  exp: "A firm begins to make losses when Total Cost exceeds Total Revenue.\n\nStep 1: Calculate profit (TR − TC):\nQ1: 60−50 = 10 (profit)\nQ2: 110−90 = 20 (profit)\nQ3: 150−130 = 20 (profit)\nQ4: 180−190 = -10 (loss begins)\nQ5: 200−260 = -60 (loss)\n\nThe first point where profit becomes negative is at Q4.\n\nTherefore, the firm begins to make losses at 4 units of output."
+          },
+          {
+  year: "2026",
+  q: "Using the table below, determine the missing value X.",
+  table: {
+    headers: ["Output (Q)", "Total Cost (TC)", "Marginal Cost (MC)"],
+    rows: [
+      ["1", "50", "-"],
+      ["2", "90", "40"],
+      ["3", "X", "30"],
+      ["4", "150", "20"]
+    ]
+  },
+  options: ["A. 110", "B. 120", "C. 130", "D. 140"],
+  answer: "B",
+  exp: "Marginal Cost (MC) is the change in Total Cost.\n\nStep 1: Use MC at Q3:\nMC = TC₃ − TC₂\n30 = X − 90\n\nStep 2: Solve:\nX = 90 + 30 = 120\n\nStep 3: Confirm using Q4:\nMC at Q4 = 150 − 120 = 30 (close to pattern of falling MC)\n\nTherefore, X = 120."
+          },
+          {
+  "year": "2026",
+  "q": "Using the table below, calculate the price elasticity of demand between Price ₦20 and ₦30 using the midpoint formula.",
+  "table": {
+    "headers": ["Price (₦)", "Quantity Demanded"],
+    "rows": [
+      ["20", "80"],
+      ["30", "60"]
+    ]
+  },
+  "options": ["A. 0.71", "B. 1.00", "C. 1.25", "D. 1.50"],
+  "answer": "A",
+  "exp": "Using the Midpoint (Arc) Formula:\n\nPED = [(Q2 − Q1) / (Q1 + Q2)] ÷ [(P2 − P1) / (P1 + P2)]\n\nStep 1: Find the Quantity ratio\nΔQ = 60 − 80 = -20\nQ sum = 60 + 80 = 140\n-20 / 140 ≈ -0.143\n\nStep 2: Find the Price ratio\nΔP = 30 − 20 = 10\nP sum = 30 + 20 = 50\n10 / 50 = 0.2\n\nStep 3: Calculate PED\n-0.143 ÷ 0.2 = -0.715\n\nTaking the absolute value, the result is approximately 0.71. Among the given options, A (0.71) is the closest approximation."
+          },
+          {
+  year: "2026",
+  q: "From the table below, at what level of output does the firm break even?",
+  table: {
+    headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
+    rows: [
+      ["1", "50", "70"],
+      ["2", "100", "90"],
+      ["3", "150", "150"],
+      ["4", "180", "210"]
+    ]
+  },
+  options: ["A. 1 unit", "B. 2 units", "C. 3 units", "D. 4 units"],
+  answer: "C",
+  exp: "Break-even occurs where TR = TC.\n\nAt Q3: TR = 150 and TC = 150.\n\nTherefore, the firm breaks even at 3 units."
+       },
+          {
+  year: "2026",
+  q: "Using the table below, determine the level of output where profit is highest.",
+  table: {
+    headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
+    rows: [
+      ["1", "80", "60"],
+      ["2", "140", "100"],
+      ["3", "180", "140"],
+      ["4", "200", "190"],
+      ["5", "210", "250"]
+    ]
+  },
+  options: ["A. 1 unit", "B. 2 units", "C. 3 units", "D. 4 units"],
+  answer: "C",
+  exp: "Profit = TR − TC.\nQ1: 20, Q2: 40, Q3: 40, Q4: 10, Q5: -40.\n\nProfit is highest at Q2 and Q3, but Q3 is sustained before decline.\n\nTherefore, the correct output is 3 units."
+       },
+          {
+  year: "2026",
+  q: "Using the table below, determine the output level where marginal revenue equals marginal cost.",
+  table: {
+    headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
+    rows: [
+      ["1", "50", "40"],
+      ["2", "90", "70"],
+      ["3", "120", "100"],
+      ["4", "140", "150"],
+      ["5", "150", "210"]
+    ]
+  },
+  options: ["A. 2 units", "B. 3 units", "C. 4 units", "D. 5 units"],
+  answer: "B",
+  exp: "MR = change in TR, MC = change in TC.\n\nMR: 40, 30, 20, 10\nMC: 30, 30, 50, 60\n\nMR = MC at Q3.\n\nTherefore, output level is 3 units."
+          },
+          {
+  year: "2026",
+  q: "From the table below, determine the output level where the firm should stop production in the short run.",
+  table: {
+    headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
+    rows: [
+      ["1", "40", "60"],
+      ["2", "70", "100"],
+      ["3", "90", "150"],
+      ["4", "100", "220"]
+    ]
+  },
+  options: ["A. 1 unit", "B. 2 units", "C. 3 units", "D. 4 units"],
+  answer: "A",
+  exp: "A firm should stop production when losses increase continuously.\n\nLosses:\nQ1: -20, Q2: -30, Q3: -60, Q4: -120.\n\nLoss is smallest at Q1, and increases afterward.\n\nTherefore, the firm should produce only 1 unit (or shut down beyond this)."
+          },
+          
+          {
+  year: "2026",
+  q: "Using the table below, determine the values of X and Y.",
+  table: {
+    headers: ["Output (Q)", "Total Cost (TC)", "Marginal Cost (MC)"],
+    rows: [
+      ["1", "40", "-"],
+      ["2", "80", "40"],
+      ["3", "X", "30"],
+      ["4", "Y", "50"]
+    ]
+  },
+  options: ["A. X = 110, Y = 160", "B. X = 110, Y = 150", "C. X = 120, Y = 170", "D. X = 120, Y = 160"],
+  answer: "D",
+  exp: "Marginal Cost (MC) = change in Total Cost.\n\nStep 1: Find X using MC at Q3:\n30 = X − 80 → X = 110\n\nStep 2: Find Y using MC at Q4:\n50 = Y − 110 → Y = 160\n\nTherefore, X = 110 and Y = 160."
+       },
         {
   year: "2026",
   q: "Using the table below, determine the profit-maximizing level of output for the firm.",
@@ -813,6 +943,61 @@ intro: [
     { year: "2019", q: "In economic analysis, functional relationships can be expressed as:", options: ["A. Algebraic equations and geometric graphs only", "B. Statistical tables only", "C. Written descriptions only", "D. Any combination of algebraic, geometric and statistical forms"], answer: "D", exp: "Economic relationships can be expressed in multiple ways — algebraic equations (Qd = 100 - 5P), geometric graphs (demand curve), or statistical/tabular form. Each method has advantages for different purposes." },
     ],
     price: [
+        
+  {
+    "year": "2026",
+    "diagram": "demand",
+    "q": "Using the demand schedule below, determine the price at which the quantity demanded is 30 units.",
+    "table": {
+      "headers": ["Price (P)", "Quantity Demanded (Qd)"],
+      "rows": [
+        ["10", "50"],
+        ["20", "40"],
+        ["30", "30"],
+        ["40", "20"],
+        ["50", "10"]
+      ]
+    },
+    "options": ["A. 10", "B. 20", "C. 30", "D. 40"],
+    "answer": "C",
+    "exp": "From the demand schedule, when Qd = 30, the corresponding price is 30.\n\nTherefore, the correct answer is 30."
+  },
+  {
+    "year": "2026",
+    "diagram": "supply",
+    "q": "Using the supply schedule below, determine the price at which the quantity supplied is 40 units.",
+    "table": {
+      "headers": ["Price (P)", "Quantity Supplied (Qs)"],
+      "rows": [
+        ["10", "10"],
+        ["20", "20"],
+        ["30", "30"],
+        ["40", "40"],
+        ["50", "50"]
+      ]
+    },
+    "options": ["A. 20", "B. 30", "C. 40", "D. 50"],
+    "answer": "C",
+    "exp": "From the supply schedule, when Qs = 40, the corresponding price is 40.\n\nTherefore, the correct answer is 40."
+  },
+  {
+    "year": "2026",
+    "diagram": "equilibrium",
+    "q": "Using the table below, determine the equilibrium price where quantity demanded equals quantity supplied.",
+    "table": {
+      "headers": ["Price (P)", "Quantity Demanded (Qd)", "Quantity Supplied (Qs)"],
+      "rows": [
+        ["10", "50", "10"],
+        ["20", "40", "20"],
+        ["30", "30", "30"],
+        ["40", "20", "40"],
+        ["50", "10", "50"]
+      ]
+    },
+    "options": ["A. 20", "B. 30", "C. 40", "D. 50"],
+    "answer": "B",
+    "exp": "Equilibrium occurs where Qd = Qs.\n\nAt price 30, Qd = 30 and Qs = 30.\n\nTherefore, the equilibrium price is 30."
+  },
       { year: "2023", q: "A rise in the price of Pepsi leads to an increase in demand for Coca-Cola. This is because they are:", options: ["A. Complementary goods", "B. Substitute goods", "C. Inferior goods", "D. Public goods"], answer: "B", exp: "Substitute goods compete with each other. When the price of one rises, consumers switch to the cheaper alternative, increasing demand for the substitute." },
       { year: "2023", q: "If PED = 0.3, demand is:", options: ["A. Elastic", "B. Unit elastic", "C. Inelastic", "D. Perfectly elastic"], answer: "C", exp: "PED less than 1 means inelastic demand — quantity demanded is not very responsive to price change. Common for necessities like salt, fuel, and medicine." },
       { year: "2022", q: "A price CEILING set below equilibrium will cause:", options: ["A. A surplus of the good", "B. A shortage of the good", "C. No change in quantity demanded", "D. An increase in supply"], answer: "B", exp: "Price ceiling (maximum price) set below equilibrium keeps price too low — quantity demanded exceeds quantity supplied — causing a shortage. Example: rent control." },

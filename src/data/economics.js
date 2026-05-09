@@ -946,7 +946,7 @@ intro: [
         
   {
     "year": "2026",
-    "diagram": "demand",
+    "questionDiagram": "demand",
     "q": "Using the demand schedule below, determine the price at which the quantity demanded is 30 units.",
     "table": {
       "headers": ["Price (P)", "Quantity Demanded (Qd)"],
@@ -964,7 +964,7 @@ intro: [
   },
   {
     "year": "2026",
-    "diagram": "supply",
+    "questionDiagram": "supply",
     "q": "Using the supply schedule below, determine the price at which the quantity supplied is 40 units.",
     "table": {
       "headers": ["Price (P)", "Quantity Supplied (Qs)"],
@@ -982,7 +982,7 @@ intro: [
   },
   {
     "year": "2026",
-    "diagram": "equilibrium",
+    "questionDiagram": "equilibrium",
     "q": "Using the table below, determine the equilibrium price where quantity demanded equals quantity supplied.",
     "table": {
       "headers": ["Price (P)", "Quantity Demanded (Qd)", "Quantity Supplied (Qs)"],

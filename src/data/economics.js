@@ -158,7 +158,7 @@ intro: [
 
      
   export const questions = {
-     /* intro:[
+      intro:[
           {
     year: "2025",
     q: "The economic concept that emphasizes the prioritization of human wants is referred to as",
@@ -263,14 +263,14 @@ intro: [
 { year: "2015", q: "Which of the following is an example of a free good?", options: ["A. Dinner you did not pay for", "B. Your rented apartment", "C. Free education", "D. Water in the ocean"], answer: "D", exp: "A free good has no opportunity cost and is available in unlimited supply. Water in the ocean is not scarce — no one has to give up anything to obtain it. Free education and unpaid dinners still have resource costs." },
 { year: "2015", q: "A major factor contributing to productivity is:", options: ["A. The labour force", "B. The rate of GDP per year", "C. The baby boom generation", "D. Immigration of young workers"], answer: "A", exp: "The labour force — its size, skills, education, and health — is the most direct factor contributing to productivity. Human capital improvements drive output per worker." },
 { year: "2015", q: "The development of an economic hypothesis through intuition, insight, or logic is associated with:", options: ["A. Induction", "B. Deduction", "C. Policy economics", "D. Normative economics"], answer: "B", exp: "Deduction starts from general principles or theory and derives specific conclusions through logic. Induction works in the opposite direction — from specific observations to general conclusions." },
-       { year: "2021", q: "Which of the following is a normative economic statement?", options: ["A. The inflation rate is 12%", "B. Unemployment rate is 8%", "C. Government should reduce unemployment", "D. GDP growth rate is 3%"], answer: "C", exp: "Normative economics deals with value judgments and 'what ought to be.' Statements containing the word 'should' are normative, whereas the other options are positive statements based on facts." },
+{ year: "2021", q: "Which of the following is a normative economic statement?", options: ["A. The inflation rate is 12%", "B. Unemployment rate is 8%", "C. Government should reduce unemployment", "D. GDP growth rate is 3%"], answer: "C", exp: "Normative economics deals with value judgments and 'what ought to be.' Statements containing the word 'should' are normative, whereas the other options are positive statements based on facts." },
 { year: "2023", q: "The production possibility curve that shows increasing opportunity cost is:", options: ["A. convex to the origin", "B. concave to the origin", "C. a straight line", "D. semi-circular"], answer: "B", exp: "A concave (bowed-out) PPC reflects the Law of Increasing Opportunity Cost, which states that as you produce more of one good, the opportunity cost of producing it increases." },
 { year: "2016", q: "In economics, the mathematical expression between two or more variables is known as:", options: ["A. Equality", "B. Identity", "C. Equation", "D. Variables"], answer: "C", exp: "An equation expresses a mathematical relationship between two or more variables. In economics, equations like Qd = 100 - 5P express how variables are related. An identity is always true (like MPC + MPS = 1), while an equation holds only under specific conditions." },
 { year: "2016", q: "The statement 'All Chinese are racists, Dr. Yeung is Chinese, therefore he is a racist' is an example of:", options: ["A. Inductive reasoning", "B. Deductive reasoning", "C. Positive statement", "D. Normative statement"], answer: "B", exp: "Deductive reasoning applies a general principle to a specific case to reach a conclusion. Starting from a general premise and applying it to a specific case is deductive." },
 { year: "2019", q: "In economic analysis, functional relationships can be expressed as:", options: ["A. Algebraic equations and geometric graphs only", "B. Statistical tables only", "C. Written descriptions only", "D. Any combination of algebraic, geometric and statistical forms"], answer: "D", exp: "Economic relationships can be expressed in multiple ways — algebraic equations (Qd = 100 - 5P), geometric graphs (demand curve), or statistical/tabular form. Each method has advantages for different purposes." },
           
           ], 
-basic:[
+/*basic:[
           {
     year: "2025",
     q: "The reward for capital as a factor of production is",

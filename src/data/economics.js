@@ -158,6 +158,49 @@ intro: [
 
      
   export const questions = {
+      intro:[
+          ], 
+      basic:[
+          ],  
+      tools:[
+          ],  
+      price:[
+          ],  
+       consumer:[
+          ],  
+       firm:[
+          ],  
+       market:[
+          ],  
+       income_dist:[
+          ],  
+       govt, circular:[
+          ],  
+       national_acc:[
+          ],  
+       national_det:[
+          ],  
+       money:[
+          ],  
+       inflation:[
+          ],  
+       public:[
+          ],  
+       west_africa:[
+          ],  
+       growth, agric:[
+          ],  
+       intl_trade:[
+          ],  
+       macro_meas:[
+          ],  
+       labour:[
+          ],  
+       stabilize:[
+          ],  
+       intl_inst:[
+          ],  
+      
       mixed: [
 { year: "2025", q: "The economic concept that emphasizes the prioritization of human wants is referred to as", options: ["A. choice", "B. need", "C. opportunity cost", "D. scale of preference"], answer: "D", exp: "A scale of preference is a list of unsatisfied wants arranged in order of priority or importance. It allows a consumer to decide which needs to satisfy first with their limited resources." },
 { year: "2025", q: "Determine the total tonnes of cocoa produced from 2001 to 2004 if the annual outputs were 20, 40, 50, and 70 tonnes respectively.", options: ["A. 60", "B. 80", "C. 150", "D. 180"], answer: "D", exp: "To find the total production over the four-year period, you simply sum the individual annual outputs: 20 + 40 + 50 + 70 = 180 tonnes." },
@@ -200,6 +243,9 @@ intro: [
 { year: "2018", q: "The demand for money will fall off if:", options: ["A. real GDP rises", "B. real interest rates rise", "C. the GDP deflator rises", "D. people expect deflation"], answer: "B", exp: "The interest rate is the 'opportunity cost' of holding cash. If interest rates rise, you lose more potential profit by keeping cash in your pocket instead of in a savings account or investment. Therefore, people demand less liquid money and prefer to invest it." },
 { year: "2018", q: "Two distinctive characteristics of free trade are:", options: ["A. trade restriction and trade recreation", "B. trade diffusion and trade creation", "C. trade diversion and trade barriers", "D. none of the above"], answer: "B", exp: "Free trade is designed to remove 'barriers' and 'restrictions.' Its primary benefits are trade creation (where lower prices allow for more trade between members) and trade diffusion (the spread of goods, services, and ideas across borders without government interference)." },
 { year: "2018", q: "Which of the following is not a determinant of supply?", options: ["A. Cost of production", "B. Price of the commodity", "C. Price of related goods", "D. Income of the consumer"], answer: "D", exp: "Supply is determined by things that affect the producer, such as the cost of raw materials (A) or the market price (B). 'Income of the consumer' is a determinant of **demand**, as it affects how much a buyer can afford, not how much a seller can produce." },
+/*stop*/
+
+          
 { year: "2018", q: "Which of the following is not a type of inflation?", options: ["A. Demand-pull inflation", "B. Cost-push inflation", "C. Hyperinflation", "D. Monetary inflation"], answer: "D", exp: "While the money supply affects inflation, 'Monetary inflation' is not a standard classification for a *type* of inflation. The main types are Demand-pull (too much spending), Cost-push (rising production costs), and Hyperinflation (extremely rapid price increases)." },
 { year: "2018", q: "Which of the following is not a monetary policy instrument?", options: ["A. Open market operations", "B. Bank rate", "C. Taxation", "(D) Cash reserve ratio"], answer: "C", exp: "Monetary policy is controlled by the Central Bank using interest rates (Bank rate) and the money supply (OMO and Reserve ratios). **Taxation** is a fiscal policy tool controlled by the government's ministry of finance." },
 { year: "2018", q: "Liquidity preference is the:", options: ["A. need to borrow money for short periods to meet some temporary crises", "B. wish to hold more funds for precautionary purposes", "C. need to increase the money supply in order to lower the interest rate", "D. demand to hold money as assets rather than as stocks"], answer: "D", exp: "Liquidity preference is a term made famous by John Maynard Keynes. it refers to the desire of people to hold their wealth in the form of liquid cash (which is easy to spend) rather than in non-liquid assets like stocks, bonds, or real estate." },
@@ -238,6 +284,10 @@ intro: [
 { year: "2024", q: "Which economic situation would result in over allocation of resources to the production of a good?", options: ["A. Free-rider program", "B. Spill-over costs", "C. Inflation", "D. Spill-over benefits"], answer: "B", exp: "Spill-over costs (negative externalities) occur when a producer doesn't pay for the full cost of production (like pollution). Because the product is cheaper for the company to make than it actually costs society, they produce too much of it, leading to an 'over-allocation' of resources." },
 { year: "2024", q: "The following have greatly facilitated international trade since World War II EXCEPT:", options: ["A. expanded export subsidies", "B. greater import quota", "C. improved communication", "D. increased non-tariff barriers"], answer: "D", exp: "International trade grows when barriers are removed. Communication and subsidies help trade, but 'non-tariff barriers' (like strict regulations or bans) make trade more difficult. Therefore, increasing these barriers would hinder trade rather than facilitate it." },
 { year: "2024", q: "One of the following is an example of the formation of a trade bloc.", options: ["A. Smoot-Hawley Tariff Act", "B. North American Free Trade Agreement", "C. Reciprocal Trade Agreement Act", "D. General Agreements on Tariffs and Trade"], answer: "B", exp: "A trade bloc is a group of countries that agree to trade freely with each other. NAFTA (North American Free Trade Agreement) is a famous example involving the US, Canada, and Mexico. The others are either specific laws or global trade organizations." },
+
+
+
+          /*stop2*/
 { year: "2024", q: "If an increase in price of commodity X leads to an increase in demand for commodity Y, then commodities X and Y are:", options: ["A. normal goods", "B. complement goods", "C. substitute goods", "D. giffen goods"], answer: "C", exp: "Substitute goods are alternatives to each other (like Coke and Pepsi). If the price of X goes up, people stop buying X and buy Y instead. This causes the demand for Y to rise, showing they are substitutes." },
 { year: "2024", q: "Economic integration occurs when:", options: ["A. two-or more countries join to form a free trade zone.", "B. two or more countries start to trade with each other.", "C. two or more countries refuse to trade with each other.", "D. countries reduce trade barriers and coordinate monetary and fiscal policies."], answer: "D", exp: "While forming a free trade zone (A) is a step, full economic integration is a deeper process where countries not only reduce trade barriers but also align their financial and economic policies to act more like a single economy." },
 { year: "2024", q: "In the study of elasticity, if the co-efficient of elasticity is greater than one but less than infinity, then demand or supply of the product is:", options: ["A. elastic", "B. unitary elastic", "C. infinitely elastic", "D. inelastic"], answer: "A", exp: "Elasticity measures how much quantity changes when price changes. If the result (coefficient) is greater than 1, it means consumers are very sensitive to price changes—the quantity demanded changes by a larger percentage than the price. This is called 'elastic'." },
@@ -273,6 +323,9 @@ intro: [
   "answer": "B",
   "exp": "To increase credit, the bank uses expansionary tools (II), buys bonds to pump cash into banks (III), and uses 'easy' monetary policies (IV). Increasing the reserve ratio (I) would actually decrease credit."
 },
+
+        /*stop3*/
+        
 {
   "year": "2025",
   "q": "Monetary contraction makes:",

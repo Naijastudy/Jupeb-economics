@@ -761,6 +761,16 @@ stabilize:[
 intl_inst:[
           ],  
 };
+
+export const grading = [
+    { marks: "70-100", grade: "A", points: 5, remark: "Excellent" },
+    { marks: "60-69", grade: "B", points: 4, remark: "Very Good" },
+    { marks: "50-59", grade: "C", points: 3, remark: "Good" },
+    { marks: "45-49", grade: "D", points: 2, remark: "Merit" },
+    { marks: "40-44", grade: "E", points: 1, remark: "Pass" },
+    { marks: "0-39",  grade: "F", points: 0, remark: "Fail" },
+  ];
+
      /* consumer: [
       { year: "2023", q: "When Total Utility is at its maximum, Marginal Utility is:", options: ["A. Rising", "B. Equal to average utility", "C. Negative", "D. Zero"], answer: "D", exp: "Total utility is maximised at the point where consuming one more unit adds nothing — MU = 0. Beyond this, MU becomes negative and TU falls." },
       { year: "2024", q: "An indifference curve is CONVEX to the origin because of:", options: ["A. The law of demand", "B. Diminishing marginal rate of substitution", "C. Increasing returns to scale", "D. The income effect"], answer: "B", exp: "As more of good X is consumed, the consumer gives up less and less of good Y for each additional unit of X — diminishing MRS causes the convex shape." },
@@ -1085,12 +1095,3 @@ intl_inst:[
       { year: "2015", q: "Currency devaluation differs from currency depreciation in that devaluation:", options: ["A. Occurs under a floating exchange rate system", "B. Is a deliberate reduction of a fixed exchange rate by the government", "C. Is caused by market forces of supply and demand", "D. Always leads to appreciation of the currency later"], answer: "B", exp: "Devaluation is a deliberate government/central bank decision to lower the official fixed exchange rate value of a currency. Depreciation happens automatically under floating rates due to market forces." },
     ],*/
   
-  
-  export const grading = [
-    { marks: "70-100", grade: "A", points: 5, remark: "Excellent" },
-    { marks: "60-69", grade: "B", points: 4, remark: "Very Good" },
-    { marks: "50-59", grade: "C", points: 3, remark: "Good" },
-    { marks: "45-49", grade: "D", points: 2, remark: "Merit" },
-    { marks: "40-44", grade: "E", points: 1, remark: "Pass" },
-    { marks: "0-39",  grade: "F", points: 0, remark: "Fail" },
-  ];

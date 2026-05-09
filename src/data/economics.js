@@ -158,7 +158,7 @@ intro: [
 
      
   export const questions = {
-      intro:[
+     /* intro:[
           {
     year: "2025",
     q: "The economic concept that emphasizes the prioritization of human wants is referred to as",
@@ -759,7 +759,7 @@ stabilize:[
            
           ],  
 intl_inst:[
-          ],  
+          ],  */
 };
 
 export const grading = [

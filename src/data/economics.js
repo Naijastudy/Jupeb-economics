@@ -376,6 +376,29 @@ intro: [
       { year: "2015", q: "The following are economic agents in any economy EXCEPT:", options: ["A. Government", "B. Household", "C. Firm", "D. Central Bank"], answer: "D", exp: "The three main economic agents are households, firms, and government. The Central Bank is a specific institution under government, not a separate economic agent in the basic circular flow model." },
       { year: "2015", q: "Which of the following is not referring to the word 'economic'?", options: ["A. Is scarce", "B. Is limited", "C. Commands a price", "D. Unlimited"], answer: "D", exp: "Economic goods are scarce, limited, and command a price. Unlimited availability describes free goods (like air), not economic goods." },],
     basic: [
+        { year: "2018", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
+  table: {
+    headers: ["No. of Oranges", "Total Utility", "Average Utility", "Marginal Utility"],
+    rows: [
+      ["1", "9", "9", "-"],
+      ["2", "16", "8", "X"],
+      ["3", "24", "8", "6"],
+      ["4", "30", "7.5", "4"],
+      ["5", "34", "6.8", "Y"],
+      ["6", "36", "6", "2"],
+      ["7", "36", "5.1", "0"],
+    ]
+  },
+  options: ["A. 0", "B. 0.5", "C. 7", "D. 8"],
+  answer: "C",
+  exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity = (16-9) ÷ 1 = 7. So X = 7. Note Y = (34-30) ÷ 1 = 4. This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
+{ year: "2018", q: "From the graph below, point E shows:",
+  questionDiagram: "ppc",
+  options: ["A. Productive efficiency", "B. Allocative efficiency", "C. Product inefficiency", "D. Product efficiency"],
+  answer: "C",
+  exp: "Point E lies INSIDE the PPC — representing productive inefficiency. The economy is not fully utilising its available resources. By moving to a point ON the curve, more output could be produced without additional resources. Points on the curve represent efficiency, points outside are unattainable with current resources." },
+        
+        
       { year: "2023", q: "Opportunity cost is BEST defined as:", options: ["A. The total money spent on a good", "B. The value of the next best alternative forgone", "C. The profit lost by a firm", "D. The cost of producing one more unit"], answer: "B", exp: "Opportunity cost is not about money — it is the value of the best alternative you sacrificed when making a choice. It applies to all economic agents." },
       { year: "2023", q: "A point INSIDE the Production Possibility Curve (PPC) represents:", options: ["A. Full employment of resources", "B. An unattainable level of output", "C. Productive inefficiency", "D. Technological advancement"], answer: "C", exp: "Inside the PPC means resources are not fully utilised — some are idle or misallocated. This is productive inefficiency. Points on the curve represent efficiency." },
       { year: "2022", q: "The PPC shifts OUTWARD when there is:", options: ["A. A rise in consumer demand", "B. Technological advancement", "C. A fall in the price level", "D. Increased government spending"], answer: "B", exp: "The PPC shifts outward when the economy's productive capacity increases — through better technology, discovery of new resources, or improvement in education and skills." },

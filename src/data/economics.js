@@ -411,7 +411,7 @@ price:[
   },
           
           ],  
-/*consumer:[
+consumer:[
            {
     year: "2025",
     q: "The law of diminishing marginal utility states that",
@@ -758,7 +758,7 @@ stabilize:[
   },
            
           ],  
-intl_inst:[
+/*intl_inst:[
           ],  */
 };
 

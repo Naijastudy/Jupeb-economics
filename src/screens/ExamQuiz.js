@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import QuestionCard from "./QuestionCard";
 import Calculator from "../Calculator";
+
 
 
 function RadioDot({ selected, color }) {
@@ -149,29 +151,13 @@ export default function ExamQuiz({
         <QuizPills total={examQs.length} current={examIdx} answers={examAnswers} onSelect={setExamIdx} t={t} />
 
         {/* Question Card */}
-        <div style={{ ...card, marginBottom: 16 }}>
-          <div style={{ fontSize: 10, color: t.tagColor, letterSpacing: 2, marginBottom: 10 }}>Question {examIdx + 1} · JUPEB {q.year}</div>
-          <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: 16 }}>{q.q}</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {q.options.map(opt => {
-              const l = opt[0];
-              const isSel = examAnswers[examIdx] === l;
-              return (
-                <button key={opt} onClick={() => setExamAnswers(a => ({ ...a, [examIdx]: l }))} style={{
-                  background: isSel ? t.selectedBg : t.optionBg,
-                  border: `2px solid ${isSel ? t.selectedBorder : t.border}`,
-                  borderRadius: 10, padding: "12px 14px", textAlign: "left",
-                  color: isSel ? t.selectedText : t.optionText,
-                  fontSize: 13, cursor: "pointer", display: "flex", alignItems: "center", gap: 12
-                }}>
-                  <RadioDot selected={isSel} color={t.selectedBorder} />
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
+       {/* Question */}
+        <QuestionCard
+          q={q} idx={examIdx}
+          answers={examAnswers} setAnswers={setExamAnswers}
+          revealed={false} t={t} showResult={false}
+        />
+            
         {/* Navigation Buttons */}
         <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
           <button onClick={() => setExamIdx(i => Math.max(0, i - 1))} disabled={examIdx === 0}

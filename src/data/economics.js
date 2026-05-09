@@ -379,6 +379,65 @@ intro: [
       basic: [
           {
   year: "2026",
+  q: "Using the table below, determine the type of demand elasticity.",
+  table: {
+    headers: ["Price (₦)", "Quantity Demanded"],
+    rows: [
+      ["10", "100"],
+      ["12", "80"],
+      ["15", "50"]
+    ]
+  },
+  options: [
+    "A. Elastic",
+    "B. Inelastic",
+    "C. Unit elastic",
+    "D. Perfectly inelastic"
+  ],
+  answer: "A",
+  exp: "Check total revenue:\nP1: 10×100 = 1000\nP2: 12×80 = 960\nP3: 15×50 = 750\n\nTR falls as price rises, and quantity falls more than proportionally → demand is elastic."
+          },
+          {
+  year: "2026",
+  q: "From the table below, what type of demand elasticity is shown?",
+  table: {
+    headers: ["Price (₦)", "Quantity Demanded", "Total Revenue"],
+    rows: [
+      ["20", "50", "1000"],
+      ["25", "40", "1000"]
+    ]
+  },
+  options: [
+    "A. Elastic",
+    "B. Inelastic",
+    "C. Unit elastic",
+    "D. Perfectly elastic"
+  ],
+  answer: "C",
+  exp: "Total revenue remains constant (1000 → 1000) despite price increase. This is the defining condition of unit elasticity."
+          },
+          {
+  year: "2026",
+  q: "Using the table below, determine what happens to total revenue when price increases from ₦10 to ₦12.",
+  table: {
+    headers: ["Price (₦)", "Quantity Demanded"],
+    rows: [
+      ["10", "100"],
+      ["12", "80"]
+    ]
+  },
+  options: [
+    "A. Total revenue increases",
+    "B. Total revenue decreases",
+    "C. Total revenue remains constant",
+    "D. Cannot be determined"
+  ],
+  answer: "B",
+  exp: "Total Revenue (TR) is calculated as $P \times Q$.\n\nStep 1: TR at ₦10 = $10 \times 100 = 1,000$\nStep 2: TR at ₦12 = $12 \times 80 = 960$\n\nComparing the results, 960 is less than 1,000, so total revenue decreases. This proves the demand is price elastic, as the percentage drop in quantity outweighed the percentage increase in price."
+          },
+          
+          {
+  year: "2026",
   q: "Using the table below, determine the output level at which the firm begins to make losses.",
   table: {
     headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
@@ -411,18 +470,18 @@ intro: [
   exp: "Marginal Cost (MC) is the change in Total Cost.\n\nStep 1: Use MC at Q3:\nMC = TC₃ − TC₂\n30 = X − 90\n\nStep 2: Solve:\nX = 90 + 30 = 120\n\nStep 3: Confirm using Q4:\nMC at Q4 = 150 − 120 = 30 (close to pattern of falling MC)\n\nTherefore, X = 120."
           },
           {
-  "year": "2026",
-  "q": "Using the table below, calculate the price elasticity of demand between Price ₦20 and ₦30 using the midpoint formula.",
-  "table": {
-    "headers": ["Price (₦)", "Quantity Demanded"],
-    "rows": [
+  year: "2026",
+  q: "Using the table below, calculate the price elasticity of demand between Price ₦20 and ₦30 using the midpoint formula.",
+  table: {
+    headers: ["Price (₦)", "Quantity Demanded"],
+    rows: [
       ["20", "80"],
       ["30", "60"]
     ]
   },
-  "options": ["A. 0.71", "B. 1.00", "C. 1.25", "D. 1.50"],
-  "answer": "A",
-  "exp": "Using the Midpoint (Arc) Formula:\n\nPED = [(Q2 − Q1) / (Q1 + Q2)] ÷ [(P2 − P1) / (P1 + P2)]\n\nStep 1: Find the Quantity ratio\nΔQ = 60 − 80 = -20\nQ sum = 60 + 80 = 140\n-20 / 140 ≈ -0.143\n\nStep 2: Find the Price ratio\nΔP = 30 − 20 = 10\nP sum = 30 + 20 = 50\n10 / 50 = 0.2\n\nStep 3: Calculate PED\n-0.143 ÷ 0.2 = -0.715\n\nTaking the absolute value, the result is approximately 0.71. Among the given options, A (0.71) is the closest approximation."
+  options: ["A. 0.71", "B. 1.00", "C. 1.25", "D. 1.50"],
+  answer: "A",
+  exp: "Using the Midpoint (Arc) Formula:\n\nPED = [(Q2 − Q1) / (Q1 + Q2)] ÷ [(P2 − P1) / (P1 + P2)]\n\nStep 1: Find the Quantity ratio\nΔQ = 60 − 80 = -20\nQ sum = 60 + 80 = 140\n-20 / 140 ≈ -0.143\n\nStep 2: Find the Price ratio\nΔP = 30 − 20 = 10\nP sum = 30 + 20 = 50\n10 / 50 = 0.2\n\nStep 3: Calculate PED\n-0.143 ÷ 0.2 = -0.715\n\nTaking the absolute value, the result is approximately 0.71. Among the given options, A (0.71) is the closest approximation."
           },
           {
   year: "2026",
@@ -944,60 +1003,7 @@ intro: [
     ],
     price: [
         
-  {
-    "year": "2026",
-    "questionDiagram": "demand",
-    "q": "Using the demand schedule below, determine the price at which the quantity demanded is 30 units.",
-    "table": {
-      "headers": ["Price (P)", "Quantity Demanded (Qd)"],
-      "rows": [
-        ["10", "50"],
-        ["20", "40"],
-        ["30", "30"],
-        ["40", "20"],
-        ["50", "10"]
-      ]
-    },
-    "options": ["A. 10", "B. 20", "C. 30", "D. 40"],
-    "answer": "C",
-    "exp": "From the demand schedule, when Qd = 30, the corresponding price is 30.\n\nTherefore, the correct answer is 30."
-  },
-  {
-    "year": "2026",
-    "questionDiagram": "supply",
-    "q": "Using the supply schedule below, determine the price at which the quantity supplied is 40 units.",
-    "table": {
-      "headers": ["Price (P)", "Quantity Supplied (Qs)"],
-      "rows": [
-        ["10", "10"],
-        ["20", "20"],
-        ["30", "30"],
-        ["40", "40"],
-        ["50", "50"]
-      ]
-    },
-    "options": ["A. 20", "B. 30", "C. 40", "D. 50"],
-    "answer": "C",
-    "exp": "From the supply schedule, when Qs = 40, the corresponding price is 40.\n\nTherefore, the correct answer is 40."
-  },
-  {
-    "year": "2026",
-    "questionDiagram": "equilibrium",
-    "q": "Using the table below, determine the equilibrium price where quantity demanded equals quantity supplied.",
-    "table": {
-      "headers": ["Price (P)", "Quantity Demanded (Qd)", "Quantity Supplied (Qs)"],
-      "rows": [
-        ["10", "50", "10"],
-        ["20", "40", "20"],
-        ["30", "30", "30"],
-        ["40", "20", "40"],
-        ["50", "10", "50"]
-      ]
-    },
-    "options": ["A. 20", "B. 30", "C. 40", "D. 50"],
-    "answer": "B",
-    "exp": "Equilibrium occurs where Qd = Qs.\n\nAt price 30, Qd = 30 and Qs = 30.\n\nTherefore, the equilibrium price is 30."
-  },
+ 
       { year: "2023", q: "A rise in the price of Pepsi leads to an increase in demand for Coca-Cola. This is because they are:", options: ["A. Complementary goods", "B. Substitute goods", "C. Inferior goods", "D. Public goods"], answer: "B", exp: "Substitute goods compete with each other. When the price of one rises, consumers switch to the cheaper alternative, increasing demand for the substitute." },
       { year: "2023", q: "If PED = 0.3, demand is:", options: ["A. Elastic", "B. Unit elastic", "C. Inelastic", "D. Perfectly elastic"], answer: "C", exp: "PED less than 1 means inelastic demand — quantity demanded is not very responsive to price change. Common for necessities like salt, fuel, and medicine." },
       { year: "2022", q: "A price CEILING set below equilibrium will cause:", options: ["A. A surplus of the good", "B. A shortage of the good", "C. No change in quantity demanded", "D. An increase in supply"], answer: "B", exp: "Price ceiling (maximum price) set below equilibrium keeps price too low — quantity demanded exceeds quantity supplied — causing a shortage. Example: rent control." },

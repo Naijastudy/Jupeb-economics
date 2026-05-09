@@ -467,11 +467,13 @@ market:[
     exp: "OPEC (Organization of Petroleum Exporting Countries) is a classic example of an international cartel. Its member countries coordinate their oil production levels to influence world oil prices and ensure a stable return for their exports.",
   },
     
-          ],  /*
+          ],  
 income_dist:[
            
           ],  
-govt, circular:[
+govt:[
+    ],
+circular:[
           ],  
 national_acc:[
     {
@@ -759,7 +761,7 @@ stabilize:[
            
           ],  
 intl_inst:[
-          ],  */
+          ],  
 };
 
 export const grading = [

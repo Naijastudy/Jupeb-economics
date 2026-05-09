@@ -376,7 +376,7 @@ intro: [
       { year: "2015", q: "The following are economic agents in any economy EXCEPT:", options: ["A. Government", "B. Household", "C. Firm", "D. Central Bank"], answer: "D", exp: "The three main economic agents are households, firms, and government. The Central Bank is a specific institution under government, not a separate economic agent in the basic circular flow model." },
       { year: "2015", q: "Which of the following is not referring to the word 'economic'?", options: ["A. Is scarce", "B. Is limited", "C. Commands a price", "D. Unlimited"], answer: "D", exp: "Economic goods are scarce, limited, and command a price. Unlimited availability describes free goods (like air), not economic goods." },],
     basic: [
-        { year: "2018", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
+        { year: "2026", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
   table: {
     headers: ["No. of Oranges", "Total Utility", "Average Utility", "Marginal Utility"],
     rows: [
@@ -392,7 +392,7 @@ intro: [
   options: ["A. 0", "B. 0.5", "C. 7", "D. 8"],
   answer: "C",
   exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity = (16-9) ÷ 1 = 7. So X = 7. Note Y = (34-30) ÷ 1 = 4. This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
-{ year: "2018", q: "From the graph below, point E shows:",
+{ year: "2026", q: "From the graph below, point E shows:",
   questionDiagram: "ppc",
   options: ["A. Productive efficiency", "B. Allocative efficiency", "C. Product inefficiency", "D. Product efficiency"],
   answer: "C",

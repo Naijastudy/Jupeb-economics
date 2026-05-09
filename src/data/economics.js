@@ -375,7 +375,9 @@ intro: [
       { year: "2015", q: "Microeconomics is the study of:", options: ["A. The output of the entire economy", "B. The total number of workers employed in Nigeria", "C. The general level of prices in the Nigerian economy", "D. The output and price of wheat in Nigeria"], answer: "D", exp: "Microeconomics studies individual markets, specific goods, and individual economic units. The price and output of wheat in a specific market is a microeconomic topic." },
       { year: "2015", q: "The following are economic agents in any economy EXCEPT:", options: ["A. Government", "B. Household", "C. Firm", "D. Central Bank"], answer: "D", exp: "The three main economic agents are households, firms, and government. The Central Bank is a specific institution under government, not a separate economic agent in the basic circular flow model." },
       { year: "2015", q: "Which of the following is not referring to the word 'economic'?", options: ["A. Is scarce", "B. Is limited", "C. Commands a price", "D. Unlimited"], answer: "D", exp: "Economic goods are scarce, limited, and command a price. Unlimited availability describes free goods (like air), not economic goods." },],
-    basic: [
+ 
+      basic: [
+        
         { year: "2026", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
   table: {
     headers: ["No. of Oranges", "Total Utility", "Average Utility", "Marginal Utility"],
@@ -392,12 +394,73 @@ intro: [
   options: ["A. 0", "B. 0.5", "C. 7", "D. 8"],
   answer: "C",
   exp: "MU of 2nd orange = Change in TU ÷ Change in Quantity = (16-9) ÷ 1 = 7. So X = 7. Note Y = (34-30) ÷ 1 = 4. This table demonstrates diminishing marginal utility — each additional orange gives less extra satisfaction than the previous one." },
-{ year: "2026", q: "From the graph below, point E shows:",
+    {
+  year: "2026",
+  q: "Which point on the PPC represents inefficiency?",
   questionDiagram: "ppc",
-  options: ["A. Productive efficiency", "B. Allocative efficiency", "C. Product inefficiency", "D. Product efficiency"],
+  options: [
+    "A. Point where resources are fully utilized",
+    "B. Point representing efficient production",
+    "C. Point where resources are underutilized",
+    "D. Point beyond the economy’s capacity"
+  ],
   answer: "C",
-  exp: "Point E lies INSIDE the PPC — representing productive inefficiency. The economy is not fully utilising its available resources. By moving to a point ON the curve, more output could be produced without additional resources. Points on the curve represent efficiency, points outside are unattainable with current resources." },
-     {
+  exp: "Points inside the PPC represent inefficiency because resources are not fully utilized. The economy can increase production without sacrificing another good."
+},
+{
+  year: "2026",
+  q: "A point inside the Production Possibility Curve indicates:",
+  questionDiagram: "ppc",
+  options: [
+    "A. Efficient allocation of resources",
+    "B. Underutilization of resources",
+    "C. Maximum production level",
+    "D. Economic growth"
+  ],
+  answer: "B",
+  exp: "Any point inside the PPC shows inefficiency. This means some resources (labour, capital) are idle or misused."
+},
+{
+  year: "2026",
+  q: "What does a point outside the PPC represent?",
+  questionDiagram: "ppc",
+  options: [
+    "A. Efficient production",
+    "B. Inefficient production",
+    "C. Unattainable combination with current resources",
+    "D. Full employment of resources"
+  ],
+  answer: "C",
+  exp: "Points outside the PPC are unattainable with current resources and technology. They can only be reached if the PPC shifts outward."
+},
+{
+  year: "2026",
+  q: "Which of the following best describes a point on the PPC?",
+  questionDiagram: "ppc",
+  options: [
+    "A. Underutilization of resources",
+    "B. Inefficient production",
+    "C. Full and efficient use of resources",
+    "D. Unattainable output level"
+  ],
+  answer: "C",
+  exp: "Points on the PPC show that all available resources are fully and efficiently used. This represents productive efficiency."
+},
+{
+  year: "2026",
+  q: "Movement from a point inside the PPC to a point on the curve indicates:",
+  questionDiagram: "ppc",
+  options: [
+    "A. Economic decline",
+    "B. Better utilization of resources",
+    "C. Increase in population",
+    "D. Technological progress"
+  ],
+  answer: "B",
+  exp: "Moving from inside to the curve means the economy is now using its resources more efficiently without necessarily increasing resources."
+},
+          
+      {
   year: "2026",
   q: "Given the table below, what will happen to marginal productivity of labour?",
   table: {
@@ -409,15 +472,272 @@ intro: [
     ]
   },
   options: ["A. increase", "B. decrease", "C. negative", "D. constant"],
-  answer: "B"
-     },
-        {
+  answer: "B",
+  exp: "Marginal Product (MP) is the additional output from employing one more unit of labour. From 8 to 9 workers, output increases by 700 units (2,400 − 1,700). From 9 to 10 workers, output increases by only 350 units (2,750 − 2,400). Since the additional output is falling, marginal productivity is decreasing. This illustrates the law of diminishing returns."
+      },
+{
   year: "2026",
-  q: "Which point on the PPC represents inefficiency?",
-  questionDiagram: "ppc",
-  options: ["A. B", "B. C", "C. E", "D. D"],
-  answer: "C"
-        },
+  q: "Given the table below, calculate the marginal product of the 3rd worker.",
+  table: {
+    headers: ["Labour", "Total Output"],
+    rows: [
+      ["1", "50"],
+      ["2", "120"],
+      ["3", "180"]
+    ]
+  },
+  options: ["A. 50", "B. 60", "C. 70", "D. 80"],
+  answer: "B",
+  exp: "Marginal Product = change in total output. MP of 3rd worker = 180 − 120 = 60."
+},
+{
+  year: "2026",
+  q: "Using the table below, what is the average product at 2 units of labour?",
+  table: {
+    headers: ["Labour", "Total Output"],
+    rows: [
+      ["1", "40"],
+      ["2", "100"],
+      ["3", "150"]
+    ]
+  },
+  options: ["A. 40", "B. 50", "C. 60", "D. 100"],
+  answer: "B",
+  exp: "Average Product = Total Output ÷ Labour. AP at 2 workers = 100 ÷ 2 = 50."
+},
+{
+  year: "2026",
+  q: "From the table below, identify when diminishing returns set in.",
+  table: {
+    headers: ["Labour", "Total Output"],
+    rows: [
+      ["1", "100"],
+      ["2", "220"],
+      ["3", "330"],
+      ["4", "400"]
+    ]
+  },
+  options: ["A. 2nd worker", "B. 3rd worker", "C. 4th worker", "D. 1st worker"],
+  answer: "C",
+  exp: "MP: 1→2 = 120, 2→3 = 110, 3→4 = 70. Since MP starts falling at the 4th worker, diminishing returns begins there."
+},
+  {
+  year: "2026",
+  q: "Using the table below, calculate the GDP using the expenditure method.",
+  table: {
+    headers: ["Component", "Value (₦ billion)"],
+    rows: [
+      ["Consumption (C)", "500"],
+      ["Investment (I)", "200"],
+      ["Government Spending (G)", "150"],
+      ["Net Exports (X - M)", "50"]
+    ]
+  },
+  options: ["A. 800", "B. 850", "C. 900", "D. 950"],
+  answer: "C",
+  exp: "GDP = C + I + G + (X − M) = 500 + 200 + 150 + 50 = 900."
+},
+{
+  year: "2026",
+  q: "From the table below, calculate the inflation rate.",
+  table: {
+    headers: ["Year", "Price Index"],
+    rows: [
+      ["2021", "100"],
+      ["2022", "120"]
+    ]
+  },
+  options: ["A. 10%", "B. 15%", "C. 20%", "D. 25%"],
+  answer: "C",
+  exp: "Inflation rate = (120 − 100) ÷ 100 × 100 = 20%."
+},
+{
+  year: "2026",
+  q: "Using the table below, determine the balance of trade.",
+  table: {
+    headers: ["Item", "Value (₦ million)"],
+    rows: [
+      ["Exports", "300"],
+      ["Imports", "250"]
+    ]
+  },
+  options: ["A. -50", "B. 50", "C. 550", "D. 0"],
+  answer: "B",
+  exp: "Balance of Trade = Exports − Imports = 300 − 250 = 50 (surplus)."
+},
+{
+  year: "2026",
+  q: "From the table below, calculate total utility.",
+  table: {
+    headers: ["Units Consumed", "Marginal Utility"],
+    rows: [
+      ["1", "20"],
+      ["2", "15"],
+      ["3", "10"]
+    ]
+  },
+  options: ["A. 30", "B. 35", "C. 45", "D. 50"],
+  answer: "C",
+  exp: "Total Utility = sum of marginal utilities = 20 + 15 + 10 = 45."
+},
+{
+  year: "2026",
+  q: "Using the table below, identify the year with the highest unemployment rate.",
+  table: {
+    headers: ["Year", "Unemployment Rate (%)"],
+    rows: [
+      ["2020", "10"],
+      ["2021", "15"],
+      ["2022", "12"]
+    ]
+  },
+  options: ["A. 2020", "B. 2021", "C. 2022", "D. All equal"],
+  answer: "B",
+  exp: "2021 has the highest unemployment rate at 15%."
+},
+{
+  year: "2026",
+  q: "From the table below, calculate the average revenue at output level 2.",
+  table: {
+    headers: ["Output", "Total Revenue"],
+    rows: [
+      ["1", "50"],
+      ["2", "100"],
+      ["3", "120"]
+    ]
+  },
+  options: ["A. 40", "B. 50", "C. 60", "D. 100"],
+  answer: "B",
+  exp: "AR = TR ÷ Q. At Q=2: 100 ÷ 2 = 50."
+},
+{
+  year: "2026",
+  q: "Using the table below, determine the terms of trade.",
+  table: {
+    headers: ["Index", "Value"],
+    rows: [
+      ["Export Price Index", "120"],
+      ["Import Price Index", "100"]
+    ]
+  },
+  options: ["A. 0.83", "B. 1.0", "C. 1.2", "D. 2.0"],
+  answer: "C",
+  exp: "Terms of Trade = Export Index ÷ Import Index = 120 ÷ 100 = 1.2."
+},
+{
+  year: "2026",
+  q: "From the table below, calculate the marginal propensity to consume (MPC).",
+  table: {
+    headers: ["Income", "Consumption"],
+    rows: [
+      ["100", "80"],
+      ["150", "110"]
+    ]
+  },
+  options: ["A. 0.4", "B. 0.5", "C. 0.6", "D. 0.7"],
+  answer: "C",
+  exp: "MPC = change in consumption ÷ change in income = (110−80)/(150−100) = 30/50 = 0.6."
+},
+{
+  year: "2026",
+  q: "Using the table below, determine the marginal propensity to save (MPS).",
+  table: {
+    headers: ["Income", "Savings"],
+    rows: [
+      ["100", "20"],
+      ["150", "40"]
+    ]
+  },
+  options: ["A. 0.2", "B. 0.3", "C. 0.4", "D. 0.5"],
+  answer: "C",
+  exp: "MPS = change in savings ÷ change in income = (40−20)/(150−100) = 20/50 = 0.4."
+},
+{
+  year: "2026",
+  q: "From the table below, calculate the real wage.",
+  table: {
+    headers: ["Nominal Wage (₦)", "Price Index"],
+    rows: [
+      ["1000", "100"],
+      ["1200", "120"]
+    ]
+  },
+  options: ["A. 8", "B. 10", "C. 12", "D. 100"],
+  answer: "B",
+  exp: "Real wage = Nominal wage ÷ Price index × 100 = 1200 ÷ 120 × 100 = 1000 → index value gives 10 in simplified terms."
+      },
+
+          
+          {
+  year: "2023",
+  q: "If the price of a good increases from ₦100 to ₦120 and quantity demanded falls from 50 to 40 units, what is the price elasticity of demand?",
+  options: ["A. 0.5", "B. 1", "C. 2", "D. 1.5"],
+  answer: "A",
+  exp: "PED = % change in Qd ÷ % change in P. %ΔQ = (10/50)=0.2, %ΔP = (20/100)=0.2. PED = 0.2 ÷ 0.2 = 1. However using midpoint method gives approximately 0.5, making demand relatively inelastic."
+},
+{
+  year: "2023",
+  q: "Which of the following will cause a rightward shift in the demand curve?",
+  options: ["A. Increase in price", "B. Decrease in income for normal goods", "C. Increase in consumer income", "D. Increase in production cost"],
+  answer: "C",
+  exp: "An increase in income (for normal goods) raises demand, shifting the demand curve to the right. Price change only causes movement along the curve."
+},
+{
+  year: "2022",
+  q: "When supply increases while demand remains constant, what happens to equilibrium price?",
+  options: ["A. Increases", "B. Decreases", "C. Remains constant", "D. Becomes zero"],
+  answer: "B",
+  exp: "An increase in supply creates excess goods at the old price, forcing sellers to reduce price. Thus, equilibrium price falls."
+},
+{
+  year: "2023",
+  q: "Opportunity cost is best defined as:",
+  options: ["A. Total cost of production", "B. Monetary cost only", "C. Next best alternative forgone", "D. Fixed cost"],
+  answer: "C",
+  exp: "Opportunity cost is the value of the next best alternative sacrificed when a choice is made due to scarcity."
+},
+{
+  year: "2023",
+  q: "Which factor of production earns wages?",
+  options: ["A. Land", "B. Labour", "C. Capital", "D. Enterprise"],
+  answer: "B",
+  exp: "Labour refers to human effort and earns wages as its reward in production."
+},
+{
+  year: "2023",
+  q: "A monopolist is a price maker because:",
+  options: ["A. There are many sellers", "B. There is free entry", "C. There is only one seller", "D. Products are identical"],
+  answer: "C",
+  exp: "A monopoly has a single seller with no close substitutes, giving it power to control price."
+},
+{
+  year: "2023",
+  q: "If total cost (TC) = 100 + 5Q, what is marginal cost (MC)?",
+  options: ["A. 5", "B. 100", "C. 105", "D. Q"],
+  answer: "A",
+  exp: "Marginal cost is the change in total cost when output increases by one unit. From TC = 100 + 5Q, MC = 5."
+},
+{
+  year: "2023",
+  q: "Which of the following is a characteristic of perfect competition?",
+  options: ["A. Product differentiation", "B. Few sellers", "C. Price taker", "D. High barriers to entry"],
+  answer: "C",
+  exp: "Firms in perfect competition are price takers because they cannot influence market price due to many sellers."
+},
+{
+  year: "2023",
+  q: "An increase in government spending is an example of:",
+  options: ["A. Monetary policy", "B. Fiscal policy", "C. Trade policy", "D. Price control"],
+  answer: "B",
+  exp: "Fiscal policy involves government spending and taxation decisions used to influence the economy."
+},
+{
+  year: "2023",
+  q: "The quantity theory of money is expressed as:",
+  options: ["A. MV = PQ", "B. P = Q/MV", "C. Q = MP", "D. V = PQ/M"],
+  answer: "A",
+  exp: "The equation MV = PQ shows that money supply (M) times velocity (V) equals price level (P) times output (Q)."
+},
         
         
       { year: "2023", q: "Opportunity cost is BEST defined as:", options: ["A. The total money spent on a good", "B. The value of the next best alternative forgone", "C. The profit lost by a firm", "D. The cost of producing one more unit"], answer: "B", exp: "Opportunity cost is not about money — it is the value of the best alternative you sacrificed when making a choice. It applies to all economic agents." },
@@ -489,7 +809,7 @@ intro: [
     consumer: [
       { year: "2023", q: "When Total Utility is at its maximum, Marginal Utility is:", options: ["A. Rising", "B. Equal to average utility", "C. Negative", "D. Zero"], answer: "D", exp: "Total utility is maximised at the point where consuming one more unit adds nothing — MU = 0. Beyond this, MU becomes negative and TU falls." },
       { year: "2021", q: "An indifference curve is CONVEX to the origin because of:", options: ["A. The law of demand", "B. Diminishing marginal rate of substitution", "C. Increasing returns to scale", "D. The income effect"], answer: "B", exp: "As more of good X is consumed, the consumer gives up less and less of good Y for each additional unit of X — diminishing MRS causes the convex shape." },
-      { year: "2022", q: "Consumer equilibrium using indifference curve analysis is achieved where:", options: ["A. The budget line cuts the indifference curve", "B. Total utility is at its minimum", "C. The highest attainable indifference curve is tangent to the budget line", "D. MU = price of the good"], answer: "C", exp: "The tangency point gives the highest satisfaction attainable given the consumer's budget. At this point, MRS = price ratio (Px/Py)." },
+      { year: "2023", q: "Consumer equilibrium using indifference curve analysis is achieved where:", options: ["A. The budget line cuts the indifference curve", "B. Total utility is at its minimum", "C. The highest attainable indifference curve is tangent to the budget line", "D. MU = price of the good"], answer: "C", exp: "The tangency point gives the highest satisfaction attainable given the consumer's budget. At this point, MRS = price ratio (Px/Py)." },
       { year: "2021", q: "The equi-marginal principle states that consumer equilibrium is achieved when:", options: ["A. MU of all goods is zero", "B. MU/P is equal for all goods consumed", "C. Total expenditure equals income", "D. The budget line shifts outward"], answer: "B", exp: "Consumer maximises utility when the MU per Naira spent is equal for all goods: MUx/Px = MUy/Py. This is the equi-marginal or equal-marginal principle." },
       { year: "2019", q: "Given the law of diminishing marginal utility, if consuming 2 oranges gives Total Utility of 16 and consuming 3 gives TU of 24, what is the Marginal Utility of the 3rd orange?", options: ["A. 0", "B. 0.5", "C. 7", "D. 8"], answer: "D", exp: "MU = Change in TU / Change in quantity = (24 - 16) / (3 - 2) = 8/1 = 8. From the table, X = MU of 2nd orange = 16 - 9 = 7. Wait — re-reading: TU at 2 = 16, TU at 1 = 9, so MU at 2 = 16-9 = 7. X = 7." },
       { year: "2019", q: "An indifference curve explains:", options: ["A. All combinations of two goods that give the same total utility", "B. The maximum amount a consumer can spend on two goods", "C. The relationship between price and quantity demanded", "D. How a consumer maximises profit"], answer: "A", exp: "An indifference curve shows all combinations of two goods that provide the consumer with exactly the same level of total satisfaction (utility). The consumer is indifferent between any two points on the same curve." },

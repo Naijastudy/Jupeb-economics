@@ -270,7 +270,7 @@ intro: [
 { year: "2019", q: "In economic analysis, functional relationships can be expressed as:", options: ["A. Algebraic equations and geometric graphs only", "B. Statistical tables only", "C. Written descriptions only", "D. Any combination of algebraic, geometric and statistical forms"], answer: "D", exp: "Economic relationships can be expressed in multiple ways — algebraic equations (Qd = 100 - 5P), geometric graphs (demand curve), or statistical/tabular form. Each method has advantages for different purposes." },
           
           ], 
-/*basic:[
+basic:[
           {
     year: "2025",
     q: "The reward for capital as a factor of production is",
@@ -411,7 +411,7 @@ price:[
   },
           
           ],  
-consumer:[
+/*consumer:[
            {
     year: "2025",
     q: "The law of diminishing marginal utility states that",

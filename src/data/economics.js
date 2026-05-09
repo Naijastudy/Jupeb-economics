@@ -377,7 +377,24 @@ intro: [
       { year: "2015", q: "Which of the following is not referring to the word 'economic'?", options: ["A. Is scarce", "B. Is limited", "C. Commands a price", "D. Unlimited"], answer: "D", exp: "Economic goods are scarce, limited, and command a price. Unlimited availability describes free goods (like air), not economic goods." },],
  
       basic: [
-        
+        {
+  year: "2026",
+  q: "Using the table below, determine the profit-maximizing level of output for the firm.",
+  table: {
+    headers: ["Output (Q)", "Total Revenue (TR)", "Total Cost (TC)"],
+    rows: [
+      ["1", "50", "40"],
+      ["2", "90", "70"],
+      ["3", "120", "100"],
+      ["4", "140", "140"],
+      ["5", "150", "190"]
+    ]
+  },
+  options: ["A. 2 units", "B. 3 units", "C. 4 units", "D. 5 units"],
+  answer: "B",
+  exp: "Profit maximization occurs where MR = MC or where profit is highest.\n\nStep 1: Calculate profit (TR − TC):\nQ1: 50−40 = 10\nQ2: 90−70 = 20\nQ3: 120−100 = 20\nQ4: 140−140 = 0\nQ5: 150−190 = -40\n\nProfit is highest at Q2 and Q3 (20), but we confirm using MR and MC.\n\nStep 2: MR (change in TR):\nQ2: 40, Q3: 30, Q4: 20, Q5: 10\n\nStep 3: MC (change in TC):\nQ2: 30, Q3: 30, Q4: 40, Q5: 50\n\nProfit is maximized where MR = MC → at Q3.\n\nTherefore, the profit-maximizing output is 3 units."
+        },
+          
         { year: "2020", q: "Given the table demonstrating the law of diminishing marginal utility below, what is the value of X?",
   table: {
     headers: ["No. of Oranges", "Total Utility", "Average Utility", "Marginal Utility"],

@@ -760,7 +760,7 @@ stabilize:[
           ],  
 intl_inst:[
           ],  
-      
+};
      /* consumer: [
       { year: "2023", q: "When Total Utility is at its maximum, Marginal Utility is:", options: ["A. Rising", "B. Equal to average utility", "C. Negative", "D. Zero"], answer: "D", exp: "Total utility is maximised at the point where consuming one more unit adds nothing — MU = 0. Beyond this, MU becomes negative and TU falls." },
       { year: "2024", q: "An indifference curve is CONVEX to the origin because of:", options: ["A. The law of demand", "B. Diminishing marginal rate of substitution", "C. Increasing returns to scale", "D. The income effect"], answer: "B", exp: "As more of good X is consumed, the consumer gives up less and less of good Y for each additional unit of X — diminishing MRS causes the convex shape." },
@@ -1084,7 +1084,7 @@ intl_inst:[
        { year: "2015", q: "One of the potential problems with the European Union is that:", options: ["A. Unregulated free flow of labour may reduce productivity", "B. Economies of large-scale production may increase consumer prices", "C. Tariffs may reduce trade with non-member nations", "D. Government may have difficulty covering shortfall from elimination of duties and taxes"], answer: "D", exp: "When countries join a customs union like the EU, they eliminate internal tariffs. This reduces government revenue from import duties, creating a fiscal shortfall that must be covered by other means." },
       { year: "2015", q: "Currency devaluation differs from currency depreciation in that devaluation:", options: ["A. Occurs under a floating exchange rate system", "B. Is a deliberate reduction of a fixed exchange rate by the government", "C. Is caused by market forces of supply and demand", "D. Always leads to appreciation of the currency later"], answer: "B", exp: "Devaluation is a deliberate government/central bank decision to lower the official fixed exchange rate value of a currency. Depreciation happens automatically under floating rates due to market forces." },
     ],*/
-  };
+  
   
   export const grading = [
     { marks: "70-100", grade: "A", points: 5, remark: "Excellent" },

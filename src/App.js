@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import themes from "./themes";
 import { subjects } from "./data/index";
 import { db, auth, googleProvider } from "./firebase";
-import {
-  collection, addDoc, serverTimestamp,
-  query, where, getDocs, orderBy,
-} from "firebase/firestore";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import useAuth from "./hooks/useAuth";
 import { grading } from "./data/economics";
 import ExamSetup from "./screens/ExamSetup";
 import YearSelect from "./screens/YearSelect";
@@ -19,40 +15,14 @@ import { PastQCourses, PastQTopics, PastQView } from "./screens/PastQuestions";
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
 import QuestionCard from "./screens/QuestionCard";
+import useStreak from "./hooks/useStreak";
+
+
 
 // ── CONSTANTS ────────────────────────────────────────────────────────────────
 const FB_CACHE_KEY = "sn_fb_questions";
 const FB_CACHE_TTL = 60 * 60 * 1000; // 1 hour in ms
 
-// ── STREAK HELPERS ───────────────────────────────────────────────────────────
-function getTodayStr() {
-  return new Date().toISOString().split("T")[0]; // "2026-05-10"
-}
-
-function loadStreak() {
-  try {
-    const raw = localStorage.getItem("sn_streak");
-    if (!raw) return { count: 0, lastDate: null };
-    return JSON.parse(raw);
-  } catch {
-    return { count: 0, lastDate: null };
-  }
-}
-
-function updateStreak() {
-  const today = getTodayStr();
-  const streak = loadStreak();
-  if (streak.lastDate === today) return streak; // already studied today
-
-  const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-  const yStr = yesterday.toISOString().split("T")[0];
-
-  const newCount = streak.lastDate === yStr ? streak.count + 1 : 1;
-  const updated = { count: newCount, lastDate: today };
-  localStorage.setItem("sn_streak", JSON.stringify(updated));
-  return updated;
-}
 
 // ── FIREBASE CACHE ───────────────────────────────────────────────────────────
 function getCachedQuestions() {
@@ -290,7 +260,7 @@ function getStreakTier(count) {
   return             { icon: "✨",  label: "Starting",           color: "#6b7280", msg: "Come back tomorrow to grow your streak!" };
 }
 
-function StreakBanner({ streak, t }) {
+function StreakBanner({ streak, t }) {                
   if (!streak || streak.count < 1) return null;
   const tier = getStreakTier(streak.count);
 
@@ -354,18 +324,19 @@ export default function App() {
   // ── NAVIGATION ──
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
+  
+  // ── STREAK (ADD HERE) ──
+  const { streak, updateStreak } = useStreak();
 
   // ── AUTH ──
-  const [user, setUser] = useState(null);
-  const [userScores, setUserScores] = useState([]);
-
+  const { user, userScores, saveScore,
+        handleGoogleLogin, handleLogout } = useAuth();
+  
   // ── QUESTIONS ──
   const [firebaseQuestions, setFirebaseQuestions] = useState([]);
   const [loadingFirebase, setLoadingFirebase] = useState(true);
 
-  // ── STREAK ──
-  const [streak, setStreak] = useState(loadStreak);
-
+  
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
@@ -454,15 +425,7 @@ export default function App() {
   }, []);
 
   // Auth + initial data
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) fetchUserScores(currentUser.uid);
-    });
-    fetchFirebaseQuestions();
-    return () => unsubscribe();
-  }, []);
-
+ 
   // Persist theme
   useEffect(() => {
     localStorage.setItem("theme", themeKey);
@@ -536,50 +499,7 @@ export default function App() {
     setLoadingFirebase(false);
   };
 
-  const fetchUserScores = async (uid) => {
-    try {
-      const q = query(
-        collection(db, "scores"),
-        where("uid", "==", uid),
-        orderBy("timestamp", "desc")
-      );
-      const snapshot = await getDocs(q);
-      setUserScores(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-    } catch (e) {
-      console.log("Error fetching scores:", e);
-    }
-  };
-
-  const saveScore = async (mode, subject, score, total, pct, qs, answers) => {
-    if (!user) return;
-    try {
-      const breakdown = qs.map((q, i) => ({
-        q: q.q, year: q.year, answer: q.answer,
-        userAnswer: answers[i] || null,
-        correct: answers[i] === q.answer,
-        exp: q.exp, options: q.options,
-      }));
-      await addDoc(collection(db, "scores"), {
-        uid: user.uid, name: user.displayName, email: user.email,
-        mode, subject, score, total, pct, breakdown,
-        timestamp: serverTimestamp(),
-      });
-      fetchUserScores(user.uid);
-    } catch (e) {
-      console.log("Error saving score:", e);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    try { await signInWithPopup(auth, googleProvider); }
-    catch (e) { console.log("Login error:", e); }
-  };
-
-  const handleLogout = async () => {
-    try { await signOut(auth); setUserScores([]); }
-    catch (e) { console.log("Logout error:", e); }
-  };
-
+  
   const sendFeedback = async () => {
     if (!feedbackMessage.trim()) { setFeedbackError("Please write a message first."); return; }
     setFeedbackSending(true);
@@ -609,7 +529,7 @@ export default function App() {
     setCbtDone(false); setCbtScoreSaved(false);
     setCbtTime(60 * 60); setCbtRunning(true);
     // Update streak when starting a session
-    setStreak(updateStreak());
+    updateStreak();
     goTo("cbt_quiz");
   };
 
@@ -619,7 +539,7 @@ export default function App() {
     setExamQs(qs); setExamIdx(0); setExamAnswers({});
     setExamDone(false); setExamScoreSaved(false);
     setExamTime(examMinutes * 60); setExamRunning(true);
-    setStreak(updateStreak());
+    updateStreak();
     goTo("exam_quiz");
   };
 

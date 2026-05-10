@@ -183,7 +183,7 @@ function getStreakTier(count) {
   if (count >= 14)  return { icon: "🔥🔥", label: "Dedicated",  color: "#f59e0b", msg: "2 weeks in — serious commitment!"       };
   if (count >= 7)   return { icon: "🔥",  label: "Week Streak", color: "#c8a84b", msg: "Full week! You're building a habit!"    };
   if (count >= 3)   return { icon: "⚡",  label: "Building",    color: "#16a34a", msg: "3+ days — keep the streak alive!"       };
-  return             { icon: "✨",  label: "Starting",           color: "#6b7280", msg: "Come back tomorrow to grow your streak!" };
+  return             { icon: "🌟",  label: "Starting",           color: "#6b7280", msg: "Come back tomorrow to grow your streak!" };
 }
 
 function StreakBanner({ streak, t }) {                

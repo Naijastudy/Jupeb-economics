@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function ExamSetup({
   t, data, activeSubject, firebaseQuestions, selectedYear,
@@ -75,3 +76,21 @@ export default function ExamSetup({
     </div>
   );
               }
+ExamSetup.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  activeSubject: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  firebaseQuestions: PropTypes.array.isRequired,
+  selectedYear: PropTypes.string,
+  examCount: PropTypes.number.isRequired,
+  setExamCount: PropTypes.func.isRequired,
+  examMinutes: PropTypes.number.isRequired,
+  setExamMinutes: PropTypes.func.isRequired,
+  onStart: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+  goldBtn: PropTypes.object.isRequired,
+  card: PropTypes.object.isRequired,
+};

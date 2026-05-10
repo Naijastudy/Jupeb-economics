@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import QuestionCard from "./QuestionCard";
 import Calculator from "../Calculator";
 import PropTypes from "prop-types";
+import { makeStyles } from "../styles/common";
 
 
 
@@ -50,6 +51,7 @@ export default function ExamQuiz({
   activeSubject, showCalc, setShowCalc,
   minimized, setMinimized, onBack, card, goldBtn,
 }) {
+  const s = makeStyles(t);
   const [showConfirm, setShowConfirm] = useState(false);
   
   const q = examQs[examIdx];
@@ -144,9 +146,10 @@ export default function ExamQuiz({
       <div style={{ padding: "16px" }}>
                
         {/* Progress bar */}
-        <div style={{ background: t.progressBg, borderRadius: 6, height: 5, marginBottom: 14 }}>
-          <div style={{ background: t.progressFill, height: 5, borderRadius: 6, width: `${(answered / examQs.length) * 100}%`, transition: "width 0.3s" }} />
-        </div>
+        <div style={s.progressBar}>
+  <div style={s.progressFill(
+    (answered / cbtQs.length) * 100
+  )} /> </div>
 
         {/* Question pills */}
         <QuizPills total={examQs.length} current={examIdx} answers={examAnswers} onSelect={setExamIdx} t={t} />

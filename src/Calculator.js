@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function Calculator({ t }) {
   const [input, setInput] = useState("");
@@ -151,3 +152,6 @@ export default function Calculator({ t }) {
     </div>
   );
         }
+Calculator.propTypes = {
+  t: PropTypes.object.isRequired,
+};

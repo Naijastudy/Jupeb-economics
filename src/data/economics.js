@@ -283,7 +283,7 @@ intro: [
       { year: "2021", q: "In a market economy, the problem of how to produce is determined by:", options: ["A. available technology and factor prices.", "B. government of the day.", "C. production possibility frontier.", "D. prices of output."], answer: "A", exp: "The 'how to produce' question in a market economy is a technical and economic decision. Producers choose the combination of resources (factors) and technology that minimizes costs based on current market prices." },
 { year: "2021", q: "Another name for Macroeconomics is:", options: ["A. Price theory.", "B. Income theory.", "C. Positive economics.", "D. Normative economics."], answer: "B", exp: "Macroeconomics is often called Income and Employment Theory because it focuses on the determination of national income, the overall level of employment, and general price levels across the entire economy." },
       ], 
-basic, file:[
+basic:[
           {
     year: "2025",
     q: "The reward for capital as a factor of production is",

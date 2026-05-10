@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { makeStyles } from "../styles/common";
 
 function RadioDot({ selected, color }) {
   return (

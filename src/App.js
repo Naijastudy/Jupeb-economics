@@ -722,7 +722,7 @@ export default function App() {
         selectedYear={selectedYear}
         examCount={examCount} setExamCount={setExamCount}
         examMinutes={examMinutes} setExamMinutes={setExamMinutes}
-        onStart={() => startExam(activeSubject, selectedYear, goTo)}
+        onStart={() => startExam(activeSubject, goTo, selectedYear)}
         onBack={goBack} goldBtn={goldBtn} card={card}
       />
     );

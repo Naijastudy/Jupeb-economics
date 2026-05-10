@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Feedback({
   t, feedbackName, setFeedbackName, feedbackMessage, setFeedbackMessage,
@@ -60,3 +61,18 @@ export default function Feedback({
     </div>
   );
   }
+Feedback.propTypes = {
+  t: PropTypes.object.isRequired,
+  feedbackName: PropTypes.string.isRequired,
+  setFeedbackName: PropTypes.func.isRequired,
+  feedbackMessage: PropTypes.string.isRequired,
+  setFeedbackMessage: PropTypes.func.isRequired,
+  feedbackSending: PropTypes.bool.isRequired,
+  feedbackSent: PropTypes.bool.isRequired,
+  setFeedbackSent: PropTypes.func.isRequired,
+  feedbackError: PropTypes.string,
+  onSend: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+  goldBtn: PropTypes.object.isRequired,
+  card: PropTypes.object.isRequired,
+};

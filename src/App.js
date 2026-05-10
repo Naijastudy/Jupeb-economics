@@ -17,57 +17,7 @@ import Header from "./components/Header";
 import QuestionCard from "./screens/QuestionCard";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
-
-
-
-
-// ── UTILS ────────────────────────────────────────────────────────────────────
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function shuffleOptions(q) {
-  const shuffled = shuffle([...q.options]);
-  const relabeled = shuffled.map(
-    (opt, i) => String.fromCharCode(65 + i) + opt.slice(1)
-  );
-  const newAnswer = String.fromCharCode(
-    65 + shuffled.findIndex((opt) => opt[0] === q.answer)
-  );
-  return { ...q, options: relabeled, answer: newAnswer };
-}
-
-function getAllQuestions(data, fbQuestions = [], subjectId = "economics", year = null) {
-  let all = [];
-  Object.entries(data.questions).forEach(([topicId, qs]) => {
-    qs.forEach((q) => {
-      if (!year || q.year === year) {
-        all.push(shuffleOptions({ ...q, topicId }));
-      }
-    });
-  });
-  fbQuestions
-    .filter((q) => q.subject === subjectId && (!year || q.year === year))
-    .forEach((q) => {
-      all.push(
-        shuffleOptions({
-          year: q.year || "2025",
-          q: q.q,
-          options: q.options,
-          answer: q.answer,
-          exp: q.exp,
-          topicId: q.topic || "intro",
-          fromFirebase: true,
-        })
-      );
-    });
-  return shuffle(all);
-}
+import useQuiz from "./hooks/useQuiz";
 
 function formatTime(seconds) {
   const h = Math.floor(seconds / 3600);
@@ -328,27 +278,29 @@ export default function App() {
   const [pqCourse, setPqCourse] = useState(null);
   const [pqTopic, setPqTopic] = useState(null);
 
-  // ── CBT ──
-  const [cbtQs, setCbtQs] = useState([]);
-  const [cbtIdx, setCbtIdx] = useState(0);
-  const [cbtAnswers, setCbtAnswers] = useState({});
-  const [cbtDone, setCbtDone] = useState(false);
-  const [cbtTime, setCbtTime] = useState(3600);
-  const [cbtRunning, setCbtRunning] = useState(false);
-  const [cbtScoreSaved, setCbtScoreSaved] = useState(false);
+  const {
+  // CBT
+  cbtQs, cbtIdx, setCbtIdx,
+  cbtAnswers, setCbtAnswers,
+  cbtDone, setCbtDone,
+  cbtTime, cbtRunning, setCbtRunning,
+  cbtScoreSaved, setCbtScoreSaved,
+  startCbt,
 
-  // ── EXAM ──
-  const [examCount, setExamCount] = useState(50);
-  const [examMinutes, setExamMinutes] = useState(60);
-  const [examQs, setExamQs] = useState([]);
-  const [examIdx, setExamIdx] = useState(0);
-  const [examAnswers, setExamAnswers] = useState({});
-  const [examDone, setExamDone] = useState(false);
-  const [examTime, setExamTime] = useState(3600);
-  const [examRunning, setExamRunning] = useState(false);
-  const [examScoreSaved, setExamScoreSaved] = useState(false);
-  const [showCalc, setShowCalc] = useState(false);
-  const [minimized, setMinimized] = useState(false);
+  // EXAM
+  examCount, setExamCount,
+  examMinutes, setExamMinutes,
+  examQs, examIdx, setExamIdx,
+  examAnswers, setExamAnswers,
+  examDone, setExamDone,
+  examTime, examRunning, setExamRunning,
+  examScoreSaved, setExamScoreSaved,
+  startExam,
+
+  // CALCULATOR
+  showCalc, setShowCalc,
+  minimized, setMinimized,
+} = useQuiz(firebaseQuestions, updateStreak);
 
   // ── SHARED STYLES ──
   const wrap = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
@@ -416,34 +368,6 @@ export default function App() {
     return () => window.removeEventListener("popstate", handleBack);
   }, [history]);
 
-  // CBT timer
-  useEffect(() => {
-    if (!cbtRunning || cbtDone) return;
-    const timer = setInterval(() => {
-      setCbtTime((prev) => {
-        if (prev === 180) alert("⚠️ 3 minutes remaining! Finish up and submit.");
-        if (prev <= 1) { setCbtRunning(false); setCbtDone(true); return 0; }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [cbtRunning, cbtDone]);
-
-  // Exam timer
-  useEffect(() => {
-    if (!examRunning || examDone) return;
-    const timer = setInterval(() => {
-      setExamTime((prev) => {
-        if (prev === 180) alert("⚠️ 3 minutes remaining! Finish up and submit.");
-        if (prev <= 1) { setExamRunning(false); setExamDone(true); return 0; }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [examRunning, examDone]);
-
- 
-
   
   const sendFeedback = async () => {
     if (!feedbackMessage.trim()) { setFeedbackError("Please write a message first."); return; }
@@ -465,28 +389,6 @@ export default function App() {
     setFeedbackSending(false);
   };
 
-  // ── QUIZ START HELPERS ──
-
-  const startCbt = (subject) => {
-    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id);
-    if (qs.length > 50) qs = qs.slice(0, 50);
-    setCbtQs(qs); setCbtIdx(0); setCbtAnswers({});
-    setCbtDone(false); setCbtScoreSaved(false);
-    setCbtTime(60 * 60); setCbtRunning(true);
-    // Update streak when starting a session
-    updateStreak();
-    goTo("cbt_quiz");
-  };
-
-  const startExam = (subject, year = null) => {
-    let qs = getAllQuestions(subject.data, firebaseQuestions, subject.id, year);
-    if (qs.length > examCount) qs = qs.slice(0, examCount);
-    setExamQs(qs); setExamIdx(0); setExamAnswers({});
-    setExamDone(false); setExamScoreSaved(false);
-    setExamTime(examMinutes * 60); setExamRunning(true);
-    updateStreak();
-    goTo("exam_quiz");
-  };
 
   const data = activeSubject ? activeSubject.data : null;
 
@@ -594,7 +496,7 @@ export default function App() {
             </div>
             <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📚📝</div>
             <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>
-              {totalQ}+ questions · CBT, Exam, Notes & Past Questions. 100% free.
+               · CBT, Exam, Notes & Past Questions. 100% free.
             </div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>
               💡 Tap ⋮ → "Add to Home Screen" to install as an app

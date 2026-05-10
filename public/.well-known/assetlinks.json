@@ -1,13 +1,8 @@
-{
-  "headers": [
-    {
-      "source": "/.well-known/assetlinks.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/json"
-        }
-      ]
-    }
-  ]
-}
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.studynaija.app",
+    "sha256_cert_fingerprints": ["60:5D:27:3A:F8:37:87:19:28:AE:E6:30:2C:9F:B5:D6:A9:76:AD:21:CF:B9:7B:92:82:B9:D0:CB:D7:9C:55:4A"]
+  }
+}]

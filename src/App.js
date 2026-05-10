@@ -279,22 +279,56 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
 }
 
 // ── STREAK BANNER (shown on home) ─────────────────────────────────────────────
+function getStreakTier(count) {
+  if (count >= 100) return { icon: "👑",  label: "Legend",      color: "#9333ea", msg: "100+ days — you're unstoppable!"         };
+  if (count >= 60)  return { icon: "🏆",  label: "Champion",    color: "#dc2626", msg: "2 months straight — incredible!"         };
+  if (count >= 30)  return { icon: "💎",  label: "Diamond",     color: "#0ea5e9", msg: "30-day streak — elite student energy!"   };
+  if (count >= 21)  return { icon: "🔥🔥🔥", label: "On Fire",  color: "#ea580c", msg: "3 weeks strong — keep the momentum!"    };
+  if (count >= 14)  return { icon: "🔥🔥", label: "Dedicated",  color: "#f59e0b", msg: "2 weeks in — serious commitment!"       };
+  if (count >= 7)   return { icon: "🔥",  label: "Week Streak", color: "#c8a84b", msg: "Full week! You're building a habit!"    };
+  if (count >= 3)   return { icon: "⚡",  label: "Building",    color: "#16a34a", msg: "3+ days — keep the streak alive!"       };
+  return             { icon: "✨",  label: "Starting",           color: "#6b7280", msg: "Come back tomorrow to grow your streak!" };
+}
+
 function StreakBanner({ streak, t }) {
   if (!streak || streak.count < 1) return null;
-  const fire = streak.count >= 7 ? "🔥🔥🔥" : streak.count >= 3 ? "🔥🔥" : "🔥";
+  const tier = getStreakTier(streak.count);
+
   return (
     <div style={{
-      background: t.keyBg, border: `1px solid ${t.keyBorder}`,
-      borderRadius: 12, padding: "10px 16px", marginBottom: 14,
-      display: "flex", alignItems: "center", gap: 10,
+      background: t.keyBg,
+      border: `1px solid ${tier.color}66`,
+      borderRadius: 12, padding: "12px 16px", marginBottom: 14,
+      display: "flex", alignItems: "center", gap: 12,
     }}>
-      <span style={{ fontSize: 22 }}>{fire}</span>
-      <div>
-        <div style={{ fontSize: 13, fontWeight: "bold", color: t.keyText }}>
-          {streak.count}-day study streak!
+      {/* Icon */}
+      <div style={{
+        width: 44, height: 44, borderRadius: 12,
+        background: `${tier.color}22`,
+        border: `1px solid ${tier.color}55`,
+        display: "flex", alignItems: "center",
+        justifyContent: "center", fontSize: 20, flexShrink: 0,
+      }}>
+        {tier.icon}
+      </div>
+
+      {/* Text */}
+      <div style={{ flex: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
+          <span style={{ fontSize: 15, fontWeight: "bold", color: tier.color }}>
+            {streak.count}-day streak
+          </span>
+          <span style={{
+            fontSize: 9, fontWeight: "bold", letterSpacing: 1,
+            color: tier.color, background: `${tier.color}22`,
+            border: `1px solid ${tier.color}44`,
+            borderRadius: 20, padding: "2px 7px", textTransform: "uppercase",
+          }}>
+            {tier.label}
+          </span>
         </div>
-        <div style={{ fontSize: 11, color: t.keyText, opacity: 0.8 }}>
-          Keep it up — come back tomorrow to continue
+        <div style={{ fontSize: 11, color: t.keyText, opacity: 0.85 }}>
+          {tier.msg}
         </div>
       </div>
     </div>
@@ -695,7 +729,7 @@ export default function App() {
             </div>
             <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📚📝</div>
             <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>
-               · CBT, Exam, Notes & Past Questions. 100% free.
+              {totalQ}+ questions · CBT, Exam, Notes & Past Questions. 100% free.
             </div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 8 }}>
               💡 Tap ⋮ → "Add to Home Screen" to install as an app
@@ -729,7 +763,8 @@ export default function App() {
         </div>
       </div>
     );
-  }
+    }
+
 
   // ── SUBJECT SELECT ──
   if (screen === "subject_select") {
@@ -816,7 +851,7 @@ export default function App() {
         onFeedback={() => goTo("feedback")}
       />
     );
-            }
+  }
 
   // ── GRADING ──
   if (screen === "grading") {
@@ -967,4 +1002,4 @@ export default function App() {
   }
 
   return null;
-          }
+                            }

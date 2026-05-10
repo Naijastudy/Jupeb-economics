@@ -238,7 +238,7 @@ export default function App() {
 
   // ── THEME ──
  const { t, themeKey, setThemeKey,
-        toggleTheme, card, goldBtn } = useApp();
+        toggleTheme, card, goldBtn, actualTheme } = useApp();
 
 
 const wrap = {

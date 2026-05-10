@@ -539,7 +539,7 @@ export default function App() {
       <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack} mode={pendingMode}
         onSelect={(subject) => {
           setActiveSubject(subject);
-          if (pendingMode === "cbt") startCbt(subject, goto);
+          if (pendingMode === "cbt") startCbt(subject, goTo);
           else if (pendingMode === "exam") goTo("year_select");
           else if (pendingMode === "notes") goTo("notes");
           else if (pendingMode === "pastq") goTo("pastq_courses");
@@ -722,7 +722,7 @@ export default function App() {
         selectedYear={selectedYear}
         examCount={examCount} setExamCount={setExamCount}
         examMinutes={examMinutes} setExamMinutes={setExamMinutes}
-        onStart={() => startExam(activeSubject, selectedYear, goto)}
+        onStart={() => startExam(activeSubject, selectedYear, goTo)}
         onBack={goBack} goldBtn={goldBtn} card={card}
       />
     );

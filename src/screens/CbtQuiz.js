@@ -1,5 +1,6 @@
 import React from "react";
 import QuestionCard from "./QuestionCard";
+import PropTypes from "prop-types";
 
 
 function RadioDot({ selected, color }) {
@@ -96,3 +97,22 @@ export default function CbtQuiz({
     </div>
   );
         }
+CbtQuiz.propTypes = {
+  t: PropTypes.object.isRequired,
+  cbtQs: PropTypes.array.isRequired,
+  cbtIdx: PropTypes.number.isRequired,
+  setCbtIdx: PropTypes.func.isRequired,
+  cbtAnswers: PropTypes.object.isRequired,
+  setCbtAnswers: PropTypes.func.isRequired,
+  cbtTime: PropTypes.number.isRequired,
+  cbtDone: PropTypes.bool.isRequired,
+  setCbtDone: PropTypes.func.isRequired,
+  setCbtRunning: PropTypes.func.isRequired,
+  activeSubject: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  onBack: PropTypes.func.isRequired,
+  card: PropTypes.object.isRequired,
+  goldBtn: PropTypes.object.isRequired,
+};

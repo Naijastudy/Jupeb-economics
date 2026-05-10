@@ -61,7 +61,7 @@ export function AppProvider({ children }) {
   return (
     <AppContext.Provider value={{
       t, themeKey, setThemeKey,
-      toggleTheme, card, goldBtn
+      toggleTheme, card, goldBtn, actualTheme,
     }}>
       {children}
     </AppContext.Provider>

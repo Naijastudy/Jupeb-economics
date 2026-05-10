@@ -183,7 +183,7 @@ function getStreakTier(count) {
   if (count >= 14)  return { icon: "🔥🔥", label: "Dedicated",  color: "#f59e0b", msg: "2 weeks in — serious commitment!"       };
   if (count >= 7)   return { icon: "🔥",  label: "Week Streak", color: "#c8a84b", msg: "Full week! You're building a habit!"    };
   if (count >= 3)   return { icon: "⚡",  label: "Building",    color: "#16a34a", msg: "3+ days — keep the streak alive!"       };
-  return             { icon: "✨",  label: "Starting",           color: "#6b7280", msg: "Come back tomorrow to grow your streak!" };
+  return             { icon: "🌟",  label: "Starting",           color: "#6b7280", msg: "Come back tomorrow to grow your streak!" };
 }
 
 function StreakBanner({ streak, t }) {                
@@ -444,7 +444,7 @@ const wrap = {
       firebaseQuestions.length;
 
     const homeCards = [
-      { id: "cbt",      icon: "⏱️", title: "CBT Practice",    desc: "1 hour · 50 random questions",       color: "#0d9488" },
+      { id: "cbt",      icon: "⏱️", title: "CBT mractice",    desc: "1 hour · 50 random questions",       color: "#0d9488" },
       { id: "exam",     icon: "📝", title: "Exam Mode",        desc: "Custom time & question count",       color: "#2563eb" },
       { id: "notes",    icon: "📖", title: "Study Notes",      desc: "Key points & full explanations",     color: "#16a34a" },
       { id: "pastq",    icon: "🗂️", title: "Past Questions",   desc: "Study by topic with solutions",      color: "#ea580c" },

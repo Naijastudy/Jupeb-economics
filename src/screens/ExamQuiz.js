@@ -51,9 +51,9 @@ export default function ExamQuiz({
   activeSubject, showCalc, setShowCalc,
   minimized, setMinimized, onBack, card, goldBtn,
 }) {
-  const s = makeStyles(t);
-  const [showConfirm, setShowConfirm] = useState(false);
   
+  const [showConfirm, setShowConfirm] = useState(false);
+  const s = makeStyles(t);
   const q = examQs[examIdx];
   if (!q) return null;
   const answered = Object.keys(examAnswers).length;

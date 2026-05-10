@@ -659,7 +659,7 @@ if (showSplash) {
         fontFamily: "Georgia, serif",
         padding: "40px 20px",
       }}>
-        {/* Logo circle */}
+        {/* Logo circle *//*}
         <div style={{
           width: 110,
           height: 110,
@@ -679,7 +679,7 @@ if (showSplash) {
           <span style={{ fontSize: 52 }}>🎓</span>
         </div>
 
-        {/* App name */}
+        {/* App name *//*}
         <div style={{
           fontSize: 32,
           fontWeight: "bold",
@@ -688,7 +688,7 @@ if (showSplash) {
           letterSpacing: 1,
         }}>StudyNaija</div>
 
-        {/* Tagline */}
+        {/* Tagline *//*}
         <div style={{
           fontSize: 14,
           color: themeKey === "dark" ? "#c8a84b" : "#1a3a5c",
@@ -703,7 +703,7 @@ if (showSplash) {
           marginBottom: 48,
         }}>Free · No Subscription</div>
 
-        {/* Progress bar */}
+        {/* Progress bar *//*}
         <div style={{
           width: "60%",
           maxWidth: 200,
@@ -724,7 +724,7 @@ if (showSplash) {
           }} />
         </div>
 
-        {/* Loading text */}
+        {/* Loading text *//*}
         <div style={{
           fontSize: 11,
           color: themeKey === "dark" ? "#666" : "#888",
@@ -735,8 +735,8 @@ if (showSplash) {
            progress < 90 ? "Almost ready..." : "Welcome! 🥳"}
         </div>
 
-        {/* Bottom credit */}
-        <div style={{
+        {/* Bottom credit *//*}
+        /*<div style={{
           position: "absolute",
           bottom: 30,
           fontSize: 10,
@@ -1023,4 +1023,4 @@ if (screen === "exam_quiz") {
 
 return null;
       
-}
+}*/

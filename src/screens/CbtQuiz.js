@@ -1,6 +1,7 @@
 import React from "react";
 import QuestionCard from "./QuestionCard";
 import PropTypes from "prop-types";
+import { makeStyles } from "../styles/common";
 
 
 function RadioDot({ selected, color }) {
@@ -47,6 +48,7 @@ export default function CbtQuiz({
   cbtDone, setCbtDone, setCbtRunning,
   activeSubject, onBack, card, goldBtn,
 }) {
+  const s = makeStyles(t);
   const q = cbtQs[cbtIdx];
   if (!q) return null;
   const answered = Object.keys(cbtAnswers).length;
@@ -69,9 +71,10 @@ export default function CbtQuiz({
       <div style={{ padding: "16px" }}>
 
         {/* Progress bar */}
-        <div style={{ background: t.progressBg, borderRadius: 6, height: 5, marginBottom: 14 }}>
-          <div style={{ background: t.progressFill, height: 5, borderRadius: 6, width: `${(answered / cbtQs.length) * 100}%`, transition: "width 0.3s" }} />
-        </div>
+       <div style={s.progressBar}>
+  <div style={s.progressFill(
+    (answered / cbtQs.length) * 100
+  )} /> </div>
 
         {/* Question pills */}
         <QuizPills total={cbtQs.length} current={cbtIdx} answers={cbtAnswers} onSelect={setCbtIdx} t={t} />

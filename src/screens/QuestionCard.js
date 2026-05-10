@@ -1,5 +1,4 @@
 import React from "react";
-import useQuiz from "../hooks/useQuiz";
 
 
 function RadioDot({ selected, color }) {

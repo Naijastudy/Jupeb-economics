@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
+import { useApp } from "./context/AppContext";
 import { subjects } from "./data/index";
 import { db, auth, googleProvider } from "./firebase";
 import useAuth from "./hooks/useAuth";
@@ -235,16 +236,16 @@ export default function App() {
   const [progress, setProgress] = useState(0);
 
   // ── THEME ──
-  const getSystemTheme = () =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+ const { t, themeKey, setThemeKey,
+        toggleTheme, card, goldBtn } = useApp();
 
-  const [themeKey, setThemeKey] = useState(
-    () => localStorage.getItem("theme") || "system"
-  );
-  const actualTheme = themeKey === "system" ? getSystemTheme() : themeKey;
-  const t = themes[actualTheme];
-  const toggleTheme = () => setThemeKey((k) => (k === "dark" ? "light" : "dark"));
 
+const wrap = {
+  minHeight: "100vh",
+  background: t.bg,
+  fontFamily: "Georgia, serif",
+  color: t.text
+};
   // ── NAVIGATION ──
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
@@ -304,10 +305,7 @@ export default function App() {
 } = useQuiz(firebaseQuestions, updateStreak);
 
   // ── SHARED STYLES ──
-  const wrap = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
-  const card = { background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 };
-  const goldBtn = { width: "100%", background: t.goldBtn, border: "none", borderRadius: 12, color: t.goldBtnText, fontSize: 14, fontWeight: "bold", padding: 14, cursor: "pointer", display: "block", marginBottom: 10 };
-
+ 
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {
     window.history.pushState({}, "");
@@ -347,20 +345,6 @@ export default function App() {
     }, 40);
     return () => clearInterval(interval);
   }, []);
-
- 
-  // Persist theme
-  useEffect(() => {
-    localStorage.setItem("theme", themeKey);
-  }, [themeKey]);
-
-  // System theme listener
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const listener = () => { if (themeKey === "system") setThemeKey("system"); };
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [themeKey]);
 
   // Hardware back button
   useEffect(() => {

@@ -113,7 +113,7 @@ export default function QuestionCard({ q, idx, answers, setAnswers, revealed, t,
   const userAns = answers[idx];
   return (
     <div style={{ background: t.bgCard, border: `1px solid ${revealed ? t.correctBorder : t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 }}>
-   <div style={s.tag}>
+   <div style={s.tag}> JUPEB {q.year}</div>
   <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: q.table || q.questionDiagram ? 10 : 16 }}>{q.q}</div>
       {q.table && <QuestionTable table={q.table} t={t} />}
       {q.questionDiagram && <QuestionMiniDiagram type={q.questionDiagram} t={t} />}

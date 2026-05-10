@@ -1,5 +1,6 @@
 import React from "react";
 import QuestionCard from "./QuestionCard";
+import useQuiz from "./hooks/useQuiz";
 
 function RadioDot({ selected, color }) {
   return (

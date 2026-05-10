@@ -1,4 +1,5 @@
 import React  from "react";
+import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Feedback from "../screens/Feedback";
 
@@ -217,3 +218,17 @@ Current: <span style={{ color: t.gold }}>
     </div>
   );
     }
+Settings.propTypes = {
+  t: PropTypes.object.isRequired,
+  goBack: PropTypes.func.isRequired,
+  goTo: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    photoURL: PropTypes.string,
+    displayName: PropTypes.string,
+  }),
+  themeKey: PropTypes.string.isRequired,
+  setThemeKey: PropTypes.func.isRequired,
+  goldBtn: PropTypes.object.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
+  onFeedback: PropTypes.func.isRequired,
+};

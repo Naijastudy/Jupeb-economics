@@ -149,7 +149,7 @@ export default function ExamQuiz({
         {/* Progress bar */}
         <div style={s.progressBar}>
   <div style={s.progressFill(
-    (answered / cbtQs.length) * 100
+    (answered / examQs.length) * 100
   )} /> </div>
 
         {/* Question pills */}

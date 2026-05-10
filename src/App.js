@@ -16,37 +16,10 @@ import Settings from "./screens/Settings";
 import Header from "./components/Header";
 import QuestionCard from "./screens/QuestionCard";
 import useStreak from "./hooks/useStreak";
+import useFirebase from "./hooks/useFirebase";
 
 
 
-// ── CONSTANTS ────────────────────────────────────────────────────────────────
-const FB_CACHE_KEY = "sn_fb_questions";
-const FB_CACHE_TTL = 60 * 60 * 1000; // 1 hour in ms
-
-
-// ── FIREBASE CACHE ───────────────────────────────────────────────────────────
-function getCachedQuestions() {
-  try {
-    const raw = localStorage.getItem(FB_CACHE_KEY);
-    if (!raw) return null;
-    const { data, timestamp } = JSON.parse(raw);
-    if (Date.now() - timestamp > FB_CACHE_TTL) return null; // expired
-    return data;
-  } catch {
-    return null;
-  }
-}
-
-function setCachedQuestions(data) {
-  try {
-    localStorage.setItem(
-      FB_CACHE_KEY,
-      JSON.stringify({ data, timestamp: Date.now() })
-    );
-  } catch {
-    // localStorage full — skip caching silently
-  }
-}
 
 // ── UTILS ────────────────────────────────────────────────────────────────────
 function shuffle(arr) {
@@ -333,9 +306,7 @@ export default function App() {
         handleGoogleLogin, handleLogout } = useAuth();
   
   // ── QUESTIONS ──
-  const [firebaseQuestions, setFirebaseQuestions] = useState([]);
-  const [loadingFirebase, setLoadingFirebase] = useState(true);
-
+ const { firebaseQuestions, loadingFirebase } = useFirebase();
   
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
@@ -424,7 +395,6 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Auth + initial data
  
   // Persist theme
   useEffect(() => {
@@ -472,32 +442,7 @@ export default function App() {
     return () => clearInterval(timer);
   }, [examRunning, examDone]);
 
-  // ── DATA FUNCTIONS ──
-
-  /**
-   * Fetches Firebase questions with localStorage caching.
-   * Saves ~50k reads/day on repeat visitors.
-   */
-  const fetchFirebaseQuestions = async () => {
-    // 1. Try cache first
-    const cached = getCachedQuestions();
-    if (cached) {
-      setFirebaseQuestions(cached);
-      setLoadingFirebase(false);
-      return;
-    }
-
-    // 2. Cache miss — hit Firestore
-    try {
-      const snapshot = await getDocs(query(collection(db, "questions")));
-      const questions = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      setFirebaseQuestions(questions);
-      setCachedQuestions(questions); // store for next hour
-    } catch (e) {
-      console.log("Error fetching Firebase questions:", e);
-    }
-    setLoadingFirebase(false);
-  };
+ 
 
   
   const sendFeedback = async () => {

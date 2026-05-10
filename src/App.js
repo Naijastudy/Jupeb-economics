@@ -444,7 +444,7 @@ const wrap = {
       firebaseQuestions.length;
 
     const homeCards = [
-      { id: "cbt",      icon: "⏱️", title: "CBT mractice",    desc: "1 hour · 50 random questions",       color: "#0d9488" },
+      { id: "cbt",      icon: "⏱️", title: "CBT Practice",    desc: "1 hour · 50 random questions",       color: "#0d9488" },
       { id: "exam",     icon: "📝", title: "Exam Mode",        desc: "Custom time & question count",       color: "#2563eb" },
       { id: "notes",    icon: "📖", title: "Study Notes",      desc: "Key points & full explanations",     color: "#16a34a" },
       { id: "pastq",    icon: "🗂️", title: "Past Questions",   desc: "Study by topic with solutions",      color: "#ea580c" },

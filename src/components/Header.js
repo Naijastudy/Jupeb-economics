@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Header({
   onBack,
   title,
@@ -84,3 +86,12 @@ export default function Header({
     </div>
   );
 }
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  sub: PropTypes.string,
+  onBack: PropTypes.func,
+  onToggleTheme: PropTypes.func,
+  right: PropTypes.node,
+  t: PropTypes.object.isRequired,
+};

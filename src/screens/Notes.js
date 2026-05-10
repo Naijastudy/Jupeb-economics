@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import PPCDiagram from "./diagrams/PPC";
 import DemandCurveDiagram from "./diagrams/DemandCurve";
 import PriceElasticityDiagram from "./diagrams/PricElasticity";
@@ -120,3 +121,35 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
     </div>
   );
                       }
+NotesCourses.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  activeSubject: PropTypes.shape({
+    name: PropTypes.string,
+  }),
+  onSelectCourse: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+};
+
+NotesTopics.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  noteCourse: PropTypes.shape({
+    title: PropTypes.string,
+    code: PropTypes.string,
+    topics: PropTypes.array,
+  }).isRequired,
+  onSelectTopic: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+};
+
+NotesView.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  noteTopic: PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+  }).isRequired,
+  onBack: PropTypes.func.isRequired,
+  card: PropTypes.object.isRequired,
+};

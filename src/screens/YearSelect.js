@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ALL_YEARS = [
   "2015", "2016", "2017", "2018", "2019",
@@ -72,3 +73,11 @@ export default function YearSelect({ t, data, firebaseQuestions, subjectId, onSe
     </div>
   );
 }
+YearSelect.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  firebaseQuestions: PropTypes.array.isRequired,
+  subjectId: PropTypes.string.isRequired,
+  onSelectYear: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+};

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function CircularFlow4Sector({ t }) {
   const [step, setStep] = useState(1);
@@ -177,3 +178,6 @@ export default function CircularFlow4Sector({ t }) {
     </div>
   );
           }
+CircularFlow4Sector.propTypes = {
+  t: PropTypes.object.isRequired,
+};

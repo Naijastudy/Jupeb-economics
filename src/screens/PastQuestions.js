@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const noteColors = ["#0d9488", "#2563eb", "#ea580c", "#7c3aed"];
 
@@ -208,3 +209,35 @@ export function PastQView({ t, data, pqTopic, onBack, card }) {
     </div>
   );
         }
+PastQCourses.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  activeSubject: PropTypes.shape({
+    name: PropTypes.string,
+  }),
+  onSelectCourse: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+};
+
+PastQTopics.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  pqCourse: PropTypes.shape({
+    title: PropTypes.string,
+    code: PropTypes.string,
+    topics: PropTypes.array,
+  }).isRequired,
+  onSelectTopic: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+};
+
+PastQView.propTypes = {
+  t: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  pqTopic: PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+  }).isRequired,
+  onBack: PropTypes.func.isRequired,
+  card: PropTypes.object.isRequired,
+};

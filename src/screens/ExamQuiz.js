@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import QuestionCard from "./QuestionCard";
 import Calculator from "../Calculator";
-import PropTypes from "prop-types";
 import { makeStyles } from "../styles/common";
 
 
@@ -53,7 +53,6 @@ export default function ExamQuiz({
 }) {
   
   const [showConfirm, setShowConfirm] = useState(false);
-  const s = makeStyles(t);
   const q = examQs[examIdx];
   if (!q) return null;
   const answered = Object.keys(examAnswers).length;
@@ -67,7 +66,9 @@ export default function ExamQuiz({
       setExamDone(true);
     }
   };
+   const s = makeStyles(t);
 
+  
   return (
     <div style={{ minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text }}>
       {/* Header */}

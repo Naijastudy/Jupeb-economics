@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import themes from "./themes";
-import { useApp } from "./context/AppContext";
 import { subjects } from "./data/index";
 import { db, auth, googleProvider } from "./firebase";
 import useAuth from "./hooks/useAuth";
@@ -20,6 +19,8 @@ import QuestionCard from "./screens/QuestionCard";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
 import useQuiz from "./hooks/useQuiz";
+import { useApp } from "./context/AppContext";
+
 
 function formatTime(seconds) {
   const h = Math.floor(seconds / 3600);

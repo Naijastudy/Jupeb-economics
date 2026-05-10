@@ -3,6 +3,7 @@ import themes from "./themes";
 import { subjects } from "./data/index";
 import { db, auth, googleProvider } from "./firebase";
 import useAuth from "./hooks/useAuth";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { grading } from "./data/economics";
 import ExamSetup from "./screens/ExamSetup";
 import YearSelect from "./screens/YearSelect";

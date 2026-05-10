@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { makeStyles } from "../styles/common";
 
 function RadioDot({ selected, color }) {
   return (
@@ -108,11 +109,12 @@ function QuestionMiniDiagram({ type, t }) {
 }
 
 export default function QuestionCard({ q, idx, answers, setAnswers, revealed, t, showResult }) {
+  const s = makeStyles(t);
   const userAns = answers[idx];
   return (
     <div style={{ background: t.bgCard, border: `1px solid ${revealed ? t.correctBorder : t.border}`, borderRadius: 16, padding: "18px 16px", marginBottom: 14 }}>
-      <div style={{ fontSize: 10, color: t.tagColor, letterSpacing: 2, marginBottom: 10 }}>JUPEB {q.year}</div>
-      <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: q.table || q.questionDiagram ? 10 : 16 }}>{q.q}</div>
+   <div style={s.tag}> JUPEB {q.year}</div>
+  <div style={{ fontSize: 14, lineHeight: 1.7, color: t.text, marginBottom: q.table || q.questionDiagram ? 10 : 16 }}>{q.q}</div>
       {q.table && <QuestionTable table={q.table} t={t} />}
       {q.questionDiagram && <QuestionMiniDiagram type={q.questionDiagram} t={t} />}
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -132,8 +134,7 @@ export default function QuestionCard({ q, idx, answers, setAnswers, revealed, t,
         })}
       </div>
       {revealed && (
-        <div style={{ marginTop: 14, background: t.expBg, borderRadius: 10, padding: "14px", fontSize: 13, color: t.expText, lineHeight: 1.7, borderLeft: `3px solid ${t.correctBorder}` }}>
-          💡 <strong>Explanation:</strong> {q.exp}
+      <div style={s.explanation}>    💡 <strong>Explanation:</strong> {q.exp}
         </div>
       )}
     </div>

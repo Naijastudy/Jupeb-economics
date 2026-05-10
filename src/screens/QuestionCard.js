@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 
 function RadioDot({ selected, color }) {
   return (
@@ -139,3 +139,20 @@ export default function QuestionCard({ q, idx, answers, setAnswers, revealed, t,
     </div>
   );
     }
+QuestionCard.propTypes = {
+  q: PropTypes.shape({
+    q: PropTypes.string.isRequired,
+    year: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    answer: PropTypes.string.isRequired,
+    exp: PropTypes.string,
+    table: PropTypes.object,
+    questionDiagram: PropTypes.string,
+  }).isRequired,
+  idx: PropTypes.number.isRequired,
+  answers: PropTypes.object.isRequired,
+  setAnswers: PropTypes.func.isRequired,
+  revealed: PropTypes.bool.isRequired,
+  t: PropTypes.object.isRequired,
+  showResult: PropTypes.bool.isRequired,
+};

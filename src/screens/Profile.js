@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 function RadioDot({ selected, color }) {
   return (
@@ -177,3 +178,17 @@ export default function Profile({
     </div>
   );
   }
+Profile.propTypes = {
+  t: PropTypes.object.isRequired,
+  user: PropTypes.shape({
+    displayName: PropTypes.string,
+    email: PropTypes.string,
+    photoURL: PropTypes.string,
+  }),
+  userScores: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onLogin: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+  goldBtn: PropTypes.object.isRequired,
+  card: PropTypes.object.isRequired,
+};

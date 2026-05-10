@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QuestionCard from "./QuestionCard";
 import Calculator from "../Calculator";
+import PropTypes from "prop-types";
 
 
 
@@ -229,3 +230,26 @@ export default function ExamQuiz({
   );
 }
   
+ExamQuiz.propTypes = {
+  t: PropTypes.object.isRequired,
+  examQs: PropTypes.array.isRequired,
+  examIdx: PropTypes.number.isRequired,
+  setExamIdx: PropTypes.func.isRequired,
+  examAnswers: PropTypes.object.isRequired,
+  setExamAnswers: PropTypes.func.isRequired,
+  examTime: PropTypes.number.isRequired,
+  examDone: PropTypes.bool.isRequired,
+  setExamDone: PropTypes.func.isRequired,
+  setExamRunning: PropTypes.func.isRequired,
+  activeSubject: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  showCalc: PropTypes.bool.isRequired,
+  setShowCalc: PropTypes.func.isRequired,
+  minimized: PropTypes.bool.isRequired,
+  setMinimized: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+  card: PropTypes.object.isRequired,
+  goldBtn: PropTypes.object.isRequired,
+};

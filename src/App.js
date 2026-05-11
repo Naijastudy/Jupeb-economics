@@ -15,6 +15,9 @@ import Settings from "./screens/Settings";
 import Header from "./components/Header";
 import { HomeCardSkeleton } from "./components/Skeleton";
 import QuestionCard from "./screens/QuestionCard";
+import useOnlineStatus from "./hooks/useOnlineStatus";
+import OfflineIndicator from "./components/OfflineIndicator";
+import OfflineFallback from "./components/OfflineFallback";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
 import useQuiz from "./hooks/useQuiz";
@@ -246,6 +249,7 @@ const wrap = {
   fontFamily: "Georgia, serif",
   color: t.text
 };
+  const { isOnline, wasOffline } = useOnlineStatus();
   // ── NAVIGATION ──
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
@@ -258,7 +262,10 @@ const wrap = {
         handleGoogleLogin, handleLogout } = useAuth();
   
   // ── QUESTIONS ──
- const { firebaseQuestions, loadingFirebase } = useFirebase();
+const { firebaseQuestions,
+        loadingFirebase,
+        fetchError,
+        refetch } = useFirebase();
   
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
@@ -304,7 +311,7 @@ const wrap = {
   minimized, setMinimized,
 } = useQuiz(firebaseQuestions, updateStreak);
 
-  // ── SHARED STYLES ──
+  
  
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {
@@ -382,6 +389,12 @@ const wrap = {
   // ═══════════════════════════════════════════════════════════════════════════
 
   // ── SPLASH ──
+  if (!isOnline && fetchError &&
+    firebaseQuestions.length === 0) {
+  return (
+    <OfflineFallback onRetry={refetch} />
+  );
+  }
   if (showSplash) {
     const isDark = actualTheme === "dark";
     return (
@@ -452,8 +465,12 @@ const wrap = {
     ];
 
     return (
-      <div style={wrap}>
-        {/* Header */}
+     <div style={wrap}>
+  <OfflineIndicator
+    isOnline={isOnline}
+    wasOffline={wasOffline}
+  />
+    {/* Header */}
         <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>

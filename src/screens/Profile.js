@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ScreenWrapper from "../components/ScreenWrapper";
 import PropTypes from "prop-types";
 
 function RadioDot({ selected, color }) {
@@ -15,8 +16,8 @@ export default function Profile({
   const [expandedScore, setExpandedScore] = useState(null);
 
   return (
-    <div style={{ minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text }}>
-      <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 100 }}>
+   <ScreenWrapper>
+    <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 100 }}>
         <button onClick={onBack} style={{ background: "none", border: "none", color: "#fff", fontSize: 22, cursor: "pointer", padding: 0 }}>←</button>
         <div style={{ flex: 1 }}>
           <div style={{ fontSize: 9, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
@@ -175,7 +176,7 @@ export default function Profile({
           </>
         )}
       </div>
-    </div>
+    </ScreenWrapper>
   );
   }
 Profile.propTypes = {

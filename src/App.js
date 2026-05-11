@@ -13,6 +13,7 @@ import { NotesCourses, NotesTopics, NotesView } from "./screens/Notes";
 import { PastQCourses, PastQTopics, PastQView } from "./screens/PastQuestions";
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
+import { HomeCardSkeleton } from "./components/Skeleton";
 import QuestionCard from "./screens/QuestionCard";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
@@ -488,9 +489,11 @@ const wrap = {
           </div>
 
           {/* Cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {homeCards.map((c) => (
-              <button
+        {loadingFirebase ? (
+  <HomeCardSkeleton />
+) : (
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+    {homeCards.map((c) => (      <button
                 key={c.id}
                 onClick={() => {
                   if (c.id === "grading") goTo("grading");
@@ -505,7 +508,7 @@ const wrap = {
               </button>
             ))}
           </div>
-
+)}
           <div style={{ textAlign: "center", color: t.textMuted, fontSize: 11, marginTop: 20, lineHeight: 2 }}>
             Based on JUPEB syllabus topics ✔<br />
             <a href="https://studynaija.vercel.app/" style={{ color: t.gold, textDecoration: "none" }}>studynaija.vercel.app</a><br />

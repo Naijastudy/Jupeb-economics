@@ -392,8 +392,10 @@ const wrap = {
   const { streak, updateStreak } = useStreak();
 
   // ── AUTH ──
-  const { user, userScores, saveScore,
-        handleGoogleLogin, handleLogout } = useAuth();
+ const { user, userScores, saveScore,
+        authLoading,
+        handleGoogleLogin,
+        handleLogout } = useAuth();
   
   // ── QUESTIONS ──
 const { firebaseQuestions,
@@ -401,16 +403,15 @@ const { firebaseQuestions,
         fetchError,
         refetch } = useFirebase();
   
-  const {
+ const {
   permission,
-  fcmToken,
   settings: notifSettings,
   loading: notifLoading,
   error: notifError,
   requestPermission,
   disableNotifications,
   updateSettings: updateNotifSettings,
-} = useNotifications(user);
+} = useNotifications();
   
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
@@ -540,6 +541,35 @@ const { firebaseQuestions,
     <OfflineFallback onRetry={refetch} />
   );
   }
+  // Wait for auth to restore
+if (authLoading) {
+  return (
+    <div style={{
+      minHeight: "100vh",
+      background: "#0a0f0a",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      fontFamily: "Georgia, serif",
+    }}>
+      <div style={{
+        fontSize: 52,
+        marginBottom: 16,
+        animation: "spin 1s linear infinite",
+      }}>
+        🎓
+      </div>
+      <div style={{
+        fontSize: 13,
+        color: "#c8a84b",
+        letterSpacing: 2,
+      }}>
+        Restoring your account...
+      </div>
+    </div>
+  );
+}
   if (showSplash) {
     const isDark = actualTheme === "dark";
     return (

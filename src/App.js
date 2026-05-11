@@ -270,6 +270,17 @@ const { firebaseQuestions,
         fetchError,
         refetch } = useFirebase();
   
+  const {
+  permission,
+  fcmToken,
+  settings: notifSettings,
+  loading: notifLoading,
+  error: notifError,
+  requestPermission,
+  disableNotifications,
+  updateSettings: updateNotifSettings,
+} = useNotifications(user);
+  
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
@@ -614,6 +625,21 @@ const { firebaseQuestions,
       </div>
     );
   }
+// ── NOTIFICATIONS ──
+if (screen === "notifications") {
+  return (
+    <NotificationSettings
+      onBack={goBack}
+      permission={permission}
+      settings={notifSettings}
+      loading={notifLoading}
+      error={notifError}
+      onRequestPermission={requestPermission}
+      onDisable={disableNotifications}
+      onUpdateSettings={updateNotifSettings}
+    />
+  );
+}
 
   // ── SETTINGS ──
   if (screen === "settings") {

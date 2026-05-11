@@ -22,6 +22,9 @@ import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
 import useQuiz from "./hooks/useQuiz";
 import { useApp } from "./context/AppContext";
+import useNotifications from "./hooks/useNotifications";
+import NotificationSettings
+  from "./screens/NotificationSettings";
 
 
 function formatTime(seconds) {

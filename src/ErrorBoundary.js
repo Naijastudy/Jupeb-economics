@@ -97,3 +97,4 @@ render() {
   }
   return this.props.children;
 }
+}

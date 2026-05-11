@@ -99,19 +99,48 @@ export default function Settings({
         </div>
 
         {/* SUPPORT */}
-        <div style={{ background: t.exBg, borderRadius: 12, padding: 12, marginBottom: 12 }}>
-          <div style={{ color: t.heading, fontSize: 15, marginBottom: 8 }}>
-            SUPPORT
-          </div>
+<div style={{
+  background: t.exBg,
+  borderRadius: 12,
+  padding: 12,
+  marginBottom: 12
+}}>
+  <div style={{
+    color: t.heading,
+    fontSize: 15,
+    marginBottom: 8
+  }}>
+    SUPPORT
+  </div>
 
-          <button
-            onClick={onFeedback}
-            style={{ ...goldBtn, marginTop: 8 }}
-          >
-            📤 Send Feedback / Report Issue
-          </button>
-        </div>
+  <div
+    onClick={() => goTo("notifications")}
+    style={{
+      padding: 10,
+      color: t.text,
+      cursor: "pointer",
+      fontSize: 13,
+      display: "flex",
+      alignItems: "center",
+      gap: 10,
+      marginBottom: 8,
+    }}
+  >
+    <span>🔔</span>
+    <span>Notification Settings</span>
+    <span style={{
+      marginLeft: "auto",
+      color: t.gold,
+    }}>›</span>
+  </div>
 
+  <button
+    onClick={onFeedback}
+    style={{ ...goldBtn, marginTop: 8 }}
+  >
+    📤 Send Feedback / Report Issue
+  </button>
+</div>
         {/* ABOUT */}
         <div style={{ background: t.exBg, borderRadius: 12, padding: 12, marginBottom: 16 }}>
           <div style={{ color: t.heading, fontSize: 13, marginBottom: 8 }}>

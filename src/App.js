@@ -368,62 +368,33 @@ function StreakBanner({ streak, t }) {
 }
 
 // ── APP ───────────────────────────────────────────────────────────────────────
-export default function App() {
+  export default function App() {
+
+  // ── SPLASH ──
   const [showSplash, setShowSplash] = useState(true);
   const [progress, setProgress] = useState(0);
 
   // ── THEME ──
- const { t, themeKey, setThemeKey,
-        toggleTheme, card, goldBtn, actualTheme } = useApp();
+  const { t, themeKey, setThemeKey,
+          toggleTheme, card, goldBtn,
+          actualTheme } = useApp();
 
+  // ── WRAP STYLE ──
+  const wrap = {
+    minHeight: "100vh",
+    background: t.bg,
+    fontFamily: "Georgia, serif",
+    color: t.text,
+  };
 
-const wrap = {
-  minHeight: "100vh",
-  background: t.bg,
-  fontFamily: "Georgia, serif",
-  color: t.text
-};
-  const { isOnline, wasOffline } = useOnlineStatus();
   // ── NAVIGATION ──
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
-  
-  // ── STREAK (ADD HERE) ──
- const { streak, updateStreak } = useStreak(user);
-  
-  // ── AUTH ──
- const { user, userScores, saveScore,
-        authLoading,
-        handleGoogleLogin,
-        handleLogout } = useAuth();
-  
-  // ── QUESTIONS ──
-const { firebaseQuestions,
-        loadingFirebase,
-        fetchError,
-        refetch } = useFirebase();
-  
- const {
-  permission,
-  settings: notifSettings,
-  loading: notifLoading,
-  error: notifError,
-  requestPermission,
-  disableNotifications,
-  updateSettings: updateNotifSettings,
-} = useNotifications();
-  
+
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
-
-  // ── FEEDBACK ──
-  const [feedbackName, setFeedbackName] = useState("");
-  const [feedbackMessage, setFeedbackMessage] = useState("");
-  const [feedbackSending, setFeedbackSending] = useState(false);
-  const [feedbackSent, setFeedbackSent] = useState(false);
-  const [feedbackError, setFeedbackError] = useState("");
 
   // ── NOTES ──
   const [noteCourse, setNoteCourse] = useState(null);
@@ -433,31 +404,59 @@ const { firebaseQuestions,
   const [pqCourse, setPqCourse] = useState(null);
   const [pqTopic, setPqTopic] = useState(null);
 
+  // ── FEEDBACK ──
+  const [feedbackName, setFeedbackName] = useState("");
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [feedbackSending, setFeedbackSending] = useState(false);
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  const [feedbackError, setFeedbackError] = useState("");
+
+  // ── HOOKS ──
+
+  // 1. Online status
+  const { isOnline, wasOffline } = useOnlineStatus();
+
+  // 2. Auth (defines user first!)
+  const { user, userScores, saveScore,
+          authLoading, handleGoogleLogin,
+          handleLogout } = useAuth();
+
+  // 3. Streak (needs user)
+  const { streak, updateStreak } = useStreak(user);
+
+  // 4. Firebase questions
+  const { firebaseQuestions, loadingFirebase,
+          fetchError, refetch } = useFirebase();
+
+  // 5. Quiz (needs firebaseQuestions + updateStreak)
   const {
-  // CBT
-  cbtQs, cbtIdx, setCbtIdx,
-  cbtAnswers, setCbtAnswers,
-  cbtDone, setCbtDone,
-  cbtTime, cbtRunning, setCbtRunning,
-  cbtScoreSaved, setCbtScoreSaved,
-  startCbt,
+    cbtQs, cbtIdx, setCbtIdx,
+    cbtAnswers, setCbtAnswers,
+    cbtDone, setCbtDone,
+    cbtTime, cbtRunning, setCbtRunning,
+    cbtScoreSaved, setCbtScoreSaved,
+    startCbt,
+    examCount, setExamCount,
+    examMinutes, setExamMinutes,
+    examQs, examIdx, setExamIdx,
+    examAnswers, setExamAnswers,
+    examDone, setExamDone,
+    examTime, examRunning, setExamRunning,
+    examScoreSaved, setExamScoreSaved,
+    startExam,
+    showCalc, setShowCalc,
+    minimized, setMinimized,
+  } = useQuiz(firebaseQuestions, updateStreak);
 
-  // EXAM
-  examCount, setExamCount,
-  examMinutes, setExamMinutes,
-  examQs, examIdx, setExamIdx,
-  examAnswers, setExamAnswers,
-  examDone, setExamDone,
-  examTime, examRunning, setExamRunning,
-  examScoreSaved, setExamScoreSaved,
-  startExam,
-
-  // CALCULATOR
-  showCalc, setShowCalc,
-  minimized, setMinimized,
-} = useQuiz(firebaseQuestions, updateStreak);
-
-  
+  // 6. Notifications
+  const { permission,
+          settings: notifSettings,
+          loading: notifLoading,
+          error: notifError,
+          requestPermission,
+          disableNotifications,
+          updateSettings: updateNotifSettings,
+  } = useNotifications();
  
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {

@@ -540,89 +540,119 @@ function StreakBanner({ streak, t }) {
     <OfflineFallback onRetry={refetch} />
   );
   }
-  // Wait for auth to restore
-if (authLoading) {
+// Show splash while EITHER
+// loading or auth restoring
+if (showSplash || authLoading) {
+  const isDark = actualTheme === "dark";
   return (
     <div style={{
       minHeight: "100vh",
-      background: "#0a0f0a",
+      background: isDark
+        ? "linear-gradient(135deg,#0a1a0a 0%,#1a3a1a 50%,#0d2b0d 100%)"
+        : "linear-gradient(135deg,#f0f4f8 0%,#e8f0e8 50%,#f5f0e8 100%)",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
       fontFamily: "Georgia, serif",
+      padding: "40px 20px",
     }}>
       <div style={{
-        fontSize: 52,
-        marginBottom: 16,
-        animation: "spin 1s linear infinite",
+        width: 110, height: 110,
+        borderRadius: "50%",
+        background: isDark
+          ? "linear-gradient(135deg,#1e4d1e,#2d6a2d)"
+          : "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
+        border: `3px solid ${isDark ? "#c8a84b" : "#1a3a5c"}`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 24,
+        boxShadow: isDark
+          ? "0 0 30px #c8a84b44"
+          : "0 0 30px #1a3a5c44",
       }}>
-        🎓
+        <span style={{ fontSize: 52 }}>🎓</span>
       </div>
+
       <div style={{
-        fontSize: 13,
-        color: "#c8a84b",
-        letterSpacing: 2,
+        fontSize: 32, fontWeight: "bold",
+        color: isDark ? "#f0ece0" : "#1a1a1a",
+        marginBottom: 6, letterSpacing: 1,
       }}>
-        Restoring your account...
+        StudyNaija
+      </div>
+
+      <div style={{
+        fontSize: 14,
+        color: isDark ? "#c8a84b" : "#1a3a5c",
+        marginBottom: 6,
+        letterSpacing: 2,
+        textTransform: "uppercase",
+      }}>
+        JUPEB Exam Prep
+      </div>
+
+      <div style={{
+        fontSize: 12,
+        color: isDark ? "#8a9a8a" : "#666",
+        marginBottom: 48,
+      }}>
+        Free · No Subscription
+      </div>
+
+      {/* Progress bar */}
+      <div style={{
+        width: "60%", maxWidth: 200,
+        height: 4,
+        background: isDark ? "#1e2e1e" : "#ddd8cc",
+        borderRadius: 10,
+        overflow: "hidden",
+        marginBottom: 16,
+      }}>
+        <div style={{
+          height: "100%",
+          width: authLoading
+            ? "70%"        // stays at 70% while auth loads
+            : `${progress}%`, // progress bar when splash
+          background: isDark
+            ? "linear-gradient(90deg,#c8a84b,#f0d080)"
+            : "linear-gradient(90deg,#1a3a5c,#2563eb)",
+          borderRadius: 10,
+          transition: "width 0.05s linear",
+        }} />
+      </div>
+
+      <div style={{
+        fontSize: 11,
+        color: isDark ? "#666" : "#888",
+        letterSpacing: 1,
+      }}>
+        {authLoading
+          ? "Restoring your account... 👤"
+          : progress < 40
+          ? "Loading questions..."
+          : progress < 70
+          ? "Preparing study materials..."
+          : progress < 90
+          ? "Almost ready..."
+          : "Welcome! 🥳"}
+      </div>
+
+      <div style={{
+        position: "absolute",
+        bottom: 30,
+        fontSize: 10,
+        color: isDark ? "#444" : "#999",
+        textAlign: "center",
+        lineHeight: 1.8,
+      }}>
+        studynaija.vercel.app
+        <br />© 2026 StudyNaija
       </div>
     </div>
   );
 }
-  if (showSplash) {
-    const isDark = actualTheme === "dark";
-    return (
-      <div style={{
-        minHeight: "100vh",
-        background: isDark
-          ? "linear-gradient(135deg,#0a1a0a 0%,#1a3a1a 50%,#0d2b0d 100%)"
-          : "linear-gradient(135deg,#f0f4f8 0%,#e8f0e8 50%,#f5f0e8 100%)",
-        display: "flex", flexDirection: "column",
-        alignItems: "center", justifyContent: "center",
-        fontFamily: "Georgia, serif", padding: "40px 20px",
-      }}>
-        <div style={{
-          width: 110, height: 110, borderRadius: "50%",
-          background: isDark
-            ? "linear-gradient(135deg,#1e4d1e,#2d6a2d)"
-            : "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
-          border: `3px solid ${isDark ? "#c8a84b" : "#1a3a5c"}`,
-          display: "flex", alignItems: "center", justifyContent: "center",
-          marginBottom: 24,
-          boxShadow: isDark ? "0 0 30px #c8a84b44" : "0 0 30px #1a3a5c44",
-        }}>
-          <span style={{ fontSize: 52 }}>🎓</span>
-        </div>
-        <div style={{ fontSize: 32, fontWeight: "bold", color: isDark ? "#f0ece0" : "#1a1a1a", marginBottom: 6, letterSpacing: 1 }}>
-          StudyNaija
-        </div>
-        <div style={{ fontSize: 14, color: isDark ? "#c8a84b" : "#1a3a5c", marginBottom: 6, letterSpacing: 2, textTransform: "uppercase" }}>
-          JUPEB Exam Prep
-        </div>
-        <div style={{ fontSize: 12, color: isDark ? "#8a9a8a" : "#666", marginBottom: 48 }}>
-          Free · No Subscription
-        </div>
-        <div style={{ width: "60%", maxWidth: 200, height: 4, background: isDark ? "#1e2e1e" : "#ddd8cc", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
-          <div style={{
-            height: "100%", width: `${progress}%`,
-            background: isDark
-              ? "linear-gradient(90deg,#c8a84b,#f0d080)"
-              : "linear-gradient(90deg,#1a3a5c,#2563eb)",
-            borderRadius: 10, transition: "width 0.05s linear",
-          }} />
-        </div>
-        <div style={{ fontSize: 11, color: isDark ? "#666" : "#888", letterSpacing: 1 }}>
-          {progress < 40 ? "Loading questions..." :
-           progress < 70 ? "Preparing study materials..." :
-           progress < 90 ? "Almost ready..." : "Welcome! 🥳"}
-        </div>
-        <div style={{ position: "absolute", bottom: 30, fontSize: 10, color: isDark ? "#444" : "#999", textAlign: "center", lineHeight: 1.8 }}>
-          studynaija.vercel.app<br />© 2026 StudyNaija
-        </div>
-      </div>
-    );
-  }
-
   // ── HOME ──
   if (screen === "home") {
     const totalQ =

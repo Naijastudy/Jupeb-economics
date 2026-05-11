@@ -3,7 +3,9 @@ import { db, auth, googleProvider } from "../firebase";
 import {
   signInWithPopup,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+  setPersistence,
+  browserLocalPersistence,
 } from "firebase/auth";
 import {
   collection,
@@ -12,19 +14,37 @@ import {
   query,
   where,
   getDocs,
-  orderBy
+  orderBy,
 } from "firebase/firestore";
 
 export default function useAuth() {
   const [user, setUser] = useState(null);
   const [userScores, setUserScores] = useState([]);
+  const [authLoading, setAuthLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) fetchUserScores(currentUser.uid);
-    });
-    return () => unsubscribe();
+    // Set persistence first
+    setPersistence(auth, browserLocalPersistence)
+      .then(() => {
+        // Then listen for auth changes
+        const unsubscribe = onAuthStateChanged(
+          auth,
+          async (currentUser) => {
+            setUser(currentUser);
+            if (currentUser) {
+              await fetchUserScores(currentUser.uid);
+            } else {
+              setUserScores([]);
+            }
+            setAuthLoading(false);
+          }
+        );
+        return () => unsubscribe();
+      })
+      .catch((e) => {
+        console.log("Persistence error:", e);
+        setAuthLoading(false);
+      });
   }, []);
 
   const fetchUserScores = async (uid) => {
@@ -36,7 +56,10 @@ export default function useAuth() {
       );
       const snapshot = await getDocs(q);
       setUserScores(
-        snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
       );
     } catch (e) {
       console.log("Error fetching scores:", e);
@@ -44,24 +67,29 @@ export default function useAuth() {
   };
 
   const saveScore = async (
-    mode, subject, score, total, pct, qs, answers, activeSubject
+    mode, subject, score,
+    total, pct, qs, answers
   ) => {
     if (!user) return;
     try {
       const breakdown = qs.map((q, i) => ({
-        q: q.q, year: q.year, answer: q.answer,
+        q: q.q,
+        year: q.year,
+        answer: q.answer,
         userAnswer: answers[i] || null,
         correct: answers[i] === q.answer,
-        exp: q.exp, options: q.options,
+        exp: q.exp,
+        options: q.options,
       }));
       await addDoc(collection(db, "scores"), {
         uid: user.uid,
         name: user.displayName,
         email: user.email,
-        mode, subject, score, total, pct, breakdown,
+        mode, subject, score,
+        total, pct, breakdown,
         timestamp: serverTimestamp(),
       });
-      fetchUserScores(user.uid);
+      await fetchUserScores(user.uid);
     } catch (e) {
       console.log("Error saving score:", e);
     }
@@ -69,6 +97,9 @@ export default function useAuth() {
 
   const handleGoogleLogin = async () => {
     try {
+      await setPersistence(
+        auth, browserLocalPersistence
+      );
       await signInWithPopup(auth, googleProvider);
     } catch (e) {
       console.log("Login error:", e);
@@ -78,6 +109,7 @@ export default function useAuth() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
+      setUser(null);
       setUserScores([]);
     } catch (e) {
       console.log("Logout error:", e);
@@ -87,8 +119,9 @@ export default function useAuth() {
   return {
     user,
     userScores,
+    authLoading,
     saveScore,
     handleGoogleLogin,
     handleLogout,
   };
-        }
+}

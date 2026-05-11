@@ -37,7 +37,9 @@ function formatTime(seconds) {
 }
 
 // ── RESULT SCREEN ─────────────────────────────────────────────────────────────
-function ResultScreen({ qs, answers, t, onRetry, onHome }) {
+// Replace your existing ResultScreen function in App (3).js with this one.
+
+function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) {
   const correct = qs.filter((q, i) => answers[i] === q.answer).length;
   const skipped = qs.filter((_, i) => !answers[i]).length;
   const wrong = qs.length - correct - skipped;
@@ -55,10 +57,60 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
     cursor: "pointer", display: "block", marginBottom: 10,
   };
 
+  // ── SHARE ──────────────────────────────────────────────────────────────────
+  const emoji =
+    pct >= 70 ? "🏆" :
+    pct >= 50 ? "📚" : "💪";
+
+  const gradeShort =
+    pct >= 70 ? "Grade A" :
+    pct >= 60 ? "Grade B" :
+    pct >= 50 ? "Grade C" :
+    pct >= 45 ? "Grade D" :
+    pct >= 40 ? "Grade E" : "Keep pushing";
+
+  const subjectName = activeSubject?.name || "JUPEB";
+  const modeLabel   = mode === "CBT" ? "CBT Practice" : "Exam Mode";
+
+  const shareText =
+    `${emoji} I just scored ${pct}% (${correct}/${qs.length}) on ` +
+    `${subjectName} ${modeLabel} — ${gradeShort}!\n\n` +
+    `🎓 Practice free JUPEB past questions on StudyNaija:\n` +
+    `👉 https://studynaija.vercel.app\n\n` +
+    `#JUPEB #StudyNaija #ExamPrep`;
+
+  const handleWhatsApp = () => {
+    const url = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+    window.open(url, "_blank");
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      alert("✅ Copied! Paste anywhere to share.");
+    } catch {
+      alert("Copy failed — try long-pressing the text.");
+    }
+  };
+
+  const handleNativeShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: "StudyNaija — JUPEB Exam Prep",
+        text: shareText,
+        url: "https://studynaija.vercel.app",
+      }).catch(() => {});
+    } else {
+      handleCopy();
+    }
+  };
+  // ──────────────────────────────────────────────────────────────────────────
+
   return (
     <div style={{ padding: "16px" }}>
+
       {/* Score card */}
-      <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 20, textAlign: "center" }}>
+      <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 16, textAlign: "center" }}>
         <div style={{ fontSize: 52 }}>📝</div>
         <div style={{ fontSize: 38, fontWeight: "bold", color: t.gold, margin: "8px 0" }}>{pct}%</div>
         <div style={{ fontSize: 16, color: t.heading, fontWeight: "bold" }}>{correct} / {qs.length} correct</div>
@@ -78,6 +130,85 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
           </div>
         </div>
       </div>
+
+      {/* ── SHARE CARD ── */}
+      <div style={{
+        background: "#075e54",          // WhatsApp dark green
+        border: "1px solid #128c7e",
+        borderRadius: 16,
+        padding: "18px 16px",
+        marginBottom: 16,
+        textAlign: "center",
+      }}>
+        <div style={{ fontSize: 13, color: "#dcf8c6", marginBottom: 14, lineHeight: 1.7 }}>
+          📢 <strong>Share your score!</strong><br />
+          Help a friend discover free JUPEB prep 👇
+        </div>
+
+        {/* WhatsApp button — main CTA */}
+        <button
+          onClick={handleWhatsApp}
+          style={{
+            width: "100%",
+            background: "#25d366",
+            border: "none",
+            borderRadius: 12,
+            color: "#fff",
+            fontSize: 15,
+            fontWeight: "bold",
+            padding: "14px 0",
+            cursor: "pointer",
+            marginBottom: 10,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 10,
+          }}
+        >
+          <span style={{ fontSize: 20 }}>💬</span> Share on WhatsApp
+        </button>
+
+        {/* Secondary: native share or copy */}
+        <button
+          onClick={handleNativeShare}
+          style={{
+            width: "100%",
+            background: "transparent",
+            border: "1px solid #128c7e",
+            borderRadius: 12,
+            color: "#dcf8c6",
+            fontSize: 13,
+            fontWeight: "bold",
+            padding: "11px 0",
+            cursor: "pointer",
+          }}
+        >
+          📋 Copy / Share via other apps
+        </button>
+
+        {/* Preview of what will be shared */}
+        <div style={{
+          marginTop: 14,
+          background: "rgba(0,0,0,0.25)",
+          borderRadius: 10,
+          padding: "10px 12px",
+          fontSize: 11,
+          color: "#dcf8c6",
+          textAlign: "left",
+          lineHeight: 1.8,
+          whiteSpace: "pre-line",
+          opacity: 0.85,
+        }}>
+          {shareText}
+        </div>
+      </div>
+      {/* ── END SHARE CARD ── */}
+
+      {/* Action buttons */}
+      <button onClick={onRetry} style={goldBtn}>Try Again</button>
+      <button onClick={onHome} style={{ width: "100%", background: "transparent", border: `1px solid ${t.border}`, borderRadius: 12, color: t.textSub, fontSize: 13, padding: 12, cursor: "pointer", marginBottom: 20 }}>
+        Back to Home
+      </button>
 
       {/* Question breakdown */}
       <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Question Breakdown</div>
@@ -237,61 +368,33 @@ function StreakBanner({ streak, t }) {
 }
 
 // ── APP ───────────────────────────────────────────────────────────────────────
-export default function App() {
+  export default function App() {
+
+  // ── SPLASH ──
   const [showSplash, setShowSplash] = useState(true);
   const [progress, setProgress] = useState(0);
 
   // ── THEME ──
- const { t, themeKey, setThemeKey,
-        toggleTheme, card, goldBtn, actualTheme } = useApp();
+  const { t, themeKey, setThemeKey,
+          toggleTheme, card, goldBtn,
+          actualTheme } = useApp();
 
+  // ── WRAP STYLE ──
+  const wrap = {
+    minHeight: "100vh",
+    background: t.bg,
+    fontFamily: "Georgia, serif",
+    color: t.text,
+  };
 
-const wrap = {
-  minHeight: "100vh",
-  background: t.bg,
-  fontFamily: "Georgia, serif",
-  color: t.text
-};
-  const { isOnline, wasOffline } = useOnlineStatus();
   // ── NAVIGATION ──
   const [screen, setScreen] = useState("home");
   const [history, setHistory] = useState(["home"]);
-  
-  // ── STREAK (ADD HERE) ──
-  const { streak, updateStreak } = useStreak();
 
-  // ── AUTH ──
-  const { user, userScores, saveScore,
-        handleGoogleLogin, handleLogout } = useAuth();
-  
-  // ── QUESTIONS ──
-const { firebaseQuestions,
-        loadingFirebase,
-        fetchError,
-        refetch } = useFirebase();
-  
-  const {
-  permission,
-  fcmToken,
-  settings: notifSettings,
-  loading: notifLoading,
-  error: notifError,
-  requestPermission,
-  disableNotifications,
-  updateSettings: updateNotifSettings,
-} = useNotifications(user);
-  
   // ── SUBJECT / MODE ──
   const [activeSubject, setActiveSubject] = useState(null);
   const [pendingMode, setPendingMode] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
-
-  // ── FEEDBACK ──
-  const [feedbackName, setFeedbackName] = useState("");
-  const [feedbackMessage, setFeedbackMessage] = useState("");
-  const [feedbackSending, setFeedbackSending] = useState(false);
-  const [feedbackSent, setFeedbackSent] = useState(false);
-  const [feedbackError, setFeedbackError] = useState("");
 
   // ── NOTES ──
   const [noteCourse, setNoteCourse] = useState(null);
@@ -301,31 +404,59 @@ const { firebaseQuestions,
   const [pqCourse, setPqCourse] = useState(null);
   const [pqTopic, setPqTopic] = useState(null);
 
+  // ── FEEDBACK ──
+  const [feedbackName, setFeedbackName] = useState("");
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [feedbackSending, setFeedbackSending] = useState(false);
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  const [feedbackError, setFeedbackError] = useState("");
+
+  // ── HOOKS ──
+
+  // 1. Online status
+  const { isOnline, wasOffline } = useOnlineStatus();
+
+  // 2. Auth (defines user first!)
+  const { user, userScores, saveScore,
+          authLoading, handleGoogleLogin,
+          handleLogout } = useAuth();
+
+  // 3. Streak (needs user)
+  const { streak, updateStreak } = useStreak(user);
+
+  // 4. Firebase questions
+  const { firebaseQuestions, loadingFirebase,
+          fetchError, refetch } = useFirebase();
+
+  // 5. Quiz (needs firebaseQuestions + updateStreak)
   const {
-  // CBT
-  cbtQs, cbtIdx, setCbtIdx,
-  cbtAnswers, setCbtAnswers,
-  cbtDone, setCbtDone,
-  cbtTime, cbtRunning, setCbtRunning,
-  cbtScoreSaved, setCbtScoreSaved,
-  startCbt,
+    cbtQs, cbtIdx, setCbtIdx,
+    cbtAnswers, setCbtAnswers,
+    cbtDone, setCbtDone,
+    cbtTime, cbtRunning, setCbtRunning,
+    cbtScoreSaved, setCbtScoreSaved,
+    startCbt,
+    examCount, setExamCount,
+    examMinutes, setExamMinutes,
+    examQs, examIdx, setExamIdx,
+    examAnswers, setExamAnswers,
+    examDone, setExamDone,
+    examTime, examRunning, setExamRunning,
+    examScoreSaved, setExamScoreSaved,
+    startExam,
+    showCalc, setShowCalc,
+    minimized, setMinimized,
+  } = useQuiz(firebaseQuestions, updateStreak);
 
-  // EXAM
-  examCount, setExamCount,
-  examMinutes, setExamMinutes,
-  examQs, examIdx, setExamIdx,
-  examAnswers, setExamAnswers,
-  examDone, setExamDone,
-  examTime, examRunning, setExamRunning,
-  examScoreSaved, setExamScoreSaved,
-  startExam,
-
-  // CALCULATOR
-  showCalc, setShowCalc,
-  minimized, setMinimized,
-} = useQuiz(firebaseQuestions, updateStreak);
-
-  
+  // 6. Notifications
+  const { permission,
+          settings: notifSettings,
+          loading: notifLoading,
+          error: notifError,
+          requestPermission,
+          disableNotifications,
+          updateSettings: updateNotifSettings,
+  } = useNotifications();
  
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {
@@ -409,60 +540,119 @@ const { firebaseQuestions,
     <OfflineFallback onRetry={refetch} />
   );
   }
-  if (showSplash) {
-    const isDark = actualTheme === "dark";
-    return (
+// Show splash while EITHER
+// loading or auth restoring
+if (showSplash || authLoading) {
+  const isDark = actualTheme === "dark";
+  return (
+    <div style={{
+      minHeight: "100vh",
+      background: isDark
+        ? "linear-gradient(135deg,#0a1a0a 0%,#1a3a1a 50%,#0d2b0d 100%)"
+        : "linear-gradient(135deg,#f0f4f8 0%,#e8f0e8 50%,#f5f0e8 100%)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      fontFamily: "Georgia, serif",
+      padding: "40px 20px",
+    }}>
       <div style={{
-        minHeight: "100vh",
+        width: 110, height: 110,
+        borderRadius: "50%",
         background: isDark
-          ? "linear-gradient(135deg,#0a1a0a 0%,#1a3a1a 50%,#0d2b0d 100%)"
-          : "linear-gradient(135deg,#f0f4f8 0%,#e8f0e8 50%,#f5f0e8 100%)",
-        display: "flex", flexDirection: "column",
-        alignItems: "center", justifyContent: "center",
-        fontFamily: "Georgia, serif", padding: "40px 20px",
+          ? "linear-gradient(135deg,#1e4d1e,#2d6a2d)"
+          : "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
+        border: `3px solid ${isDark ? "#c8a84b" : "#1a3a5c"}`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 24,
+        boxShadow: isDark
+          ? "0 0 30px #c8a84b44"
+          : "0 0 30px #1a3a5c44",
+      }}>
+        <span style={{ fontSize: 52 }}>🎓</span>
+      </div>
+
+      <div style={{
+        fontSize: 32, fontWeight: "bold",
+        color: isDark ? "#f0ece0" : "#1a1a1a",
+        marginBottom: 6, letterSpacing: 1,
+      }}>
+        StudyNaija
+      </div>
+
+      <div style={{
+        fontSize: 14,
+        color: isDark ? "#c8a84b" : "#1a3a5c",
+        marginBottom: 6,
+        letterSpacing: 2,
+        textTransform: "uppercase",
+      }}>
+        JUPEB Exam Prep
+      </div>
+
+      <div style={{
+        fontSize: 12,
+        color: isDark ? "#8a9a8a" : "#666",
+        marginBottom: 48,
+      }}>
+        Free · No Subscription
+      </div>
+
+      {/* Progress bar */}
+      <div style={{
+        width: "60%", maxWidth: 200,
+        height: 4,
+        background: isDark ? "#1e2e1e" : "#ddd8cc",
+        borderRadius: 10,
+        overflow: "hidden",
+        marginBottom: 16,
       }}>
         <div style={{
-          width: 110, height: 110, borderRadius: "50%",
+          height: "100%",
+          width: authLoading
+            ? "70%"        // stays at 70% while auth loads
+            : `${progress}%`, // progress bar when splash
           background: isDark
-            ? "linear-gradient(135deg,#1e4d1e,#2d6a2d)"
-            : "linear-gradient(135deg,#1a3a5c,#0d2b4a)",
-          border: `3px solid ${isDark ? "#c8a84b" : "#1a3a5c"}`,
-          display: "flex", alignItems: "center", justifyContent: "center",
-          marginBottom: 24,
-          boxShadow: isDark ? "0 0 30px #c8a84b44" : "0 0 30px #1a3a5c44",
-        }}>
-          <span style={{ fontSize: 52 }}>🎓</span>
-        </div>
-        <div style={{ fontSize: 32, fontWeight: "bold", color: isDark ? "#f0ece0" : "#1a1a1a", marginBottom: 6, letterSpacing: 1 }}>
-          StudyNaija
-        </div>
-        <div style={{ fontSize: 14, color: isDark ? "#c8a84b" : "#1a3a5c", marginBottom: 6, letterSpacing: 2, textTransform: "uppercase" }}>
-          JUPEB Exam Prep
-        </div>
-        <div style={{ fontSize: 12, color: isDark ? "#8a9a8a" : "#666", marginBottom: 48 }}>
-          Free · No Subscription
-        </div>
-        <div style={{ width: "60%", maxWidth: 200, height: 4, background: isDark ? "#1e2e1e" : "#ddd8cc", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
-          <div style={{
-            height: "100%", width: `${progress}%`,
-            background: isDark
-              ? "linear-gradient(90deg,#c8a84b,#f0d080)"
-              : "linear-gradient(90deg,#1a3a5c,#2563eb)",
-            borderRadius: 10, transition: "width 0.05s linear",
-          }} />
-        </div>
-        <div style={{ fontSize: 11, color: isDark ? "#666" : "#888", letterSpacing: 1 }}>
-          {progress < 40 ? "Loading questions..." :
-           progress < 70 ? "Preparing study materials..." :
-           progress < 90 ? "Almost ready..." : "Welcome! 🥳"}
-        </div>
-        <div style={{ position: "absolute", bottom: 30, fontSize: 10, color: isDark ? "#444" : "#999", textAlign: "center", lineHeight: 1.8 }}>
-          studynaija.vercel.app<br />© 2026 StudyNaija
-        </div>
+            ? "linear-gradient(90deg,#c8a84b,#f0d080)"
+            : "linear-gradient(90deg,#1a3a5c,#2563eb)",
+          borderRadius: 10,
+          transition: "width 0.05s linear",
+        }} />
       </div>
-    );
-  }
 
+      <div style={{
+        fontSize: 11,
+        color: isDark ? "#666" : "#888",
+        letterSpacing: 1,
+      }}>
+        {authLoading
+          ? "Restoring your account... 👤"
+          : progress < 40
+          ? "Loading questions..."
+          : progress < 70
+          ? "Preparing study materials..."
+          : progress < 90
+          ? "Almost ready..."
+          : "Welcome! 🥳"}
+      </div>
+
+      <div style={{
+        position: "absolute",
+        bottom: 30,
+        fontSize: 10,
+        color: isDark ? "#444" : "#999",
+        textAlign: "center",
+        lineHeight: 1.8,
+      }}>
+        studynaija.vercel.app
+        <br />© 2026 StudyNaija
+      </div>
+    </div>
+  );
+}
   // ── HOME ──
   if (screen === "home") {
     const totalQ =
@@ -557,7 +747,7 @@ const { firebaseQuestions,
       <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack} mode={pendingMode}
         onSelect={(subject) => {
           setActiveSubject(subject);
-          if (pendingMode === "cbt") startCbt(subject, goTo);
+          if (pendingMode === "cbt") startCbt(subject, goTo, user?.uid);
           else if (pendingMode === "exam") goTo("year_select");
           else if (pendingMode === "notes") goTo("notes");
           else if (pendingMode === "pastq") goTo("pastq_courses");
@@ -721,7 +911,7 @@ if (screen === "notifications") {
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={cbtQs} answers={cbtAnswers} t={t}
-            onRetry={() => startCbt(activeSubject)}
+            onRetry={() => startCbt(activeSubject, goTo, user?.uid)}
             onHome={() => goTo("home")} />
         </div>
       );
@@ -755,7 +945,7 @@ if (screen === "notifications") {
         selectedYear={selectedYear}
         examCount={examCount} setExamCount={setExamCount}
         examMinutes={examMinutes} setExamMinutes={setExamMinutes}
-        onStart={() => startExam(activeSubject, goTo, selectedYear)}
+        onStart={() => startExam(activeSubject, goTo, selectedYear, user?.uid)}
         onBack={goBack} goldBtn={goldBtn} card={card}
       />
     );
@@ -774,7 +964,7 @@ if (screen === "notifications") {
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={examQs} answers={examAnswers} t={t}
-            onRetry={() => startExam(activeSubject)}
+            onRetry={() => startExam(activeSubject, goTo, user?.uid)}
             onHome={() => goTo("home")} />
         </div>
       );

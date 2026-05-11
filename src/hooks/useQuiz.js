@@ -108,7 +108,7 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
   }, [examRunning, examDone]);
 
   // ── START CBT ──
-  const startCbt = (subject, goTo) => {
+  const startCbt = (subject, goTo, uid) => {
     let qs = getAllQuestions(
       subject.data, firebaseQuestions, subject.id
     );
@@ -120,12 +120,12 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     setCbtScoreSaved(false);
     setCbtTime(60 * 60);
     setCbtRunning(true);
-    updateStreak();
+    updateStreak(uid);
     goTo("cbt_quiz");
   };
 
   // ── START EXAM ──
-  const startExam = (subject, goTo, year = null) => {
+  const startExam = (subject, goTo, year = null, uid) => {
     let qs = getAllQuestions(
       subject.data, firebaseQuestions, subject.id, year
     );
@@ -137,7 +137,7 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     setExamScoreSaved(false);
     setExamTime(examMinutes * 60);
     setExamRunning(true);
-    updateStreak();
+    updateStreak(uid);
     goTo("exam_quiz");
   };
 

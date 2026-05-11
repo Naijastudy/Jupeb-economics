@@ -77,9 +77,13 @@ export default function useNotifications(user) {
       setPermission(result);
 
       if (result === "granted") {
-        const token = await getToken(messaging, {
-          vapidKey: VAPID_KEY,
-        });
+       const token = await getToken(messaging, {
+  vapidKey: VAPID_KEY,
+  serviceWorkerRegistration:
+    await navigator.serviceWorker.getRegistration(
+      "/firebase-messaging-sw.js"
+    ),
+});
 
         if (token) {
           setFcmToken(token);

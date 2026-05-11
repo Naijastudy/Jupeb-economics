@@ -389,8 +389,8 @@ const wrap = {
   const [history, setHistory] = useState(["home"]);
   
   // ── STREAK (ADD HERE) ──
-  const { streak, updateStreak } = useStreak();
-
+ const { streak, updateStreak } = useStreak(user);
+  
   // ── AUTH ──
  const { user, userScores, saveScore,
         authLoading,
@@ -718,7 +718,7 @@ if (authLoading) {
       <SubjectSelect t={t} onToggleTheme={toggleTheme} onBack={goBack} mode={pendingMode}
         onSelect={(subject) => {
           setActiveSubject(subject);
-          if (pendingMode === "cbt") startCbt(subject, goTo);
+          if (pendingMode === "cbt") startCbt(subject, goTo, user?.uid);
           else if (pendingMode === "exam") goTo("year_select");
           else if (pendingMode === "notes") goTo("notes");
           else if (pendingMode === "pastq") goTo("pastq_courses");
@@ -882,7 +882,7 @@ if (screen === "notifications") {
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={cbtQs} answers={cbtAnswers} t={t}
-            onRetry={() => startCbt(activeSubject)}
+            onRetry={() => startCbt(activeSubject, goTo, user?.uid)}
             onHome={() => goTo("home")} />
         </div>
       );
@@ -916,7 +916,7 @@ if (screen === "notifications") {
         selectedYear={selectedYear}
         examCount={examCount} setExamCount={setExamCount}
         examMinutes={examMinutes} setExamMinutes={setExamMinutes}
-        onStart={() => startExam(activeSubject, goTo, selectedYear)}
+        onStart={() => startExam(activeSubject, goTo, selectedYear, user?.uid)}
         onBack={goBack} goldBtn={goldBtn} card={card}
       />
     );
@@ -935,7 +935,7 @@ if (screen === "notifications") {
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen qs={examQs} answers={examAnswers} t={t}
-            onRetry={() => startExam(activeSubject)}
+            onRetry={() => startExam(activeSubject, goTo, user?.uid)}
             onHome={() => goTo("home")} />
         </div>
       );

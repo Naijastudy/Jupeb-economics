@@ -98,3 +98,46 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
+// Handle push notifications
+self.addEventListener("push", (event) => {
+  const data = event.data?.json() ?? {};
+  const title = data.title || "StudyNaija";
+  const options = {
+    body: data.body || "Time to study! 📚",
+    icon: "/android-chrome-192x192.png",
+    badge: "/android-chrome-192x192.png",
+    vibrate: [200, 100, 200],
+    data: { url: data.url || "/" },
+    actions: [
+      {
+        action: "open",
+        title: "Study Now 📚",
+      },
+      {
+        action: "dismiss",
+        title: "Later",
+      },
+    ],
+  };
+  event.waitUntil(
+    self.registration.showNotification(title, options)
+  );
+});
+
+// Handle notification click
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  if (event.action === "dismiss") return;
+  event.waitUntil(
+    clients.matchAll({ type: "window" }).then((clientList) => {
+      for (const client of clientList) {
+        if (client.url === "/" && "focus" in client) {
+          return client.focus();
+        }
+      }
+      if (clients.openWindow) {
+        return clients.openWindow("/");
+      }
+    })
+  );
+});

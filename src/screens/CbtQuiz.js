@@ -1,4 +1,5 @@
 import React from "react";
+import ScreenWrapper from "../components/ScreenWrapper";
 import QuestionCard from "./QuestionCard";
 import PropTypes from "prop-types";
 import { makeStyles } from "../styles/common";
@@ -54,8 +55,8 @@ export default function CbtQuiz({
   const answered = Object.keys(cbtAnswers).length;
 
   return (
-    <div style={{ minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text }}>
-      {/* Header */}
+   <ScreenWrapper>
+  {/* Header */}
       <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "14px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 100 }}>
         <button onClick={onBack} style={{ background: "none", border: "none", color: "#fff", fontSize: 22, cursor: "pointer", padding: 0 }}>←</button>
         <div style={{ flex: 1 }}>
@@ -97,7 +98,7 @@ export default function CbtQuiz({
           }
         </div>
       </div>
-    </div>
+    </ScreenWrapper>
   );
         }
 CbtQuiz.propTypes = {

@@ -37,7 +37,9 @@ function formatTime(seconds) {
 }
 
 // ── RESULT SCREEN ─────────────────────────────────────────────────────────────
-function ResultScreen({ qs, answers, t, onRetry, onHome }) {
+// Replace your existing ResultScreen function in App (3).js with this one.
+
+function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) {
   const correct = qs.filter((q, i) => answers[i] === q.answer).length;
   const skipped = qs.filter((_, i) => !answers[i]).length;
   const wrong = qs.length - correct - skipped;
@@ -55,10 +57,60 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
     cursor: "pointer", display: "block", marginBottom: 10,
   };
 
+  // ── SHARE ──────────────────────────────────────────────────────────────────
+  const emoji =
+    pct >= 70 ? "🏆" :
+    pct >= 50 ? "📚" : "💪";
+
+  const gradeShort =
+    pct >= 70 ? "Grade A" :
+    pct >= 60 ? "Grade B" :
+    pct >= 50 ? "Grade C" :
+    pct >= 45 ? "Grade D" :
+    pct >= 40 ? "Grade E" : "Keep pushing";
+
+  const subjectName = activeSubject?.name || "JUPEB";
+  const modeLabel   = mode === "CBT" ? "CBT Practice" : "Exam Mode";
+
+  const shareText =
+    `${emoji} I just scored ${pct}% (${correct}/${qs.length}) on ` +
+    `${subjectName} ${modeLabel} — ${gradeShort}!\n\n` +
+    `🎓 Practice free JUPEB past questions on StudyNaija:\n` +
+    `👉 https://studynaija.vercel.app\n\n` +
+    `#JUPEB #StudyNaija #ExamPrep`;
+
+  const handleWhatsApp = () => {
+    const url = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+    window.open(url, "_blank");
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      alert("✅ Copied! Paste anywhere to share.");
+    } catch {
+      alert("Copy failed — try long-pressing the text.");
+    }
+  };
+
+  const handleNativeShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: "StudyNaija — JUPEB Exam Prep",
+        text: shareText,
+        url: "https://studynaija.vercel.app",
+      }).catch(() => {});
+    } else {
+      handleCopy();
+    }
+  };
+  // ──────────────────────────────────────────────────────────────────────────
+
   return (
     <div style={{ padding: "16px" }}>
+
       {/* Score card */}
-      <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 20, textAlign: "center" }}>
+      <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: 16, padding: "28px 16px", marginBottom: 16, textAlign: "center" }}>
         <div style={{ fontSize: 52 }}>📝</div>
         <div style={{ fontSize: 38, fontWeight: "bold", color: t.gold, margin: "8px 0" }}>{pct}%</div>
         <div style={{ fontSize: 16, color: t.heading, fontWeight: "bold" }}>{correct} / {qs.length} correct</div>
@@ -78,6 +130,85 @@ function ResultScreen({ qs, answers, t, onRetry, onHome }) {
           </div>
         </div>
       </div>
+
+      {/* ── SHARE CARD ── */}
+      <div style={{
+        background: "#075e54",          // WhatsApp dark green
+        border: "1px solid #128c7e",
+        borderRadius: 16,
+        padding: "18px 16px",
+        marginBottom: 16,
+        textAlign: "center",
+      }}>
+        <div style={{ fontSize: 13, color: "#dcf8c6", marginBottom: 14, lineHeight: 1.7 }}>
+          📢 <strong>Share your score!</strong><br />
+          Help a friend discover free JUPEB prep 👇
+        </div>
+
+        {/* WhatsApp button — main CTA */}
+        <button
+          onClick={handleWhatsApp}
+          style={{
+            width: "100%",
+            background: "#25d366",
+            border: "none",
+            borderRadius: 12,
+            color: "#fff",
+            fontSize: 15,
+            fontWeight: "bold",
+            padding: "14px 0",
+            cursor: "pointer",
+            marginBottom: 10,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 10,
+          }}
+        >
+          <span style={{ fontSize: 20 }}>💬</span> Share on WhatsApp
+        </button>
+
+        {/* Secondary: native share or copy */}
+        <button
+          onClick={handleNativeShare}
+          style={{
+            width: "100%",
+            background: "transparent",
+            border: "1px solid #128c7e",
+            borderRadius: 12,
+            color: "#dcf8c6",
+            fontSize: 13,
+            fontWeight: "bold",
+            padding: "11px 0",
+            cursor: "pointer",
+          }}
+        >
+          📋 Copy / Share via other apps
+        </button>
+
+        {/* Preview of what will be shared */}
+        <div style={{
+          marginTop: 14,
+          background: "rgba(0,0,0,0.25)",
+          borderRadius: 10,
+          padding: "10px 12px",
+          fontSize: 11,
+          color: "#dcf8c6",
+          textAlign: "left",
+          lineHeight: 1.8,
+          whiteSpace: "pre-line",
+          opacity: 0.85,
+        }}>
+          {shareText}
+        </div>
+      </div>
+      {/* ── END SHARE CARD ── */}
+
+      {/* Action buttons */}
+      <button onClick={onRetry} style={goldBtn}>Try Again</button>
+      <button onClick={onHome} style={{ width: "100%", background: "transparent", border: `1px solid ${t.border}`, borderRadius: 12, color: t.textSub, fontSize: 13, padding: 12, cursor: "pointer", marginBottom: 20 }}>
+        Back to Home
+      </button>
 
       {/* Question breakdown */}
       <div style={{ fontSize: 14, fontWeight: "bold", color: t.heading, marginBottom: 12 }}>Question Breakdown</div>

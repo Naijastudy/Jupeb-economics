@@ -23,29 +23,24 @@ export default function useAuth() {
   const [authLoading, setAuthLoading] = useState(true);
 
   useEffect(() => {
-    // Set persistence first
-    setPersistence(auth, browserLocalPersistence)
-      .then(() => {
-        // Then listen for auth changes
-        const unsubscribe = onAuthStateChanged(
-          auth,
-          async (currentUser) => {
-            setUser(currentUser);
-            if (currentUser) {
-              await fetchUserScores(currentUser.uid);
-            } else {
-              setUserScores([]);
-            }
-            setAuthLoading(false);
-          }
-        );
-        return () => unsubscribe();
-      })
-      .catch((e) => {
-        console.log("Persistence error:", e);
+  let unsubscribe = () => {};
+
+  setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+      unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+        setUser(currentUser);
+        if (currentUser) await fetchUserScores(currentUser.uid);
+        else setUserScores([]);
         setAuthLoading(false);
       });
-  }, []);
+    })
+    .catch((e) => {
+      console.log("Persistence error:", e);
+      setAuthLoading(false);
+    });
+
+  return () => unsubscribe(); 
+}, []);
 
   const fetchUserScores = async (uid) => {
     try {
@@ -90,8 +85,10 @@ export default function useAuth() {
         timestamp: serverTimestamp(),
       });
       await fetchUserScores(user.uid);
+      return { success: true };
     } catch (e) {
       console.log("Error saving score:", e);
+      return { success: true };
     }
   };
 
@@ -102,7 +99,10 @@ export default function useAuth() {
       );
       await signInWithPopup(auth, googleProvider);
     } catch (e) {
+      if (e.code !== "auth/popup-closed-by-user") {
       console.log("Login error:", e);
+        return { error: e.message };
+      }
     }
   };
 

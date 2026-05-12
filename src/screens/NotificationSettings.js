@@ -76,19 +76,20 @@ export default function NotificationSettings({
           </div>
 
           {/* Error */}
-          {error && (
-            <div style={{
-              background: t.wrongBg,
-              border: `1px solid ${t.wrongBorder}`,
-              borderRadius: 10,
-              padding: "10px 14px",
-              fontSize: 13,
-              color: t.wrongText,
-              marginBottom: 16,
-            }}>
-              ⚠️ {error}
-            </div>
-          )}
+{error && !settings.enabled && 
+ permission !== "granted" && (
+   <div style={{
+    background: t.wrongBg,
+    border: `1px solid ${t.wrongBorder}`,
+    borderRadius: 10,
+    padding: "10px 14px",
+    fontSize: 13,
+    color: t.wrongText,
+    marginBottom: 16,
+  }}>
+    ⚠️ {error}
+  </div>
+)}
 
           {/* Action Button */}
           {permission !== "denied" && (

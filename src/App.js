@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { db } from "./firebase"; 
 import { subjects } from "./data/index";
 import useAuth from "./hooks/useAuth";
-import { db } from "./firebase"; 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { grading } from "./data/economics";
 import ExamSetup from "./screens/ExamSetup";

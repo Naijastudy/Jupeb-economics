@@ -13,6 +13,8 @@ export default function Settings({
   goldBtn,
   toggleTheme,
   onFeedback,
+  onLogin,
+  onLogout,
 }) {
 
   const wrap = {

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { subjects } from "./data/index";
 import useAuth from "./hooks/useAuth";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "./firebase";
 import { grading } from "./data/economics";
 import ExamSetup from "./screens/ExamSetup";
 import YearSelect from "./screens/YearSelect";

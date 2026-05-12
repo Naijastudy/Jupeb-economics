@@ -75,7 +75,7 @@ export default function NotificationSettings({
               : "Get daily reminders to keep your streak going!"}
           </div>
 
-          {{/* Error */}
+          {/* Error */}
 {error && !settings.enabled && (
   <div style={{
     background: t.wrongBg,
@@ -88,7 +88,7 @@ export default function NotificationSettings({
   }}>
     ⚠️ {error}
   </div>
-)}}
+)}
 
           {/* Action Button */}
           {permission !== "denied" && (

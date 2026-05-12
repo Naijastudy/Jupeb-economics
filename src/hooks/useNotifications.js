@@ -90,6 +90,9 @@ export default function useNotifications() {
  useEffect(() => {
   if (typeof Notification === "undefined") return;
   const s = getNotifSettings();
+   if (s.enabled) {
+    setError(null); 
+   }
   if (
     s.enabled &&
     s.dailyReminder &&

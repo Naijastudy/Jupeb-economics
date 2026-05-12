@@ -87,55 +87,66 @@ export default function useNotifications() {
   const [error, setError] = useState(null);
 
   // Reschedule on app load if enabled
-  useEffect(() => {
-    const s = getNotifSettings();
-    if (
-      s.enabled &&
-      s.dailyReminder &&
-      Notification.permission === "granted"
-    ) {
-      scheduleNotification(s.reminderHour);
-    }
-  }, []);
-
+ useEffect(() => {
+  if (typeof Notification === "undefined") return;
+  const s = getNotifSettings();
+  if (
+    s.enabled &&
+    s.dailyReminder &&
+    Notification.permission === "granted"
+  ) {
+    scheduleNotification(s.reminderHour);
+  }
+}, []);
+  
   const requestPermission = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const result =
-        await Notification.requestPermission();
-      setPermission(result);
+  setLoading(true);
+  setError(null);
 
-      if (result === "granted") {
-        const updated = {
-          ...settings,
-          enabled: true,
-        };
-        setSettings(updated);
-        saveNotifSettings(updated);
-
-        // Schedule first notification
-        if (updated.dailyReminder) {
-          scheduleNotification(updated.reminderHour);
-        }
-
-        // Show immediate test notification
-        new Notification("StudyNaija 🎉", {
-          body: "Notifications enabled! You'll be reminded to study daily.",
-          icon: "/android-chrome-192x192.png",
-        });
-      } else {
-        setError(
-          "Permission denied. Please enable in phone settings."
-        );
-      }
-    } catch (e) {
-      console.log("Notification error:", e);
-      setError("Could not enable notifications.");
-    }
+  // Check if notifications supported
+  if (typeof Notification === "undefined") {
+    setError(
+      "Notifications not supported. On iPhone, add app to Home Screen first!"
+    );
     setLoading(false);
-  };
+    return;
+  }
 
+  try {
+    const result =
+      await Notification.requestPermission();
+    setPermission(result);
+
+    if (result === "granted") {
+      const updated = {
+        ...settings,
+        enabled: true,
+      };
+      setSettings(updated);
+      saveNotifSettings(updated);
+
+      if (updated.dailyReminder) {
+        scheduleNotification(updated.reminderHour);
+      }
+
+      new Notification("StudyNaija 🎉", {
+        body: "Notifications enabled! You'll be reminded to study daily.",
+        icon: "/android-chrome-192x192.png",
+      });
+    } else {
+      setError(
+        "Permission denied. Please enable in phone settings."
+      );
+    }
+  } catch (e) {
+    console.log("Notification error:", e);
+    setError(
+      "Notifications not supported. On iPhone, add app to Home Screen first!"
+    );
+  }
+  setLoading(false);
+};
+  
   const disableNotifications = () => {
     cancelNotification();
     const updated = {

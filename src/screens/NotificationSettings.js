@@ -88,7 +88,7 @@ export default function NotificationSettings({
   }}>
     ⚠️ {error}
   </div>
-)}
+)}}
 
           {/* Action Button */}
           {permission !== "denied" && (

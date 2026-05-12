@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { subjects } from "./data/index";
 import useAuth from "./hooks/useAuth";
-import { db } from "./firebase"; // ✅ FIX #1 — was missing, broke sendFeedback
+import { db } from "./firebase"; 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { grading } from "./data/economics";
 import ExamSetup from "./screens/ExamSetup";
@@ -15,7 +15,6 @@ import { PastQCourses, PastQTopics, PastQView } from "./screens/PastQuestions";
 import Settings from "./screens/Settings";
 import Header from "./components/Header";
 import { HomeCardSkeleton } from "./components/Skeleton";
-// ✅ FIX #2 — removed unused QuestionCard import
 import useOnlineStatus from "./hooks/useOnlineStatus";
 import OfflineIndicator from "./components/OfflineIndicator";
 import OfflineFallback from "./components/OfflineFallback";
@@ -25,7 +24,6 @@ import useQuiz from "./hooks/useQuiz";
 import { useApp } from "./context/AppContext";
 import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
-
 
 // ── SHARED UTILITY ────────────────────────────────────────────────────────────
 function formatTime(seconds) {
@@ -37,9 +35,7 @@ function formatTime(seconds) {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-
 // ── STREAK TIERS ──────────────────────────────────────────────────────────────
-// ✅ Using array instead of chained if-statements
 const STREAK_TIERS = [
   { min: 100, icon: "👑",     label: "Legend",      color: "#9333ea", msg: "100+ days — you're unstoppable!" },
   { min: 60,  icon: "🏆",     label: "Champion",    color: "#dc2626", msg: "2 months straight — incredible!" },
@@ -55,9 +51,7 @@ function getStreakTier(count) {
   return STREAK_TIERS.find((t) => count >= t.min);
 }
 
-
 // ── HOME CARDS ────────────────────────────────────────────────────────────────
-// ✅ Moved outside App() — constant, no need to recreate on every render
 const HOME_CARDS = [
   { id: "cbt",      icon: "⏱️", title: "CBT Practice",  desc: "1 hour · 50 random questions",    color: "#0d9488" },
   { id: "exam",     icon: "📝", title: "Exam Mode",      desc: "Custom time & question count",    color: "#2563eb" },
@@ -67,9 +61,7 @@ const HOME_CARDS = [
   { id: "settings", icon: "⚙️", title: "Settings",       desc: "Day / Night display mode",        color: "#374151" },
 ];
 
-
 // ── GRADE LABELS ──────────────────────────────────────────────────────────────
-// ✅ Arrays instead of long ternary chains
 const GRADE_LABELS = [
   { min: 70, label: "Excellent! Grade A 🥳", short: "Grade A", emoji: "🏆" },
   { min: 60, label: "Very Good! Grade B 💪", short: "Grade B", emoji: "📚" },
@@ -83,7 +75,6 @@ function getGrade(pct) {
   return GRADE_LABELS.find((g) => pct >= g.min);
 }
 
-
 // ── MODE LABELS ───────────────────────────────────────────────────────────────
 const MODE_LABELS = {
   cbt:   { title: "CBT Practice",  sub: "Select a subject to start" },
@@ -91,7 +82,6 @@ const MODE_LABELS = {
   notes: { title: "Study Notes",   sub: "Select a subject" },
   pastq: { title: "Past Questions",sub: "Select a subject" },
 };
-
 
 // ── RESULT SCREEN ─────────────────────────────────────────────────────────────
 function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) {
@@ -102,7 +92,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
   const grade   = getGrade(pct);
 
   const subjectName = activeSubject?.name || "JUPEB";
-  // ✅ FIX #4 — mode prop now used properly
   const modeLabel   = mode === "CBT" ? "CBT Practice" : "Exam Mode";
 
   const shareText =
@@ -143,7 +132,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
     cursor: "pointer", display: "block", marginBottom: 10,
   };
 
-  // ✅ Score stat pills defined as array to avoid repetition
   const statPills = [
     { value: correct, label: "Correct ✓", bg: t.correctBg, border: t.correctBorder, color: t.correctBorder, text: t.correctText },
     { value: wrong,   label: "Wrong ✗",   bg: t.wrongBg,   border: t.wrongBorder,   color: t.wrongBorder,   text: t.wrongText },
@@ -280,7 +268,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
   );
 }
 
-
 // ── SUBJECT SELECT ────────────────────────────────────────────────────────────
 function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
   const label = MODE_LABELS[mode];
@@ -359,7 +346,6 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
   );
 }
 
-
 // ── STREAK BANNER ─────────────────────────────────────────────────────────────
 function StreakBanner({ streak, t }) {
   if (!streak || streak.count < 1) return null;
@@ -400,7 +386,6 @@ function StreakBanner({ streak, t }) {
     </div>
   );
 }
-
 
 // ── APP ───────────────────────────────────────────────────────────────────────
 export default function App() {
@@ -515,7 +500,6 @@ export default function App() {
     setFeedbackSending(true);
     setFeedbackError("");
     try {
-      // ✅ FIX #1 — db now properly imported at top
       await addDoc(collection(db, "feedback"), {
         name:      feedbackName.trim() || "Anonymous",
         message:   feedbackMessage.trim(),
@@ -555,7 +539,6 @@ export default function App() {
       ? "linear-gradient(90deg,#c8a84b,#f0d080)"
       : "linear-gradient(90deg,#1a3a5c,#2563eb)";
 
-    // ✅ Splash status messages as array
     const splashMessages = [
       { max: 40,  msg: "Loading questions..." },
       { max: 70,  msg: "Preparing study materials..." },
@@ -911,7 +894,6 @@ export default function App() {
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
-          {/* ✅ FIX #4 — mode="CBT" now passed correctly */}
           <ResultScreen
             qs={cbtQs} answers={cbtAnswers} t={t} mode="CBT"
             onRetry={() => startCbt(activeSubject, goTo, user?.uid)}
@@ -970,7 +952,6 @@ export default function App() {
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen
             qs={examQs} answers={examAnswers} t={t} mode="Exam"
-            // ✅ FIX #5 — selectedYear now passed to retry
             onRetry={() => startExam(activeSubject, goTo, selectedYear, user?.uid)}
             onHome={() => goTo("home")}
             activeSubject={activeSubject}
@@ -998,7 +979,6 @@ export default function App() {
         card={card} goldBtn={goldBtn}
       />
     );
-  }
-
+}
   return null;
                             }

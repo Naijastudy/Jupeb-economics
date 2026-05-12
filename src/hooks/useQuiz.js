@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -20,7 +20,9 @@ function shuffleOptions(q) {
   return { ...q, options: relabeled, answer: newAnswer };
 }
 
-function getAllQuestions(data, fbQuestions = [], subjectId = "economics", year = null) {
+function getAllQuestions(
+  data, fbQuestions = [], subjectId = "economics", year = null
+) {
   let all = [];
   Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach((q) => {
@@ -73,12 +75,17 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
   const [showCalc, setShowCalc] = useState(false);
   const [minimized, setMinimized] = useState(false);
 
+  // ── Refs to track if warning was already shown ──
+  // Prevents the toast firing more than once per session
+  const cbtWarnedRef  = useRef(false);
+  const examWarnedRef = useRef(false);
+
   // ── CBT TIMER ──
+  // Pure state updater — no side effects inside
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => {
       setCbtTime((prev) => {
-       if (prev === 180) showToast("⏰ 3 minutes remaining!", "warning", 5000);
         if (prev <= 1) {
           setCbtRunning(false);
           setCbtDone(true);
@@ -90,12 +97,28 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     return () => clearInterval(timer);
   }, [cbtRunning, cbtDone]);
 
+  // ── CBT 3-MINUTE WARNING ──
+  // Separate effect — safe place to call showToast
+  useEffect(() => {
+    if (
+      cbtTime === 180 &&
+      cbtRunning &&
+      !cbtDone &&
+      !cbtWarnedRef.current
+    ) {
+      cbtWarnedRef.current = true;
+      if (typeof showToast === "function") {
+        showToast("⏰ 3 minutes remaining!", "warning", 6000);
+      }
+    }
+  }, [cbtTime, cbtRunning, cbtDone, showToast]);
+
   // ── EXAM TIMER ──
+  // Pure state updater — no side effects inside
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => {
       setExamTime((prev) => {
-       if (prev === 180) showToast("⏰ 3 minutes remaining!", "warning", 5000);
         if (prev <= 1) {
           setExamRunning(false);
           setExamDone(true);
@@ -106,6 +129,22 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     }, 1000);
     return () => clearInterval(timer);
   }, [examRunning, examDone]);
+
+  // ── EXAM 3-MINUTE WARNING ──
+  // Separate effect — safe place to call showToast
+  useEffect(() => {
+    if (
+      examTime === 180 &&
+      examRunning &&
+      !examDone &&
+      !examWarnedRef.current
+    ) {
+      examWarnedRef.current = true;
+      if (typeof showToast === "function") {
+        showToast("⏰ 3 minutes remaining!", "warning", 6000);
+      }
+    }
+  }, [examTime, examRunning, examDone, showToast]);
 
   // ── START CBT ──
   const startCbt = (subject, goTo, uid) => {
@@ -120,6 +159,7 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     setCbtScoreSaved(false);
     setCbtTime(60 * 60);
     setCbtRunning(true);
+    cbtWarnedRef.current = false;  // reset warning for new session
     updateStreak(uid);
     goTo("cbt_quiz");
   };
@@ -137,6 +177,7 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     setExamScoreSaved(false);
     setExamTime(examMinutes * 60);
     setExamRunning(true);
+    examWarnedRef.current = false;
     updateStreak(uid);
     goTo("exam_quiz");
   };
@@ -164,4 +205,4 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     showCalc, setShowCalc,
     minimized, setMinimized,
   };
-}
+            }

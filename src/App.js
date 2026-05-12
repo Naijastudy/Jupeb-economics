@@ -839,8 +839,6 @@ if (screen === "notifications") {
   themeKey={themeKey} setThemeKey={setThemeKey}
   goldBtn={goldBtn} toggleTheme={toggleTheme}
   onFeedback={() => goTo("feedback")}
-  onLogin={handleGoogleLogin}
-  onLogout={handleLogout}
 />
     );
   }

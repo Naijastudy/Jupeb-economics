@@ -75,20 +75,20 @@ export default function NotificationSettings({
               : "Get daily reminders to keep your streak going!"}
           </div>
 
-          {/* Error */}
-          {error && (
-            <div style={{
-              background: t.wrongBg,
-              border: `1px solid ${t.wrongBorder}`,
-              borderRadius: 10,
-              padding: "10px 14px",
-              fontSize: 13,
-              color: t.wrongText,
-              marginBottom: 16,
-            }}>
-              ⚠️ {error}
-            </div>
-          )}
+          {{/* Error */}
+{error && !settings.enabled && (
+  <div style={{
+    background: t.wrongBg,
+    border: `1px solid ${t.wrongBorder}`,
+    borderRadius: 10,
+    padding: "10px 14px",
+    fontSize: 13,
+    color: t.wrongText,
+    marginBottom: 16,
+  }}>
+    ⚠️ {error}
+  </div>
+)}
 
           {/* Action Button */}
           {permission !== "denied" && (

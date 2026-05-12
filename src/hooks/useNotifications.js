@@ -118,6 +118,7 @@ export default function useNotifications() {
     setPermission(result);
 
     if (result === "granted") {
+      setError(null);
       const updated = {
         ...settings,
         enabled: true,

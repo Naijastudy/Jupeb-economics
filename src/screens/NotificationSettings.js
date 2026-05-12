@@ -76,8 +76,9 @@ export default function NotificationSettings({
           </div>
 
           {/* Error */}
-{error && !settings.enabled && (
-  <div style={{
+{error && !settings.enabled && 
+ permission !== "granted" && (
+   <div style={{
     background: t.wrongBg,
     border: `1px solid ${t.wrongBorder}`,
     borderRadius: 10,

@@ -294,24 +294,43 @@ export default function NotificationSettings({
         )}
 
         {/* Info Box */}
-        <div style={{
-          background: t.exBg,
-          border: `1px solid ${t.exBorder}`,
-          borderRadius: 12,
-          padding: "14px 16px",
-        }}>
-          <div style={{
-            fontSize: 13,
-            color: t.exText,
-            lineHeight: 1.8,
-          }}>
-            📝 Notifications help you:
-            {"\n"}🔥 Maintain your study streak
-            {"\n"}📚 Study consistently every day
-            {"\n"}🎯 Reach your JUPEB goals
-          </div>
-        </div>
+      <div style={{
+  background: t.exBg,
+  border: `1px solid ${t.exBorder}`,
+  borderRadius: 12,
+  padding: "14px 16px",
+}}>
+  <div style={{
+    fontSize: 13,
+    color: t.exText,
+    lineHeight: 1.8,
+  }}>
+    📝 Notifications help you:{"\n"}
+    🔥 Maintain your study streak{"\n"}
+    📚 Study consistently every day{"\n"}
+    🎯 Reach your JUPEB goals
+  </div>
+</div>
 
+{/* iPhone notice */}
+<div style={{
+  background: t.keyBg,
+  border: `1px solid ${t.keyBorder}`,
+  borderRadius: 12,
+  padding: "14px 16px",
+  marginTop: 12,
+}}>
+  <div style={{
+    fontSize: 13,
+    color: t.keyText,
+    lineHeight: 1.8,
+  }}>
+    🍎 iPhone users: Add StudyNaija
+    to your Home Screen first, then
+    open from there to enable
+    notifications!
+  </div>
+</div>
       </div>
     </ScreenWrapper>
   );

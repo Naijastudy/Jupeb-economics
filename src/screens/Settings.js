@@ -84,20 +84,8 @@ export default function Settings({
           </div>
         </div>
 
-        {/* ACCOUNT */}
-        <div style={{ background: t.exBg, borderRadius: 12, padding: 12, marginBottom: 12 }}>
-          <div style={{ color: t.heading, fontSize: 15, marginBottom: 8 }}>
-            ACCOUNT
-          </div>
-
-          <div
-            onClick={() => goTo("login")}
-            style={{ padding: 10, color: t.text, cursor: "pointer", fontSize: 13 }}
-          >
-            Log in
-          </div>
-        </div>
-
+      
+    
         {/* SUPPORT */}
 <div style={{
   background: t.exBg,

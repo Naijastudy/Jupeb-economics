@@ -37,7 +37,7 @@ function formatTime(seconds) {
 }
 
 // ── RESULT SCREEN ─────────────────────────────────────────────────────────────
-// Replace your existing ResultScreen function in App (3).js with this one.
+
 
 function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) {
   const correct = qs.filter((q, i) => answers[i] === q.answer).length;
@@ -834,12 +834,12 @@ if (screen === "notifications") {
   // ── SETTINGS ──
   if (screen === "settings") {
     return (
-      <Settings
-        t={t} goBack={goBack} goTo={goTo} user={user}
-        themeKey={themeKey} setThemeKey={setThemeKey}
-        goldBtn={goldBtn} toggleTheme={toggleTheme}
-        onFeedback={() => goTo("feedback")}
-      />
+     <Settings
+  t={t} goBack={goBack} goTo={goTo} user={user}
+  themeKey={themeKey} setThemeKey={setThemeKey}
+  goldBtn={goldBtn} toggleTheme={toggleTheme}
+  onFeedback={() => goTo("feedback")}
+/>
     );
   }
 

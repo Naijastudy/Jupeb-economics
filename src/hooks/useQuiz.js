@@ -47,7 +47,7 @@ function getAllQuestions(data, fbQuestions = [], subjectId = "economics", year =
   return shuffle(all);
 }
 
-export default function useQuiz(firebaseQuestions, updateStreak) {
+export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
 
   // ── CBT STATE ──
   const [cbtQs, setCbtQs] = useState([]);
@@ -78,7 +78,7 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => {
       setCbtTime((prev) => {
-        if (prev === 180) alert("⚠️ 3 minutes remaining!");
+       if (prev === 180) showToast("⏰ 3 minutes remaining!", "warning", 5000);
         if (prev <= 1) {
           setCbtRunning(false);
           setCbtDone(true);
@@ -95,7 +95,7 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => {
       setExamTime((prev) => {
-        if (prev === 180) alert("⚠️ 3 minutes remaining!");
+       if (prev === 180) showToast("⏰ 3 minutes remaining!", "warning", 5000);
         if (prev <= 1) {
           setExamRunning(false);
           setExamDone(true);

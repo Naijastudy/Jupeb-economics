@@ -13,8 +13,6 @@ export default function Settings({
   goldBtn,
   toggleTheme,
   onFeedback,
-  onLogin,
-  onLogout,
 }) {
 
   const wrap = {
@@ -87,120 +85,7 @@ export default function Settings({
         </div>
 
       
-      {/* ACCOUNT */}
-<div style={{
-  background: t.exBg,
-  borderRadius: 12,
-  padding: 12,
-  marginBottom: 12
-}}>
-  <div style={{
-    color: t.heading,
-    fontSize: 15,
-    marginBottom: 8
-  }}>
-    ACCOUNT
-  </div>
-
-  {user ? (
-    <>
-      {/* User Info */}
-      <div style={{
-        display: "flex",
-        alignItems: "center",
-        gap: 12,
-        padding: "10px 0",
-        borderBottom: `1px solid ${t.border}`,
-        marginBottom: 8,
-      }}>
-        <img
-          src={user.photoURL}
-          alt="profile"
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            border: `2px solid ${t.gold}`,
-          }}
-        />
-        <div>
-          <div style={{
-            fontSize: 14,
-            fontWeight: "bold",
-            color: t.heading,
-          }}>
-            {user.displayName}
-          </div>
-          <div style={{
-            fontSize: 11,
-            color: t.textSub,
-            marginTop: 2,
-          }}>
-            {user.email}
-          </div>
-        </div>
-      </div>
-
-      {/* View Profile */}
-      <div
-        onClick={() => goTo("profile")}
-        style={{
-          padding: "10px 0",
-          color: t.text,
-          cursor: "pointer",
-          fontSize: 13,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: `1px solid ${t.border}`,
-          marginBottom: 8,
-        }}
-      >
-        <span>📊 View Score History</span>
-        <span style={{ color: t.gold }}>›</span>
-      </div>
-
-      {/* Sign Out */}
-      <div
-        onClick={onLogout}
-        style={{
-          padding: "10px 0",
-          color: t.wrongBorder,
-          cursor: "pointer",
-          fontSize: 13,
-          fontWeight: "bold",
-        }}
-      >
-        🚪 Sign Out
-      </div>
-    </>
-  ) : (
-    <>
-      <div style={{
-        fontSize: 12,
-        color: t.textSub,
-        marginBottom: 10,
-        lineHeight: 1.6,
-      }}>
-        Sign in to save your scores
-        and track progress across devices
-      </div>
-      <button
-        onClick={onLogin}
-        style={{
-          ...goldBtn,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 8,
-        }}
-      >
-        <span>🔵</span> Sign in with Google
-      </button>
-    </>
-  )}
-</div>
-
+    
         {/* SUPPORT */}
 <div style={{
   background: t.exBg,
@@ -363,6 +248,4 @@ Settings.propTypes = {
   goldBtn: PropTypes.object.isRequired,
   toggleTheme: PropTypes.func.isRequired,
   onFeedback: PropTypes.func.isRequired,
-  onLogin: PropTypes.func.isRequired,
-  onLogout: PropTypes.func.isRequired,
 };

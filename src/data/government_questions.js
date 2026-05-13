@@ -334,8 +334,92 @@ electoral_ng: [
   {
     title: "Elections in Nigeria",
     key: "Elections in Nigeria have evolved from colonial times to modern democratic practices.",
-   
+    body: "Nigeria has conducted several elections since independence, including those in 1959, 1979, 1999, and beyond. Elections determine leadership but are often challenged by malpractice, violence, and logistical issues. Electoral bodies like INEC are responsible for organizing elections."
+  },
+  {
+    title: "Problems of Elections in Nigeria",
+    key: "Elections in Nigeria face challenges such as fraud, violence, and vote-buying.",
+    body: "Common issues include rigging, intimidation, ballot snatching, and lack of transparency. These problems undermine democracy and reduce public trust. Electoral reforms and technology are being introduced to improve credibility."
+  }
+],
 
+crisis: [
+  {
+    title: "Major Political Crises in Nigeria",
+    key: "Nigeria has experienced several political crises that shaped its history.",
+    body: "Notable crises include the Aba Women’s Riot (1929), Kano Riots (1953), Action Group crisis (1962), Census crisis (1962/63), and the Nigerian Civil War (1967–1970). Others include the June 12, 1993 election crisis and ongoing security challenges like insurgency. These crises highlight ethnic, political, and economic tensions."
+  }
+],
+
+military: [
+  {
+    title: "Military Rule in Nigeria",
+    key: "Military rule occurs when the armed forces take over government through a coup d’état.",
+    body: "Nigeria experienced several military regimes from 1966 to 1999. Leaders included Ironsi, Gowon, Murtala Mohammed, Obasanjo, Buhari, Babangida, Abacha, and Abdulsalami. Military rule centralized power and suspended democratic institutions. While some reforms were made, it limited freedoms and political development."
+  },
+  {
+    title: "Reasons for Military Intervention",
+    key: "Military intervention is often caused by political instability, corruption, and weak institutions.",
+    body: "Other causes include electoral malpractice, economic crises, and ethnic conflicts. The military often justifies intervention as a way to restore order, but it usually results in authoritarian rule."
+  }
+],
+
+foreign: [
+  {
+    title: "Nigerian Foreign Policy",
+    key: "Nigeria’s foreign policy focuses on promoting national interest and African unity.",
+    body: "Nigeria plays a leadership role in Africa through peacekeeping, diplomacy, and economic cooperation. Its foreign policy is influenced by factors such as national interest, economic strength, leadership, and global politics. Nigeria is active in organizations like ECOWAS, AU, and the UN."
+  }
+],
+
+africa_pre: [
+  {
+    title: "Africa Before European Invasion",
+    key: "Pre-colonial Africa had organized political, economic, and social systems before European contact.",
+    body: "African societies had kingdoms, empires, and traditional governance systems. Trade, culture, and local industries flourished. European contact disrupted these systems through colonization and exploitation."
+  }
+],
+
+colonial_africa: [
+  {
+    title: "Colonial Systems in Africa",
+    key: "European powers used different systems such as Indirect Rule and Assimilation to govern Africa.",
+    body: "Indirect rule used traditional leaders (British colonies), while assimilation aimed to make Africans adopt European culture (French colonies). These systems shaped political development and left lasting impacts on African governance."
+  }
+],
+
+constitution_africa: [
+  {
+    title: "Constitutional Development in West Africa",
+    key: "West African countries developed political systems through constitutional changes during and after colonial rule.",
+    body: "Countries like Nigeria, Ghana, Sierra Leone, Liberia, and Gambia evolved through colonial constitutions to independent governance. These developments shaped modern democratic institutions and governance structures."
+  }
+],
+
+nationalism: [
+  {
+    title: "Nationalist Movements in West Africa",
+    key: "Nationalist movements fought for independence from colonial rule.",
+    body: "Leaders and groups organized protests, political parties, and campaigns to demand self-rule. British and French colonies experienced different approaches, but both led to independence. Nationalism promoted unity and political awareness."
+  }
+],
+
+military_africa: [
+  {
+    title: "Military Intervention in Africa",
+    key: "Many African countries experienced military rule after independence.",
+    body: "Weak institutions, corruption, and political instability led to coups. Military governments often centralized power and limited democracy. Countries like Nigeria, Ghana, and Uganda experienced such interventions."
+  }
+],
+
+democracy_africa: [
+  {
+    title: "Democratization in Africa",
+    key: "Democratization is the process of transitioning from authoritarian rule to democratic governance.",
+    body: "African countries have gradually adopted democratic systems with elections and constitutions. However, challenges like corruption, weak institutions, and electoral violence persist. Despite this, democracy continues to develop across the continent."
+  }
+],
+};
 export const questions = {
 
   // ── GOV001 ─────────────────────────────────────────────────────────────────

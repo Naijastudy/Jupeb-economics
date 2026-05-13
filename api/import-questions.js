@@ -1,5 +1,4 @@
-export default async function handler(req, res) {
-  if (req.query.secret !== process.env.IMPORT_SECRET) {
+module.exports = async function handler(req, res) {  if (req.query.secret !== process.env.IMPORT_SECRET) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 

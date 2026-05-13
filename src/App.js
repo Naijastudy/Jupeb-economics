@@ -26,6 +26,7 @@ import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
 import useToast from "./hooks/useToast";
 import Toast from "./components/Toast";
+import ImportPage from "./ImportPage";
 
 // ── SHARED UTILITY ────────────────────────────────────────────────────────────
 function formatTime(seconds) {
@@ -801,7 +802,7 @@ const SPLASH_MESSAGES = [
             </div>
             {/* ✅ App-7: total question count shown */}
             <div style={{ fontSize: 12, color: t.gold, marginTop: 6, fontWeight: "bold" }}>
-              📚 999+ questions available
+              📚 999+ questions available <button onClick={() => goTo("import")}>Import</button>
             </div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 6 }}>
               💡 Tap ⋮ → "Add to Home Screen" to install as an app
@@ -1148,5 +1149,8 @@ const SPLASH_MESSAGES = [
     );
   }
 
-  return null;
+  if (screen === "import") {
+  return <ImportPage onBack={goBack} />;
+}
+return null;
 }

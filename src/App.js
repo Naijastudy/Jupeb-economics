@@ -801,7 +801,7 @@ const SPLASH_MESSAGES = [
             </div>
             {/* ✅ App-7: total question count shown */}
             <div style={{ fontSize: 12, color: t.gold, marginTop: 6, fontWeight: "bold" }}>
-              📚 {totalQ}+ questions available
+              📚 999+ questions available
             </div>
             <div style={{ fontSize: 11, color: t.gold, marginTop: 6 }}>
               💡 Tap ⋮ → "Add to Home Screen" to install as an app

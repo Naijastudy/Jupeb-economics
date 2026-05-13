@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";  // ✅ useRef from App-7 (stale closure fix)
+import { useState, useEffect, useRef } from "react";  
 import { db } from "./firebase";
 import { subjects } from "./data/index";
 import useAuth from "./hooks/useAuth";
@@ -24,7 +24,8 @@ import useQuiz from "./hooks/useQuiz";
 import { useApp } from "./context/AppContext";
 import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
-
+import useToast from "./hooks/useToast";
+import Toast from "./components/Toast";
 
 // ── SHARED UTILITY ────────────────────────────────────────────────────────────
 function formatTime(seconds) {
@@ -502,7 +503,8 @@ export default function App() {
   const [feedbackSending, setFeedbackSending] = useState(false);
   const [feedbackSent,    setFeedbackSent]    = useState(false);
   const [feedbackError,   setFeedbackError]   = useState("");
-
+  
+const { toast, showToast, hideToast } = useToast();
   // ── HOOKS ──
 
   // 1. Online status
@@ -536,6 +538,25 @@ export default function App() {
     error: notifError, requestPermission,
     disableNotifications, updateSettings: updateNotifSettings,
   } = useNotifications();
+
+  const cbtWarnedRef  = useRef(false);
+const examWarnedRef = useRef(false);
+
+useEffect(() => {
+  if (cbtTime === 3600) { cbtWarnedRef.current = false; }
+  if (cbtTime === 180 && !cbtWarnedRef.current) {
+    cbtWarnedRef.current = true;
+    showToast("⏰ 3 minutes remaining!", "warning", 6000);
+  }
+}, [cbtTime, showToast]);
+
+useEffect(() => {
+  if (examTime > 200) { examWarnedRef.current = false; }
+  if (examTime === 180 && !examWarnedRef.current) {
+    examWarnedRef.current = true;
+    showToast("⏰ 3 minutes remaining!", "warning", 6000);
+  }
+}, [examTime, showToast]);
 
 
   // ── NAVIGATION HELPERS ──
@@ -571,7 +592,6 @@ export default function App() {
     setHistory(newHistory);
     setScreen(newHistory[newHistory.length - 1]);
   };
-
 
   // ── EFFECTS ──
 
@@ -723,7 +743,6 @@ const SPLASH_MESSAGES = [
 
   // ── HOME ──
   if (screen === "home") {
-    // ✅ App-7: totalQ count displayed in hero section
     const totalQ =
       subjects.reduce((a, s) =>
         a + Object.values(s.data.questions).reduce((b, arr) => b + arr.length, 0), 0
@@ -731,6 +750,7 @@ const SPLASH_MESSAGES = [
 
     return (
       <div style={wrap}>
+      <Toast toast={toast} onHide={hideToast} />
         <OfflineIndicator isOnline={isOnline} wasOffline={wasOffline} />
 
         {/* Header */}
@@ -1021,6 +1041,7 @@ const SPLASH_MESSAGES = [
     }
     return (
       <>
+      <Toast toast={toast} onHide={hideToast} />
         <CbtQuiz
           t={t} cbtQs={cbtQs} cbtIdx={cbtIdx} setCbtIdx={setCbtIdx}
           cbtAnswers={cbtAnswers} setCbtAnswers={setCbtAnswers}
@@ -1029,8 +1050,7 @@ const SPLASH_MESSAGES = [
           activeSubject={activeSubject}
           onBack={() => {
             if (Object.keys(cbtAnswers).length > 0) {
-              // ✅ App-7: QuitModal instead of window.confirm
-              setQuitModal({
+           setQuitModal({
                 open: true,
                 onConfirm: () => {
                   setCbtRunning(false);
@@ -1092,6 +1112,8 @@ const SPLASH_MESSAGES = [
     }
     return (
       <>
+      
+      <Toast toast={toast} onHide={hideToast} />
         <ExamQuiz
           t={t} examQs={examQs} examIdx={examIdx} setExamIdx={setExamIdx}
           examAnswers={examAnswers} setExamAnswers={setExamAnswers}
@@ -1102,7 +1124,6 @@ const SPLASH_MESSAGES = [
           minimized={minimized} setMinimized={setMinimized}
           onBack={() => {
             if (Object.keys(examAnswers).length > 0) {
-              // ✅ App-7: QuitModal instead of window.confirm
               setQuitModal({
                 open: true,
                 onConfirm: () => {

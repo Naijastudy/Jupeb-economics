@@ -28,9 +28,10 @@ export function AppProvider({ children }) {
   // System theme listener
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const listener = () => {
-      if (themeKey === "system") setThemeKey("system");
-    };
+    const [, forceUpdate] = useState(0);
+const listener = () => {
+  if (themeKey === "system") forceUpdate(n => n + 1);
+};
     media.addEventListener("change", listener);
     return () => media.removeEventListener("change", listener);
   }, [themeKey]);

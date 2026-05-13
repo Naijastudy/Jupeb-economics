@@ -13,13 +13,15 @@ export function AppProvider({ children }) {
   const [themeKey, setThemeKey] = useState(
     () => localStorage.getItem("theme") || "system"
   );
-
+  const [, forceUpdate] = useState(0);
   const actualTheme = themeKey === "system" ? getSystemTheme() : themeKey;
   const t = themes[actualTheme];
 
   const toggleTheme = () =>
-    setThemeKey((k) => (k === "dark" ? "light" : "dark"));
-
+  setThemeKey((k) =>
+    k === "dark" ? "light" : k === "light" ? "system" : "dark"
+  );
+  
   // Persist theme
   useEffect(() => {
     localStorage.setItem("theme", themeKey);
@@ -28,8 +30,7 @@ export function AppProvider({ children }) {
   // System theme listener
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const [, forceUpdate] = useState(0);
-const listener = () => {
+  const listener = () => {
   if (themeKey === "system") forceUpdate(n => n + 1);
 };
     media.addEventListener("change", listener);

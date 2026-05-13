@@ -20,7 +20,7 @@ const allQuestions = {
   { year:"2018", q:"The activities of Nigeria in the international community are primarily influenced by ______.", options:["A. Diplomacy","B. Propaganda","C. National interest","D. Military power"], answer:"C", exp:"National interest is the primary driver of Nigeria's foreign policy and international activities." },
 
     ],
-  ],
+  
   basic: [
     // paste basic questions here
   ],

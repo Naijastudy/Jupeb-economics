@@ -81,6 +81,7 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
   // ── Refs
   const cbtWarnedRef  = useRef(false);
   const examWarnedRef = useRef(false);
+  const prevExamTimeRef = useRef(examTime);
 
   // ── CBT TIMER ──
   useEffect(() => {
@@ -146,10 +147,19 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     ) {
       examWarnedRef.current = true;
 
-      if (typeof showToast === "function") {
-        showToast("⏰ 3 minutes remaining!", "warning", 6000);
-      }
+      console.log("⚠️ WARNING EFFECT FIRED");
+
+if (typeof showToast === "function") {
+  console.log("✅ showToast exists");
+
+  showToast("⏰ 3 minutes remaining!", "warning", 6000);
+} else {
+  console.log("❌ showToast missing");
+}
+
+alert("3 minutes remaining!");
     }
+    prevExamTimeRef.current = examTime;
   }, [examTime, examRunning, examDone, showToast]);
 
   // ── START CBT ──

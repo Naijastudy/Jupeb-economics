@@ -24,6 +24,7 @@ function getAllQuestions(
   data, fbQuestions = [], subjectId = "economics", year = null
 ) {
   let all = [];
+
   Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach((q) => {
       if (!year || q.year === year) {
@@ -31,6 +32,7 @@ function getAllQuestions(
       }
     });
   });
+
   fbQuestions
     .filter((q) => q.subject === subjectId && (!year || q.year === year))
     .forEach((q) => {
@@ -46,6 +48,7 @@ function getAllQuestions(
         })
       );
     });
+
   return shuffle(all);
 }
 
@@ -75,15 +78,14 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
   const [showCalc, setShowCalc] = useState(false);
   const [minimized, setMinimized] = useState(false);
 
-  // ── Refs to track if warning was already shown ──
-  // Prevents the toast firing more than once per session
+  // ── Refs
   const cbtWarnedRef  = useRef(false);
   const examWarnedRef = useRef(false);
 
   // ── CBT TIMER ──
-  // Pure state updater — no side effects inside
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
+
     const timer = setInterval(() => {
       setCbtTime((prev) => {
         if (prev <= 1) {
@@ -94,19 +96,21 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
         return prev - 1;
       });
     }, 1000);
+
     return () => clearInterval(timer);
   }, [cbtRunning, cbtDone]);
 
-  // ── CBT 3-MINUTE WARNING ──
-  // Separate effect — safe place to call showToast
+  // ── CBT WARNING (FIXED) ──
   useEffect(() => {
     if (
-      cbtTime === 180 &&
       cbtRunning &&
       !cbtDone &&
+      cbtTime <= 180 &&
+      cbtTime > 0 &&
       !cbtWarnedRef.current
     ) {
       cbtWarnedRef.current = true;
+
       if (typeof showToast === "function") {
         showToast("⏰ 3 minutes remaining!", "warning", 6000);
       }
@@ -114,9 +118,9 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
   }, [cbtTime, cbtRunning, cbtDone, showToast]);
 
   // ── EXAM TIMER ──
-  // Pure state updater — no side effects inside
   useEffect(() => {
     if (!examRunning || examDone) return;
+
     const timer = setInterval(() => {
       setExamTime((prev) => {
         if (prev <= 1) {
@@ -127,19 +131,21 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
         return prev - 1;
       });
     }, 1000);
+
     return () => clearInterval(timer);
   }, [examRunning, examDone]);
 
-  // ── EXAM 3-MINUTE WARNING ──
-  // Separate effect — safe place to call showToast
+  // ── EXAM WARNING (FIXED) ──
   useEffect(() => {
     if (
-      examTime === 180 &&
       examRunning &&
       !examDone &&
+      examTime <= 180 &&
+      examTime > 0 &&
       !examWarnedRef.current
     ) {
       examWarnedRef.current = true;
+
       if (typeof showToast === "function") {
         showToast("⏰ 3 minutes remaining!", "warning", 6000);
       }
@@ -151,7 +157,9 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     let qs = getAllQuestions(
       subject.data, firebaseQuestions, subject.id
     );
+
     if (qs.length > 50) qs = qs.slice(0, 50);
+
     setCbtQs(qs);
     setCbtIdx(0);
     setCbtAnswers({});
@@ -159,7 +167,8 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     setCbtScoreSaved(false);
     setCbtTime(60 * 60);
     setCbtRunning(true);
-    cbtWarnedRef.current = false;  // reset warning for new session
+    cbtWarnedRef.current = false;
+
     updateStreak(uid);
     goTo("cbt_quiz");
   };
@@ -169,7 +178,9 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     let qs = getAllQuestions(
       subject.data, firebaseQuestions, subject.id, year
     );
+
     if (qs.length > examCount) qs = qs.slice(0, examCount);
+
     setExamQs(qs);
     setExamIdx(0);
     setExamAnswers({});
@@ -178,6 +189,7 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     setExamTime(examMinutes * 60);
     setExamRunning(true);
     examWarnedRef.current = false;
+
     updateStreak(uid);
     goTo("exam_quiz");
   };
@@ -205,4 +217,4 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
     showCalc, setShowCalc,
     minimized, setMinimized,
   };
-            }
+}

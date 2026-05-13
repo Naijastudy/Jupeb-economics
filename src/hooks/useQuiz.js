@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 function shuffle(arr) {
   const a = [...arr];
@@ -24,7 +24,6 @@ function getAllQuestions(
   data, fbQuestions = [], subjectId = "economics", year = null
 ) {
   let all = [];
-
   Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach((q) => {
       if (!year || q.year === year) {
@@ -32,7 +31,6 @@ function getAllQuestions(
       }
     });
   });
-
   fbQuestions
     .filter((q) => q.subject === subjectId && (!year || q.year === year))
     .forEach((q) => {
@@ -48,11 +46,11 @@ function getAllQuestions(
         })
       );
     });
-
   return shuffle(all);
 }
 
-export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
+// ── useQuiz ──────────────────────────────────────────────────────────────────
+export default function useQuiz(firebaseQuestions, updateStreak) {
 
   // ── CBT STATE ──
   const [cbtQs, setCbtQs] = useState([]);
@@ -78,15 +76,9 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
   const [showCalc, setShowCalc] = useState(false);
   const [minimized, setMinimized] = useState(false);
 
-  // ── Refs
-  const cbtWarnedRef  = useRef(false);
-  const examWarnedRef = useRef(false);
-  const prevExamTimeRef = useRef(examTime);
-
-  // ── CBT TIMER ──
+  // ── CBT TIMER — ──
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
-
     const timer = setInterval(() => {
       setCbtTime((prev) => {
         if (prev <= 1) {
@@ -97,31 +89,12 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, [cbtRunning, cbtDone]);
 
-  // ── CBT WARNING (FIXED) ──
-  useEffect(() => {
-    if (
-      cbtRunning &&
-      !cbtDone &&
-      cbtTime <= 180 &&
-      cbtTime > 0 &&
-      !cbtWarnedRef.current
-    ) {
-      cbtWarnedRef.current = true;
-
-      if (typeof showToast === "function") {
-        showToast("⏰ 3 minutes remaining!", "warning", 6000);
-      }
-    }
-  }, [cbtTime, cbtRunning, cbtDone, showToast]);
-
-  // ── EXAM TIMER ──
+  // ── EXAM TIMER — ──
   useEffect(() => {
     if (!examRunning || examDone) return;
-
     const timer = setInterval(() => {
       setExamTime((prev) => {
         if (prev <= 1) {
@@ -132,44 +105,15 @@ export default function useQuiz(firebaseQuestions, updateStreak, showToast) {
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, [examRunning, examDone]);
-
-  // ── EXAM WARNING (FIXED) ──
-  useEffect(() => {
-    if (
-      examRunning &&
-      !examDone &&
-      examTime <= 180 &&
-      examTime > 0 &&
-      !examWarnedRef.current
-    ) {
-      examWarnedRef.current = true;
-
-      console.log("⚠️ WARNING EFFECT FIRED");
-
-if (typeof showToast === "function") {
-  console.log("✅ showToast exists");
-
-  showToast("⏰ 3 minutes remaining!", "warning", 6000);
-} else {
-  console.log("❌ showToast missing");
-}
-
-alert("3 minutes remaining!");
-    }
-    prevExamTimeRef.current = examTime;
-  }, [examTime, examRunning, examDone, showToast]);
 
   // ── START CBT ──
   const startCbt = (subject, goTo, uid) => {
     let qs = getAllQuestions(
       subject.data, firebaseQuestions, subject.id
     );
-
     if (qs.length > 50) qs = qs.slice(0, 50);
-
     setCbtQs(qs);
     setCbtIdx(0);
     setCbtAnswers({});
@@ -177,8 +121,6 @@ alert("3 minutes remaining!");
     setCbtScoreSaved(false);
     setCbtTime(60 * 60);
     setCbtRunning(true);
-    cbtWarnedRef.current = false;
-
     updateStreak(uid);
     goTo("cbt_quiz");
   };
@@ -188,9 +130,7 @@ alert("3 minutes remaining!");
     let qs = getAllQuestions(
       subject.data, firebaseQuestions, subject.id, year
     );
-
     if (qs.length > examCount) qs = qs.slice(0, examCount);
-
     setExamQs(qs);
     setExamIdx(0);
     setExamAnswers({});
@@ -198,8 +138,6 @@ alert("3 minutes remaining!");
     setExamScoreSaved(false);
     setExamTime(examMinutes * 60);
     setExamRunning(true);
-    examWarnedRef.current = false;
-
     updateStreak(uid);
     goTo("exam_quiz");
   };

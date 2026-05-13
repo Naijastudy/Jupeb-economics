@@ -38,7 +38,6 @@ function formatTime(seconds) {
 
 
 // ── STREAK TIERS ──────────────────────────────────────────────────────────────
-// ✅ App-6: cleaner array-based approach (vs App-7's chained if-statements)
 const STREAK_TIERS = [
   { min: 100, icon: "👑",     label: "Legend",      color: "#9333ea", msg: "100+ days — you're unstoppable!" },
   { min: 60,  icon: "🏆",     label: "Champion",    color: "#dc2626", msg: "2 months straight — incredible!" },
@@ -56,7 +55,6 @@ function getStreakTier(count) {
 
 
 // ── HOME CARDS ────────────────────────────────────────────────────────────────
-// ✅ App-6: defined as module-level constant (no re-creation on each render)
 const HOME_CARDS = [
   { id: "cbt",      icon: "⏱️", title: "CBT Practice",  desc: "1 hour · 50 random questions",   color: "#0d9488" },
   { id: "exam",     icon: "📝", title: "Exam Mode",      desc: "Custom time & question count",   color: "#2563eb" },
@@ -68,7 +66,6 @@ const HOME_CARDS = [
 
 
 // ── GRADE LABELS ──────────────────────────────────────────────────────────────
-// ✅ App-6: array-based lookup (vs App-7's repeated ternary chains)
 const GRADE_LABELS = [
   { min: 70, label: "Excellent! Grade A 🥳", short: "Grade A", emoji: "🏆" },
   { min: 60, label: "Very Good! Grade B 💪", short: "Grade B", emoji: "📚" },
@@ -93,7 +90,6 @@ const MODE_LABELS = {
 
 
 // ── QUIT CONFIRMATION MODAL ───────────────────────────────────────────────────
-// ✅ App-7 exclusive: proper modal instead of window.confirm()
 function QuitModal({ open, onConfirm, onCancel, t }) {
   if (!open) return null;
   return (
@@ -149,14 +145,12 @@ function QuitModal({ open, onConfirm, onCancel, t }) {
 
 // ── RESULT SCREEN ─────────────────────────────────────────────────────────────
 function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) {
-  // ✅ App-7: copied state for better UX feedback
   const [copied, setCopied] = useState(false);
 
   const correct = qs.filter((q, i) => answers[i] === q.answer).length;
   const skipped = qs.filter((_, i) => !answers[i]).length;
   const wrong   = qs.length - correct - skipped;
   const pct     = qs.length > 0 ? Math.round((correct / qs.length) * 100) : 0;
-  // ✅ App-6: uses shared getGrade() lookup — no repeated ternary chains
   const grade   = getGrade(pct);
 
   const subjectName = activeSubject?.name || "JUPEB";
@@ -173,15 +167,13 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
     window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, "_blank");
   };
 
-  // ✅ App-7: visual "Copied!" feedback instead of alert()
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(shareText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // silently fail — clipboard not available
-    }
+       }
   };
 
   const handleNativeShare = () => {
@@ -202,7 +194,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
     cursor: "pointer", display: "block", marginBottom: 10,
   };
 
-  // ✅ App-6: stat pills defined as array to avoid JSX repetition
   const statPills = [
     { value: correct, label: "Correct ✓", bg: t.correctBg, border: t.correctBorder, color: t.correctBorder, text: t.correctText },
     { value: wrong,   label: "Wrong ✗",   bg: t.wrongBg,   border: t.wrongBorder,   color: t.wrongBorder,   text: t.wrongText },
@@ -262,7 +253,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
           <span style={{ fontSize: 20 }}>💬</span> Share on WhatsApp
         </button>
 
-        {/* ✅ App-7: visual "Copied!" state instead of alert */}
         <button
           onClick={handleNativeShare}
           style={{
@@ -307,7 +297,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
         const userAns   = answers[i];
         const isRight   = userAns === q.answer;
         const isSkipped = !userAns;
-        // ✅ App-6: extracted variables for cleaner JSX
         const borderColor = isSkipped ? t.border : isRight ? t.correctBorder : t.wrongBorder;
         const statusColor = isSkipped ? t.textMuted : isRight ? t.correctBorder : t.wrongBorder;
         const statusLabel = isSkipped ? "— Skipped" : isRight ? "✓ Correct" : "✗ Wrong";
@@ -357,7 +346,6 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
 
 // ── SUBJECT SELECT ────────────────────────────────────────────────────────────
 function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
-  // ✅ App-6: references shared MODULE_LABELS constant (avoids recreation in component)
   const label = MODE_LABELS[mode] || { title: "Select", sub: "" };
 
   return (
@@ -493,7 +481,6 @@ export default function App() {
   const [screen,  setScreen]  = useState("home");
   const [history, setHistory] = useState(["home"]);
 
-  // ✅ App-7: quit modal state (replaces window.confirm)
   const [quitModal, setQuitModal] = useState({ open: false, onConfirm: null });
 
   // ── SUBJECT / MODE ──
@@ -565,7 +552,6 @@ export default function App() {
       (screen === "cbt_quiz"  && !cbtDone  && Object.keys(cbtAnswers).length > 0) ||
       (screen === "exam_quiz" && !examDone && Object.keys(examAnswers).length > 0);
 
-    // ✅ App-7: use QuitModal instead of window.confirm for in-quiz back
     if (quizInProgress) {
       setQuitModal({
         open: true,
@@ -604,7 +590,6 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ App-7: hardware back button — uses ref to fix stale closure bug
   const goBackRef = useRef(goBack);
   useEffect(() => { goBackRef.current = goBack; });
 
@@ -657,18 +642,18 @@ export default function App() {
     const barBg    = isDark
       ? "linear-gradient(90deg,#c8a84b,#f0d080)"
       : "linear-gradient(90deg,#1a3a5c,#2563eb)";
-
-    // ✅ App-6: splash messages as array lookup (cleaner than nested ternaries)
-    const splashMessages = [
-      { max: 40,  msg: "Loading questions..." },
-      { max: 70,  msg: "Preparing study materials..." },
-      { max: 90,  msg: "Almost ready..." },
-      { max: 101, msg: "Welcome! 🥳" },
-    ];
-    const splashMsg = authLoading
-      ? "Restoring your account... 👤"
-      : splashMessages.find((m) => progress < m.max)?.msg;
-
+    
+ // ── SPLASH MESSAGES ───────────────────────────────────────────────────────────
+const SPLASH_MESSAGES = [
+  { max: 40,  msg: "Loading questions..." },
+  { max: 70,  msg: "Preparing study materials..." },
+  { max: 90,  msg: "Almost ready..." },
+  { max: 101, msg: "Welcome! 🥳" },
+];
+   const splashMsg = authLoading
+  ? "Restoring your account... 👤"
+  : SPLASH_MESSAGES.find((m) => progress < m.max)?.msg;
+    
     return (
       <div style={{
         minHeight: "100vh",

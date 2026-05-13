@@ -52,31 +52,32 @@ export default function ImportPage({ onBack }) {
   const [count, setCount] = useState(0);
   const [total, setTotal] = useState(0);
 
-  async function handleImport() {
-    // count total questions across all topics
-    const allEntries = Object.entries(allQuestions).filter(
-      ([, qs]) => qs.length > 0
-    );
+ async function handleImport() {
+    const allEntries = Object.entries(allQuestions).filter(([, qs]) => qs.length > 0);
     const totalCount = allEntries.reduce((sum, [, qs]) => sum + qs.length, 0);
     setTotal(totalCount);
     setStatus("loading");
 
     let added = 0;
-    for (const [topic, questions] of allEntries) {
-      for (const question of questions) {
-        await addDoc(collection(db, "questions"), {
-          ...question,
-          topic,
-          subject: SUBJECT,
-        });
-        added++;
-        setCount(added);
+    try {
+      for (const [topic, questions] of allEntries) {
+        for (const question of questions) {
+          await addDoc(collection(db, "questions"), {
+            ...question,
+            topic,
+            subject: SUBJECT,
+          });
+          added++;
+          setCount(added);
+        }
       }
+      setStatus("done");
+    } catch (err) {
+      setStatus("error");
+      alert("Error: " + err.message);
     }
-
-    setStatus("done");
   }
-
+  
   // show which topics have questions
   const topicSummary = Object.entries(allQuestions)
     .filter(([, qs]) => qs.length > 0)
@@ -129,6 +130,11 @@ export default function ImportPage({ onBack }) {
           ✅ Done! {count} questions added to Firestore.
         </p>
       )}
+        {status === "error" && (
+  <p style={{ color: "red" }}>
+    ❌ Import failed. Check your Firestore rules.
+  </p>
+)}
     </div>
   );
       }

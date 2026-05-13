@@ -20,7 +20,9 @@ function shuffleOptions(q) {
   return { ...q, options: relabeled, answer: newAnswer };
 }
 
-function getAllQuestions(data, fbQuestions = [], subjectId = "economics", year = null) {
+function getAllQuestions(
+  data, fbQuestions = [], subjectId = "economics", year = null
+) {
   let all = [];
   Object.entries(data.questions).forEach(([topicId, qs]) => {
     qs.forEach((q) => {
@@ -47,6 +49,7 @@ function getAllQuestions(data, fbQuestions = [], subjectId = "economics", year =
   return shuffle(all);
 }
 
+// ── useQuiz ──────────────────────────────────────────────────────────────────
 export default function useQuiz(firebaseQuestions, updateStreak) {
 
   // ── CBT STATE ──
@@ -73,12 +76,11 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
   const [showCalc, setShowCalc] = useState(false);
   const [minimized, setMinimized] = useState(false);
 
-  // ── CBT TIMER ──
+  // ── CBT TIMER — ──
   useEffect(() => {
     if (!cbtRunning || cbtDone) return;
     const timer = setInterval(() => {
       setCbtTime((prev) => {
-        if (prev === 180) alert("⚠️ 3 minutes remaining!");
         if (prev <= 1) {
           setCbtRunning(false);
           setCbtDone(true);
@@ -90,12 +92,11 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     return () => clearInterval(timer);
   }, [cbtRunning, cbtDone]);
 
-  // ── EXAM TIMER ──
+  // ── EXAM TIMER — ──
   useEffect(() => {
     if (!examRunning || examDone) return;
     const timer = setInterval(() => {
       setExamTime((prev) => {
-        if (prev === 180) alert("⚠️ 3 minutes remaining!");
         if (prev <= 1) {
           setExamRunning(false);
           setExamDone(true);

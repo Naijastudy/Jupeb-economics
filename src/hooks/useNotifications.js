@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const NOTIF_KEY = "sn_notifications";
 const ALARM_KEY = "sn_alarm_time";
+const SESSION_KEY = "sn_notif_registered";
 
 function getNotifSettings() {
   try {
@@ -33,6 +34,10 @@ function saveNotifSettings(settings) {
 }
 
 function scheduleNotification(hour) {
+  // 🚫 Prevent multiple registrations per session
+  if (sessionStorage.getItem(SESSION_KEY)) return;
+  sessionStorage.setItem(SESSION_KEY, "1");
+
   // Cancel existing alarm
   const existingId = localStorage.getItem(ALARM_KEY);
   if (existingId) clearTimeout(Number(existingId));
@@ -41,7 +46,6 @@ function scheduleNotification(hour) {
   const target = new Date();
   target.setHours(hour, 0, 0, 0);
 
-  // If time already passed today, schedule for tomorrow
   if (target <= now) {
     target.setDate(target.getDate() + 1);
   }
@@ -49,7 +53,9 @@ function scheduleNotification(hour) {
   const delay = target.getTime() - now.getTime();
 
   const id = setTimeout(() => {
-    // Show notification
+    // ✅ Allow next day's scheduling
+    sessionStorage.removeItem(SESSION_KEY);
+
     if (Notification.permission === "granted") {
       new Notification("StudyNaija 📚", {
         body: "Time to study! Keep your streak alive 🔥",
@@ -59,7 +65,8 @@ function scheduleNotification(hour) {
         tag: "daily-reminder",
       });
     }
-    // Reschedule for next day
+
+    // 🔁 Reschedule next day
     scheduleNotification(hour);
   }, delay);
 

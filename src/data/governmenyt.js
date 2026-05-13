@@ -974,5 +974,12 @@ export const questions = {
   democracy_africa: [
     { year:"2018", q:"A major challenge to democracy in Africa is:", options:["A. stability","B. electoral malpractice","C. unity","D. participation"], answer:"B", exp:"Electoral malpractice undermines democratic processes and reduces public trust." },
   ],
-
 };
+export const grading = [
+    { marks: "70-100", grade: "A", points: 5, remark: "Excellent" },
+    { marks: "60-69", grade: "B", points: 4, remark: "Very Good" },
+    { marks: "50-59", grade: "C", points: 3, remark: "Good" },
+    { marks: "45-49", grade: "D", points: 2, remark: "Merit" },
+    { marks: "40-44", grade: "E", points: 1, remark: "Pass" },
+    { marks: "0-39",  grade: "F", points: 0, remark: "Fail" },
+];

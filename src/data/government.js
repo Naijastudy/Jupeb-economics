@@ -70,16 +70,13 @@ export const notes = {
   {
     title: "Definition of Government and Politics",
     key: "Government is the institution through which a state is ruled and laws are enforced, while politics is the process of acquiring and exercising power to make binding decisions for society.",
-    body: `In JUPEB Government, these two terms are foundational and must be clearly distinguished.
-    
-GOVERNMENT refers to the body or machinery that controls and directs the affairs of a state. It is the formal institution that makes laws (legislature), implements them (executive), and interprets them (judiciary). Government exists at different levels — federal, state, and local — and ensures security, order, and welfare.
-
+    body: `In Government, these two terms are foundational and must be clearly distinguished.
+<p>GOVERNMENT refers to the body or machinery that controls and directs the affairs of a state. It is the formal institution that makes laws (legislature), implements them (executive), and interprets them (judiciary). Government exists at different levels — federal, state, and local — and ensures security, order, and welfare.</p>
 Scholars define government in different ways:
-- Aristotle saw government as the organization of the state for the common good.
-- Laski defined government as the organization of men under authority.
-- In simple terms, government is the system by which a state is controlled.
-
-POLITICS refers to activities associated with decision-making in groups or societies, especially the gaining and use of power. Harold Lasswell defined politics as "who gets what, when and how." Politics involves the competition for power and resources, the process of policy-making, and the management of conflict in society.
+<p> - Aristotle saw government as the organization of the state for the common good. </p>
+<p>- Laski defined government as the organization of men under authority.</p>
+<p>- In simple terms, government is the system by which a state is controlled.</p>
+<p>POLITICS refers to activities associated with decision-making in groups or societies, especially the gaining and use of power. Harold Lasswell defined politics as "who gets what, when and how." Politics involves the competition for power and resources, the process of policy-making, and the management of conflict in society.</p>
 
 Key distinction: Government is the structure (institution), while politics is the activity (process) that takes place within and around that structure. In Nigeria, for example, NASS (National Assembly) is a government institution, but the debates and power struggles within it are politics.
 

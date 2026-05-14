@@ -74,10 +74,9 @@ export const notes = {
 
 GOVERNMENT refers to the body or machinery that controls and directs the affairs of a state. It is the formal institution that makes laws (legislature), implements them (executive), and interprets them (judiciary). Government exists at different levels — federal, state, and local — and ensures security, order, and welfare.
 Scholars define government in different ways:
+- Aristotle saw government as the organization of the state for the common good. 
 
- - Aristotle saw government as the organization of the state for the common good. 
- 
-- Laski defined government as the organization of men under authority.
+ - Laski defined government as the organization of men under authority.
 
 - In simple terms, government is the system by which a state is controlled.
 
@@ -422,14 +421,15 @@ COMPONENTS OF POLITICAL CULTURE:
 3. Evaluative Orientation: Judgments about how well the government is performing.
 
 TYPES OF POLITICAL CULTURE (Almond and Verba):
+
 1. Parochial Political Culture: Citizens have little or no awareness of the political system. Common in rural, traditional communities. Low political participation.
 2. Subject Political Culture: Citizens are aware of the political system but see themselves as subjects, not participants. They know about government but do not actively participate (typical of authoritarian states).
 3. Participant Political Culture: Citizens are fully aware, involved, and active in politics. They vote, join parties, and hold government accountable. Common in developed democracies.
 
-POLITICAL CULTURE IN NIGERIA:
+POLITICAL CULTURE IN NIGERIA:-
 Nigeria's political culture is mixed. Many citizens have low trust in government institutions, high levels of ethnicity in voting, and varying levels of political participation. Voter apathy, tribalism in politics, and corruption have shaped a culture of distrust.
 
-JUPEB Exam Tip: Know the three types of political culture by Almond and Verba. Be able to classify Nigeria's political culture with reasons.`
+Exam Tip: Know the three types of political culture by Almond and Verba. Be able to classify Nigeria's political culture with reasons.`
   },
 
   {
@@ -441,6 +441,7 @@ DEFINITION:
 Political socialization is the lifelong process by which individuals learn political values, attitudes, and behaviours from their environment. It shapes citizens' relationship with the state and their political participation.
 
 AGENTS OF POLITICAL SOCIALIZATION:
+
 1. FAMILY: The primary agent. Children first learn political values (respect for law, national identity, party preferences) from parents and relatives. In Nigeria, many people vote along family or ethnic lines due to early socialization.
 
 2. SCHOOL/EDUCATION: Teaches civic knowledge, national values, and history. Government and Civic Education subjects in Nigerian schools are tools of political socialization.
@@ -456,12 +457,13 @@ AGENTS OF POLITICAL SOCIALIZATION:
 7. POLITICAL PARTIES: Shape political identity and loyalty, especially through campaigns and mobilization.
 
 IMPORTANCE OF POLITICAL SOCIALIZATION:
+
 - It creates political identity and loyalty.
 - It promotes civic participation.
 - It transmits political culture from one generation to the next.
 - It shapes political stability or instability.
 
-JUPEB Exam Tip: List and explain at least five agents of political socialization. Use Nigerian examples — e.g., role of churches and mosques in influencing voting in Nigerian elections.`
+Exam Tip: List and explain at least five agents of political socialization. Use Nigerian examples — e.g., role of churches and mosques in influencing voting in Nigerian elections.`
   },
 
   {
@@ -469,10 +471,11 @@ JUPEB Exam Tip: List and explain at least five agents of political socialization
     key: "Political participation refers to the activities through which citizens engage with the political system to influence decisions and governance.",
     body: `Political participation is the lifeblood of democracy. For JUPEB, you must understand its forms, importance, and challenges.
 
-DEFINITION:
+<b>DEFINITION:</b>
 Political participation includes all voluntary activities by citizens that are intended to influence government decisions, policies, and the selection of leaders.
 
 FORMS OF POLITICAL PARTICIPATION:
+
 1. VOTING: The most common form. Citizens vote in elections to choose leaders. Universal adult suffrage in Nigeria allows all citizens 18 and above to vote.
 
 2. PARTY MEMBERSHIP: Joining a political party (e.g., APC, PDP, LP) and participating in its activities.
@@ -490,6 +493,7 @@ FORMS OF POLITICAL PARTICIPATION:
 8. ATTENDING PUBLIC HEARINGS: Citizens and groups presenting views during legislative or policy processes.
 
 LEVELS OF PARTICIPATION:
+
 - Gladiators: Highly active (politicians, activists)
 - Spectators: Moderately active (voters, rally attendees)
 - Apathetics: Low or no participation

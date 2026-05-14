@@ -66,7 +66,7 @@ export const courses = [
 
 ];
 export const notes = {
-  intro: [
+  nature: [
   {
     title: "Definition of Government and Politics",
     key: "Government is the institution through which a state is ruled and laws are enforced, while politics is the process of acquiring and exercising power to make binding decisions for society.",

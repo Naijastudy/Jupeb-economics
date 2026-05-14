@@ -235,7 +235,7 @@ Deals specifically with the political processes within a country — elections, 
 Exam Tip: Be able to define and differentiate each subfield. Essay questions may ask you to explain the scope of government as a subject.`
   },
     ],
-concepts = [
+concepts: [
   {
     title: "Power",
     key: "Power is the ability or capacity of an individual, group, or institution to influence, control, or direct the actions and decisions of others.",

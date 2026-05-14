@@ -100,14 +100,24 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px" }}>
               <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📝 Full Explanation</div>
               <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>
- {n.body.split("\n\n").map((para, i) => {
+{n.body.split("\n\n").map((para, i) => {
   if (para.startsWith("-")) {
     return (
       <ul key={i} style={{ marginTop: "16px" }}>
         {para.split("\n").map((item, j) => (
-          <li key={j}>{item.replace("-", "").trim()}</li>
+          <li key={j}>{item.replace(/^-\s*/, "").trim()}</li>
         ))}
       </ul>
+    );
+  }
+
+  if (/^\d+\./.test(para)) {
+    return (
+      <ol key={i} style={{ marginTop: "16px" }}>
+        {para.split("\n").map((item, j) => (
+          <li key={j}>{item.replace(/^\d+\.\s*/, "").trim()}</li>
+        ))}
+      </ol>
     );
   }
 
@@ -117,7 +127,7 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
     </p>
   );
 })}
-</div>
+  </div>
 {n.image && (
   <img src={n.image} alt={n.title}
     style={{ width: "100%", borderRadius: 10, marginTop: 14, border: `1px solid ${t.border}` }}

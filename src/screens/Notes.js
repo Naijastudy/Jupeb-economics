@@ -99,8 +99,26 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
             </div>
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px" }}>
               <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📝 Full Explanation</div>
-              <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>{n.body}</div>
-            {n.image && (
+              <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>
+ {n.body.split("\n\n").map((para, i) => {
+  if (para.startsWith("-")) {
+    return (
+      <ul key={i} style={{ marginTop: "16px" }}>
+        {para.split("\n").map((item, j) => (
+          <li key={j}>{item.replace("-", "").trim()}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return (
+    <p key={i} style={{ marginTop: i === 0 ? 0 : "16px" }}>
+      {para}
+    </p>
+  );
+})}
+</div>
+{n.image && (
   <img src={n.image} alt={n.title}
     style={{ width: "100%", borderRadius: 10, marginTop: 14, border: `1px solid ${t.border}` }}
     onError={e => e.target.style.display = "none"} />

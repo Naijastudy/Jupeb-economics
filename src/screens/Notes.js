@@ -113,11 +113,17 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
 
   if (/^\d+\./.test(para)) {
     return (
-      <ol key={i} style={{ marginTop: "16px" }}>
-        {para.split("\n").map((item, j) => (
-          <li key={j}>{item.replace(/^\d+\.\s*/, "").trim()}</li>
-        ))}
-      </ol>
+      <ul key={i} style={{ marginTop: "16px", listStyle: "none", padding: 0 }}>
+        {para.split("\n").map((item, j) => {
+          const match = item.match(/^(\d+\.)\s*(.*)/);
+          return match ? (
+            <li key={j} style={{ marginBottom: 6 }}>
+              <span style={{ fontWeight: "bold", marginRight: 6 }}>{match[1]}</span>
+              {match[2]}
+            </li>
+          ) : null;
+        })}
+      </ul>
     );
   }
 

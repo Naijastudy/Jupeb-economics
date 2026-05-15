@@ -568,6 +568,7 @@ useEffect(() => {
 
   const goBack = () => {
     if (history.length <= 1) return;
+    
 
     const quizInProgress =
       (screen === "cbt_quiz"  && !cbtDone  && Object.keys(cbtAnswers).length > 0) ||
@@ -586,7 +587,18 @@ useEffect(() => {
         },
       });
       return;
-    }
+    };
+    const goBackForce = () => {
+  if (history.length <= 1) return;
+  const newHistory = history.slice(0, -1);
+  setHistory(newHistory);
+  setScreen(newHistory[newHistory.length - 1]);
+};
+
+const goHome = () => {
+  setHistory(["home"]);
+  setScreen("home");
+};
 
     const newHistory = history.slice(0, -1);
     setHistory(newHistory);
@@ -1055,11 +1067,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setCbtRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goTo("home");
+                  goBackForce();
                 },
               });
             } else {
-              goTo("home");
+              goBackForce();
             }
           }}
           card={card} goldBtn={goldBtn}
@@ -1129,11 +1141,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setExamRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goTo("exam_setup");
+                  goBackForce();
                 },
               });
             } else {
-              goTo("exam_setup");
+              goBackForce();
             }
           }}
           card={card} goldBtn={goldBtn}

@@ -561,7 +561,7 @@ useEffect(() => {
 
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {
-    window.history.pushState({}, "");
+    window.history.pushState({ screen: newScreen }, "");
     setHistory((h) => [...h, newScreen]);
     setScreen(newScreen);
   };

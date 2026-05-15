@@ -1353,201 +1353,1214 @@ Nigerian politics is rife with propaganda — ethnic stereotyping, fake news, po
 Exam Tip: Define propaganda clearly, distinguish it from education, and list at least five propaganda techniques with examples.`
   },
 ],
+  elections: [
+  {
+    title: "Definitions of Election and Meaning of Suffrage",
+    key: "An election is the formal process of choosing leaders; suffrage is the right to vote in such elections.",
+    body: `DEFINITION OF ELECTION:
+An election is a formal decision-making process by which a population chooses individuals to hold public office, usually through a vote. Elections are the primary mechanism through which democracy functions — translating the will of the people into political authority.
 
-/*elections: [
-  {
-    title: "Meaning of Elections",
-    key: "Elections are the process through which citizens choose their leaders.",
-    body: "Elections are a key feature of democracy. They allow citizens to participate in governance and hold leaders accountable. Free and fair elections ensure legitimacy and stability in government."
+Characteristics of elections:
+
+- Held periodically (in Nigeria: presidential/gubernatorial every 4 years)
+- Based on universal adult suffrage
+- Conducted by an independent body (INEC in Nigeria)
+- Results must reflect the genuine will of voters
+
+DEFINITION OF SUFFRAGE:
+Suffrage is the right or privilege to vote in political elections. It is also called the franchise.
+
+HISTORY AND EVOLUTION OF SUFFRAGE:
+Historically, voting was restricted to wealthy, educated, or landowning men. The evolution towards universal suffrage was gradual:
+
+- Ancient Athens: Only male citizens could vote; women, slaves, and foreigners were excluded.
+- 18th–19th century Europe: Voting was restricted by property qualifications.
+- Women's suffrage: Women gained voting rights in New Zealand (1893), UK (1918), USA (1920). In Nigeria, women in the south gained the right to vote in 1954; in the north, not until 1979.
+- Universal adult suffrage: Today most democracies grant all adults (18+) the right to vote. Nigeria adopted universal adult suffrage in the post-independence period.
+
+TYPES OF SUFFRAGE:
+
+1. Universal Suffrage: All adult citizens can vote regardless of sex, race, religion, or property.
+2. Restricted Suffrage: Based on qualifications like gender, property, literacy, or race.
+3. Women's Suffrage: The specific right of women to vote.
+4. Adult Suffrage: Only adults (usually 18+) can vote.
+
+PURPOSE OF ELECTIONS:
+
+1. Selection of leaders
+2. Granting or withdrawing consent (mandate)
+3. Political education and participation
+4. Peaceful transfer of power
+5. Ensuring accountability of leaders
+6. Providing legitimacy to government
+
+Exam Tip: Know the history of suffrage in Nigeria specifically. Also explain why universal adult suffrage is important for democracy.`
   },
   {
-    title: "Suffrage",
-    key: "Suffrage is the right to vote in political elections.",
-    body: "Suffrage can be universal (all adults can vote) or restricted (based on gender, property, etc.). Modern democracies practice universal adult suffrage, ensuring equality and participation."
-  },
-  {
-    title: "Electoral Systems",
-    key: "Electoral systems are methods used to convert votes into political power.",
-    body: "Examples include simple majority (first-past-the-post), proportional representation, and mixed systems. The choice of system affects representation, fairness, and political stability."
-  },
-  {
-    title: "Free and Fair Elections",
-    key: "Free and fair elections are conducted without fraud, intimidation, or bias.",
-    body: "They require independent electoral bodies, transparency, security, and voter education. Challenges include vote-buying, violence, and electoral malpractice, especially in developing countries."
+    title: "Types of Electoral Systems and Electoral Institutions in Nigeria",
+    key: "Electoral systems determine how votes are converted into seats; Nigeria has used different systems managed by various electoral institutions over time.",
+    body: `TYPES OF ELECTORAL SYSTEMS:
+
+1. SIMPLE MAJORITY / FIRST-PAST-THE-POST (FPTP):
+The candidate with the most votes wins, even without an absolute majority. Most common for legislative elections. Simple and clear, but minority votes are wasted.
+Nigeria's National Assembly elections use this system.
+
+2. ABSOLUTE MAJORITY:
+The winner must get more than 50% of votes. If no one gets a majority, a run-off election is held.
+
+3. PROPORTIONAL REPRESENTATION (PR):
+Seats are allocated proportionally to the number of votes a party receives. More fair to minority parties. Used in many European countries.
+
+4. ALTERNATIVE VOTE (PREFERENTIAL VOTING):
+Voters rank candidates in order of preference. Used in Australia.
+
+5. TWO-ROUND SYSTEM:
+
+If no candidate gets a majority in round one, a second round is held between the top two candidates. Used in French presidential elections. Nigeria's presidential election has a version of this — if the winner does not meet the constitutional threshold (25% in at least 2/3 of states), a run-off may apply.
+
+NIGERIA'S PRESIDENTIAL ELECTORAL THRESHOLD:
+Under Section 134 of the 1999 Constitution, to win the presidential election, a candidate must:
+
+- Have the highest number of votes AND
+- Have at least one-quarter (25%) of votes cast in at least two-thirds (24) of the 36 states plus FCT.
+
+CONDITIONS FOR FREE AND FAIR ELECTIONS:
+
+1. Independent, credible electoral body (INEC)
+2. Equal access to media and campaign resources
+3. Absence of violence and intimidation
+4. Transparent voter registration
+5. Secure ballot and transparent counting
+6. Effective electoral laws and enforcement
+7. Civic education for voters
+8. Impartial security forces
+
+ELECTORAL INSTITUTIONS IN NIGERIA (Historical):
+
+1. FEDECO (Federal Electoral Commission): 1976–1987. Conducted Second Republic elections.
+2. NEC (National Electoral Commission): 1987–1993. Organized the controversial June 12, 1993 elections.
+3. NECON (National Electoral Commission of Nigeria): 1993–1998.
+4. INEC (Independent National Electoral Commission): 1998–present. Established to conduct elections from 1999. Conducts presidential, gubernatorial, National Assembly, and State Assembly elections.
+
+FACTORS MILITATING AGAINST FREE AND FAIR ELECTIONS IN NIGERIA:
+
+- Vote-buying and inducement of voters
+- Electoral violence and thuggery
+- Ballot box snatching and stuffing
+- Manipulation of results by returning officers
+- Weak enforcement of electoral laws
+- Ethnic and religious voting patterns
+- Over-reliance on incumbency advantage
+- Poor voter education
+
+Exam Tip: Know all four electoral institutions with dates. List at least six conditions for free and fair elections and relate them to Nigerian challenges.`
   }
 ],
+  change: [
+  {
+    title: "Meaning of Political and Social Change; Types of Change",
+    key: "Political and social change refers to transformations in political structures and social relations; it can be reactionary, reformatory, or revolutionary.",
+    body: `MEANING OF POLITICAL AND SOCIAL CHANGE:
+Political change refers to transformations in political structures, leadership, institutions, or systems. Social change refers to alterations in social structures, relations, values, or institutions. Both are interrelated and constant in societies.
 
-change: [
-  {
-    title: "Political and Social Change",
-    key: "Political and social change refers to transformation in political systems and societal structures.",
-    body: "Change can occur through reforms, revolutions, or gradual evolution. It may be driven by economic conditions, leadership, or public demand. Change is necessary for development but may also cause instability."
+Change can be:
+
+- Planned or unplanned
+- Gradual or sudden
+- Peaceful or violent
+- Progressive (forward) or regressive (backward)
+
+TYPES OF CHANGE:
+
+1. REACTIONARY CHANGE:
+A return to older systems or values, usually driven by dissatisfaction with current changes. Reactionaries want to "turn back the clock."
+
+Example: After Nigeria's democratic experiments in the 1980s, sections of the military claimed democracy was un-African and sought to return to more authoritarian governance.
+
+Features: Backward-looking, conservative, opposes progress.
+
+2. REFORMATORY (REFORMATIVE) CHANGE:
+Gradual, planned improvements to existing systems without fundamentally replacing them. Change from within.
+Example: Electoral reforms in Nigeria (introduction of card readers, BVAS technology by INEC), constitutional amendments, anti-corruption policies.
+
+Features: Moderate, works within existing framework, usually peaceful.
+
+3. REVOLUTIONARY CHANGE:
+Rapid, fundamental, and often violent transformation of existing political, economic, and social systems. Aims to completely replace the old order.
+Examples: French Revolution (1789), Russian Revolution (1917), Iranian Revolution (1979), Nigerian Civil War (1967-1970) had revolutionary elements.
+
+Features: Radical, comprehensive, often involves mass mobilization and violence.
+
+CONCEPTS OF STABILITY AND INSTABILITY:
+
+Political stability: A state of consistent governance where institutions function properly, laws are respected, and transitions of power are peaceful. Associated with development and investor confidence.
+
+Political instability: Frequent changes of government, coups, unrest, violence, and institutional breakdown. Associated with poverty, conflict, and underdevelopment.
+
+Nigeria's experience: Periods of military coups (instability) alternating with civilian governance (relative stability). Since 1999, Nigeria has maintained civilian governance — a sign of growing stability.
+
+TERRORISM AND INSURGENCY:
+
+Terrorism: The use of violence and intimidation, especially against civilians, to achieve political goals.
+
+Insurgency: An organized armed rebellion against a government or occupying power.
+Example in Nigeria: Boko Haram insurgency in the North-East; banditry and kidnapping in the Northwest; separatist agitation by IPOB in the Southeast.
+These represent serious threats to Nigeria's stability and governance.
+
+Exam Tip: Be able to clearly distinguish reactionary, reformatory, and revolutionary change with Nigerian examples. Terrorism and insurgency are also likely essay topics.`
   },
   {
-    title: "Types of Change",
-    key: "Types include reactionary, reformative, and revolutionary change.",
-    body: "Reactionary change seeks to return to old systems. Reformative change improves existing systems gradually. Revolutionary change is rapid and often violent, leading to complete system transformation."
-  },
-  {
-    title: "Military Intervention",
-    key: "Military intervention occurs when the armed forces take over government power.",
-    body: "It is often justified by claims of corruption or instability but undermines democracy. Causes include weak institutions, political crises, and poor governance. Military rule is usually authoritarian and limits freedoms."
+    title: "Military Intervention in Politics: Causes, Theories, Civil-Military Relations",
+    key: "Military intervention occurs when the armed forces seize political power; it is caused by political instability, corruption, and weak institutions — and undermines democracy.",
+    body: `MILITARY INTERVENTION IN POLITICS:
+Military intervention refers to the involvement of the armed forces in politics, especially through coups d'état (seizure of government by military force). It represents a deviation from constitutional governance.
+
+THEORIES AND CAUSES OF MILITARY INTERVENTION:
+
+1. Corporate Interest Theory: Military intervenes to protect its own professional and institutional interests (better pay, equipment, promotions). Intervention is self-serving.
+2. Political Vacuum Theory: When civilian government is weak or collapses, the military fills the power vacuum.
+3. Modernization Theory: In developing states, the military sees itself as more organized and capable of modernizing the country than inefficient civilian politicians.
+4. Contagion Effect: Military coups in neighboring countries inspire similar actions elsewhere.
+
+CAUSES OF MILITARY INTERVENTION IN NIGERIA:
+
+- Electoral malpractice and rigged elections (e.g., 1983 elections led to Buhari's coup)
+- Corruption and mismanagement of public funds
+- Ethnic and regional conflicts
+- Economic mismanagement and poverty
+- Weak political institutions
+- Abuse of power by civilian politicians
+
+NIGERIAN MILITARY REGIMES:
+
+1. Ironsi (1966): First coup; unified the government but was overthrown in a counter-coup.
+2. Gowon (1966–1975): Led Nigeria through the Civil War; was overthrown while at OAU summit.
+3. Murtala Mohammed (1975–1976): Assassinated in a failed coup; popular leader.
+4. Obasanjo (1976–1979): Handed over to civilian rule — transition programme.
+5. Buhari/Idiagbon (1983–1985): Overthrew Shagari; War Against Indiscipline (WAI).
+6. Babangida (1985–1993): Annulled June 12 election; structural adjustment.
+7. Abacha (1993–1998): Most repressive regime; died in office.
+8. Abdulsalami Abubakar (1998–1999): Rapid transition to democracy.
+
+CIVIL-MILITARY RELATIONS:
+The relationship between civilian government and the military. In a democracy, the military must be under civilian control. Key principles:
+
+- Military must be loyal to the constitution, not individuals
+- Civilian president is Commander-in-Chief
+- Military budget is subject to legislative oversight
+- Military appointments require executive approval
+
+In Nigeria, since 1999, civilian control has been maintained, but civil-military relations remain delicate.
+
+MILITARY DISENGAGEMENT FROM POLITICS:
+Military regimes often set up transition programmes to return to civilian rule:
+
+- Murtala/Obasanjo: 1975–1979 transition
+- Babangida's transition: 1986–1993 (annulled)
+- Abdulsalami: 1998–1999 transition (successful)
+
+Military professionalism requires that soldiers focus on their core duty (defense) and avoid politics.
+
+Exam Tip: List all Nigerian military regimes with dates and key features. Know at least four causes of military intervention. Be ready to discuss civil-military relations.`
   }
 ],
+  admin: [
+  {
+    title: "Public Administration: Definitions, Theories, Organization, and Bureaucracy",
+    key: "Public administration is the implementation of government policy and management of public services; it is organized hierarchically through bureaucracy.",
+    body: `DEFINITION:
+Public administration is the implementation of government policies and the management of public affairs in the interests of the citizens. It involves the activities of all levels of government — federal, state, and local.
 
-admin: [
-  {
-    title: "Public Administration",
-    key: "Public administration is the implementation of government policies and management of public services.",
-    body: "It involves planning, organizing, staffing, directing, and controlling government activities. It ensures efficient delivery of services like education, healthcare, and security."
-  },
-  {
-    title: "Bureaucracy",
-    key: "Bureaucracy is a system of administration with hierarchical structure and rules.",
-    body: "It ensures order, efficiency, and consistency. However, it may lead to delays, rigidity, and corruption if not properly managed."
-  },
-  {
-    title: "Civil Service",
-    key: "The civil service consists of permanent government officials who implement policies.",
-    body: "They provide continuity in governance and ensure professionalism. Their roles include policy advice, implementation, and administration of public programs."
+Different definitions:
+
+- Woodrow Wilson: Public administration is "the detailed and systematic execution of public law."
+- L.D. White: Public administration consists of all those operations having for their purpose the fulfilment or enforcement of public policy.
+- Simon: Public administration includes all the processes involved in carrying out the activities of formal organizations.
+
+THEORIES OF PUBLIC ADMINISTRATION:
+
+1. Classical Theory (Scientific Management): F.W. Taylor and Henri Fayol. Emphasizes hierarchy, division of labour, clear authority, and efficiency.
+2. Human Relations Theory: Elton Mayo and Mary Parker Follett. Focus on the importance of human factors — motivation, morale, and group dynamics.
+3. Bureaucratic Theory: Max Weber. Ideal bureaucracy has clear rules, hierarchy, specialization, and impersonality.
+4. Systems Theory: Views public administration as a system interacting with its environment.
+5. New Public Management (NPM): Business-like management of public sector; efficiency, privatization, performance evaluation.
+
+ORGANIZATION AND STRUCTURE OF PUBLIC ADMINISTRATION:
+
+Public administration is organized through ministries, departments, agencies (MDAs) in Nigeria:
+- Federal Ministries: Each headed by a Minister and overseen by a Permanent Secretary.
+- State Ministries: Headed by State Commissioners.
+- Parastatals and Agencies: NNPCL, JAMB, INEC, CBN, etc.
+
+BUREAUCRACY:
+
+Definition: An administrative system organized on hierarchical principles with specialized roles, fixed rules, and impersonal operations.
+
+Max Weber's features of ideal bureaucracy:
+
+1. Hierarchy of authority (clear chain of command)
+2. Division of labour (specialization)
+3. Rules and regulations (written, consistent)
+4. Impersonality (decisions based on rules, not personal relationships)
+5. Formal selection (based on merit/qualifications)
+6. Separation of office from the official (no personal ownership of office)
+
+STRENGTHS OF BUREAUCRACY:
+
+- Efficiency and consistency
+- Accountability through records
+- Expertise through specialization
+- Continuity in governance (civil servants remain when governments change)
+
+WEAKNESSES:
+
+- Rigidity and red tape (slow decision-making)
+- Empire-building by bureaucrats
+- Corruption and inefficiency in practice
+- Depersonalization (treating citizens as cases, not people)
+
+THE CIVIL SERVICE IN NIGERIA:
+
+Definition: Career officials employed by the government who implement policies on a permanent basis.
+
+Characteristics: Permanence, neutrality, anonymity, impartiality.
+Functions: Policy advice, implementation, record-keeping, service delivery.
+
+POLICY PROCESS: FORMULATION, IMPLEMENTATION, AND EVALUATION:
+
+1. Formulation: Identifying problems, developing options, and selecting policies.
+2. Implementation: Executing the chosen policy through MDAs.
+3. Evaluation: Assessing whether the policy achieved its goals.
+
+PUBLIC CORPORATIONS:
+Government-owned enterprises that provide goods/services (NNPCL, NEPA/PHCN, NPA, etc.). Can be fully government-owned or partially privatized.
+
+LOCAL GOVERNMENT ADMINISTRATION:
+The third tier of government in Nigeria. 774 LGAs deliver grassroots services (primary health care, primary education, sanitation). Guided by the 1999 Constitution (Section 7) and individual State Local Government Laws.
+
+Exam Tip: Know Weber's bureaucracy features, civil service characteristics, and Nigeria's three tiers of government. Policy process questions (formulation, implementation, evaluation) are also common.`
   }
 ],
-
-intl: [
+  intl: [
   {
-    title: "International Relations",
-    key: "International relations study interactions between countries.",
-    body: "It includes diplomacy, trade, conflict, and cooperation. It helps nations achieve goals like security, development, and global influence."
+    title: "International Relations: Definitions, Foreign Policy, Globalization, and International Organizations",
+    key: "International relations studies interactions between states; foreign policy guides a state's external conduct; international organizations promote cooperation.",
+    body: `DEFINITION OF INTERNATIONAL RELATIONS:
+International relations (IR) is the study of political, economic, social, and cultural interactions among states and non-state actors in the international system.
+
+DIFFERENCE BETWEEN IR AND INTERNATIONAL POLITICS:
+
+- International Relations: Broader — includes all types of interactions (trade, culture, diplomacy, law, organizations).
+- International Politics: Narrower — focuses specifically on power and political competition among states (war, alliances, diplomacy).
+
+FOREIGN POLICY:
+
+Definition: Foreign policy is the set of strategies, goals, and actions that a state uses to guide its interactions with other countries and international organizations.
+
+DETERMINANTS OF FOREIGN POLICY:
+
+1. National Interest: The primary driver — economic growth, security, territorial integrity.
+2. Geography: A country's location, size, and natural resources.
+3. Historical Relationships: Colonial ties, past conflicts, or alliances.
+4. Economic Capacity: Wealthy states have more foreign policy options.
+5. Military Strength: Strong militaries support assertive foreign policies.
+6. Public Opinion and Ideology: Internal values and public attitudes shape external policies.
+7. Leadership and Individuals: Charismatic leaders can shape foreign policy directions.
+
+GLOBALIZATION:
+Globalization is the increasing interconnectedness and interdependence of countries through the flow of goods, services, capital, ideas, people, and culture across borders.
+
+Effects of globalization:
+
+- Positive: Increased trade and investment, technology transfer, cultural exchange, development aid.
+- Negative: Economic dependency, cultural imperialism, widening inequality, vulnerability to global crises.
+
+HISTORY, STRUCTURE, ACHIEVEMENTS, AND FAILURES OF KEY INTERNATIONAL ORGANIZATIONS:
+
+1. ECOWAS (Economic Community of West African States):
+Founded: 1975 in Lagos. Members: 15 West African countries including Nigeria.
+Structure: Authority of Heads of State, Council of Ministers, Parliament, Court of Justice.
+
+Achievements: Free movement of persons, ECOMOG peacekeeping (Liberia, Sierra Leone), common market efforts.
+
+Failures: Slow economic integration, military coups by member states, poor implementation.
+
+2. AFRICAN UNION (AU):
+Founded: 2002 (replaced OAU, founded 1963). 55 member states.
+Structure: Assembly of Heads of State, Commission, Parliament, Peace and Security Council.
+
+Achievements: Promoting peace, AU peacekeeping missions, Agenda 2063 development plan.
+
+Failures: Ineffective in stopping coups and civil wars, financial dependency on external donors.
+
+3. COMMONWEALTH OF NATIONS:
+Founded: 1931 (formalized 1949). 56 member states, mostly former British colonies. Nigeria joined in 1960.
+Promotes democracy, rule of law, human rights, and economic development among members.
+Nigeria was suspended in 1995 (Abacha regime) and readmitted in 1999.
+
+4. UNITED NATIONS ORGANIZATION (UN):
+Founded: 1945. 193 member states. Headquarters: New York.
+Structure: General Assembly, Security Council (5 permanent members: USA, UK, France, Russia, China), Secretariat, ICJ, ECOSOC.
+
+Achievements: International peacekeeping, humanitarian aid, global health (WHO), children's welfare (UNICEF), decolonization support.
+
+Failures: Paralysis due to Security Council veto, inability to stop major conflicts.
+
+5. INTERNATIONAL MONETARY FUND (IMF):
+Founded: 1944 (Bretton Woods). Purpose: Maintaining international financial stability, providing loans to countries with balance of payment problems.
+Nigeria and IMF: Nigeria received IMF structural adjustment loans in the 1980s under Babangida (SAP), which had controversial social effects.
+
+6. WORLD BANK:
+Founded: 1944. Provides loans and grants to developing countries for development projects.
+Nigeria has received World Bank funding for infrastructure, health, and education.
+
+Exam Tip: Know the founding year and purpose of each organization. Be ready to assess ECOWAS achievements and failures, and explain Nigeria's relationship with any of these bodies.`
   },
-  {
-    title: "Foreign Policy",
-    key: "Foreign policy is a country's strategy in dealing with other nations.",
-    body: "It is influenced by national interest, leadership, economic strength, and global events. A good foreign policy promotes peace, trade, and international cooperation."
-  },
-  {
-    title: "International Organizations",
-    key: "International organizations are bodies formed by countries to promote cooperation.",
-    body: "Examples include the United Nations (UN), African Union (AU), ECOWAS, IMF, and World Bank. They address global issues like peace, development, and economic stability."
-  }
 ],
-precolonial: [
+  precolonial: [
   {
-    title: "Pre-Colonial Systems of Government in Nigeria",
-    key: "Before colonial rule, Nigerian societies had organized political systems such as centralized and non-centralized systems.",
-    body: "The Hausa/Fulani operated a centralized emirate system with strong Islamic influence and hierarchy. The Yoruba had a semi-centralized system with the Oba and council of chiefs sharing power. The Igbo practiced a decentralized system with no central authority, relying on councils of elders and age grades. These systems reflected cultural diversity and influenced modern governance structures in Nigeria."
-  }
-],
+    title: "Pre-Colonial Systems of Government in Nigeria: Hausa/Fulani, Yoruba, and Igbo",
+    key: "Before colonialism, Nigerian societies had well-organized political systems — the Hausa/Fulani emirate system, the Yoruba monarchical system, and the Igbo decentralized system.",
+    body: `Before the British arrived, Nigerian communities had functioning governments adapted to their social structures.
+    
+1. HAUSA/FULANI (EMIRATE SYSTEM — CENTRALIZED):
 
-colonial: [
-  {
-    title: "Colonial Administration in Nigeria",
-    key: "Colonial rule introduced foreign control and administrative systems in Nigeria.",
-    body: "The British governed Nigeria using policies designed to exploit resources and maintain control. The most notable system was Indirect Rule, where traditional rulers were used to administer local areas. This system worked well in the North but faced challenges in the South due to different political structures. Colonial rule led to economic changes, Western education, and political awareness."
-  },
-  {
-    title: "Constitutional Development in Nigeria",
-    key: "Nigeria’s political system evolved through several constitutions from 1914 to independence and beyond.",
-    body: "Key constitutions include Clifford (1922), Richards (1946), Macpherson (1951), and Lyttleton (1954), each increasing Nigerian participation in governance. After independence in 1960, Nigeria adopted different constitutions including republican and military decrees, shaping the current political system."
+Background: The Sokoto Jihad of 1804, led by Usman Dan Fodio, transformed the Hausa states into a Fulani-led emirate system. This is the most centralized pre-colonial system in Nigeria.
+
+Structure:
+
+- Sultan of Sokoto: Spiritual and political head of all emirates.
+- Emirs: Political and religious heads of individual emirates (e.g., Emir of Kano, Emir of Zaria).
+- Alkali (Judge): Administered Islamic (Sharia) law.
+- District Heads (Hakimai): Managed rural districts.
+- Village Heads: Local administration.
+
+Features:
+
+- Strong centralized authority under the Sultan
+- Islamic law (Sharia) governed personal and criminal matters
+- Well-organized bureaucracy with ministers (Waziri, Galadima, etc.)
+- Taxation system (tribute from subjects)
+- Military organization (cavalry, infantry)
+
+This system made indirect rule by the British relatively easy in the North.
+
+2. YORUBA (SEMI-CENTRALIZED — MONARCHICAL):
+Background: Yoruba political organization was based around kingdoms with the Oba (king) as political and sometimes spiritual head. The Oyo Empire was the most powerful.
+
+Structure:
+
+- Oba: King — head of the kingdom. In Oyo, the Alaafin held supreme power.
+- Council of Chiefs (Oyo Mesi): Seven chiefs who could destool (remove) the Alaafin. Power was shared.
+- Ogboni Society: A powerful secret society that checked royal power and maintained earth/ancestral traditions.
+- Are-Ona-Kakanfo: Commander of the military.
+- Town Chiefs and Quarter Heads: Local administration.
+
+Features:
+
+- Semi-centralized — power shared between the Oba and council of chiefs
+- Different kingdoms (Lagos, Oyo, Ijebu, Egba, Ekiti) were semi-autonomous
+- Checks on royal power through the Oyo Mesi and Ogboni
+- Trade-based economy
+
+The Yoruba system was more complex for indirect rule because of the checks on the Oba's power.
+
+3. IGBO (DECENTRALIZED — REPUBLICAN/GERONTOCRATIC):
+
+Background: The Igbo had no overall king or centralized authority. Political decisions were made collectively.
+
+Structure:
+
+- Village Assembly (Oha na Eze): All adults (especially males) of a village participated in decisions — a direct democratic approach.
+- Council of Elders (Ndi Isi Ala): Elders guided community decisions.
+- Age Grades: Each age group had responsibilities (community labour, military, etc.).
+- Title Societies (e.g., Ozo, Nze na Ozo): Wealthy and accomplished men who commanded respect.
+- Oracles (e.g., Ibini Ukpabi/Long Juju at Arochukwu): Religious authorities that also served political and judicial functions.
+
+Features:
+
+- Completely decentralized — no single chief or king over the whole Igbo nation
+- Democratic and participatory
+- Decisions by consensus
+- Women had roles through the "Women's Assembly" (which led to the 1929 Aba Women's Riots against colonial taxation)
+
+The British found indirect rule difficult among the Igbo because there were no recognized chiefs to work through — they created "Warrant Chiefs," which were artificial and resented.
+
+Exam Tip: Compare all three systems clearly. Know the key structures and why indirect rule worked well in the North but poorly in the South (especially among the Igbo).`
   }
 ],
-
-party_dev: [
+  colonial: [
   {
-    title: "Development of Political Parties in Nigeria",
-    key: "Political parties in Nigeria evolved through colonial, post-independence, and modern periods.",
-    body: "Early parties like NNDP and NCNC focused on nationalism. First Republic parties were regionally based (AG, NPC, NCNC). The Second Republic introduced more structured parties like NPN and UPN. The Third Republic had NRC and SDP, while the Fourth Republic includes PDP, APC, and others. Party development reflects Nigeria’s political growth and challenges."
+    title: "Colonial Administration: Indirect Rule, Nationalism, and Constitutional Development",
+    key: "British colonial rule in Nigeria used indirect rule through traditional rulers; Nigerian nationalism eventually forced constitutional changes leading to independence.",
+    body: `INDIRECT RULE SYSTEM:
+Definition: A system of colonial governance where the British ruled through existing traditional authorities (emirs, obas, chiefs) rather than directly.
+
+Developed and applied by Lord Frederick Lugard, who used it first in Northern Nigeria after 1900 and then across the whole of Nigeria.
+
+Principles:
+
+- Use of existing traditional rulers as agents of administration
+- Minimum European staff on the ground
+- Traditional courts, treasuries, and institutions retained under British supervision
+- Revenue collected through traditional tax systems
+
+SUCCESS IN THE NORTH:
+
+- The emirate system was centralized and had existing hierarchies the British could work through.
+- Emirs already collected taxes and administered justice.
+- Islam provided a unifying administrative framework.
+
+FAILURE IN THE SOUTH:
+
+- Yoruba system: Multiple competing chiefs made it complex.
+- Igbo: No centralized chiefs → British created "Warrant Chiefs" (artificial, resented) → Led to the Aba Women's Riots of 1929 when women protested against the threat of being taxed.
+
+NATIONALISM — RISE, GROWTH, AND EFFECTS:
+Rise: Western education produced an educated elite (Azikiwe, Awolowo, Balewa) who became aware of their rights and colonial exploitation.
+Key events:
+
+- Formation of NNDP (1923) by Herbert Macaulay — first Nigerian political party
+- Rise of NCNC (1944), AG (1950), NPC (1949) — nationalists demanding self-rule
+- Youth activism and press campaigns
+- Influence of Pan-Africanism
+
+Effects:
+
+- Forced constitutional reforms (Richards, Macpherson, Lyttleton constitutions)
+- Independence negotiations
+- Eventual independence on October 1, 1960
+
+CONSTITUTIONAL DEVELOPMENT IN NIGERIA (1914–1960):
+
+1. Clifford Constitution (1922): Introduced elective principle — Nigerians could vote for representatives for Lagos and Calabar. First step toward political participation.
+2. Richards Constitution (1946): Introduced regionalism — three regions (North, West, East). Still limited participation.
+3. Macpherson Constitution (1951): More Nigerians in the legislature; regional assemblies with greater powers.
+4. Lyttleton Constitution (1954): True federalism; regions had separate governments; Lagos became federal capital.
+5. Independence Constitution (1960): Nigeria became independent; Westminster parliamentary system.
+6. Republican Constitution (1963): Nigeria became a Republic with a ceremonial President.
+
+CONSTITUTIONAL DEVELOPMENT (1960–PRESENT):
+After independence, Nigeria went through several constitutions:
+
+- 1960: Independence Constitution
+- 1963: Republican Constitution
+- 1979: Presidential Constitution (after 13 years of military rule)
+- 1989: (never fully implemented — Babangida annulled transition)
+- 1993: Transitional council
+- 1999: Current Constitution (still in force, with amendments)
+
+Military interregnums used Decrees and Edicts instead of constitutions.
+
+Exam Tip: Know the sequence of constitutions with dates and key features.`
   }
 ],
+  party_dev: [
+  {
+    title: "Development of Political Parties in Nigeria: From Colonial Era to Fourth Republic",
+    key: "Nigerian political parties evolved through colonial nationalism, First Republic regionalism, military interruptions, and the modern Fourth Republic multi-party system.",
+    body: `COLONIAL AND FIRST REPUBLIC PARTIES (1923–1966):
 
-electoral_ng: [
-  {
-    title: "Elections in Nigeria",
-    key: "Elections in Nigeria have evolved from colonial times to modern democratic practices.",
-    body: "Nigeria has conducted several elections since independence, including those in 1959, 1979, 1999, and beyond. Elections determine leadership but are often challenged by malpractice, violence, and logistical issues. Electoral bodies like INEC are responsible for organizing elections."
-  },
-  {
-    title: "Problems of Elections in Nigeria",
-    key: "Elections in Nigeria face challenges such as fraud, violence, and vote-buying.",
-    body: "Common issues include rigging, intimidation, ballot snatching, and lack of transparency. These problems undermine democracy and reduce public trust. Electoral reforms and technology are being introduced to improve credibility."
+1. NNDP (Nigerian National Democratic Party, 1923): Founded by Herbert Macaulay — the "father of Nigerian nationalism." First political party in Nigeria. Dominated Lagos politics.
+
+2. NYM (Nigerian Youth Movement, 1934): First truly nationalist party with national outlook beyond Lagos. Leaders included Dr. Kofo Abayomi and later Ernest Ikoli. Declined due to internal rivalry.
+
+3. NCNC (National Council of Nigeria and the Cameroons, 1944): Founded by Herbert Macaulay and Nnamdi Azikiwe. Later became National Council of Nigerian Citizens. Strongest in the East and among the Igbo. Azikiwe became first President of Nigeria.
+
+4. AG (Action Group, 1950): Founded by Obafemi Awolowo. Based in the West, mostly Yoruba. Progressive ideology — free education, healthcare. Awolowo introduced free primary education in Western Nigeria.
+
+5. NPC (Northern Peoples' Congress, 1949): Founded and led by Ahmadu Bello, the Sardauna of Sokoto. Based in the North. Conservative, Islamic, pro-emirate. Tafawa Balewa (NPC) became Nigeria's first Prime Minister.
+
+6. NEPU, UMBC, NNDP (Second), NDC: Smaller parties that competed in the First Republic.
+
+SECOND REPUBLIC PARTIES (1979–1983):
+Five parties registered for the Second Republic elections:
+
+1. NPN (National Party of Nigeria): Led by Shehu Shagari; won 1979 and 1983 elections. National outlook but accused of corruption.
+2. UPN (Unity Party of Nigeria): Led by Obafemi Awolowo; strong in the West; welfare-oriented.
+3. NPP (Nigeria Peoples' Party): Led by Nnamdi Azikiwe; strong in the East.
+4. GNPP (Great Nigeria Peoples' Party): Led by Waziri Ibrahim; based in Borno.
+5. PRP (Peoples' Redemption Party): Led by Aminu Kano; progressive, socialist-leaning.
+6. NAP (Nigeria Advance Party): Led by Tunji Braithwaite; opposition party.
+
+THIRD REPUBLIC PARTIES (1989–1993):
+Military government under Babangida decreed only two parties:
+
+1. NRC (National Republican Convention): Conservative, center-right.
+2. SDP (Social Democratic Party): Center-left. Slogan: "A little to the left, a little to the right."
+
+June 12, 1993: SDP's MKO Abiola won the presidential election (widely believed), but the result was annulled by Babangida. This became the biggest political crisis of the era.
+
+FOURTH REPUBLIC PARTIES (1999–PRESENT):
+Multi-party system with dozens of registered parties. Key ones:
+
+1. PDP (Peoples Democratic Party, 1998): Dominant party for 16 years (1999–2015). Presidents Obasanjo, Yar'Adua, Jonathan.
+2. AD/AC/ACN/APC: Opposition parties that merged. APC (All Progressives Congress) was formed in 2013 by merger of ACN, CPC, ANPP, and a PDP faction. Won 2015 election (President Buhari). Won again in 2019.
+3. APGA (All Progressives Grand Alliance): Strong in the South-East; controls Anambra State governorship.
+4. LP (Labour Party): Won significant support in 2023 with Peter Obi.
+5. NNPP (New Nigeria Peoples Party): Won Kano governorship in 2023.
+
+APC vs. PDP continues to dominate federal politics.
+
+Exam Tip: Know at least two parties from each era with their leaders. The June 12, 1993 crisis (NRC vs. SDP, Abiola) is a major exam topic.`
   }
 ],
+  electoral_ng: [
+  {
+    title: "Elections and Electoral Process in Nigeria",
+    key: "Nigeria has conducted elections since colonial times; the process has been marked by both progress and persistent challenges.",
+    body: `HISTORICAL BACKGROUND:
+Nigeria's electoral history began under colonialism:
 
-crisis: [
+- 1922: First elections under Clifford Constitution (Lagos and Calabar only)
+- 1951: Broader elections under Macpherson Constitution
+- 1959: First federal elections ahead of independence
+
+GENERAL ELECTIONS IN NIGERIA:
+
+1959: Pre-independence elections. NPC won most seats. Coalition: NPC + NCNC. Tafawa Balewa became PM.
+
+1964: Federal elections marred by controversy. NPC-led NNA vs. UPGA. UPGA boycotted. Crisis erupted.
+
+1979: Return to democracy. NPN's Shehu Shagari won presidential election.
+1983: Shagari re-elected amid massive rigging allegations. Led to Buhari's coup on December 31, 1983.
+
+1993: June 12 presidential election. MKO Abiola (SDP) widely believed to have won. Annulled by Babangida. Most disputed election in Nigerian history.
+
+1999: Olusegun Obasanjo (PDP) elected. Transition from Abdulsalami's military regime.
+
+2003: Obasanjo re-elected. Significant rigging allegations.
+
+2007: Umaru Musa Yar'Adua (PDP) elected. Widely criticized as flawed. Died in office 2010; Jonathan completed term.
+
+2011: Goodluck Jonathan (PDP) won. Considered relatively credible. Post-election violence in the North.
+
+2015: Muhammadu Buhari (APC) defeated incumbent Jonathan — first peaceful transfer of power between parties in Nigeria's history. Historic.
+
+2019: Buhari re-elected.
+
+2023: Bola Ahmed Tinubu (APC) elected; controversial — declared winner despite not meeting constitutional threshold in FCT according to some interpretations. Supreme Court upheld results.
+
+TYPES OF ELECTORAL SYSTEMS USED IN NIGERIA:
+
+- Presidential election: Modified two-round system with 25% threshold requirement.
+- National Assembly/State Assembly: First-past-the-post (simple majority).
+- Governorship: Simple majority.
+
+PROBLEMS OF ELECTIONS IN NIGERIA:
+
+1. Ballot box snatching and stuffing
+2. Vote-buying and voter inducement
+3. Multiple voting with fake voters' cards
+4. Electoral violence and thuggery
+5. Manipulation of results by returning officers
+6. Under-age voting
+7. Disenfranchisement of voters
+8. Low voter turnout and voter apathy
+9. Judicial interference in electoral outcomes
+10. Failure to respect court orders by electoral body
+
+ELECTORAL REFORMS:
+
+- Introduction of BVAS (Bimodal Voter Accreditation System) in 2023
+- IReV (INEC Result Viewing Portal) for real-time result upload
+- Electoral Act 2022 (revised)
+- Card reader technology from 2015
+
+Exam Tip: Know all election years with outcomes. The 2015 election (first party change in power) is especially important. Be ready to list electoral problems and ongoing reforms.`
+  }
+],
+  crisis: [
   {
     title: "Major Political Crises in Nigeria",
-    key: "Nigeria has experienced several political crises that shaped its history.",
-    body: "Notable crises include the Aba Women’s Riot (1929), Kano Riots (1953), Action Group crisis (1962), Census crisis (1962/63), and the Nigerian Civil War (1967–1970). Others include the June 12, 1993 election crisis and ongoing security challenges like insurgency. These crises highlight ethnic, political, and economic tensions."
+    key: "Nigeria has experienced major crises from the 1929 Aba Women's Riots to the civil war, June 12 annulment, and ongoing insurgency — reflecting deep political, ethnic, and economic tensions.",
+    body: `1. ABA WOMEN'S RIOT (1929):
+Also called the Women's War (Ogu Umunwanyi). Igbo women in southeastern Nigeria protested against British colonial policies, specifically the fear of being taxed. The British had introduced direct taxation for men; women feared they were next.
+
+- Women gathered in mass protests, wearing palm fronds (symbol of war) and demanding colonial officers "cap" (a humiliation ritual).
+- British colonial forces killed over 50 women at Aba and Utu Etim Ekpo.
+- Significance: Showed organized female political resistance; led to reforms in indirect rule in Igboland.
+
+2. THE KANO RIOTS (1953):
+Triggered by a motion in the House of Representatives by Anthony Enahoro (AG) for "self-government in 1956." Northern politicians opposed this as premature. During an AG delegation visit to Kano, violence erupted — southerners (mainly Igbo traders) were attacked by northerners.
+
+- About 36 killed; hundreds injured.
+- Significance: Revealed deep North-South tensions; deepened ethnic distrust; influenced future constitutional discussions.
+
+3. ACTION GROUP CRISIS (1962):
+Internal split in the AG between Chief Obafemi Awolowo and Chief Samuel Ladoke Akintola (Premier of the Western Region).
+
+- Akintola wanted closer ties with the federal NPC-NCNC coalition; Awolowo opposed.
+- Akintola was removed as Premier; chaos in the Western House of Assembly.
+- Federal government declared a State of Emergency in the West.
+- Awolowo was later charged with treasonable felony and imprisoned.
+- Significance: Weakened the opposition; contributed to the instability leading to the 1966 coup.
+
+4. CENSUS CRISIS (1962/63):
+A headcount was crucial for determining political representation and revenue allocation. Both counts were controversial
+
+— inflated figures by regions to gain political advantage.
+- 1962 census was cancelled; 1963 results were disputed.
+- North was said to have inflated its figures to maintain political dominance.
+- Significance: Ethnic competition over census numbers continues to this day.
+
+5. NIGERIAN-BIAFRA CIVIL WAR (1967–1970):
+
+Background: Military coup of January 1966 (Kaduna Nzeogwu), counter-coup of July 1966, Igbo pogrom in the North, return of Igbos to the East, break-down of Aburi Accord.
+- Col. Odumegwu Ojukwu declared the Republic of Biafra on May 30, 1967.
+- Nigeria's federal forces (under Gowon) fought to keep the country together.
+- War lasted 30 months; estimated 1–3 million deaths (mostly from starvation).
+- Biafra surrendered January 1970. Gowon's 3Rs: Reconciliation, Rehabilitation, Reconstruction.
+- Significance: Shaped Nigeria's federal structure (state creation), military dominance, and ethnic politics to this day.
+
+6. ELECTORAL CRISES:
+June 12, 1993: MKO Abiola (SDP) won presidential election. IBB annulled results. Abiola declared himself president in 1994, was arrested. Died in custody in 1998. President Obasanjo posthumously awarded him the GCFR in 2018 and declared June 12 Democracy Day.
+
+2011 Post-Election Violence: After Buhari's defeat by Jonathan, violence erupted in northern states. Hundreds killed, churches and properties burned.
+
+7. NIGER DELTA CRISIS:
+Oil-producing communities in the Niger Delta have demanded resource control, development, and environmental remediation. MOSOP (Ken Saro-Wiwa) protests against Shell; MEND (Movement for the Emancipation of the Niger Delta) militant attacks; pipeline vandalism. The Amnesty Programme (2009) under Jonathan provided cash payments and rehabilitation to ex-militants.
+
+8. BOKO HARAM TERRORISM:
+Founded c. 2002 by Mohammed Yusuf in Maiduguri. Opposes Western education (Boko = Western education is forbidden; Haram = forbidden). Became violent after 2009, declared a Caliphate in 2014. Major attacks: bombings, kidnappings (Chibok Girls, 2014), massacre of thousands in the Northeast.
+
+Government responses: JTF operations, Multi-National Joint Task Force, dialogue, amnesty discussions.
+
+Exam Tip: Each crisis could be a separate essay question. Know dates, causes, and consequences of each.`
   }
 ],
-
-military: [
+  military; [
   {
-    title: "Military Rule in Nigeria",
-    key: "Military rule occurs when the armed forces take over government through a coup d’état.",
-    body: "Nigeria experienced several military regimes from 1966 to 1999. Leaders included Ironsi, Gowon, Murtala Mohammed, Obasanjo, Buhari, Babangida, Abacha, and Abdulsalami. Military rule centralized power and suspended democratic institutions. While some reforms were made, it limited freedoms and political development."
+    title: "Military Rule in Nigeria: Background, Regimes, Achievements, Failures, and Transition",
+    key: "Nigeria experienced six distinct periods of military rule (1966-1979, 1983-1999) under eight regimes, each with specific political contexts, achievements, and failures.",
+    body: `BACKGROUND TO MILITARY RULE:
+Nigeria's military first intervened on January 15, 1966 in a coup led by Major Kaduna Nzeogwu. The pretext was civilian corruption, electoral violence, and regional tensions.
+
+1. IRONSI (January–July 1966):
+First head of state after the coup. Issued Decree No. 34 unifying the country into a unitary state (abolishing regions/federalism) — seen by the North as Igbo attempt to dominate.
+Counter-coup: July 29, 1966 — northern officers killed Ironsi and seized power.
+
+2. GOWON (1966–1975):
+Led Nigeria through the Civil War (1967–1970). Created 12 states from 4 regions (1967) — partly to reduce Biafra's resource base. 3Rs policy after the war. Promised to hand over power but postponed. Overthrown while attending OAU summit in Uganda.
+
+3. MURTALA MOHAMMED (1975–1976):
+Very popular leader. Moved federal capital from Lagos to Abuja. Mass purge of civil servants (10,000 dismissed). Implemented Vision of moving Nigeria toward democracy. Assassinated February 13, 1976 in a failed coup.
+
+4. OLUSEGUN OBASANJO (1976–1979):
+Completed Murtala's programme. Drafted the 1979 Constitution. Successfully handed over to civilian President Shagari — a rare act in African military history. Created more states (from 12 to 19).
+
+5. MUHAMMADU BUHARI/TUNDE IDIAGBON (December 1983–August 1985):
+Overthrew Shagari's corrupt Second Republic. War Against Indiscipline (WAI): enforced queuing, road discipline, environmental sanitation. Detained politicians for corruption. Very strict; press censorship (Decree 4). Overthrown by Babangida in 1985.
+
+6. IBRAHIM BABANGIDA (IBB) (1985–1993):
+Longest-serving military leader. Structural Adjustment Programme (SAP) — devalued naira, removed subsidies. Transition to civil rule repeatedly postponed. Established MAMSER, National Orientation Agency. Annulled June 12, 1993 election. "Stepped aside."
+
+7. SANI ABACHA (1993–1998):
+Most repressive Nigerian regime. Executed Ken Saro-Wiwa and Ogoni leaders (1995). Imprisoned Obasanjo and Yar'Adua. Converted the country's oil wealth for personal use (billions looted). Attempted to transmute himself into civilian president. Died June 8, 1998 (sudden death — widely believed to be assassination).
+
+8. ABDULSALAMI ABUBAKAR (1998–1999):
+Quickly transitioned to democracy. Constitutional Conference. Released political prisoners. Conducted elections leading to Obasanjo's election. Handed over May 29, 1999 — now Democracy Day.
+
+ACHIEVEMENTS OF MILITARY RULE:
+
+- Creation of states (reduced ethnic domination, brought government closer to people)
+- Infrastructure development (roads, oil refineries under some regimes)
+- Abuja as federal capital (Murtala)
+- Maintenance of territorial integrity during Civil War (Gowon)
+- Curbing corruption briefly (Buhari/Idiagbon)
+- Transition programmes that eventually led to democracy
+
+FAILURES OF MILITARY RULE:
+
+- Violation of human rights and press freedom
+- Suspension of constitution and democratic institutions
+- Corruption within military regimes (Abacha loot)
+- Annulment of June 12 election
+- Underdevelopment despite oil boom
+- No accountability
+
+MILITARY DISENGAGEMENT AND TRANSITION:
+
+Each military regime developed a "transition programme":
+- Murtala/Obasanjo: Constituent Assembly → 1979 handover
+- Babangida: Multiple postponements → annulment → stepped aside
+- Abdulsalami: Fast-tracked → 1999 democracy
+Civilian control since 1999 is the longest period of uninterrupted democracy in Nigerian history.
+
+Exam Tip: Know each regime with dates, key policies, and legacy. A table format helps.`
+  }
+],
+  foreign: [
+  {
+    title: "Nigerian Foreign Policy: History, Objectives, Determinants, and Evaluation by Regimes",
+    key: "Nigeria's foreign policy has been guided by African-centrism, national interest, and promotion of peace; its effectiveness has varied across regimes.",
+    body: `HISTORY AND OBJECTIVES:
+Since independence (1960), Nigeria's foreign policy has been guided by key principles:
+
+1. African-centrism: Africa is at the center of Nigeria's foreign policy. Nigeria has led peacekeeping, mediation, and diplomacy across Africa.
+2. Non-alignment: Nigeria does not formally align with major power blocs (East/West during the Cold War).
+3. Respect for international law and sovereignty of states.
+4. Promotion of economic cooperation.
+5. World peace and security.
+6. Anti-colonialism and anti-apartheid: Nigeria strongly opposed apartheid South Africa, funding liberation movements and lobbying the Commonwealth for sanctions.
+
+NATIONAL INTEREST AND ITS DETERMINANTS:
+National interest = the fundamental goals and ambitions of a nation-state in its relations with other states.
+
+Determinants of Nigeria's national interest:
+
+- Security of the state and territorial integrity
+- Economic development and trade
+- Political stability
+- Advancement of democracy and human rights in Africa
+- Protection of Nigerians abroad
+
+DETERMINANTS OF FOREIGN POLICY:
+
+1. History: Colonial experience shapes Nigeria's anti-imperialist stance.
+2. Geography: Size, oil resources, largest African economy shape influence.
+3. Political leadership: Personal style of leaders shapes foreign policy tone.
+4. Economic capacity: Oil wealth gives Nigeria leverage.
+5. Population: Largest black nation in the world — moral obligation to Africa.
+6. Military strength: Nigeria's military is one of Africa's most capable.
+
+EVALUATION BY REGIMES:
+FIRST REPUBLIC (1960–1966):
+Tafawa Balewa: Pro-Western, cautious, joined Commonwealth and UN. Opposed OAU involvement in Congo.
+
+MILITARY REGIMES:
+
+- Gowon: Focus on post-civil war recognition and reconstruction. Nigeria joined ECOWAS (1975).
+- Murtala: Bold, assertive. Supported MPLA in Angola against apartheid South Africa and USA. Gained respect in Africa.
+- Obasanjo (1976–79): Continued Murtala's Africa-first policy.
+- Buhari/Idiagbon: Expelled illegal aliens (1983 mass expulsion of over 2 million West Africans). Strained relations with neighbours.
+- Babangida: More pragmatic, improved relations with USA. Nigeria hosted multiple African heads of state.
+- Abacha: Internationally isolated due to human rights abuses. Suspended from Commonwealth 1995.
+
+DEMOCRATIC ERA:
+
+- Obasanjo (1999–2007): Active in ECOWAS, AU, mediation in Liberia/Sierra Leone. Ceded Bakassi Peninsula to Cameroon (2006) per ICJ ruling — controversial.
+- Yar'Adua: Low-key foreign policy.
+- Jonathan: Continued peacekeeping role; intervention in Mali (2013).
+- Buhari: Focused on "anti-corruption" diplomacy; recovery of looted funds.
+- Tinubu: Mediation in Niger Republic coup (2023) — led ECOWAS hardline response.
+
+Nigeria has been described as "Giant of Africa" — with great potential and responsibility, but inconsistencies in foreign policy effectiveness.
+
+Exam Tip: Know the key principles of Nigeria's foreign policy and give examples from at least three regimes. The Bakassi Peninsula cession and Abacha's isolation are key events to explain.`
   },
+],
+  africa_pre: [
   {
-    title: "Reasons for Military Intervention",
-    key: "Military intervention is often caused by political instability, corruption, and weak institutions.",
-    body: "Other causes include electoral malpractice, economic crises, and ethnic conflicts. The military often justifies intervention as a way to restore order, but it usually results in authoritarian rule."
+    title: "Africa Before European Invasion: Pre-Colonial Systems and Contact Consequences",
+    key: "Pre-colonial Africa had sophisticated political systems including kingdoms, empires, and city-states; European contact disrupted these systems through the slave trade, colonization, and exploitation.",
+    body: `PRE-COLONIAL POLITICAL SYSTEMS IN AFRICA:
+Africa was not a "dark continent" as colonialists claimed. Before European invasion, Africa had complex, organized societies:
+
+1. CENTRALIZED SYSTEMS (Kingdoms and Empires):
+These had defined territory, leadership hierarchies, armies, and taxation systems.
+
+- Great Zimbabwe (SE Africa): Ancient stone city-state; center of gold trade.
+- Mali Empire (West Africa): Led by Mansa Musa; controlled trans-Saharan gold and salt trade.
+- Songhai Empire (West Africa): Largest pre-colonial African empire; capital Gao.
+- Ashanti Confederacy (Ghana): Powerful military and commercial state.
+- Benin Kingdom (present-day Nigeria): Famous for bronze art and trade.
+- Kingdom of Kongo (Central Africa): Large, organized Christian kingdom.
+- Ethiopia/Abyssinia: Ancient civilization; resisted European colonization.
+
+2. NON-CENTRALIZED SYSTEMS:
+Some societies were organized around kinship, clans, and councils without a single king.
+
+- Igbo of Nigeria (as discussed in GOV003)
+- Segmentary lineage societies in East Africa
+
+PRE-COLONIAL TRADE AND CULTURE:
+
+- Trans-Saharan trade: Gold, salt, slaves, ivory traded between West Africa, North Africa, and beyond.
+- Indian Ocean trade: East African city-states (Kilwa, Mombasa) traded with Arabia and India.
+- Art, music, religion, and philosophy flourished independently.
+
+CONSEQUENCES OF EUROPEAN CONTACT:
+
+1. THE SLAVE TRADE (15th–19th Century):
+- Estimated 12–15 million Africans transported to the Americas.
+- Depopulated entire regions; destroyed families and communities.
+- Weakened African kingdoms that became dependent on slave trading.
+- Created lasting psychological and social damage.
+
+2. COLONIZATION (Late 19th–20th Century):
+
+- Scramble for Africa: Berlin Conference (1884–85) — European powers divided Africa without African input.
+- By 1914, only Ethiopia and Liberia remained independent.
+- Colonial borders cut across ethnic, cultural, and linguistic lines — causing conflicts that persist today.
+- Colonialism disrupted traditional governance, imposed foreign laws, extracted resources.
+
+3. CULTURAL IMPERIALISM:
+
+- Western education, religion (Christianity), and languages imposed.
+- African traditions devalued or banned.
+- Created identity conflicts still evident today.
+
+Exam Tip: Know at least four major pre-colonial African kingdoms with their locations and significance. Understand the Berlin Conference and its consequences.`
   }
 ],
-
-foreign: [
+  colonial_africa: [
   {
-    title: "Nigerian Foreign Policy",
-    key: "Nigeria’s foreign policy focuses on promoting national interest and African unity.",
-    body: "Nigeria plays a leadership role in Africa through peacekeeping, diplomacy, and economic cooperation. Its foreign policy is influenced by factors such as national interest, economic strength, leadership, and global politics. Nigeria is active in organizations like ECOWAS, AU, and the UN."
+    title: "Colonial Systems of Administration in Africa: Indirect Rule vs. Assimilation/Association",
+    key: "European powers used different colonial administrative systems — Britain used Indirect Rule through traditional rulers, while France used Assimilation/Association to incorporate Africans into French culture.",
+    body: `TWO MAIN SYSTEMS:
+
+1. INDIRECT RULE (BRITISH SYSTEM):
+Definition: Governing African territories through existing traditional authorities (chiefs, emirs, kings) under British supervision.
+
+Key features:
+
+- Traditional rulers retained their offices but answered to British Residents.
+- Native Courts, Native Treasuries, and native police maintained.
+- Minimum European staff required.
+- Local customs and laws partially preserved.
+
+Applied in: Nigeria, Gold Coast (Ghana), Kenya, Rhodesia (Zimbabwe).
+
+Advantages:
+
+- Cheap — fewer European officials needed.
+- Minimized resistance by working within familiar structures.
+- Preserved some African institutions.
+
+Disadvantages:
+
+- Undermined the authority of traditional rulers (they became colonial agents, not independent leaders).
+- Did not work in areas without centralized authority (e.g., Igbo).
+- Created Warrant Chiefs (artificial authority) where no chiefs existed.
+- Discouraged educated Africans from political participation.
+
+2. POLICY OF ASSIMILATION (FRENCH SYSTEM):
+Definition: The goal of turning Africans into "Black Frenchmen" by assimilating them into French culture, language, education, and law.
+
+Key features:
+
+- Africans who met certain criteria (speak French, educated, Christian, follow French customs) could become French citizens (évolués or assimilés).
+- French culture, language, and law were imposed.
+- Elected representatives to the French National Assembly from "old colonies" (Senegal, Martinique, etc.).
+- Applied initially, especially in Senegal's "Four Communes" (Dakar, Gorée, Rufisque, Saint-Louis).
+
+Applied in: Senegal, Côte d'Ivoire, other French West and Equatorial Africa.
+
+Advantages:
+
+- Some Africans gained French citizenship and political rights.
+- Educational and cultural development for the elite.
+
+Disadvantages:
+
+- Denied the validity of African culture and identity.
+- Only a tiny educated elite could qualify for citizenship.
+- Led to cultural alienation and identity crisis.
+- Vast majority remained second-class subjects.
+
+3. POLICY OF ASSOCIATION (MODIFIED FRENCH APPROACH):
+France modified assimilation to "association" — recognizing that full cultural transformation was impractical. Under association:
+
+- African cultures were not necessarily destroyed.
+- Practical governance took priority over cultural conversion.
+- Similar in practice to indirect rule.
+
+COMPARISON:`
+{
+  table: {
+    headers: ["Feature", "Indirect Rule (British)", "Assimilation (French)"],
+    rows: [
+      ["Approach", "Use existing political and social structures", "Replace African systems with French culture and institutions"],
+      ["Traditional rulers", "Recognized and used as intermediaries", "Removed, weakened, or ignored"],
+      ["African culture", "Partially preserved", "Suppressed in favor of French culture"],
+      ["Citizenship", "Not granted to Africans", "Granted to a small elite group"],
+      ["Language", "English used in administration", "French imposed as official language"]
+    ]
+  }
+},
+
+`LEGACY:
+Both systems left profound marks on African political development — Anglophone vs. Francophone differences in governance styles, language, law, and international alignment persist today.
+
+Exam Tip: Be able to compare indirect rule and assimilation with advantages and disadvantages. Know which countries used which system.`
   }
 ],
-
-africa_pre: [
+  constitution_africa: [
   {
-    title: "Africa Before European Invasion",
-    key: "Pre-colonial Africa had organized political, economic, and social systems before European contact.",
-    body: "African societies had kingdoms, empires, and traditional governance systems. Trade, culture, and local industries flourished. European contact disrupted these systems through colonization and exploitation."
+    title: "Constitutional Development of Selected West African Countries",
+    key: "Nigeria, Ghana, Sierra Leone, Liberia, and Gambia developed their political systems through colonial-era constitutions evolving into independent democratic governance.",
+    body: `
+1. NIGERIA:
+
+Already covered in depth in GOV003. Key: Clifford (1922) → Richards (1946) → Macpherson (1951) → Lyttleton (1954) → Independence (1960) → Republic (1963) → Military rule → 1979 Constitution → 1999 Constitution (current).
+
+2. GHANA:
+
+- Colonial name: Gold Coast.
+- Kwame Nkrumah led the independence movement; founded the CPP (Convention People's Party).
+- Independence: March 6, 1957 — first Sub-Saharan African country to gain independence.
+- 1960: Became a Republic with Nkrumah as President.
+- 1964: One-party state under Nkrumah (CPP). Authoritarian turn.
+- 1966: Military coup (NLC) overthrew Nkrumah while he was abroad.
+- Multiple military interventions followed (Acheampong, Rawlings).
+- 1992: New constitution; return to multiparty democracy.
+- Today: Ghana is considered one of West Africa's most stable democracies.
+
+3. SIERRA LEONE:
+
+- Independence: April 27, 1961 from Britain.
+- Milton Margai (SLPP) became first PM. First generation of peaceful governance.
+- 1967: Siaka Stevens (APC) won elections but was initially prevented from taking power by military.
+- 1978: One-party state under Stevens.
+- 1991: New multi-party constitution.
+- 1991–2002: Devastating civil war — RUF (Revolutionary United Front) rebellion; use of child soldiers; diamond-funded conflict.
+- 2002: Peace restored with ECOWAS/UN intervention.
+- Post-war: Multiparty democracy; peaceful elections.
+
+4. LIBERIA:
+
+- Unique history: Founded in 1822 by freed American slaves; independent since 1847 — oldest African republic.
+- Americo-Liberian elites dominated politics for over 100 years.
+- 1980: Military coup by Samuel Doe ended Americo-Liberian dominance.
+- 1989–2003: Civil wars (Charles Taylor, LURD/MODEL factions); extreme brutality; hundreds of thousands killed.
+- 2005: Ellen Johnson Sirleaf elected — first female president in Africa.
+- Today: Fragile democracy; ongoing development challenges.
+
+5. THE GAMBIA:
+
+- Independence: February 18, 1965 from Britain.
+- Dawda Jawara: Led Gambia from independence until 1994.
+- 1994: Military coup by Yahya Jammeh — ruled for 22 years.
+- Jammeh: Authoritarian — cracked down on opposition, media, and civil society. Claimed to cure HIV with herbs.
+- 2016: Adama Barrow won presidential election; Jammeh initially refused to leave, but ECOWAS pressure (including military mobilization) forced him to accept the result and go into exile.
+- Post-Jammeh era: Transitional justice, constitutional reform, return to democracy.
+
+KEY THEMES ACROSS WEST AFRICA:
+
+- Colonial legacy: Westminster parliamentary systems adapted to local conditions.
+- Military interventions: Widely experienced across the region.
+- Move toward multiparty democracy since 1990s.
+- Role of ECOWAS in maintaining regional stability.
+
+Exam Tip: Know the key milestone for each country — especially Ghana (first independence), Liberia (oldest republic), and Gambia (Jammeh's removal by ECOWAS).`
   }
 ],
-
-colonial_africa: [
+  nationalism: [
   {
-    title: "Colonial Systems in Africa",
-    key: "European powers used different systems such as Indirect Rule and Assimilation to govern Africa.",
-    body: "Indirect rule used traditional leaders (British colonies), while assimilation aimed to make Africans adopt European culture (French colonies). These systems shaped political development and left lasting impacts on African governance."
+    title: "The Nationalist Movement in West Africa: French and British Compared",
+    key: "Nationalist movements in British West Africa focused on political self-rule and independence, while those in French West Africa sought equality and citizenship rights within the French system before turning to independence.",
+    body: `DEFINITION:
+African nationalism refers to the political movements, ideas, and activities through which African peoples resisted colonial domination and sought self-determination and independence.
+
+BRITISH WEST AFRICA:
+Countries: Nigeria, Gold Coast (Ghana), Sierra Leone, Gambia.
+
+Characteristics:
+
+- Focused on political self-rule and eventual independence.
+- Led by educated elites (lawyers, journalists, teachers) trained in Britain.
+- Used political parties, the press, and constitutional methods.
+- Inspired by Pan-Africanism (Marcus Garvey, W.E.B. Du Bois, George Padmore).
+
+Key figures:
+
+- Nigeria: Herbert Macaulay (first nationalist), Nnamdi Azikiwe ("Zik"), Obafemi Awolowo, Tafawa Balewa, Ahmadu Bello.
+- Ghana: Kwame Nkrumah.
+- Sierra Leone: Milton Margai.
+
+Methods:
+
+- Formation of political parties (NCNC, AG, NPC, CPP)
+- Newspapers and pamphlets ("The West African Pilot" — Azikiwe; "Nigerian Tribune" — Awolowo)
+- Mass protests and civil disobedience
+- Constitutional negotiations
+- Pan-African conferences (Manchester 1945)
+
+FRENCH WEST AFRICA:
+Countries: Senegal, Côte d'Ivoire, Guinea, Mali, Burkina Faso, Niger, Dahomey (Benin), Mauritania.
+
+Characteristics:
+
+- Initially sought equality and full integration as French citizens — not independence.
+- Assimilation policy meant some French Africans wanted to be treated as equal Frenchmen.
+- Shift to independence demand came later (1950s) under influence of decolonization globally.
+
+Key figures:
+
+- Léopold Sédar Senghor (Senegal): Philosopher, poet, promoter of Négritude (celebrating African cultural identity). First President of Senegal.
+- Félix Houphouët-Boigny (Côte d'Ivoire): Organized farmers against forced labor. Later pro-French president.
+- Sékou Touré (Guinea): Only leader to vote "No" in 1958 French referendum — opted for immediate independence. France withdrew all support from Guinea overnight.
+- Modibo Keïta (Mali).
+
+Négritude Movement:
+A literary and intellectual movement (Senghor, Aimé Césaire) that celebrated African cultural identity against French assimilation. It was cultural nationalism that preceded political nationalism.
+
+COMPARISON:`
+{
+  table: {
+    headers: ["Feature", "British West Africa", "French West Africa"],
+    rows: [
+      ["Initial goal", "Political self-rule", "Equality within French system"],
+      ["Methods", "Parties, press, negotiations", "Parties, intellectual movements, labor unions"],
+      ["Cultural movement", "Pan-Africanism", "Négritude"],
+      ["Pace of independence", "Earlier (Ghana 1957, Nigeria 1960)", "Later (mostly 1960, except Guinea 1958)"],
+      ["Post-independence ties", "Commonwealth", "Continued close ties with France (Françafrique)"],
+    ]
+  }
+},
+`PAN-AFRICANISM:
+The broader ideology that all people of African descent share common interests and should work together. Key figures: Marcus Garvey (Jamaica), W.E.B. Du Bois (USA), George Padmore (Trinidad), Kwame Nkrumah (Ghana). The 1945 Manchester Pan-African Congress was pivotal.
+
+Exam Tip: Compare British and French nationalism clearly. Know Négritude, Pan-Africanism, and at least two key figures from each system.`
   }
 ],
-
-constitution_africa: [
+  military_africa: [
   {
-    title: "Constitutional Development in West Africa",
-    key: "West African countries developed political systems through constitutional changes during and after colonial rule.",
-    body: "Countries like Nigeria, Ghana, Sierra Leone, Liberia, and Gambia evolved through colonial constitutions to independent governance. These developments shaped modern democratic institutions and governance structures."
+    title: "Military Intervention in Africa: Nature, Selected Countries, Characteristics, and Transition",
+    key: "Military intervention has been widespread in Africa since independence due to weak institutions and political instability; many countries have since transitioned back to civilian rule.",
+    body: `NATURE OF AFRICAN ARMIES AT INDEPENDENCE:
+When African countries gained independence, they inherited armies that:
+
+- Were trained and officered by European colonizers.
+- Had no tradition of civilian political control.
+- Were small and lacked strong professional identity.
+- Were ethnically diverse — recruitment was often from certain regions.
+- Had officers who were educated and more organized than most civilian institutions.
+
+NATURE OF POST-COLONIAL POLITICS IN AFRICA:
+
+- Weak institutions: New states had fragile democratic traditions.
+- Ethnic conflict: Artificially drawn borders placed rival ethnic groups together.
+- One-party states: Many leaders (Nkrumah, Sékou Touré) suppressed opposition.
+- Economic failure: Mismanagement, corruption, and dependence on single commodities.
+- Cold War interference: USA and USSR supported different factions for strategic interests.
+
+All these created conditions for military intervention.
+
+MILITARY INTERVENTION IN SELECTED COUNTRIES:
+
+1. NIGERIA: Multiple coups (1966, 1975, 1983, 1985, 1993) — covered in GOV003.
+
+2. GHANA:
+
+- First coup 1966: Overthrew Nkrumah (NLC — military/police).
+- 1972: Acheampong's coup.
+- 1979: Flight Lt. Jerry Rawlings (AFRC) — "house-cleaning" coup; executed three former heads of state.
+- Handed over to civilians; recouped Dec 1981. Rawlings ruled until 1993.
+- Rawlings oversaw transition to multiparty democracy (1992 Constitution) and won elections as civilian president.
+
+3. LIBERIA:
+
+- 1980: Samuel Doe's coup ended Americo-Liberian dominance. Public execution of President Tolbert's cabinet.
+- 1989: Charles Taylor's NPFL rebellion; Doe killed 1990.
+- 1989–2003: Civil wars; international intervention; Charles Taylor elected 1997, forced to exile 2003, tried by ICC for war crimes in Sierra Leone.
+
+4. UGANDA:
+
+- 1971: Idi Amin overthrew President Milton Obote. Amin's brutal 8-year rule — expulsion of Asians, mass killings, economic collapse.
+- 1979: Tanzania invaded and removed Amin.
+- Museveni (NRM): Led guerrilla war, took power 1986. Has ruled since; multiple elections.
+
+5. EGYPT:
+
+- 1952: "Free Officers" coup (Nasser, Sadat, Naguib) overthrew King Farouk.
+- Egypt under military/authoritarian rule effectively since 1952.
+- 2011: Arab Spring — Mubarak removed; democracy briefly; 2013 coup by Sisi.
+
+6. DEMOCRATIC REPUBLIC OF CONGO (formerly Zaire):
+
+- 1960: Patrice Lumumba (first PM) overthrown and murdered with CIA and Belgian involvement.
+- Mobutu Sese Seko ruled 1965–1997 (kleptocracy, "authenticité" policy).
+- Wars and conflict; DRC remains unstable.
+
+CHARACTERISTICS OF MILITARY RULE IN AFRICA:
+
+1. Suspension of constitutions and ban of political parties
+2. Governance by decree
+3. Centralization of power in Supreme Military Council (SMC) or AFRC
+4. Human rights violations (press censorship, detention without trial)
+5. Economic mismanagement and corruption
+6. Weak accountability structures
+7. Ethnic favoritism in appointments
+
+DISENGAGEMENT OF MILITARY FROM POLITICS: TRANSITION PROGRAMMES:
+Most African countries transitioned to democracy through:
+
+- International pressure (donor conditionality)
+- Constitutional conferences (Benin 1990 model)
+- Multi-party elections
+- ECOWAS and AU pressure on unconstitutional changes
+- Civil society mobilization
+
+Since 1990s: "Third wave of democracy" brought multi-party elections across Africa.
+Recent concern: New wave of coups — Mali (2020, 2021), Guinea (2021), Burkina Faso (2022), Niger (2023), Gabon (2023) — all francophone countries. Shows democracy remains fragile.
+
+Exam Tip: Know at least four countries with details. Be ready to discuss causes of military intervention, characteristics of military rule, and how transitions occur.`
   }
 ],
-
-nationalism: [
+  democracy_africa: [
   {
-    title: "Nationalist Movements in West Africa",
-    key: "Nationalist movements fought for independence from colonial rule.",
-    body: "Leaders and groups organized protests, political parties, and campaigns to demand self-rule. British and French colonies experienced different approaches, but both led to independence. Nationalism promoted unity and political awareness."
+    title: "Democratization and Political Process in Africa",
+    key: "Africa experienced a wave of democratization from the 1990s onwards, transitioning from military and one-party rule to multiparty democracy — with varying success.",
+    body: `CHARACTERISTICS OF MILITARY RULE IN AFRICA (revisited for context):
+Before the 1990s wave, most African states were governed by:
+
+- One-party states (Ghana under Nkrumah, Zaire under Mobutu, Tanzania under Nyerere).
+- Military dictatorships (Amin in Uganda, Bokassa in CAR, Mobutu in Zaire).
+- Limited political freedoms; no free press; no opposition allowed.
+
+THE THIRD WAVE OF DEMOCRACY (1990s):
+Samuel Huntington identified a "third wave of democratization" that swept the world from the mid-1970s through the 1990s, reaching Africa in the late 1980s–1990s.
+
+CAUSES OF AFRICA'S DEMOCRATIZATION:
+
+1. End of the Cold War: USA and USSR no longer needed to support friendly dictators.
+2. Donor conditionality: Western aid was tied to political reforms and multiparty elections.
+3. Economic failure: Structural adjustment and poverty undermined legitimacy of authoritarian regimes.
+4. Civil society: Growth of NGOs, human rights organizations, and independent media.
+5. People power: Mass protests and civil disobedience (Benin 1990, Mali 1991, Zambia 1991).
+6. Influence of South Africa's transition: Mandela's release and end of apartheid inspired the continent.
+
+BENIN'S 1990 NATIONAL CONFERENCE MODEL:
+Benin Republic pioneered the "Sovereign National Conference" as a peaceful transition tool. Opposition, civil society, and government agreed on reforms. This model was copied by many African countries (Congo, Niger, Mali, Togo).
+
+EVALUATION OF DEMOCRATIZATION IN AFRICA:
+SUCCESSES:
+
+- Multi-party elections now near-universal.
+- Several peaceful transitions of power (Ghana, Nigeria 2015, Senegal, Botswana).
+- Growth of civil society and free press.
+- Women in politics: Rwanda (world's highest female representation in parliament).
+- Regional bodies (ECOWAS, AU) now reject unconstitutional changes.
+
+CHALLENGES AND FAILURES:
+
+- Electoral violence remains widespread.
+- "Pseudo-democracy" or "illiberal democracy" — elections held but not free/fair.
+- Presidents amend constitutions to extend term limits (Uganda, Rwanda, Cameroon).
+- Ethnic voting and patronage undermine genuine democracy.
+- Poverty, illiteracy, and weak institutions limit democratic quality.
+- New wave of coups (2020–2023) in West Africa reverses gains.
+- Corruption persists across all systems.
+
+DEMOCRACY IN NIGERIA'S CONTEXT:
+
+Nigeria's democracy since 1999 has shown resilience — 24+ years of civilian governance — but challenges remain: electoral fraud, ethnic politics, insecurity, and corruption.
+The 2015 election (first opposition victory at federal level) was hailed as a democratic milestone.
+
+POLITICAL PROCESS IN AFRICA:
+
+Political processes in Africa are characterized by:
+- Patronage politics: Leaders distribute resources to buy loyalty.
+- Ethnic mobilization: Votes often follow ethnic lines.
+- Neopatrimonialism: Formal state institutions coexist with informal personal rule.
+- Weak party systems: Parties are vehicles for individuals, not ideological institutions.
+- Youth bulge: Africa's young population is both a democratic opportunity and a challenge.
+
+Exam Tip: Be able to evaluate — both successes and failures — of democratization in Africa. Use specific country examples. Nigeria, Ghana, and Rwanda are strong examples of different aspects.`
   }
 ],
-
-military_africa: [
-  {
-    title: "Military Intervention in Africa",
-    key: "Many African countries experienced military rule after independence.",
-    body: "Weak institutions, corruption, and political instability led to coups. Military governments often centralized power and limited democracy. Countries like Nigeria, Ghana, and Uganda experienced such interventions."
-  }
-],
-
-democracy_africa: [
-  {
-    title: "Democratization in Africa",
-    key: "Democratization is the process of transitioning from authoritarian rule to democratic governance.",
-    body: "African countries have gradually adopted democratic systems with elections and constitutions. However, challenges like corruption, weak institutions, and electoral violence persist. Despite this, democracy continues to develop across the continent."
-  }
-],*/
 };
 export const questions = {
 

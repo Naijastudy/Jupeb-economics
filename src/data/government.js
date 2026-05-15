@@ -1207,7 +1207,7 @@ MODES OF OPERATION/TACTICS:
 PRESSURE GROUPS IN NIGERIA:
 Key examples: ASUU (education), NLC (labour), Arewa Consultative Forum (northern interests), Afenifere (Yoruba interests), Ohanaeze Ndigbo (Igbo interests).
 
-COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`
+COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`,
       {
     table: {
       headers: ["Feature", "Political Parties", "Pressure Groups"],

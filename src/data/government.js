@@ -842,11 +842,7 @@ Military: + Quick decisions; − Authoritarian, − Violates rights, − No acco
 Exam Tip: This is one of the most comprehensive topics. Know at least 6 systems, their features, examples, advantages, and disadvantages.`
   },
 ],
-// BATCH 4: constitution, governance, ideas, parties, opinion (GOV001 Topics 4-5 & GOV002 Topics 6-8)
-// Each object covers one syllabus subtopic with JUPEB-level depth.
-
-// ─── CONSTITUTION & CONSTITUTIONALISM ───────────────────────────────────────
-export const constitution = [
+  constitution: [
   {
     title: "Definitions of Constitution and Constitutionalism",
     key: "A constitution is the fundamental law of a state that defines its structure and limits government power; constitutionalism is the practice of governing according to constitutional principles.",
@@ -933,10 +929,8 @@ Arguments that it is a Reality:
 JUPEB Exam Tip: This is an essay-type question. Be balanced — acknowledge both sides when asked "Constitutionalism: Myth or Reality?"
 `
   }
-];
-
-// ─── GOVERNANCE & CITIZENSHIP ────────────────────────────────────────────────
-export const governance = [
+],
+  governance: [
   {
     title: "Meaning and Nature of Governance; Government vs. Governance",
     key: "Governance refers to the processes and manner of exercising power, while government refers to the institutions that hold and exercise power.",
@@ -1007,10 +1001,8 @@ A naturalized citizen can lose citizenship by: acquiring another nationality vol
 
 JUPEB Exam Tip: Know all four ways of acquiring Nigerian citizenship with the relevant constitutional sections. Also list at least five rights and five duties of citizens.`
   }
-];
-
-// ─── POLITICAL IDEAS & THOUGHTS ──────────────────────────────────────────────
-export const ideas = [
+],
+ideas: [
   {
     title: "Meaning, Nature, and Functions of Ideology",
     key: "A political ideology is a coherent set of ideas, values, and beliefs about how society should be organized and how political power should be exercised.",
@@ -1136,11 +1128,9 @@ Criticisms:
 - Ends can justify unjust means if they produce maximum happiness
 
 JUPEB Exam Tip: Compare Hobbes and Locke on the state of nature and the social contract. Know Rousseau's concept of the general will. Define utilitarianism and state its main thinkers.`
-  }
-];
-
-// ─── POLITICAL PARTIES, PARTY SYSTEMS & PRESSURE GROUPS ─────────────────────
-export const parties = [
+  },
+],
+parties: [
   {
     title: "Political Parties: Definitions, Functions, Organs, and Types",
     key: "Political parties are organized groups that seek to win political power through elections; they vary in type and internal organization.",
@@ -1217,9 +1207,102 @@ MODES OF OPERATION/TACTICS:
 PRESSURE GROUPS IN NIGERIA:
 Key examples: ASUU (education), NLC (labour), Arewa Consultative Forum (northern interests), Afenifere (Yoruba interests), Ohanaeze Ndigbo (Igbo interests).
 
-COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:
+COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`
+      {
+    table: {
+      headers: ["Feature", "Political Parties", "Pressure Groups"],
+      rows: [
+        ["Aim", "To win and hold power", "To influence policy"],
+        ["Participation", "Contest elections", "Do not contest elections"],
+        ["Membership", "Broad, open", "Often restricted to members"],
+        ["Accountability", "Directly accountable to electorate", "Accountable to own members"],
+        ["Scope", "Wide — all government functions", "Narrow — specific issues"],
+      ]
+    }
+  },
+`JUPEB Exam Tip: A table comparing parties and pressure groups is commonly asked. Know at least five points of difference.`
+  },
+], 
+opinion: [
+  {
+    title: "Public Opinion: Definition, Functions, and Measurement",
+    key: "Public opinion is the collective view of the majority of citizens on political issues; it influences government decisions and is measured through polls, elections, and media analysis.",
+    body: `DEFINITION:
+Public opinion refers to the aggregate of individual views, attitudes, and beliefs that the general public holds on political issues, public affairs, or government policies.
 
-  
+Key definitions:
+- V.O. Key: Public opinion consists of opinions held by private persons which governments find prudent to heed.
+- It is not the opinion of every citizen, but the dominant, expressed views of a significant portion.
+
+FUNCTIONS/IMPORTANCE OF PUBLIC OPINION:
+1. GUIDING GOVERNMENT POLICY: Governments that ignore public opinion face elections and protests. Nigerian governments respond to public pressure on issues like fuel subsidies, education funding, and security.
+2. CHECKING GOVERNMENT POWER: Strong public opinion can prevent authoritarian actions or force policy reversals.
+3. LEGITIMATING GOVERNMENT: When the public supports government policies, it strengthens legitimacy.
+4. MOBILIZING POLITICAL ACTION: Public opinion shapes voting behaviour, protest movements, and civic engagement.
+5. INFLUENCING INTERNATIONAL RELATIONS: World public opinion can pressure governments on human rights issues.
+6. MEDIA AGENDA: Public opinion shapes what the media covers, and media shapes public opinion (reciprocal relationship).
+
+FACTORS SHAPING PUBLIC OPINION:
+- Media (television, social media)
+- Education level
+- Religious and ethnic affiliations
+- Economic conditions
+- Political leadership and rhetoric
+- Peer groups and social networks
+
+MEASUREMENT OF PUBLIC OPINION:
+1. Opinion Polls and Surveys: Scientific sampling of citizens' views. Most reliable method.
+2. Elections: Votes are the most direct expression of mass public opinion.
+3. Referenda and Plebiscites: Direct votes on specific issues.
+4. Media Analysis: Monitoring newspapers, social media, and commentaries.
+5. Legislative Debates: Legislators often reflect public views.
+6. Protests and Demonstrations: Show public sentiment on specific issues (e.g., #EndSARS showed public opinion against police brutality).
+
+Limitations of Polls: Can be manipulated, small sample sizes, people may not answer truthfully.
+
+JUPEB Exam Tip: List at least five ways public opinion is measured. The #EndSARS protest is an excellent Nigerian example of public opinion in action.`
+  },
+  {
+    title: "Propaganda: Meaning, Nature, Functions, Tactics, and Strategies",
+    key: "Propaganda is the deliberate use of biased or misleading information to influence public opinion and political behaviour in favour of a particular cause or group.",
+    body: `DEFINITION:
+Propaganda is the systematic effort to shape perceptions, manipulate cognitions, and direct behaviour to achieve a response consistent with the intent of the propagandist (Jacques Ellul).
+
+Simply: Propaganda is using information (true, false, or selective) to influence what people think, feel, and do — usually for political purposes.
+
+It differs from education (which aims to develop critical thinking) and advertising (which promotes products). Propaganda is designed to serve an agenda.
+
+TYPES OF PROPAGANDA:
+1. White Propaganda: Source is openly known; information may be true but is selectively presented. Example: Government broadcasts during wars.
+2. Black Propaganda: Source is hidden or false; information is fabricated. Example: Fake news attributed to the enemy.
+3. Grey Propaganda: Source is uncertain; information may be partially true.
+
+FUNCTIONS OF PROPAGANDA:
+1. Mobilizing public support for government policies.
+2. Demonizing opponents or enemy groups.
+3. Justifying wars, political decisions, or discriminatory policies.
+4. Creating national unity or patriotic sentiment.
+5. Undermining confidence in opposition.
+6. Spreading disinformation to confuse the public.
+
+TACTICS AND STRATEGIES:
+1. Name-Calling: Labelling opponents with negative terms (e.g., "terrorist," "corrupt").
+2. Glittering Generalities: Using emotionally appealing but vague terms (e.g., "freedom," "democracy," "progress").
+3. Transfer: Associating a respected symbol (flag, religion) with a policy to gain approval.
+4. Plain Folks: A leader pretends to be an ordinary person to gain public trust.
+5. Card Stacking: Presenting only evidence that supports one side, ignoring contrary evidence.
+6. Bandwagon: "Everyone is doing it — join the movement."
+7. Testimonial: Using celebrity endorsement to promote political ideas.
+8. Fear Appeals: Exaggerating threats to frighten people into compliance.
+9. Repetition: Repeating a message until it is accepted as truth.
+10. Control of Information: Censoring media and limiting access to opposing views.
+
+PROPAGANDA IN NIGERIA:
+Nigerian politics is rife with propaganda — ethnic stereotyping, fake news, political campaigns based on fear and smear tactics. Social media has amplified propaganda in modern Nigeria.
+
+JUPEB Exam Tip: Define propaganda clearly, distinguish it from education, and list at least five propaganda techniques with examples.`
+  },
+],
 
 /*constitution: [
   {

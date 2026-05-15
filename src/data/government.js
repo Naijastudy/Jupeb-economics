@@ -1173,7 +1173,7 @@ JUPEB Exam Tip: Know the functions of parties and the three types of party syste
   {
     title: "Pressure Groups: Meaning, Types, Functions, Modes of Operation, and Comparison with Political Parties",
     key: "Pressure groups are organizations that seek to influence government policy without seeking power; they differ from political parties in aim and method.",
-    body: `DEFINITION:
+    body: [`DEFINITION:
 Pressure groups (also called interest groups) are organized associations that seek to influence government policies and decisions without seeking to form a government themselves.
 
 TYPES OF PRESSURE GROUPS:
@@ -1222,8 +1222,8 @@ COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`,
     }
   }, 
 
-  `JUPEB Exam Tip: A table comparing parties and pressure groups is commonly asked. Know at least five points of difference.`  // ← this is the problem line
-],
+  `JUPEB Exam Tip: A table comparing parties and pressure groups is commonly asked. Know at least five points of difference.` 
+]}],
 opinion: [
   {
     title: "Public Opinion: Definition, Functions, and Measurement",

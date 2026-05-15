@@ -569,7 +569,7 @@ useEffect(() => {
     setHistory((h) => [...h.slice(0, -1), newScreen]);
     setScreen(newScreen);
   };
-  
+
   const goBack = () => {
     if (history.length <= 1) return;
 
@@ -580,7 +580,7 @@ useEffect(() => {
     if (quizInProgress) {
       setQuitModal({
         open: true,
-       onConfirm: () => {
+        onConfirm: () => {
           setCbtRunning(false);
           setExamRunning(false);
           const destination = screen === "exam_quiz" ? "exam_setup" : "home";
@@ -592,17 +592,11 @@ useEffect(() => {
       return;
     }
 
-
-const goHome = () => {
-  setHistory(["home"]);
-  setScreen("home");
-};
-
-   const newHistory = history.slice(0, -1);
+    const newHistory = history.slice(0, -1);
     setHistory(newHistory);
     setScreen(newHistory[newHistory.length - 1]);
   };
-
+  
   // ── EFFECTS ──
 
   // Splash progress bar

@@ -26,7 +26,7 @@ import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
 import useToast from "./hooks/useToast";
 import Toast from "./components/Toast";
-
+import useFCM from "./hooks/useFCM";
 // ── SHARED UTILITY ────────────────────────────────────────────────────────────
 function formatTime(seconds) {
   const h = Math.floor(seconds / 3600);
@@ -503,7 +503,7 @@ export default function App() {
   const [feedbackSending, setFeedbackSending] = useState(false);
   const [feedbackSent,    setFeedbackSent]    = useState(false);
   const [feedbackError,   setFeedbackError]   = useState("");
-  
+  const { fcmToken, fcmReady } = useFCM(user);
 const { toast, showToast, hideToast } = useToast();
   // ── HOOKS ──
 

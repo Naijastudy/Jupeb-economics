@@ -866,7 +866,7 @@ const SPLASH_MESSAGES = [
         onSelect={(subject) => {
           setActiveSubject(subject);
           if      (pendingMode === "cbt")   startCbt(subject, goTo, user?.uid);
-          else if (pendingMode === "exam")  goTo("year_select");
+          else if (pendingMode === "exam")  goReplace("year_select");
           else if (pendingMode === "notes") goTo("notes");
           else if (pendingMode === "pastq") goTo("pastq_courses");
         }}

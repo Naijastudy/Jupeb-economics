@@ -1,10 +1,5 @@
 export const courses = [
-  {
-    id: "gov001",
-    code: "GOV001",
-    title: "Elements of Government",
-    semester: "First Semester",
-    emoji: "🏛️",
+  { id: "gov001", code: "GOV001", title: "Elements of Government", semester: "First Semester", emoji: "🏛️",
     topics: [
       { id: "nature", label: "Nature of Government and Politics" },
       { id: "concepts", label: "Basic Concepts of Government" },
@@ -14,12 +9,7 @@ export const courses = [
     ],
   },
 
-  {
-    id: "gov002",
-    code: "GOV002",
-    title: "Fundamentals of Government",
-    semester: "First Semester",
-    emoji: "⚖️",
+  {id: "gov002", code: "GOV002", title: "Fundamentals of Government", semester: "First Semester", emoji: "⚖️",
     topics: [
       { id: "ideas", label: "Political Ideas and Thoughts" },
       { id: "parties", label: "Political Parties, Party Systems and Pressure Groups" },
@@ -31,12 +21,7 @@ export const courses = [
     ],
   },
 
-  {
-    id: "gov003",
-    code: "GOV003",
-    title: "Nigerian Government and Politics",
-    semester: "Second Semester",
-    emoji: "🇳🇬",
+  { id: "gov003", code: "GOV003", title: "Nigerian Government and Politics", semester: "Second Semester",  emoji: "🇳🇬",
     topics: [
       { id: "precolonial", label: "Pre-Colonial Systems of Government in Nigeria" },
       { id: "colonial", label: "Colonial Administration in Nigeria" },
@@ -49,11 +34,7 @@ export const courses = [
   },
 
   {
-    id: "gov004",
-    code: "GOV004",
-    title: "African Government and Politics",
-    semester: "Second Semester",
-    emoji: "🌍",
+    id: "gov004",  code: "GOV004", title: "African Government and Politics", semester: "Second Semester", emoji: "🌍",
     topics: [
       { id: "africa_pre", label: "Africa Before European Invasion" },
       { id: "colonial_africa", label: "Colonial Systems of Administration in Africa" },
@@ -238,7 +219,7 @@ concepts: [
   {
     title: "Power",
     key: "Power is the ability or capacity of an individual, group, or institution to influence, control, or direct the actions and decisions of others.",
-    body: `Power is one of the most fundamental concepts in government. For JUPEB, you must understand its nature, types, and relevance.
+    body: `Power is one of the most fundamental concepts in government. You must understand its nature, types, and relevance.
 
 DEFINITION:
 
@@ -530,32 +511,717 @@ Nigeria struggles with voter apathy, low female political participation, and you
 Exam Tip: Be ready to list forms of participation and explain factors that encourage or discourage it in Nigeria. Essays on democracy often require knowledge of political participation.`
   },
 ],
-    
-/*
 state: [
   {
-    title: "The State",
-    key: "The state is a political organization with defined territory, population, government, and sovereignty.",
-    body: "The state consists of four essential elements: population, territory, government, and sovereignty. It is the highest political authority within a given area. The state ensures law and order, provides security, and promotes welfare. Without these elements, a state cannot exist."
-  },
-  {
-    title: "Types of State",
-    key: "States can be unitary, federal, or confederal based on how power is distributed.",
-    body: "A unitary state concentrates power at the center (e.g., UK). A federal state shares power between central and regional governments (e.g., Nigeria). A confederation is a loose union of independent states. Each type affects governance, efficiency, and autonomy differently."
-  },
-  {
-    title: "Arms of Government",
-    key: "The three arms of government are Executive, Legislature, and Judiciary.",
-    body: "The executive implements laws, the legislature makes laws, and the judiciary interprets laws. Separation of powers ensures that no arm becomes too powerful. Checks and balances allow each arm to limit the others, promoting accountability and preventing abuse of power."
-  },
-  {
-    title: "Systems of Government",
-    key: "Major systems include Presidential, Parliamentary, Monarchy, and Authoritarian systems.",
-    body: "In a presidential system, the executive is separate from the legislature (e.g., Nigeria). In a parliamentary system, the executive is drawn from the legislature (e.g., UK). Monarchy involves rule by a king or queen. Authoritarian and totalitarian systems concentrate power in one authority with limited political freedom."
-  }
-],
+    title: "Nature, Purpose, and Functions of the Modern State",
+    key: "The state is the highest political organization in a society, existing to maintain order, protect rights, and promote the common good.",
+    body: `DEFINITION OF THE STATE:
+The state is a political community occupying a definite territory, having an organized government, and possessing both internal and external sovereignty. The state is the supreme political institution in society.
 
-constitution: [
+Classic scholars define the state differently:
+
+- Max Weber: The state is a human community that claims the monopoly of the legitimate use of physical force within a given territory.
+- Harold Laski: The state is a society integrated by possessing a coercive authority, paramount and all-comprehensive.
+- J.J. Rousseau: The state arises from the social contract of the people.
+
+ELEMENTS/CHARACTERISTICS OF THE STATE (These are frequently examined):
+
+1. POPULATION: People are essential for a state to exist. Without population, there is no state.
+2. TERRITORY: A defined geographical area with recognized boundaries. Nigeria's territory includes its land, airspace, and territorial waters.
+3. GOVERNMENT: The organized institution that makes and enforces laws and policies.
+4. SOVEREIGNTY: Supreme authority within the territory, free from external control.
+
+Note: Some scholars add a 5th element — RECOGNITION by other states (especially for new states), but the four above are the universally accepted elements.
+
+PURPOSE OF THE STATE:
+
+The state exists to serve certain fundamental purposes:
+- Maintain law, order, and security
+- Protect the rights and freedoms of citizens
+- Promote the general welfare (health, education, infrastructure)
+- Defend the territory against external aggression
+- Regulate economic activities and promote development
+- Represent the nation in international affairs
+
+FUNCTIONS OF THE MODERN STATE:
+
+1. Security Function: Protecting citizens from internal and external threats (police, military, intelligence).
+2. Legal Function: Making, interpreting, and enforcing laws through the legislative, judicial, and executive arms.
+3. Economic Function: Managing the economy — taxation, budget, trade, public enterprises.
+4. Social Function: Providing education, healthcare, housing, and welfare services.
+5. Diplomatic Function: Engaging with other nations through embassies, treaties, and international organizations.
+
+In Nigeria's case, the modern state performs all these functions through federal, state, and local government structures.
+
+Exam Tip: Always state the four elements of a state.`
+  },
+
+  {
+    title: "Theories of the State",
+    key: "Several theories explain the origin and nature of the state, including the Divine Theory, Social Contract Theory, Force Theory, Evolutionary Theory, and Marxist Theory.",
+    body: `Theories of the state explain how and why the state came into existence.
+
+1. DIVINE THEORY (OR THEOCRATIC THEORY):
+The state was created by God and rulers govern by divine right. Kings and rulers in this view are God's representatives on earth. Example: Medieval European monarchies believed kings ruled by "divine right."
+
+Criticism: It cannot be scientifically verified. It promotes blind obedience to rulers regardless of their conduct.
+
+2. SOCIAL CONTRACT THEORY:
+The state arose from an agreement (contract) among people who gave up some of their freedoms in exchange for protection and order.
+
+- Thomas Hobbes (Leviathan): In the state of nature, life was "solitary, poor, nasty, brutish, and short." People surrendered their rights to a powerful sovereign (the Leviathan) for security.
+- John Locke: The contract was to protect natural rights (life, liberty, property). Government that violates these rights can be overthrown.
+- Jean-Jacques Rousseau: The contract represents the "general will" of the people. Government derives its legitimacy from the consent of all.
+
+3. FORCE THEORY:
+The state was created by conquest and domination. The strongest group imposed authority over others. Example: Colonial states in Africa were largely created by force.
+
+Criticism: It justifies oppression and ignores consent and justice.
+
+4. EVOLUTIONARY THEORY:
+The state evolved gradually from simple family/clan units to tribes, city-states, and finally modern nation-states. It is a natural, organic development shaped by history, geography, and social needs.
+This is the most widely accepted theory among historians and political scientists.
+
+5. MARXIST THEORY:
+The state is an instrument of class oppression. It was created by the ruling class to protect their interests and exploit the working class. Karl Marx and Friedrich Engels argued that the state will eventually "wither away" when a classless communist society is achieved.
+Criticism: It reduces the state to economic interests alone and ignores other factors.
+
+Exam Tip: Know all five theories with their key thinkers. Questions often ask you to explain one or two theories and assess their strengths and weaknesses.`
+  },
+
+  {
+    title: "Characteristics of the State",
+    key: "The state is characterized by permanent population, defined territory, organized government, sovereignty, legal personality, and monopoly of legitimate force.",
+    body: `Beyond the four basic elements (population, territory, government, sovereignty), the state has several distinguishing characteristics:
+
+1. PERMANENCE: The state is a permanent institution. Even when governments change, the state continues. Nigeria as a state has existed since 1960 through many changes of government.
+
+2. COMPULSORY MEMBERSHIP: Every person born within the state is automatically a member (citizen). Membership is not voluntary like in clubs or associations.
+
+3. MONOPOLY OF LEGITIMATE FORCE: Only the state has the legal right to use force (through the army and police). Max Weber's classic definition highlights this feature.
+
+4. LEGAL PERSONALITY: The state can enter into contracts, own property, and sue or be sued. Nigeria as a state signs treaties with other countries.
+
+5. ALL-ENCOMPASSING AUTHORITY: The state's authority covers all aspects of life within its territory — economic, social, religious, and political.
+
+6. UNIVERSALITY: Every human society today belongs to some form of state organization.
+
+7. DEFINED TERRITORY WITH RECOGNIZED BOUNDARIES: Nigeria's borders with Benin Republic, Niger, Chad, and Cameroon are recognized internationally.
+
+8. INTERNATIONAL RECOGNITION: Other states and international bodies recognize Nigeria as a legitimate state.
+
+Difference from other organizations:
+Unlike churches, parties, or clubs — the state claims supreme authority, membership is compulsory, and it alone can legally use force.
+
+Exam Tip: Be able to list and explain at least six characteristics of the state with Nigerian examples.`
+  },
+
+  {
+    title: "Types of State: Unitary, Federal, and Confederal",
+    key: "States are classified based on how governmental power is distributed between the central and regional authorities.",
+    body: `Knowledge of three types of state based on power distribution:
+
+1. UNITARY STATE:
+
+- All governmental power is concentrated at the center.
+- Regional or local units exist but derive all their powers from the central government.
+- Central government can create, modify, or abolish lower units.
+Examples: United Kingdom, France, Ghana, Kenya.
+
+Advantages: Strong central authority, uniform laws, efficient decision-making.
+Disadvantages: Can be oppressive to minorities, too centralized, less responsive to regional needs.
+
+2. FEDERAL STATE:
+
+- Power is constitutionally divided between a central government and component units (states/provinces).
+- Neither level can unilaterally abolish the other.
+- Each level has its own sphere of powers.
+Examples: Nigeria, USA, Germany, India, Canada.
+
+In Nigeria, power is shared between the Federal Government, 36 State Governments, and 774 Local Government Areas through the Exclusive, Concurrent, and Residual Legislative Lists in the 1999 Constitution.
+Advantages: Protects diversity, prevents over-centralization, accommodates ethnic differences.
+Disadvantages: Duplication of functions, intergovernmental conflicts, costly to maintain.
+
+3. CONFEDERAL STATE (CONFEDERATION):
+
+- A loose association of independent states that cooperate for specific purposes (defense, trade).
+- The central body has very limited powers; member states retain sovereignty.
+- Rarest form today.
+Historical Examples: The United States (1781-1789 under Articles of Confederation), the Confederate States of America (1861-1865).
+Modern quasi-example: The European Union (has some confederal features).
+Advantages: States retain maximum independence.
+Disadvantages: Weak central authority, coordination problems, vulnerable to disintegration.
+
+WHY NIGERIA IS FEDERAL:
+
+Nigeria adopted federalism because of its large size, ethnic diversity (over 250 groups), and historical regional differences. Federalism helps manage diversity and prevent domination by any one group.
+
+Exam Tip: Know the key differences between unitary, federal, and confederal systems. Nigeria is always the primary example for federalism.`
+  },
+
+  {
+    title: "Structure of Government: The Executive, Legislature, and Judiciary",
+    key: "Modern governments are structured into three arms — the Executive (implements laws), Legislature (makes laws), and Judiciary (interprets laws) — with each checking the others.",
+    body: `Know each arm in detail, especially in the Nigerian context.
+
+1. THE EXECUTIVE:
+The arm responsible for implementing and enforcing laws and policies.
+
+Types:
+
+- Presidential Executive: The President is both head of state and head of government, elected independently of the legislature. Example: Nigeria, USA.
+- Parliamentary Executive: The Prime Minister is head of government, chosen from the legislature. Example: UK.
+- Monarchical Executive: A king or queen serves as head of state (may be ceremonial or powerful).
+
+Functions:
+
+- Initiating and implementing government policies
+- Commanding the armed forces
+- Conducting foreign policy
+- Preparing the budget
+- Appointing ministers and key officials
+
+In Nigeria: The President (Federal), Governors (State), and Local Government Chairpersons (Local) form the executive at each level.
+
+2. THE LEGISLATURE:
+The arm responsible for making laws.
+
+Types:
+
+- Unicameral: One chamber (e.g., Ghana's Parliament).
+- Bicameral: Two chambers. Nigeria has the National Assembly — Senate (upper house) and House of Representatives (lower house).
+
+Functions:
+
+- Law-making (legislation)
+- Representation of the people
+- Oversight of the executive
+- Budget approval
+- Constitutional amendments
+- Ratification of treaties
+
+In Nigeria: The National Assembly makes federal laws; State Houses of Assembly make state laws.
+
+3. THE JUDICIARY:
+The arm responsible for interpreting laws and resolving disputes.
+
+Functions:
+
+- Interpreting the Constitution and laws
+- Settling disputes between individuals, groups, and government arms
+- Protecting fundamental human rights
+- Checking the other arms through judicial review
+
+In Nigeria: The judicial structure includes Magistrate Courts, State High Courts, Court of Appeal, and the Supreme Court (highest court).
+
+SEPARATION OF POWERS:
+
+Montesquieu (French philosopher) proposed that the three arms should be separated to prevent tyranny. In Nigeria's 1999 Constitution, this is implemented — the President, National Assembly, and Supreme Court are distinct and independent.
+
+CHECKS AND BALANCES:
+
+Each arm has mechanisms to limit the others:
+- The legislature can impeach the president.
+- The president can veto bills from the legislature.
+- The judiciary can declare executive or legislative actions unconstitutional.
+
+Exam Tip: Know the functions of each arm, key differences between presidential and parliamentary systems, and how separation of powers works in Nigeria.`
+  },
+
+  {
+    title: "Functions, Relationships, Strengths, and Weaknesses of the Arms of Government",
+    key: "The three arms of government — executive, legislature, and judiciary — relate to each other through separation of powers and checks and balances, each with distinct strengths and weaknesses.",
+    body: `This subtopic builds on the structure of government by examining how the arms interact and their merits/demerits.
+
+RELATIONSHIP BETWEEN THE ARMS:
+The three arms are designed to be independent yet interdependent:
+
+- The executive proposes the budget; the legislature approves it.
+- The legislature passes bills; the executive assents to them (or vetoes).
+- The judiciary interprets laws made by the legislature and actions taken by the executive.
+- Judicial review allows courts to declare executive or legislative actions unconstitutional.
+
+In Nigeria, this interdependence is often the source of political tension — for example, conflicts between the President and the National Assembly over budget alterations.
+
+STRENGTHS OF SEPARATION OF POWERS AND CHECKS AND BALANCES:
+
+- Prevents tyranny and dictatorship
+- Promotes accountability and transparency
+- Protects individual rights and freedoms
+- Ensures no single arm or individual dominates
+- Promotes democracy and rule of law
+
+WEAKNESSES/CRITICISMS:
+
+- Can lead to deadlock when the arms are controlled by opposing parties
+- Slows down governance (e.g., budgets delayed by legislative disagreements)
+- Can be manipulated — a president may "capture" the judiciary through appointments
+- In developing countries like Nigeria, weak institutions mean separation of powers may exist on paper but not in practice
+- The legislature's oversight role is often compromised by executive influence (budget manipulation)
+
+NIGERIAN REALITY:
+Nigeria's 1999 Constitution enshrines separation of powers, but in practice:
+
+- The executive often dominates the legislature through financial control.
+- Judicial appointments can be politically influenced.
+- Impeachment threats have been used as political weapons.
+- However, cases like the Supreme Court's annulment of election results show the judiciary can still act independently.
+
+Exam Tip: Evaluate both the strengths and weaknesses. Show awareness of the Nigerian reality. Do not just present the theory — show how it works (or fails) in practice.`
+  },
+
+  {
+    title: "Types and Systems of Government",
+    key: "Governments are classified into various systems — Presidential, Parliamentary, Monarchy, Authoritarian, Totalitarian, Oligarchy, Aristocracy, and Military — each with distinct features.",
+    body: `Understanding types of government is essential. You must be able to define, describe, and compare them.
+
+1. PRESIDENTIAL SYSTEM:
+
+- Executive power is vested in an elected president separate from the legislature.
+- President is both head of state and head of government.
+- Fixed term of office; cannot be easily removed except by impeachment.
+Examples: Nigeria, USA, Brazil.
+Features: Separation of powers, independent executive, checks and balances.
+
+2. PARLIAMENTARY SYSTEM:
+
+- Executive is drawn from and responsible to the legislature.
+- Prime Minister is the head of government; a monarch or ceremonial president may be head of state.
+- Government can be removed by a vote of no confidence.
+Examples: UK, India, Canada.
+Features: Fusion of executive and legislature, collective cabinet responsibility.
+
+3. MONARCHY:
+
+- Rule by a king, queen, or emperor.
+Types:
+  a. Constitutional Monarchy: The monarch's powers are limited by a constitution. Example: UK (Queen/King is ceremonial).
+  b. Absolute Monarchy: The monarch has unlimited power. Example: Saudi Arabia.
+Features: Hereditary succession, lifelong rule.
+
+4. AUTHORITARIAN SYSTEM:
+
+- Power is concentrated in one person or small group.
+- Limited political freedoms; opposition is suppressed.
+- Not necessarily guided by a single ideology.
+Examples: Many African military regimes.
+
+5. TOTALITARIAN SYSTEM:
+
+- Extreme form of authoritarianism. The state controls every aspect of life — political, social, cultural, economic.
+- No political opposition; total obedience demanded.
+Examples: Hitler's Nazi Germany, Stalin's USSR, North Korea today.
+
+6. OLIGARCHY:
+
+- Rule by a small, privileged group (based on wealth, birth, or military power).
+- Not accountable to the general public.
+Examples: Historically, Venice (merchant oligarchy); modern corporations influencing government could be called oligarchic.
+
+7. ARISTOCRACY:
+
+- Rule by the "best" or the nobility — based on birth, wealth, or status.
+- In practice, often becomes oligarchy.
+Historical Example: Ancient Athens (before full democracy), British House of Lords.
+
+8. MILITARY GOVERNMENT:
+
+- The armed forces take over political power, usually through a coup d'état.
+- Constitutions are suspended; rule is by decrees.
+- No elections; civil rights may be curtailed.
+Nigeria's Military History: Gowon (1966), Murtala/Obasanjo (1975-79), Buhari/Idiagbon (1983-85), Babangida (1985-93), Abacha (1993-98), Abdulsalami (1998-99).
+
+ADVANTAGES AND DISADVANTAGES OF EACH SYSTEM:
+
+Presidential: + Stability, + Clear executive; − Deadlock possible, − Slow decision-making.
+
+Parliamentary: + Flexible, + Accountability; − Instability, − Executive dominates.
+
+Military: + Quick decisions; − Authoritarian, − Violates rights, − No accountability.
+
+Exam Tip: This is one of the most comprehensive topics. Know at least 6 systems, their features, examples, advantages, and disadvantages.`
+  },
+],
+// BATCH 4: constitution, governance, ideas, parties, opinion (GOV001 Topics 4-5 & GOV002 Topics 6-8)
+// Each object covers one syllabus subtopic with JUPEB-level depth.
+
+// ─── CONSTITUTION & CONSTITUTIONALISM ───────────────────────────────────────
+export const constitution = [
+  {
+    title: "Definitions of Constitution and Constitutionalism",
+    key: "A constitution is the fundamental law of a state that defines its structure and limits government power; constitutionalism is the practice of governing according to constitutional principles.",
+    body: `CONSTITUTION — DEFINITION:
+A constitution is the body of fundamental laws, principles, and rules that define the organization of government, distribute powers among institutions, protect citizens' rights, and serve as the supreme law of the land.
+
+Key definitions:
+- K.C. Wheare: A constitution is the whole system of government of a country, comprising rules establishing and regulating government.
+- In Nigeria: The 1999 Constitution (as amended) is the supreme law. Section 1(1) states: "This Constitution is supreme and its provisions shall have binding force on all authorities and persons throughout the Federal Republic of Nigeria."
+
+CONSTITUTIONALISM — DEFINITION:
+Constitutionalism is the principle or doctrine that government authority must be exercised in accordance with constitutional provisions. It means:
+- Government power is limited
+- No one is above the law
+- Citizens' rights are protected
+
+Constitutionalism is not just about having a constitution — it is about actually obeying it.
+
+JUPEB Exam Tip: Clearly distinguish: A constitution is a document/set of rules. Constitutionalism is the practice of following those rules. A country can have a constitution without practicing constitutionalism (e.g., authoritarian regimes).`
+  },
+  {
+    title: "Types of Constitution",
+    key: "Constitutions are classified as written or unwritten, rigid or flexible, and unitary or federal.",
+    body: `WRITTEN vs. UNWRITTEN:
+1. Written Constitution: Contained in a single formal document. Examples: Nigeria (1999 Constitution), USA, Germany.
+   Advantages: Clear, accessible, reduces disputes; Disadvantages: Difficult to amend, may not adapt quickly to change.
+
+2. Unwritten (Uncodified) Constitution: Not contained in one single document. Consists of statutes, conventions, common law, and traditions. Example: United Kingdom, Israel, New Zealand.
+   Advantages: Flexible, adapts easily; Disadvantages: Uncertain, can be manipulated.
+
+RIGID vs. FLEXIBLE:
+1. Rigid Constitution: Difficult to amend; requires special procedures (e.g., two-thirds majority in both houses + states). Nigeria's 1999 Constitution is largely rigid — amendment requires approval by at least two-thirds of the National Assembly and two-thirds of State Houses of Assembly.
+   Advantage: Protects against hasty changes; Disadvantage: Slows necessary reforms.
+
+2. Flexible Constitution: Can be amended through ordinary legislative process. Example: UK Parliament can theoretically change any law with a simple majority.
+   Advantage: Adaptable; Disadvantage: Vulnerable to political manipulation.
+
+FEDERAL vs. UNITARY:
+1. Federal Constitution: Distributes powers between central and state governments. Example: Nigeria — powers in Exclusive, Concurrent, and Residual lists.
+2. Unitary Constitution: Power is centralized. Example: Ghana, France.
+
+JUPEB Exam Tip: Nigeria's constitution is written, rigid, and federal. Know these three classifications well and be ready to explain each.`
+  },
+  {
+    title: "Features of Constitutionalism",
+    key: "Constitutionalism is upheld through six key features: rule of law, separation of powers, supremacy of the constitution, fundamental human rights, independence of the judiciary, and checks and balances.",
+    body: `These six features are all listed in the JUPEB syllabus and must be individually explained:
+
+1. RULE OF LAW:
+Developed by A.V. Dicey. Three meanings:
+- Supremacy of the law: No one is above the law, not even the president.
+- Equality before the law: All persons are equal regardless of status.
+- Rights derived from the constitution: Freedoms are secured by the courts.
+In Nigeria, the rule of law is guaranteed in the 1999 Constitution, but enforcement remains a challenge.
+
+2. SEPARATION OF POWERS:
+The executive, legislature, and judiciary are distinct and independent. Each arm has defined powers. Prevents tyranny and abuse.
+
+3. SUPREMACY OF THE CONSTITUTION:
+The constitution is the highest law. All laws, actions, and policies must conform to it. Any law inconsistent with the constitution is void. In Nigeria, the Supreme Court enforces constitutional supremacy.
+
+4. FUNDAMENTAL HUMAN RIGHTS:
+Chapter IV of Nigeria's 1999 Constitution guarantees: right to life, personal liberty, dignity, fair hearing, private/family life, freedom of thought/religion/expression, freedom from discrimination, and right to education. These cannot be taken away except in specific circumstances.
+
+5. INDEPENDENCE OF THE JUDICIARY:
+Judges must be free from political interference to deliver fair judgments. In Nigeria, judicial independence is provided for in the constitution — judges have security of tenure, adequate remuneration, and cannot be removed arbitrarily.
+
+6. CHECKS AND BALANCES:
+Each arm of government has power to limit the others. Prevents any arm from becoming too powerful.
+
+CONSTITUTIONALISM: MYTH OR REALITY IN NIGERIA?
+Arguments that it is a Myth:
+- Selective application of the rule of law (powerful people escape justice)
+- Executive dominance over legislature
+- Corruption in the judiciary
+- Human rights violations by security forces
+
+Arguments that it is a Reality:
+- Courts have overturned government actions
+- Impeachments and electoral petition decisions
+- NHRC (National Human Rights Commission) exists
+- Press freedom and civil society activism
+
+JUPEB Exam Tip: This is an essay-type question. Be balanced — acknowledge both sides when asked "Constitutionalism: Myth or Reality?"
+`
+  }
+];
+
+// ─── GOVERNANCE & CITIZENSHIP ────────────────────────────────────────────────
+export const governance = [
+  {
+    title: "Meaning and Nature of Governance; Government vs. Governance",
+    key: "Governance refers to the processes and manner of exercising power, while government refers to the institutions that hold and exercise power.",
+    body: `GOVERNANCE — DEFINITION:
+Governance is the process by which authority is exercised in the management of a country's resources and affairs. It encompasses decision-making processes, accountability mechanisms, and the relationship between state institutions, citizens, and the private sector.
+
+The World Bank defines governance as the manner in which power is exercised in the management of a country's economic and social resources for development.
+
+TYPES OF GOVERNANCE:
+1. Good Governance: Characterized by transparency, accountability, rule of law, responsiveness, equity, effectiveness, and participation. Associated with development and stability.
+2. Bad Governance: Characterized by corruption, opacity, inefficiency, exclusion, and violation of rights. Associated with poverty and instability.
+
+GOVERNMENT vs. GOVERNANCE:
+- GOVERNMENT refers to the institutions (executive, legislature, judiciary) that hold state power.
+- GOVERNANCE refers to how that power is exercised — the quality and process of decision-making.
+- You can have a government without good governance (e.g., a corrupt administration).
+
+DEMOCRACY AND DEMOCRATIZATION:
+Democracy: A system of government where power belongs to the people, exercised directly or through elected representatives. Key features: free elections, rule of law, civil liberties, accountability.
+
+Democratization: The process by which non-democratic systems transition to democracy. Nigeria's democratization journey: military rule → transition programmes → return to civilian rule in 1999 → continuous electoral democracy.
+
+Challenges of democratization in Nigeria: electoral violence, corruption, poverty, ethnic politics, weak institutions.
+
+JUPEB Exam Tip: Know the difference between government (institutions) and governance (process/quality). Also be prepared to discuss democracy and democratization in the Nigerian context.`
+  },
+  {
+    title: "Citizenship: Definition, Acquisition, Rights, Duties, and Obligations",
+    key: "Citizenship is the legal status of belonging to a state, with associated rights and responsibilities.",
+    body: `DEFINITION:
+Citizenship is the legal relationship between an individual and a state in which the individual owes allegiance to the state and the state in return protects the individual's rights.
+
+WHO IS A CITIZEN?
+A citizen is a person who owes allegiance to a state and is entitled to the full protection and privileges of that state. In Nigeria, this is defined in Section 25-32 of the 1999 Constitution.
+
+WAYS OF ACQUIRING CITIZENSHIP IN NIGERIA:
+1. BY BIRTH: A person born in Nigeria to at least one Nigerian parent is a citizen. (Section 25)
+2. BY DESCENT: A person born outside Nigeria to a Nigerian parent/grandparent.
+3. BY REGISTRATION: Applies to women who marry Nigerian citizens and persons of Nigerian descent. (Section 26)
+4. BY NATURALIZATION: A foreigner who has lived in Nigeria for at least 15 years, is of good character, and has renounced other citizenship may apply. (Section 27)
+
+RIGHTS OF CITIZENS (Chapter IV, 1999 Constitution):
+- Right to life
+- Right to dignity
+- Right to personal liberty
+- Right to fair hearing
+- Right to privacy
+- Right to freedom of thought, conscience, and religion
+- Right to freedom of expression
+- Right to peaceful assembly and association
+- Right to freedom of movement
+- Right to freedom from discrimination
+- Right to property
+- Right to education
+
+DUTIES AND OBLIGATIONS OF CITIZENS:
+- Obey and respect the constitution and laws
+- Pay taxes
+- Vote in elections
+- Defend the country when called upon
+- Report crime to the authorities
+- Participate in community development
+- Respect the rights of others
+- Be loyal to the Nigerian state
+
+LOSS OF CITIZENSHIP:
+A naturalized citizen can lose citizenship by: acquiring another nationality voluntarily, renouncing citizenship, or fraud in the naturalization process.
+
+JUPEB Exam Tip: Know all four ways of acquiring Nigerian citizenship with the relevant constitutional sections. Also list at least five rights and five duties of citizens.`
+  }
+];
+
+// ─── POLITICAL IDEAS & THOUGHTS ──────────────────────────────────────────────
+export const ideas = [
+  {
+    title: "Meaning, Nature, and Functions of Ideology",
+    key: "A political ideology is a coherent set of ideas, values, and beliefs about how society should be organized and how political power should be exercised.",
+    body: `DEFINITION:
+Ideology is a system of ideas and ideals that forms the basis of economic or political theory and policy. In politics, ideology provides a blueprint for how society should be organized, how resources should be distributed, and what the role of the state should be.
+
+Key definitions:
+- Karl Marx: Ideology is the set of ideas that serve the interests of the ruling class.
+- Mannheim: Ideology is a partial, distorted view of reality that justifies existing social arrangements.
+- Modern view: Ideology is any comprehensive set of political beliefs and values (can be conservative, liberal, socialist, etc.)
+
+NATURE OF IDEOLOGY:
+- It is comprehensive (covers political, economic, social dimensions)
+- It is prescriptive (tells how things should be)
+- It is action-oriented (inspires political movements and policies)
+- It can be inclusive or exclusive
+
+FUNCTIONS OF IDEOLOGY:
+1. LEGITIMATION: Justifies the existence and actions of a government or political system.
+2. MOBILIZATION: Motivates people to take political action — revolutions, elections, reforms.
+3. GUIDANCE: Provides direction for policy-making and governance.
+4. IDENTITY: Defines who belongs to a group and what they stand for.
+5. CRITICISM: Ideologies can challenge existing power structures and demand change.
+6. INTEGRATION: Brings people of similar views together into parties and movements.
+
+JUPEB Exam Tip: Define ideology and list its functions clearly. In Nigeria, parties like APC and PDP have official ideologies on paper but are often described as pragmatic rather than ideological.`
+  },
+  {
+    title: "Types of Political Ideologies",
+    key: "Major ideologies include Communalism, Feudalism, Capitalism, Imperialism, Fascism, Nazism, Nationalism, Marxism, Socialism, Communism, Totalitarianism, Anarchism, and Globalization.",
+    body: `The JUPEB syllabus lists all of the following — know each one:
+
+1. COMMUNALISM:
+An ideology emphasizing community ownership and collective decision-making over individual rights. Resources are shared communally. Common in pre-colonial African societies (e.g., land was communally owned). Modern application: some argue for communal management of resources in multi-ethnic states.
+
+2. FEUDALISM:
+A medieval system where land was owned by lords (nobles) who provided protection to peasants (serfs) in exchange for labour and loyalty. Power was based on land ownership. Hierarchical: King → Lords → Knights → Serfs.
+Relevance: Understanding feudalism helps explain how pre-modern political structures transitioned to modern states.
+
+3. CAPITALISM AND IMPERIALISM:
+Capitalism: An economic and political system in which private individuals own the means of production, guided by market forces, profit motive, and competition. Examples: USA, UK, Nigeria's mixed economy.
+Key features: Private property, free market, profit motive, class differences.
+Imperialism: The policy of a powerful nation extending control over weaker territories/nations for economic and political gain. European colonization of Africa was imperialistic. Lenin described imperialism as "the highest stage of capitalism."
+
+4. FASCISM AND NAZISM:
+Fascism: An authoritarian, ultra-nationalist ideology that glorifies the nation/race, rejects democracy, and demands total obedience to the state and a charismatic leader.
+Example: Mussolini's Italy (1922–1943).
+Nazism (National Socialism): A specific form of fascism developed by Adolf Hitler in Germany. Added racism (Aryan supremacy), anti-Semitism, and aggressive expansionism. Led to the Holocaust and World War II.
+Both reject liberalism, communism, and individual rights.
+
+5. NATIONALISM:
+A belief in the importance of national identity, self-determination, and independence. Can be:
+- Anti-colonial (African nationalism — struggle for independence)
+- Ethnic nationalism (based on ethnicity)
+- Civic nationalism (based on shared values and citizenship)
+In Nigeria: Nationalism drove the independence movement. Leaders like Nnamdi Azikiwe, Obafemi Awolowo, and Ahmadu Bello were nationalist figures.
+
+6. MARXISM, SOCIALISM, AND COMMUNISM:
+Marxism: Theory developed by Karl Marx and Friedrich Engels. Argues that history is driven by class struggle between the bourgeoisie (owners) and the proletariat (workers). The state is an instrument of the ruling class. Revolution will replace capitalism with communism.
+
+Socialism: Government ownership/control of key industries and resources to ensure equality and welfare. A middle stage between capitalism and communism. Examples: Social democracies in Scandinavia. Some degree of socialism exists in Nigeria (public education, NNPC, etc.)
+
+Communism: The final stage in Marxist theory — a classless, stateless society where resources are owned collectively and distributed according to need. "From each according to ability, to each according to need." Examples: USSR (historical), Cuba, North Korea, China (modified).
+
+7. TOTALITARIANISM:
+An extreme form of authoritarian ideology where the state controls every aspect of life — political, social, economic, cultural, and personal. No dissent is tolerated. Citizens are required to conform totally. Examples: Nazi Germany, Stalinist USSR, North Korea today.
+
+8. ANARCHISM:
+Rejects all forms of government, authority, and the state as inherently oppressive. Advocates for voluntary cooperation and self-organization without rulers.
+Example: Pierre-Joseph Proudhon (first person to call himself an anarchist), Mikhail Bakunin.
+Criticism: Seen as impractical; without authority, how is order maintained?
+
+9. GLOBALIZATION (as an ideology):
+The idea that increased interdependence of the world through trade, technology, culture, and politics is beneficial and inevitable. Associated with liberalism and free-market capitalism.
+In Nigeria: Globalization has brought investment and technology but also economic dependency and cultural dilution.
+
+JUPEB Exam Tip: Know a clear one-paragraph explanation of each ideology. Be especially ready for Capitalism vs. Socialism, and Fascism vs. Communism comparisons.`
+  },
+  {
+    title: "Political Thoughts: Social Contract Theory and Utilitarianism",
+    key: "Social Contract Theory (Hobbes, Locke, Rousseau) explains the origin of government through an agreement among people; Utilitarianism (Bentham, Mill) judges actions by their ability to maximize happiness.",
+    body: `SOCIAL CONTRACT THEORY:
+The theory that government arose from an agreement (contract) among people in the pre-political state of nature.
+
+THOMAS HOBBES (1588–1679) — Leviathan (1651):
+- State of nature: Life was "solitary, poor, nasty, brutish, and short." People were in constant war against each other.
+- The Contract: People agreed to surrender ALL their rights to an all-powerful sovereign (the Leviathan) in exchange for security and order.
+- Once made, the contract is irrevocable — the sovereign's power is absolute.
+- Political implication: Justifies strong, centralized authority. Supports absolute monarchy.
+
+JOHN LOCKE (1632–1704) — Two Treatises of Government (1689):
+- State of nature: Relatively peaceful, but insecure. People had natural rights: life, liberty, and property.
+- The Contract: People agreed to form a government to protect their natural rights. Government is created by consent and its power is limited.
+- If government violates natural rights, people have the right to overthrow it.
+- Political implication: Foundation of liberal democracy. Influenced the US Declaration of Independence and Nigerian constitutional rights.
+
+JEAN-JACQUES ROUSSEAU (1712–1778) — The Social Contract (1762):
+- State of nature: People were naturally free and good, but society corrupted them.
+- The Contract: An agreement based on the "General Will" (the common interest of all citizens).
+- Government must represent the general will, not the interests of a few.
+- Political implication: Basis of popular sovereignty and participatory democracy. "Man is born free, and everywhere he is in chains."
+
+THOMAS AQUINAS:
+Medieval philosopher who combined Aristotle's political philosophy with Christian theology. Believed just laws must conform to natural law (God's reason). Unjust laws need not be obeyed.
+
+UTILITARIANISM:
+Developed by Jeremy Bentham (Introduction to the Principles of Morals and Legislation, 1789) and refined by John Stuart Mill (Utilitarianism, 1863).
+
+Core Principle: "The greatest happiness of the greatest number." Actions and policies are right if they produce the greatest overall happiness/benefit for the most people.
+
+Key concepts:
+- Felicific calculus (Bentham): A method to measure pleasure and pain.
+- Higher and lower pleasures (Mill): Mental pleasures are superior to physical ones. "Better to be Socrates dissatisfied than a fool satisfied."
+
+Applications in politics:
+- Supports democratic decision-making (majority welfare)
+- Basis for welfare state policies
+- Used to evaluate public policies (cost-benefit analysis)
+
+Criticisms:
+- Ignores minority rights (the majority can oppress the minority)
+- Difficult to measure happiness
+- Ends can justify unjust means if they produce maximum happiness
+
+JUPEB Exam Tip: Compare Hobbes and Locke on the state of nature and the social contract. Know Rousseau's concept of the general will. Define utilitarianism and state its main thinkers.`
+  }
+];
+
+// ─── POLITICAL PARTIES, PARTY SYSTEMS & PRESSURE GROUPS ─────────────────────
+export const parties = [
+  {
+    title: "Political Parties: Definitions, Functions, Organs, and Types",
+    key: "Political parties are organized groups that seek to win political power through elections; they vary in type and internal organization.",
+    body: `DEFINITION OF POLITICAL PARTIES:
+A political party is an organized group of people who share common political views and seek to control government by winning elections and forming government.
+
+Edmund Burke: "A party is a body of men united for promoting by their joint endeavours the national interest upon some particular principle in which they all agreed."
+
+FUNCTIONS OF POLITICAL PARTIES:
+1. Political Recruitment: Identifying and training candidates for public office.
+2. Political Education/Socialization: Educating citizens on political issues.
+3. Aggregation of Interests: Bringing together diverse interests and converting them into policy proposals.
+4. Articulation of Interests: Expressing the demands and needs of different groups.
+5. Formation of Government: Winning elections to form government.
+6. Opposition Role: Parties not in power serve as official opposition, criticizing and checking the ruling party.
+7. Legitimization: Parties give legitimacy to democratic government.
+8. Political Communication: Bridge between government and citizens.
+
+ORGANS OF POLITICAL PARTIES (using Nigeria as example):
+- National Convention/Congress: Highest decision-making body
+- National Executive Committee (NEC): Governing body between conventions
+- Board of Trustees (BOT): Advisory body of elder statesmen
+- National Working Committee (NWC): Manages day-to-day affairs
+- State/Local chapters: Grassroots structures
+
+TYPES OF POLITICAL PARTIES:
+1. Mass Party: Open membership, large grassroots base, strong ideology. Example: Early NCNC in Nigeria.
+2. Elite/Cadre Party: Small, select membership of influential people. Focuses on elections, not mass mobilization.
+3. Single-Issue Party: Formed around one specific issue (e.g., environment, anti-corruption).
+4. Ideological Party: Guided by a strong ideology (e.g., socialist or communist parties).
+5. Catch-All Party: Appeals to all voters regardless of class or ideology. Modern Nigerian parties (APC, PDP) are largely catch-all parties.
+
+PARTY SYSTEMS:
+1. One-Party System: Only one legal party. Example: China (Communist Party), North Korea. Criticism: No competition, authoritarian.
+2. Two-Party System: Two dominant parties alternate in power. Example: USA (Democrats and Republicans), UK (Labour and Conservative).
+3. Multi-Party System: Many parties compete; usually requires coalition governments. Example: Nigeria, Germany, France.
+
+JUPEB Exam Tip: Know the functions of parties and the three types of party systems with examples. Be ready to compare one-party and multi-party systems.`
+  },
+  {
+    title: "Pressure Groups: Meaning, Types, Functions, Modes of Operation, and Comparison with Political Parties",
+    key: "Pressure groups are organizations that seek to influence government policy without seeking power; they differ from political parties in aim and method.",
+    body: `DEFINITION:
+Pressure groups (also called interest groups) are organized associations that seek to influence government policies and decisions without seeking to form a government themselves.
+
+TYPES OF PRESSURE GROUPS:
+1. Sectional/Protective Groups: Represent the interests of a specific section of society.
+   Examples: Nigeria Labour Congress (NLC), Nigerian Bar Association (NBA), Nigerian Medical Association (NMA), Academic Staff Union of Universities (ASUU).
+
+2. Cause/Promotional Groups: Promote a cause or value beyond their own interests.
+   Examples: Amnesty International, Civil Society Organisations (CSOs), environmentalist groups.
+
+3. Anomic Groups: Spontaneous, unorganized groups that form in response to a specific crisis (e.g., protest groups, rioters).
+
+4. Institutional Groups: Organizations within the government structure that act as pressure groups (e.g., the military, civil service unions).
+
+FUNCTIONS OF PRESSURE GROUPS:
+1. Influencing legislation and policies
+2. Representing members' interests
+3. Providing information and expertise to government
+4. Checking government power
+5. Educating the public on specific issues
+6. Offering alternatives to existing policies
+
+MODES OF OPERATION/TACTICS:
+1. Lobbying: Direct contact with legislators or executives to advocate for specific policies.
+2. Strikes and Demonstrations: ASUU strikes, NLC protests.
+3. Public Campaigns: Media campaigns, social media advocacy, petitions.
+4. Litigation: Taking government or private bodies to court.
+5. Financial Support: Funding political campaigns to gain influence.
+6. Propaganda: Using media to sway public and government opinion.
+7. Bribery and Corruption (negative): Illegal but sometimes practised.
+
+PRESSURE GROUPS IN NIGERIA:
+Key examples: ASUU (education), NLC (labour), Arewa Consultative Forum (northern interests), Afenifere (Yoruba interests), Ohanaeze Ndigbo (Igbo interests).
+
+COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:
+
+  
+
+/*constitution: [
   {
     title: "Meaning of Constitution",
     key: "A constitution is the fundamental law that defines the structure, powers, and functions of government.",

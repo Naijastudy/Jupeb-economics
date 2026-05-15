@@ -415,7 +415,7 @@ function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
           borderRadius: 12, padding: "14px 16px", marginTop: 8,
         }}>
           <div style={{ fontSize: 13, color: t.keyText, lineHeight: 1.8 }}>
-            🔑 More subjects coming soon based on user feedback. Currently available: <strong>Economics, Government</strong>.
+            🔑 More subjects coming soon based on user feedback. Currently available: <strong>Economics, Government, Business Studies</strong>.
           </div>
         </div>
       </div>
@@ -882,7 +882,7 @@ const SPLASH_MESSAGES = [
         firebaseQuestions={firebaseQuestions}
         subjectId={activeSubject.id}
         onBack={goBack}
-        onSelectYear={(year) => { setSelectedYear(year); goTo("exam_setup"); }}
+        onSelectYear={(year) => { setSelectedYear(year); goReplace("exam_setup"); }}
       />
     );
   }

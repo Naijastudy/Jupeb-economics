@@ -2266,7 +2266,7 @@ France modified assimilation to "association" — recognizing that full cultural
 - Practical governance took priority over cultural conversion.
 - Similar in practice to indirect rule.
 
-COMPARISON:`
+COMPARISON:`,
 {
   table: {
     headers: ["Feature", "Indirect Rule (British)", "Assimilation (French)"],
@@ -2395,7 +2395,7 @@ Key figures:
 Négritude Movement:
 A literary and intellectual movement (Senghor, Aimé Césaire) that celebrated African cultural identity against French assimilation. It was cultural nationalism that preceded political nationalism.
 
-COMPARISON:`
+COMPARISON:`,
 {
   table: {
     headers: ["Feature", "British West Africa", "French West Africa"],

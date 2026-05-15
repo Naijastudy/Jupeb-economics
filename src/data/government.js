@@ -850,30 +850,35 @@ Exam Tip: This is one of the most comprehensive topics. Know at least 6 systems,
 A constitution is the body of fundamental laws, principles, and rules that define the organization of government, distribute powers among institutions, protect citizens' rights, and serve as the supreme law of the land.
 
 Key definitions:
+
 - K.C. Wheare: A constitution is the whole system of government of a country, comprising rules establishing and regulating government.
 - In Nigeria: The 1999 Constitution (as amended) is the supreme law. Section 1(1) states: "This Constitution is supreme and its provisions shall have binding force on all authorities and persons throughout the Federal Republic of Nigeria."
 
 CONSTITUTIONALISM — DEFINITION:
 Constitutionalism is the principle or doctrine that government authority must be exercised in accordance with constitutional provisions. It means:
+
 - Government power is limited
 - No one is above the law
 - Citizens' rights are protected
 
 Constitutionalism is not just about having a constitution — it is about actually obeying it.
 
-JUPEB Exam Tip: Clearly distinguish: A constitution is a document/set of rules. Constitutionalism is the practice of following those rules. A country can have a constitution without practicing constitutionalism (e.g., authoritarian regimes).`
+Exam Tip: Clearly distinguish: A constitution is a document/set of rules. Constitutionalism is the practice of following those rules. A country can have a constitution without practicing constitutionalism (e.g., authoritarian regimes).`
   },
   {
     title: "Types of Constitution",
     key: "Constitutions are classified as written or unwritten, rigid or flexible, and unitary or federal.",
     body: `WRITTEN vs. UNWRITTEN:
+    
 1. Written Constitution: Contained in a single formal document. Examples: Nigeria (1999 Constitution), USA, Germany.
    Advantages: Clear, accessible, reduces disputes; Disadvantages: Difficult to amend, may not adapt quickly to change.
 
 2. Unwritten (Uncodified) Constitution: Not contained in one single document. Consists of statutes, conventions, common law, and traditions. Example: United Kingdom, Israel, New Zealand.
+
    Advantages: Flexible, adapts easily; Disadvantages: Uncertain, can be manipulated.
 
 RIGID vs. FLEXIBLE:
+
 1. Rigid Constitution: Difficult to amend; requires special procedures (e.g., two-thirds majority in both houses + states). Nigeria's 1999 Constitution is largely rigid — amendment requires approval by at least two-thirds of the National Assembly and two-thirds of State Houses of Assembly.
    Advantage: Protects against hasty changes; Disadvantage: Slows necessary reforms.
 
@@ -881,21 +886,24 @@ RIGID vs. FLEXIBLE:
    Advantage: Adaptable; Disadvantage: Vulnerable to political manipulation.
 
 FEDERAL vs. UNITARY:
+
 1. Federal Constitution: Distributes powers between central and state governments. Example: Nigeria — powers in Exclusive, Concurrent, and Residual lists.
 2. Unitary Constitution: Power is centralized. Example: Ghana, France.
 
-JUPEB Exam Tip: Nigeria's constitution is written, rigid, and federal. Know these three classifications well and be ready to explain each.`
+Exam Tip: Nigeria's constitution is written, rigid, and federal. Know these three classifications well and be ready to explain each.`
   },
   {
     title: "Features of Constitutionalism",
     key: "Constitutionalism is upheld through six key features: rule of law, separation of powers, supremacy of the constitution, fundamental human rights, independence of the judiciary, and checks and balances.",
-    body: `These six features are all listed in the JUPEB syllabus and must be individually explained:
+    body: `:
 
 1. RULE OF LAW:
+
 Developed by A.V. Dicey. Three meanings:
 - Supremacy of the law: No one is above the law, not even the president.
 - Equality before the law: All persons are equal regardless of status.
 - Rights derived from the constitution: Freedoms are secured by the courts.
+
 In Nigeria, the rule of law is guaranteed in the 1999 Constitution, but enforcement remains a challenge.
 
 2. SEPARATION OF POWERS:
@@ -915,18 +923,20 @@ Each arm of government has power to limit the others. Prevents any arm from beco
 
 CONSTITUTIONALISM: MYTH OR REALITY IN NIGERIA?
 Arguments that it is a Myth:
+
 - Selective application of the rule of law (powerful people escape justice)
 - Executive dominance over legislature
 - Corruption in the judiciary
 - Human rights violations by security forces
 
 Arguments that it is a Reality:
+
 - Courts have overturned government actions
 - Impeachments and electoral petition decisions
 - NHRC (National Human Rights Commission) exists
 - Press freedom and civil society activism
 
-JUPEB Exam Tip: This is an essay-type question. Be balanced — acknowledge both sides when asked "Constitutionalism: Myth or Reality?"
+Exam Tip: This is an essay-type question. Be balanced — acknowledge both sides when asked "Constitutionalism: Myth or Reality?"
 `
   }
 ],
@@ -940,22 +950,25 @@ Governance is the process by which authority is exercised in the management of a
 The World Bank defines governance as the manner in which power is exercised in the management of a country's economic and social resources for development.
 
 TYPES OF GOVERNANCE:
+
 1. Good Governance: Characterized by transparency, accountability, rule of law, responsiveness, equity, effectiveness, and participation. Associated with development and stability.
 2. Bad Governance: Characterized by corruption, opacity, inefficiency, exclusion, and violation of rights. Associated with poverty and instability.
 
 GOVERNMENT vs. GOVERNANCE:
+
 - GOVERNMENT refers to the institutions (executive, legislature, judiciary) that hold state power.
 - GOVERNANCE refers to how that power is exercised — the quality and process of decision-making.
 - You can have a government without good governance (e.g., a corrupt administration).
 
 DEMOCRACY AND DEMOCRATIZATION:
+
 Democracy: A system of government where power belongs to the people, exercised directly or through elected representatives. Key features: free elections, rule of law, civil liberties, accountability.
 
 Democratization: The process by which non-democratic systems transition to democracy. Nigeria's democratization journey: military rule → transition programmes → return to civilian rule in 1999 → continuous electoral democracy.
 
 Challenges of democratization in Nigeria: electoral violence, corruption, poverty, ethnic politics, weak institutions.
 
-JUPEB Exam Tip: Know the difference between government (institutions) and governance (process/quality). Also be prepared to discuss democracy and democratization in the Nigerian context.`
+Exam Tip: Know the difference between government (institutions) and governance (process/quality). Also be prepared to discuss democracy and democratization in the Nigerian context.`
   },
   {
     title: "Citizenship: Definition, Acquisition, Rights, Duties, and Obligations",
@@ -967,12 +980,14 @@ WHO IS A CITIZEN?
 A citizen is a person who owes allegiance to a state and is entitled to the full protection and privileges of that state. In Nigeria, this is defined in Section 25-32 of the 1999 Constitution.
 
 WAYS OF ACQUIRING CITIZENSHIP IN NIGERIA:
+
 1. BY BIRTH: A person born in Nigeria to at least one Nigerian parent is a citizen. (Section 25)
 2. BY DESCENT: A person born outside Nigeria to a Nigerian parent/grandparent.
 3. BY REGISTRATION: Applies to women who marry Nigerian citizens and persons of Nigerian descent. (Section 26)
 4. BY NATURALIZATION: A foreigner who has lived in Nigeria for at least 15 years, is of good character, and has renounced other citizenship may apply. (Section 27)
 
 RIGHTS OF CITIZENS (Chapter IV, 1999 Constitution):
+
 - Right to life
 - Right to dignity
 - Right to personal liberty
@@ -987,6 +1002,7 @@ RIGHTS OF CITIZENS (Chapter IV, 1999 Constitution):
 - Right to education
 
 DUTIES AND OBLIGATIONS OF CITIZENS:
+
 - Obey and respect the constitution and laws
 - Pay taxes
 - Vote in elections
@@ -999,7 +1015,7 @@ DUTIES AND OBLIGATIONS OF CITIZENS:
 LOSS OF CITIZENSHIP:
 A naturalized citizen can lose citizenship by: acquiring another nationality voluntarily, renouncing citizenship, or fraud in the naturalization process.
 
-JUPEB Exam Tip: Know all four ways of acquiring Nigerian citizenship with the relevant constitutional sections. Also list at least five rights and five duties of citizens.`
+Exam Tip: Know all four ways of acquiring Nigerian citizenship with the relevant constitutional sections. Also list at least five rights and five duties of citizens.`
   }
 ],
 ideas: [
@@ -1010,17 +1026,20 @@ ideas: [
 Ideology is a system of ideas and ideals that forms the basis of economic or political theory and policy. In politics, ideology provides a blueprint for how society should be organized, how resources should be distributed, and what the role of the state should be.
 
 Key definitions:
+
 - Karl Marx: Ideology is the set of ideas that serve the interests of the ruling class.
 - Mannheim: Ideology is a partial, distorted view of reality that justifies existing social arrangements.
 - Modern view: Ideology is any comprehensive set of political beliefs and values (can be conservative, liberal, socialist, etc.)
 
 NATURE OF IDEOLOGY:
+
 - It is comprehensive (covers political, economic, social dimensions)
 - It is prescriptive (tells how things should be)
 - It is action-oriented (inspires political movements and policies)
 - It can be inclusive or exclusive
 
 FUNCTIONS OF IDEOLOGY:
+
 1. LEGITIMATION: Justifies the existence and actions of a government or political system.
 2. MOBILIZATION: Motivates people to take political action — revolutions, elections, reforms.
 3. GUIDANCE: Provides direction for policy-making and governance.
@@ -1028,12 +1047,12 @@ FUNCTIONS OF IDEOLOGY:
 5. CRITICISM: Ideologies can challenge existing power structures and demand change.
 6. INTEGRATION: Brings people of similar views together into parties and movements.
 
-JUPEB Exam Tip: Define ideology and list its functions clearly. In Nigeria, parties like APC and PDP have official ideologies on paper but are often described as pragmatic rather than ideological.`
+Exam Tip: Define ideology and list its functions clearly. In Nigeria, parties like APC and PDP have official ideologies on paper but are often described as pragmatic rather than ideological.`
   },
   {
     title: "Types of Political Ideologies",
     key: "Major ideologies include Communalism, Feudalism, Capitalism, Imperialism, Fascism, Nazism, Nationalism, Marxism, Socialism, Communism, Totalitarianism, Anarchism, and Globalization.",
-    body: `The JUPEB syllabus lists all of the following — know each one:
+    body: `:
 
 1. COMMUNALISM:
 An ideology emphasizing community ownership and collective decision-making over individual rights. Resources are shared communally. Common in pre-colonial African societies (e.g., land was communally owned). Modern application: some argue for communal management of resources in multi-ethnic states.
@@ -1043,24 +1062,31 @@ A medieval system where land was owned by lords (nobles) who provided protection
 Relevance: Understanding feudalism helps explain how pre-modern political structures transitioned to modern states.
 
 3. CAPITALISM AND IMPERIALISM:
+
 Capitalism: An economic and political system in which private individuals own the means of production, guided by market forces, profit motive, and competition. Examples: USA, UK, Nigeria's mixed economy.
 Key features: Private property, free market, profit motive, class differences.
+
 Imperialism: The policy of a powerful nation extending control over weaker territories/nations for economic and political gain. European colonization of Africa was imperialistic. Lenin described imperialism as "the highest stage of capitalism."
 
 4. FASCISM AND NAZISM:
+
 Fascism: An authoritarian, ultra-nationalist ideology that glorifies the nation/race, rejects democracy, and demands total obedience to the state and a charismatic leader.
 Example: Mussolini's Italy (1922–1943).
+
 Nazism (National Socialism): A specific form of fascism developed by Adolf Hitler in Germany. Added racism (Aryan supremacy), anti-Semitism, and aggressive expansionism. Led to the Holocaust and World War II.
 Both reject liberalism, communism, and individual rights.
 
 5. NATIONALISM:
 A belief in the importance of national identity, self-determination, and independence. Can be:
+
 - Anti-colonial (African nationalism — struggle for independence)
 - Ethnic nationalism (based on ethnicity)
 - Civic nationalism (based on shared values and citizenship)
+
 In Nigeria: Nationalism drove the independence movement. Leaders like Nnamdi Azikiwe, Obafemi Awolowo, and Ahmadu Bello were nationalist figures.
 
 6. MARXISM, SOCIALISM, AND COMMUNISM:
+
 Marxism: Theory developed by Karl Marx and Friedrich Engels. Argues that history is driven by class struggle between the bourgeoisie (owners) and the proletariat (workers). The state is an instrument of the ruling class. Revolution will replace capitalism with communism.
 
 Socialism: Government ownership/control of key industries and resources to ensure equality and welfare. A middle stage between capitalism and communism. Examples: Social democracies in Scandinavia. Some degree of socialism exists in Nigeria (public education, NNPC, etc.)
@@ -1073,13 +1099,15 @@ An extreme form of authoritarian ideology where the state controls every aspect 
 8. ANARCHISM:
 Rejects all forms of government, authority, and the state as inherently oppressive. Advocates for voluntary cooperation and self-organization without rulers.
 Example: Pierre-Joseph Proudhon (first person to call himself an anarchist), Mikhail Bakunin.
+
 Criticism: Seen as impractical; without authority, how is order maintained?
 
 9. GLOBALIZATION (as an ideology):
 The idea that increased interdependence of the world through trade, technology, culture, and politics is beneficial and inevitable. Associated with liberalism and free-market capitalism.
+
 In Nigeria: Globalization has brought investment and technology but also economic dependency and cultural dilution.
 
-JUPEB Exam Tip: Know a clear one-paragraph explanation of each ideology. Be especially ready for Capitalism vs. Socialism, and Fascism vs. Communism comparisons.`
+Exam Tip: Know a clear one-paragraph explanation of each ideology. Be especially ready for Capitalism vs. Socialism, and Fascism vs. Communism comparisons.`
   },
   {
     title: "Political Thoughts: Social Contract Theory and Utilitarianism",
@@ -1088,18 +1116,21 @@ JUPEB Exam Tip: Know a clear one-paragraph explanation of each ideology. Be espe
 The theory that government arose from an agreement (contract) among people in the pre-political state of nature.
 
 THOMAS HOBBES (1588–1679) — Leviathan (1651):
+
 - State of nature: Life was "solitary, poor, nasty, brutish, and short." People were in constant war against each other.
 - The Contract: People agreed to surrender ALL their rights to an all-powerful sovereign (the Leviathan) in exchange for security and order.
 - Once made, the contract is irrevocable — the sovereign's power is absolute.
 - Political implication: Justifies strong, centralized authority. Supports absolute monarchy.
 
 JOHN LOCKE (1632–1704) — Two Treatises of Government (1689):
+
 - State of nature: Relatively peaceful, but insecure. People had natural rights: life, liberty, and property.
 - The Contract: People agreed to form a government to protect their natural rights. Government is created by consent and its power is limited.
 - If government violates natural rights, people have the right to overthrow it.
 - Political implication: Foundation of liberal democracy. Influenced the US Declaration of Independence and Nigerian constitutional rights.
 
 JEAN-JACQUES ROUSSEAU (1712–1778) — The Social Contract (1762):
+
 - State of nature: People were naturally free and good, but society corrupted them.
 - The Contract: An agreement based on the "General Will" (the common interest of all citizens).
 - Government must represent the general will, not the interests of a few.
@@ -1114,20 +1145,23 @@ Developed by Jeremy Bentham (Introduction to the Principles of Morals and Legisl
 Core Principle: "The greatest happiness of the greatest number." Actions and policies are right if they produce the greatest overall happiness/benefit for the most people.
 
 Key concepts:
+
 - Felicific calculus (Bentham): A method to measure pleasure and pain.
 - Higher and lower pleasures (Mill): Mental pleasures are superior to physical ones. "Better to be Socrates dissatisfied than a fool satisfied."
 
 Applications in politics:
+
 - Supports democratic decision-making (majority welfare)
 - Basis for welfare state policies
 - Used to evaluate public policies (cost-benefit analysis)
 
 Criticisms:
+
 - Ignores minority rights (the majority can oppress the minority)
 - Difficult to measure happiness
 - Ends can justify unjust means if they produce maximum happiness
 
-JUPEB Exam Tip: Compare Hobbes and Locke on the state of nature and the social contract. Know Rousseau's concept of the general will. Define utilitarianism and state its main thinkers.`
+Exam Tip: Compare Hobbes and Locke on the state of nature and the social contract. Know Rousseau's concept of the general will. Define utilitarianism and state its main thinkers.`
   },
 ],
 parties: [
@@ -1140,6 +1174,7 @@ A political party is an organized group of people who share common political vie
 Edmund Burke: "A party is a body of men united for promoting by their joint endeavours the national interest upon some particular principle in which they all agreed."
 
 FUNCTIONS OF POLITICAL PARTIES:
+
 1. Political Recruitment: Identifying and training candidates for public office.
 2. Political Education/Socialization: Educating citizens on political issues.
 3. Aggregation of Interests: Bringing together diverse interests and converting them into policy proposals.
@@ -1150,6 +1185,7 @@ FUNCTIONS OF POLITICAL PARTIES:
 8. Political Communication: Bridge between government and citizens.
 
 ORGANS OF POLITICAL PARTIES (using Nigeria as example):
+
 - National Convention/Congress: Highest decision-making body
 - National Executive Committee (NEC): Governing body between conventions
 - Board of Trustees (BOT): Advisory body of elder statesmen
@@ -1157,6 +1193,7 @@ ORGANS OF POLITICAL PARTIES (using Nigeria as example):
 - State/Local chapters: Grassroots structures
 
 TYPES OF POLITICAL PARTIES:
+
 1. Mass Party: Open membership, large grassroots base, strong ideology. Example: Early NCNC in Nigeria.
 2. Elite/Cadre Party: Small, select membership of influential people. Focuses on elections, not mass mobilization.
 3. Single-Issue Party: Formed around one specific issue (e.g., environment, anti-corruption).
@@ -1164,11 +1201,12 @@ TYPES OF POLITICAL PARTIES:
 5. Catch-All Party: Appeals to all voters regardless of class or ideology. Modern Nigerian parties (APC, PDP) are largely catch-all parties.
 
 PARTY SYSTEMS:
+
 1. One-Party System: Only one legal party. Example: China (Communist Party), North Korea. Criticism: No competition, authoritarian.
 2. Two-Party System: Two dominant parties alternate in power. Example: USA (Democrats and Republicans), UK (Labour and Conservative).
 3. Multi-Party System: Many parties compete; usually requires coalition governments. Example: Nigeria, Germany, France.
 
-JUPEB Exam Tip: Know the functions of parties and the three types of party systems with examples. Be ready to compare one-party and multi-party systems.`
+Exam Tip: Know the functions of parties and the three types of party systems with examples. Be ready to compare one-party and multi-party systems.`
   },
   {
     title: "Pressure Groups: Meaning, Types, Functions, Modes of Operation, and Comparison with Political Parties",
@@ -1177,6 +1215,7 @@ JUPEB Exam Tip: Know the functions of parties and the three types of party syste
 Pressure groups (also called interest groups) are organized associations that seek to influence government policies and decisions without seeking to form a government themselves.
 
 TYPES OF PRESSURE GROUPS:
+
 1. Sectional/Protective Groups: Represent the interests of a specific section of society.
    Examples: Nigeria Labour Congress (NLC), Nigerian Bar Association (NBA), Nigerian Medical Association (NMA), Academic Staff Union of Universities (ASUU).
 
@@ -1188,6 +1227,7 @@ TYPES OF PRESSURE GROUPS:
 4. Institutional Groups: Organizations within the government structure that act as pressure groups (e.g., the military, civil service unions).
 
 FUNCTIONS OF PRESSURE GROUPS:
+
 1. Influencing legislation and policies
 2. Representing members' interests
 3. Providing information and expertise to government
@@ -1196,6 +1236,7 @@ FUNCTIONS OF PRESSURE GROUPS:
 6. Offering alternatives to existing policies
 
 MODES OF OPERATION/TACTICS:
+
 1. Lobbying: Direct contact with legislators or executives to advocate for specific policies.
 2. Strikes and Demonstrations: ASUU strikes, NLC protests.
 3. Public Campaigns: Media campaigns, social media advocacy, petitions.
@@ -1205,6 +1246,7 @@ MODES OF OPERATION/TACTICS:
 7. Bribery and Corruption (negative): Illegal but sometimes practised.
 
 PRESSURE GROUPS IN NIGERIA:
+
 Key examples: ASUU (education), NLC (labour), Arewa Consultative Forum (northern interests), Afenifere (Yoruba interests), Ohanaeze Ndigbo (Igbo interests).
 
 COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`,
@@ -1222,7 +1264,7 @@ COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`,
     }
   }, 
 
-  `JUPEB Exam Tip: A table comparing parties and pressure groups is commonly asked. Know at least five points of difference.` 
+  `Exam Tip: A table comparing parties and pressure groups is commonly asked. Know at least five points of difference.` 
 ]}],
 opinion: [
   {
@@ -1232,10 +1274,12 @@ opinion: [
 Public opinion refers to the aggregate of individual views, attitudes, and beliefs that the general public holds on political issues, public affairs, or government policies.
 
 Key definitions:
+
 - V.O. Key: Public opinion consists of opinions held by private persons which governments find prudent to heed.
 - It is not the opinion of every citizen, but the dominant, expressed views of a significant portion.
 
 FUNCTIONS/IMPORTANCE OF PUBLIC OPINION:
+
 1. GUIDING GOVERNMENT POLICY: Governments that ignore public opinion face elections and protests. Nigerian governments respond to public pressure on issues like fuel subsidies, education funding, and security.
 2. CHECKING GOVERNMENT POWER: Strong public opinion can prevent authoritarian actions or force policy reversals.
 3. LEGITIMATING GOVERNMENT: When the public supports government policies, it strengthens legitimacy.
@@ -1244,6 +1288,7 @@ FUNCTIONS/IMPORTANCE OF PUBLIC OPINION:
 6. MEDIA AGENDA: Public opinion shapes what the media covers, and media shapes public opinion (reciprocal relationship).
 
 FACTORS SHAPING PUBLIC OPINION:
+
 - Media (television, social media)
 - Education level
 - Religious and ethnic affiliations
@@ -1252,6 +1297,7 @@ FACTORS SHAPING PUBLIC OPINION:
 - Peer groups and social networks
 
 MEASUREMENT OF PUBLIC OPINION:
+
 1. Opinion Polls and Surveys: Scientific sampling of citizens' views. Most reliable method.
 2. Elections: Votes are the most direct expression of mass public opinion.
 3. Referenda and Plebiscites: Direct votes on specific issues.
@@ -1261,7 +1307,7 @@ MEASUREMENT OF PUBLIC OPINION:
 
 Limitations of Polls: Can be manipulated, small sample sizes, people may not answer truthfully.
 
-JUPEB Exam Tip: List at least five ways public opinion is measured. The #EndSARS protest is an excellent Nigerian example of public opinion in action.`
+Exam Tip: List at least five ways public opinion is measured. The #EndSARS protest is an excellent Nigerian example of public opinion in action.`
   },
   {
     title: "Propaganda: Meaning, Nature, Functions, Tactics, and Strategies",
@@ -1274,11 +1320,13 @@ Simply: Propaganda is using information (true, false, or selective) to influence
 It differs from education (which aims to develop critical thinking) and advertising (which promotes products). Propaganda is designed to serve an agenda.
 
 TYPES OF PROPAGANDA:
+
 1. White Propaganda: Source is openly known; information may be true but is selectively presented. Example: Government broadcasts during wars.
 2. Black Propaganda: Source is hidden or false; information is fabricated. Example: Fake news attributed to the enemy.
 3. Grey Propaganda: Source is uncertain; information may be partially true.
 
 FUNCTIONS OF PROPAGANDA:
+
 1. Mobilizing public support for government policies.
 2. Demonizing opponents or enemy groups.
 3. Justifying wars, political decisions, or discriminatory policies.
@@ -1287,6 +1335,7 @@ FUNCTIONS OF PROPAGANDA:
 6. Spreading disinformation to confuse the public.
 
 TACTICS AND STRATEGIES:
+
 1. Name-Calling: Labelling opponents with negative terms (e.g., "terrorist," "corrupt").
 2. Glittering Generalities: Using emotionally appealing but vague terms (e.g., "freedom," "democracy," "progress").
 3. Transfer: Associating a respected symbol (flag, religion) with a policy to gain approval.
@@ -1301,95 +1350,11 @@ TACTICS AND STRATEGIES:
 PROPAGANDA IN NIGERIA:
 Nigerian politics is rife with propaganda — ethnic stereotyping, fake news, political campaigns based on fear and smear tactics. Social media has amplified propaganda in modern Nigeria.
 
-JUPEB Exam Tip: Define propaganda clearly, distinguish it from education, and list at least five propaganda techniques with examples.`
+Exam Tip: Define propaganda clearly, distinguish it from education, and list at least five propaganda techniques with examples.`
   },
 ],
 
-/*constitution: [
-  {
-    title: "Meaning of Constitution",
-    key: "A constitution is the fundamental law that defines the structure, powers, and functions of government.",
-    body: "It outlines how a country is governed and protects citizens’ rights. Constitutions can be written or unwritten, rigid or flexible. It serves as the supreme law of the land and guides political activities."
-  },
-  {
-    title: "Constitutionalism",
-    key: "Constitutionalism is the practice of limiting government power through laws and principles.",
-    body: "It ensures that government operates within the law and respects citizens’ rights. Key features include rule of law, separation of powers, checks and balances, and judicial independence. Without constitutionalism, a constitution may exist only in theory."
-  }
-],
-
-governance: [
-  {
-    title: "Governance vs Government",
-    key: "Government refers to institutions; governance refers to how power is exercised.",
-    body: "Governance includes decision-making processes, accountability, transparency, and efficiency. It involves both public and private actors. Good governance promotes development, while poor governance leads to corruption and instability."
-  },
-  {
-    title: "Citizenship",
-    key: "Citizenship is the legal relationship between an individual and a state.",
-    body: "Citizens have rights such as freedom of speech and duties like obeying laws and paying taxes. Citizenship can be acquired by birth, registration, or naturalization. Active citizenship is essential for democracy and national development."
-  }
-],
-ideas: [
-  {
-    title: "Meaning of Political Ideology",
-    key: "Political ideology is a set of ideas, beliefs, and doctrines that guide political actions and policies.",
-    body: "Political ideologies provide a framework for understanding how society should be organized and governed. They influence laws, policies, and leadership styles. Ideologies explain the role of government, distribution of resources, and individual rights. They are important because they shape political systems and decision-making in every country."
-  },
-  {
-    title: "Types of Political Ideologies",
-    key: "Major ideologies include Capitalism, Socialism, Communism, Fascism, Nationalism, and Anarchism.",
-    body: "Capitalism supports private ownership and market forces. Socialism advocates government control of key resources for equality. Communism promotes a classless society with no private ownership. Fascism is authoritarian with strict control. Nationalism emphasizes loyalty to one's nation. Anarchism rejects government authority entirely. Each ideology has advantages and criticisms depending on its application."
-  },
-  {
-    title: "Social Contract Theory",
-    key: "The social contract theory explains that government exists because people agree to form it for order and protection.",
-    body: "Thinkers like Thomas Hobbes believed people gave up freedom for security under a strong ruler. John Locke argued that government must protect natural rights (life, liberty, property). Rousseau emphasized general will and collective decision-making. The theory explains the origin and legitimacy of government authority."
-  },
-  {
-    title: "Utilitarianism",
-    key: "Utilitarianism is the idea that actions are right if they promote the greatest happiness for the greatest number.",
-    body: "Developed by Jeremy Bentham and John Stuart Mill, this theory focuses on outcomes and consequences. Policies are judged based on how much benefit they bring to society. It is widely used in policy-making but criticized for sometimes ignoring minority rights."
-  }
-],
-
-parties: [
-  {
-    title: "Political Parties",
-    key: "Political parties are organized groups seeking to gain political power through elections.",
-    body: "Political parties present candidates, formulate policies, and educate voters. They act as a link between the government and the people. They help in political recruitment and promote national unity. Without parties, democratic governance becomes difficult."
-  },
-  {
-    title: "Types of Party Systems",
-    key: "Party systems include one-party, two-party, and multi-party systems.",
-    body: "A one-party system allows only one political party (e.g., China). A two-party system has two dominant parties (e.g., USA). A multi-party system has many parties (e.g., Nigeria). Each system affects political stability, representation, and governance."
-  },
-  {
-    title: "Pressure Groups",
-    key: "Pressure groups are organizations that influence government policies without seeking political power.",
-    body: "They include trade unions, professional bodies, and advocacy groups. They use methods like lobbying, protests, and media campaigns. Pressure groups promote specific interests and ensure that government policies reflect public concerns."
-  },
-  {
-    title: "Political Parties vs Pressure Groups",
-    key: "Political parties aim to gain power; pressure groups aim to influence decisions.",
-    body: "Political parties contest elections and form governments. Pressure groups do not seek power but try to shape policies. Both are important for democracy, but their roles are different in the political process."
-  }
-],
-
-opinion: [
-  {
-    title: "Public Opinion",
-    key: "Public opinion is the collective views and attitudes of people on political issues.",
-    body: "It influences government decisions and policies. Public opinion is shaped by media, education, culture, and leadership. It can be measured through surveys, polls, and elections. Strong public opinion can force governments to change policies."
-  },
-  {
-    title: "Propaganda",
-    key: "Propaganda is the use of information to influence people's opinions, often in a biased or misleading way.",
-    body: "It is used by governments, political parties, and organizations to gain support. Techniques include emotional appeal, repetition, and selective information. While propaganda can mobilize support, it can also mislead and manipulate the public."
-  }
-],
-
-elections: [
+/*elections: [
   {
     title: "Meaning of Elections",
     key: "Elections are the process through which citizens choose their leaders.",

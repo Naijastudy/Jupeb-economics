@@ -1,6 +1,6 @@
 import * as economics from "./economics";
 import * as government from "./government/index";
-import * as business_studies from "./business_studies";
+import * as business_studies from "./business_studies/index";
 
 export const subjects = [
   {
@@ -26,5 +26,13 @@ export const subjects = [
     color: "#6b95f1",
     available: false,
     data: business_studies,
+  },
+   {
+    id: "accounting",
+    name: "Accounting",
+    emoji: "💼",
+    color: "#6b95f1",
+    available: false,
+    data: accounting,
   },
 ];

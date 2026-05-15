@@ -21,12 +21,13 @@ import OfflineFallback from "./components/OfflineFallback";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
 import useQuiz from "./hooks/useQuiz";
+import useFCM from "./hooks/useFCM";
 import { useApp } from "./context/AppContext";
 import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
 import useToast from "./hooks/useToast";
 import Toast from "./components/Toast";
-/*import useFCM from "./hooks/useFCM";*/
+
 // ── SHARED UTILITY ────────────────────────────────────────────────────────────
 function formatTime(seconds) {
   const h = Math.floor(seconds / 3600);

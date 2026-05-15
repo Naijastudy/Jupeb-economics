@@ -566,6 +566,11 @@ useEffect(() => {
     setScreen(newScreen);
   };
 
+  const goReplace = (newScreen) => {
+    setHistory((h) => [...h.slice(0, -1), newScreen]);
+    setScreen(newScreen);
+  };
+
   const goBack = () => {
     if (history.length <= 1) return;
     
@@ -580,20 +585,15 @@ useEffect(() => {
         onConfirm: () => {
           setCbtRunning(false);
           setExamRunning(false);
-          const newHistory = history.slice(0, -1);
-          setHistory(newHistory);
-          setScreen(newHistory[newHistory.length - 1]);
+          const destination = screen === "exam_quiz" ? "exam_setup" : "home";
+          setHistory((h) => [...h.slice(0, -1), destination]);
+          setScreen(destination);
           setQuitModal({ open: false, onConfirm: null });
         },
       });
       return;
     };
-    const goBackForce = () => {
-  if (history.length <= 1) return;
-  const newHistory = history.slice(0, -1);
-  setHistory(newHistory);
-  setScreen(newHistory[newHistory.length - 1]);
-};
+   
 
 const goHome = () => {
   setHistory(["home"]);
@@ -1067,11 +1067,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setCbtRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goBackForce();
+                  goReplace("home");
                 },
               });
             } else {
-              goBackForce();
+              goReplace("home");
             }
           }}
           card={card} goldBtn={goldBtn}
@@ -1141,11 +1141,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setExamRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goBackForce();
+                  goReplace("exam_setup");
                 },
               });
             } else {
-              goBackForce();
+              goReplace("exam_setup");
             }
           }}
           card={card} goldBtn={goldBtn}

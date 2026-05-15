@@ -1208,7 +1208,7 @@ PRESSURE GROUPS IN NIGERIA:
 Key examples: ASUU (education), NLC (labour), Arewa Consultative Forum (northern interests), Afenifere (Yoruba interests), Ohanaeze Ndigbo (Igbo interests).
 
 COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`,
-      {
+      
     table: {
       headers: ["Feature", "Political Parties", "Pressure Groups"],
       rows: [
@@ -1218,8 +1218,8 @@ COMPARISON: POLITICAL PARTIES vs. PRESSURE GROUPS:`,
         ["Accountability", "Directly accountable to electorate", "Accountable to own members"],
         ["Scope", "Wide — all government functions", "Narrow — specific issues"],
       ]
-    }
-  },
+    },
+  
 `JUPEB Exam Tip: A table comparing parties and pressure groups is commonly asked. Know at least five points of difference.`
   },
 ], 

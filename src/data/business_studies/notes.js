@@ -1,22 +1,31 @@
 export const notes = {
-// BATCH 1: enterprise
-// Each object = one subtopic from the syllabus
-
 enterprise: [
   {
     title: "Goals of Business Activity",
     key: "Businesses exist to achieve specific goals such as profit-making, growth, survival, and social responsibility.",
-    body: "Every business operates with a purpose. The primary goal of most private businesses in Nigeria is profit — the financial reward that remains after all costs have been deducted from revenue. However, profit is not the only goal. Other goals include: Survival — especially important for new businesses or those facing economic downturns (e.g., during Nigeria's 2016 and 2020 recessions, many SMEs focused purely on staying open). Growth — expanding output, market share, or geographic reach, such as a Lagos-based fintech scaling to Abuja and Port Harcourt. Market Share — increasing the percentage of total industry sales a business controls. Social Responsibility — giving back to communities, reducing environmental impact, or supporting local development (e.g., Dangote Foundation's contributions to healthcare and education). Employee Welfare — ensuring fair wages, safe working conditions, and job satisfaction. Not all businesses prioritise profit — public corporations like NIPOST or NBET may prioritise public service delivery over profit."
+    body: `Every business operates with a purpose. The primary goal of most private businesses in Nigeria is profit — the financial reward that remains after all costs have been deducted from revenue. However, profit is not the only goal. Other goals include: 
+    
+    Survival — especially important for new businesses or those facing economic downturns (e.g., during Nigeria's 2016 and 2020 recessions, many SMEs focused purely on staying open). 
+    
+    Growth — expanding output, market share, or geographic reach, such as a Lagos-based fintech scaling to Abuja and Port Harcourt. Market Share — increasing the percentage of total industry sales a business controls. 
+    
+    Social Responsibility — giving back to communities, reducing environmental impact, or supporting local development (e.g., Dangote Foundation's contributions to healthcare and education). 
+    
+    Employee Welfare — ensuring fair wages, safe working conditions, and job satisfaction. Not all businesses prioritise profit — public corporations like NIPOST or NBET may prioritise public service delivery over profit.`
   },
   {
     title: "Concept of Adding Value",
     key: "Adding value means increasing the worth of a product by transforming inputs into outputs that are worth more than the cost of those inputs.",
-    body: "Value addition is a core concept in business. It is the difference between the selling price of a product and the cost of the inputs used to make it. For example, a cassava farmer in Ogun State sells raw cassava at ₦50/kg, but a food processor who converts it into garri sells it at ₦400/kg — the processor has added significant value through transformation. A tailor in Aba buys fabric for ₦2,000 and sells a finished outfit for ₦8,000 — the cutting, sewing, and finishing added ₦6,000 in value. Businesses add value through: branding (a bottle of Coke costs more than a generic cola), design and packaging, convenience (home delivery), quality improvement, and customer service. Adding value is how businesses justify their prices and generate profit. The chain of businesses that add value at each stage of production — from raw material to the final consumer — is called the value chain or supply chain."
+    body: `Value addition is a core concept in business. It is the difference between the selling price of a product and the cost of the inputs used to make it. For example, a cassava farmer in Ogun State sells raw cassava at ₦50/kg, but a food processor who converts it into garri sells it at ₦400/kg — the processor has added significant value through transformation. A tailor in Aba buys fabric for ₦2,000 and sells a finished outfit for ₦8,000 — the cutting, sewing, and finishing added ₦6,000 in value. 
+    
+    Businesses add value through: branding (a bottle of Coke costs more than a generic cola), design and packaging, convenience (home delivery), quality improvement, and customer service. Adding value is how businesses justify their prices and generate profit. The chain of businesses that add value at each stage of production — from raw material to the final consumer — is called the value chain or supply chain.`
   },
   {
     title: "Nature of Economic Activity",
     key: "Economic activity involves the production, distribution, and consumption of goods and services to satisfy human wants using scarce resources.",
-    body: "Human wants are unlimited — people always want more goods, better services, and higher living standards. However, the resources available to satisfy these wants — land, labour, capital, and entrepreneurship — are scarce and finite. This fundamental conflict between unlimited wants and limited resources is the central problem of economics and shapes all economic activity. Economic activity takes three main forms: Production — creating goods (manufacturing garri, building houses, refining oil) or providing services (banking, teaching, healthcare). Distribution — getting goods and services from producers to consumers through wholesalers, retailers, transport, and logistics. Consumption — the use of goods and services to satisfy wants. In Nigeria, economic activity is shaped by factors such as the dominance of oil in export revenue, a large informal economy, and rapid urbanisation driving demand for goods and services in cities like Lagos, Kano, and Port Harcourt."
+    body: `Human wants are unlimited — people always want more goods, better services, and higher living standards. However, the resources available to satisfy these wants — land, labour, capital, and entrepreneurship — are scarce and finite. This fundamental conflict between unlimited wants and limited resources is the central problem of economics and shapes all economic activity. Economic activity takes three main forms: Production — creating goods (manufacturing garri, building houses, refining oil) or providing services (banking, teaching, healthcare). 
+      
+      Distribution — getting goods and services from producers to consumers through wholesalers, retailers, transport, and logistics. Consumption — the use of goods and services to satisfy wants. In Nigeria, economic activity is shaped by factors such as the dominance of oil in export revenue, a large informal economy, and rapid urbanisation driving demand for goods and services in cities like Lagos, Kano, and Port Harcourt.`
   },
   {
     title: "Problem of Choice and Opportunity Cost",
@@ -26,12 +35,38 @@ enterprise: [
   {
     title: "Dynamic Business Environment",
     key: "The business environment is constantly changing due to economic, political, social, technological, legal, and environmental forces.",
-    body: "Businesses do not operate in a vacuum — they are influenced by and must respond to changes in their external environment. The PESTLE framework captures these forces: Political — government policies, elections, regulation (e.g., CBN policies on forex restriction directly affect import-dependent businesses). Economic — inflation, interest rates, exchange rates, economic growth (the naira's depreciation has significantly increased the cost of importing raw materials for Nigerian manufacturers). Social — changing consumer tastes, demographics, urbanisation (Nigeria's growing middle class is creating new markets for consumer goods). Technological — digitisation, fintech innovation, automation (mobile banking via apps like Opay and Kuda Bank has disrupted traditional banking). Legal — changes in law such as the Companies and Allied Matters Act (CAMA 2020) reformed business registration and simplified company law. Environmental — climate change, flooding, drought (which affects Nigeria's agricultural sector). A dynamic environment means businesses must be flexible, innovative, and continuously scan for threats and opportunities to remain competitive."
+    body: `Businesses do not operate in a vacuum — they are influenced by and must respond to changes in their external environment. The PESTLE framework captures these forces: 
+      
+      Political — government policies, elections, regulation (e.g., CBN policies on forex restriction directly affect import-dependent businesses). 
+      
+      Economic — inflation, interest rates, exchange rates, economic growth (the naira's depreciation has significantly increased the cost of importing raw materials for Nigerian manufacturers). 
+      
+      Social — changing consumer tastes, demographics, urbanisation (Nigeria's growing middle class is creating new markets for consumer goods). 
+      
+      Technological — digitisation, fintech innovation, automation (mobile banking via apps like Opay and Kuda Bank has disrupted traditional banking). 
+      
+      Legal — changes in law such as the Companies and Allied Matters Act (CAMA 2020) reformed business registration and simplified company law.
+      
+      Environmental — climate change, flooding, drought (which affects Nigeria's agricultural sector). A dynamic environment means businesses must be flexible, innovative, and continuously scan for threats and opportunities to remain competitive.`
   },
   {
     title: "Needs of Business to Succeed",
     key: "For a business to succeed, it needs adequate capital, skilled labour, good management, customers, reliable suppliers, and a stable operating environment.",
-    body: "Success in business depends on several critical factors working together: Capital — sufficient funding for startup, operations, and growth. Without access to finance, even the best business idea will fail. In Nigeria, access to affordable credit remains a major challenge for SMEs, with interest rates often exceeding 20%. Skilled Labour — a workforce with the right skills, knowledge, and attitude. Nigeria's expanding university and polytechnic education sector produces graduates, but skills gaps remain in technical and vocational areas. Management — effective planning, organising, leading, and controlling of resources. Poor management is widely cited as a cause of business failure in Nigeria. Market/Customers — a clear understanding of who the target customers are and what they need. Technology — appropriate technology improves efficiency and quality. Infrastructure — reliable electricity, good roads, and internet connectivity are essential. In Nigeria, poor infrastructure (especially power supply) significantly increases operating costs. Legal Compliance — meeting regulatory requirements from CAC, NAFDAC, FIRS, and other agencies. A stable macro-environment — low inflation, currency stability, and political peace."
+    body: `Success in business depends on several critical factors working together:
+      
+      Capital — sufficient funding for startup, operations, and growth. Without access to finance, even the best business idea will fail. In Nigeria, access to affordable credit remains a major challenge for SMEs, with interest rates often exceeding 20%.
+      
+      Skilled Labour — a workforce with the right skills, knowledge, and attitude. Nigeria's expanding university and polytechnic education sector produces graduates, but skills gaps remain in technical and vocational areas. 
+      
+      Management — effective planning, organising, leading, and controlling of resources. Poor management is widely cited as a cause of business failure in Nigeria.
+      
+      Market/Customers — a clear understanding of who the target customers are and what they need. Technology — appropriate technology improves efficiency and quality. 
+      
+      Infrastructure — reliable electricity, good roads, and internet connectivity are essential. In Nigeria, poor infrastructure (especially power supply) significantly increases operating costs. 
+      
+      Legal Compliance — meeting regulatory requirements from CAC, NAFDAC, FIRS, and other agencies. 
+      
+      A stable macro-environment — low inflation, currency stability, and political peace.`
   },
   {
     title: "Many Businesses (Variety of Business Types)",
@@ -41,12 +76,38 @@ enterprise: [
   {
     title: "The Role of the Entrepreneur",
     key: "An entrepreneur is someone who identifies an opportunity, organises resources, takes risks, and manages a business to create value.",
-    body: "Entrepreneurs are the engine of economic growth. They combine the four factors of production — land, labour, capital, and enterprise — to create goods and services. Key qualities of a successful entrepreneur include: Risk-taking — willingness to invest personal resources with no guarantee of return. Initiative — proactively identifying and acting on opportunities. Creativity and Innovation — developing new products, processes, or markets (e.g., Nigerian fintech startups like Flutterwave and Paystack innovated payment solutions for a largely unbanked population). Decisiveness — making timely and informed decisions. Leadership — motivating and guiding a team. Resilience — recovering from setbacks. The role of business enterprise in national development: entrepreneurs create jobs, reduce unemployment, generate tax revenues, stimulate competition, drive innovation, and contribute to GDP. In Nigeria, government agencies like SMEDAN, BOI (Bank of Industry), and TEF (Tony Elumelu Foundation) provide support, training, and funding to entrepreneurs."
+    body: `Entrepreneurs are the engine of economic growth. They combine the four factors of production — land, labour, capital, and enterprise — to create goods and services. Key qualities of a successful entrepreneur include: 
+      
+      Risk-taking — willingness to invest personal resources with no guarantee of return.
+      
+      Initiative — proactively identifying and acting on opportunities. 
+      
+      Creativity and Innovation — developing new products, processes, or markets (e.g., Nigerian fintech startups like Flutterwave and Paystack innovated payment solutions for a largely unbanked population).
+      
+      Decisiveness — making timely and informed decisions. 
+      
+      Leadership — motivating and guiding a team. 
+      
+      Resilience — recovering from setbacks. The role of business enterprise in national development: entrepreneurs create jobs, reduce unemployment, generate tax revenues, stimulate competition, drive innovation, and contribute to GDP. In Nigeria, government agencies like SMEDAN, BOI (Bank of Industry), and TEF (Tony Elumelu Foundation) provide support, training, and funding to entrepreneurs.`
   },
   {
     title: "Qualities of an Entrepreneur Likely to Be Needed for Success",
     key: "Successful entrepreneurs typically possess qualities such as risk tolerance, creativity, leadership, resilience, and strong organisational ability.",
-    body: "Beyond the basic qualities, a successful entrepreneur in the Nigerian context needs: Financial Literacy — the ability to manage money, read financial statements, and make sound investment decisions. Networking Skills — building relationships with suppliers, customers, investors, and mentors. Adaptability — the ability to pivot when the environment changes (e.g., during COVID-19, many Nigerian businesses adapted by going digital). Negotiation Skills — getting the best terms from suppliers and attracting customers. Ethics and Integrity — building a trustworthy reputation is critical in a market where trust is a competitive advantage. Market Awareness — understanding local consumer behaviour, cultural nuances, and competitive dynamics. Patience and Persistence — building a business takes time; many successful Nigerian entrepreneurs (e.g., Aliko Dangote) started small and grew over decades. These qualities, combined with a sound business plan and access to resources, significantly increase the chances of entrepreneurial success."
+    body: `Beyond the basic qualities, a successful entrepreneur in the Nigerian context needs: 
+    
+    Financial Literacy — the ability to manage money, read financial statements, and make sound investment decisions. 
+    
+    Networking Skills — building relationships with suppliers, customers, investors, and mentors. 
+    
+    Adaptability — the ability to pivot when the environment changes (e.g., during COVID-19, many Nigerian businesses adapted by going digital).
+    
+    Negotiation Skills — getting the best terms from suppliers and attracting customers. 
+    
+    Ethics and Integrity — building a trustworthy reputation is critical in a market where trust is a competitive advantage. 
+    
+    Market Awareness — understanding local consumer behaviour, cultural nuances, and competitive dynamics.
+    
+    Patience and Persistence — building a business takes time; many successful Nigerian entrepreneurs (e.g., Aliko Dangote) started small and grew over decades. These qualities, combined with a sound business plan and access to resources, significantly increase the chances of entrepreneurial success.`
   },
   {
     title: "The Role of Business Enterprise in Development",
@@ -64,7 +125,6 @@ enterprise: [
     body: "Coined by John Elkington, the triple bottom line (TBL) concept holds that businesses — especially social enterprises — should be accountable not just for financial profit but also for their social and environmental impact. Economic bottom line: Is the organisation financially sustainable? Can it generate enough revenue to cover costs and invest in its mission? Social bottom line: What impact does the organisation have on employees, communities, and society? Does it provide fair wages, support local communities, and promote inclusion? Environmental bottom line: How does the organisation affect the natural environment? Does it minimise waste, reduce carbon emissions, use renewable energy, and practice responsible sourcing? In Nigeria, the TBL framework is increasingly relevant as multinationals operating in the Niger Delta (e.g., Shell, Chevron) face scrutiny over oil spills and community relations. Nigerian social enterprises and CSR-active companies like Access Bank and Guaranty Trust Bank report against TBL metrics."
   },
 ],
-// BATCH 2: business_enterprise
 
 business_enterprise: [
   {
@@ -155,7 +215,6 @@ business_enterprise: [
     body: "As businesses grow, they may need to change their legal structure — a sole trader may incorporate as a Ltd, or a Ltd may convert to a Plc to access public capital markets. However, this process involves significant challenges: Legal and Registration Costs — preparing new Memorandum and Articles of Association, CAC filing fees, legal advisory fees. Tax Implications — restructuring may trigger capital gains tax or stamp duties. Loss of Control — the original owner may have to give up a share of ownership and decision-making power to new shareholders or directors. Transparency Requirements — Plcs must publish detailed financial accounts, which may expose sensitive business information to competitors. Employee Uncertainty — changes in structure may affect employment contracts, roles, and company culture. Renegotiation of Contracts — existing contracts with suppliers, customers, and lenders may need to be renegotiated in the new entity's name. Regulatory Compliance — new regulatory requirements may apply (e.g., SEC registration for a Plc). In Nigeria, converting a successful Ltd to a Plc requires SEC approval and NGX listing requirements including minimum capital thresholds and track record of profitability."
   },
 ],
-// BATCH 3: size_of_business
 
 size_of_business: [
   {
@@ -213,12 +272,30 @@ size_of_business: [
   {
     title: "Strengths and Weaknesses of Family Businesses",
     key: "Family businesses benefit from trust, loyalty, and shared values but can suffer from nepotism, succession conflicts, and limited professional management.",
-    body: "Family businesses dominate the Nigerian private sector. Many of Nigeria's largest conglomerates began as family enterprises — the Dangote Group, BUA Group, Coscharis Group, and UAC Nigeria. Strengths: strong mutual trust among family members reduces agency costs; shared values and long-term vision drive sustained commitment; family members may work longer hours for lower pay to build the business; decisions can be made quickly without shareholder pressure. Weaknesses: nepotism — unqualified family members may be promoted over more capable non-family staff, reducing efficiency; succession disputes — conflict over who inherits leadership can destabilise the business (a common cause of collapse of Nigerian family enterprises in the second generation); lack of separation between family finances and business finances; resistance to external professional management even when the business has outgrown family capacity; limited diversity of perspectives in decision-making."
+    body: `Family businesses dominate the Nigerian private sector. Many of Nigeria's largest conglomerates began as family enterprises — the Dangote Group, BUA Group, Coscharis Group, and UAC Nigeria. 
+    
+    Strengths: strong mutual trust among family members reduces agency costs; shared values and long-term vision drive sustained commitment; family members may work longer hours for lower pay to build the business; decisions can be made quickly without shareholder pressure.
+    
+    Weaknesses: nepotism — unqualified family members may be promoted over more capable non-family staff, reducing efficiency; succession disputes — conflict over who inherits leadership can destabilise the business (a common cause of collapse of Nigerian family enterprises in the second generation); lack of separation between family finances and business finances; resistance to external professional management even when the business has outgrown family capacity; limited diversity of perspectives in decision-making.`
   },
   {
     title: "The Importance of Small Businesses in the Economy",
     key: "Small businesses are the backbone of the Nigerian economy — they create employment, reduce poverty, promote innovation, and drive economic activity at the grassroots level.",
-    body: "In Nigeria, small and medium enterprises (SMEs) contribute approximately 48% of national GDP and account for over 84% of employment according to SMEDAN. Their economic importance includes: Job creation — SMEs absorb millions of workers who cannot find jobs in the formal large-firm sector. Poverty reduction — SME income supports millions of households, particularly in rural and semi-urban areas. Promoting entrepreneurship and innovation — many disruptive Nigerian tech companies (Paystack, Flutterwave, Andela) started as small businesses. Mobilising local resources — SMEs use local raw materials, labour, and knowledge. Diversifying the economy — SMEs operate across agriculture, manufacturing, retail, and services, reducing dependence on oil. Supporting large businesses — SMEs often serve as suppliers, distributors, and service providers to large corporations. Generating tax revenue — through VAT, income tax, and levies. The Nigerian government recognises this importance through the Bank of Industry (BOI) SME loans, CBN intervention funds (e.g., AGSMEIS — Agri-Business/Small and Medium Enterprise Investment Scheme), and SMEDAN's development programmes."
+    body: `In Nigeria, small and medium enterprises (SMEs) contribute approximately 48% of national GDP and account for over 84% of employment according to SMEDAN. Their economic importance includes:
+      
+      Job creation — SMEs absorb millions of workers who cannot find jobs in the formal large-firm sector.
+      
+      Poverty reduction — SME income supports millions of households, particularly in rural and semi-urban areas. 
+      
+      Promoting entrepreneurship and innovation — many disruptive Nigerian tech companies (Paystack, Flutterwave, Andela) started as small businesses.
+      
+      Mobilising local resources — SMEs use local raw materials, labour, and knowledge. 
+      
+      Diversifying the economy — SMEs operate across agriculture, manufacturing, retail, and services, reducing dependence on oil. 
+      
+      Supporting large businesses — SMEs often serve as suppliers, distributors, and service providers to large corporations. 
+      
+      Generating tax revenue — through VAT, income tax, and levies. The Nigerian government recognises this importance through the Bank of Industry (BOI) SME loans, CBN intervention funds (e.g., AGSMEIS — Agri-Business/Small and Medium Enterprise Investment Scheme), and SMEDAN's development programmes.`
   },
   {
     title: "Role of Small Businesses as Part of Industry Structure",
@@ -249,7 +326,29 @@ size_of_business: [
   {
     title: "Merits and Demerits of Multinational Corporations in Nigeria",
     key: "MNCs bring investment, jobs, and technology to Nigeria but also pose risks of profit repatriation, environmental harm, and displacement of local businesses.",
-    body: "Merits of MNCs in Nigeria: Foreign Direct Investment (FDI) — MNCs bring capital that supplements domestic savings and government revenue (e.g., Shell, ExxonMobil, and Chevron have invested billions in Nigeria's oil sector). Technology and skills transfer — MNCs introduce modern technology, management practices, and training that benefit local workers and businesses. Job creation — directly employ thousands of Nigerians and support thousands more through supply chains. Improved infrastructure — MNCs sometimes build roads, schools, and clinics in their operational areas (e.g., Shell's community development projects in Rivers State). Tax revenue — corporate income tax, royalties, and levies paid to FIRS. Demerits: Profit repatriation — profits are sent back to parent company's home country rather than reinvested in Nigeria, draining foreign exchange. Environmental damage — oil spills by Shell and Chevron in the Niger Delta have devastated communities and farmland. Displacement of local firms — MNCs' competitive advantage can drive small Nigerian producers out of business. Transfer pricing abuse — MNCs may manipulate inter-company prices to reduce taxable profit in Nigeria. Cultural dominance — Western brands and culture may displace local brands and traditions."
+    body: `Merits of MNCs in Nigeria: 
+    
+    Foreign Direct Investment (FDI) — MNCs bring capital that supplements domestic savings and government revenue (e.g., Shell, ExxonMobil, and Chevron have invested billions in Nigeria's oil sector). 
+    
+    Technology and skills transfer — MNCs introduce modern technology, management practices, and training that benefit local workers and businesses.
+    
+    Job creation — directly employ thousands of Nigerians and support thousands more through supply chains. 
+    
+    Improved infrastructure — MNCs sometimes build roads, schools, and clinics in their operational areas (e.g., Shell's community development projects in Rivers State).
+    
+    Tax revenue — corporate income tax, royalties, and levies paid to FIRS. 
+    
+    Demerits: 
+    
+    Profit repatriation — profits are sent back to parent company's home country rather than reinvested in Nigeria, draining foreign exchange. 
+    
+    Environmental damage — oil spills by Shell and Chevron in the Niger Delta have devastated communities and farmland. 
+    
+    Displacement of local firms — MNCs' competitive advantage can drive small Nigerian producers out of business. 
+    
+    Transfer pricing abuse — MNCs may manipulate inter-company prices to reduce taxable profit in Nigeria.
+    
+    Cultural dominance — Western brands and culture may displace local brands and traditions.`
   },
   {
     title: "Privatisation and Nationalisation",
@@ -266,7 +365,7 @@ size_of_business: [
     }
   },
 ],
-// BATCH 4: stakeholders, business_objectives, organizations
+
 
 stakeholders: [
   {
@@ -357,7 +456,17 @@ organizations: [
   {
     title: "Meaning of Organisational Structure",
     key: "An organisational structure defines how roles, responsibilities, and authority are arranged and coordinated within a business to achieve its objectives.",
-    body: "Every business needs a structure to function effectively. The organisational structure determines: who reports to whom (chain of command), how many people each manager supervises (span of control), how many levels of management exist (scalar chain), and how departments are arranged. An organisational chart visually represents the structure. Key concepts: Chain of command — the line of authority from the top to the bottom of the organisation. Span of control — the number of subordinates a manager directly supervises. Scalar chain — the hierarchy of authority from top to bottom. Line authority — direct authority over subordinates. Staff authority — advisory or support functions (e.g., HR, Legal). In Nigerian organisations, structure is influenced by size, industry, culture, and leadership style."
+    body: `Every business needs a structure to function effectively. The organisational structure determines: who reports to whom (chain of command), how many people each manager supervises (span of control), how many levels of management exist (scalar chain), and how departments are arranged. An organisational chart visually represents the structure. Key concepts:
+      
+      Chain of command — the line of authority from the top to the bottom of the organisation. 
+      
+      Span of control — the number of subordinates a manager directly supervises. 
+      
+      Scalar chain — the hierarchy of authority from top to bottom.
+      
+      Line authority — direct authority over subordinates. 
+      
+      Staff authority — advisory or support functions (e.g., HR, Legal). In Nigerian organisations, structure is influenced by size, industry, culture, and leadership style.`
   },
   {
     title: "Forms of Organisational Structure — Hierarchical (Tall) Structure",
@@ -463,13 +572,21 @@ organizations: [
     }
   },
 ],
-// BATCH 5: communication, business_finance
+
 
 communication: [
   {
     title: "Meaning of Business Communication",
     key: "Business communication is the exchange of information, ideas, and messages within an organisation and between the organisation and external parties, to achieve business goals.",
-    body: "Communication is the lifeblood of any organisation. Without effective communication, management cannot coordinate activities, motivate employees, serve customers, or make good decisions. In business, communication flows in multiple directions: Downward — from management to employees (instructions, policies, targets). Upward — from employees to management (feedback, reports, suggestions). Horizontal/Lateral — between colleagues or departments at the same level (coordination, collaboration). External — between the business and customers, suppliers, government, and the public. In Nigeria, business communication is shaped by linguistic diversity (over 500 languages), a mix of formal and informal channels, rapid adoption of digital tools (WhatsApp Business is widely used by Nigerian SMEs for customer communication), and cultural norms around respect for hierarchy."
+    body: `Communication is the lifeblood of any organisation. Without effective communication, management cannot coordinate activities, motivate employees, serve customers, or make good decisions. In business, communication flows in multiple directions: 
+     
+      Downward — from management to employees (instructions, policies, targets). 
+      
+      Upward — from employees to management (feedback, reports, suggestions). 
+      
+      Horizontal/Lateral — between colleagues or departments at the same level (coordination, collaboration). 
+      
+      External — between the business and customers, suppliers, government, and the public. In Nigeria, business communication is shaped by linguistic diversity (over 500 languages), a mix of formal and informal channels, rapid adoption of digital tools (WhatsApp Business is widely used by Nigerian SMEs for customer communication), and cultural norms around respect for hierarchy.`
   },
   {
     title: "Purposes and Methods of Business Communication",
@@ -489,7 +606,19 @@ communication: [
   {
     title: "Role of Management in Facilitating Communication",
     key: "Management is responsible for establishing clear communication channels, encouraging open feedback, and ensuring information flows efficiently across the organisation.",
-    body: "Effective managers create a communication-friendly environment by: Establishing clear channels — defining who communicates what, to whom, through which medium, and how often (e.g., weekly team meetings, monthly management reports). Leading by example — demonstrating open, honest, and respectful communication behaviour. Encouraging upward communication — creating a culture where employees feel safe raising concerns, suggestions, and feedback (open-door policy). Removing barriers — identifying and addressing communication obstacles. Using appropriate technology — deploying communication tools suited to the team's needs and capabilities. Ensuring information is timely and accurate — filtering and summarising information so that employees receive what they need to do their jobs without being overwhelmed. In Nigerian organisations, management must also navigate hierarchical communication norms, where junior staff may be reluctant to challenge or question senior managers even when they have important information."
+    body: `Effective managers create a communication-friendly environment by: 
+      
+      Establishing clear channels — defining who communicates what, to whom, through which medium, and how often (e.g., weekly team meetings, monthly management reports).
+    
+    Leading by example — demonstrating open, honest, and respectful communication behaviour. 
+    
+    Encouraging upward communication — creating a culture where employees feel safe raising concerns, suggestions, and feedback (open-door policy). 
+    
+    Removing barriers — identifying and addressing communication obstacles. 
+    
+    Using appropriate technology — deploying communication tools suited to the team's needs and capabilities. 
+    
+    Ensuring information is timely and accurate — filtering and summarising information so that employees receive what they need to do their jobs without being overwhelmed. In Nigerian organisations, management must also navigate hierarchical communication norms, where junior staff may be reluctant to challenge or question senior managers even when they have important information.`
   },
   {
     title: "Barriers to Effective Communication and Solutions",
@@ -519,7 +648,19 @@ business_finance: [
   {
     title: "Capital for Expansion",
     key: "Expansion capital is funding required to grow an established business — opening new locations, buying new equipment, entering new markets, or acquiring other businesses.",
-    body: "Unlike startup capital which covers initial establishment, expansion capital funds growth beyond the original scale. Sources of expansion capital in Nigeria include: Retained profits — reinvesting profits earned by the business (cheapest and most common source for profitable businesses). Bank loans — term loans from commercial banks (Access Bank, First Bank, UBA) though interest rates of 20–30%+ are a major challenge. Equity — selling shares to investors; for Plcs this means a rights issue or public offer on the NGX. Private equity and venture capital — used by fast-growing Nigerian startups (e.g., Flutterwave raised $250 million in Series D funding in 2022). Development Finance Institutions — BOI, DBN (Development Bank of Nigeria), and NEXIM (Nigerian Export-Import Bank) provide concessional expansion loans. Government grants — export expansion grants (NEPC), agricultural expansion grants (CBN anchor borrowers' programme)."
+    body: `Unlike startup capital which covers initial establishment, expansion capital funds growth beyond the original scale. Sources of expansion capital in Nigeria include: 
+      
+      Retained profits — reinvesting profits earned by the business (cheapest and most common source for profitable businesses). 
+      
+      Bank loans — term loans from commercial banks (Access Bank, First Bank, UBA) though interest rates of 20–30%+ are a major challenge. 
+      
+      Equity — selling shares to investors; for Plcs this means a rights issue or public offer on the NGX. 
+      
+      Private equity and venture capital — used by fast-growing Nigerian startups (e.g., Flutterwave raised $250 million in Series D funding in 2022).
+      
+      Development Finance Institutions — BOI, DBN (Development Bank of Nigeria), and NEXIM (Nigerian Export-Import Bank) provide concessional expansion loans.
+      
+      Government grants — export expansion grants (NEPC), agricultural expansion grants (CBN anchor borrowers' programme).`
   },
   {
     title: "Working Capital",
@@ -582,8 +723,6 @@ business_finance: [
     }
   },
 ],
-// BATCH 6: working_capital, cost, accounting_fundamentals, budgeting
-
 working_capital: [
   {
     title: "Difference Between Cash and Profit",
@@ -687,7 +826,19 @@ cost: [
   {
     title: "Uses of Cost Information",
     key: "Cost information is used for pricing decisions, profit calculation, budgeting, performance measurement, and strategic decision-making.",
-    body: "Cost data is the foundation of sound business management. Key uses include: Pricing — knowing costs ensures selling price exceeds cost (cost-plus pricing: price = cost + desired mark-up). In Nigeria, where raw material costs fluctuate with exchange rates, accurate cost data helps businesses adjust prices appropriately. Profit calculation — Profit = Revenue − Total Costs. Understanding which costs are fixed and which are variable helps in calculating profit at different levels of output. Budgeting — cost information allows managers to set realistic spending targets and identify areas of waste. Make-or-buy decisions — should the business produce a component itself or buy it from a supplier? Comparing internal production cost with supplier price guides this decision. Shutdown decisions — if variable costs exceed revenue (contribution is negative), a business should consider shutting down a product line. Investment appraisal — cost projections are essential inputs for evaluating whether a new investment will be profitable."
+    body: `Cost data is the foundation of sound business management. Key uses include:
+    
+    Pricing — knowing costs ensures selling price exceeds cost (cost-plus pricing: price = cost + desired mark-up). In Nigeria, where raw material costs fluctuate with exchange rates, accurate cost data helps businesses adjust prices appropriately. 
+    
+    Profit calculation — Profit = Revenue − Total Costs. Understanding which costs are fixed and which are variable helps in calculating profit at different levels of output.
+    
+    Budgeting — cost information allows managers to set realistic spending targets and identify areas of waste.
+    
+    Make-or-buy decisions — should the business produce a component itself or buy it from a supplier? Comparing internal production cost with supplier price guides this decision. 
+    
+    Shutdown decisions — if variable costs exceed revenue (contribution is negative), a business should consider shutting down a product line.
+    
+    Investment appraisal — cost projections are essential inputs for evaluating whether a new investment will be profitable.`
   },
   {
     title: "Break-Even Analysis — Concepts and Formula",
@@ -856,7 +1007,17 @@ budgeting: [
   {
     title: "Meaning and Purpose of Budgets",
     key: "A budget is a quantitative financial plan for a future period that sets out expected revenues, expenditures, and cash flows to guide business decisions.",
-    body: "Budgets are forward-looking management tools. They turn strategic plans into actionable financial targets. A budget typically covers 12 months (annual budget) broken down into monthly or quarterly periods. Key purposes of budgeting: Planning — forces managers to think ahead about resource needs and revenue expectations. Control — actual results are compared with the budget regularly; deviations (variances) are investigated. Coordination — ensures all departments align their spending and revenue plans with each other and with the overall company plan. Motivation — clear financial targets give managers and teams something to work toward. Authorisation — budget approval by senior management authorises departments to spend up to their budgeted amount. Performance evaluation — a manager's performance can be assessed by comparing their actual results against their budget."
+    body: `Budgets are forward-looking management tools. They turn strategic plans into actionable financial targets. A budget typically covers 12 months (annual budget) broken down into monthly or quarterly periods. Key purposes of budgeting: 
+      
+      Planning — forces managers to think ahead about resource needs and revenue expectations. Control — actual results are compared with the budget regularly; deviations (variances) are investigated. 
+      
+      Coordination — ensures all departments align their spending and revenue plans with each other and with the overall company plan.
+      
+      Motivation — clear financial targets give managers and teams something to work toward.
+      
+      Authorisation — budget approval by senior management authorises departments to spend up to their budgeted amount. 
+      
+      Performance evaluation — a manager's performance can be assessed by comparing their actual results against their budget.`
   },
   {
     title: "Types of Budgets",
@@ -893,10 +1054,14 @@ budgeting: [
   {
     title: "Zero-Based Budgeting (ZBB)",
     key: "Zero-based budgeting requires every department to justify all expenditure from zero each budget period, rather than simply adjusting last year's budget.",
-    body: "Traditional (incremental) budgeting takes last year's budget and adds a percentage increase. ZBB starts from scratch — every cost must be justified by its expected benefit. Advantages of ZBB: eliminates wasteful spending that has been carried forward year after year; forces managers to think critically about every cost item; aligns spending with current strategic priorities rather than historical patterns. Disadvantages: very time-consuming and expensive to prepare; requires detailed information that may not be readily available; can cause anxiety and resistance among managers who fear budget cuts. In Nigeria, the Federal Government of Nigeria has attempted ZBB in its national budgeting process to eliminate 'ghost workers' and unjustified line items. Private companies like Access Bank and GTBank use ZBB or hybrid approaches to maintain cost discipline, particularly important during periods of economic uncertainty when the naira depreciates and costs rise unexpectedly."
+    body: `Traditional (incremental) budgeting takes last year's budget and adds a percentage increase. ZBB starts from scratch — every cost must be justified by its expected benefit.
+      
+      Advantages of ZBB: eliminates wasteful spending that has been carried forward year after year; forces managers to think critically about every cost item; aligns spending with current strategic priorities rather than historical patterns.
+      
+      Disadvantages: very time-consuming and expensive to prepare; requires detailed information that may not be readily available; can cause anxiety and resistance among managers who fear budget cuts. In Nigeria, the Federal Government of Nigeria has attempted ZBB in its national budgeting process to eliminate 'ghost workers' and unjustified line items. Private companies like Access Bank and GTBank use ZBB or hybrid approaches to maintain cost discipline, particularly important during periods of economic uncertainty when the naira depreciates and costs rise unexpectedly.`
   },
 ],
-// BATCH 7: management_leadership, motivation
+
 
 management_leadership: [
   {
@@ -945,7 +1110,21 @@ management_leadership: [
   {
     title: "Meaning and Importance of Leadership",
     key: "Leadership is the ability to influence, inspire, and guide individuals or groups toward the achievement of a common goal.",
-    body: "While management focuses on systems, processes, and control, leadership focuses on people — inspiring commitment, building vision, and driving change. The distinction: Managers do things right; leaders do the right things (Drucker). A person can be a good manager but a poor leader (efficient but uninspiring) or a good leader but a poor manager (visionary but disorganised). Effective organisations need both. Importance of leadership in Nigerian business: Drives organisational direction — visionary leaders like Tony Elumelu (Transcorp/UBA) and Aliko Dangote have shaped their organisations' growth trajectories. Motivates employees — inspired employees are more productive, loyal, and innovative. Manages change — strong leaders guide organisations through periods of economic turbulence (e.g., naira devaluation crises). Builds culture — leaders set the ethical tone and values of an organisation. Attracts talent — talented Nigerians want to work for inspiring leaders."
+    body: `While management focuses on systems, processes, and control, leadership focuses on people — inspiring commitment, building vision, and driving change. The distinction:
+      
+      Managers do things right; leaders do the right things (Drucker). A person can be a good manager but a poor leader (efficient but uninspiring) or a good leader but a poor manager (visionary but disorganised). Effective organisations need both. 
+  
+  Importance of leadership in Nigerian business: 
+
+Drives organisational direction — visionary leaders like Tony Elumelu (Transcorp/UBA) and Aliko Dangote have shaped their organisations' growth trajectories. 
+  
+  Motivates employees — inspired employees are more productive, loyal, and innovative. 
+    
+    Manages change — strong leaders guide organisations through periods of economic turbulence (e.g., naira devaluation crises).
+    
+    Builds culture — leaders set the ethical tone and values of an organisation. 
+    
+    Attracts talent — talented Nigerians want to work for inspiring leaders.`
   },
   {
     title: "Leadership Styles",
@@ -986,7 +1165,19 @@ motivation: [
   {
     title: "Meaning and Importance of Motivation",
     key: "Motivation is the internal drive or external stimulus that causes a person to take action and sustain effort toward achieving a goal.",
-    body: "In a business context, motivated employees work harder, produce better quality work, show more initiative, stay with the organisation longer, and provide better customer service. The importance of motivation in Nigerian organisations: Improved productivity — motivated workers produce more output per hour. Reduced absenteeism and lateness — common problems in Nigerian workplaces that are significantly reduced when staff are engaged. Lower staff turnover — replacing staff is expensive (recruitment, training); motivated staff stay longer. Better quality output — motivated workers take pride in their work and make fewer errors. Innovation — employees who feel valued are more likely to suggest process improvements. Customer satisfaction — frontline staff who are motivated provide better service, directly impacting customer experience and business revenue."
+    body: `In a business context, motivated employees work harder, produce better quality work, show more initiative, stay with the organisation longer, and provide better customer service. The importance of motivation in Nigerian organisations: 
+      
+      Improved productivity — motivated workers produce more output per hour.
+      
+      Reduced absenteeism and lateness — common problems in Nigerian workplaces that are significantly reduced when staff are engaged.
+      
+      Lower staff turnover — replacing staff is expensive (recruitment, training); motivated staff stay longer.
+      
+      Better quality output — motivated workers take pride in their work and make fewer errors. 
+      
+      Innovation — employees who feel valued are more likely to suggest process improvements.
+     
+      Customer satisfaction — frontline staff who are motivated provide better service, directly impacting customer experience and business revenue.`
   },
   {
     title: "Maslow's Hierarchy of Needs",
@@ -1035,12 +1226,36 @@ motivation: [
   {
     title: "Taylor's Scientific Management (Motivation Through Money)",
     key: "Frederick Winslow Taylor argued that workers are primarily motivated by financial reward and that scientific analysis of work processes produces maximum efficiency.",
-    body: "Taylor's principles: (1) Scientifically analyse each task to find the single most efficient method. (2) Select workers scientifically — match people to jobs based on ability. (3) Train workers in the one best method. (4) Divide work between managers (who plan) and workers (who execute). (5) Pay workers per unit of output (piecework) — more output = more pay. Relevance to Nigeria: Piecework pay systems are common in Nigerian agriculture (farm labourers paid per bag of groundnut picked), construction (artisans paid per job completed), and cottage industries in Aba and Kano. Criticism of Taylor: treats workers as machines rather than humans; ignores social needs and job satisfaction; leads to monotony and alienation; trade unions (NLC/TUC) in Nigeria have opposed purely piecework-based pay systems. Modern relevance: principles of efficiency and process optimisation are still valid, but must be balanced with human relations considerations."
+    body: `Taylor's principles:
+    
+    1. Scientifically analyse each task to find the single most efficient method. 
+    2. Select workers scientifically — match people to jobs based on ability. 
+    3. Train workers in the one best method. 
+    4. Divide work between managers (who plan) and workers (who execute). 
+    5. Pay workers per unit of output (piecework) — more output = more pay. Relevance to Nigeria: Piecework pay systems are common in Nigerian agriculture (farm labourers paid per bag of groundnut picked), construction (artisans paid per job completed), and cottage industries in Aba and Kano.
+    
+    Criticism of Taylor: treats workers as machines rather than humans; ignores social needs and job satisfaction; leads to monotony and alienation; trade unions (NLC/TUC) in Nigeria have opposed purely piecework-based pay systems. Modern relevance: principles of efficiency and process optimisation are still valid, but must be balanced with human relations considerations.`
   },
   {
     title: "Mayo's Human Relations Theory",
     key: "Elton Mayo concluded from the Hawthorne Studies that social factors, group dynamics, and being noticed significantly influence worker productivity — more than physical working conditions.",
-    body: "The Hawthorne Studies (1924–1932) at Western Electric Company, USA, were the foundation of the Human Relations Movement. Mayo found that: Workers who were given attention (even just being observed) increased their productivity — the 'Hawthorne Effect'. Social relationships at work (friendship, belonging to a group) are powerful motivators. Workers respond to being valued and noticed by management — not just to pay and physical conditions. Informal groups have strong influence on worker behaviour — peer pressure can drive or suppress output. Implications for Nigerian managers: Listening to employees — regular one-on-one check-ins and staff surveys. Recognising effort — acknowledging good work publicly. Building team cohesion — team meetings, social activities, shared goals. Open communication — making employees feel informed and valued. Transparent management — explaining decisions rather than just issuing orders. Mayo's theory is particularly relevant in Nigeria's relationship-centred culture (Ubuntu ethos — 'I am because we are') where belonging, community, and respect are deeply valued workplace motivators."
+    body: `The Hawthorne Studies (1924–1932) at Western Electric Company, USA, were the foundation of the Human Relations Movement. Mayo found that:
+      
+      Workers who were given attention (even just being observed) increased their productivity — the 'Hawthorne Effect'. Social relationships at work (friendship, belonging to a group) are powerful motivators.
+      
+      Workers respond to being valued and noticed by management — not just to pay and physical conditions. 
+      
+      Informal groups have strong influence on worker behaviour — peer pressure can drive or suppress output.
+      
+      Implications for Nigerian managers: Listening to employees — regular one-on-one check-ins and staff surveys.
+      
+      Recognising effort — acknowledging good work publicly. 
+      
+      Building team cohesion — team meetings, social activities, shared goals. 
+      
+      Open communication — making employees feel informed and valued.
+      
+      Transparent management — explaining decisions rather than just issuing orders. Mayo's theory is particularly relevant in Nigeria's relationship-centred culture (Ubuntu ethos — 'I am because we are') where belonging, community, and respect are deeply valued workplace motivators.`
   },
   {
     title: "Motivation in Practice — Financial and Non-Financial Motivators",
@@ -1064,7 +1279,6 @@ motivation: [
     }
   },
 ],
-// BATCH 8: hrm, marketing
 
 hrm: [
   {
@@ -1207,7 +1421,13 @@ marketing: [
   {
     title: "Meaning and Concept of Marketing",
     key: "Marketing is the process of identifying, anticipating, and satisfying customer needs profitably through the creation, communication, and delivery of value.",
-    body: "The modern marketing concept places the customer at the centre of all business decisions. This contrasts with the older production concept (make it and they will buy it) and sales concept (sell whatever is produced). Key aspects: Market orientation — the entire business is focused on understanding and meeting customer needs (e.g., Access Bank redesigning its mobile app based on customer feedback). Product orientation — businesses focus on what they can produce best rather than what customers want (a risky approach in competitive markets). Societal marketing concept — meeting customer needs while also considering long-term social and environmental welfare (e.g., Unilever Nigeria's Lifebuoy promoting handwashing for public health). In Nigeria, marketing is increasingly digital — social media, influencer marketing, WhatsApp Business, and e-commerce platforms like Jumia and Konga have transformed how businesses reach customers."
+    body: `The modern marketing concept places the customer at the centre of all business decisions. This contrasts with the older production concept (make it and they will buy it) and sales concept (sell whatever is produced). Key aspects:
+    
+    Market orientation — the entire business is focused on understanding and meeting customer needs (e.g., Access Bank redesigning its mobile app based on customer feedback). 
+    
+    Product orientation — businesses focus on what they can produce best rather than what customers want (a risky approach in competitive markets). 
+    
+    Societal marketing concept — meeting customer needs while also considering long-term social and environmental welfare (e.g., Unilever Nigeria's Lifebuoy promoting handwashing for public health). In Nigeria, marketing is increasingly digital — social media, influencer marketing, WhatsApp Business, and e-commerce platforms like Jumia and Konga have transformed how businesses reach customers.`
   },
   {
     title: "The Marketing Mix — Product",
@@ -1329,8 +1549,6 @@ marketing: [
     }
   },
 ],
-// BATCH 9: operations, strategic_management
-
 operations: [
   {
     title: "Meaning and Nature of Operations Management",

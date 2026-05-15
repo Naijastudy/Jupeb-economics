@@ -99,8 +99,73 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
             </div>
             <div style={{ background: t.exBg, border: `1px solid ${t.exBorder}`, borderRadius: 12, padding: "14px 16px" }}>
               <div style={{ fontSize: 11, color: t.exText, fontWeight: "bold", letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>📝 Full Explanation</div>
-              <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>
-{n.body.split("\n\n").map((para, i) => {
+             <div style={{ fontSize: 13, color: t.exText, lineHeight: 1.9 }}>
+{Array.isArray(n.body) ? n.body.map((block, i) => {
+  if (typeof block === "string") {
+    return block.split("\n\n").map((para, j) => {
+      if (para.startsWith("-")) {
+        return (
+          <ul key={`${i}-${j}`} style={{ marginTop: "16px" }}>
+            {para.split("\n").map((item, k) => (
+              <li key={k}>{item.replace(/^-\s*/, "").trim()}</li>
+            ))}
+          </ul>
+        );
+      }
+      if (/^\d+\./.test(para)) {
+        return (
+          <ul key={`${i}-${j}`} style={{ marginTop: "16px", listStyle: "none", padding: 0 }}>
+            {para.split("\n").map((item, k) => {
+              const match = item.match(/^(\d+\.)\s*(.*)/);
+              return match ? (
+                <li key={k} style={{ marginBottom: 6 }}>
+                  <span style={{ fontWeight: "bold", marginRight: 6 }}>{match[1]}</span>
+                  {match[2]}
+                </li>
+              ) : null;
+            })}
+          </ul>
+        );
+      }
+      return (
+        <p key={`${i}-${j}`} style={{ marginTop: j === 0 ? 0 : "16px" }}>{para}</p>
+      );
+    });
+  }
+
+  if (block.table) {
+    return (
+      <div key={i} style={{ overflowX: "auto", marginTop: "16px" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
+          <thead>
+            <tr>
+              {block.table.headers.map((h, j) => (
+                <th key={j} style={{ padding: "8px 10px", background: `${t.gold}33`, color: t.gold, borderBottom: `2px solid ${t.gold}55`, textAlign: "left", fontWeight: "bold" }}>
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {block.table.rows.map((row, j) => (
+              <tr key={j} style={{ background: j % 2 === 0 ? "transparent" : `${t.gold}11` }}>
+                {row.map((cell, k) => (
+                  <td key={k} style={{ padding: "8px 10px", borderBottom: `1px solid ${t.border}`, color: t.exText, fontWeight: k === 0 ? "bold" : "normal" }}>
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  return null;
+})
+
+: n.body.split("\n\n").map((para, i) => {
   if (para.startsWith("-")) {
     return (
       <ul key={i} style={{ marginTop: "16px" }}>
@@ -110,7 +175,6 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
       </ul>
     );
   }
-
   if (/^\d+\./.test(para)) {
     return (
       <ul key={i} style={{ marginTop: "16px", listStyle: "none", padding: 0 }}>
@@ -126,11 +190,8 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
       </ul>
     );
   }
-
   return (
-    <p key={i} style={{ marginTop: i === 0 ? 0 : "16px" }}>
-      {para}
-    </p>
+    <p key={i} style={{ marginTop: i === 0 ? 0 : "16px" }}>{para}</p>
   );
 })}
   </div>

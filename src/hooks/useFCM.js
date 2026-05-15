@@ -73,7 +73,7 @@ export default function useFCM(user) {
         onMessage,
       } = await import("firebase/messaging");
 
-      const messagingInstance = getMessaging();
+      const messagingInstance = getMessaging(app);
 
       const swReg = await navigator.serviceWorker.ready;
 

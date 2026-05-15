@@ -1,5 +1,5 @@
 import * as economics from "./economics";
-import * as government from "./government";
+import * as government from "./government/index";
 import * as business_studies from "./business_studies";
 
 export const subjects = [

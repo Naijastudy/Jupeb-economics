@@ -1,2 +1,2 @@
-export const courses=[];
-export const grading=[];
+export const courses = [];
+export const grading = [];

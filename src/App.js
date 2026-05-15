@@ -568,7 +568,6 @@ useEffect(() => {
 
   const goBack = () => {
     if (history.length <= 1) return;
-    
 
     const quizInProgress =
       (screen === "cbt_quiz"  && !cbtDone  && Object.keys(cbtAnswers).length > 0) ||
@@ -580,25 +579,28 @@ useEffect(() => {
         onConfirm: () => {
           setCbtRunning(false);
           setExamRunning(false);
-          const destination = screen === "exam_quiz" ? "exam_setup" : "home";
-          setHistory((h) => [...h.slice(0, -1), destination]);
-          setScreen(destination);
           setQuitModal({ open: false, onConfirm: null });
+          const destination = screen === "exam_quiz" ? "exam_setup" : "home";
+          goTo(destination);
         },
       });
       return;
-    };
-   
+    }
+
+    const newHistory = history.slice(0, -1);
+    setHistory(newHistory);
+    setScreen(newHistory[newHistory.length - 1]);
+  }; 
 
 const goHome = () => {
   setHistory(["home"]);
   setScreen("home");
 };
 
-    const newHistory = history.slice(0, -1);
+  /*  const newHistory = history.slice(0, -1);
     setHistory(newHistory);
     setScreen(newHistory[newHistory.length - 1]);
-  };
+  };*/
 
   // ── EFFECTS ──
 

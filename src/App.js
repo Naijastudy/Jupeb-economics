@@ -566,6 +566,11 @@ useEffect(() => {
     setScreen(newScreen);
   };
 
+  const goReplace = (newScreen) => {
+    setHistory((h) => [...h.slice(0, -1), newScreen]);
+    setScreen(newScreen);
+  };
+  
   const goBack = () => {
     if (history.length <= 1) return;
 
@@ -576,31 +581,28 @@ useEffect(() => {
     if (quizInProgress) {
       setQuitModal({
         open: true,
-        onConfirm: () => {
+       onConfirm: () => {
           setCbtRunning(false);
           setExamRunning(false);
-          setQuitModal({ open: false, onConfirm: null });
           const destination = screen === "exam_quiz" ? "exam_setup" : "home";
-          goTo(destination);
+          setHistory((h) => [...h.slice(0, -1), destination]);
+          setScreen(destination);
+          setQuitModal({ open: false, onConfirm: null });
         },
       });
       return;
     }
 
-    const newHistory = history.slice(0, -1);
-    setHistory(newHistory);
-    setScreen(newHistory[newHistory.length - 1]);
-  }; 
 
 const goHome = () => {
   setHistory(["home"]);
   setScreen("home");
 };
 
-  /*  const newHistory = history.slice(0, -1);
+   const newHistory = history.slice(0, -1);
     setHistory(newHistory);
     setScreen(newHistory[newHistory.length - 1]);
-  };*/
+  };
 
   // ── EFFECTS ──
 
@@ -619,22 +621,14 @@ const goHome = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const goBackRef = useRef(goBack);
+const goBackRef = useRef(goBack);
   useEffect(() => { goBackRef.current = goBack; });
 
-  const handlingBackRef = useRef(false);
   useEffect(() => {
-    const handleBack = () => {
-      if (handlingBackRef.current) return;
-      handlingBackRef.current = true;
-      goBackRef.current();
-      window.history.pushState({}, "");
-      setTimeout(() => { handlingBackRef.current = false; }, 300);
-    };
+    const handleBack = () => goBackRef.current();
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);
-
 
   // ── SEND FEEDBACK ──
   const sendFeedback = async () => {
@@ -1071,11 +1065,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setCbtRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goTo("home");
+                  goReplace("home");
                 },
               });
             } else {
-              goTo("home");
+              goReplace("home");
             }
           }}
           card={card} goldBtn={goldBtn}
@@ -1145,11 +1139,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setExamRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goTo("exam_setup");
+                  goReplace("exam_setup");
                 },
               });
             } else {
-              goTo("exam_setup");
+              goReplace("exam_setup");
             }
           }}
           card={card} goldBtn={goldBtn}

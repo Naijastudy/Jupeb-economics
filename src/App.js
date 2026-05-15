@@ -561,7 +561,6 @@ useEffect(() => {
 
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {
-    window.history.pushState({}, "");
     setHistory((h) => [...h, newScreen]);
     setScreen(newScreen);
   };
@@ -625,11 +624,17 @@ const goBackRef = useRef(goBack);
   useEffect(() => { goBackRef.current = goBack; });
 
   useEffect(() => {
-    const handleBack = () => goBackRef.current();
+    
+    window.history.pushState({ app: true }, "");
+    const handleBack = () => {
+    
+      window.history.pushState({ app: true }, "");
+      goBackRef.current();
+    };
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);
-
+  
   // ── SEND FEEDBACK ──
   const sendFeedback = async () => {
     if (!feedbackMessage.trim()) {

@@ -535,7 +535,7 @@ const { toast, showToast, hideToast } = useToast();
   // 6. Notifications
   const {
     permission, settings: notifSettings, loading: notifLoading,
-    error: notifError, requestPermission,
+    error: notifError, requestPermission, swReady,  markFcmEnabled, 
     disableNotifications, updateSettings: updateNotifSettings,
   } = useNotifications();
 
@@ -629,6 +629,10 @@ const goBackRef = useRef(goBack);
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);
+  
+useEffect(() => {
+  if (fcmReady) markFcmEnabled();
+}, [fcmReady]);
   
   // ── SEND FEEDBACK ──
   const sendFeedback = async () => {

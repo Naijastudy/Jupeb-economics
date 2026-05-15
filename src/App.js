@@ -623,13 +623,15 @@ const goHome = () => {
 const goBackRef = useRef(goBack);
   useEffect(() => { goBackRef.current = goBack; });
 
+  const backLockRef = useRef(false);
   useEffect(() => {
-    
     window.history.pushState({ app: true }, "");
     const handleBack = () => {
-    
+      if (backLockRef.current) return;
+      backLockRef.current = true;
       window.history.pushState({ app: true }, "");
       goBackRef.current();
+      setTimeout(() => { backLockRef.current = false; }, 500);
     };
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);

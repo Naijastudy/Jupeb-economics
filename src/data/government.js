@@ -2029,7 +2029,7 @@ Government responses: JTF operations, Multi-National Joint Task Force, dialogue,
 Exam Tip: Each crisis could be a separate essay question. Know dates, causes, and consequences of each.`
   }
 ],
-  military; [
+  military: [
   {
     title: "Military Rule in Nigeria: Background, Regimes, Achievements, Failures, and Transition",
     key: "Nigeria experienced six distinct periods of military rule (1966-1979, 1983-1999) under eight regimes, each with specific political contexts, achievements, and failures.",

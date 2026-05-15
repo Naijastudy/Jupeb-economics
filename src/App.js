@@ -561,6 +561,7 @@ useEffect(() => {
 
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {
+    window.history.pushState({}, "");
     setHistory((h) => [...h, newScreen]);
     setScreen(newScreen);
   };
@@ -569,7 +570,7 @@ useEffect(() => {
     setHistory((h) => [...h.slice(0, -1), newScreen]);
     setScreen(newScreen);
   };
-
+  
   const goBack = () => {
     if (history.length <= 1) return;
 
@@ -580,7 +581,7 @@ useEffect(() => {
     if (quizInProgress) {
       setQuitModal({
         open: true,
-        onConfirm: () => {
+       onConfirm: () => {
           setCbtRunning(false);
           setExamRunning(false);
           const destination = screen === "exam_quiz" ? "exam_setup" : "home";
@@ -592,7 +593,13 @@ useEffect(() => {
       return;
     }
 
-    const newHistory = history.slice(0, -1);
+
+const goHome = () => {
+  setHistory(["home"]);
+  setScreen("home");
+};
+
+   const newHistory = history.slice(0, -1);
     setHistory(newHistory);
     setScreen(newHistory[newHistory.length - 1]);
   };
@@ -617,16 +624,8 @@ useEffect(() => {
 const goBackRef = useRef(goBack);
   useEffect(() => { goBackRef.current = goBack; });
 
-  const backLockRef = useRef(false);
   useEffect(() => {
-    window.history.pushState({ app: true }, "");
-    const handleBack = () => {
-      if (backLockRef.current) return;
-      backLockRef.current = true;
-      window.history.pushState({ app: true }, "");
-      goBackRef.current();
-      setTimeout(() => { backLockRef.current = false; }, 500);
-    };
+    const handleBack = () => goBackRef.current();
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);

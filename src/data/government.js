@@ -2284,7 +2284,7 @@ COMPARISON:`,
 Both systems left profound marks on African political development — Anglophone vs. Francophone differences in governance styles, language, law, and international alignment persist today.
 
 Exam Tip: Be able to compare indirect rule and assimilation with advantages and disadvantages. Know which countries used which system.`
-  }]],
+  },]],
   constitution_africa: [
   {
     title: "Constitutional Development of Selected West African Countries",
@@ -2412,7 +2412,7 @@ COMPARISON:`,
 The broader ideology that all people of African descent share common interests and should work together. Key figures: Marcus Garvey (Jamaica), W.E.B. Du Bois (USA), George Padmore (Trinidad), Kwame Nkrumah (Ghana). The 1945 Manchester Pan-African Congress was pivotal.
 
 Exam Tip: Compare British and French nationalism clearly. Know Négritude, Pan-Africanism, and at least two key figures from each system.`
-  }]],
+  },]],
   military_africa: [
   {
     title: "Military Intervention in Africa: Nature, Selected Countries, Characteristics, and Transition",

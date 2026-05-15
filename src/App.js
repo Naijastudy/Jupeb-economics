@@ -566,11 +566,6 @@ useEffect(() => {
     setScreen(newScreen);
   };
 
-  const goReplace = (newScreen) => {
-    setHistory((h) => [...h.slice(0, -1), newScreen]);
-    setScreen(newScreen);
-  };
-
   const goBack = () => {
     if (history.length <= 1) return;
     
@@ -625,8 +620,15 @@ const goHome = () => {
   const goBackRef = useRef(goBack);
   useEffect(() => { goBackRef.current = goBack; });
 
+  const handlingBackRef = useRef(false);
   useEffect(() => {
-    const handleBack = () => goBackRef.current();
+    const handleBack = () => {
+      if (handlingBackRef.current) return;
+      handlingBackRef.current = true;
+      goBackRef.current();
+      window.history.pushState({}, "");
+      setTimeout(() => { handlingBackRef.current = false; }, 300);
+    };
     window.addEventListener("popstate", handleBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);
@@ -866,7 +868,7 @@ const SPLASH_MESSAGES = [
         onSelect={(subject) => {
           setActiveSubject(subject);
           if      (pendingMode === "cbt")   startCbt(subject, goTo, user?.uid);
-          else if (pendingMode === "exam")  goReplace("year_select");
+          else if (pendingMode === "exam")  goTo("year_select");
           else if (pendingMode === "notes") goTo("notes");
           else if (pendingMode === "pastq") goTo("pastq_courses");
         }}
@@ -882,7 +884,7 @@ const SPLASH_MESSAGES = [
         firebaseQuestions={firebaseQuestions}
         subjectId={activeSubject.id}
         onBack={goBack}
-        onSelectYear={(year) => { setSelectedYear(year); goReplace("exam_setup"); }}
+        onSelectYear={(year) => { setSelectedYear(year); goTo("exam_setup"); }}
       />
     );
   }
@@ -1067,11 +1069,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setCbtRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goReplace("home");
+                  goTo("home");
                 },
               });
             } else {
-              goReplace("home");
+              goTo("home");
             }
           }}
           card={card} goldBtn={goldBtn}
@@ -1141,11 +1143,11 @@ const SPLASH_MESSAGES = [
                 onConfirm: () => {
                   setExamRunning(false);
                   setQuitModal({ open: false, onConfirm: null });
-                  goReplace("exam_setup");
+                  goTo("exam_setup");
                 },
               });
             } else {
-              goReplace("exam_setup");
+              goTo("exam_setup");
             }
           }}
           card={card} goldBtn={goldBtn}

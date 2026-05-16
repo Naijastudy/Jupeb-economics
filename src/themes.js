@@ -170,7 +170,7 @@ const themes = {
 
 export default themes;
 
-/*const themes = {
+/* const themes = {
   dark: {
     bg: "#111714",
     bgCard: "#1a2a1a",
@@ -305,3 +305,4 @@ export default themes;
 };
 
 export default themes;
+*/

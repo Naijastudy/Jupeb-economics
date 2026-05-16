@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=true react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test"
   },
   "browserslist": {

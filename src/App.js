@@ -531,7 +531,7 @@ const { toast, showToast, hideToast } = useToast();
     examDone, setExamDone, examTime, examRunning, setExamRunning,
     examScoreSaved, setExamScoreSaved, startExam,
     showCalc, setShowCalc, minimized, setMinimized,
-  } = useQuiz(firebaseQuestions, updateStreak);
+  } = useQuiz(firebaseQuestions);
 
   // 6. Notifications
   const {
@@ -898,7 +898,8 @@ const SPLASH_MESSAGES = [
       <Profile
         t={t} user={user} userScores={userScores}
         onLogin={handleGoogleLogin} onLogout={handleLogout}
-        onBack={goBack} goldBtn={goldBtn} card={card}
+        onBack={goBack} goldBtn={goldBtn} card={card} loadMoreScores={loadMoreScores} hasMoreScores={hasMoreScores}
+  loadingMore={loadingMore}
       />
     );
   }
@@ -1043,6 +1044,7 @@ const SPLASH_MESSAGES = [
       if (user && !cbtScoreSaved) {
         saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct, cbtQs, cbtAnswers);
         setCbtScoreSaved(true);
+        updateStreak(user?.uid);
       }
       return (
         <div style={wrap}>
@@ -1114,6 +1116,7 @@ const SPLASH_MESSAGES = [
       if (user && !examScoreSaved) {
         saveScore("Exam", activeSubject?.name, correct, examQs.length, pct, examQs, examAnswers);
         setExamScoreSaved(true);
+        updateStreak(user?.uid);
       }
       return (
         <div style={wrap}>

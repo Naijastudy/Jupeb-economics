@@ -513,7 +513,7 @@ const { toast, showToast, hideToast } = useToast();
 
   // 2. Auth
   const { user, userScores, saveScore, authLoading,
-          handleGoogleLogin, handleLogout } = useAuth();
+          handleGoogleLogin, handleLogout, loadMoreScores, hasMoreScores, loadingMore } = useAuth();
 
   // 3. Streak
   const { streak, updateStreak } = useStreak(user);

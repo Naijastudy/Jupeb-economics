@@ -1064,7 +1064,7 @@ const SPLASH_MESSAGES = [
           <Header onBack={() => goTo("home")} title="CBT Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen
             qs={cbtQs} answers={cbtAnswers} t={t} mode="CBT"
-            onRetry={() => cbtScoreSavedRef.current = false; startCbt(activeSubject, goTo, user?.uid)}
+            onRetry={() => { cbtScoreSavedRef.current = false; startCbt(activeSubject, goTo, user?.uid)}}
             onHome={() => goTo("home")}
             activeSubject={activeSubject}
           />
@@ -1142,7 +1142,7 @@ const SPLASH_MESSAGES = [
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />
           <ResultScreen
             qs={examQs} answers={examAnswers} t={t} mode="Exam"
-            onRetry={() => examScoreSavedRef.current = false; startExam(activeSubject, goTo, selectedYear, user?.uid)}
+            onRetry={() => {examScoreSavedRef.current = false; startExam(activeSubject, goTo, selectedYear, user?.uid)}}
             onHome={() => goTo("home")}
             activeSubject={activeSubject}
           />

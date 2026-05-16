@@ -631,9 +631,9 @@ const goBackRef = useRef(goBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);
   
-useEffect(() => {
+/*useEffect(() => {
   if (fcmReady) markFcmEnabled();
-}, [fcmReady]);
+}, [fcmReady]);*/
   
   // ── SEND FEEDBACK ──
   const sendFeedback = async () => {

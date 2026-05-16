@@ -536,7 +536,7 @@ const { toast, showToast, hideToast } = useToast();
   // 6. Notifications
   const {
     permission, settings: notifSettings, loading: notifLoading,
-    error: notifError, requestPermission, 
+    error: notifError, requestPermission, /*swReady, markFcmEnabled,*/ 
     disableNotifications, updateSettings: updateNotifSettings,
   } = useNotifications();
   

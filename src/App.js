@@ -525,11 +525,11 @@ const { toast, showToast, hideToast } = useToast();
   const {
     cbtQs, cbtIdx, setCbtIdx, cbtAnswers, setCbtAnswers,
     cbtDone, setCbtDone, cbtTime, cbtRunning, setCbtRunning,
-    cbtScoreSaved, setCbtScoreSaved, startCbt,
+    startCbt,
     examCount, setExamCount, examMinutes, setExamMinutes,
     examQs, examIdx, setExamIdx, examAnswers, setExamAnswers,
     examDone, setExamDone, examTime, examRunning, setExamRunning,
-    examScoreSaved, setExamScoreSaved, startExam,
+     startExam,
     showCalc, setShowCalc, minimized, setMinimized,
   } = useQuiz(firebaseQuestions);
 
@@ -544,7 +544,9 @@ const { toast, showToast, hideToast } = useToast();
   
   const cbtWarnedRef  = useRef(false);
 const examWarnedRef = useRef(false);
-
+const cbtScoreSavedRef  = useRef(false);
+const examScoreSavedRef = useRef(false);
+  
 useEffect(() => {
   if (cbtTime === 3600) { cbtWarnedRef.current = false; }
   if (cbtTime === 180 && !cbtWarnedRef.current) {
@@ -1046,10 +1048,16 @@ const SPLASH_MESSAGES = [
     if (cbtDone) {
       const correct = cbtQs.filter((q, i) => cbtAnswers[i] === q.answer).length;
       const pct     = cbtQs.length > 0 ? Math.round((correct / cbtQs.length) * 100) : 0;
-      if (user && !cbtScoreSaved) {
-        saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct, cbtQs, cbtAnswers);
-        setCbtScoreSaved(true);
-        updateStreak(user?.uid);
+      if (user && !cbtScoreSavedRef.current) {
+  cbtScoreSavedRef.current = true;
+  (async () => {
+    try {
+      await saveScore("CBT", activeSubject?.name, correct, cbtQs.length, pct, cbtQs, cbtAnswers);
+      await updateStreak(user?.uid);
+    } catch (err) {
+      cbtScoreSavedRef.current = false;
+   showToast("Failed to save score. Retrying... If it persists, go to Settings → Feedback.", "error"); }
+  })();
       }
       return (
         <div style={wrap}>
@@ -1118,11 +1126,17 @@ const SPLASH_MESSAGES = [
     if (examDone) {
       const correct = examQs.filter((q, i) => examAnswers[i] === q.answer).length;
       const pct     = examQs.length > 0 ? Math.round((correct / examQs.length) * 100) : 0;
-      if (user && !examScoreSaved) {
-        saveScore("Exam", activeSubject?.name, correct, examQs.length, pct, examQs, examAnswers);
-        setExamScoreSaved(true);
-        updateStreak(user?.uid);
-      }
+    if (user && !examScoreSavedRef.current) {
+  examScoreSavedRef.current = true;
+  (async () => {
+    try {
+      await saveScore("Exam", activeSubject?.name, correct, examQs.length, pct, examQs, examAnswers);
+      await updateStreak(user?.uid);
+    } catch (err) {
+      examScoreSavedRef.current = false;
+   showToast("Failed to save score. Retrying... If it persists, go to Settings → Feedback.", "error"); }
+  })();
+}
       return (
         <div style={wrap}>
           <Header onBack={() => goTo("home")} title="Exam Results" sub={activeSubject?.name} t={t} onToggleTheme={toggleTheme} />

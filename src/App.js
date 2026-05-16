@@ -21,7 +21,7 @@ import OfflineFallback from "./components/OfflineFallback";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
 import useQuiz from "./hooks/useQuiz";
-//import useFCM from "./hooks/useFCM";
+import useFCM from "./hooks/useFCM";
 import { useApp } from "./context/AppContext";
 import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
@@ -504,7 +504,7 @@ export default function App() {
   const [feedbackSending, setFeedbackSending] = useState(false);
   const [feedbackSent,    setFeedbackSent]    = useState(false);
   const [feedbackError,   setFeedbackError]   = useState("");
-  //const { fcmToken, fcmReady } = useFCM(user);
+  const { fcmToken, fcmReady } = useFCM(user);
 const { toast, showToast, hideToast } = useToast();
   // ── HOOKS ──
 
@@ -536,7 +536,7 @@ const { toast, showToast, hideToast } = useToast();
   // 6. Notifications
   const {
     permission, settings: notifSettings, loading: notifLoading,
-    error: notifError, requestPermission, /*swReady, markFcmEnabled,*/ 
+    error: notifError, requestPermission, swReady, markFcmEnabled,
     disableNotifications, updateSettings: updateNotifSettings,
   } = useNotifications();
   
@@ -631,9 +631,9 @@ const goBackRef = useRef(goBack);
     return () => window.removeEventListener("popstate", handleBack);
   }, []);
   
-/*useEffect(() => {
+useEffect(() => {
   if (fcmReady) markFcmEnabled();
-}, [fcmReady]);*/
+}, [fcmReady]);
   
   // ── SEND FEEDBACK ──
   const sendFeedback = async () => {

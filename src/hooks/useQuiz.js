@@ -59,7 +59,6 @@ export default function useQuiz(firebaseQuestions) {
   const [cbtDone, setCbtDone] = useState(false);
   const [cbtTime, setCbtTime] = useState(3600);
   const [cbtRunning, setCbtRunning] = useState(false);
-  const [cbtScoreSaved, setCbtScoreSaved] = useState(false);
 
   // ── EXAM STATE ──
   const [examCount, setExamCount] = useState(50);
@@ -70,7 +69,6 @@ export default function useQuiz(firebaseQuestions) {
   const [examDone, setExamDone] = useState(false);
   const [examTime, setExamTime] = useState(3600);
   const [examRunning, setExamRunning] = useState(false);
-  const [examScoreSaved, setExamScoreSaved] = useState(false);
 
   // ── CALCULATOR ──
   const [showCalc, setShowCalc] = useState(false);
@@ -118,7 +116,6 @@ export default function useQuiz(firebaseQuestions) {
     setCbtIdx(0);
     setCbtAnswers({});
     setCbtDone(false);
-    setCbtScoreSaved(false);
     setCbtTime(60 * 60);
     setCbtRunning(true);
     goTo("cbt_quiz");
@@ -134,7 +131,6 @@ export default function useQuiz(firebaseQuestions) {
     setExamIdx(0);
     setExamAnswers({});
     setExamDone(false);
-    setExamScoreSaved(false);
     setExamTime(examMinutes * 60);
     setExamRunning(true);
     goTo("exam_quiz");
@@ -146,7 +142,6 @@ export default function useQuiz(firebaseQuestions) {
     cbtAnswers, setCbtAnswers,
     cbtDone, setCbtDone,
     cbtTime, cbtRunning, setCbtRunning,
-    cbtScoreSaved, setCbtScoreSaved,
     startCbt,
 
     // EXAM
@@ -156,7 +151,6 @@ export default function useQuiz(firebaseQuestions) {
     examAnswers, setExamAnswers,
     examDone, setExamDone,
     examTime, examRunning, setExamRunning,
-    examScoreSaved, setExamScoreSaved,
     startExam,
 
     // CALCULATOR

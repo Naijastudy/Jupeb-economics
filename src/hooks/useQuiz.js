@@ -121,7 +121,6 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     setCbtScoreSaved(false);
     setCbtTime(60 * 60);
     setCbtRunning(true);
-    updateStreak(uid);
     goTo("cbt_quiz");
   };
 
@@ -138,7 +137,6 @@ export default function useQuiz(firebaseQuestions, updateStreak) {
     setExamScoreSaved(false);
     setExamTime(examMinutes * 60);
     setExamRunning(true);
-    updateStreak(uid);
     goTo("exam_quiz");
   };
 

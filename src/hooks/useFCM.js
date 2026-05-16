@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { app } from "../firebase";
+
 import { db } from "../firebase";
 import {
   doc,
@@ -74,7 +74,7 @@ export default function useFCM(user) {
         onMessage,
       } = await import("firebase/messaging");
 
-      const messagingInstance = getMessaging(app);
+      const messagingInstance = getMessaging();
 
       const swReg = await navigator.serviceWorker.ready;
 

@@ -589,7 +589,7 @@ useEffect(() => {
   setCbtRunning(false);
   setExamRunning(false);
   const destination = screen === "exam_quiz" ? "exam_setup" : "home";
-  window.history.replaceState({ screen: destination }, "");
+  window.history.back();
   setHistory((h) => [...h.slice(0, -1), destination]);
   setScreen(destination);
   setQuitModal({ open: false, onConfirm: null });

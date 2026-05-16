@@ -25,7 +25,7 @@ export const subjects = [
   name: "Business studies",
   emoji: "💼",
   color: "#7C3AED",
-  available: false,
+  available: true,
   data: business_studies,
 },
 {

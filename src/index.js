@@ -1,3 +1,7 @@
+// ============================================
+// 1. GLOBAL ERROR HANDLERS (MUST BE FIRST)
+// ============================================
+
 window.onerror = function(msg, src, line, col, err) {
   let errorMessage = msg;
   let errorName = 'Error';
@@ -10,14 +14,13 @@ window.onerror = function(msg, src, line, col, err) {
     
     // SOURCE MAP SUPPORT: Enable original file names
     if (window.__REACT_DEVTOOLS_GLOBAL_HOOK__) {
-      // This helps React DevTools map errors
       console.log('React DevTools detected - source maps active');
     }
     
     // Better parsing for source-mapped stacks
     const stackLines = stackTrace.split('\n');
     
-    // Find the first line that points to your source code (not node_modules or webpack internals)
+    // Find the first line that points to your source code
     let actualFile = src;
     let actualLine = line;
     let actualCol = col;
@@ -25,7 +28,6 @@ window.onerror = function(msg, src, line, col, err) {
     for (let i = 1; i < stackLines.length; i++) {
       const stackLine = stackLines[i];
       
-      // Look for .jsx, .tsx, .js, .ts files in your src folder
       const srcMatch = stackLine.match(/\(?(?:webpack:\/\/\/)?(.+?\.(?:jsx?|tsx?|mjs)):(\d+):(\d+)\)?/);
       const simpleMatch = stackLine.match(/\(?(.+?):(\d+):(\d+)\)?/);
       const match = srcMatch || simpleMatch;
@@ -35,12 +37,10 @@ window.onerror = function(msg, src, line, col, err) {
         const lineNum = parseInt(match[2]);
         const colNum = parseInt(match[3]);
         
-        // Clean up webpack paths
         if (file.startsWith('webpack://')) {
           file = file.replace('webpack:///', '').replace(/^\w+\.\/src/, 'src');
         }
         
-        // Filter out node_modules and webpack runtime
         if (!file.includes('node_modules') && 
             !file.includes('webpack/bootstrap') && 
             !file.includes('react-dom') &&
@@ -48,7 +48,7 @@ window.onerror = function(msg, src, line, col, err) {
           actualFile = file;
           actualLine = lineNum;
           actualCol = colNum;
-          break; // Found your source file
+          break;
         }
       }
     }
@@ -118,13 +118,12 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-// Also catch unhandled rejections with source map support
+// Catch unhandled rejections with source map support
 window.addEventListener('unhandledrejection', function(e) {
   const error = e.reason;
   if (error && error.stack) {
     console.error('Unhandled rejection with stack:', error.stack);
     
-    // Parse the stack for source file
     const match = error.stack.match(/\(?(.+?\.(?:jsx?|tsx?)):(\d+):(\d+)\)?/);
     if (match) {
       console.error(`Failed in: ${match[1]} at line ${match[2]}`);
@@ -132,34 +131,7 @@ window.addEventListener('unhandledrejection', function(e) {
   }
 });
 
-// Then your React imports...
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { AppProvider } from "./context/AppContext";
-import GlobalStyles from "./components/GlobalStyles";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <AppProvider>
-    <GlobalStyles />
-    <App />
-  </AppProvider>
-);
-
-serviceWorkerRegistration.register({
-  onSuccess: () => {
-    console.log("App ready for offline use!");
-  },
-  onUpdate: (registration) => {
-    if (registration && registration.waiting) {
-      registration.waiting.postMessage({ type: "SKIP_WAITING" });
-    }
-    window.location.reload();
-  },
-});
 
 import React from "react";
 import ReactDOM from "react-dom/client";

@@ -21,10 +21,10 @@ import OfflineFallback from "./components/OfflineFallback";
 import useStreak from "./hooks/useStreak";
 import useFirebase from "./hooks/useFirebase";
 import useQuiz from "./hooks/useQuiz";
-import useFCM from "./hooks/useFCM";
 import { useApp } from "./context/AppContext";
 import useNotifications from "./hooks/useNotifications";
 import NotificationSettings from "./screens/NotificationSettings";
+import useFCM from "./hooks/useFCM";
 import useToast from "./hooks/useToast";
 import Toast from "./components/Toast";
 
@@ -504,7 +504,7 @@ export default function App() {
   const [feedbackSending, setFeedbackSending] = useState(false);
   const [feedbackSent,    setFeedbackSent]    = useState(false);
   const [feedbackError,   setFeedbackError]   = useState("");
-  const { fcmToken, fcmReady } = useFCM(user);
+  
 const { toast, showToast, hideToast } = useToast();
   // ── HOOKS ──
 
@@ -539,6 +539,8 @@ const { toast, showToast, hideToast } = useToast();
     error: notifError, requestPermission, swReady, markFcmEnabled,
     disableNotifications, updateSettings: updateNotifSettings,
   } = useNotifications();
+
+  const { fcmToken, fcmReady } = useFCM(user);
   
   const cbtWarnedRef  = useRef(false);
 const examWarnedRef = useRef(false);

@@ -1154,7 +1154,9 @@ const SPLASH_MESSAGES = [
                onConfirm: () => {
   setExamRunning(false);
   setQuitModal({ open: false, onConfirm: null });
- goReplace("exam_setup");
+ window.history.back();
+setHistory((h) => [...h.slice(0, -1), "exam_setup"]);
+setScreen("exam_setup");
 },
               });
             } else {

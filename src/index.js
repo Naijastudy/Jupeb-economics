@@ -26,12 +26,11 @@ serviceWorkerRegistration.register({
     console.log("App ready for offline use!");
   },
   onUpdate: (registration) => {
-    // Tell SW to skip waiting and activate new version
     if (registration && registration.waiting) {
-      registration.waiting.postMessage({
-        type: "SKIP_WAITING"
+      registration.waiting.postMessage({ type: "SKIP_WAITING" });
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        window.location.reload();
       });
     }
-    window.location.reload();
   },
 });

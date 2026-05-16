@@ -22,12 +22,12 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <ErrorBoundary>
+ // <ErrorBoundary>
     <AppProvider>
       <GlobalStyles />
       <App />
     </AppProvider>
-  </ErrorBoundary>
+  //</ErrorBoundary>
 );
 
 // Register service worker for offline support

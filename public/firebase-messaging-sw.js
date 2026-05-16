@@ -5,7 +5,6 @@ importScripts(
   "https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging-compat.js"
 );
 
-// ── FIREBASE INIT ─────────────────────────────────────────────────────────────
 firebase.initializeApp({
   apiKey: "AIzaSyCl4-QWw8-_BgzxTD6fi9-CxsC78U7wywU",
   authDomain: "studynaija-8c01a.firebaseapp.com",
@@ -17,7 +16,6 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
-// ── NOTIFICATION CONTENT ──────────────────────────────────────────────────────
 const NOTIFICATION_CONTENT = {
   daily: [
     { title: "StudyNaija 📚", body: "Time to study! Keep your streak alive 🔥" },
@@ -43,9 +41,12 @@ function getRandomContent(type) {
 }
 
 // ── BACKGROUND MESSAGE HANDLER ────────────────────────────────────────────────
+// ✅ Fires when app is CLOSED or in background
+// Firebase sends the push → this SW catches it → shows notification
 messaging.onBackgroundMessage((payload) => {
   console.log("[SW] Background FCM message received:", payload);
 
+  // Get content from payload or use random fallback
   const type    = payload.data?.type || "daily";
   const content = getRandomContent(type);
 
@@ -59,7 +60,7 @@ messaging.onBackgroundMessage((payload) => {
     badge:    "/android-chrome-192x192.png",
     vibrate:  [200, 100, 200],
     tag:      `${type}-reminder`,
-    renotify: true, 
+    renotify: true, // ✅ shows even if same tag exists
     data:     { url, type },
     actions: [
       { action: "open",    title: "Study Now 📚" },
@@ -67,6 +68,7 @@ messaging.onBackgroundMessage((payload) => {
     ],
   };
 
+  // ✅ event.waitUntil not available here — return the promise instead
   return self.registration.showNotification(title, options);
 });
 
@@ -75,6 +77,7 @@ messaging.onBackgroundMessage((payload) => {
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
 
+  // User tapped Later — do nothing
   if (event.action === "dismiss") return;
 
   const urlToOpen = event.notification.data?.url || "/";
@@ -83,6 +86,7 @@ self.addEventListener("notificationclick", (event) => {
     clients
       .matchAll({ type: "window", includeUncontrolled: true })
       .then((clientList) => {
+        // If app already open — focus it
         for (const client of clientList) {
           if (
             client.url.includes(self.location.origin) &&
@@ -105,4 +109,4 @@ self.addEventListener("notificationclose", (event) => {
   const type = event.notification.data?.type || "unknown";
   console.log(`[SW] Notification dismissed without tapping: ${type}`);
 });
-);
+

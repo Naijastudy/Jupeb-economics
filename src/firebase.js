@@ -1,3 +1,4 @@
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
@@ -12,38 +13,8 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-export const db           = getFirestore(app);
-export const auth         = getAuth(app);
+
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
-
-export let messaging  = null;
-export let getToken   = null;
-export let onMessage  = null;
-
-const initMessaging = async () => {
-  try {
-    const { isSupported } = await import("firebase/messaging");
-    const supported = await isSupported();
-
-    if (supported) {
-      const {
-        getMessaging,
-        getToken:    _getToken,
-        onMessage:   _onMessage,
-      } = await import("firebase/messaging");
-
-      messaging  = getMessaging(app);
-      getToken   = _getToken;
-      onMessage  = _onMessage;
-
-      console.log("Firebase messaging initialized ✅");
-    } else {
-      console.log("Firebase messaging not supported on this device");
-    }
-  } catch (e) {
-    console.log("Messaging init skipped:", e.message);
-  }
-};
-
-initMessaging();

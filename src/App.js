@@ -892,7 +892,7 @@ const SPLASH_MESSAGES = [
         firebaseQuestions={firebaseQuestions}
         subjectId={activeSubject.id}
         onBack={goBack}
-        onSelectYear={(year) => { setSelectedYear(year); goTo("exam_setup"); }}
+        onSelectYear={(year) => { setSelectedYear(year); goReplace("exam_setup"); }}
       />
     );
   }

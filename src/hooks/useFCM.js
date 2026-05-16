@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { app } from "../firebase";
+import { db } from "../firebase";
 import {
   doc,
   setDoc,

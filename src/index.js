@@ -1,3 +1,13 @@
+window.onerror = function(msg, src, line, col, err) {
+  document.body.innerHTML = `
+    <div style="padding:20px;color:red;font-size:12px;word-break:break-all">
+      <b>Error:</b> ${msg}<br/>
+      <b>File:</b> ${src}<br/>
+      <b>Line:</b> ${line}<br/>
+      <b>Stack:</b> ${err?.stack}
+    </div>
+  `;
+};
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";

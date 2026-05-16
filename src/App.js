@@ -536,10 +536,10 @@ const { toast, showToast, hideToast } = useToast();
   // 6. Notifications
   const {
     permission, settings: notifSettings, loading: notifLoading,
-    error: notifError, requestPermission, swReady, //  markFcmEnabled, 
+    error: notifError, requestPermission, 
     disableNotifications, updateSettings: updateNotifSettings,
   } = useNotifications();
-
+  
   const cbtWarnedRef  = useRef(false);
 const examWarnedRef = useRef(false);
 

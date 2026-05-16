@@ -1,25 +1,23 @@
 const themes = {
   dark: {
-    // Base
     bg: "#111714",
     bgCard: "#1a2a1a",
     bgInner: "#0d1a0d",
     bgHeader: "linear-gradient(135deg,#1a3a1a,#0d2b0d)",
-
+    headerText: "#f0ece0",
     border: "#2a3a2a",
     borderHover: "#c8a84b",
 
     text: "#f0ece0",
     textSub: "#aab7aa",
-    textMuted: "#888",
+    textMuted: "#888888",
 
-    // Dark accent = gold
-    gold: "#c8a84b",
-    goldSecondary: "#b89a3f",
+    heading: "#90c890",
+
+    // Renamed from gold/goldSecondary for semantic clarity
     accent: "#c8a84b",
+    accentHover: "#b89a3f",
     accentSecondary: "#b89a3f",
-
-    heading: "#c8a84b",
 
     goldBtn: "#c8a84b",
     goldBtnText: "#0a0f0a",
@@ -31,6 +29,8 @@ const themes = {
     correctBorder: "#5cb85c",
     correctText: "#9be29b",
 
+    // Shared danger token
+    danger: "#dc3545",
     wrongBg: "#4a1e1e",
     wrongBorder: "#dc3545",
     wrongText: "#ffb3b3",
@@ -56,6 +56,8 @@ const themes = {
     statBg: "#141f14",
     statBorder: "#2a3a2a",
 
+    shadow: "0 4px 24px rgba(0,0,0,0.5)",
+
     keyBg: "#2a2a00",
     keyText: "#ffe066",
     keyBorder: "#c8a84b44",
@@ -64,47 +66,42 @@ const themes = {
     exText: "#90c890",
     exBorder: "#5cb85c44",
 
-    focusOutline: "#c8a84b",
-    disabledBg: "#2a3a2a",
-    disabledText: "#777",
-    shadow: "0 4px 12px rgba(0,0,0,0.3)",
-
     toggleIcon: "🌙",
     toggleLabel: "Dark Mode",
   },
 
   light: {
-    // Base
     bg: "#f5f0e8",
     bgCard: "#ffffff",
     bgInner: "#f0ebe0",
     bgHeader: "linear-gradient(135deg,#2a5c8a,#1a3a5c)",
-
+    headerText: "#ffffff",
     border: "#ddd8cc",
     borderHover: "#1a3a5c",
 
     text: "#1a1a1a",
-    textSub: "#555",
-    textMuted: "#777",
-
-    // Light accent = BLUE (no gold/yellow)
-    gold: "#1a3a5c",
-    goldSecondary: "#2a5c8a",
-    accent: "#1a3a5c",
-    accentSecondary: "#2a5c8a",
+    textSub: "#555555",
+    textMuted: "#777777",
 
     heading: "#1a3a5c",
+
+    // Renamed from gold/goldSecondary for semantic clarity
+    accent: "#1a3a5c",
+    accentHover: "#2a5c8a",
+    accentSecondary: "#2a5c8a",
 
     goldBtn: "#1a3a5c",
     goldBtnText: "#ffffff",
 
     optionBg: "#f8f4ec",
-    optionText: "#333",
+    optionText: "#333333",
 
     correctBg: "#d4edda",
     correctBorder: "#28a745",
     correctText: "#155724",
 
+    // Shared danger token
+    danger: "#dc3545",
     wrongBg: "#f8d7da",
     wrongBorder: "#dc3545",
     wrongText: "#721c24",
@@ -117,7 +114,7 @@ const themes = {
     expBorder: "#28a745",
     expText: "#155724",
 
-    noteText: "#444",
+    noteText: "#444444",
     tagColor: "#1a3a5c",
 
     progressBg: "#ddd8cc",
@@ -130,6 +127,8 @@ const themes = {
     statBg: "#ffffff",
     statBorder: "#ddd8cc",
 
+    shadow: "0 4px 24px rgba(0,0,0,0.12)",
+
     keyBg: "#fff9cc",
     keyText: "#7a6000",
     keyBorder: "#ffe06688",
@@ -137,11 +136,6 @@ const themes = {
     exBg: "#d4edda",
     exText: "#155724",
     exBorder: "#28a74588",
-
-    focusOutline: "#1a3a5c",
-    disabledBg: "#e0dbd0",
-    disabledText: "#999",
-    shadow: "0 4px 12px rgba(0,0,0,0.08)",
 
     toggleIcon: "☀️",
     toggleLabel: "Light Mode",

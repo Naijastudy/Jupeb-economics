@@ -1034,11 +1034,11 @@ const SPLASH_MESSAGES = [
       onSelectCourse={(c) => { setPqCourse(c); goTo("pastq_topics"); }} />;
   }
   if (screen === "pastq_topics" && pqCourse && data) {
-    return <PastQTopics t={t} data={data} pqCourse={pqCourse} firebaseQuestions={firebaseQuestions} onBack={goBack} 
+    return <PastQTopics t={t} data={data} pqCourse={pqCourse} firebaseQuestions={firebaseQuestions} subjectId={activeSubject?.id} onBack={goBack} 
       onSelectTopic={(tp) => { setPqTopic(tp); goTo("pastq_view"); }} />;
   }
   if (screen === "pastq_view" && pqTopic && data) {
-    return <PastQView t={t} data={data} pqTopic={pqTopic} firebaseQuestions={firebaseQuestions} onBack={goBack} card={card} />;
+    return <PastQView t={t} data={data} pqTopic={pqTopic} firebaseQuestions={firebaseQuestions} subjectId={activeSubject?.id} onBack={goBack} card={card} />;
   }
 
   // ── CBT QUIZ ──

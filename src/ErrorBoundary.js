@@ -35,7 +35,7 @@ render() {
           Something went wrong
         </div>
 
-        {/* SHOW ERROR MESSAGE */}
+        {/* SHOW ERROR MESSAGE + STACK TRACE */}
         <div style={{
           fontSize: 11,
           color: "#dc3545",
@@ -46,9 +46,23 @@ render() {
           marginBottom: 16,
           textAlign: "left",
           width: "100%",
+          maxWidth: "800px",
           wordBreak: "break-all",
+          overflowX: "auto"
         }}>
-          {this.state.error?.toString()}
+          <div style={{ marginBottom: 8, fontWeight: "bold" }}>
+            Error: {this.state.error?.message}
+          </div>
+          <div style={{ fontSize: 10, opacity: 0.8 }}>
+            Stack trace:
+            <pre style={{ 
+              marginTop: 8, 
+              whiteSpace: "pre-wrap",
+              fontFamily: "monospace"
+            }}>
+              {this.state.error?.stack}
+            </pre>
+          </div>
         </div>
 
         <div style={{
@@ -78,7 +92,8 @@ render() {
         </button>
         <button
           onClick={() => this.setState({ 
-            hasError: false 
+            hasError: false, 
+            error: null 
           })}
           style={{
             background: "transparent",
@@ -96,5 +111,4 @@ render() {
     );
   }
   return this.props.children;
-}
-}
+  }

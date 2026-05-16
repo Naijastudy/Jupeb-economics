@@ -50,7 +50,7 @@ function getAllQuestions(
 }
 
 // ── useQuiz ──────────────────────────────────────────────────────────────────
-export default function useQuiz(firebaseQuestions, updateStreak) {
+export default function useQuiz(firebaseQuestions) {
 
   // ── CBT STATE ──
   const [cbtQs, setCbtQs] = useState([]);

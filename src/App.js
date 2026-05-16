@@ -548,21 +548,30 @@ const cbtScoreSavedRef  = useRef(false);
 const examScoreSavedRef = useRef(false);
   
 useEffect(() => {
-  if (cbtTime === 3600) { cbtWarnedRef.current = false; }
-  if (cbtTime === 180 && !cbtWarnedRef.current) {
+  if (cbtRunning) {
+    cbtWarnedRef.current = false;
+  }
+}, [cbtRunning]);
+
+useEffect(() => {
+  if (cbtRunning && cbtTime === 180 && !cbtWarnedRef.current) {
     cbtWarnedRef.current = true;
     showToast("⏰ 3 minutes remaining!", "warning", 6000);
   }
-}, [cbtTime, showToast]);
+}, [cbtTime, showToast, cbtRunning]);
+  
+useEffect(() => {
+  if (examRunning) {
+    examWarnedRef.current = false;
+  }
+}, [examRunning]);
 
 useEffect(() => {
-  if (examTime > 200) { examWarnedRef.current = false; }
-  if (examTime === 180 && !examWarnedRef.current) {
+  if (examRunning && examTime === 180 && !examWarnedRef.current) {
     examWarnedRef.current = true;
     showToast("⏰ 3 minutes remaining!", "warning", 6000);
   }
-}, [examTime, showToast]);
-
+}, [examTime, showToast, examRunning]);
 
   // ── NAVIGATION HELPERS ──
   const goTo = (newScreen) => {

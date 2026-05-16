@@ -96,7 +96,7 @@ const MODE_LABELS = {
 };
 
 // ---------------------------------------------------------------------
-// STREAK BANNER (extracted)
+// STREAK BANNER
 // ---------------------------------------------------------------------
 function StreakBanner({ streak, t }) {
   if (!streak || streak.count < 1) return null;
@@ -135,7 +135,7 @@ function StreakBanner({ streak, t }) {
 }
 
 // ---------------------------------------------------------------------
-// QUIZ QUIT MODAL (extracted + accessibility)
+// QUIZ QUIT MODAL 
 // ---------------------------------------------------------------------
 function QuitModal({ open, onConfirm, onCancel, t }) {
   const modalRef = useRef(null);
@@ -203,7 +203,7 @@ function QuitModal({ open, onConfirm, onCancel, t }) {
 }
 
 // ---------------------------------------------------------------------
-// RESULT SCREEN (extracted)
+// RESULT SCREEN 
 // ---------------------------------------------------------------------
 function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) {
   const [copied, setCopied] = useState(false);
@@ -307,7 +307,7 @@ function ResultScreen({ qs, answers, t, onRetry, onHome, activeSubject, mode }) 
 }
 
 // ---------------------------------------------------------------------
-// SUBJECT SELECT (extracted)
+// SUBJECT SELECT 
 // ---------------------------------------------------------------------
 function SubjectSelect({ t, onToggleTheme, onBack, onSelect, mode }) {
   const label = MODE_LABELS[mode] || { title: "Select", sub: "" };
@@ -407,7 +407,7 @@ export default function App() {
   const cbtScoreSavedRef = useRef(false);
   const examScoreSavedRef = useRef(false);
 
-  // --- Navigation (wrapped in useCallback) ---
+  // --- Navigation ---
   const goTo = useCallback((newScreen) => {
     window.history.pushState({ screen: newScreen }, "");
     setHistoryStack(prev => [...prev, newScreen]);
@@ -468,7 +468,7 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // --- Toast warning for low time (only once per quiz) ---
+  // --- Toast ---
   useEffect(() => {
     if (cbtRunning) cbtWarnedRef.current = false;
   }, [cbtRunning]);
@@ -510,7 +510,7 @@ export default function App() {
     setFeedbackSending(false);
   }, [feedbackMessage, feedbackName, activeSubject]);
 
-  // --- Score saving wrappers (reset refs when starting) ---
+  // --- Score saving wrappers  ---
   const handleStartCbt = useCallback((subject, uid) => {
     cbtScoreSavedRef.current = false;
     startCbt(subject, goTo, uid);
@@ -562,7 +562,7 @@ export default function App() {
   const wrapStyle = { minHeight: "100vh", background: t.bg, fontFamily: "Georgia, serif", color: t.text };
 
   // -------------------------------------------------------------------------
-  // SCREEN RENDERING (simplified with switch)
+  // SCREEN RENDERING 
   // -------------------------------------------------------------------------
   const renderScreen = () => {
     switch (screen) {

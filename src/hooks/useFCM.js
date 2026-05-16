@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-
-import { db } from "../firebase";
 import {
   doc,
   setDoc,
@@ -8,14 +6,15 @@ import {
 } from "firebase/firestore";
 
 const FCM_TOKEN_KEY = "sn_fcm_token";
-const VAPID_KEY     = process.env.REACT_APP_VAPID_PUBLIC_KEY;
+const VAPID_KEY = process.env.REACT_APP_VAPID_PUBLIC_KEY;
 
 async function saveTokenToFirestore(token, uid = null) {
   try {
+    const { db } = await import("../firebase"); // ← lazy
     await setDoc(doc(db, "fcm_tokens", token), {
       token,
-      uid:       uid || null,       // linked to user if logged in
-      platform:  getPlatform(),
+      uid: uid || null,
+      platform: getPlatform(),
       updatedAt: serverTimestamp(),
     });
     console.log("FCM token saved to Firestore ✅");
@@ -24,21 +23,18 @@ async function saveTokenToFirestore(token, uid = null) {
   }
 }
 
-// ── DETECT PLATFORM ───────────────────────────────────────────────────────────
 function getPlatform() {
   const ua = navigator.userAgent;
   if (/iPhone|iPad|iPod/.test(ua)) return "ios";
-  if (/Android/.test(ua))          return "android";
+  if (/Android/.test(ua)) return "android";
   return "web";
 }
 
-// ── HOOK ──────────────────────────────────────────────────────────────────────
 export default function useFCM(user) {
-  const [fcmToken,  setFcmToken]  = useState(null);
-  const [fcmReady,  setFcmReady]  = useState(false);
-  const [fcmError,  setFcmError]  = useState(null);
+  const [fcmToken, setFcmToken] = useState(null);
+  const [fcmReady, setFcmReady] = useState(false);
+  const [fcmError, setFcmError] = useState(null);
 
-  // ── INITIALIZE FCM TOKEN ──
   useEffect(() => {
     if (Notification.permission !== "granted") return;
     initFCM();
@@ -46,14 +42,10 @@ export default function useFCM(user) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (
-        Notification.permission === "granted" &&
-        !fcmToken
-      ) {
+      if (Notification.permission === "granted" && !fcmToken) {
         initFCM();
       }
-    }, 3000); 
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [fcmToken]);
 
@@ -63,35 +55,28 @@ export default function useFCM(user) {
       const supported = await isSupported();
 
       if (!supported) {
-        console.log("FCM not supported on this device");
         setFcmError("FCM not supported");
         return;
       }
 
-      const {
-        getMessaging,
-        getToken,
-        onMessage,
-      } = await import("firebase/messaging");
+      const { app } = await import("../firebase"); // ← lazy
+      const { getMessaging, getToken, onMessage } = await import("firebase/messaging");
 
-      const messagingInstance = getMessaging();
-
+      const messagingInstance = getMessaging(app);
       const swReg = await navigator.serviceWorker.ready;
 
       const token = await getToken(messagingInstance, {
-        vapidKey:            VAPID_KEY,
+        vapidKey: VAPID_KEY,
         serviceWorkerRegistration: swReg,
       });
 
       if (!token) {
-        console.log("No FCM token received");
         setFcmError("No token received");
         return;
       }
 
       const savedToken = localStorage.getItem(FCM_TOKEN_KEY);
       if (token !== savedToken) {
-        // Save new or refreshed token to Firestore
         await saveTokenToFirestore(token, user?.uid);
         localStorage.setItem(FCM_TOKEN_KEY, token);
       }
@@ -100,18 +85,17 @@ export default function useFCM(user) {
       setFcmReady(true);
 
       onMessage(messagingInstance, async (payload) => {
-        console.log("FCM foreground message:", payload);
         const { title, body } = payload.notification || {};
         if (title && swReg.active) {
           await swReg.showNotification(title, {
-            body:    body || "Time to study!",
-            icon:    "/android-chrome-192x192.png",
-            badge:   "/android-chrome-192x192.png",
+            body: body || "Time to study!",
+            icon: "/android-chrome-192x192.png",
+            badge: "/android-chrome-192x192.png",
             vibrate: [200, 100, 200],
-            tag:     "fcm-foreground",
-            data:    { url: payload.data?.url || "/" },
+            tag: "fcm-foreground",
+            data: { url: payload.data?.url || "/" },
             actions: [
-              { action: "open",    title: "Study Now 📚" },
+              { action: "open", title: "Study Now 📚" },
               { action: "dismiss", title: "Later" },
             ],
           });
@@ -133,5 +117,4 @@ export default function useFCM(user) {
   }, [user, fcmToken]);
 
   return { fcmToken, fcmReady, fcmError };
-        }
-    
+}

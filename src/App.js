@@ -569,10 +569,11 @@ useEffect(() => {
     setScreen(newScreen);
   };
 
-  const goReplace = (newScreen) => {
-    setHistory((h) => [...h.slice(0, -1), newScreen]);
-    setScreen(newScreen);
-  };
+ const goReplace = (newScreen) => {
+  window.history.replaceState({ screen: newScreen }, "");
+  setHistory((h) => [...h.slice(0, -1), newScreen]);
+  setScreen(newScreen);
+};
   
   const goBack = () => {
     if (history.length <= 1) return;
@@ -584,14 +585,15 @@ useEffect(() => {
     if (quizInProgress) {
       setQuitModal({
         open: true,
-       onConfirm: () => {
-          setCbtRunning(false);
-          setExamRunning(false);
-          const destination = screen === "exam_quiz" ? "exam_setup" : "home";
-          setHistory((h) => [...h.slice(0, -1), destination]);
-          setScreen(destination);
-          setQuitModal({ open: false, onConfirm: null });
-        },
+      onConfirm: () => {
+  setCbtRunning(false);
+  setExamRunning(false);
+  const destination = screen === "exam_quiz" ? "exam_setup" : "home";
+  window.history.replaceState({ screen: destination }, "");
+  setHistory((h) => [...h.slice(0, -1), destination]);
+  setScreen(destination);
+  setQuitModal({ open: false, onConfirm: null });
+},
       });
       return;
     }
@@ -608,7 +610,10 @@ const goHome = () => {
   };
   
   // ── EFFECTS ──
-
+useEffect(() => {
+  window.history.replaceState({ screen: "home" }, "");
+}, []);
+  
   // Splash progress bar
   useEffect(() => {
     const interval = setInterval(() => {

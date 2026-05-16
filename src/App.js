@@ -1151,11 +1151,13 @@ const SPLASH_MESSAGES = [
             if (Object.keys(examAnswers).length > 0) {
               setQuitModal({
                 open: true,
-                onConfirm: () => {
-                  setExamRunning(false);
-                  setQuitModal({ open: false, onConfirm: null });
-                  goReplace("exam_setup");
-                },
+               onConfirm: () => {
+  setExamRunning(false);
+  setQuitModal({ open: false, onConfirm: null });
+  window.history.back();
+  setHistory((h) => [...h.slice(0, -1), "exam_setup"]);
+  setScreen("exam_setup");
+},
               });
             } else {
               goReplace("exam_setup");

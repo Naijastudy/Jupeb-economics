@@ -1,5 +1,5 @@
-
-import { initializeApp } from "firebase/app";
+// firebase.js
+import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
@@ -13,8 +13,10 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
+// ✅ Prevent duplicate initialization
+const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
 
-export const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+export { app };
+export const db             = getFirestore(app);
+export const auth           = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();

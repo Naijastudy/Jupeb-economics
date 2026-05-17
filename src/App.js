@@ -571,49 +571,47 @@ export default function App() {
         return (
           <div style={wrapStyle}>
             <OfflineIndicator isOnline={isOnline} wasOffline={wasOffline} />
-            <div style={{ background: "#0d9e6e", borderBottom: `3px solid ${t.gold}`, padding: "10px 16px", display: "flex", alignItems: "center" }}>
-  <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
+          <div style={{
+  background: '#00796B', // Teal green from the picture
+  padding: '12px 16px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  width: '100%',
+}}>
+  {/* Left: White Circle + LASU INFO */}
+  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
     <div style={{
-      display: "flex", alignItems: "center", gap: 10,
+      width: 40, height: 40,
+      borderRadius: '50%',
+      background: '#fff',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      border: '2px solid #fff',
     }}>
-      {/* Circle icon with speed lines */}
-      <div style={{
-        width: 42, height: 42, borderRadius: "50%",
-        background: "#fff",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        flexShrink: 0,
-        position: "relative",
-        overflow: "hidden",
-        border: "2px solid rgba(255,255,255,0.4)",
-      }}>
-        {/* Speed lines behind the S */}
-        <div style={{
-          position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)",
-          display: "flex", flexDirection: "column", gap: 3, padding: "0 3px",
-        }}>
-          {[10, 16, 10].map((w, i) => (
-            <div key={i} style={{ width: w, height: 2, background: "#0d9e6e", borderRadius: 2, opacity: 0.5 }} />
-          ))}
-        </div>
-        <span style={{
-          fontSize: 20, fontWeight: "900", color: "#0d9e6e",
-          fontFamily: "Impact, Arial Black, sans-serif",
-          fontStyle: "italic",
-          zIndex: 1,
-        }}>S</span>
-      </div>
-
-      {/* STUDYNAIJA italic text */}
       <span style={{
-        fontSize: 26, fontWeight: "900", fontStyle: "italic",
-        color: "#fff",
-        fontFamily: "Impact, Arial Black, sans-serif",
-        letterSpacing: 2,
-        textTransform: "uppercase",
-        textShadow: "1px 1px 3px rgba(0,0,0,0.4)",
-        lineHeight: 1,
+        color: '#00796B',
+        fontWeight: '900',
+        fontSize: '20px',
+        fontFamily: 'Arial, sans-serif',
       }}>
-        STUDY<span style={{ color: "#f0d080" }}>NAIJA</span>
+        LI {/* Change this to SN or your initials */}
+      </span>
+    </div>
+
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: 0 }}>
+      <span style={{
+        color: '#fff', fontWeight: '900', fontSize: '22px',
+        fontFamily: 'Impact, Arial Black, sans-serif',
+        letterSpacing: 1
+      }}>
+        LASU
+      </span>
+      <span style={{
+        color: '#fff', fontWeight: '900', fontSize: '18px',
+        fontFamily: 'Impact, Arial Black, sans-serif',
+        letterSpacing: 1, marginLeft: 4
+      }}>
+        INFO
       </span>
     </div>
   </div>

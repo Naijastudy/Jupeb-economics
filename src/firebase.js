@@ -18,8 +18,6 @@ export const auth         = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
 // ── SAFE MESSAGING INIT ───────────────────────────────────────────────────────
-// Messaging is not supported on all browsers (e.g. Firefox, some iOS)
-// So we load it dynamically and export safely
 export let messaging  = null;
 export let getToken   = null;
 export let onMessage  = null;
@@ -40,7 +38,6 @@ const initMessaging = async () => {
       getToken   = _getToken;
       onMessage  = _onMessage;
 
-      console.log("Firebase messaging initialized ✅");
     } else {
       console.log("Firebase messaging not supported on this device");
     }

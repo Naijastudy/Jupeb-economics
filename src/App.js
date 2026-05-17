@@ -572,41 +572,11 @@ export default function App() {
           <div style={wrapStyle}>
             <OfflineIndicator isOnline={isOnline} wasOffline={wasOffline} />
             <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
-              <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
-  {/* Speed-line logo — like LASU INFO but yours */}
-  <div style={{
-    display: "flex", alignItems: "center", gap: 10,
-    background: "#0d9e6e",
-    borderRadius: 10,
-    padding: "6px 14px 6px 10px",
-    border: "2px solid #0b8a60",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
-  }}>
-    {/* Icon circle with speed lines */}
-    <div style={{
-      width: 36, height: 36, borderRadius: "50%",
-      background: "#fff", border: "2px solid #0d9e6e",
-      display: "flex", alignItems: "center", justifyContent: "center",
-      fontSize: 18, fontWeight: "900", color: "#0d9e6e",
-      fontFamily: "Georgia, serif", letterSpacing: -2,
-      boxShadow: "inset 0 0 0 2px #0d9e6e",
-    }}>
-      S
-    </div>
-    {/* Text with speed effect */}
-    <div style={{ lineHeight: 1 }}>
-      <span style={{
-        fontSize: 22, fontWeight: "900", fontStyle: "italic",
-        color: "#fff", letterSpacing: 2,
-        textTransform: "uppercase",
-        fontFamily: "Impact, Arial Black, sans-serif",
-        textShadow: "2px 2px 0 rgba(0,0,0,0.3), -1px 0 0 rgba(255,255,255,0.1)",
-      }}>
-        STUDY<span style={{ color: "#f0d080" }}>NAIJA</span>
-      </span>
-    </div>
+  <div style={{ flex: 1 }}>
+    <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
+    <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
+    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
   </div>
-</div>
               <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
                 {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
               </button>

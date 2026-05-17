@@ -11,7 +11,7 @@ function RadioDot({ selected, color }) {
 }
 
 export default function Profile({
-  t, user, userScores, onLogin, onLogout, onBack, goldBtn, card,
+  t, user, userScores, onLogin, onLogout, onBack, goldBtn, card, loadMoreScores, hasMoreScores, loadingMore,
 }) {
   const [expandedScore, setExpandedScore] = useState(null);
 
@@ -169,7 +169,27 @@ export default function Profile({
                 </div>
               ))
             )}
-
+{hasMoreScores && (
+  <button
+    onClick={loadMoreScores}
+    disabled={loadingMore}
+    style={{
+      width: "100%",
+      background: "transparent",
+      border: `1px solid ${t.border}`,
+      borderRadius: 12,
+      color: t.textSub,
+      fontSize: 13,
+      fontWeight: "bold",
+      padding: 14,
+      cursor: loadingMore ? "default" : "pointer",
+      marginBottom: 14,
+      opacity: loadingMore ? 0.6 : 1,
+    }}
+  >
+    {loadingMore ? "Loading..." : "Load More Scores"}
+  </button>
+)}
             <button onClick={onLogout} style={{ width: "100%", background: "transparent", border: `1px solid ${t.wrongBorder}`, borderRadius: 12, color: t.wrongBorder, fontSize: 13, fontWeight: "bold", padding: 14, cursor: "pointer", marginTop: 8 }}>
               Sign Out
             </button>
@@ -192,4 +212,10 @@ Profile.propTypes = {
   onBack: PropTypes.func.isRequired,
   goldBtn: PropTypes.object.isRequired,
   card: PropTypes.object.isRequired,
+};
+Profile.defaultProps = {
+  user: null,
+  loadMoreScores: () => {},
+  hasMoreScores: false,
+  loadingMore: false,
 };

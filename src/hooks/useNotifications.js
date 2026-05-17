@@ -1,215 +1,294 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
+// ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const NOTIF_KEY = "sn_notifications";
-const ALARM_KEY = "sn_alarm_time";
-const SESSION_KEY = "sn_notif_registered";
 
+// ── DEFAULT SETTINGS ──────────────────────────────────────────────────────────
+const DEFAULT_SETTINGS = {
+  enabled:        false,
+  dailyReminder:  true,
+  streakReminder: true,
+  reminderHour:   18,
+  fcmEnabled:     false, // ✅ tracks if FCM is active
+};
+
+// ── NOTIFICATION MESSAGES ─────────────────────────────────────────────────────
+const DAILY_MESSAGES = [
+  { title: "StudyNaija 📚", body: "Time to study! Keep your streak alive 🔥" },
+  { title: "StudyNaija 🎯", body: "Your JUPEB exam won't pass itself. Let's go!" },
+  { title: "StudyNaija 💡", body: "10 minutes of study is better than zero. Start now!" },
+  { title: "StudyNaija 🏆", body: "Champions study every day. Are you a champion?" },
+  { title: "StudyNaija 📝", body: "New day, new questions. Keep the momentum going!" },
+  { title: "StudyNaija ⚡", body: "Your future self will thank you for studying today." },
+];
+
+const STREAK_MESSAGES = [
+  { title: "StudyNaija 🔥", body: "Don't break your streak! Study something today." },
+  { title: "StudyNaija ⚡", body: "Your streak is at risk! Come study now." },
+  { title: "StudyNaija 💪", body: "Keep it going! One question can save your streak." },
+];
+
+function getRandomMessage(messages) {
+  return messages[Math.floor(Math.random() * messages.length)];
+}
+
+// ── SETTINGS HELPERS ──────────────────────────────────────────────────────────
 function getNotifSettings() {
   try {
     const raw = localStorage.getItem(NOTIF_KEY);
-    if (!raw) return {
-      enabled: false,
-      dailyReminder: true,
-      streakReminder: true,
-      reminderHour: 18,
-    };
-    return JSON.parse(raw);
+    if (!raw) return DEFAULT_SETTINGS;
+    return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
   } catch {
-    return {
-      enabled: false,
-      dailyReminder: true,
-      streakReminder: true,
-      reminderHour: 18,
-    };
+    return DEFAULT_SETTINGS;
   }
 }
 
 function saveNotifSettings(settings) {
   try {
-    localStorage.setItem(
-      NOTIF_KEY,
-      JSON.stringify(settings)
-    );
+    localStorage.setItem(NOTIF_KEY, JSON.stringify(settings));
   } catch {}
 }
 
-function scheduleNotification(hour) {
-  // 🚫 Prevent multiple registrations per session
-  if (sessionStorage.getItem(SESSION_KEY)) return;
-  sessionStorage.setItem(SESSION_KEY, "1");
+// ── SCHEDULE VIA SERVICE WORKER ───────────────────────────────────────────────
+// ✅ Fallback for when FCM server push is not available
+async function scheduleViaServiceWorker(hour, type = "daily") {
+  try {
+    if (!("serviceWorker" in navigator)) return false;
+    const registration = await navigator.serviceWorker.ready;
 
-  // Cancel existing alarm
-  const existingId = localStorage.getItem(ALARM_KEY);
-  if (existingId) clearTimeout(Number(existingId));
+    const now    = new Date();
+    const target = new Date();
+    target.setHours(hour, 0, 0, 0);
+    if (target <= now) target.setDate(target.getDate() + 1);
 
-  const now = new Date();
-  const target = new Date();
-  target.setHours(hour, 0, 0, 0);
+    const delayMs = target.getTime() - now.getTime();
 
-  if (target <= now) {
-    target.setDate(target.getDate() + 1);
-  }
+    registration.active?.postMessage({
+      type:    "SCHEDULE_NOTIFICATION",
+      payload: {
+        notifType:   type,
+        hour,
+        delayMs,
+        triggerTime: target.getTime(),
+      },
+    });
 
-  const delay = target.getTime() - now.getTime();
-
-  const id = setTimeout(() => {
-    // ✅ Allow next day's scheduling
-    sessionStorage.removeItem(SESSION_KEY);
-
-    if (Notification.permission === "granted") {
-      new Notification("StudyNaija 📚", {
-        body: "Time to study! Keep your streak alive 🔥",
-        icon: "/android-chrome-192x192.png",
-        badge: "/android-chrome-192x192.png",
-        vibrate: [200, 100, 200],
-        tag: "daily-reminder",
-      });
-    }
-
-    // 🔁 Reschedule next day
-    scheduleNotification(hour);
-  }, delay);
-
-  localStorage.setItem(ALARM_KEY, String(id));
-}
-
-function cancelNotification() {
-  const existingId = localStorage.getItem(ALARM_KEY);
-  if (existingId) {
-    clearTimeout(Number(existingId));
-    localStorage.removeItem(ALARM_KEY);
+    console.log(
+      `[SW] Scheduled ${type} in ${Math.round(delayMs / 60000)} min`
+    );
+    return true;
+  } catch (e) {
+    console.warn("SW schedule failed:", e.message);
+    return false;
   }
 }
 
+// ── CANCEL VIA SERVICE WORKER ─────────────────────────────────────────────────
+async function cancelViaServiceWorker(type = "all") {
+  try {
+    if (!("serviceWorker" in navigator)) return;
+    const registration = await navigator.serviceWorker.ready;
+    registration.active?.postMessage({
+      type:    "CANCEL_NOTIFICATION",
+      payload: { notifType: type },
+    });
+  } catch (e) {
+    console.warn("SW cancel failed:", e.message);
+  }
+}
+
+// ── HOOK ──────────────────────────────────────────────────────────────────────
 export default function useNotifications() {
   const [permission, setPermission] = useState(
     typeof Notification !== "undefined"
       ? Notification.permission
       : "default"
   );
-  const [settings, setSettings] = useState(
-    getNotifSettings
-  );
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [settings, setSettings] = useState(getNotifSettings);
+  const [loading,  setLoading]  = useState(false);
+  const [error,    setError]    = useState(null);
+  const [swReady,  setSwReady]  = useState(false);
 
-  // Reschedule on app load if enabled
- useEffect(() => {
-  if (typeof Notification === "undefined") return;
-  const s = getNotifSettings();
-   if (s.enabled) {
-    setError(null); 
-   }
-  if (
-    s.enabled &&
-    s.dailyReminder &&
-    Notification.permission === "granted"
-  ) {
-    scheduleNotification(s.reminderHour);
-  }
-}, []);
-  
-  const requestPermission = async () => {
-  setLoading(true);
-  setError(null);
+  // ── CHECK SW READINESS ──
+  useEffect(() => {
+    if (!("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.ready.then((reg) => {
+      setSwReady(!!reg.active);
+    });
+  }, []);
 
-  // Check if notifications supported
-  if (typeof Notification === "undefined") {
-    setError(
-      "Notifications not supported. On iPhone, add app to Home Screen first!"
-    );
-    setLoading(false);
-    return;
-  }
+  // ── RESTORE SCHEDULES ON APP LOAD ──
+  // ✅ Re-schedules SW timers every time app opens
+  // Acts as fallback in case FCM server push hasn't fired
+  useEffect(() => {
+    if (!swReady) return;
+    const s = getNotifSettings();
+    if (!s.enabled || Notification.permission !== "granted") return;
 
-  try {
-    const result =
-      await Notification.requestPermission();
-    setPermission(result);
+    if (s.dailyReminder) {
+      scheduleViaServiceWorker(s.reminderHour, "daily");
+    }
+    if (s.streakReminder) {
+      const streakHour = Math.max(0, s.reminderHour - 2);
+      scheduleViaServiceWorker(streakHour, "streak");
+    }
+  }, [swReady]);
 
-    if (result === "granted") {
-      setError(null);
-      const updated = {
-        ...settings,
-        enabled: true,
-      };
+  // ── REQUEST PERMISSION ────────────────────────────────────────────────────
+  const requestPermission = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+
+    if (typeof Notification === "undefined") {
+      setError(
+        "Notifications not supported. On iPhone, add app to Home Screen first!"
+      );
+      setLoading(false);
+      return;
+    }
+
+    if (!("serviceWorker" in navigator)) {
+      setError("Service Worker not supported on this browser.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      // Step 1 — Request permission
+      const result = await Notification.requestPermission();
+      setPermission(result);
+
+      if (result !== "granted") {
+        setError("Permission denied. Please enable in phone settings.");
+        setLoading(false);
+        return;
+      }
+
+      // Step 2 — Get SW registration
+      const registration = await navigator.serviceWorker.ready;
+
+      // Step 3 — Save settings
+      // ✅ fcmEnabled will be updated by useFCM after token is saved
+      const updated = { ...settings, enabled: true };
       setSettings(updated);
       saveNotifSettings(updated);
 
+      // Step 4 — Schedule SW fallback timers
       if (updated.dailyReminder) {
-        scheduleNotification(updated.reminderHour);
+        await scheduleViaServiceWorker(updated.reminderHour, "daily");
+      }
+      if (updated.streakReminder) {
+        const streakHour = Math.max(0, updated.reminderHour - 2);
+        await scheduleViaServiceWorker(streakHour, "streak");
       }
 
-      new Notification("StudyNaija 🎉", {
-        body: "Notifications enabled! You'll be reminded to study daily.",
-        icon: "/android-chrome-192x192.png",
+      // Step 5 — Show welcome notification via SW
+      await registration.showNotification("StudyNaija 🎉", {
+        body:    "Notifications enabled! You'll be reminded to study daily.",
+        icon:    "/android-chrome-192x192.png",
+        badge:   "/android-chrome-192x192.png",
+        vibrate: [200, 100, 200],
+        tag:     "welcome",
+        data:    { url: "/" },
       });
-    } else {
+
+    } catch (e) {
+      console.log("Notification setup error:", e);
       setError(
-        "Permission denied. Please enable in phone settings."
+        "Setup failed. On iPhone, add app to Home Screen first!"
       );
     }
-  } catch (e) {
-    console.log("Notification error:", e);
-    setError(
-      "Notifications not supported. On iPhone, add app to Home Screen first!"
-    );
-  }
-  setLoading(false);
-};
-  
-  const disableNotifications = () => {
-    cancelNotification();
+
+    setLoading(false);
+  }, [settings]);
+
+  // ── MARK FCM AS ENABLED ───────────────────────────────────────────────────
+  // ✅ Called by useFCM hook after FCM token is saved to Firestore
+  const markFcmEnabled = useCallback(() => {
+    const updated = { ...getNotifSettings(), fcmEnabled: true };
+    setSettings(updated);
+    saveNotifSettings(updated);
+  }, []);
+
+  // ── DISABLE NOTIFICATIONS ─────────────────────────────────────────────────
+  const disableNotifications = useCallback(async () => {
+    await cancelViaServiceWorker("all");
     const updated = {
       ...settings,
-      enabled: false,
+      enabled:    false,
+      fcmEnabled: false,
     };
     setSettings(updated);
     saveNotifSettings(updated);
-  };
+  }, [settings]);
 
-  const updateSettings = (key, value) => {
+  // ── UPDATE SETTINGS ───────────────────────────────────────────────────────
+  const updateSettings = useCallback(async (key, value) => {
     const updated = { ...settings, [key]: value };
     setSettings(updated);
     saveNotifSettings(updated);
 
-    // Reschedule if time changed
-    if (key === "reminderHour" && settings.enabled) {
-      scheduleNotification(value);
-    }
+    if (!settings.enabled) return;
 
-    // Handle daily reminder toggle
-    if (key === "dailyReminder") {
-      if (value) {
-        scheduleNotification(settings.reminderHour);
-      } else {
-        cancelNotification();
+    if (key === "reminderHour") {
+      await scheduleViaServiceWorker(value, "daily");
+      if (updated.streakReminder) {
+        const streakHour = Math.max(0, value - 2);
+        await scheduleViaServiceWorker(streakHour, "streak");
       }
     }
-  };
 
-  // Send streak reminder
-  const sendStreakReminder = () => {
-    if (
-      settings.streakReminder &&
-      Notification.permission === "granted"
-    ) {
-      new Notification("StudyNaija 🔥", {
-        body: "Don't break your streak! Study something today.",
-        icon: "/android-chrome-192x192.png",
-        tag: "streak-reminder",
-      });
+    if (key === "dailyReminder") {
+      if (value) await scheduleViaServiceWorker(settings.reminderHour, "daily");
+      else       await cancelViaServiceWorker("daily");
     }
-  };
+
+    if (key === "streakReminder") {
+      if (value) {
+        const streakHour = Math.max(0, settings.reminderHour - 2);
+        await scheduleViaServiceWorker(streakHour, "streak");
+      } else {
+        await cancelViaServiceWorker("streak");
+      }
+    }
+  }, [settings]);
+
+  // ── SEND STREAK REMINDER IMMEDIATELY ─────────────────────────────────────
+  const sendStreakReminder = useCallback(async () => {
+    if (!settings.streakReminder) return;
+    if (Notification.permission !== "granted") return;
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      const msg = getRandomMessage(STREAK_MESSAGES);
+      await registration.showNotification(msg.title, {
+        body:     msg.body,
+        icon:     "/android-chrome-192x192.png",
+        badge:    "/android-chrome-192x192.png",
+        vibrate:  [200, 100, 200],
+        tag:      "streak-reminder",
+        renotify: true,
+        data:     { url: "/" },
+        actions: [
+          { action: "open",    title: "Study Now 📚" },
+          { action: "dismiss", title: "Later" },
+        ],
+      });
+    } catch (e) {
+      console.warn("Streak reminder failed:", e.message);
+    }
+  }, [settings.streakReminder]);
 
   return {
     permission,
     settings,
     loading,
     error,
+    swReady,
     requestPermission,
+    markFcmEnabled,   
     disableNotifications,
     updateSettings,
     sendStreakReminder,
   };
-    }
+        }
+                                     

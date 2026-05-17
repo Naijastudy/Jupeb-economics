@@ -11,23 +11,19 @@ const STREAK_KEY = "sn_streak";
 
 // ── Use LOCAL date not UTC ──
 function getTodayStr() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1)
-    .padStart(2, "0");
-  const day = String(now.getDate())
-    .padStart(2, "0");
+  const now   = new Date();
+  const year  = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day   = String(now.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
 
 function getYesterdayStr() {
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  const year = yesterday.getFullYear();
-  const month = String(yesterday.getMonth() + 1)
-    .padStart(2, "0");
-  const day = String(yesterday.getDate())
-    .padStart(2, "0");
+  const year  = yesterday.getFullYear();
+  const month = String(yesterday.getMonth() + 1).padStart(2, "0");
+  const day   = String(yesterday.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
 
@@ -45,51 +41,41 @@ function loadLocalStreak() {
 // ── Save to localStorage ──
 function saveLocalStreak(streak) {
   try {
-    localStorage.setItem(
-      STREAK_KEY,
-      JSON.stringify(streak)
-    );
+    localStorage.setItem(STREAK_KEY, JSON.stringify(streak));
   } catch {}
 }
 
 export default function useStreak(user) {
-  const [streak, setStreak] = useState(
-    loadLocalStreak
-  );
+  const [streak, setStreak] = useState(loadLocalStreak);
 
   // ── Load from Firestore when user logs in ──
   useEffect(() => {
-    if (user) {
-      loadFirestoreStreak(user.uid);
-    }
+    if (user) loadFirestoreStreak(user.uid);
   }, [user]);
 
   const loadFirestoreStreak = async (uid) => {
     try {
-      const ref = doc(db, "streaks", uid);
+      const ref  = doc(db, "streaks", uid);
       const snap = await getDoc(ref);
 
       if (snap.exists()) {
         const data = snap.data();
         const firestoreStreak = {
-          count: data.count || 0,
+          count:    data.count    || 0,
           lastDate: data.lastDate || null,
         };
 
-        // Use whichever is higher
-        // (local or firestore)
+        // Use whichever is higher — local or Firestore
         const local = loadLocalStreak();
-        const best =
-          firestoreStreak.count >= local.count
-            ? firestoreStreak
-            : local;
+        const best  = firestoreStreak.count >= local.count
+          ? firestoreStreak
+          : local;
 
         setStreak(best);
         saveLocalStreak(best);
       }
     } catch (e) {
       console.log("Error loading streak:", e);
-      // Fall back to localStorage
       setStreak(loadLocalStreak());
     }
   };
@@ -97,8 +83,8 @@ export default function useStreak(user) {
   const saveFirestoreStreak = async (uid, data) => {
     try {
       await setDoc(doc(db, "streaks", uid), {
-        count: data.count,
-        lastDate: data.lastDate,
+        count:     data.count,
+        lastDate:  data.lastDate,
         updatedAt: serverTimestamp(),
       });
     } catch (e) {
@@ -106,28 +92,28 @@ export default function useStreak(user) {
     }
   };
 
+  // ── ✅ FIX — updateStreak now called on quiz COMPLETION not start ──
   const updateStreak = (uid) => {
-    const today = getTodayStr();
+    const today     = getTodayStr();
     const yesterday = getYesterdayStr();
-    const current = loadLocalStreak();
+    const current   = loadLocalStreak();
 
-    // Already updated today
+    // Already updated today — no change needed
     if (current.lastDate === today) {
       return current;
     }
 
-    // Calculate new count
-    const newCount =
-      current.lastDate === yesterday
-        ? current.count + 1  // consecutive day ✅
-        : 1;                 // streak broken, restart
+    // ✅ Only reaches here if student actually completed a quiz today
+    const newCount = current.lastDate === yesterday
+      ? current.count + 1  // consecutive day ✅
+      : 1;                 // streak broken — restart from 1
 
     const updated = {
-      count: newCount,
+      count:    newCount,
       lastDate: today,
     };
 
-    // Save locally
+    // Save locally first — works offline too
     saveLocalStreak(updated);
     setStreak(updated);
 
@@ -150,4 +136,4 @@ export default function useStreak(user) {
   };
 
   return { streak, updateStreak, resetStreak };
-    }
+}

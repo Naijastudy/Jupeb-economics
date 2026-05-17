@@ -3,7 +3,7 @@ import { db } from "../firebase";
 import { collection, getDocs, query } from "firebase/firestore";
 
 const FB_CACHE_KEY = "sn_fb_questions";
-const FB_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours offline
+const FB_CACHE_TTL = 24 * 60 * 60 * 1000; 
 
 function getCachedQuestions() {
   try {

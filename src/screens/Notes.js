@@ -195,6 +195,33 @@ export function NotesView({ t, data, noteTopic, onBack, card }) {
   );
 })}
   </div>
+
+{n.table && (       
+  <div style={{ overflowX: "auto", marginTop: "16px" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
+      <thead>
+        <tr>
+          {n.table.headers.map((h, j) => (
+            <th key={j} style={{ padding: "8px 10px", background: `${t.gold}33`, color: t.gold, borderBottom: `2px solid ${t.gold}55`, textAlign: "left", fontWeight: "bold" }}>
+              {h}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {n.table.rows.map((row, j) => (
+          <tr key={j} style={{ background: j % 2 === 0 ? "transparent" : `${t.gold}11` }}>
+            {row.map((cell, k) => (
+              <td key={k} style={{ padding: "8px 10px", borderBottom: `1px solid ${t.border}`, color: t.exText, fontWeight: k === 0 ? "bold" : "normal" }}>
+                {cell}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}                
 {n.image && (
   <img src={n.image} alt={n.title}
     style={{ width: "100%", borderRadius: 10, marginTop: 14, border: `1px solid ${t.border}` }}

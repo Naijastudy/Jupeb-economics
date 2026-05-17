@@ -595,17 +595,7 @@ export default function App() {
   alignItems: "center",
   gap: 12,
 }}>
-  {/* SN logo tile */}
-  <div style={{
-    width: 40, height: 40, borderRadius: 10, flexShrink: 0,
-    background: `linear-gradient(135deg, ${t.gold} 0%, #E8820C 100%)`,
-    display: "flex", alignItems: "center", justifyContent: "center",
-    fontFamily: "monospace", fontWeight: 700, fontSize: 13, color: "#0B0F1A",
-    boxShadow: `0 4px 14px rgba(245,166,35,0.3)`,
-  }}>
-    SN
-  </div>
-
+ 
   {/* Text group */}
   <div style={{ flex: 1 }}>
     <div style={{ fontSize: 9, color: t.gold, letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>

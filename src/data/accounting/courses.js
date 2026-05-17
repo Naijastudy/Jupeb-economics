@@ -55,4 +55,12 @@ export const courses = [
     ],
   },
 ];
-export const grading = [];
+export const grading = [
+  { marks: "70-100", grade: "A", points: 5, remark: "Excellent" },
+  { marks: "60-69",  grade: "B", points: 4, remark: "Very Good" },
+  { marks: "50-59",  grade: "C", points: 3, remark: "Good" },
+  { marks: "45-49",  grade: "D", points: 2, remark: "Merit" },
+  { marks: "40-44",  grade: "E", points: 1, remark: "Pass" },
+  { marks: "0-39",   grade: "F", points: 0, remark: "Fail" },
+];
+

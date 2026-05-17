@@ -617,8 +617,9 @@ export default function App() {
               </button>
             </div>
             <div style={{ padding: "16px" }}>
-              <StreakBanner streak={streak} t={t} />
-              <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
+              {/* --- TEMPORARY TEST STREAK --- */}
+<StreakBanner streak={{ count: 7, tier: "🔥" }} t={t} />
+                <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>
                 <div style={{ fontSize: 11, color: t.gold, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Economics · Government · More coming</div>
                 <div style={{ fontSize: 20, fontWeight: "bold", color: "#fff", marginBottom: 6 }}>JUPEB Exam Prep 📚📝</div>
                 <div style={{ fontSize: 13, color: t.heroText, lineHeight: 1.6 }}>CBT, Exam, Notes & Past Questions. 100% free.</div>

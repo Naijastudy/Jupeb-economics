@@ -300,17 +300,17 @@ EXAMPLE — Trial Balance of Adaeze Stores as at 31 January:`,
       key: "After writing journal entries, each debit and credit is posted to its respective T-account in the ledger. The balance is then calculated and carried down at the end of the period.",
       body: `Using the transactions above, the Cash Account and Fatima Wholesale Creditor Account would appear as follows:`,
       table: {
-        headers: ["Dr   CASH ACCOUNT   Cr", ""],
-        rows: [
-          ["Date | Details | ₦", "Date | Details | ₦"],
-          ["Jan 1  | Capital — Adeola  | 1,000,000", "Jan 4  | Rent (UBA cheque)  | 50,000"],
-          ["Jan 3  | Sales             | 200,000", "Jan 6  | Sales Returns — Bola | 20,000"],
-          ["       |                   |", "Jan 15 | Drawings — Adeola | 40,000"],
-          ["       |                   |", "Jan 31 | Balance c/d       | 1,090,000"],
-          ["TOTAL  |                   | 1,200,000", "TOTAL  |                   | 1,200,000"],
-          ["Feb 1  | Balance b/d       | 1,090,000", ""],
-        ],
-      },
+  headers: ["Dr", " ", "CASH ACCOUNT", " ", " ", "Cr"],
+  rows: [
+    ["Date",   "Details",               "₦",         "Date",   "Details",             "₦"],
+    ["Jan 1",  "Capital — Adeola",  "1,000,000",  "Jan 4",  "Rent (UBA cheque)",   "50,000"],
+    ["Jan 3",  "Sales",             "200,000",    "Jan 6",  "Sales Returns — Bola","20,000"],
+    ["",       "",                  "",           "Jan 15", "Drawings — Adeola",   "40,000"],
+    ["",       "",                  "",           "Jan 31", "Balance c/d",         "1,090,000"],
+    ["TOTAL",  "",                  "1,200,000",  "TOTAL",  "",                    "1,200,000"],
+    ["Feb 1",  "Balance b/d",       "1,090,000",  "",       "",                    ""],
+  ],
+},
     },
   ],
   errors: [
@@ -386,19 +386,18 @@ PURPOSE:
 - Reduces fraud risk — the control account is maintained by a different person from the subsidiary ledger.
 
 EXAMPLE — Sales Ledger Control Account of Gbenga Electronics, Ibadan (January):`,
-      table: {
-        headers: ["Dr   SALES LEDGER CONTROL ACCOUNT   Cr", ""],
-        rows: [
-          ["Details | ₦", "Details | ₦"],
-          ["Balance b/d (opening debtors) | 150,000", "Cash received from debtors | 300,000"],
-          ["Credit Sales (from Sales Day Book) | 500,000", "Discount Allowed to debtors | 10,000"],
-          ["Dishonoured cheques (returned) | 5,000", "Sales Returns (Returns Inward) | 20,000"],
-          ["", "Bad Debts Written Off | 5,000"],
-          ["", "Balance c/d (closing debtors) | 320,000"],
-          ["TOTAL | 655,000", "TOTAL | 655,000"],
-          ["Balance b/d (Feb 1) | 320,000", ""],
-        ],
-      },
+     table: { headers: ["Dr", " ", "SALES LEDGER CONTROL ACCOUNT", " ", " ", "Cr"],
+rows: [
+  ["Details",                            "₦",       "Date/Details",                     "₦",       "", ""],
+  ["Balance b/d (opening debtors)",      "150,000", "Cash received from debtors",       "300,000", "", ""],
+  ["Credit Sales (from Sales Day Book)", "500,000", "Discount Allowed to debtors",      "10,000",  "", ""],
+  ["Dishonoured cheques (returned)",     "5,000",   "Sales Returns (Returns Inward)",   "20,000",  "", ""],
+  ["",                                   "",        "Bad Debts Written Off",            "5,000",   "", ""],
+  ["",                                   "",        "Balance c/d (closing debtors)",    "320,000", "", ""],
+  ["TOTAL",                              "655,000", "TOTAL",                            "655,000", "", ""],
+  ["Balance b/d (Feb 1)",                "320,000", "",                                 "",        "", ""],
+],
+    },
     },
   ],
   bank_rec: [
@@ -434,16 +433,16 @@ Items on bank statement NOT in the cash book:
 
 Updated Cash Book:`,
       table: {
-        headers: ["Dr   CASH BOOK (Bank Column) — UPDATED   Cr", ""],
-        rows: [
-          ["Details | ₦", "Details | ₦"],
-          ["Balance b/d (before update) | 190,000", "GTBank — COT charges | 1,500"],
-          ["Interest received (GTBank) | 3,000", "Standing order — AIICO Insurance | 5,000"],
-          ["", "Balance c/d (updated) | 186,500"],
-          ["TOTAL | 193,000", "TOTAL | 193,000"],
-          ["Balance b/d (updated) | 186,500", ""],
-        ],
-      },
+  headers: ["Dr", " ", "CASH BOOK (Bank Column) — UPDATED", " ", " ", "Cr"],
+  rows: [
+    ["Details",                        "₦",       "Details",                          "₦",      "", ""],
+    ["Balance b/d (before update)",    "190,000", "GTBank — COT charges",             "1,500",  "", ""],
+    ["Interest received (GTBank)",     "3,000",   "Standing order — AIICO Insurance", "5,000",  "", ""],
+    ["",                               "",        "Balance c/d (updated)",            "186,500","", ""],
+    ["TOTAL",                          "193,000", "TOTAL",                            "193,000","", ""],
+    ["Balance b/d (updated)",          "186,500", "",                                 "",       "", ""],
+  ],
+},
     },
     {
       title: "Preparing the Bank Reconciliation Statement",
@@ -814,17 +813,17 @@ Appropriations:
 
 PARTNERS' CURRENT ACCOUNTS (Continuing Amaka and Bode example):`,
       table: {
-        headers: ["Dr   CURRENT ACCOUNTS   Cr", "", "", ""],
-        rows: [
-          ["Details", "Amaka (₦)", "Bode (₦)", "Details | Amaka (₦) | Bode (₦)"],
-          ["Drawings", "150,000", "100,000", "Balance b/d (opening) | 20,000 | 15,000"],
-          ["Interest on Drawings", "12,000", "8,000", "Salary — Amaka | 120,000 | —"],
-          ["Balance c/d", "218,000", "67,000", "Interest on Capital | 30,000 | 20,000"],
-          ["", "", "", "Share of Residual Profit | 210,000 | 140,000"],
-          ["TOTAL", "380,000", "175,000", "TOTAL | 380,000 | 175,000"],
-          ["", "", "", "Balance b/d | 218,000 | 67,000"],
-        ],
-      },
+  headers: ["Dr", "CURRENT ACCOUNTS", "Cr", "", "", "", ""],
+  rows: [
+    ["Details",               "Amaka (₦)", "Bode (₦)", "Details",                    "Amaka (₦)", "Bode (₦)", ""],
+    ["Drawings",              "150,000",   "100,000",  "Balance b/d (opening)",      "20,000",    "15,000",   ""],
+    ["Interest on Drawings",  "12,000",    "8,000",    "Salary — Amaka",             "120,000",   "—",        ""],
+    ["Balance c/d",           "218,000",   "67,000",   "Interest on Capital",        "30,000",    "20,000",   ""],
+    ["",                      "",          "",         "Share of Residual Profit",   "210,000",   "140,000",  ""],
+    ["TOTAL",                 "380,000",   "175,000",  "TOTAL",                      "380,000",   "175,000",  ""],
+    ["",                      "",          "",         "Balance b/d",                "218,000",   "67,000",   ""],
+  ],
+},
     },
     {
       title: "Partnership Balance Sheet",
@@ -911,24 +910,29 @@ STEP 1 — Statement of Affairs (Opening):`,
       body: `NET PROFIT CALCULATION:
 
 Closing Capital:          ₦370,000
+
 Less: Opening Capital:   (₦260,000)
+
 Increase in Capital:       ₦110,000
+
 Add: Drawings:             ₦150,000
+
 Less: Additional Capital:       ₦0
+
 NET PROFIT FOR THE YEAR:  ₦260,000
 
 RECONSTRUCTING TOTAL CREDIT SALES (using Debtors T-account):`,
       table: {
-        headers: ["Dr   DEBTORS (TOTAL DEBTORS) ACCOUNT   Cr", ""],
-        rows: [
-          ["Details | ₦", "Details | ₦"],
-          ["Balance b/d (opening debtors) | 30,000", "Cash received from debtors | 180,000"],
-          ["Credit Sales (MISSING — balancing figure) | 200,000", "Bad debts written off | 0"],
-          ["", "Balance c/d (closing debtors) | 50,000"],
-          ["TOTAL | 230,000", "TOTAL | 230,000"],
-          ["∴ Total Credit Sales = ₦200,000", ""],
-        ],
-      },
+  headers: ["Dr", " ", "DEBTORS (TOTAL DEBTORS) ACCOUNT", " ", " ", "Cr"],
+  rows: [
+    ["Details",                                  "₦",       "Details",                        "₦",       "", ""],
+    ["Balance b/d (opening debtors)",            "30,000",  "Cash received from debtors",     "180,000", "", ""],
+    ["Credit Sales (MISSING — balancing figure)","200,000", "Bad debts written off",          "0",       "", ""],
+    ["",                                         "",        "Balance c/d (closing debtors)",  "50,000",  "", ""],
+    ["TOTAL",                                    "230,000", "TOTAL",                          "230,000", "", ""],
+    ["∴ Total Credit Sales = ₦200,000",          "",        "",                               "",        "", ""],
+  ],
+},
     },
   ],
   clubs: [
@@ -936,6 +940,7 @@ RECONSTRUCTING TOTAL CREDIT SALES (using Debtors T-account):`,
       title: "Nature of Clubs, Societies, and Not-For-Profit Organisations",
       key: "Clubs and societies are not-for-profit (NFP) organisations formed to provide services to members rather than generate profit. Any excess of income over expenditure is a surplus, not profit.",
       body: `Examples of clubs and societies in Nigeria:
+      
 - Lagos Country Club, Ikeja Golf Club (social/sports clubs)
 - University of Lagos Students' Union (student association)
 - Ijele Age Grade Society, Onitsha (community organisation)
@@ -943,6 +948,7 @@ RECONSTRUCTING TOTAL CREDIT SALES (using Debtors T-account):`,
 - Esusu / Cooperative thrift societies (community savings groups)
 
 THREE KEY FINANCIAL STATEMENTS for clubs:
+
 1. RECEIPTS AND PAYMENTS ACCOUNT — a cash summary (similar to a cash book summary). Shows all cash/bank receipts and payments regardless of which accounting period they relate to.
 2. INCOME AND EXPENDITURE ACCOUNT — the equivalent of the Profit and Loss Account. Shows income earned and expenses incurred during the period on an accruals basis.
 3. BALANCE SHEET (STATEMENT OF FINANCIAL POSITION) — shows assets, liabilities, and accumulated fund (equivalent of capital for a club).
@@ -954,41 +960,46 @@ KEY TERM: ACCUMULATED FUND = equivalent of capital. It is the excess of assets o
       key: "The Receipts and Payments Account is a summary of all cash and bank receipts on the left (debit) side and all cash and bank payments on the right (credit) side for a period. It always starts and ends with a cash/bank balance.",
       body: `EXAMPLE — Ikeja Community Sports Club (for the year ended 31 December):`,
       table: {
-        headers: ["Dr   RECEIPTS AND PAYMENTS ACCOUNT   Cr", ""],
-        rows: [
-          ["RECEIPTS | ₦", "PAYMENTS | ₦"],
-          ["Balance b/d (cash + bank) | 120,000", "Rent of sports ground | 80,000"],
-          ["Subscriptions received | 350,000", "Salaries — groundskeeper | 60,000"],
-          ["Entrance Fees (new members) | 40,000", "Sports equipment purchased | 90,000"],
-          ["Bar takings (cash sales) | 180,000", "Bar purchases | 100,000"],
-          ["Fundraising event proceeds | 60,000", "Electricity (EKEDC) | 18,000"],
-          ["Donation received | 25,000", "Printing and stationery | 5,000"],
-          ["", "Balance c/d (cash + bank) | 422,000"],
-          ["TOTAL | 775,000", "TOTAL | 775,000"],
-        ],
-      },
+  headers: ["Dr", " ", "RECEIPTS AND PAYMENTS ACCOUNT", " ", " ", "Cr"],
+  rows: [
+    ["RECEIPTS",                       "₦",       "PAYMENTS",                    "₦",       "", ""],
+    ["Balance b/d (cash + bank)",      "120,000", "Rent of sports ground",       "80,000",  "", ""],
+    ["Subscriptions received",         "350,000", "Salaries — groundskeeper",    "60,000",  "", ""],
+    ["Entrance Fees (new members)",    "40,000",  "Sports equipment purchased",  "90,000",  "", ""],
+    ["Bar takings (cash sales)",       "180,000", "Bar purchases",               "100,000", "", ""],
+    ["Fundraising event proceeds",     "60,000",  "Electricity (EKEDC)",         "18,000",  "", ""],
+    ["Donation received",              "25,000",  "Printing and stationery",     "5,000",   "", ""],
+    ["",                               "",        "Balance c/d (cash + bank)",   "422,000", "", ""],
+    ["TOTAL",                          "775,000", "TOTAL",                       "775,000", "", ""],
+  ],
+},
     },
     {
       title: "Subscriptions Account — Finding Income from Subscriptions",
       key: "Subscriptions received in cash are NOT the same as subscription income for the year. Some may be in arrears (owed but not paid) or in advance (paid for next year). The subscriptions account reconciles these.",
       body: `EXAMPLE (same club):
+      
 Opening subscriptions in arrears: ₦15,000
+
 Opening subscriptions in advance: ₦8,000
+
 Cash subscriptions received in the year: ₦350,000
+
 Closing subscriptions in arrears: ₦20,000
+
 Closing subscriptions in advance: ₦12,000`,
       table: {
-        headers: ["Dr   SUBSCRIPTIONS ACCOUNT   Cr", ""],
-        rows: [
-          ["Details | ₦", "Details | ₦"],
-          ["Balance b/d — arrears (owed from last year) | 15,000", "Balance b/d — advance (received last year for this year) | 8,000"],
-          ["Income & Expenditure (balancing — INCOME this year) | 355,000", "Cash received | 350,000"],
-          ["Balance c/d — advance (received this year for next) | 12,000", "Balance c/d — arrears (owed by members, not yet paid) | 20,000"],
-          ["Unrecoverable arrears written off | 4,000", ""],
-          ["TOTAL | 386,000 (adj) → use correct balance", "TOTAL | 378,000 (adj) → reconcile carefully"],
-          ["∴ Subscription INCOME for I&E Account = ₦355,000", ""],
-        ],
-      },
+  headers: ["Dr", " ", "SUBSCRIPTIONS ACCOUNT", " ", " ", "Cr"],
+  rows: [
+    ["Details",                                          "₦",       "Details",                                              "₦",       "", ""],
+    ["Balance b/d — arrears (owed from last year)",      "15,000",  "Balance b/d — advance (received last year for this year)", "8,000", "", ""],
+    ["Income & Expenditure (balancing — INCOME this year)", "355,000", "Cash received",                                     "350,000", "", ""],
+    ["Balance c/d — advance (received this year for next)", "12,000", "Balance c/d — arrears (owed by members, not yet paid)", "20,000", "", ""],
+    ["Unrecoverable arrears written off",                "4,000",   "",                                                     "",        "", ""],
+    ["TOTAL",                                            "386,000", "TOTAL",                                                "378,000", "", ""],
+    ["∴ Subscription INCOME for I&E Account = ₦355,000","",        "",                                                     "",        "", ""],
+  ],
+},
     },
     {
       title: "Income and Expenditure Account",
@@ -1157,11 +1168,13 @@ KEY SHARE CAPITAL CONCEPTS:`,
       title: "Nature and Scope of Cost Accounting",
       key: "Cost Accounting is the branch of accounting concerned with recording, classifying, analysing, and controlling the costs of producing goods or providing services. Its primary purpose is to help management make informed decisions about pricing, production, and efficiency.",
       body: `Cost accounting is used internally — by management — unlike financial accounting which is prepared for external users. It answers questions like:
+      
 - How much does it cost Aba Soap Company to produce one carton of soap?
 - Is Emeka Transport Ltd making a profit on its Onitsha–Lagos route?
 - Should Dangote Flour Mills expand production or outsource?
 
 SCOPE OF COST ACCOUNTING:
+
 1. COST ASCERTAINMENT — finding the actual cost of a product, job, or process.
 2. COST ANALYSIS — breaking costs into components (material, labour, overhead).
 3. COST CONTROL — comparing actual costs to budgeted/standard costs and investigating differences.
@@ -1264,11 +1277,15 @@ SCOPE OF COST ACCOUNTING:
 
 1. HIGH-LOW METHOD (most common in JUPEB):
 Steps:
+
 (a) Identify the highest and lowest output levels and their total costs.
+
 (b) Variable Cost per unit = (Cost at High Level − Cost at Low Level) ÷ (High Units − Low Units)
+
 (c) Fixed Cost = Total Cost at High Level − (Variable Cost per unit × High Units)
 
 EXAMPLE — Kano Textile Mill electricity costs:
+
 - Highest output: 10,000 machine hours → ₦80,000 total cost
 - Lowest output: 4,000 machine hours → ₦56,000 total cost`,
       table: {
@@ -1324,17 +1341,18 @@ BIN CARD (Stores, Aba Factory — quantity only):`,
       key: "When materials are issued to production, they must be priced (valued). Three methods are used: FIFO (First In First Out), LIFO (Last In First Out — not permitted under IFRS/IAS 2), and AVCO (Weighted Average Cost). Each gives a different closing stock value and material cost.",
       body: `EXAMPLE — Lagos Chemical Suppliers Ltd: Material X
 
-Opening stock 1 Jan: 100 units @ ₦200 each
-Purchases 8 Jan: 200 units @ ₦220 each
-Issues to production 15 Jan: 250 units
-Purchases 20 Jan: 150 units @ ₦250 each
-Issues to production 28 Jan: 120 units
+-Opening stock 1 Jan: 100 units @ ₦200 each
+-Purchases 8 Jan: 200 units @ ₦220 each
+-Issues to production 15 Jan: 250 units
+-Purchases 20 Jan: 150 units @ ₦250 each
+-Issues to production 28 Jan: 120 units
 
 METHOD 1 — FIFO (First In, First Out): Issues are priced at the cost of the oldest stock first.
 
 Issue on 15 Jan (250 units):
-  100 units @ ₦200 = ₦20,000 (from opening stock)
-  150 units @ ₦220 = ₦33,000 (from 8 Jan purchase)
+
+  -100 units @ ₦200 = ₦20,000 (from opening stock)
+  -150 units @ ₦220 = ₦33,000 (from 8 Jan purchase)
   Total Issue Cost = ₦53,000 | Balance: 50 units @ ₦220 = ₦11,000`,
       table: {
         headers: ["FIFO STORES LEDGER — Material X (Lagos Chemical Suppliers)", "", "", "", "", "", ""],
@@ -1355,30 +1373,33 @@ Issue on 15 Jan (250 units):
       body: `Using the same Material X example:
 
 After 8 Jan purchase:
+
 Total units = 100 + 200 = 300 units
+
 Total value = ₦20,000 + ₦44,000 = ₦64,000
+
 Average cost = ₦64,000 ÷ 300 = ₦213.33 per unit
 
-Issue 15 Jan: 250 units × ₦213.33 = ₦53,333
+Issue 15 Jan: 250 units × ₦213.33 = ₦53,333,
 Balance after issue: 50 units × ₦213.33 = ₦10,667
 
 After 20 Jan purchase:
-Total units = 50 + 150 = 200 units
-Total value = ₦10,667 + ₦37,500 = ₦48,167
+
+Total units = 50 + 150 = 200 units,
+Total value = ₦10,667 + ₦37,500 = ₦48,167,
 New average = ₦48,167 ÷ 200 = ₦240.83 per unit
 
 Issue 28 Jan: 120 units × ₦240.83 = ₦28,900
 Closing stock: 80 units × ₦240.83 = ₦19,267`,
       table: {
-        headers: ["COMPARISON OF METHODS — Material X (January)"],
-        rows: [
-          ["METHOD | Material Cost (Issues) (₦) | Closing Stock Value (₦)"],
-          ["FIFO | 53,000 + 28,500 = 81,500 | 20,000"],
-          ["AVCO | 53,333 + 28,900 = 82,233 | 19,267"],
-          ["LIFO (for reference only — not allowed under IFRS) | Higher issue cost in rising prices | Lower closing stock"],
-          ["NOTE: Under IAS 2 (IFRS), LIFO is PROHIBITED in Nigeria for listed companies and significant public interest entities.", "", ""],
-        ],
-      },
+  headers: ["Method", "Material Cost (Issues) (₦)", "Closing Stock Value (₦)"],
+  rows: [
+    ["FIFO",  "53,000 + 28,500 = 81,500",   "20,000"],
+    ["AVCO",  "53,333 + 28,900 = 82,233",   "19,267"],
+    ["LIFO (reference only — not allowed under IFRS)", "Higher issue cost in rising prices", "Lower closing stock"],
+    ["⚠️ Under IAS 2 (IFRS), LIFO is PROHIBITED in Nigeria for listed companies and significant public interest entities.", "", ""],
+  ],
+},
     },
   ],
   stock_control: [
@@ -1400,16 +1421,20 @@ Closing stock: 80 units × ₦240.83 = ₦19,267`,
       title: "Economic Order Quantity (EOQ)",
       key: "The Economic Order Quantity (EOQ) is the order quantity that minimises the total annual cost of ordering and holding inventory. It balances ordering costs against holding costs.",
       body: `FORMULA:
-EOQ = √(2 × D × Co / Ch)
+      
+EOQ = √(2 × D × Co / Cc)
 
 Where:
+
   D  = Annual demand (units)
+  
   Co = Cost per order (₦)
+  
   Ch = Annual holding cost per unit (₦)
 
 EXAMPLE — Kano Food Processing Ltd:
-Annual demand (D) = 40,000 units of flour bags
-Cost per order (Co) = ₦500
+Annual demand (D) = 40,000 units of flour bags,
+Cost per order (Co) = ₦500,
 Annual holding cost per unit (Ch) = ₦2
 
 EOQ = √(2 × 40,000 × 500 / 2)
@@ -1534,9 +1559,10 @@ ROWAN BONUS:
 Bonus = (Time Saved / Standard Time) × Actual Time × Hourly Rate
 
 EXAMPLE — Emeka (machinist at a Lagos Engineering Works):
-Hourly Rate = ₦400/hour
-Standard Time for Job 101 = 10 hours
-Actual Time taken by Emeka = 7 hours
+
+Hourly Rate = ₦400/hour,
+Standard Time for Job 101 = 10 hours,
+Actual Time taken by Emeka = 7 hours,
 Time Saved = 10 − 7 = 3 hours`,
       table: {
         headers: ["CALCULATION", "HALSEY SCHEME", "ROWAN SCHEME"],
@@ -1664,7 +1690,8 @@ Budgeted overhead: ₦368,000 | Budgeted machine hours: 4,000 hours
 OAR = ₦368,000 ÷ 4,000 = ₦92 per machine hour
 
 Actual results for the period:
-Actual overhead incurred: ₦380,000
+
+Actual overhead incurred: ₦380,000,
 Actual machine hours worked: 3,900 hours`,
       table: {
         headers: ["UNDER / OVER-ABSORPTION CALCULATION — Machining Dept", "₦"],
@@ -1685,6 +1712,7 @@ Actual machine hours worked: 3,900 hours`,
       title: "Features of Job Costing",
       key: "Job costing is a method used when each unit of output (job) is unique and made to a customer's specific requirements. A separate cost record (Job Cost Card) is maintained for each job, accumulating direct materials, direct labour, and absorbed overhead.",
       body: `JOB COSTING IS USED BY:
+      
 - Engineering workshops (e.g., Nnewi auto-parts fabricators making custom engine parts)
 - Printing companies (e.g., Longman Nigeria Plc printing a unique textbook order)
 - Construction companies (e.g., Julius Berger Nigeria building a specific road or bridge)
@@ -1709,8 +1737,9 @@ KEY FEATURES OF JOB COSTING:`,
       title: "The Job Cost Card — Structure and Preparation",
       key: "The Job Cost Card (Job Cost Sheet) is the central document in job costing. It accumulates all costs charged to a specific job — direct materials (from Materials Requisition Notes), direct labour (from Time Sheets), and overhead (calculated using OAR × actual activity).",
       body: `EXAMPLE — Lagos Engineering Works Ltd
-Job Number: 206 (Custom steel frame for a construction company)
-Customer: Razzaq Construction Ltd, Victoria Island, Lagos
+
+Job Number: 206 (Custom steel frame for a construction company),
+Customer: Razzaq Construction Ltd, Victoria Island, Lagos,
 Date Started: 3 January | Date Completed: 18 January`,
       table: {
         headers: ["JOB COST CARD — JOB NO. 206 | Lagos Engineering Works Ltd", "₦", "₦"],
@@ -1742,6 +1771,7 @@ Date Started: 3 January | Date Completed: 18 January`,
       title: "Batch Costing — A Variant of Job Costing",
       key: "Batch costing is used when identical units are produced in groups (batches) rather than individually. The total cost of the batch is calculated first, then divided by the number of units to get the cost per unit.",
       body: `BATCH COSTING IS USED BY:
+      
 - Pharmaceutical companies (e.g., Emzor Pharmaceutical producing 10,000 paracetamol tablets per batch)
 - Bakeries (e.g., Supreme Bread Nig. Ltd baking 500 loaves per batch)
 - Clothing factories (e.g., a Kano garment factory producing 200 uniforms per school order)
@@ -1767,6 +1797,7 @@ EXAMPLE — Emzor Pharmaceutical, Lagos: Batch of 10,000 paracetamol tablets (Ba
       title: "Absorption Costing — Meaning and Principles",
       key: "Absorption costing (also called full costing or total costing) charges BOTH fixed and variable production costs to each unit of output. All manufacturing costs — direct and indirect — are absorbed into product cost.",
       body: `Under absorption costing, the cost per unit includes:
+      
 1. Direct Materials
 2. Direct Labour
 3. Variable Manufacturing Overhead
@@ -1778,10 +1809,11 @@ KEY CONSEQUENCE: When production is MORE than sales, some fixed overhead is carr
 When production is LESS than sales, more fixed overhead is charged than incurred this period — absorption costing profit is LOWER than marginal costing profit.
 
 EXAMPLE — Sunshine Garments Ltd, Lagos:
-Production: 10,000 shirts | Sales: 8,000 shirts | Closing stock: 2,000 shirts
-Variable cost per shirt: ₦500 | Fixed manufacturing overhead: ₦200,000 total
-Fixed overhead per unit (OAR): ₦200,000 ÷ 10,000 = ₦20 per shirt
-Absorption cost per shirt: ₦500 + ₦20 = ₦520`,
+
+- Production: 10,000 shirts | Sales: 8,000 shirts | Closing stock: 2,000 shirts
+- Variable cost per shirt: ₦500 | Fixed manufacturing overhead: ₦200,000 total
+- Fixed overhead per unit (OAR): ₦200,000 ÷ 10,000 = ₦20 per shirt
+- Absorption cost per shirt: ₦500 + ₦20 = ₦520`,
       table: {
         headers: ["ABSORPTION COSTING INCOME STATEMENT — Sunshine Garments Ltd", "₦", "₦"],
         rows: [
@@ -1804,10 +1836,12 @@ Absorption cost per shirt: ₦500 + ₦20 = ₦520`,
 1. Direct Materials
 2. Direct Labour
 3. Variable Manufacturing Overhead
+
 (Fixed overhead is NOT included in unit cost — it goes straight to the Income Statement)
 
 KEY CONCEPT — CONTRIBUTION:
-Contribution = Selling Price − Variable Cost per unit
+
+Contribution = Selling Price − Variable Cost per unit,
 Contribution is the amount each unit contributes first to covering Fixed Costs, then to Profit.
 
 Using the same Sunshine Garments example:
@@ -1900,9 +1934,9 @@ MARGIN OF SAFETY:
       key: "CVP analysis allows a business to calculate breakeven point, margin of safety, target profit sales level, and the effect of changes in costs or prices — all essential tools for Nigerian business management.",
       body: `EXAMPLE — Bisi Cosmetics Ltd, Lagos produces one product: Glow Cream.
 
-Selling price per jar: ₦1,200
-Variable cost per jar: ₦720 (materials ₦500 + labour ₦150 + variable overhead ₦70)
-Total Fixed Costs per year: ₦2,400,000
+Selling price per jar: ₦1,200,
+Variable cost per jar: ₦720 (materials ₦500 + labour ₦150 + variable overhead ₦70),
+Total Fixed Costs per year: ₦2,400,000,
 Budgeted (actual) sales: 8,000 jars`,
       table: {
         headers: ["CVP CALCULATIONS — BISI COSMETICS LTD", "WORKINGS", "ANSWER"],
@@ -1923,7 +1957,8 @@ Budgeted (actual) sales: 8,000 jars`,
       title: "Target Profit and Sensitivity Analysis",
       key: "CVP analysis can be used to find the sales volume needed to achieve a target profit, or to analyse how sensitive profit is to changes in selling price, variable cost, or fixed cost.",
       body: `FORMULA — Sales Volume Required for Target Profit:
-Units needed = (Fixed Costs + Target Profit) / Contribution per unit
+      
+Units needed = (Fixed Costs + Target Profit) / Contribution per unit,
 Revenue needed = (Fixed Costs + Target Profit) / C/S Ratio
 
 USING BISI COSMETICS LTD EXAMPLE:
@@ -1961,6 +1996,7 @@ Q1: How many jars must Bisi sell to make a target profit of ₦960,000?`,
       title: "Introduction to Budgeting — Purpose and Types of Budgets",
       key: "A budget is a quantitative plan expressed in financial terms, prepared and approved before the budget period, covering a defined future period. Budgeting is the process of preparing budgets; Budgetary Control is using budgets to monitor and control actual performance.",
       body: `PURPOSES OF BUDGETING (the 'CCCMP' mnemonic):
+      
 1. PLANNING — forces management to plan ahead (e.g., Dangote Cement planning production and sales for the next financial year)
 2. CO-ORDINATION — ensures all departments work towards the same goals
 3. CONTROL — actual results are compared to budgeted figures; variances are investigated
@@ -1987,6 +2023,7 @@ TYPES OF BUDGETS:`,
       title: "Preparing a Cash Budget",
       key: "A cash budget (cash flow forecast) shows the expected cash receipts and cash payments for each period (usually monthly), resulting in a net cash flow and a closing cash balance. It identifies when the business will have surplus cash or need a bank overdraft.",
       body: `IMPORTANT RULES FOR CASH BUDGETS:
+      
 - Only CASH items are included (not depreciation, accruals, or non-cash provisions).
 - Credit sales are received in a later month (e.g., debtors pay 1 month after sale).
 - Credit purchases are paid in a later month (e.g., creditors are paid 2 months after purchase).
@@ -1995,6 +2032,7 @@ TYPES OF BUDGETS:`,
 EXAMPLE — Tunde Electronics Ltd, Abuja (Cash Budget: January to March):
 
 ASSUMPTIONS:
+
 - Sales: Jan ₦500,000; Feb ₦600,000; Mar ₦700,000 (60% cash, 40% collected next month)
 - Purchases: Dec ₦200,000; Jan ₦250,000; Feb ₦300,000; Mar ₦350,000 (all on credit — paid 1 month later)
 - Wages (cash each month): ₦80,000
@@ -2053,6 +2091,7 @@ Fixed budget: 5,000 bars; Actual output: 6,000 bars`,
       title: "Introduction to Investment Appraisal (Capital Budgeting)",
       key: "Investment appraisal (capital budgeting) is the process of evaluating major long-term capital expenditure decisions — deciding whether to invest in a project based on its expected financial returns. The four main methods are Payback Period, ARR, NPV, and IRR.",
       body: `WHAT COUNTS AS A CAPITAL INVESTMENT DECISION?
+      
 - Purchasing new machinery or factory equipment (e.g., Aba Soap buying a new automated soap moulding machine)
 - Building a new factory or warehouse
 - Launching a new product line
@@ -2060,6 +2099,7 @@ Fixed budget: 5,000 bars; Actual output: 6,000 bars`,
 - Acquiring another company
 
 WHY CAPITAL BUDGETING MATTERS:
+
 1. Large sums of money are involved — wrong decisions are very costly.
 2. Decisions are difficult to reverse (irreversibility).
 3. Affects the long-term direction and competitiveness of the business.
@@ -2103,10 +2143,11 @@ Average Annual Profit = Total Net Profit over project life / Number of years
 Average Investment = (Initial Investment + Residual Value) / 2
 
 USING PROJECT A — Emeka Transport Ltd:
-Total Cash Inflows (5 years): 5 × ₦800,000 = ₦4,000,000
-Initial Investment: ₦2,400,000 | Residual Value: ₦0 | Depreciation: ₦2,400,000 ÷ 5 = ₦480,000/year
-Average Annual Profit = Average Cash Inflow − Annual Depreciation = ₦800,000 − ₦480,000 = ₦320,000
-Average Investment = (₦2,400,000 + ₦0) / 2 = ₦1,200,000`,
+
+- Total Cash Inflows (5 years): 5 × ₦800,000 = ₦4,000,000
+- Initial Investment: ₦2,400,000 | Residual Value: ₦0 | Depreciation: ₦2,400,000 ÷ 5 = ₦480,000/year
+- Average Annual Profit = Average Cash Inflow − Annual Depreciation = ₦800,000 − ₦480,000 = ₦320,000
+- Average Investment = (₦2,400,000 + ₦0) / 2 = ₦1,200,000`,
       table: {
         headers: ["ARR CALCULATION — PROJECT A (Emeka Transport Ltd)", ""],
         rows: [
@@ -2172,6 +2213,7 @@ EXAMPLE — Project A, Emeka Transport Ltd (Discount rate = 10%):`,
       title: "Meaning and Definition of Auditing",
       key: "Auditing is an independent examination of the financial statements of an entity, conducted by a qualified and independent person (the auditor), with a view to expressing an opinion on whether the statements give a true and fair view.",
       body: `KEY ELEMENTS IN THE DEFINITION:
+      
 1. INDEPENDENT EXAMINATION — the auditor must have no financial or personal interest in the entity being audited.
 2. FINANCIAL STATEMENTS — the Income Statement, Balance Sheet, Cash Flow Statement, and Notes to Accounts.
 3. QUALIFIED PERSON — must be a professional accountant (in Nigeria: ICAN or ANAN member, registered with FRC).
@@ -2281,6 +2323,7 @@ TYPES OF AUDIT:`,
       title: "Audit Evidence — Types, Sources, and Procedures",
       key: "Audit evidence is all the information gathered by the auditor to reach a conclusion and support the audit opinion. Evidence must be sufficient (enough of it) and appropriate (relevant and reliable).",
       body: `FACTORS AFFECTING RELIABILITY OF EVIDENCE:
+      
 - External evidence (e.g., bank confirmation from GTBank) is more reliable than internal evidence.
 - Evidence obtained directly by the auditor (e.g., auditor counts physical stock) is more reliable than evidence obtained from the client.
 - Documentary evidence is more reliable than oral evidence.
@@ -2343,12 +2386,14 @@ TYPES OF AUDIT PROCEDURES FOR GATHERING EVIDENCE:`,
       title: "The Expectation Gap in Auditing",
       key: "The expectation gap is the difference between what the public (and some investors) believe auditors do and what auditors actually do. It is one of the most significant contemporary issues in the auditing profession.",
       body: `WHAT THE PUBLIC OFTEN BELIEVES (but is incorrect):
+      
 - That auditors guarantee 100% accuracy of the financial statements.
 - That auditors detect ALL fraud and errors.
 - That an unqualified (clean) audit report means the company is financially healthy and will not fail.
 - That auditors are responsible for preparing the accounts.
 
 WHAT AUDITORS ACTUALLY DO:
+
 - Provide REASONABLE ASSURANCE (not absolute certainty) that the financial statements are free from MATERIAL misstatement.
 - Management prepares the accounts; auditors verify them.
 - An auditor may not detect all fraud — especially collusive fraud by senior management.
@@ -2387,6 +2432,7 @@ MEASURES TO REDUCE THE EXPECTATION GAP IN NIGERIA:`,
       title: "Internal Controls — Meaning and Key Control Activities",
       key: "Internal controls are the policies, procedures, and processes put in place by management to safeguard assets, ensure accuracy of records, promote operational efficiency, and ensure compliance with laws and regulations.",
       body: `OBJECTIVES OF INTERNAL CONTROLS (COSO Framework — widely adopted):
+      
 1. RELIABILITY OF FINANCIAL REPORTING — ensuring accounts are accurate and complete.
 2. EFFECTIVENESS AND EFFICIENCY OF OPERATIONS — resources used productively.
 3. COMPLIANCE — with applicable laws and regulations (e.g., CAMA, FIRS tax laws, CBN prudential guidelines).
@@ -2417,6 +2463,7 @@ KEY INTERNAL CONTROL ACTIVITIES:`,
       key: "Taxation in Nigeria predates colonial rule. Various forms of tribute and levies existed in pre-colonial kingdoms. Modern income tax legislation was introduced during British colonial rule and has evolved through several Acts to the present system.",
       body: `PRE-COLONIAL NIGERIA:
 Various Nigerian kingdoms levied taxes on their subjects in different forms:
+
 - Northern Nigeria (Sokoto Caliphate, Hausa states): 'Zakat' (Islamic tithe on wealth and income), 'Jangali' (cattle tax), 'Kudin Kasa' (land tax) — these were formalised tribute systems.
 - Yoruba Kingdoms (Oyo Empire): Tribute paid to the Alaafin from subordinate chiefs; market tolls and trade levies.
 - Igbo communities: communal levies for shared projects (roads, markets); age-grade contributions.
@@ -2516,7 +2563,9 @@ YEAR OF ASSESSMENT (YOA): The tax year in which the tax liability arises. In Nig
 BASIS PERIOD: The accounting period whose results are taxed in a given YOA. Under the Preceding Year Basis, the basis period for YOA 2024 is the accounting year that ended in 2023.
 
 EXAMPLE:
+
 If Chukwuemeka Trading Ltd has an accounting year ending 31 December each year:
+
 - YOA 2024 → Basis Period: Year ended 31 December 2023 (preceding year)
 - YOA 2025 → Basis Period: Year ended 31 December 2024
 
@@ -2558,6 +2607,7 @@ Profits: Year ended 31 March 2022 = ₦480,000; Year ended 31 March 2023 = ₦60
       title: "Computation of Company Income Tax (CIT) Liability",
       key: "The tax liability of a company under CITA is computed by starting with accounting profit, making tax adjustments (add back disallowable expenses, deduct capital allowances and other reliefs), arriving at Assessable Profit, then applying the applicable CIT rate.",
       body: `STEP-BY-STEP PROCESS:
+      
 1. Start with Accounting Profit (per Income Statement).
 2. ADD BACK disallowable expenses (expenses charged in the accounts that are NOT allowed as a deduction for tax purposes).
 3. DEDUCT allowable expenses NOT yet in the accounts (if any).
@@ -2602,6 +2652,7 @@ COMMON DISALLOWABLE EXPENSES (Added back to profit):`,
       body: `EXAMPLE — Sunshine Foods Plc (Large Company — turnover > ₦100m):
 Accounting Profit per Income Statement: ₦5,200,000
 The following information is available:
+
 - Depreciation charged in accounts: ₦800,000 (disallowable)
 - Fine paid to NAFDAC for labelling violation: ₦50,000 (disallowable)
 - Donation to Red Cross Nigeria (not FIRS-approved): ₦100,000 (disallowable)

@@ -571,19 +571,59 @@ export default function App() {
         return (
           <div style={wrapStyle}>
             <OfflineIndicator isOnline={isOnline} wasOffline={wasOffline} />
-            /*<div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
-  <div style={{ flex: 1 }}>
-    <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
-    <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
-    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)" }}>Free · No subscription</div>
+            <div style={{ background: "#0d9e6e", borderBottom: `3px solid ${t.gold}`, padding: "10px 16px", display: "flex", alignItems: "center" }}>
+  <div style={{ flex: 1, display: "flex", alignItems: "center" }}>
+    <div style={{
+      display: "flex", alignItems: "center", gap: 10,
+    }}>
+      {/* Circle icon with speed lines */}
+      <div style={{
+        width: 42, height: 42, borderRadius: "50%",
+        background: "#fff",
+        display: "flex", alignItems: "center", justifyContent: "center",
+        flexShrink: 0,
+        position: "relative",
+        overflow: "hidden",
+        border: "2px solid rgba(255,255,255,0.4)",
+      }}>
+        {/* Speed lines behind the S */}
+        <div style={{
+          position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)",
+          display: "flex", flexDirection: "column", gap: 3, padding: "0 3px",
+        }}>
+          {[10, 16, 10].map((w, i) => (
+            <div key={i} style={{ width: w, height: 2, background: "#0d9e6e", borderRadius: 2, opacity: 0.5 }} />
+          ))}
+        </div>
+        <span style={{
+          fontSize: 20, fontWeight: "900", color: "#0d9e6e",
+          fontFamily: "Impact, Arial Black, sans-serif",
+          fontStyle: "italic",
+          zIndex: 1,
+        }}>S</span>
+      </div>
+
+      {/* STUDYNAIJA italic text */}
+      <span style={{
+        fontSize: 26, fontWeight: "900", fontStyle: "italic",
+        color: "#fff",
+        fontFamily: "Impact, Arial Black, sans-serif",
+        letterSpacing: 2,
+        textTransform: "uppercase",
+        textShadow: "1px 1px 3px rgba(0,0,0,0.4)",
+        lineHeight: 1,
+      }}>
+        STUDY<span style={{ color: "#f0d080" }}>NAIJA</span>
+      </span>
+    </div>
   </div>
-              <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
+          <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
                 {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
               </button>
               <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>
                 {t.toggleIcon}
               </button>
-            </div>*/
+            </div>
             <div style={{ padding: "16px" }}>
               <StreakBanner streak={streak} t={t} />
               <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>

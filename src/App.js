@@ -571,50 +571,54 @@ export default function App() {
         return (
           <div style={wrapStyle}>
             <OfflineIndicator isOnline={isOnline} wasOffline={wasOffline} />
-          <div style={{
-  background: '#00796B', // Teal green from the picture
-  padding: '12px 16px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  width: '100%',
-}}>
-  {/* Left: White Circle + LASU INFO */}
-  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-    <div style={{
-      width: 40, height: 40,
-      borderRadius: '50%',
-      background: '#fff',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      border: '2px solid #fff',
-    }}>
-      <span style={{
-        color: '#00796B',
-        fontWeight: '900',
-        fontSize: '20px',
-        fontFamily: 'Arial, sans-serif',
-      }}>
-        LI {/* Change this to SN or your initials */}
-      </span>
-    </div>
+         {/* ── Enhanced Home Header ── */}
+<style>{`
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+  .sn-shimmer {
+    background: linear-gradient(90deg, #fff 0%, #FFD07B 55%, #fff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+`}</style>
 
-    <div style={{ display: 'flex', alignItems: 'baseline', gap: 0 }}>
-      <span style={{
-        color: '#fff', fontWeight: '900', fontSize: '22px',
-        fontFamily: 'Impact, Arial Black, sans-serif',
-        letterSpacing: 1
-      }}>
-        LASU
-      </span>
-      <span style={{
-        color: '#fff', fontWeight: '900', fontSize: '18px',
-        fontFamily: 'Impact, Arial Black, sans-serif',
-        letterSpacing: 1, marginLeft: 4
-      }}>
-        INFO
-      </span>
+<div style={{
+  background: t.bgHeader,
+  borderBottom: `2px solid ${t.gold}`,
+  padding: "14px 16px",
+  display: "flex",
+  alignItems: "center",
+  gap: 12,
+}}>
+  {/* SN logo tile */}
+  <div style={{
+    width: 40, height: 40, borderRadius: 10, flexShrink: 0,
+    background: `linear-gradient(135deg, ${t.gold} 0%, #E8820C 100%)`,
+    display: "flex", alignItems: "center", justifyContent: "center",
+    fontFamily: "monospace", fontWeight: 700, fontSize: 13, color: "#0B0F1A",
+    boxShadow: `0 4px 14px rgba(245,166,35,0.3)`,
+  }}>
+    SN
+  </div>
+
+  {/* Text group */}
+  <div style={{ flex: 1 }}>
+    <div style={{ fontSize: 9, color: t.gold, letterSpacing: 3, textTransform: "uppercase", fontWeight: 700 }}>
+      StudyNaija
+    </div>
+    <div className="sn-shimmer" style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.3, lineHeight: 1.1 }}>
+      JUPEB Exam Prep
+    </div>
+    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+      Free · No subscription
     </div>
   </div>
+  
           <button onClick={() => goTo("profile")} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 13, cursor: "pointer", padding: "6px 10px", marginRight: 8 }}>
                 {user ? <img src={user.photoURL} alt="profile" style={{ width: 24, height: 24, borderRadius: "50%" }} /> : "👤"}
               </button>

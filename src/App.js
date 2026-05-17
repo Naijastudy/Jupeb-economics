@@ -571,7 +571,7 @@ export default function App() {
         return (
           <div style={wrapStyle}>
             <OfflineIndicator isOnline={isOnline} wasOffline={wasOffline} />
-            <div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
+            /*<div style={{ background: t.bgHeader, borderBottom: `2px solid ${t.gold}`, padding: "18px 16px", display: "flex", alignItems: "center" }}>
   <div style={{ flex: 1 }}>
     <div style={{ fontSize: 10, color: t.gold, letterSpacing: 3, textTransform: "uppercase" }}>StudyNaija</div>
     <div style={{ fontSize: 22, fontWeight: "bold", color: "#fff" }}>JUPEB Exam Prep</div>
@@ -583,7 +583,7 @@ export default function App() {
               <button onClick={toggleTheme} style={{ background: "none", border: `1px solid ${t.gold}44`, borderRadius: 8, color: t.gold, fontSize: 18, cursor: "pointer", padding: "6px 10px" }}>
                 {t.toggleIcon}
               </button>
-            </div>
+            </div>*/
             <div style={{ padding: "16px" }}>
               <StreakBanner streak={streak} t={t} />
               <div style={{ background: t.heroBg, borderRadius: 16, padding: "18px 16px", marginBottom: 20, border: `1px solid ${t.heroBorder}` }}>

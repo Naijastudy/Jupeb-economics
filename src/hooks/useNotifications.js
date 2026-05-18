@@ -3,13 +3,17 @@ import { useState, useEffect, useCallback } from "react";
 // ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const NOTIF_KEY = "sn_notifications";
 
+// ── SAFE NOTIFICATION HELPER ──────────────────────────────────────────────────
+const isNotificationSupported = () => typeof Notification !== "undefined";
+const getPermission = () => isNotificationSupported() ? Notification.permission : "denied";
+
 // ── DEFAULT SETTINGS ──────────────────────────────────────────────────────────
 const DEFAULT_SETTINGS = {
   enabled:        false,
   dailyReminder:  true,
   streakReminder: true,
   reminderHour:   18,
-  fcmEnabled:     false, // ✅ tracks if FCM is active
+  fcmEnabled:     false,
 };
 
 // ── NOTIFICATION MESSAGES ─────────────────────────────────────────────────────

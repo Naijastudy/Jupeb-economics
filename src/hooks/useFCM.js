@@ -6,9 +6,6 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 
-// ✅ FIXED — static imports instead of dynamic
-// Dynamic imports inside useEffect caused:
-// "ReferenceError: Cannot access 'Oe' before initialization"
 import {
   getMessaging,
   getToken,
@@ -19,6 +16,10 @@ import {
 // ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const FCM_TOKEN_KEY = "sn_fcm_token";
 const VAPID_KEY     = process.env.REACT_APP_VAPID_PUBLIC_KEY;
+
+// ── SAFE NOTIFICATION HELPER ──────────────────────────────────────────────────
+const getPermission = () =>
+  typeof Notification !== "undefined" ? Notification.permission : "denied";
 
 // ── DETECT PLATFORM ───────────────────────────────────────────────────────────
 function getPlatform() {
@@ -51,19 +52,16 @@ export default function useFCM(user) {
 
   // ── INITIALIZE FCM ──
   useEffect(() => {
-    // Only run if permission already granted
-    if (Notification.permission !== "granted") return;
+    if (getPermission() !== "granted") return;  // ✅ safe
     initFCM();
   }, [user]);
 
   // ── WATCH FOR PERMISSION GRANT ──
-  // Polls every 3 seconds until token is obtained
-  // Handles case where user grants permission and we need to get token
   useEffect(() => {
-    if (fcmToken) return; // already have token — stop polling
+    if (fcmToken) return;
 
     const interval = setInterval(() => {
-      if (Notification.permission === "granted" && !fcmToken) {
+      if (getPermission() === "granted" && !fcmToken) {  // ✅ safe
         initFCM();
       }
     }, 3000);
@@ -73,7 +71,6 @@ export default function useFCM(user) {
 
   const initFCM = async () => {
     try {
-      // ✅ Check if FCM is supported on this device
       const supported = await isSupported();
       if (!supported) {
         console.log("FCM not supported on this device");
@@ -81,13 +78,9 @@ export default function useFCM(user) {
         return;
       }
 
-      // ✅ Get messaging instance
       const messagingInstance = getMessaging();
-
-      // ✅ Get SW registration — FCM needs it
       const swReg = await navigator.serviceWorker.ready;
 
-      // ✅ Get FCM token
       const token = await getToken(messagingInstance, {
         vapidKey:                  VAPID_KEY,
         serviceWorkerRegistration: swReg,
@@ -99,7 +92,6 @@ export default function useFCM(user) {
         return;
       }
 
-      // ✅ Only save if token is new or changed
       const savedToken = localStorage.getItem(FCM_TOKEN_KEY);
       if (token !== savedToken) {
         await saveTokenToFirestore(token, user?.uid);
@@ -109,9 +101,6 @@ export default function useFCM(user) {
       setFcmToken(token);
       setFcmReady(true);
 
-      // ✅ Handle foreground messages
-      // When app is OPEN — FCM doesn't auto-show notification
-      // We catch it here and show via SW for consistency
       onMessage(messagingInstance, async (payload) => {
         console.log("FCM foreground message:", payload);
         const { title, body } = payload.notification || {};
@@ -138,7 +127,6 @@ export default function useFCM(user) {
   };
 
   // ── LINK TOKEN TO USER AFTER LOGIN ──
-  // ✅ When user signs in, attach their uid to the saved token
   useEffect(() => {
     if (!user || !fcmToken) return;
     const savedToken = localStorage.getItem(FCM_TOKEN_KEY);
@@ -148,4 +136,4 @@ export default function useFCM(user) {
   }, [user, fcmToken]);
 
   return { fcmToken, fcmReady, fcmError };
-    }
+}

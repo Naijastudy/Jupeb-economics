@@ -3,13 +3,17 @@ import { useState, useEffect, useCallback } from "react";
 // ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const NOTIF_KEY = "sn_notifications";
 
+// ── SAFE NOTIFICATION HELPERS ─────────────────────────────────────────────────
+const isNotificationSupported = () => typeof Notification !== "undefined";
+const getPermission = () => isNotificationSupported() ? Notification.permission : "denied";
+
 // ── DEFAULT SETTINGS ──────────────────────────────────────────────────────────
 const DEFAULT_SETTINGS = {
   enabled:        false,
   dailyReminder:  true,
   streakReminder: true,
   reminderHour:   18,
-  fcmEnabled:     false, // ✅ tracks if FCM is active
+  fcmEnabled:     false,
 };
 
 // ── NOTIFICATION MESSAGES ─────────────────────────────────────────────────────
@@ -50,7 +54,6 @@ function saveNotifSettings(settings) {
 }
 
 // ── SCHEDULE VIA SERVICE WORKER ───────────────────────────────────────────────
-// ✅ Fallback for when FCM server push is not available
 async function scheduleViaServiceWorker(hour, type = "daily") {
   try {
     if (!("serviceWorker" in navigator)) return false;
@@ -73,9 +76,7 @@ async function scheduleViaServiceWorker(hour, type = "daily") {
       },
     });
 
-    console.log(
-      `[SW] Scheduled ${type} in ${Math.round(delayMs / 60000)} min`
-    );
+    console.log(`[SW] Scheduled ${type} in ${Math.round(delayMs / 60000)} min`);
     return true;
   } catch (e) {
     console.warn("SW schedule failed:", e.message);
@@ -99,15 +100,11 @@ async function cancelViaServiceWorker(type = "all") {
 
 // ── HOOK ──────────────────────────────────────────────────────────────────────
 export default function useNotifications() {
-  const [permission, setPermission] = useState(
-    typeof Notification !== "undefined"
-      ? Notification.permission
-      : "default"
-  );
-  const [settings, setSettings] = useState(getNotifSettings);
-  const [loading,  setLoading]  = useState(false);
-  const [error,    setError]    = useState(null);
-  const [swReady,  setSwReady]  = useState(false);
+  const [permission, setPermission] = useState(getPermission);
+  const [settings,   setSettings]   = useState(getNotifSettings);
+  const [loading,    setLoading]    = useState(false);
+  const [error,      setError]      = useState(null);
+  const [swReady,    setSwReady]    = useState(false);
 
   // ── CHECK SW READINESS ──
   useEffect(() => {
@@ -118,12 +115,10 @@ export default function useNotifications() {
   }, []);
 
   // ── RESTORE SCHEDULES ON APP LOAD ──
-  // ✅ Re-schedules SW timers every time app opens
-  // Acts as fallback in case FCM server push hasn't fired
   useEffect(() => {
     if (!swReady) return;
     const s = getNotifSettings();
-    if (!s.enabled || Notification.permission !== "granted") return;
+    if (!s.enabled || getPermission() !== "granted") return;
 
     if (s.dailyReminder) {
       scheduleViaServiceWorker(s.reminderHour, "daily");
@@ -139,10 +134,8 @@ export default function useNotifications() {
     setLoading(true);
     setError(null);
 
-    if (typeof Notification === "undefined") {
-      setError(
-        "Notifications not supported. On iPhone, add app to Home Screen first!"
-      );
+    if (!isNotificationSupported()) {
+      setError("Notifications not supported. On iPhone, add app to Home Screen first!");
       setLoading(false);
       return;
     }
@@ -154,7 +147,6 @@ export default function useNotifications() {
     }
 
     try {
-      // Step 1 — Request permission
       const result = await Notification.requestPermission();
       setPermission(result);
 
@@ -164,16 +156,12 @@ export default function useNotifications() {
         return;
       }
 
-      // Step 2 — Get SW registration
       const registration = await navigator.serviceWorker.ready;
 
-      // Step 3 — Save settings
-      // ✅ fcmEnabled will be updated by useFCM after token is saved
       const updated = { ...settings, enabled: true };
       setSettings(updated);
       saveNotifSettings(updated);
 
-      // Step 4 — Schedule SW fallback timers
       if (updated.dailyReminder) {
         await scheduleViaServiceWorker(updated.reminderHour, "daily");
       }
@@ -182,7 +170,6 @@ export default function useNotifications() {
         await scheduleViaServiceWorker(streakHour, "streak");
       }
 
-      // Step 5 — Show welcome notification via SW
       await registration.showNotification("StudyNaija 🎉", {
         body:    "Notifications enabled! You'll be reminded to study daily.",
         icon:    "/android-chrome-192x192.png",
@@ -194,16 +181,13 @@ export default function useNotifications() {
 
     } catch (e) {
       console.log("Notification setup error:", e);
-      setError(
-        "Setup failed. On iPhone, add app to Home Screen first!"
-      );
+      setError("Setup failed. On iPhone, add app to Home Screen first!");
     }
 
     setLoading(false);
   }, [settings]);
 
   // ── MARK FCM AS ENABLED ───────────────────────────────────────────────────
-  // ✅ Called by useFCM hook after FCM token is saved to Firestore
   const markFcmEnabled = useCallback(() => {
     const updated = { ...getNotifSettings(), fcmEnabled: true };
     setSettings(updated);
@@ -256,7 +240,7 @@ export default function useNotifications() {
   // ── SEND STREAK REMINDER IMMEDIATELY ─────────────────────────────────────
   const sendStreakReminder = useCallback(async () => {
     if (!settings.streakReminder) return;
-    if (Notification.permission !== "granted") return;
+    if (getPermission() !== "granted") return;
     try {
       const registration = await navigator.serviceWorker.ready;
       const msg = getRandomMessage(STREAK_MESSAGES);
@@ -285,10 +269,9 @@ export default function useNotifications() {
     error,
     swReady,
     requestPermission,
-    markFcmEnabled,   
+    markFcmEnabled,
     disableNotifications,
     updateSettings,
     sendStreakReminder,
   };
-        }
-                                     
+                  }

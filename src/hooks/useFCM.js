@@ -5,7 +5,6 @@ import {
   setDoc,
   serverTimestamp,
 } from "firebase/firestore";
-
 import {
   getMessaging,
   getToken,
@@ -13,15 +12,16 @@ import {
   isSupported,
 } from "firebase/messaging";
 
-// ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const FCM_TOKEN_KEY = "sn_fcm_token";
 const VAPID_KEY     = process.env.REACT_APP_VAPID_PUBLIC_KEY;
 
-// ── SAFE NOTIFICATION HELPER ──────────────────────────────────────────────────
 const getPermission = () =>
   typeof Notification !== "undefined" ? Notification.permission : "denied";
 
-// ── DETECT PLATFORM ───────────────────────────────────────────────────────────
+function isIOS() {
+  return /iPhone|iPad|iPod/.test(navigator.userAgent);
+}
+
 function getPlatform() {
   const ua = navigator.userAgent;
   if (/iPhone|iPad|iPod/.test(ua)) return "ios";
@@ -29,7 +29,6 @@ function getPlatform() {
   return "web";
 }
 
-// ── SAVE TOKEN TO FIRESTORE ───────────────────────────────────────────────────
 async function saveTokenToFirestore(token, uid = null) {
   try {
     await setDoc(doc(db, "fcm_tokens", token), {
@@ -44,28 +43,25 @@ async function saveTokenToFirestore(token, uid = null) {
   }
 }
 
-// ── HOOK ──────────────────────────────────────────────────────────────────────
 export default function useFCM(user) {
   const [fcmToken, setFcmToken] = useState(null);
   const [fcmReady, setFcmReady] = useState(false);
   const [fcmError, setFcmError] = useState(null);
 
-  // ── INITIALIZE FCM ──
   useEffect(() => {
-    if (getPermission() !== "granted") return;  // ✅ safe
+    if (isIOS()) return;
+    if (getPermission() !== "granted") return;
     initFCM();
   }, [user]);
 
-  // ── WATCH FOR PERMISSION GRANT ──
   useEffect(() => {
+    if (isIOS()) return;
     if (fcmToken) return;
-
     const interval = setInterval(() => {
-      if (getPermission() === "granted" && !fcmToken) {  // ✅ safe
+      if (getPermission() === "granted" && !fcmToken) {
         initFCM();
       }
     }, 3000);
-
     return () => clearInterval(interval);
   }, [fcmToken]);
 
@@ -126,7 +122,6 @@ export default function useFCM(user) {
     }
   };
 
-  // ── LINK TOKEN TO USER AFTER LOGIN ──
   useEffect(() => {
     if (!user || !fcmToken) return;
     const savedToken = localStorage.getItem(FCM_TOKEN_KEY);

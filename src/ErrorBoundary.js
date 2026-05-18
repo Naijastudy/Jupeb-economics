@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const SUPPORT_EMAIL = "studynaija@gmail.com"; 
+const SUPPORT_EMAIL = "naijastudy.support@gmail.com"; 
 
 
 const getEnvironment = () => {

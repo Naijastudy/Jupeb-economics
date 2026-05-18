@@ -1,4 +1,30 @@
-import React from "react";
+import React, { useState } from "react";  // 👈 add useState
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import ErrorBoundary from "./ErrorBoundary";
+import { AppProvider } from "./context/AppContext";
+import GlobalStyles from "./components/GlobalStyles";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
+// 👇 Add this temporarily
+const TestCrash = () => {
+  const [crash, setCrash] = useState(false);
+  if (crash) throw new Error("network error test");
+  return <button onClick={() => setCrash(true)}>Test Error</button>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <ErrorBoundary>
+    <AppProvider>
+      <GlobalStyles />
+      <TestCrash />  {/* 👈 Add this temporarily */}
+      <App />
+    </AppProvider>
+  </ErrorBoundary>
+);
+/*import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import ErrorBoundary from "./ErrorBoundary";
@@ -19,7 +45,7 @@ root.render(
     </AppProvider>
   </ErrorBoundary>
 );
-
+*/
 // Register service worker for offline support
 serviceWorkerRegistration.register({
   onSuccess: () => {

@@ -122,13 +122,10 @@ export default function useNotifications() {
   }, []);
 
   // ── RESTORE SCHEDULES ON APP LOAD ──
-  // ✅ Re-schedules SW timers every time app opens
-  // Acts as fallback in case FCM server push hasn't fired
   useEffect(() => {
     if (!swReady) return;
     const s = getNotifSettings();
-    if (!s.enabled || Notification.permission !== "granted") return;
-
+    if (!s.enabled || getPermission() !== "granted") return;
     if (s.dailyReminder) {
       scheduleViaServiceWorker(s.reminderHour, "daily");
     }
@@ -207,7 +204,6 @@ export default function useNotifications() {
   }, [settings]);
 
   // ── MARK FCM AS ENABLED ───────────────────────────────────────────────────
-  // ✅ Called by useFCM hook after FCM token is saved to Firestore
   const markFcmEnabled = useCallback(() => {
     const updated = { ...getNotifSettings(), fcmEnabled: true };
     setSettings(updated);
@@ -260,7 +256,7 @@ export default function useNotifications() {
   // ── SEND STREAK REMINDER IMMEDIATELY ─────────────────────────────────────
   const sendStreakReminder = useCallback(async () => {
     if (!settings.streakReminder) return;
-    if (Notification.permission !== "granted") return;
+   if (getPermission() !== "granted") return;
     try {
       const registration = await navigator.serviceWorker.ready;
       const msg = getRandomMessage(STREAK_MESSAGES);
